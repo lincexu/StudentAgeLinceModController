@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生时代模组兼容分析工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="resources/icon.jpg" type="image/jpeg">
+</head>
+<body>
+    <div class="container">
+        <!-- 工具栏 -->
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <h1>学生时代模组兼容分析工具</h1>
+            </div>
+            <div class="toolbar-right">
+                <button id="theme-toggle" class="toolbar-btn" title="切换暗夜模式">
+                    <span class="light-icon">🌞</span>
+                    <span class="dark-icon" style="display: none;">🌙</span>
+                </button>
+                <button id="language-toggle" class="toolbar-btn" title="切换简繁">
+                    简
+                </button>
+                <button id="export-report" class="toolbar-btn" title="导出报告">
+                    💾
+                </button>
+            </div>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <p>上传多个模组文件夹进行分析，检测重复ID</p>
+        </div>
+        
+        <main>
+            <section class="upload-section">
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="folder-input" webkitdirectory directory multiple>
+                    <label for="folder-input" class="upload-label">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">点击或拖拽（某些浏览器暂不支持）选择模组文件夹</div>
+                        <div class="upload-hint">支持选择多个文件夹</div>
+                    </label>
+                </div>
+                <button id="analyze-btn" class="analyze-btn">开始分析</button>
+            </section>
+            
+            <section class="progress-section" id="progress-section" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">准备分析...</div>
+            </section>
+            
+            <section class="result-section">
+                <div class="result-header">
+                    <h2>分析结果</h2>
+                    <div class="result-stats" id="result-stats"></div>
+                </div>
+                
+                <div class="result-content">
+                    <div class="duplicate-section" id="duplicate-section" style="display: none;">
+                        <h3>⚠️ 重复事件ID检测</h3>
+                        <div class="duplicate-list" id="duplicate-list"></div>
+                    </div>
+                    
+                    <div class="summary-section">
+                        <h3>📊 分析摘要</h3>
+                        <div class="summary-content" id="summary-content"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div>Powered by Lince.</div>
+            <div id="footer-version">Student Age LMC v{version}</div>
+        </div>
+    </footer>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/uploader.js"></script>
+    <script src="js/analyzer.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
