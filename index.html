@@ -22,6 +22,9 @@
                 <button id="language-toggle" class="toolbar-btn" title="切换简繁">
                     简
                 </button>
+                <button id="settings-toggle" class="toolbar-btn" title="设置">
+                    ⚙️
+                </button>
                 <button id="export-report" class="toolbar-btn" title="导出报告">
                     💾
                 </button>
@@ -72,6 +75,20 @@
         </main>
     </div>
     
+    <!-- 开发环境警告提示 -->
+    <div id="file-protocol-warning" class="file-protocol-warning" style="display: none;">
+        <div class="warning-content">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-text">
+                <strong>警告：</strong>您正在使用文件协议（file://）运行应用，部分功能可能受限。
+                建议使用本地HTTP服务器运行以获得完整功能体验。
+                <br>
+                <small>推荐使用：<code>python -m http.server 8000</code> 或双击 <code>start_server.bat</code>（Windows）</small>
+            </div>
+            <button id="close-warning" class="close-warning-btn">×</button>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-content">
             <div>Powered by Lince.</div>
@@ -79,10 +96,130 @@
         </div>
     </footer>
     
+    <!-- 设置面板 -->
+    <div id="settings-panel" class="settings-panel" style="display: none;">
+        <div class="settings-overlay" id="settings-overlay"></div>
+        <div class="settings-content">
+            <div class="settings-header">
+                <h2>设置</h2>
+                <button id="close-settings" class="close-settings-btn">×</button>
+            </div>
+            <div class="settings-body">
+                <div class="settings-section">
+                    <h3>主题设置</h3>
+                    <div class="settings-item">
+                        <label for="theme-mode">主题模式：</label>
+                        <select id="theme-mode" class="settings-select">
+                            <option value="0">永昼模式</option>
+                            <option value="1">永夜模式</option>
+                            <option value="3">跟随系统</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>语言设置</h3>
+                    <div class="settings-item">
+                        <label for="language">语言：</label>
+                        <select id="language" class="settings-select">
+                            <option value="zh-cn">简体中文</option>
+                            <option value="zh-tw">繁体中文</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>报告设置</h3>
+                    <div class="settings-item">
+                        <label for="export-format">默认导出格式：</label>
+                        <select id="export-format" class="settings-select">
+                            <option value="png">PNG图片</option>
+                            <option value="json">JSON数据</option>
+                            <option value="markdown">Markdown文本</option>
+                        </select>
+                    </div>
+                    <div class="settings-item checkbox-item">
+                        <input type="checkbox" id="show-progress" class="settings-checkbox">
+                        <label for="show-progress">显示分析进度</label>
+                    </div>
+                    <div class="settings-item checkbox-item">
+                        <input type="checkbox" id="generate-detailed-report" class="settings-checkbox">
+                        <label for="generate-detailed-report">生成详细报告</label>
+                    </div>
+                    <div class="settings-item checkbox-item">
+                        <input type="checkbox" id="auto-open-browser" class="settings-checkbox">
+                        <label for="auto-open-browser">自动打开浏览器</label>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>应用信息</h3>
+                    <div class="settings-item info-item">
+                        <span class="info-label">应用名称：</span>
+                        <input type="text" id="app-name" class="settings-input" value="Student Age LMC" disabled>
+                    </div>
+                    <div class="settings-item info-item">
+                        <span class="info-label">版本：</span>
+                        <input type="text" id="app-version" class="settings-input" value="1.0.0" disabled>
+                    </div>
+                    <div class="settings-item info-item">
+                        <span class="info-label">作者：</span>
+                        <input type="text" id="app-author" class="settings-input" value="Lince" disabled>
+                    </div>
+                    <div class="settings-item info-item">
+                        <span class="info-label">描述：</span>
+                        <textarea id="app-description" class="settings-textarea" disabled>学生时代模组兼容分析工具，用于检测模组中的重复ID</textarea>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3 style="cursor: pointer; user-select: none;" onclick="toggleDeveloperSection()">
+                        🔧 开发者选项
+                        <span id="developer-arrow" style="margin-left: 10px; transition: transform 0.3s ease;">▼</span>
+                    </h3>
+                    <div id="developer-section" class="developer-section" style="display: none; margin-top: 15px;">
+                        <div class="settings-item checkbox-item">
+                            <input type="checkbox" id="developer-mode" class="settings-checkbox">
+                            <label for="developer-mode">开启开发者模式</label>
+                        </div>
+                        <div class="developer-hint" style="margin-top: 15px; padding: 10px; background: #f0f0f0; border-radius: 8px; font-size: 0.9rem; color: #666;">
+                            开发者模式说明：
+                            <ul style="margin-top: 10px; margin-left: 20px;">
+                                <li>开启后可编辑应用信息</li>
+                                <li>提供更多调试信息</li>
+                                <li>允许修改高级配置</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-footer">
+                <button id="reset-settings" class="reset-settings-btn">重置为默认设置</button>
+                <button id="save-settings" class="save-settings-btn">保存设置</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/core/config.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/uploader.js"></script>
     <script src="js/analyzer.js"></script>
     <script src="js/renderer.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        // 切换开发者选项区域的显示/隐藏
+        function toggleDeveloperSection() {
+            const section = document.getElementById('developer-section');
+            const arrow = document.getElementById('developer-arrow');
+            
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                section.style.display = 'none';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
 </body>
 </html>

@@ -33,6 +33,55 @@ def parse_jsonc(file_path):
     return json.loads(content)
 
 
+def write_jsonc(file_path, data):
+    """Write data to JSONC file"""
+    # Read original file to preserve comments
+    original_content = ''
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            original_content = f.read()
+    except Exception:
+        pass
+    
+    # Write updated JSON data
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
+    """Custom HTTP request handler that supports POST requests for updating config"""
+    
+    def do_POST(self):
+        """Handle POST requests"""
+        if self.path == '/update-config':
+            # Get content length
+            content_length = int(self.headers['Content-Length'])
+            # Read request body
+            post_data = self.rfile.read(content_length)
+            # Parse JSON data
+            try:
+                config_data = json.loads(post_data)
+                # Write to config.jsonc
+                write_jsonc('config.jsonc', config_data)
+                # Send response
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({'success': True}).encode('utf-8'))
+            except Exception as e:
+                # Send error response
+                self.send_response(400)
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({'success': False, 'error': str(e)}).encode('utf-8'))
+        else:
+            # Default POST handling
+            self.send_response(404)
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({'success': False, 'error': 'Not found'}).encode('utf-8'))
+
+
 # ANSI color codes
 class Colors:
     RESET = '\033[0m'
@@ -74,13 +123,15 @@ def start_server(port=None):
     current_dir = Path(__file__).parent.absolute()
     os.chdir(current_dir)
 
-    # Read version from config.jsonc
+    # Read version and autoOpenBrowser from config.jsonc
     version = "0.1.0"  # Default version
+    auto_open_browser = True  # Default value
     try:
         config = parse_jsonc("config.jsonc")
         version = config.get("version", "0.1.0")
+        auto_open_browser = config.get("autoOpenBrowser", True)
     except Exception:
-        pass  # Use default version if config file is not available
+        pass  # Use default values if config file is not available
 
     # Print styled welcome messages
     border = f"{Colors.CYAN}┌{"─" * 52}┐{Colors.RESET}"
@@ -100,15 +151,16 @@ def start_server(port=None):
     print(f"{Colors.CYAN}●{Colors.RESET} {Colors.BOLD}您也可以通过{Colors.RESET} {Colors.YELLOW}Ctrl+C{Colors.RESET} {Colors.BOLD}安全地结束服务{Colors.RESET}")
     print()
 
-    # Auto open browser quietly
-    try:
-        webbrowser.open(f"http://localhost:{port}")
-    except Exception:
-        pass  # Silently ignore browser opening errors
+    # Auto open browser if configured
+    if auto_open_browser:
+        try:
+            webbrowser.open(f"http://localhost:{port}")
+        except Exception:
+            pass  # Silently ignore browser opening errors
 
     # Create and start server
     server_address = ('', port)
-    httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
+    httpd = HTTPServer(server_address, CustomHTTPRequestHandler)
     
     try:
         httpd.serve_forever()

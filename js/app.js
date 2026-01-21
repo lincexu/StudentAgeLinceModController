@@ -14,6 +14,9 @@ class ModEventApp {
         // 加载配置文件
         await this.loadConfig();
         
+        // 检测开发环境（file://协议）
+        this.detectDevelopmentEnvironment();
+        
         // 初始化各个模块
         this.uploader = new Uploader();
         this.analyzer = new EventAnalyzer();
@@ -31,43 +34,11 @@ class ModEventApp {
         // 更新底部版本信息
         this.updateFooterVersion();
         
+        // 应用翻译
+        this.applyTranslations();
+        
         // 绑定事件
         this.bindEvents();
-    }
-    
-    /**
-     * 解析JSONC格式（带注释的JSON）
-     * @param {string} jsoncString JSONC格式字符串
-     * @returns {Object} 解析后的JSON对象
-     */
-    parseJSONC(jsoncString) {
-        // 移除单行注释和多行注释
-        let cleaned = jsoncString
-            // 移除单行注释 // ...
-            .replace(/\/\/.*$/gm, '')
-            // 移除多行注释 /* ... */
-            .replace(/\/\*[\s\S]*?\*\//g, '')
-            // 移除多余的空白字符
-            .trim();
-        
-        try {
-            // 尝试直接解析
-            return JSON.parse(cleaned);
-        } catch (error) {
-            console.error('JSON解析失败，尝试清理控制字符:', error);
-            
-            // 清理JSON字符串中的控制字符（保留必要的换行和制表符）
-            cleaned = cleaned
-                // 移除控制字符，但保留\n, \r, \t
-                .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
-                // 移除多余的换行和空格
-                .replace(/\s+/g, ' ');
-            
-            console.log('清理后的JSON字符串:', cleaned);
-            
-            // 再次尝试解析
-            return JSON.parse(cleaned);
-        }
     }
 
     /**
@@ -75,58 +46,13 @@ class ModEventApp {
      */
     async loadConfig() {
         try {
-            let config = null;
-            
-            // 1. 优先从localStorage加载配置
-            const savedConfig = localStorage.getItem('appConfig');
-            if (savedConfig) {
-                console.log('从localStorage加载配置');
-                config = JSON.parse(savedConfig);
-            } 
-            // 2. 尝试从配置文件加载
-            else {
-                try {
-                    console.log('尝试从配置文件加载配置');
-                    const response = await fetch('config.jsonc', {
-                        cache: 'no-cache'
-                    });
-                    if (response.ok) {
-                        const jsoncText = await response.text();
-                        config = this.parseJSONC(jsoncText);
-                        localStorage.setItem('appConfig', JSON.stringify(config));
-                        console.log('从配置文件加载配置成功:', config);
-                    } else {
-                        console.log('配置文件加载失败，使用默认配置');
-                    }
-                } catch (error) {
-                    console.log('无法加载配置文件，使用默认配置:', error.message);
-                }
-            }
-            
-            // 3. 如果以上方法都失败，使用默认配置
-            if (!config) {
-                console.log('使用默认配置');
-                config = {
-                    projectName: "Student Age LMC",
-                    author: "Lince",
-                    version: "0.1.0",
-                    description: "学生时代模组兼容分析工具，用于检测模组中的重复ID",
-                    themeMode: 3
-                };
-            }
-            
-            this.config = config;
+            // 使用配置管理模块加载配置
+            this.config = await configManager.loadConfig();
             console.log('配置加载成功:', this.config);
         } catch (error) {
             console.error('加载配置失败:', error);
-            // 使用默认配置
-            this.config = {
-                projectName: "Student Age LMC",
-                author: "Lince",
-                version: "0.1.0",
-                description: "学生时代模组兼容分析工具，用于检测模组中的重复ID",
-                themeMode: 3
-            };
+            // 从配置管理模块获取默认配置
+            this.config = configManager.get();
             console.log('使用默认配置:', this.config);
         }
     }
@@ -135,8 +61,31 @@ class ModEventApp {
      * 保存配置到localStorage
      */
     saveConfig() {
-        localStorage.setItem('appConfig', JSON.stringify(this.config));
-        console.log('配置已保存到localStorage:', this.config);
+        // 使用配置管理模块保存配置
+        configManager.set(this.config);
+        configManager.saveConfig();
+    }
+    
+    /**
+     * 检测开发环境（file://协议）
+     */
+    detectDevelopmentEnvironment() {
+        if (window.location.protocol === 'file:') {
+            const warningElement = document.getElementById('file-protocol-warning');
+            if (warningElement) {
+                warningElement.style.display = 'block';
+                
+                // 绑定关闭警告事件
+                const closeBtn = document.getElementById('close-warning');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => {
+                        warningElement.style.display = 'none';
+                        // 保存用户关闭状态
+                        localStorage.setItem('fileProtocolWarningDismissed', 'true');
+                    });
+                }
+            }
+        }
     }
     
     /**
@@ -180,6 +129,390 @@ class ModEventApp {
             console.log('版本信息更新后:', versionElement.textContent);
         }
     }
+    
+    /**
+     * 应用翻译
+     */
+    applyTranslations() {
+        // 应用页面翻译
+        const appTitle = document.querySelector('.toolbar-left h1');
+        const uploadInstruction = document.querySelector('div[style*="text-align: center"] p');
+        const uploadText = document.querySelector('.upload-text');
+        const uploadHint = document.querySelector('.upload-hint');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const duplicateTitle = document.querySelector('.duplicate-section h3');
+        const summaryTitle = document.querySelector('.summary-section h3');
+        const clearBtn = document.getElementById('clear-btn');
+        
+        if (appTitle) appTitle.textContent = configManager.t('appTitle');
+        if (uploadInstruction) uploadInstruction.textContent = configManager.t('uploadInstruction');
+        if (uploadText) uploadText.textContent = configManager.t('uploadLabel.text');
+        if (uploadHint) uploadHint.textContent = configManager.t('uploadLabel.hint');
+        if (analyzeBtn) analyzeBtn.textContent = configManager.t('analyzeBtn');
+        if (duplicateTitle) duplicateTitle.textContent = configManager.t('duplicateSection.title');
+        if (summaryTitle) summaryTitle.textContent = configManager.t('summarySection.title');
+        if (clearBtn) clearBtn.textContent = configManager.t('clearBtn');
+    }
+    
+    /**
+     * 设置面板相关功能
+     */
+    setupSettingsPanel() {
+        const settingsToggle = document.getElementById('settings-toggle');
+        const settingsPanel = document.getElementById('settings-panel');
+        const settingsOverlay = document.getElementById('settings-overlay');
+        const closeSettings = document.getElementById('close-settings');
+        const saveSettings = document.getElementById('save-settings');
+        const resetSettings = document.getElementById('reset-settings');
+        
+        // 显示设置面板
+        const showSettings = () => {
+            settingsPanel.style.display = 'flex';
+            this.initSettingsForm();
+        };
+        
+        // 隐藏设置面板
+        const hideSettings = () => {
+            settingsPanel.style.display = 'none';
+        };
+        
+        // 绑定显示/隐藏事件
+        if (settingsToggle) {
+            settingsToggle.addEventListener('click', showSettings);
+        }
+        
+        if (settingsOverlay) {
+            settingsOverlay.addEventListener('click', hideSettings);
+        }
+        
+        if (closeSettings) {
+            closeSettings.addEventListener('click', hideSettings);
+        }
+        
+        // 绑定保存设置事件
+        if (saveSettings) {
+            saveSettings.addEventListener('click', () => {
+                this.saveSettings();
+                hideSettings();
+            });
+        }
+        
+        // 绑定重置设置事件
+        if (resetSettings) {
+            resetSettings.addEventListener('click', () => {
+                if (confirm('确定要重置所有设置为默认值吗？')) {
+                    this.resetSettings();
+                    this.initSettingsForm();
+                }
+            });
+        }
+    }
+    
+    /**
+     * 初始化设置表单
+     */
+    initSettingsForm() {
+        // 主题模式
+        const themeModeSelect = document.getElementById('theme-mode');
+        if (themeModeSelect) {
+            themeModeSelect.value = this.config.themeMode;
+        }
+        
+        // 语言设置
+        const languageSelect = document.getElementById('language');
+        if (languageSelect) {
+            languageSelect.value = this.config.language;
+        }
+        
+        // 导出格式
+        const exportFormatSelect = document.getElementById('export-format');
+        if (exportFormatSelect) {
+            exportFormatSelect.value = this.config.exportFormat;
+        }
+        
+        // 显示进度
+        const showProgressCheckbox = document.getElementById('show-progress');
+        if (showProgressCheckbox) {
+            showProgressCheckbox.checked = this.config.showProgress;
+        }
+        
+        // 生成详细报告
+        const generateDetailedReportCheckbox = document.getElementById('generate-detailed-report');
+        if (generateDetailedReportCheckbox) {
+            generateDetailedReportCheckbox.checked = this.config.generateDetailedReport;
+        }
+        
+        // 自动打开浏览器
+        const autoOpenBrowserCheckbox = document.getElementById('auto-open-browser');
+        if (autoOpenBrowserCheckbox) {
+            autoOpenBrowserCheckbox.checked = this.config.autoOpenBrowser;
+        }
+        
+        // 开发者模式
+        const developerModeCheckbox = document.getElementById('developer-mode');
+        if (developerModeCheckbox) {
+            developerModeCheckbox.checked = this.config.developerMode;
+            this.toggleAppInfoEditability(this.config.developerMode);
+        }
+        
+        // 应用信息
+        const appNameInput = document.getElementById('app-name');
+        const appVersionInput = document.getElementById('app-version');
+        const appAuthorInput = document.getElementById('app-author');
+        const appDescriptionTextarea = document.getElementById('app-description');
+        
+        if (appNameInput) appNameInput.value = this.config.projectName;
+        if (appVersionInput) appVersionInput.value = this.config.version;
+        if (appAuthorInput) appAuthorInput.value = this.config.author;
+        if (appDescriptionTextarea) appDescriptionTextarea.value = this.config.description;
+        
+        // 绑定开发者模式切换事件
+        this.bindDeveloperModeToggle();
+    }
+    
+    /**
+     * 绑定开发者模式切换事件
+     */
+    bindDeveloperModeToggle() {
+        const developerModeCheckbox = document.getElementById('developer-mode');
+        if (developerModeCheckbox) {
+            developerModeCheckbox.addEventListener('change', (e) => {
+                const isChecked = e.target.checked;
+                
+                // 如果是开启开发者模式，需要验证密码
+                if (isChecked) {
+                    // 使用自定义对话框替代prompt()
+                    this.showDeveloperPasswordDialog()
+                        .then(password => {
+                            if (configManager.verifyDeveloperPassword(password)) {
+                                this.toggleAppInfoEditability(true);
+                            } else {
+                                // 密码错误，恢复原状
+                                e.target.checked = false;
+                                this.showAlert('密码错误，无法开启开发者模式！');
+                            }
+                        })
+                        .catch(() => {
+                            // 用户取消，恢复原状
+                            e.target.checked = false;
+                        });
+                } else {
+                    // 关闭开发者模式，直接切换
+                    this.toggleAppInfoEditability(false);
+                }
+            });
+        }
+    }
+    
+    /**
+     * 显示开发者密码对话框
+     * @returns {Promise<string>} 用户输入的密码
+     */
+    showDeveloperPasswordDialog() {
+        return new Promise((resolve, reject) => {
+            // 创建对话框元素
+            const dialog = document.createElement('div');
+            dialog.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+            `;
+            
+            // 创建对话框内容
+            const dialogContent = document.createElement('div');
+            dialogContent.style.cssText = `
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                width: 90%;
+                max-width: 400px;
+            `;
+            
+            // 创建对话框HTML
+            dialogContent.innerHTML = `
+                <h3 style="margin-top: 0; margin-bottom: 20px; color: #333;">开发者模式验证</h3>
+                <div style="margin-bottom: 20px;">
+                    <label for="dev-password" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">请输入开发者密码：</label>
+                    <input type="password" id="dev-password" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;" placeholder="输入密码">
+                </div>
+                <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                    <button id="dev-cancel" style="padding: 12px 24px; background: #6c757d; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">取消</button>
+                    <button id="dev-confirm" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">确定</button>
+                </div>
+            `;
+            
+            // 添加到对话框
+            dialog.appendChild(dialogContent);
+            document.body.appendChild(dialog);
+            
+            // 获取元素
+            const passwordInput = dialogContent.querySelector('#dev-password');
+            const cancelBtn = dialogContent.querySelector('#dev-cancel');
+            const confirmBtn = dialogContent.querySelector('#dev-confirm');
+            
+            // 聚焦密码输入框
+            passwordInput.focus();
+            
+            // 事件处理
+            const handleCancel = () => {
+                document.body.removeChild(dialog);
+                reject(new Error('用户取消'));
+            };
+            
+            const handleConfirm = () => {
+                const password = passwordInput.value;
+                document.body.removeChild(dialog);
+                resolve(password);
+            };
+            
+            // 绑定事件
+            cancelBtn.addEventListener('click', handleCancel);
+            confirmBtn.addEventListener('click', handleConfirm);
+            
+            // 回车键确认
+            passwordInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleConfirm();
+                }
+            });
+            
+            // 点击对话框外部关闭
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    handleCancel();
+                }
+            });
+        });
+    }
+    
+    /**
+     * 显示警告消息
+     * @param {string} message - 警告消息
+     */
+    showAlert(message) {
+        // 创建警告元素
+        const alert = document.createElement('div');
+        alert.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            z-index: 10001;
+            max-width: 90%;
+            text-align: center;
+        `;
+        
+        alert.innerHTML = `
+            <div style="margin-bottom: 20px; font-size: 16px; color: #333;">${message}</div>
+            <button id="alert-ok" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">确定</button>
+        `;
+        
+        document.body.appendChild(alert);
+        
+        // 绑定事件
+        const okBtn = alert.querySelector('#alert-ok');
+        okBtn.addEventListener('click', () => {
+            document.body.removeChild(alert);
+        });
+    }
+    
+    /**
+     * 切换应用信息字段的可编辑性
+     * @param {boolean} editable - 是否可编辑
+     */
+    toggleAppInfoEditability(editable) {
+        const appNameInput = document.getElementById('app-name');
+        const appVersionInput = document.getElementById('app-version');
+        const appAuthorInput = document.getElementById('app-author');
+        const appDescriptionTextarea = document.getElementById('app-description');
+        
+        if (appNameInput) appNameInput.disabled = !editable;
+        if (appVersionInput) appVersionInput.disabled = !editable;
+        if (appAuthorInput) appAuthorInput.disabled = !editable;
+        if (appDescriptionTextarea) appDescriptionTextarea.disabled = !editable;
+    }
+    
+    /**
+     * 保存设置
+     */
+    saveSettings() {
+        // 获取表单值
+        const themeMode = parseInt(document.getElementById('theme-mode').value);
+        const language = document.getElementById('language').value;
+        const exportFormat = document.getElementById('export-format').value;
+        const showProgress = document.getElementById('show-progress').checked;
+        const generateDetailedReport = document.getElementById('generate-detailed-report').checked;
+        const autoOpenBrowser = document.getElementById('auto-open-browser').checked;
+        const developerMode = document.getElementById('developer-mode').checked;
+        
+        // 应用信息
+        const appName = document.getElementById('app-name').value;
+        const appVersion = document.getElementById('app-version').value;
+        const appAuthor = document.getElementById('app-author').value;
+        const appDescription = document.getElementById('app-description').value;
+        
+        // 更新配置
+        const newConfig = {
+            themeMode,
+            language,
+            exportFormat,
+            showProgress,
+            generateDetailedReport,
+            autoOpenBrowser,
+            developerMode,
+            projectName: appName,
+            version: appVersion,
+            author: appAuthor,
+            description: appDescription
+        };
+        
+        // 应用主题变更
+        this.config.themeMode = themeMode;
+        this.setupThemeMode();
+        
+        // 应用语言变更
+        this.config.language = language;
+        this.applyTranslations();
+        
+        // 更新其他配置
+        Object.assign(this.config, newConfig);
+        
+        // 保存配置
+        this.saveConfig();
+        
+        console.log('设置已保存:', this.config);
+    }
+    
+    /**
+     * 重置设置
+     */
+    resetSettings() {
+        // 重置配置为默认值
+        this.config = configManager.get();
+        
+        // 应用主题变更
+        this.setupThemeMode();
+        
+        // 应用语言变更
+        this.applyTranslations();
+        
+        // 保存配置
+        this.saveConfig();
+        
+        console.log('设置已重置为默认值:', this.config);
+    }
 
     /**
      * 添加清理按钮
@@ -192,7 +525,7 @@ class ModEventApp {
             const clearBtn = document.createElement('button');
             clearBtn.id = 'clear-btn';
             clearBtn.className = 'clear-btn';
-            clearBtn.textContent = '清理已选择的文件夹';
+            clearBtn.textContent = configManager.t('clearBtn');
             
             // 添加样式
             clearBtn.style.cssText = `
@@ -296,13 +629,19 @@ class ModEventApp {
         if (languageToggle) {
             languageToggle.addEventListener('click', () => {
                 const currentText = languageToggle.textContent;
-                if (currentText === '简') {
-                    languageToggle.textContent = '繁';
-                    // 这里可以添加简繁切换的实现
-                    // 由于简繁切换需要复杂的库支持，这里仅实现UI切换
-                } else {
-                    languageToggle.textContent = '简';
-                }
+                const newLanguage = currentText === '简' ? 'zh-tw' : 'zh-cn';
+                const newText = currentText === '简' ? '繁' : '简';
+                
+                languageToggle.textContent = newText;
+                
+                // 更新配置
+                this.config.language = newLanguage;
+                this.saveConfig();
+                
+                // 应用翻译
+                this.applyTranslations();
+                
+                console.log('语言已切换为:', newLanguage);
             });
         }
         
@@ -324,37 +663,77 @@ class ModEventApp {
                 }
             });
         }
+        
+        // 设置面板相关事件
+        this.setupSettingsPanel();
     }
     
     /**
      * 导出报告为PNG图片
      */
     exportReport() {
-        const container = document.body;
+        // 检查是否已生成分析结果
         if (!document.querySelector('.result-section')) {
             alert('请先进行分析，生成结果后再导出报告');
             return;
         }
         
+        // 增加用户确认程序
+        const confirmExport = confirm('确定要导出报告吗？\n\n导出过程可能需要几秒钟时间，取决于报告大小。\n导出的报告将保存为PNG图片格式。');
+        
+        if (!confirmExport) {
+            return; // 用户取消导出
+        }
+        
+        // 显示导出进度提示
+        const progressSection = document.getElementById('progress-section');
+        const progressText = document.getElementById('progress-text');
+        const originalProgressDisplay = progressSection.style.display;
+        const originalProgressText = progressText.textContent;
+        
+        progressSection.style.display = 'block';
+        progressText.textContent = '正在准备导出报告...';
+        
         // 使用html2canvas将整个页面转换为图片
-        html2canvas(container, {
+        html2canvas(document.body, {
             backgroundColor: document.body.classList.contains('dark-mode') ? '#1a1a1a' : '#ffffff',
             scale: 2, // 提高图片质量
             logging: false,
-            // 只导出可见区域的内容，确保包含所有分析结果和底部信息
-            y: 0,
-            x: 0,
-            width: container.scrollWidth,
-            height: container.scrollHeight
+            width: document.body.scrollWidth,
+            height: document.body.scrollHeight
         }).then(canvas => {
+            // 更新进度提示
+            progressText.textContent = '正在生成图片...';
+            
             // 创建下载链接
             const link = document.createElement('a');
-            link.download = `模组分析报告_${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.png`;
+            const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+            link.download = `模组分析报告_${timestamp}.png`;
             link.href = canvas.toDataURL('image/png');
+            
+            // 更新进度提示
+            progressText.textContent = '正在下载报告...';
+            
+            // 触发下载
             link.click();
+            
+            // 恢复原始进度显示
+            setTimeout(() => {
+                progressSection.style.display = originalProgressDisplay;
+                progressText.textContent = originalProgressText;
+            }, 1000);
+            
+            // 提示导出成功
+            alert('报告导出成功！');
         }).catch(error => {
             console.error('导出报告失败:', error);
-            alert('导出报告失败，请查看控制台');
+            
+            // 恢复原始进度显示
+            progressSection.style.display = originalProgressDisplay;
+            progressText.textContent = originalProgressText;
+            
+            // 提示导出失败
+            alert('导出报告失败，请查看控制台获取详细信息');
         });
     }
 

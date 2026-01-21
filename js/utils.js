@@ -44,3 +44,10 @@ class Utils {
         };
     }
 }
+
+// 将Utils类挂载到全局对象上，以便其他模块可以访问
+if (typeof window !== 'undefined') {
+    window.Utils = Utils;
+} else if (typeof global !== 'undefined') {
+    global.Utils = Utils;
+}
