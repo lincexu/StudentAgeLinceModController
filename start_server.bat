@@ -1,20 +1,18 @@
 @echo off
-chcp 65001 >nul
 
-echo 正在启动学生时代模组兼容分析工具...
-echo.
+REM Student Age Mod Compatibility Analysis Tool
+REM https://github.com/lincexu/StudentAgeLinceModController
 
-REM 检查Python是否安装
+REM Check if Python is installed
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
-    echo 错误: 未安装Python或Python未添加到系统PATH
-    echo 请先安装Python 3.6或更高版本
-    echo.
+    echo Error: Python not found. Please install Python 3.6+ first.
     pause
     exit /b 1
 )
 
-REM 启动Python服务器
+REM Start Python server with ANSI color support enabled for Windows 10+
+set PYTHONIOENCODING=utf-8
 python start_server.py
 
 pause
