@@ -5,6 +5,7 @@ class ConfigManager {
         this.defaultConfig = null;
         this.listeners = [];
         this.translations = null;
+        this.attributeCN = null;
         // 简繁映射表
         this.simplifiedToTraditional = {
             "学生时代模组兼容分析工具": "學生時代模組兼容分析工具",
@@ -74,6 +75,28 @@ class ConfigManager {
                 "clearBtn.confirm": "确定要清理所有已选择的文件夹吗？"
             }
         };
+        
+        // 默认的属性中文映射
+        this.attributeCN = {};
+    }
+    
+    /**
+     * 加载属性中文映射
+     */
+    async loadAttributeCN() {
+        try {
+            const response = await fetch('localization/zh-cn/attributeCN.json', {
+                cache: 'no-cache'
+            });
+            if (response.ok) {
+                this.attributeCN = await response.json();
+                console.log('[Config] 属性中文映射加载成功:', this.attributeCN);
+            } else {
+                console.log('[Config] 属性中文映射加载失败，使用默认映射');
+            }
+        } catch (error) {
+            console.log('[Config] 无法加载属性中文映射，使用默认映射:', error.message);
+        }
     }
     
     /**
@@ -177,6 +200,9 @@ class ConfigManager {
             // 4. 验证配置
             this.validateConfig();
             
+            // 5. 加载属性中文映射
+            await this.loadAttributeCN();
+            
             console.log('[Config] 配置加载成功:', this.config);
             return this.config;
         } catch (error) {
@@ -184,8 +210,30 @@ class ConfigManager {
             // 使用默认配置
             this.config = { ...this.defaultConfig };
             console.log('[Config] 使用默认配置:', this.config);
+            
+            // 尝试加载属性中文映射
+            try {
+                await this.loadAttributeCN();
+            } catch (e) {
+                console.error('[Config] 加载属性中文映射失败:', e);
+            }
+            
             return this.config;
         }
+    }
+    
+    /**
+     * 获取属性的中文名称
+     * @param {string} type - 类型名称（如event, item）
+     * @param {string} key - 属性键名
+     * @returns {string} 中文名称
+     */
+    getAttributeCN(type, key) {
+        const keyName = `${type.charAt(0).toUpperCase() + type.slice(1)}Key`;
+        if (this.attributeCN && this.attributeCN[keyName] && this.attributeCN[keyName][key]) {
+            return this.attributeCN[keyName][key];
+        }
+        return key;
     }
 
     /**

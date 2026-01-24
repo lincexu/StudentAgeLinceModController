@@ -598,12 +598,33 @@ class ResultRenderer {
                                             collectible: '🔍',
                                             upgrade: '📈',
                                             unlockable: '🔓',
-                                            resource: '💎'
+                                            resource: '💎',
+                                            audio: '🔊',
+                                            bg: '🖼️',
+                                            c_g: '🎬',
+                                            intent: '🎯',
+                                            k_zone_avatar: '👤',
+                                            k_zone_comment: '💬',
+                                            k_zone_content: '📝',
+                                            k_zone_profile: '👤',
+                                            person: '👤',
+                                            person_grow: '📈',
+                                            renshengguan_memory: '📝',
+                                            shop: '🛒'
                                         };
                                         const icon = icons[type] || '📋';
                                         
                                         // 获取重复ID检查的方法
                                         const allIdsKey = `all${type.charAt(0).toUpperCase() + type.slice(1)}Ids`;
+                                        
+                                        // 收集所有唯一的key，按出现频率排序
+                                        const allKeys = new Set();
+                                        items.forEach(item => {
+                                            if (typeof item === 'object' && item !== null) {
+                                                Object.keys(item).forEach(key => allKeys.add(key));
+                                            }
+                                        });
+                                        const sortedKeys = Array.from(allKeys).sort();
                                         
                                         return `
                                         <div style="margin-bottom: 20px;">
@@ -615,9 +636,9 @@ class ResultRenderer {
                                                 <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                                                     <thead style="background: #f8f9fa; color: #495057;">
                                                         <tr>
-                                                            <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">${typeConfig.displayName}ID</th>
-                                                            <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">名称</th>
-                                                            <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">类型</th>
+                                                            ${sortedKeys.map(key => `
+                                                                <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">${configManager.getAttributeCN(type, key)}</th>
+                                                            `).join('')}
                                                             <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">状态</th>
                                                         </tr>
                                                     </thead>
@@ -626,9 +647,11 @@ class ResultRenderer {
                                                             const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
                                                             return `
                                                                 <tr style="${isDuplicate ? 'background: #fff5f5;' : ''};">
-                                                                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: 600;">${item.id}</td>
-                                                                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-size: 0.9rem;">${item.name}</td>
-                                                                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-size: 0.9rem;">${item.data.type || 0}</td>
+                                                                    ${sortedKeys.map(key => `
+                                                                        <td style="padding: 10px; border-bottom: 1px solid #eee; font-size: 0.9rem;">
+                                                                            ${item[key] !== undefined ? JSON.stringify(item[key]).replace(/^"|"$/g, '') : ''}
+                                                                        </td>
+                                                                    `).join('')}
                                                                     <td style="padding: 10px; border-bottom: 1px solid #eee;">
                                                                         <span style="padding: 3px 6px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; ${isDuplicate ? 'background: #ffebee; color: #c62828;' : 'background: #e8f5e8; color: #2e7d32;'};">
                                                                             ${isDuplicate ? '重复' : '唯一'}

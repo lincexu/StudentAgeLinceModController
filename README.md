@@ -10,6 +10,12 @@
 - 🎨 支持浅色/深色主题切换
 - 💾 导出分析报告为PNG图片
 
+## 环境要求
+
+- **Python 3**：用于启动本地HTTP服务器
+  - 下载链接：[Python官方网站](https://www.python.org/downloads/)
+  - 安装完成后，可在命令行中运行 `python --version` 或 `python3 --version` 验证安装
+
 ## 快速开始
 
 ### 启动方式
