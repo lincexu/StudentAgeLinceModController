@@ -10,6 +10,6 @@
   "generateDetailedReport": true,
   "autoOpenBrowser": false,
   "developerMode": false,
-  "developerPassword": "helloworld",
+  "developerPassword": "",
   "detailedReport": true
 }
