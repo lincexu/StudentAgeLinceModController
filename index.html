@@ -68,6 +68,19 @@
                 </div>
                 
                 <div class="result-content">
+                    <!-- 数据可视化部分 -->
+                    <div class="visualization-section" id="visualization-section" style="display: none;">
+                        <h3>数据可视化</h3>
+                        <div class="visualization-content">
+                            <div class="chart-container">
+                                <canvas id="statsChart" width="400" height="200"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="duplicateChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="duplicate-section" id="duplicate-section" style="display: none;">
                         <h3>重复事件ID检测</h3>
                         <div class="duplicate-list" id="duplicate-list"></div>
@@ -123,7 +136,7 @@
                         </select>
                     </div>
                     <div class="settings-item">
-                        <label>透明度：</label>
+                        <label for="opacity-slider">透明度：</label>
                         <div style="display: flex; gap: 10px; align-items: center; flex: 1;">
                             <input type="range" id="opacity-slider" min="0" max="100" value="85" class="settings-input" style="flex: 1;">
                             <input type="number" id="opacity-input" min="0" max="100" value="85" class="settings-input" style="width: 80px;">
@@ -220,6 +233,10 @@
             </div>
         </div>
     </div>
+    
+    <!-- 使用本地库用于数据可视化和导出 -->
+    <script src="lib/chart.umd.min.js"></script>
+    <script src="lib/html2canvas.min.js"></script>
     
     <script src="js/core/config.js"></script>
     <script src="js/utils.js"></script>

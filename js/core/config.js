@@ -218,10 +218,21 @@ class ConfigManager {
                 config = JSON.parse(savedConfig);
             }
             
-            // 3. 合并配置（默认配置 + 文件配置 + 用户配置）
-            // 优先级：用户配置 > 文件配置 > 默认配置
-            this.config = this.mergeConfig(this.defaultConfig, fileConfig);
-            this.config = this.mergeConfig(this.config, config);
+            // 3. 合并配置
+            // 先合并默认配置和用户配置
+            let mergedConfig = this.mergeConfig(this.defaultConfig, config);
+            
+            // 然后单独合并文件配置中的应用信息（确保应用信息始终从文件配置中读取）
+            if (fileConfig) {
+                const appInfoKeys = ['projectName', 'author', 'version', 'description'];
+                appInfoKeys.forEach(key => {
+                    if (fileConfig.hasOwnProperty(key)) {
+                        mergedConfig[key] = fileConfig[key];
+                    }
+                });
+            }
+            
+            this.config = mergedConfig;
             
             // 4. 验证配置
             this.validateConfig();
@@ -305,9 +316,19 @@ class ConfigManager {
         
         const merged = { ...defaultConfig };
         
+        // 定义哪些配置项是用户可配置的，哪些应该始终从文件配置中读取
+        // 应用信息（projectName, author, version, description）应该始终从文件配置中读取
+        const appInfoKeys = ['projectName', 'author', 'version', 'description'];
+        
         // 递归合并配置
         for (const key in customConfig) {
             if (customConfig.hasOwnProperty(key)) {
+                // 如果是应用信息键，且已经从文件配置中获取到了值，则跳过（不被用户配置覆盖）
+                if (appInfoKeys.includes(key) && merged[key] !== this.defaultConfig[key]) {
+                    // 应用信息已经从文件配置中读取到了，不需要被用户配置覆盖
+                    continue;
+                }
+                
                 if (typeof customConfig[key] === 'object' && customConfig[key] !== null && !Array.isArray(customConfig[key])) {
                     merged[key] = this.mergeConfig(defaultConfig[key] || {}, customConfig[key]);
                 } else {
@@ -375,13 +396,13 @@ class ConfigManager {
             if (response.ok) {
                 console.log('[Config] 配置已同步到服务器config.jsonc');
             } else {
-                // 忽略404错误，因为普通HTTP服务器不支持此端点
+                // 忽略所有非200错误，因为普通HTTP服务器不支持此端点
                 console.info('[Config] 服务器不支持配置同步，配置仅保存到本地');
             }
         })
         .catch(error => {
             // 忽略网络错误，因为普通HTTP服务器不支持此端点
-            console.info('[Config] 无法连接到配置同步端点，配置仅保存到本地:', error.message);
+            console.info('[Config] 无法连接到服务器或服务器不支持此请求，配置仅保存到本地:', error.message);
         });
         
         this.notifyListeners();

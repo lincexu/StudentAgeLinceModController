@@ -418,6 +418,15 @@ class ResultRenderer {
         this.currentResult = result;
         const { totalMods, idTypes, modDetails } = result;
         
+        // 显示可视化区域
+        const visualizationSection = document.getElementById('visualization-section');
+        if (visualizationSection) {
+            visualizationSection.style.display = 'block';
+        }
+        
+        // 渲染图表
+        this.renderCharts(result);
+        
         // 计算所有ID类型的统计信息
         let totalAllIds = 0;
         let uniqueAllIds = 0;
@@ -501,17 +510,6 @@ class ResultRenderer {
                     <div class="summary-label">重复ID总数</div>
                 </div>
             </div>
-            <div class="summary-text">
-                <h4>分析详情：</h4>
-                <ul style="margin-top: 10px; margin-left: 20px;">
-                    <li>已分析 <strong>${totalMods}</strong> 个模组文件夹</li>
-                    ${Object.entries(typeStats).map(([type, stats]) => `
-                    <li>共检测到 <strong>${stats.total}</strong> 个${stats.config.displayName}，其中 <strong>${stats.duplicate}</strong> 个重复${stats.config.displayName}ID</li>
-                    <li>${stats.config.displayName}ID唯一率：<strong>${stats.total > 0 ? Math.round((stats.unique / stats.total) * 100) : 0}%</strong></li>
-                    `).join('')}
-                </ul>
-            </div>
-            
             <div style="margin-top: 30px;">
                 <h4>模组详情：</h4>
                 <div style="margin-top: 15px;">
@@ -552,7 +550,7 @@ class ResultRenderer {
                         );
                         
                         return `
-                            <div style="margin-bottom: 20px; background: #f8f9ff; border: 1px solid #e0e7ff; border-radius: 8px; overflow: hidden;">
+                            <div style="margin-bottom: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
                                 <!-- 模组标题栏 -->
                                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" class="mod-header">
                                     <div>
@@ -574,8 +572,8 @@ class ResultRenderer {
                                 <!-- 模组详情内容，默认隐藏 -->
                                 <div class="mod-content" style="display: none; padding: 20px;">
                                     <!-- 模组统计 -->
-                                    <div style="margin-bottom: 20px; padding: 15px; background: #fff; border: 1px solid #e9ecef; border-radius: 8px;">
-                                        <h6 style="margin: 0 0 10px 0; color: #495057;">模组统计</h6>
+                                    <div style="margin-bottom: 20px; padding: 15px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px;">
+                                        <h6 style="margin: 0 0 10px 0; color: var(--text-primary);">模组统计</h6>
                                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                                             ${Object.entries(result.idTypes).map(([type, typeConfig]) => {
                                                 const detailKey = `${type}s`;
@@ -585,12 +583,12 @@ class ResultRenderer {
                                                 
                                                 return `
                                                 <div>
-                                                    <div style="font-size: 0.8rem; color: #6c757d;">${typeConfig.displayName}总数</div>
-                                                    <div style="font-size: 1.2rem; font-weight: 600;">${count}</div>
+                                                    <div style="font-size: 0.8rem; color: var(--text-secondary);">${typeConfig.displayName}总数</div>
+                                                    <div style="font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">${count}</div>
                                                 </div>
                                                 <div>
-                                                    <div style="font-size: 0.8rem; color: #6c757d;">重复${typeConfig.displayName}ID</div>
-                                                    <div style="font-size: 1.2rem; font-weight: 600; color: ${duplicateCount === 0 ? '#28a745' : '#dc3545'};">${duplicateCount}</div>
+                                                    <div style="font-size: 0.8rem; color: var(--text-secondary);">重复${typeConfig.displayName}ID</div>
+                                                    <div style="font-size: 1.2rem; font-weight: 600; color: ${duplicateCount === 0 ? 'var(--success-color)' : 'var(--danger-color)'};">${duplicateCount}</div>
                                                 </div>
                                                 `;
                                             }).filter(Boolean).join('')}
@@ -602,10 +600,10 @@ class ResultRenderer {
                                             const typeConfig = result.idTypes[type];
                                             return `
                                             <div style="margin-top: 15px;">
-                                                <strong style="color: #dc3545; font-size: 0.9rem;">重复${typeConfig.displayName}ID列表：</strong>
+                                                <strong style="color: var(--danger-color); font-size: 0.9rem;">重复${typeConfig.displayName}ID列表：</strong>
                                                 <div style="margin-top: 5px; display: flex; flex-wrap: wrap; gap: 5px;">
                                                     ${ids.map(id => `
-                                                        <span style="background: #ffebee; color: #c62828; padding: 2px 6px; border-radius: 10px; font-size: 0.8rem;">${id}</span>
+                                                        <span style="background: var(--danger-light); color: var(--danger-color); padding: 2px 6px; border-radius: 10px; font-size: 0.8rem;">${id}</span>
                                                     `).join('')}
                                                 </div>
                                             </div>
@@ -739,20 +737,20 @@ class ResultRenderer {
                                                 // 渲染横列式布局
                                                 return `
                                                 <div style="overflow-x: auto;">
-                                                    <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); table-layout: auto;">
-                                                        <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                                                    <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: var(--bg-primary); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); table-layout: auto; border: 1px solid var(--border-color);">
+                                                        <thead style="background: var(--primary-gradient); color: white;">
                                                             <tr>
                                                                 ${sortedKeys.map(key => `
-                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-weight: bold; white-space: nowrap; min-width: 100px;">${configManager.getAttributeCN(type, key)}</th>
+                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;">${configManager.getAttributeCN(type, key)}</th>
                                                                 `).join('')}
-                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-weight: bold; white-space: nowrap;">状态</th>
+                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             ${items.map((item, itemIndex) => {
                                                                 const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
                                                                 return `
-                                                                <tr style="${isDuplicate ? 'background: #fff5f5;' : ''};">
+                                                                <tr style="${isDuplicate ? 'background: var(--danger-light);' : ''};">
                                                                     ${sortedKeys.map(key => {
                                                                         let value = item[key];
                                                                         // 如果是名称相关列，且当前值为undefined，尝试使用另一个名称字段
@@ -911,6 +909,177 @@ class ResultRenderer {
     updateTableLayout() {
         if (this.currentResult) {
             this.renderSummary(this.currentResult);
+        }
+    }
+    
+    /**
+     * 渲染数据可视化图表
+     * @param {Object} result - 分析结果
+     */
+    renderCharts(result) {
+        const { totalMods, idTypes } = result;
+        
+        // 计算所有ID类型的统计信息
+        const typeStats = {};
+        for (const type in idTypes) {
+            const typeConfig = idTypes[type];
+            const totalKey = `total${type.charAt(0).toUpperCase() + type.slice(1)}s`;
+            const duplicateKey = `duplicate${type.charAt(0).toUpperCase() + type.slice(1)}Ids`;
+            
+            const total = result[totalKey] || 0;
+            const duplicate = (result[duplicateKey] || []).length;
+            
+            typeStats[type] = {
+                total,
+                duplicate,
+                config: typeConfig
+            };
+        }
+        
+        // 准备图表数据
+        const labels = Object.values(typeStats).map(stats => stats.config.displayName);
+        const totalData = Object.values(typeStats).map(stats => stats.total);
+        const duplicateData = Object.values(typeStats).map(stats => stats.duplicate);
+        
+        // 图表颜色配置
+        const colors = [
+            'rgba(102, 126, 234, 0.8)',
+            'rgba(118, 75, 162, 0.8)',
+            'rgba(40, 167, 69, 0.8)',
+            'rgba(220, 53, 69, 0.8)',
+            'rgba(255, 193, 7, 0.8)',
+            'rgba(23, 162, 184, 0.8)',
+            'rgba(13, 110, 253, 0.8)',
+            'rgba(220, 103, 69, 0.8)',
+            'rgba(13, 150, 230, 0.8)',
+            'rgba(103, 110, 253, 0.8)',
+            'rgba(150, 103, 253, 0.8)',
+            'rgba(253, 103, 200, 0.8)'
+        ];
+        
+        // 渲染统计图表（柱状图）
+        const statsChartCanvas = document.getElementById('statsChart');
+        if (statsChartCanvas) {
+            // 销毁现有图表
+            if (this.statsChart) {
+                this.statsChart.destroy();
+            }
+            
+            this.statsChart = new Chart(statsChartCanvas, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'ID总数',
+                        data: totalData,
+                        backgroundColor: colors,
+                        borderColor: colors.map(color => color.replace('0.8', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '各类型ID统计',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '数量'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutQuart'
+                    }
+                }
+            });
+        }
+        
+        // 渲染重复ID图表（饼图）
+        const duplicateChartCanvas = document.getElementById('duplicateChart');
+        if (duplicateChartCanvas) {
+            // 只包含有重复ID的数据
+            const filteredLabels = [];
+            const filteredDuplicateData = [];
+            const filteredColors = [];
+            
+            duplicateData.forEach((count, index) => {
+                if (count > 0) {
+                    filteredLabels.push(labels[index]);
+                    filteredDuplicateData.push(count);
+                    filteredColors.push(colors[index]);
+                }
+            });
+            
+            // 销毁现有图表
+            if (this.duplicateChart) {
+                this.duplicateChart.destroy();
+            }
+            
+            this.duplicateChart = new Chart(duplicateChartCanvas, {
+                type: 'doughnut',
+                data: {
+                    labels: filteredLabels.length > 0 ? filteredLabels : ['无重复ID'],
+                    datasets: [{
+                        label: '重复ID数量',
+                        data: filteredDuplicateData.length > 0 ? filteredDuplicateData : [1],
+                        backgroundColor: filteredColors.length > 0 ? filteredColors : ['rgba(102, 126, 234, 0.8)'],
+                        borderColor: filteredColors.length > 0 ? filteredColors.map(color => color.replace('0.8', '1')) : ['rgba(102, 126, 234, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '重复ID分布',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        },
+                        legend: {
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.dataset.data.reduce((sum, data) => sum + data, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutQuart'
+                    }
+                }
+            });
         }
     }
 }

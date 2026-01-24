@@ -173,6 +173,281 @@ body.dark-mode .toolbar {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* 完善暗夜模式下的结果区域样式 */
+body.dark-mode .result-section {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+/* 完善暗夜模式下的横列式表格样式 */
+body.dark-mode .horizontal-table {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .horizontal-table th {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: var(--border-color);
+}
+
+body.dark-mode .horizontal-table td {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .horizontal-table tr:hover {
+    background: var(--bg-light);
+}
+
+body.dark-mode .horizontal-table tr.duplicate-row {
+    background: rgba(248, 113, 113, 0.1);
+}
+
+body.dark-mode .horizontal-table tr.duplicate-row:hover {
+    background: rgba(248, 113, 113, 0.2);
+}
+
+/* 完善暗夜模式下的统计信息样式 */
+body.dark-mode .result-stats {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .stat-item {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .stat-item:hover {
+    background: var(--bg-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* 完善暗夜模式下的分析摘要样式 */
+body.dark-mode .summary-content {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* 完善暗夜模式下的模组详情样式 */
+body.dark-mode .id-type-header {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .id-type-content {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+/* 完善暗夜模式下的ID类型标题样式 */
+body.dark-mode .id-type-header h6 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .id-type-header h6 span {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .summary-section {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* 完善暗夜模式下的空状态样式 */
+body.dark-mode .empty-state {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+body.dark-mode .empty-state:hover .empty-icon {
+    opacity: 0.8;
+}
+
+/* 完善暗夜模式下的数据可视化样式 */
+body.dark-mode .visualization-section {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .chart-container {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+/* 完善暗夜模式下的重复项样式 */
+body.dark-mode .duplicate-item {
+    background: rgba(248, 113, 113, 0.1);
+    border-color: rgba(248, 113, 113, 0.3);
+}
+
+body.dark-mode .duplicate-item:hover {
+    background: rgba(248, 113, 113, 0.2);
+    border-color: var(--danger-color);
+}
+
+body.dark-mode .module-item {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .module-item:hover {
+    background: var(--bg-light);
+    border-left-color: var(--primary-color);
+}
+
+body.dark-mode .module-path {
+    background: var(--bg-light);
+    color: var(--text-secondary);
+}
+
+/* 完善暗夜模式下的操作按钮样式 */
+body.dark-mode .primary-btn:hover {
+    background: var(--primary-gradient);
+    box-shadow: 0 8px 25px rgba(165, 180, 252, 0.3);
+}
+
+body.dark-mode .secondary-btn {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: var(--bg-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .action-btn:disabled {
+    background: var(--bg-light);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 完善暗夜模式下的卡片样式 */
+body.dark-mode .card-title {
+    color: var(--text-primary);
+}
+
+body.dark-mode .status-badge.unique {
+    background: rgba(74, 222, 128, 0.2);
+    color: var(--success-color);
+}
+
+body.dark-mode .status-badge.duplicate {
+    background: rgba(248, 113, 113, 0.2);
+    color: var(--danger-color);
+}
+
+/* 完善暗夜模式下的设置面板样式 */
+body.dark-mode .settings-content {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.dark-mode .settings-header {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+body.dark-mode .settings-body {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .settings-section {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .settings-section:hover {
+    box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .settings-item {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .settings-item:hover {
+    background: var(--bg-light);
+}
+
+body.dark-mode .settings-item label {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .settings-item:hover label {
+    color: var(--primary-color);
+}
+
+body.dark-mode .reset-settings-btn {
+    background: rgba(255, 193, 7, 0.2);
+    color: var(--warning-color);
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+body.dark-mode .reset-settings-btn:hover {
+    background: rgba(255, 193, 7, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+}
+
+/* 完善暗夜模式下的开发者选项样式 */
+body.dark-mode .developer-section {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .developer-hint {
+    background: var(--bg-light);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .developer-hint li::before {
+    color: var(--primary-color);
+}
+
+/* 完善暗夜模式下的信息项样式 */
+body.dark-mode .info-label {
+    color: var(--primary-color);
+}
+
+body.dark-mode .info-value {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+/* 完善暗夜模式下的按钮交互效果 */
+body.dark-mode .toolbar-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(165, 180, 252, 0.2);
+}
+
+body.dark-mode .toolbar-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(165, 180, 252, 0.3);
+}
+
+/* 完善暗夜模式下的进度条样式 */
+body.dark-mode .progress-bar {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .progress-fill {
+    background: var(--primary-gradient);
+}
+
+body.dark-mode .progress-text {
+    color: var(--text-secondary);
+}
+
 .toolbar:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
@@ -544,35 +819,113 @@ main:hover {
 .result-section {
     border-top: 2px solid var(--border-color);
     padding-top: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+}
+
+/* 数据可视化部分样式 */
+.visualization-section {
+    margin-bottom: var(--spacing-xl);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.visualization-section h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.visualization-section h3::before {
+    content: '📊';
+    font-size: 1.2em;
+}
+
+.visualization-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.chart-container {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+    height: 300px;
+}
+
+.chart-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .result-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     flex-wrap: wrap;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .result-header h2 {
     color: var(--text-primary);
-    font-size: var(--font-size-xl);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .result-stats {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 .stat-item {
-    background: var(--bg-secondary);
+    background: rgba(255, 255, 255, 0.8);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-xl);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--primary-color);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-xs);
+    transition: all var(--transition-base);
+}
+
+.stat-item:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+    background: white;
 }
 
 /* 竖列式表格样式 */
@@ -838,8 +1191,13 @@ body.dark-mode .row-value:hover {
 
 /* Duplicate Section */
 .duplicate-section {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     animation: fadeIn 0.5s ease-out;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 @keyframes fadeIn {
@@ -855,31 +1213,35 @@ body.dark-mode .row-value:hover {
 
 .duplicate-section h3 {
     color: var(--danger-color);
-    margin-bottom: var(--spacing-md);
-    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--danger-color);
 }
 
 .duplicate-section h3::before {
-    content: '';
-    font-size: 1.2rem;
+    content: '⚠️';
+    font-size: 1.2em;
 }
 
 .duplicate-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .duplicate-item {
     background: var(--danger-light);
     border: 1px solid var(--danger-color);
     border-radius: var(--border-radius-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transition: all var(--transition-base);
     animation: slideInLeft 0.4s ease-out;
+    box-shadow: var(--shadow-sm);
 }
 
 @keyframes slideInLeft {
@@ -977,19 +1339,33 @@ body.dark-mode .row-value:hover {
 }
 
 /* Summary Section */
+.summary-section {
+    margin-top: var(--spacing-xl);
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
 .summary-section h3 {
     color: var(--success-color);
-    margin-bottom: var(--spacing-md);
-    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--success-color);
     animation: fadeIn 0.5s ease-out;
 }
 
 .summary-section h3::before {
-    content: '';
-    font-size: 1.2rem;
+    content: '📋';
+    font-size: 1.2em;
 }
 
 .summary-content {
@@ -998,6 +1374,7 @@ body.dark-mode .row-value:hover {
     border-radius: var(--border-radius-md);
     padding: var(--spacing-lg);
     animation: fadeIn 0.5s ease-out 0.2s both;
+    box-shadow: var(--shadow-sm);
 }
 
 .summary-grid {
@@ -1622,7 +1999,11 @@ body.dark-mode .settings-item:hover label {
     transition: all 0.3s ease;
     font-family: inherit;
     outline: none;
+    /* 移除默认下拉箭头 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
+    /* 自定义下拉箭头 */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
     background-position: right 12px center;
     background-repeat: no-repeat;
@@ -1647,6 +2028,10 @@ body.dark-mode .settings-select {
     border-color: #555;
     color: #f0f0f0;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ccc' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
 }
 
 body.dark-mode .settings-select:hover {

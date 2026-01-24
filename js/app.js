@@ -812,18 +812,7 @@ class ModEventApp {
         const exportReport = document.getElementById('export-report');
         if (exportReport) {
             exportReport.addEventListener('click', () => {
-                // 检查是否已加载html2canvas库
-                if (typeof html2canvas === 'undefined') {
-                    // 动态加载html2canvas库
-                    const script = document.createElement('script');
-                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
-                    script.onload = () => {
-                        this.exportReport();
-                    };
-                    document.head.appendChild(script);
-                } else {
-                    this.exportReport();
-                }
+                this.exportReport();
             });
         }
         
@@ -832,22 +821,238 @@ class ModEventApp {
     }
     
     /**
-     * 导出报告为PNG图片
+     * 导出报告
      */
-    exportReport() {
+    async exportReport() {
         // 检查是否已生成分析结果
         if (!document.querySelector('.result-section')) {
             alert('请先进行分析，生成结果后再导出报告');
             return;
         }
         
-        // 增加用户确认程序
-        const confirmExport = confirm('确定要导出报告吗？\n\n导出过程可能需要几秒钟时间，取决于报告大小。\n导出的报告将保存为PNG图片格式。');
+        // 显示导出格式选择对话框
+        const exportFormat = await this.showExportFormatDialog();
         
-        if (!confirmExport) {
+        if (!exportFormat) {
             return; // 用户取消导出
         }
         
+        // 根据选择的格式导出报告
+        switch (exportFormat) {
+            case 'json':
+                this.exportAsJSON();
+                break;
+            case 'markdown':
+                this.exportAsMarkdown();
+                break;
+            case 'png':
+            default:
+                await this.exportAsPNG();
+                break;
+        }
+    }
+    
+    /**
+     * 显示导出格式选择对话框
+     * @returns {string|null} 选择的导出格式，取消则返回null
+     */
+    showExportFormatDialog() {
+        // 创建对话框HTML
+        const dialogHTML = `
+            <div style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+                z-index: 3000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: var(--font-family);
+            ">
+                <div style="
+                    background: var(--bg-primary);
+                    border: 1px solid var(--border-color);
+                    border-radius: var(--border-radius-lg);
+                    padding: var(--spacing-xl);
+                    width: 90%;
+                    max-width: 500px;
+                    box-shadow: var(--shadow-lg);
+                    animation: fadeIn 0.3s ease-out;
+                ">
+                    <h3 style="
+                        color: var(--text-primary);
+                        margin: 0 0 var(--spacing-lg) 0;
+                        font-size: var(--font-size-xl);
+                        text-align: center;
+                    ">选择导出格式</h3>
+                    <div style="
+                        display: grid;
+                        gap: var(--spacing-md);
+                        margin-bottom: var(--spacing-xl);
+                    ">
+                        <label style="
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-md);
+                            padding: var(--spacing-md);
+                            border: 2px solid var(--border-color);
+                            border-radius: var(--border-radius-md);
+                            cursor: pointer;
+                            transition: all var(--transition-base);
+                        " data-format="png">
+                            <input type="radio" name="export-format" value="png" style="
+                                width: 20px;
+                                height: 20px;
+                                accent-color: var(--primary-color);
+                            " checked>
+                            <div style="flex: 1;">
+                                <div style="font-weight: var(--font-weight-bold); color: var(--text-primary);">PNG图片</div>
+                                <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">完整的可视化报告，适合分享</div>
+                            </div>
+                        </label>
+                        <label style="
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-md);
+                            padding: var(--spacing-md);
+                            border: 2px solid var(--border-color);
+                            border-radius: var(--border-radius-md);
+                            cursor: pointer;
+                            transition: all var(--transition-base);
+                        " data-format="markdown">
+                            <input type="radio" name="export-format" value="markdown" style="
+                                width: 20px;
+                                height: 20px;
+                                accent-color: var(--primary-color);
+                            ">
+                            <div style="flex: 1;">
+                                <div style="font-weight: var(--font-weight-bold); color: var(--text-primary);">Markdown文档</div>
+                                <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">结构化的文本报告，适合编辑和分享</div>
+                            </div>
+                        </label>
+                        <label style="
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-md);
+                            padding: var(--spacing-md);
+                            border: 2px solid var(--border-color);
+                            border-radius: var(--border-radius-md);
+                            cursor: pointer;
+                            transition: all var(--transition-base);
+                        " data-format="json">
+                            <input type="radio" name="export-format" value="json" style="
+                                width: 20px;
+                                height: 20px;
+                                accent-color: var(--primary-color);
+                            ">
+                            <div style="flex: 1;">
+                                <div style="font-weight: var(--font-weight-bold); color: var(--text-primary);">JSON数据</div>
+                                <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">原始数据，适合进一步处理和分析</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div style="
+                        display: flex;
+                        gap: var(--spacing-md);
+                        justify-content: flex-end;
+                    ">
+                        <button id="cancel-export" style="
+                            padding: var(--spacing-sm) var(--spacing-lg);
+                            background: var(--bg-secondary);
+                            color: var(--text-primary);
+                            border: 1px solid var(--border-color);
+                            border-radius: var(--border-radius-md);
+                            cursor: pointer;
+                            transition: all var(--transition-base);
+                            font-weight: var(--font-weight-medium);
+                        ">取消</button>
+                        <button id="confirm-export" style="
+                            padding: var(--spacing-sm) var(--spacing-lg);
+                            background: var(--primary-gradient);
+                            color: white;
+                            border: none;
+                            border-radius: var(--border-radius-md);
+                            cursor: pointer;
+                            transition: all var(--transition-base);
+                            font-weight: var(--font-weight-medium);
+                        ">导出</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // 创建并添加对话框到DOM
+        const dialog = document.createElement('div');
+        dialog.innerHTML = dialogHTML;
+        document.body.appendChild(dialog);
+        
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            label[data-format]:hover {
+                border-color: var(--primary-color);
+                background: var(--bg-secondary);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-sm);
+            }
+            
+            button:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-sm);
+            }
+            
+            button:active {
+                transform: translateY(0);
+            }
+        `;
+        dialog.appendChild(style);
+        
+        // 返回Promise，等待用户选择
+        return new Promise((resolve) => {
+            // 确认按钮事件
+            const confirmBtn = dialog.querySelector('#confirm-export');
+            confirmBtn.addEventListener('click', () => {
+                const selectedFormat = dialog.querySelector('input[name="export-format"]:checked').value;
+                document.body.removeChild(dialog);
+                resolve(selectedFormat);
+            });
+            
+            // 取消按钮事件
+            const cancelBtn = dialog.querySelector('#cancel-export');
+            cancelBtn.addEventListener('click', () => {
+                document.body.removeChild(dialog);
+                resolve(null);
+            });
+            
+            // 点击外部关闭对话框
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    document.body.removeChild(dialog);
+                    resolve(null);
+                }
+            });
+        });
+    }
+    
+    /**
+     * 导出报告为PNG图片
+     */
+    async exportAsPNG() {
         // 显示导出进度提示
         const progressSection = document.getElementById('progress-section');
         const progressText = document.getElementById('progress-text');
@@ -857,14 +1062,93 @@ class ModEventApp {
         progressSection.style.display = 'block';
         progressText.textContent = '正在准备导出报告...';
         
+        // 检查是否需要生成详细报告
+        const generateDetailed = configManager.get('generateDetailedReport') !== false;
+        console.log('生成详细报告设置:', generateDetailed);
+        
+        // 保存所有需要恢复的元素原始状态
+        const originalStates = {
+            resultSection: document.querySelector('.result-section').style.display,
+            duplicateSection: document.getElementById('duplicate-section').style.display,
+            visualizationSection: document.getElementById('visualization-section').style.display
+        };
+        
+        // 确保所有结果相关部分都可见
+        document.querySelector('.result-section').style.display = 'block';
+        document.getElementById('duplicate-section').style.display = 'block';
+        document.getElementById('visualization-section').style.display = 'block';
+        
+        // 临时展开所有模组详情
+        const modHeaders = document.querySelectorAll('.mod-header');
+        const originallyExpanded = [];
+        
+        // 记录原始状态并展开所有模组
+        modHeaders.forEach((header, index) => {
+            const content = header.nextElementSibling;
+            if (content) {
+                const wasExpanded = content.style.display === 'block';
+                if (!wasExpanded) {
+                    originallyExpanded.push(index);
+                    content.style.display = 'block';
+                }
+            }
+        });
+        
+        // 临时展开所有ID详情卡片
+        const idDetailCards = document.querySelectorAll('.vertical-table-card');
+        idDetailCards.forEach(card => {
+            // 确保卡片内容可见
+            card.style.display = 'block';
+        });
+        
+        // 临时展开所有ID类型详情内容
+        const idTypeHeaders = document.querySelectorAll('.id-type-header');
+        const originallyCollapsedIdTypes = [];
+        idTypeHeaders.forEach((header, index) => {
+            const content = header.nextElementSibling;
+            if (content) {
+                const wasCollapsed = content.style.display !== 'block';
+                if (wasCollapsed) {
+                    originallyCollapsedIdTypes.push(index);
+                    content.style.display = 'block';
+                    // 更新折叠图标
+                    const toggleIcon = header.querySelector('.id-type-toggle');
+                    if (toggleIcon) {
+                        toggleIcon.textContent = '▼';
+                        toggleIcon.style.transform = 'rotate(90deg)';
+                    }
+                }
+            }
+        });
+        
         // 使用html2canvas将整个页面转换为图片
-        html2canvas(document.body, {
-            backgroundColor: document.body.classList.contains('dark-mode') ? '#1a1a1a' : '#ffffff',
-            scale: 2, // 提高图片质量
-            logging: false,
-            width: document.body.scrollWidth,
-            height: document.body.scrollHeight
-        }).then(canvas => {
+        try {
+            // 等待内容展开和渲染
+            await new Promise(resolve => setTimeout(resolve, 2500)); // 进一步增加等待时间，确保所有内容都已渲染
+            
+            // 滚动到页面顶部，确保从顶部开始渲染
+            window.scrollTo(0, 0);
+            
+            // 计算完整页面高度和宽度
+            const fullHeight = document.body.scrollHeight;
+            const fullWidth = document.body.scrollWidth;
+            
+            const canvas = await html2canvas(document.querySelector('.container'), {
+                backgroundColor: document.body.classList.contains('dark-mode') ? '#1a1a1a' : '#ffffff',
+                scale: 2, // 提高图片质量
+                logging: false,
+                width: fullWidth,
+                height: fullHeight,
+                scrollY: 0, // 确保从顶部开始渲染
+                scrollX: 0,
+                useCORS: true, // 允许加载跨域资源
+                allowTaint: true, // 允许污染画布
+                ignoreElements: (element) => {
+                    // 忽略导出相关的UI元素，如导出按钮和设置按钮
+                    return element.id === 'export-report' || element.id === 'settings-toggle' || element.id === 'theme-toggle' || element.id === 'language-toggle';
+                }
+            });
+            
             // 更新进度提示
             progressText.textContent = '正在生成图片...';
             
@@ -880,6 +1164,42 @@ class ModEventApp {
             // 触发下载
             link.click();
             
+            // 恢复原始状态（收起之前收起的模组）
+            modHeaders.forEach((header, index) => {
+                if (originallyExpanded.includes(index)) {
+                    const content = header.nextElementSibling;
+                    if (content) {
+                        content.style.display = 'none';
+                        // 更新折叠图标
+                        const toggleIcon = header.querySelector('.mod-toggle-icon');
+                        if (toggleIcon) {
+                            toggleIcon.textContent = '▼';
+                        }
+                    }
+                }
+            });
+            
+            // 恢复原始状态（收起之前收起的ID类型详情）
+            idTypeHeaders.forEach((header, index) => {
+                if (originallyCollapsedIdTypes.includes(index)) {
+                    const content = header.nextElementSibling;
+                    if (content) {
+                        content.style.display = 'none';
+                        // 更新折叠图标
+                        const toggleIcon = header.querySelector('.id-type-toggle');
+                        if (toggleIcon) {
+                            toggleIcon.textContent = '▶';
+                            toggleIcon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                }
+            });
+            
+            // 恢复结果相关部分的原始显示状态
+            document.querySelector('.result-section').style.display = originalStates.resultSection;
+            document.getElementById('duplicate-section').style.display = originalStates.duplicateSection;
+            document.getElementById('visualization-section').style.display = originalStates.visualizationSection;
+            
             // 恢复原始进度显示
             setTimeout(() => {
                 progressSection.style.display = originalProgressDisplay;
@@ -887,9 +1207,45 @@ class ModEventApp {
             }, 1000);
             
             // 提示导出成功
-            alert('报告导出成功！');
-        }).catch(error => {
+            alert('PNG报告导出成功！');
+        } catch (error) {
             console.error('导出报告失败:', error);
+            
+            // 恢复原始状态
+            modHeaders.forEach((header, index) => {
+                if (originallyExpanded.includes(index)) {
+                    const content = header.nextElementSibling;
+                    if (content) {
+                        content.style.display = 'none';
+                        // 更新折叠图标
+                        const toggleIcon = header.querySelector('.mod-toggle-icon');
+                        if (toggleIcon) {
+                            toggleIcon.textContent = '▼';
+                        }
+                    }
+                }
+            });
+            
+            // 恢复原始状态（收起之前收起的ID类型详情）
+            idTypeHeaders.forEach((header, index) => {
+                if (originallyCollapsedIdTypes.includes(index)) {
+                    const content = header.nextElementSibling;
+                    if (content) {
+                        content.style.display = 'none';
+                        // 更新折叠图标
+                        const toggleIcon = header.querySelector('.id-type-toggle');
+                        if (toggleIcon) {
+                            toggleIcon.textContent = '▶';
+                            toggleIcon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                }
+            });
+            
+            // 恢复结果相关部分的原始显示状态
+            document.querySelector('.result-section').style.display = originalStates.resultSection;
+            document.getElementById('duplicate-section').style.display = originalStates.duplicateSection;
+            document.getElementById('visualization-section').style.display = originalStates.visualizationSection;
             
             // 恢复原始进度显示
             progressSection.style.display = originalProgressDisplay;
@@ -897,7 +1253,248 @@ class ModEventApp {
             
             // 提示导出失败
             alert('导出报告失败，请查看控制台获取详细信息');
+        }
+    }
+    
+    /**
+     * 导出报告为JSON格式
+     */
+    exportAsJSON() {
+        console.log('开始导出JSON报告');
+        
+        // 检查是否需要生成详细报告
+        const generateDetailed = configManager.get('generateDetailedReport') !== false;
+        console.log('生成详细报告设置:', generateDetailed);
+        
+        // 收集分析结果数据
+        const analysisData = {
+            timestamp: new Date().toISOString(),
+            version: '0.2.0beta',
+            summary: {
+                totalMods: document.querySelector('.summary-value')?.textContent || '0',
+                duplicateIds: document.querySelectorAll('.duplicate-item').length.toString() || '0'
+            },
+            duplicateIds: Array.from(document.querySelectorAll('.duplicate-item')).map((item, index) => {
+                const id = item.querySelector('.duplicate-id')?.textContent || '';
+                const modules = Array.from(item.querySelectorAll('.module-item')).map(module => ({
+                    moduleName: module.querySelector('.module-name')?.textContent || '',
+                    modulePath: module.querySelector('.module-path')?.textContent || ''
+                }));
+                return {
+                    id: id.trim(),
+                    modules: modules
+                };
+            })
+        };
+        
+        // 如果需要生成详细报告，添加模组详情
+        if (generateDetailed) {
+            analysisData.modDetails = Array.from(document.querySelectorAll('.mod-header')).map((header, index) => {
+                const modTitle = header.querySelector('h5')?.textContent || '';
+                const modName = header.querySelector('p')?.textContent || '';
+                
+                // 获取模组详情内容
+                const content = header.nextElementSibling;
+                if (!content) return null;
+                
+                // 展开模组详情以便获取内容
+                const wasExpanded = content.style.display === 'block';
+                if (!wasExpanded) {
+                    content.style.display = 'block';
+                }
+                
+                // 收集模组统计信息
+                const stats = {};
+                const statItems = content.querySelectorAll('.summary-item');
+                statItems.forEach(item => {
+                    const label = item.querySelector('.summary-label')?.textContent || '';
+                    const value = item.querySelector('.summary-value')?.textContent || '';
+                    stats[label] = value;
+                });
+                
+                // 收集重复ID信息
+                const duplicateIds = [];
+                const duplicateSections = content.querySelectorAll('.duplicate-section');
+                duplicateSections.forEach(section => {
+                    const idType = section.querySelector('h3')?.textContent || '';
+                    const duplicateItems = section.querySelectorAll('.duplicate-item');
+                    duplicateItems.forEach(item => {
+                        const id = item.querySelector('.duplicate-id')?.textContent || '';
+                        duplicateIds.push({
+                            type: idType,
+                            id: id.trim()
+                        });
+                    });
+                });
+                
+                // 恢复原始状态
+                if (!wasExpanded) {
+                    content.style.display = 'none';
+                }
+                
+                return {
+                    title: modTitle,
+                    name: modName,
+                    stats: stats,
+                    duplicateIds: duplicateIds
+                };
+            }).filter(Boolean);
+        }
+        
+        // 创建JSON字符串
+        const jsonString = JSON.stringify(analysisData, null, 2);
+        console.log('JSON内容生成成功，长度:', jsonString.length);
+        
+        // 创建下载链接
+        const link = document.createElement('a');
+        const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+        link.download = `模组分析报告_${timestamp}.json`;
+        link.href = `data:application/json;charset=utf-8,${encodeURIComponent(jsonString)}`;
+        link.style.display = 'none';
+        
+        // 添加到DOM并触发下载
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // 提示导出成功
+        console.log('JSON报告导出成功');
+        alert('JSON报告导出成功！');
+    }
+    
+    /**
+     * 导出报告为Markdown格式
+     */
+    exportAsMarkdown() {
+        console.log('开始导出Markdown报告');
+        
+        // 检查是否需要生成详细报告
+        const generateDetailed = configManager.get('generateDetailedReport') !== false;
+        console.log('生成详细报告设置:', generateDetailed);
+        
+        // 收集分析结果数据
+        const timestamp = new Date().toISOString();
+        const totalMods = document.querySelector('.summary-value')?.textContent || '0';
+        const duplicateIds = document.querySelectorAll('.duplicate-item').length.toString() || '0';
+        
+        // 创建Markdown内容
+        let markdownContent = `# 学生时代模组兼容分析报告
+
+**生成时间**: ${new Date(timestamp).toLocaleString('zh-CN')}
+**报告版本**: 0.2.0beta
+
+## 分析摘要
+
+- **分析模组数量**: ${totalMods}
+- **重复ID总数**: ${duplicateIds}
+
+## 详细结果
+
+### 重复ID检测
+
+`;
+        
+        // 添加重复ID信息
+        const duplicateItems = document.querySelectorAll('.duplicate-item');
+        duplicateItems.forEach((item, index) => {
+            const id = item.querySelector('.duplicate-id')?.textContent || '';
+            const modules = item.querySelectorAll('.module-item');
+            
+            markdownContent += `#### ${index + 1}. ${id.trim()}\n\n`;
+            markdownContent += `| 模组名称 | 文件路径 |\n|---------|---------|\n`;
+            
+            modules.forEach(module => {
+                const moduleName = module.querySelector('.module-name')?.textContent || '';
+                const modulePath = module.querySelector('.module-path')?.textContent || '';
+                markdownContent += `| ${moduleName} | ${modulePath} |\n`;
+            });
+            
+            markdownContent += `\n`;
         });
+        
+        // 如果需要生成详细报告，添加模组详情
+        if (generateDetailed) {
+            // 添加模组详情
+            markdownContent += `## 模组详情\n\n`;
+            
+            // 获取模组详情
+            const modHeaders = document.querySelectorAll('.mod-header');
+            modHeaders.forEach((header, index) => {
+                const modTitle = header.querySelector('h5')?.textContent || '';
+                const modName = header.querySelector('p')?.textContent || '';
+                
+                markdownContent += `### ${index + 1}. ${modTitle}\n\n`;
+                markdownContent += `**模组名称**: ${modName}\n\n`;
+                
+                // 获取模组详情内容
+                const content = header.nextElementSibling;
+                if (content) {
+                    // 展开模组详情以便获取内容
+                    const wasExpanded = content.style.display === 'block';
+                    if (!wasExpanded) {
+                        content.style.display = 'block';
+                    }
+                    
+                    // 收集模组统计信息
+                    markdownContent += `#### 模组统计\n\n`;
+                    const statItems = content.querySelectorAll('.summary-item');
+                    if (statItems.length > 0) {
+                        markdownContent += `| 统计项 | 数值 |\n|-------|------|\n`;
+                        statItems.forEach(item => {
+                            const label = item.querySelector('.summary-label')?.textContent || '';
+                            const value = item.querySelector('.summary-value')?.textContent || '';
+                            markdownContent += `| ${label} | ${value} |\n`;
+                        });
+                        markdownContent += `\n`;
+                    }
+                    
+                    // 收集重复ID信息
+                    const duplicateSections = content.querySelectorAll('.duplicate-section');
+                    duplicateSections.forEach(section => {
+                        const idType = section.querySelector('h3')?.textContent || '';
+                        const duplicateItems = section.querySelectorAll('.duplicate-item');
+                        if (duplicateItems.length > 0) {
+                            markdownContent += `#### ${idType}\n\n`;
+                            markdownContent += `| 重复ID | 所属模组 |\n|-------|---------|\n`;
+                            duplicateItems.forEach(item => {
+                                const id = item.querySelector('.duplicate-id')?.textContent || '';
+                                const modules = item.querySelectorAll('.module-item');
+                                modules.forEach(module => {
+                                    const moduleName = module.querySelector('.module-name')?.textContent || '';
+                                    markdownContent += `| ${id.trim()} | ${moduleName} |\n`;
+                                });
+                            });
+                            markdownContent += `\n`;
+                        }
+                    });
+                    
+                    // 恢复原始状态
+                    if (!wasExpanded) {
+                        content.style.display = 'none';
+                    }
+                }
+                
+                markdownContent += `---\n\n`;
+            });
+        }
+        
+        console.log('Markdown内容生成成功，长度:', markdownContent.length);
+        
+        // 创建下载链接
+        const link = document.createElement('a');
+        const fileTimestamp = timestamp.slice(0, 19).replace(/:/g, '-');
+        link.download = `模组分析报告_${fileTimestamp}.md`;
+        link.href = `data:text/markdown;charset=utf-8,${encodeURIComponent(markdownContent)}`;
+        link.style.display = 'none';
+        
+        // 添加到DOM并触发下载
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // 提示导出成功
+        console.log('Markdown报告导出成功');
+        alert('Markdown报告导出成功！');
     }
 
     /**

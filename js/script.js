@@ -304,16 +304,6 @@ class ModEventAnalyzer {
                     <div class="summary-label">重复事件ID数</div>
                 </div>
             </div>
-            <div class="summary-text">
-                <h4>分析详情：</h4>
-                <ul style="margin-top: 10px; margin-left: 20px;">
-                    <li>已分析 <strong>${this.totalMods}</strong> 个模组文件夹</li>
-                    <li>共检测到 <strong>${this.totalEvents}</strong> 个事件</li>
-                    <li>发现 <strong>${duplicateIds}</strong> 个重复事件ID</li>
-                    <li>事件ID唯一率：<strong>${Math.round((this.allEventIds.size / this.totalEvents) * 100)}%</strong></li>
-                </ul>
-            </div>
-            
             <div style="margin-top: 30px;">
                 <h4>模组详情：</h4>
                 <div style="margin-top: 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
