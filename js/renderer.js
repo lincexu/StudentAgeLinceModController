@@ -171,10 +171,10 @@ class ResultRenderer {
                                     return `
                                         <div class="module-item">
                                             <div>
-                                                <div class="module-name">${modName}</div>
+                                                <div class="module-name">${modDetail.title || modName}</div>
                                                 <div class="module-path">${modDetail.path}</div>
                                             </div>
-                                            <div style="color: #666; font-size: 0.9rem;">${typeConfig.displayName}名称: ${item ? item.name : '未知'}</div>
+                                            <div style="color: #666; font-size: 0.9rem;">${typeConfig.displayName}名称: ${item ? (item.name || item.title || '未知') : '未知'}</div>
                                         </div>
                                     `;
                                 }).join('')}
@@ -415,6 +415,7 @@ class ResultRenderer {
      * @param {Object} result - 分析结果
      */
     renderSummary(result) {
+        this.currentResult = result;
         const { totalMods, idTypes, modDetails } = result;
         
         // 计算所有ID类型的统计信息
@@ -448,16 +449,54 @@ class ResultRenderer {
         this.summaryContent.innerHTML = `
             <div class="summary-grid">
                 <div class="summary-item">
+                    <div class="summary-icon">📁</div>
                     <div class="summary-value">${totalMods}</div>
                     <div class="summary-label">分析的模组数</div>
                 </div>
-                ${Object.entries(typeStats).map(([type, stats]) => `
+                ${Object.entries(typeStats).map(([type, stats]) => {
+                    // 根据类型获取对应的图标
+                    const icons = {
+                        event: '📅',
+                        item: '🎒',
+                        book: '📚',
+                        action: '⚡',
+                        character: '👤',
+                        location: '📍',
+                        quest: '📜',
+                        skill: '🎯',
+                        achievement: '🏆',
+                        effect: '✨',
+                        dialogue: '💬',
+                        cutscene: '🎬',
+                        miniGame: '🎮',
+                        collectible: '🔍',
+                        upgrade: '📈',
+                        unlockable: '🔓',
+                        resource: '💎',
+                        audio: '🔊',
+                        bg: '🖼️',
+                        c_g: '🎬',
+                        intent: '🎯',
+                        k_zone_avatar: '👤',
+                        k_zone_comment: '💬',
+                        k_zone_content: '📝',
+                        k_zone_profile: '👤',
+                        person: '👤',
+                        person_grow: '📈',
+                        renshengguan_memory: '📝',
+                        shop: '🛒'
+                    };
+                    const icon = icons[type] || '📋';
+                    return `
                 <div class="summary-item">
+                    <div class="summary-icon">${icon}</div>
                     <div class="summary-value">${stats.total}</div>
                     <div class="summary-label">总${stats.config.displayName}数</div>
                 </div>
-                `).join('')}
+                `;
+                }).join('')}
                 <div class="summary-item">
+                    <div class="summary-icon">⚠️</div>
                     <div class="summary-value">${Object.values(typeStats).reduce((sum, stats) => sum + stats.duplicate, 0)}</div>
                     <div class="summary-label">重复ID总数</div>
                 </div>
@@ -517,8 +556,8 @@ class ResultRenderer {
                                 <!-- 模组标题栏 -->
                                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" class="mod-header">
                                     <div>
-                                        <h5 style="margin: 0; font-size: 1.1rem;">${modName}</h5>
-                                        <p style="margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.9;">${modDetail.path}</p>
+                                        <h5 style="margin: 0; font-size: 1.1rem;">${modDetail.title || modName}</h5>
+                                        <p style="margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.9;">${modName}</p>
                                     </div>
                                     <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
                                         ${Object.entries(result.idTypes).map(([type, typeConfig]) => {
@@ -617,51 +656,142 @@ class ResultRenderer {
                                         // 获取重复ID检查的方法
                                         const allIdsKey = `all${type.charAt(0).toUpperCase() + type.slice(1)}Ids`;
                                         
-                                        // 收集所有唯一的key，按出现频率排序
+                                        // 收集所有唯一的key
                                         const allKeys = new Set();
                                         items.forEach(item => {
                                             if (typeof item === 'object' && item !== null) {
                                                 Object.keys(item).forEach(key => allKeys.add(key));
                                             }
                                         });
-                                        const sortedKeys = Array.from(allKeys).sort();
                                         
-                                        return `
-                                        <div style="margin-bottom: 20px;">
-                                            <h6 style="margin: 0 0 15px 0; color: #495057; display: flex; align-items: center; gap: 5px;">
-                                                <span>${icon} ${typeConfig.displayName}详情</span>
-                                                <span style="font-size: 0.8rem; font-weight: normal; color: #6c757d;">(${items.length}个)</span>
-                                            </h6>
-                                            <div style="overflow-x: auto;">
-                                                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                                                    <thead style="background: #f8f9fa; color: #495057;">
-                                                        <tr>
-                                                            ${sortedKeys.map(key => `
-                                                                <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">${configManager.getAttributeCN(type, key)}</th>
-                                                            `).join('')}
-                                                            <th style="padding: 10px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 0.9rem;">状态</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        ${items.map(item => {
-                                                            const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
-                                                            return `
+                                        // 确保id和name（或title）在最前面，其余key按顺序排列
+                                        const keysArray = Array.from(allKeys);
+                                        const sortedKeys = [];
+                                        
+                                        // 1. 优先添加id（如果存在）
+                                        if (keysArray.includes('id')) {
+                                            sortedKeys.push('id');
+                                        }
+                                        
+                                        // 2. 添加名称相关字段（只添加实际存在的一个）
+                                        if (keysArray.includes('name')) {
+                                            sortedKeys.push('name');
+                                        } else if (keysArray.includes('title')) {
+                                            sortedKeys.push('title');
+                                        }
+                                        
+                                        // 3. 添加剩余的key（不包括已经添加的id和名称字段）
+                                        keysArray.forEach(key => {
+                                            if (key !== 'id' && key !== 'name' && key !== 'title' && !sortedKeys.includes(key)) {
+                                                sortedKeys.push(key);
+                                            }
+                                        });
+                                        
+                                        // 获取当前表格布局配置
+                                        const tableLayout = configManager.get().tableLayout || 'vertical';
+                                        
+                                        // 生成ID类型详情内容
+                                        const idTypeContent = () => {
+                                            // 渲染竖列式布局
+                                            if (tableLayout === 'vertical') {
+                                                return `
+                                                <div class="vertical-table-container">
+                                                    ${items.map((item, itemIndex) => {
+                                                        const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
+                                                        return `
+                                                        <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}">
+                                                            <div class="card-header">
+                                                                <div class="card-title">
+                                                                    ${item.name || item.title || item.id}
+                                                                </div>
+                                                                <div class="card-status">
+                                                                    <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                                        ${isDuplicate ? '重复' : '唯一'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="vertical-table-rows">
+                                                                    ${sortedKeys.map((key, index) => {
+                                                                        let value = item[key];
+                                                                        // 如果是名称相关列，且当前值为undefined，尝试使用另一个名称字段
+                                                                        if (value === undefined && (key === 'name' || key === 'title')) {
+                                                                            value = key === 'name' ? item.title : item.name;
+                                                                        }
+                                                                        if (value === undefined) return '';
+                                                                        return `
+                                                                        <div class="vertical-table-row">
+                                                                            <div class="row-label">${configManager.getAttributeCN(type, key)}:</div>
+                                                                            <div class="row-value" title="${JSON.stringify(value)}">
+                                                                                ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
+                                                                            </div>
+                                                                        </div>
+                                                                        `;
+                                                                    }).join('')}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        `;
+                                                    }).join('')}
+                                                </div>
+                                                `;
+                                            } else {
+                                                // 渲染横列式布局
+                                                return `
+                                                <div style="overflow-x: auto;">
+                                                    <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); table-layout: auto;">
+                                                        <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                                                            <tr>
+                                                                ${sortedKeys.map(key => `
+                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-weight: bold; white-space: nowrap; min-width: 100px;">${configManager.getAttributeCN(type, key)}</th>
+                                                                `).join('')}
+                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-weight: bold; white-space: nowrap;">状态</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            ${items.map((item, itemIndex) => {
+                                                                const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
+                                                                return `
                                                                 <tr style="${isDuplicate ? 'background: #fff5f5;' : ''};">
-                                                                    ${sortedKeys.map(key => `
-                                                                        <td style="padding: 10px; border-bottom: 1px solid #eee; font-size: 0.9rem;">
-                                                                            ${item[key] !== undefined ? JSON.stringify(item[key]).replace(/^"|"$/g, '') : ''}
+                                                                    ${sortedKeys.map(key => {
+                                                                        let value = item[key];
+                                                                        // 如果是名称相关列，且当前值为undefined，尝试使用另一个名称字段
+                                                                        if (value === undefined && (key === 'name' || key === 'title')) {
+                                                                            value = key === 'name' ? item.title : item.name;
+                                                                        }
+                                                                        return `
+                                                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                            ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
                                                                         </td>
-                                                                    `).join('')}
-                                                                    <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                                                                        <span style="padding: 3px 6px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; ${isDuplicate ? 'background: #ffebee; color: #c62828;' : 'background: #e8f5e8; color: #2e7d32;'};">
+                                                                        `;
+                                                                    }).join('')}
+                                                                    <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
                                                                             ${isDuplicate ? '重复' : '唯一'}
                                                                         </span>
                                                                     </td>
                                                                 </tr>
-                                                            `;
-                                                        }).join('')}
-                                                    </tbody>
-                                                </table>
+                                                                `;
+                                                            }).join('')}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                `;
+                                            }
+                                        };
+                                        
+                                        // 返回可折叠的ID类型详情容器
+                                        return `
+                                        <div style="margin-bottom: 20px;">
+                                            <div class="id-type-header" style="margin: 0; background: #f8f9ff; border: 1px solid #e0e7ff; border-radius: 8px 8px 0 0; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                                                <h6 style="margin: 0; color: #495057; display: flex; align-items: center; gap: 5px;">
+                                                    <span>${icon} ${typeConfig.displayName}详情</span>
+                                                    <span style="font-size: 0.8rem; font-weight: normal; color: #6c757d;">(${items.length}个)</span>
+                                                </h6>
+                                                <div class="id-type-toggle" style="font-size: 0.8rem; color: #667eea; font-weight: bold; transition: transform 0.2s ease;">▶</div>
+                                            </div>
+                                            <div class="id-type-content" style="display: none; padding: 20px; background: #fff; border: 1px solid #e0e7ff; border-top: none; border-radius: 0 0 8px 8px;">
+                                                ${idTypeContent()}
                                             </div>
                                         </div>
                                         `;
@@ -691,6 +821,25 @@ class ResultRenderer {
                     }
                 });
             });
+            
+            // 添加ID类型详情展开/折叠功能
+            const idTypeHeaders = document.querySelectorAll('.id-type-header');
+            idTypeHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const toggleIcon = header.querySelector('.id-type-toggle');
+                    
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                        toggleIcon.textContent = '▶';
+                        toggleIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.display = 'block';
+                        toggleIcon.textContent = '▼';
+                        toggleIcon.style.transform = 'rotate(90deg)';
+                    }
+                });
+            });
         }, 0);
     }
 
@@ -702,43 +851,66 @@ class ResultRenderer {
     renderEventDetails(result, container) {
         const { modDetails } = result;
         
-        // 事件详情表格HTML
+        // 事件详情竖列式卡片布局HTML
         const eventDetailsHTML = `
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                        <tr>
-                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">模组名称</th>
-                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">事件ID</th>
-                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">事件标题</th>
-                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">状态</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${Array.from(modDetails.entries()).map(([modName, modDetail]) => 
-                            modDetail.events.map(event => {
-                                // 检查事件ID是否重复
-                                const isDuplicate = result.allEventIds.get(event.id).size > 1;
-                                return `
-                                    <tr style="${isDuplicate ? 'background: #fff5f5;' : ''};">
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 600;">${modName}</td>
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee;">${event.id}</td>
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee;">${event.title}</td>
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee;">
-                                            <span style="padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; ${isDuplicate ? 'background: #ffebee; color: #c62828;' : 'background: #e8f5e8; color: #2e7d32;'}">
-                                                ${isDuplicate ? '重复' : '唯一'}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                `;
-                            }).join('')
-                        ).join('')}
-                    </tbody>
-                </table>
+            <div class="vertical-table-container">
+                ${Array.from(modDetails.entries()).map(([modName, modDetail]) => 
+                    modDetail.events.map(event => {
+                        // 检查事件ID是否重复
+                        const isDuplicate = result.allEventIds.get(event.id).size > 1;
+                        return `
+                            <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        ${event.title || event.id}
+                                    </div>
+                                    <div class="card-status">
+                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                            ${isDuplicate ? '重复' : '唯一'}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="vertical-table-rows">
+                                        <div class="vertical-table-row">
+                                            <div class="row-label">模组名称:</div>
+                                            <div class="row-value">${modName}</div>
+                                        </div>
+                                        <div class="vertical-table-row">
+                                            <div class="row-label">事件ID:</div>
+                                            <div class="row-value">${event.id}</div>
+                                        </div>
+                                        <div class="vertical-table-row">
+                                            <div class="row-label">事件标题:</div>
+                                            <div class="row-value">${event.title || '无'}</div>
+                                        </div>
+                                        ${Object.entries(event).filter(([key]) => !['id', 'title'].includes(key)).map(([key, value]) => `
+                                        <div class="vertical-table-row">
+                                            <div class="row-label">${configManager.getAttributeCN('event', key)}:</div>
+                                            <div class="row-value" title="${JSON.stringify(value)}">
+                                                ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
+                                            </div>
+                                        </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')
+                ).join('')}
             </div>
         `;
         
         // 将事件详情添加到容器中
         container.innerHTML = eventDetailsHTML;
+    }
+    
+    /**
+     * 更新表格布局（热更新）
+     */
+    updateTableLayout() {
+        if (this.currentResult) {
+            this.renderSummary(this.currentResult);
+        }
     }
 }

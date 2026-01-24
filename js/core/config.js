@@ -48,7 +48,8 @@ class ConfigManager {
             generateDetailedReport: true, // 是否生成详细报告
             autoOpenBrowser: true, // 是否自动打开浏览器
             developerMode: false, // 是否开启开发者模式
-            developerPassword: "" // 开发者模式密码
+            developerPassword: "", // 开发者模式密码
+            opacity: 85 // 页面透明度，默认85%
         };
         
         // 直接使用简体中文作为默认翻译
@@ -85,17 +86,41 @@ class ConfigManager {
      */
     async loadAttributeCN() {
         try {
-            const response = await fetch('localization/zh-cn/attributeCN.json', {
+            const response = await fetch('./localization/zh-cn/attributeCN.json', {
                 cache: 'no-cache'
             });
             if (response.ok) {
                 this.attributeCN = await response.json();
                 console.log('[Config] 属性中文映射加载成功:', this.attributeCN);
             } else {
-                console.log('[Config] 属性中文映射加载失败，使用默认映射');
+                console.log('[Config] 属性中文映射加载失败，使用默认映射，状态码:', response.status);
             }
         } catch (error) {
             console.log('[Config] 无法加载属性中文映射，使用默认映射:', error.message);
+            // 手动设置默认映射，确保基本功能可用
+            this.attributeCN = {
+                "ItemKey": {
+                    "id": "id",
+                    "name": "名称",
+                    "icon": "图标",
+                    "type": "类型"
+                },
+                "EvtKey": {
+                    "id": "id",
+                    "title": "标题",
+                    "type": "类型"
+                },
+                "BookKey": {
+                    "id": "id",
+                    "name": "名称",
+                    "type": "类型"
+                },
+                "ActionKey": {
+                    "id": "id",
+                    "name": "名称",
+                    "type": "类型"
+                }
+            };
         }
     }
     
@@ -167,40 +192,44 @@ class ConfigManager {
     async loadConfig() {
         try {
             let config = null;
+            let fileConfig = null;
             
-            // 1. 优先从localStorage加载配置
-            const savedConfig = localStorage.getItem('appConfig');
-            if (savedConfig) {
-                console.log('[Config] 从localStorage加载配置');
-                config = JSON.parse(savedConfig);
-            } 
-            // 2. 尝试从配置文件加载
-            else {
-                try {
-                    console.log('[Config] 尝试从配置文件加载配置');
-                    const response = await fetch('config.jsonc', {
-                        cache: 'no-cache'
-                    });
-                    if (response.ok) {
-                        const jsoncText = await response.text();
-                        config = this.parseJSONC(jsoncText);
-                        localStorage.setItem('appConfig', JSON.stringify(config));
-                        console.log('[Config] 从配置文件加载配置成功:', config);
-                    } else {
-                        console.log('[Config] 配置文件加载失败，使用默认配置');
-                    }
-                } catch (error) {
-                    console.log('[Config] 无法加载配置文件，使用默认配置:', error.message);
+            // 1. 尝试从配置文件加载最新配置
+            try {
+                console.log('[Config] 尝试从配置文件加载最新配置');
+                const response = await fetch('config.jsonc', {
+                    cache: 'no-cache'
+                });
+                if (response.ok) {
+                    const jsoncText = await response.text();
+                    fileConfig = this.parseJSONC(jsoncText);
+                    console.log('[Config] 从配置文件加载配置成功:', fileConfig);
+                } else {
+                    console.log('[Config] 配置文件加载失败');
                 }
+            } catch (error) {
+                console.log('[Config] 无法加载配置文件:', error.message);
             }
             
-            // 3. 合并配置（默认配置 + 加载的配置）
-            this.config = this.mergeConfig(this.defaultConfig, config);
+            // 2. 从localStorage加载用户配置
+            const savedConfig = localStorage.getItem('appConfig');
+            if (savedConfig) {
+                console.log('[Config] 从localStorage加载用户配置');
+                config = JSON.parse(savedConfig);
+            }
+            
+            // 3. 合并配置（默认配置 + 文件配置 + 用户配置）
+            // 优先级：用户配置 > 文件配置 > 默认配置
+            this.config = this.mergeConfig(this.defaultConfig, fileConfig);
+            this.config = this.mergeConfig(this.config, config);
             
             // 4. 验证配置
             this.validateConfig();
             
-            // 5. 加载属性中文映射
+            // 5. 保存合并后的配置到localStorage
+            localStorage.setItem('appConfig', JSON.stringify(this.config));
+            
+            // 6. 加载属性中文映射
             await this.loadAttributeCN();
             
             console.log('[Config] 配置加载成功:', this.config);
@@ -229,7 +258,34 @@ class ConfigManager {
      * @returns {string} 中文名称
      */
     getAttributeCN(type, key) {
-        const keyName = `${type.charAt(0).toUpperCase() + type.slice(1)}Key`;
+        // 移除类型名称中的下划线，使其与映射表匹配
+        const normalizedType = type.replace(/_/g, '');
+        
+        // 类型名称到attributeCN.json中keyName的映射表
+        const typeToKeyNameMap = {
+            // 基础类型
+            'event': 'EvtKey',
+            'item': 'ItemKey',
+            'book': 'BookKey',
+            'action': 'ActionKey',
+            
+            // 从analyzer.js中获取的正确类型名映射
+            'actionevt': 'Action_evtKey', // 对应Action_evtKey
+            'audio': 'AudioKey',
+            'bg': 'BgKey',
+            'cg': 'C_gKey', // 对应C_gKey
+            'intent': 'IntentKey',
+            'kzoneavatar': 'K_zone_avatarKey', // 对应K_zone_avatarKey
+            'kzonecomment': 'K_zone_commentKey', // 对应K_zone_commentKey
+            'kzonecontent': 'K_zone_contentKey', // 对应K_zone_contentKey
+            'kzoneprofile': 'K_zone_profileKey', // 对应K_zone_profileKey
+            'person': 'PersonKey',
+            'persongrow': 'Person_growKey', // 对应Person_growKey
+            'renshengguanmemory': 'Renshengguan_memoryKey', // 对应Renshengguan_memoryKey
+            'shop': 'ShopKey'
+        };
+        
+        const keyName = typeToKeyNameMap[normalizedType] || `${type.charAt(0).toUpperCase() + type.slice(1)}Key`;
         if (this.attributeCN && this.attributeCN[keyName] && this.attributeCN[keyName][key]) {
             return this.attributeCN[keyName][key];
         }
@@ -285,6 +341,12 @@ class ConfigManager {
             this.config.exportFormat = 'png';
         }
         
+        // 验证opacity
+        if (typeof this.config.opacity !== 'number' || this.config.opacity < 0 || this.config.opacity > 100) {
+            console.warn('[Config] opacity值无效，使用默认值85');
+            this.config.opacity = 85;
+        }
+        
         // 确保布尔值类型
         this.config.showProgress = Boolean(this.config.showProgress);
         this.config.generateDetailedReport = Boolean(this.config.generateDetailedReport);
@@ -301,6 +363,7 @@ class ConfigManager {
         console.log('[Config] 配置已保存到localStorage:', this.config);
         
         // 向服务器发送POST请求更新config.jsonc文件
+        // 只在开发服务器上可用，普通HTTP服务器不支持
         fetch('/update-config', {
             method: 'POST',
             headers: {
@@ -312,11 +375,13 @@ class ConfigManager {
             if (response.ok) {
                 console.log('[Config] 配置已同步到服务器config.jsonc');
             } else {
-                console.error('[Config] 无法同步配置到服务器:', response.statusText);
+                // 忽略404错误，因为普通HTTP服务器不支持此端点
+                console.info('[Config] 服务器不支持配置同步，配置仅保存到本地');
             }
         })
         .catch(error => {
-            console.error('[Config] 同步配置到服务器时发生错误:', error);
+            // 忽略网络错误，因为普通HTTP服务器不支持此端点
+            console.info('[Config] 无法连接到配置同步端点，配置仅保存到本地:', error.message);
         });
         
         this.notifyListeners();

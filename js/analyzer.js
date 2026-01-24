@@ -212,6 +212,21 @@ class EventAnalyzer {
         // 初始化模组数据
         this.initModData(folder.name, folder.fullPath);
         
+        // 检查并读取manifest.json文件
+        const manifestFile = folderFiles.find(file => file.name === 'manifest.json');
+        if (manifestFile) {
+            try {
+                const content = await Utils.readFile(manifestFile);
+                const manifestData = JSON.parse(content);
+                if (manifestData.title) {
+                    const modDetail = this.modDetails.get(folder.name);
+                    modDetail.title = manifestData.title;
+                }
+            } catch (error) {
+                console.warn(`读取 ${folder.name}/manifest.json 时出错:`, error);
+            }
+        }
+        
         // 遍历所有支持的ID类型，处理对应文件
         for (const type in this.idTypes) {
             const typeConfig = this.idTypes[type];
@@ -315,13 +330,16 @@ class EventAnalyzer {
                         }
                         this.allIds[type].get(id).add(folder.name);
                         
-                        // 保存详情
+                        // 保存详情，创建一个新的对象，只包含数据属性，不包含getter函数
                         const detailArray = modDetail[type + 's'];
-                        detailArray.push({
-                            id: id,
-                            name: typeConfig.getNameField(data),
-                            data: data
-                        });
+                        // 创建一个新对象，确保只包含可枚举的数据属性
+                        const dataCopy = JSON.parse(JSON.stringify(data));
+                        // 添加name属性，确保显示名称可用
+                        const itemWithName = {
+                            ...dataCopy,
+                            name: typeConfig.getNameField(data)
+                        };
+                        detailArray.push(itemWithName);
                         
                         // 更新总数
                         this.totalCounts[type]++;

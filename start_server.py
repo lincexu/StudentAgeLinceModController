@@ -133,6 +133,13 @@ def start_server(port=None):
     except Exception:
         pass  # Use default values if config file is not available
 
+    # Print ASCII art
+    print(f"{Colors.BOLD}{Colors.BLUE}   _|_|_|    _|_|    _|        _|      _|    _|_|_|  {Colors.RESET}")
+    print(f"{Colors.BOLD}{Colors.BLUE} _|        _|    _|  _|        _|_|  _|_|  _|        {Colors.RESET}")
+    print(f"{Colors.BOLD}{Colors.BLUE}   _|_|    _|_|_|_|  _|        _|  _|  _|  _|        {Colors.RESET}")
+    print(f"{Colors.BOLD}{Colors.BLUE}       _|  _|    _|  _|        _|      _|  _|        {Colors.RESET}")
+    print(f"{Colors.BOLD}{Colors.BLUE} _|_|_|    _|    _|  _|_|_|_|  _|      _|    _|_|_|  {Colors.RESET}")
+    
     # Print styled welcome messages
     border = f"{Colors.CYAN}┌{"─" * 52}┐{Colors.RESET}"
     border_mid = f"{Colors.CYAN}├{"─" * 52}┤{Colors.RESET}"
@@ -142,7 +149,7 @@ def start_server(port=None):
     print(f"{Colors.CYAN}│{Colors.RESET} {Colors.BOLD}{Colors.GREEN}欢迎使用学生时代模组兼容分析工具{Colors.RESET} {Colors.CYAN}│{Colors.RESET}")
     print(border_mid)
     print(f"{Colors.CYAN}│{Colors.RESET} Powered by {Colors.BOLD}{Colors.BLUE}Lince{Colors.RESET} {' ' * (42 - len(f'Powered by Lince'))} {Colors.CYAN}│{Colors.RESET}")
-    print(f"{Colors.CYAN}│{Colors.RESET} SALMC v{Colors.BOLD}{version}{Colors.RESET} {' ' * (42 - len(f'SALMC v{version}'))} {Colors.CYAN}│{Colors.RESET}")
+    print(f"{Colors.CYAN}│{Colors.RESET} StudentAge LinceModController v{Colors.BOLD}{version}{Colors.RESET} {' ' * (42 - len(f'SALMC v{version}'))} {Colors.CYAN}│{Colors.RESET}")
     print(border_mid)
     print(f"{Colors.CYAN}│{Colors.RESET} {Colors.BOLD}{Colors.YELLOW}关闭此页面将导致HTTP服务中断{Colors.RESET} {Colors.CYAN}│{Colors.RESET}")
     print(border_bottom)

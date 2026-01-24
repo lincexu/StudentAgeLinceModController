@@ -24,18 +24,22 @@ class ModEventApp {
         
         // 获取DOM元素
         this.analyzeBtn = document.getElementById('analyze-btn');
-        
-        // 添加清理按钮
-        this.addClearButton();
+        this.clearBtn = document.getElementById('clear-selection');
         
         // 设置主题模式
         this.setupThemeMode();
         
+        // 应用透明度设置
+        this.applyOpacity(this.config.opacity || 85);
+        
         // 更新底部版本信息
-        this.updateFooterVersion();
+        await this.updateFooterVersion();
         
         // 应用翻译
         this.applyTranslations();
+        
+        // 初始化语言切换按钮
+        this.initLanguageToggle();
         
         // 绑定事件
         this.bindEvents();
@@ -113,20 +117,48 @@ class ModEventApp {
     }
     
     /**
+     * 初始化语言切换按钮
+     */
+    initLanguageToggle() {
+        const languageToggle = document.getElementById('language-toggle');
+        if (languageToggle) {
+            // 根据当前配置设置初始文本
+            const currentLanguage = this.config.language;
+            languageToggle.textContent = currentLanguage === 'zh-tw' ? '繁' : '简';
+        }
+    }
+
+    /**
      * 更新底部版本信息
      */
-    updateFooterVersion() {
+    async updateFooterVersion() {
         const versionElement = document.getElementById('footer-version');
-        console.log('更新版本信息:', {
-            versionElement: versionElement,
-            configVersion: this.config.version,
-            currentContent: versionElement ? versionElement.textContent : '未找到元素'
-        });
         
         if (versionElement) {
-            // 直接设置完整文本，确保版本号正确显示
-            versionElement.textContent = `Student Age LMC v${this.config.version}`;
-            console.log('版本信息更新后:', versionElement.textContent);
+            try {
+                // 直接从config.jsonc文件读取最新版本号
+                const response = await fetch('config.jsonc', { cache: 'no-cache' });
+                if (response.ok) {
+                    const jsoncText = await response.text();
+                    // 简单解析JSONC，移除注释
+                    const cleanedJson = jsoncText
+                        .replace(/\/\/.*$/gm, '') // 移除单行注释
+                        .replace(/\/\*[\s\S]*?\*\//g, '') // 移除多行注释
+                        .trim();
+                    const config = JSON.parse(cleanedJson);
+                    const version = config.version || this.config.version || '0.2.0';
+                    versionElement.textContent = `Student Age LMC v${version}`;
+                    console.log('版本信息更新后:', versionElement.textContent);
+                    return;
+                }
+            } catch (error) {
+                console.error('直接读取config.jsonc失败:', error);
+            }
+            
+            //  fallback to current config
+            const version = this.config.version || '0.2.0';
+            versionElement.textContent = `Student Age LMC v${version}`;
+            console.log('使用fallback版本信息:', versionElement.textContent);
         }
     }
     
@@ -230,6 +262,12 @@ class ModEventApp {
             exportFormatSelect.value = this.config.exportFormat;
         }
         
+        // 表格布局
+        const tableLayoutSelect = document.getElementById('table-layout');
+        if (tableLayoutSelect) {
+            tableLayoutSelect.value = this.config.tableLayout || 'vertical';
+        }
+        
         // 显示进度
         const showProgressCheckbox = document.getElementById('show-progress');
         if (showProgressCheckbox) {
@@ -247,6 +285,20 @@ class ModEventApp {
         if (autoOpenBrowserCheckbox) {
             autoOpenBrowserCheckbox.checked = this.config.autoOpenBrowser;
         }
+        
+        // 透明度设置
+        const opacity = this.config.opacity || 85;
+        const opacitySlider = document.getElementById('opacity-slider');
+        const opacityInput = document.getElementById('opacity-input');
+        if (opacitySlider) {
+            opacitySlider.value = opacity;
+        }
+        if (opacityInput) {
+            opacityInput.value = opacity;
+        }
+        
+        // 绑定透明度滑块和输入框的联动事件
+        this.bindOpacityControls();
         
         // 开发者模式
         const developerModeCheckbox = document.getElementById('developer-mode');
@@ -305,6 +357,52 @@ class ModEventApp {
     }
     
     /**
+     * 绑定透明度控制事件
+     */
+    bindOpacityControls() {
+        const opacitySlider = document.getElementById('opacity-slider');
+        const opacityInput = document.getElementById('opacity-input');
+        
+        // 同步滑块和输入框的值
+        const syncOpacityValues = (value) => {
+            const opacity = parseInt(value);
+            if (opacitySlider) {
+                opacitySlider.value = opacity;
+            }
+            if (opacityInput) {
+                opacityInput.value = opacity;
+            }
+            // 实时应用透明度变化
+            this.applyOpacity(opacity);
+        };
+        
+        // 滑块变化事件
+        if (opacitySlider) {
+            opacitySlider.addEventListener('input', (e) => {
+                syncOpacityValues(e.target.value);
+            });
+        }
+        
+        // 输入框变化事件
+        if (opacityInput) {
+            opacityInput.addEventListener('input', (e) => {
+                syncOpacityValues(e.target.value);
+            });
+        }
+    }
+    
+    /**
+     * 应用透明度变化
+     * @param {number} opacity - 透明度值（0-100）
+     */
+    applyOpacity(opacity) {
+        const main = document.querySelector('main');
+        if (main) {
+            main.style.opacity = opacity / 100;
+        }
+    }
+    
+    /**
      * 显示开发者密码对话框
      * @returns {Promise<string>} 用户输入的密码
      */
@@ -323,29 +421,32 @@ class ModEventApp {
                 justify-content: center;
                 align-items: center;
                 z-index: 10000;
+                backdrop-filter: blur(5px);
             `;
             
             // 创建对话框内容
             const dialogContent = document.createElement('div');
             dialogContent.style.cssText = `
-                background: white;
+                background: var(--bg-primary);
                 padding: 30px;
-                border-radius: 12px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                border-radius: var(--border-radius-lg);
+                box-shadow: var(--shadow-lg);
                 width: 90%;
                 max-width: 400px;
+                border: 1px solid var(--border-color);
+                animation: fadeInUp 0.3s ease-out;
             `;
             
             // 创建对话框HTML
             dialogContent.innerHTML = `
-                <h3 style="margin-top: 0; margin-bottom: 20px; color: #333;">开发者模式验证</h3>
+                <h3 style="margin-top: 0; margin-bottom: 20px; color: var(--text-primary); font-size: var(--font-size-lg); font-weight: var(--font-weight-bold);">开发者模式验证</h3>
                 <div style="margin-bottom: 20px;">
-                    <label for="dev-password" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">请输入开发者密码：</label>
-                    <input type="password" id="dev-password" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;" placeholder="输入密码">
+                    <label for="dev-password" style="display: block; margin-bottom: 8px; font-weight: var(--font-weight-bold); color: var(--text-primary);">请输入开发者密码：</label>
+                    <input type="password" id="dev-password" style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: var(--border-radius-md); font-size: 16px; background: var(--bg-primary); color: var(--text-primary); transition: all var(--transition-base); font-family: var(--font-family);">
                 </div>
                 <div style="display: flex; gap: 12px; justify-content: flex-end;">
-                    <button id="dev-cancel" style="padding: 12px 24px; background: #6c757d; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">取消</button>
-                    <button id="dev-confirm" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">确定</button>
+                    <button id="dev-cancel" style="padding: 12px 24px; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); font-size: 16px; cursor: pointer; transition: all var(--transition-base); font-family: var(--font-family); font-weight: var(--font-weight-medium);">取消</button>
+                    <button id="dev-confirm" style="padding: 12px 24px; background: var(--primary-gradient); color: white; border: none; border-radius: var(--border-radius-md); font-size: 16px; cursor: pointer; transition: all var(--transition-base); font-family: var(--font-family); font-weight: var(--font-weight-medium);">确定</button>
                 </div>
             `;
             
@@ -363,15 +464,54 @@ class ModEventApp {
             
             // 事件处理
             const handleCancel = () => {
-                document.body.removeChild(dialog);
-                reject(new Error('用户取消'));
+                dialogContent.style.animation = 'fadeOutDown 0.3s ease-out forwards';
+                setTimeout(() => {
+                    document.body.removeChild(dialog);
+                    reject(new Error('用户取消'));
+                }, 300);
             };
             
             const handleConfirm = () => {
                 const password = passwordInput.value;
-                document.body.removeChild(dialog);
-                resolve(password);
+                dialogContent.style.animation = 'fadeOutDown 0.3s ease-out forwards';
+                setTimeout(() => {
+                    document.body.removeChild(dialog);
+                    resolve(password);
+                }, 300);
             };
+            
+            // 添加交互效果
+            passwordInput.addEventListener('focus', () => {
+                passwordInput.style.borderColor = 'var(--primary-color)';
+                passwordInput.style.boxShadow = '0 0 0 3px rgba(102, 126, 234, 0.1)';
+            });
+            
+            passwordInput.addEventListener('blur', () => {
+                passwordInput.style.borderColor = 'var(--border-color)';
+                passwordInput.style.boxShadow = 'none';
+            });
+            
+            cancelBtn.addEventListener('mouseover', () => {
+                cancelBtn.style.background = 'var(--bg-light)';
+                cancelBtn.style.transform = 'translateY(-2px)';
+                cancelBtn.style.boxShadow = 'var(--shadow-sm)';
+            });
+            
+            cancelBtn.addEventListener('mouseout', () => {
+                cancelBtn.style.background = 'var(--bg-secondary)';
+                cancelBtn.style.transform = 'translateY(0)';
+                cancelBtn.style.boxShadow = 'none';
+            });
+            
+            confirmBtn.addEventListener('mouseover', () => {
+                confirmBtn.style.transform = 'translateY(-2px)';
+                confirmBtn.style.boxShadow = 'var(--shadow-md)';
+            });
+            
+            confirmBtn.addEventListener('mouseout', () => {
+                confirmBtn.style.transform = 'translateY(0)';
+                confirmBtn.style.boxShadow = 'none';
+            });
             
             // 绑定事件
             cancelBtn.addEventListener('click', handleCancel);
@@ -405,18 +545,20 @@ class ModEventApp {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: white;
+            background: var(--bg-primary);
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
             z-index: 10001;
             max-width: 90%;
             text-align: center;
+            border: 1px solid var(--border-color);
+            animation: fadeInUp 0.3s ease-out;
         `;
         
         alert.innerHTML = `
-            <div style="margin-bottom: 20px; font-size: 16px; color: #333;">${message}</div>
-            <button id="alert-ok" style="padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease;">确定</button>
+            <div style="margin-bottom: 20px; font-size: 16px; color: var(--text-primary);">${message}</div>
+            <button id="alert-ok" style="padding: 12px 24px; background: var(--primary-gradient); color: white; border: none; border-radius: var(--border-radius-md); font-size: 16px; cursor: pointer; transition: all var(--transition-base); box-shadow: var(--shadow-sm);">确定</button>
         `;
         
         document.body.appendChild(alert);
@@ -424,7 +566,10 @@ class ModEventApp {
         // 绑定事件
         const okBtn = alert.querySelector('#alert-ok');
         okBtn.addEventListener('click', () => {
-            document.body.removeChild(alert);
+            alert.style.animation = 'fadeOutDown 0.3s ease-out forwards';
+            setTimeout(() => {
+                document.body.removeChild(alert);
+            }, 300);
         });
     }
     
@@ -452,10 +597,12 @@ class ModEventApp {
         const themeMode = parseInt(document.getElementById('theme-mode').value);
         const language = document.getElementById('language').value;
         const exportFormat = document.getElementById('export-format').value;
+        const tableLayout = document.getElementById('table-layout').value;
         const showProgress = document.getElementById('show-progress').checked;
         const generateDetailedReport = document.getElementById('generate-detailed-report').checked;
         const autoOpenBrowser = document.getElementById('auto-open-browser').checked;
         const developerMode = document.getElementById('developer-mode').checked;
+        const opacity = parseInt(document.getElementById('opacity-slider').value) || 85;
         
         // 应用信息
         const appName = document.getElementById('app-name').value;
@@ -468,10 +615,12 @@ class ModEventApp {
             themeMode,
             language,
             exportFormat,
+            tableLayout,
             showProgress,
             generateDetailedReport,
             autoOpenBrowser,
             developerMode,
+            opacity,
             projectName: appName,
             version: appVersion,
             author: appAuthor,
@@ -491,6 +640,11 @@ class ModEventApp {
         
         // 保存配置
         this.saveConfig();
+        
+        // 触发表格布局热更新
+        if (this.renderer && typeof this.renderer.updateTableLayout === 'function') {
+            this.renderer.updateTableLayout();
+        }
         
         console.log('设置已保存:', this.config);
     }
@@ -559,11 +713,15 @@ class ModEventApp {
     }
 
     bindEvents() {
-        // 分析按钮点击事件
-        this.analyzeBtn.addEventListener('click', () => this.startAnalysis());
+        // 分析按钮点击事件（兼容新旧按钮）
+        if (this.analyzeBtn) {
+            this.analyzeBtn.addEventListener('click', () => this.startAnalysis());
+        }
         
         // 清理按钮点击事件
-        this.clearBtn.addEventListener('click', () => this.clearFolders());
+        if (this.clearBtn) {
+            this.clearBtn.addEventListener('click', () => this.clearFolders());
+        }
         
         // 文件夹选择变化事件
         this.uploader.setOnFolderChange((folders) => {
@@ -628,10 +786,15 @@ class ModEventApp {
         const languageToggle = document.getElementById('language-toggle');
         if (languageToggle) {
             languageToggle.addEventListener('click', () => {
-                const currentText = languageToggle.textContent;
-                const newLanguage = currentText === '简' ? 'zh-tw' : 'zh-cn';
-                const newText = currentText === '简' ? '繁' : '简';
+                // 获取当前按钮文本，并去除空格
+                const currentText = languageToggle.textContent.trim();
                 
+                // 确定新语言和新文本，确保逻辑健壮性
+                const isSimplified = currentText === '简';
+                const newLanguage = isSimplified ? 'zh-tw' : 'zh-cn';
+                const newText = isSimplified ? '繁' : '简';
+                
+                // 更新按钮文本
                 languageToggle.textContent = newText;
                 
                 // 更新配置
@@ -641,7 +804,7 @@ class ModEventApp {
                 // 应用翻译
                 this.applyTranslations();
                 
-                console.log('语言已切换为:', newLanguage);
+                console.log('语言已切换为:', newLanguage, '按钮文本:', newText);
             });
         }
         

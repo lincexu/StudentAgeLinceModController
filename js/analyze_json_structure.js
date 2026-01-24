@@ -45,7 +45,7 @@ function main() {
         
         if (!data) return;
         
-        // 文件名转类型名（如EvtCfg.json -> event）
+        // 文件名转类型名 (如EvtCfg.json -> event)
         const typeName = file.replace('Cfg.json', '').replace(/^[A-Z]/, char => char.toLowerCase()).replace(/[A-Z]/g, char => `_${char.toLowerCase()}`);
         
         // 收集所有key

@@ -35,17 +35,24 @@
         </div>
         
         <main>
-            <section class="upload-section">
-                <div class="upload-area" id="upload-area">
-                    <input type="file" id="folder-input" webkitdirectory directory multiple>
-                    <label for="folder-input" class="upload-label">
-                        <div class="upload-icon">📁</div>
-                        <div class="upload-text">点击或拖拽（某些浏览器暂不支持）选择模组文件夹</div>
-                        <div class="upload-hint">支持选择多个文件夹</div>
-                    </label>
-                </div>
-                <button id="analyze-btn" class="analyze-btn">开始分析</button>
-            </section>
+            <!-- 核心功能区域 -->
+            <div class="core-functions">
+                <section class="upload-section">
+                    <div class="upload-area" id="upload-area">
+                        <input type="file" id="folder-input" webkitdirectory directory multiple>
+                        <label for="folder-input" class="upload-label">
+                            <div class="upload-icon">📁</div>
+                            <div class="upload-text">点击或拖拽选择模组文件夹</div>
+                            <div class="upload-hint">支持选择多个文件夹</div>
+                        </label>
+                    </div>
+                </section>
+                
+                <section class="action-section">
+                    <button id="analyze-btn" class="action-btn primary-btn">开始分析</button>
+                    <button id="clear-selection" class="action-btn secondary-btn">清理选择</button>
+                </section>
+            </div>
             
             <section class="progress-section" id="progress-section" style="display: none;">
                 <div class="progress-bar">
@@ -62,12 +69,12 @@
                 
                 <div class="result-content">
                     <div class="duplicate-section" id="duplicate-section" style="display: none;">
-                        <h3>⚠️ 重复事件ID检测</h3>
+                        <h3>重复事件ID检测</h3>
                         <div class="duplicate-list" id="duplicate-list"></div>
                     </div>
                     
                     <div class="summary-section">
-                        <h3>📊 分析摘要</h3>
+                        <h3>分析摘要</h3>
                         <div class="summary-content" id="summary-content"></div>
                     </div>
                 </div>
@@ -115,6 +122,13 @@
                             <option value="3">跟随系统</option>
                         </select>
                     </div>
+                    <div class="settings-item">
+                        <label>透明度：</label>
+                        <div style="display: flex; gap: 10px; align-items: center; flex: 1;">
+                            <input type="range" id="opacity-slider" min="0" max="100" value="85" class="settings-input" style="flex: 1;">
+                            <input type="number" id="opacity-input" min="0" max="100" value="85" class="settings-input" style="width: 80px;">
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="settings-section">
@@ -136,6 +150,13 @@
                             <option value="png">PNG图片</option>
                             <option value="json">JSON数据</option>
                             <option value="markdown">Markdown文本</option>
+                        </select>
+                    </div>
+                    <div class="settings-item">
+                        <label for="table-layout">详情表格布局：</label>
+                        <select id="table-layout" class="settings-select">
+                            <option value="vertical">竖列式布局</option>
+                            <option value="horizontal">横列式布局</option>
                         </select>
                     </div>
                     <div class="settings-item checkbox-item">
