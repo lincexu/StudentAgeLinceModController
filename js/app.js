@@ -41,8 +41,54 @@ class ModEventApp {
         // 初始化语言切换按钮
         this.initLanguageToggle();
         
+        // 自动添加baseGame文件夹到待解析列表（如果配置启用）
+        this.autoAddBaseGameFolder();
+        
         // 绑定事件
         this.bindEvents();
+    }
+    
+    /**
+     * 根据配置自动添加baseGame文件夹到待解析列表
+     */
+    autoAddBaseGameFolder() {
+        if (this.config.includeOfficialContent) {
+            console.log('[App] 自动添加baseGame文件夹到待解析列表');
+            // 检查baseGame文件夹是否存在
+            fetch('baseGame/')
+                .then(response => {
+                    if (response.ok) {
+                        console.log('[App] 检测到baseGame文件夹存在');
+                        // 先检查是否已经有baseGame文件夹
+                        const currentFolders = this.uploader.getSelectedFolders();
+                        const hasBaseGame = currentFolders.some(folder => folder.name === 'baseGame');
+                        if (!hasBaseGame) {
+                            // 创建baseGame文件夹对象
+                            const baseGameFolder = {
+                                name: 'baseGame',
+                                fullPath: 'baseGame',
+                                file: null
+                            };
+                            // 手动添加到uploader的selectedFolders中
+                            this.uploader.selectedFolders.set('baseGame', baseGameFolder);
+                            // 更新UI显示
+                            if (this.renderer) {
+                                this.renderer.updateFolderStats(Array.from(this.uploader.selectedFolders.values()));
+                            }
+                            console.log('[App] baseGame文件夹已添加到待解析列表');
+                        } else {
+                            console.log('[App] baseGame文件夹已存在于待解析列表中');
+                        }
+                    } else {
+                        console.log('[App] baseGame文件夹不存在');
+                    }
+                })
+                .catch(error => {
+                    console.log('[App] 检查baseGame文件夹时出错:', error.message);
+                });
+        } else {
+            console.log('[App] 配置为不自动添加baseGame文件夹');
+        }
     }
 
     /**
@@ -284,6 +330,12 @@ class ModEventApp {
         const autoOpenBrowserCheckbox = document.getElementById('auto-open-browser');
         if (autoOpenBrowserCheckbox) {
             autoOpenBrowserCheckbox.checked = this.config.autoOpenBrowser;
+        }
+        
+        // 自动添加baseGame文件夹
+        const includeOfficialContentCheckbox = document.getElementById('include-official-content');
+        if (includeOfficialContentCheckbox) {
+            includeOfficialContentCheckbox.checked = this.config.includeOfficialContent;
         }
         
         // 透明度设置
@@ -601,6 +653,7 @@ class ModEventApp {
         const showProgress = document.getElementById('show-progress').checked;
         const generateDetailedReport = document.getElementById('generate-detailed-report').checked;
         const autoOpenBrowser = document.getElementById('auto-open-browser').checked;
+        const includeOfficialContent = document.getElementById('include-official-content').checked;
         const developerMode = document.getElementById('developer-mode').checked;
         const opacity = parseInt(document.getElementById('opacity-slider').value) || 85;
         
@@ -619,6 +672,7 @@ class ModEventApp {
             showProgress,
             generateDetailedReport,
             autoOpenBrowser,
+            includeOfficialContent,
             developerMode,
             opacity,
             projectName: appName,
@@ -644,6 +698,18 @@ class ModEventApp {
         // 触发表格布局热更新
         if (this.renderer && typeof this.renderer.updateTableLayout === 'function') {
             this.renderer.updateTableLayout();
+        }
+        
+        // 根据新的includeOfficialContent设置重新处理baseGame文件夹
+        if (this.config.includeOfficialContent) {
+            this.autoAddBaseGameFolder();
+        } else {
+            // 如果关闭了自动添加，移除已添加的baseGame文件夹
+            const currentFolders = this.uploader.getSelectedFolders();
+            const baseGameIndex = currentFolders.findIndex(folder => folder.name === 'baseGame');
+            if (baseGameIndex !== -1) {
+                this.uploader.removeFolder(baseGameIndex);
+            }
         }
         
         console.log('设置已保存:', this.config);

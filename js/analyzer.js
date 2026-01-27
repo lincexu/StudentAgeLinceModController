@@ -233,6 +233,12 @@ class EventAnalyzer {
             await this.processCfgFileByType(folder, folderFiles, type, typeConfig);
         }
         
+        // 如果是baseGame文件夹且没有找到文件，尝试通过fetch API读取
+        if (folder.name === 'baseGame' && folderFiles.length === 0) {
+            console.log('[Analyzer] 尝试通过fetch API读取baseGame文件夹中的文件');
+            await this.processBaseGameFolder(folder);
+        }
+        
         // 更新进度
         this.processedMods++;
         const progress = Math.round((this.processedMods / this.totalMods) * 100);
@@ -244,6 +250,124 @@ class EventAnalyzer {
                 processed: this.processedMods,
                 total: this.totalMods
             });
+        }
+    }
+    
+    /**
+     * 处理baseGame文件夹（通过fetch API）
+     * @param {Object} folder - 文件夹信息
+     */
+    async processBaseGameFolder(folder) {
+        // 尝试读取baseGame/Cfgs/zh-cn/目录下的所有文件
+        const cfgDir = 'baseGame/Cfgs/zh-cn/';
+        
+        try {
+            // 首先尝试列出目录内容
+            console.log(`[Analyzer] 尝试列出 ${cfgDir} 目录内容`);
+            const dirResponse = await fetch(cfgDir);
+            if (dirResponse.ok) {
+                const dirContent = await dirResponse.text();
+                // 从目录内容中提取文件名
+                const fileNames = this.extractFileNamesFromDirContent(dirContent);
+                console.log(`[Analyzer] 找到 ${fileNames.length} 个文件:`, fileNames);
+                
+                // 遍历所有支持的ID类型，尝试读取对应文件
+                for (const type in this.idTypes) {
+                    const typeConfig = this.idTypes[type];
+                    try {
+                        // 尝试获取文件名（支持带井号和编号的格式）
+                        const baseFileName = typeConfig.fileName;
+                        const baseNameWithoutExt = baseFileName.replace('.json', '');
+                        
+                        // 查找匹配当前类型的文件
+                        const matchingFile = fileNames.find(name => {
+                            return name.includes(baseNameWithoutExt);
+                        });
+                        if (matchingFile) {
+                            // 读取找到的文件
+                            console.log(`[Analyzer] 找到匹配文件: ${matchingFile} 对应类型: ${type}`);
+                            const fileResponse = await fetch(`${cfgDir}${matchingFile}`);
+                            if (fileResponse.ok) {
+                                const content = await fileResponse.text();
+                                const jsonData = JSON.parse(content);
+                                await this.processBaseGameFileData(folder, type, typeConfig, jsonData);
+                            } else {
+                                console.warn(`[Analyzer] 无法读取文件 ${matchingFile}，状态码: ${fileResponse.status}`);
+                            }
+                        } else {
+                            console.warn(`[Analyzer] 未找到匹配 ${baseNameWithoutExt} 的文件`);
+                        }
+                    } catch (error) {
+                        console.warn(`[Analyzer] 处理类型 ${type} 时出错:`, error);
+                    }
+                }
+            } else {
+                console.warn(`[Analyzer] 无法列出目录内容，状态码: ${dirResponse.status}`);
+            }
+        } catch (error) {
+            console.warn(`[Analyzer] 处理baseGame文件夹时出错:`, error);
+        }
+    }
+    
+    /**
+     * 从目录内容中提取文件名
+     * @param {string} dirContent - 目录内容
+     * @returns {string[]} 文件名列表
+     */
+    extractFileNamesFromDirContent(dirContent) {
+        // 简单的正则表达式，从HTML目录列表中提取文件名
+        const fileNameRegex = /href="([^"]+\.json)"/g;
+        const fileNames = [];
+        let match;
+        while ((match = fileNameRegex.exec(dirContent)) !== null) {
+            fileNames.push(match[1]);
+        }
+        return fileNames;
+    }
+    
+    /**
+     * 处理baseGame文件数据
+     * @param {Object} folder - 文件夹信息
+     * @param {string} type - ID类型
+     * @param {Object} typeConfig - 类型配置
+     * @param {Object} jsonData - JSON数据
+     */
+    async processBaseGameFileData(folder, type, typeConfig, jsonData) {
+        const idSet = this.modIds[type].get(folder.name);
+        const modDetail = this.modDetails.get(folder.name);
+        
+        // 提取ID
+        for (const [key, data] of Object.entries(jsonData)) {
+            // 确保是有效的对象且包含ID字段
+            if (data && typeof data === 'object') {
+                const idField = typeConfig.getIdField;
+                const id = typeof idField === 'function' ? idField(data) : data[idField];
+                
+                if (id) {
+                    // 添加到当前模组的ID集合
+                    idSet.add(id);
+                    
+                    // 添加到所有ID的映射中
+                    if (!this.allIds[type].has(id)) {
+                        this.allIds[type].set(id, new Set());
+                    }
+                    this.allIds[type].get(id).add(folder.name);
+                    
+                    // 保存详情，创建一个新的对象，只包含数据属性，不包含getter函数
+                    const detailArray = modDetail[type + 's'];
+                    // 创建一个新对象，确保只包含可枚举的数据属性
+                    const dataCopy = JSON.parse(JSON.stringify(data));
+                    // 添加name属性，确保显示名称可用
+                    const itemWithName = {
+                        ...dataCopy,
+                        name: typeConfig.getNameField(data)
+                    };
+                    detailArray.push(itemWithName);
+                    
+                    // 更新总数
+                    this.totalCounts[type]++;
+                }
+            }
         }
     }
     
@@ -279,15 +403,19 @@ class EventAnalyzer {
      */
     async processCfgFileByType(folder, folderFiles, type, typeConfig) {
         const cfgFiles = folderFiles.filter(file => {
-            const fileName = file.name;
-            const relativePath = file.webkitRelativePath;
-            
-            // 宽松匹配规则：匹配文件名，且路径中包含Cfgs/zh-cn或Cfgs\zh-cn
-            const isCfgFile = fileName === typeConfig.fileName;
-            const isInCorrectPath = relativePath.includes('Cfgs/zh-cn') || relativePath.includes('Cfgs\\zh-cn');
-            
-            return isCfgFile && isInCorrectPath;
-        });
+                const fileName = file.name;
+                const relativePath = file.webkitRelativePath;
+                
+                // 宽松匹配规则：匹配文件名（支持包含井号和编号的格式，如EvtCfg #7313.json），且路径中包含Cfgs/zh-cn或Cfgs\zh-cn
+                const baseFileName = typeConfig.fileName;
+                // 提取文件名的主要部分（不包含扩展名）
+                const baseNameWithoutExt = baseFileName.replace('.json', '');
+                // 检查文件名是否以baseNameWithoutExt开头，或者是否包含baseNameWithoutExt
+                const isCfgFile = fileName.startsWith(baseNameWithoutExt) || fileName.includes(baseNameWithoutExt);
+                const isInCorrectPath = relativePath.includes('Cfgs/zh-cn') || relativePath.includes('Cfgs\\zh-cn');
+                
+                return isCfgFile && isInCorrectPath;
+            });
         
         if (cfgFiles.length > 0) {
             if (cfgFiles.length > 1) {

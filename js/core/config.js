@@ -49,7 +49,8 @@ class ConfigManager {
             autoOpenBrowser: true, // 是否自动打开浏览器
             developerMode: false, // 是否开启开发者模式
             developerPassword: "", // 开发者模式密码
-            opacity: 85 // 页面透明度，默认85%
+            opacity: 85, // 页面透明度，默认85%
+            includeOfficialContent: true // 是否自动添加baseGame文件夹到待解析列表
         };
         
         // 直接使用简体中文作为默认翻译
@@ -373,6 +374,7 @@ class ConfigManager {
         this.config.generateDetailedReport = Boolean(this.config.generateDetailedReport);
         this.config.autoOpenBrowser = Boolean(this.config.autoOpenBrowser);
         this.config.developerMode = Boolean(this.config.developerMode);
+        this.config.includeOfficialContent = Boolean(this.config.includeOfficialContent);
     }
 
     /**
