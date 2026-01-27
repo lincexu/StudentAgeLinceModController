@@ -43,7 +43,7 @@ class ConfigManager {
             description: "学生时代模组兼容分析工具，用于检测模组中的重复ID",
             themeMode: 3, // 0-永昼模式，1-永夜模式，3-跟随系统
             language: "zh-cn", // zh-cn-简体中文，zh-tw-繁体中文
-            exportFormat: "png", // 默认导出格式
+            exportFormat: "markdown", // 默认导出格式
             showProgress: true, // 是否显示分析进度
             generateDetailedReport: true, // 是否生成详细报告
             autoOpenBrowser: true, // 是否自动打开浏览器
@@ -357,9 +357,9 @@ class ConfigManager {
         }
         
         // 验证exportFormat
-        if (!['png', 'json', 'markdown'].includes(this.config.exportFormat)) {
-            console.warn('[Config] exportFormat值无效，使用默认值png');
-            this.config.exportFormat = 'png';
+        if (!['json', 'markdown'].includes(this.config.exportFormat)) {
+            console.warn('[Config] exportFormat值无效，使用默认值markdown');
+            this.config.exportFormat = 'markdown';
         }
         
         // 验证opacity

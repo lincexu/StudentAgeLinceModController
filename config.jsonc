@@ -1,16 +1,17 @@
 {
   "projectName": "Student Age LMC",
   "author": "Lince",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "学生时代模组兼容分析工具，用于检测模组中的重复ID",
   "themeMode": 0,
   "language": "zh-cn",
-  "exportFormat": "png",
+  "exportFormat": "markdown",
   "showProgress": true,
   "generateDetailedReport": true,
   "autoOpenBrowser": false,
   "developerMode": false,
   "developerPassword": "",
   "opacity": 85,
+  "includeOfficialContent": true,
   "tableLayout": "horizontal"
 }

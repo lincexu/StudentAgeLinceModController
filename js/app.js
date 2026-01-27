@@ -843,11 +843,8 @@ class ModEventApp {
                 this.exportAsJSON();
                 break;
             case 'markdown':
-                this.exportAsMarkdown();
-                break;
-            case 'png':
             default:
-                await this.exportAsPNG();
+                this.exportAsMarkdown();
                 break;
         }
     }
@@ -903,32 +900,12 @@ class ModEventApp {
                             border-radius: var(--border-radius-md);
                             cursor: pointer;
                             transition: all var(--transition-base);
-                        " data-format="png">
-                            <input type="radio" name="export-format" value="png" style="
-                                width: 20px;
-                                height: 20px;
-                                accent-color: var(--primary-color);
-                            " checked>
-                            <div style="flex: 1;">
-                                <div style="font-weight: var(--font-weight-bold); color: var(--text-primary);">PNG图片</div>
-                                <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">完整的可视化报告，适合分享</div>
-                            </div>
-                        </label>
-                        <label style="
-                            display: flex;
-                            align-items: center;
-                            gap: var(--spacing-md);
-                            padding: var(--spacing-md);
-                            border: 2px solid var(--border-color);
-                            border-radius: var(--border-radius-md);
-                            cursor: pointer;
-                            transition: all var(--transition-base);
                         " data-format="markdown">
                             <input type="radio" name="export-format" value="markdown" style="
                                 width: 20px;
                                 height: 20px;
                                 accent-color: var(--primary-color);
-                            ">
+                            " checked>
                             <div style="flex: 1;">
                                 <div style="font-weight: var(--font-weight-bold); color: var(--text-primary);">Markdown文档</div>
                                 <div style="font-size: var(--font-size-sm); color: var(--text-secondary);">结构化的文本报告，适合编辑和分享</div>
@@ -1050,213 +1027,6 @@ class ModEventApp {
     }
     
     /**
-     * 导出报告为PNG图片
-     */
-    async exportAsPNG() {
-        // 显示导出进度提示
-        const progressSection = document.getElementById('progress-section');
-        const progressText = document.getElementById('progress-text');
-        const originalProgressDisplay = progressSection.style.display;
-        const originalProgressText = progressText.textContent;
-        
-        progressSection.style.display = 'block';
-        progressText.textContent = '正在准备导出报告...';
-        
-        // 检查是否需要生成详细报告
-        const generateDetailed = configManager.get('generateDetailedReport') !== false;
-        console.log('生成详细报告设置:', generateDetailed);
-        
-        // 保存所有需要恢复的元素原始状态
-        const originalStates = {
-            resultSection: document.querySelector('.result-section').style.display,
-            duplicateSection: document.getElementById('duplicate-section').style.display,
-            visualizationSection: document.getElementById('visualization-section').style.display
-        };
-        
-        // 确保所有结果相关部分都可见
-        document.querySelector('.result-section').style.display = 'block';
-        document.getElementById('duplicate-section').style.display = 'block';
-        document.getElementById('visualization-section').style.display = 'block';
-        
-        // 临时展开所有模组详情
-        const modHeaders = document.querySelectorAll('.mod-header');
-        const originallyExpanded = [];
-        
-        // 记录原始状态并展开所有模组
-        modHeaders.forEach((header, index) => {
-            const content = header.nextElementSibling;
-            if (content) {
-                const wasExpanded = content.style.display === 'block';
-                if (!wasExpanded) {
-                    originallyExpanded.push(index);
-                    content.style.display = 'block';
-                }
-            }
-        });
-        
-        // 临时展开所有ID详情卡片
-        const idDetailCards = document.querySelectorAll('.vertical-table-card');
-        idDetailCards.forEach(card => {
-            // 确保卡片内容可见
-            card.style.display = 'block';
-        });
-        
-        // 临时展开所有ID类型详情内容
-        const idTypeHeaders = document.querySelectorAll('.id-type-header');
-        const originallyCollapsedIdTypes = [];
-        idTypeHeaders.forEach((header, index) => {
-            const content = header.nextElementSibling;
-            if (content) {
-                const wasCollapsed = content.style.display !== 'block';
-                if (wasCollapsed) {
-                    originallyCollapsedIdTypes.push(index);
-                    content.style.display = 'block';
-                    // 更新折叠图标
-                    const toggleIcon = header.querySelector('.id-type-toggle');
-                    if (toggleIcon) {
-                        toggleIcon.textContent = '▼';
-                        toggleIcon.style.transform = 'rotate(90deg)';
-                    }
-                }
-            }
-        });
-        
-        // 使用html2canvas将整个页面转换为图片
-        try {
-            // 等待内容展开和渲染
-            await new Promise(resolve => setTimeout(resolve, 2500)); // 进一步增加等待时间，确保所有内容都已渲染
-            
-            // 滚动到页面顶部，确保从顶部开始渲染
-            window.scrollTo(0, 0);
-            
-            // 计算完整页面高度和宽度
-            const fullHeight = document.body.scrollHeight;
-            const fullWidth = document.body.scrollWidth;
-            
-            const canvas = await html2canvas(document.querySelector('.container'), {
-                backgroundColor: document.body.classList.contains('dark-mode') ? '#1a1a1a' : '#ffffff',
-                scale: 2, // 提高图片质量
-                logging: false,
-                width: fullWidth,
-                height: fullHeight,
-                scrollY: 0, // 确保从顶部开始渲染
-                scrollX: 0,
-                useCORS: true, // 允许加载跨域资源
-                allowTaint: true, // 允许污染画布
-                ignoreElements: (element) => {
-                    // 忽略导出相关的UI元素，如导出按钮和设置按钮
-                    return element.id === 'export-report' || element.id === 'settings-toggle' || element.id === 'theme-toggle' || element.id === 'language-toggle';
-                }
-            });
-            
-            // 更新进度提示
-            progressText.textContent = '正在生成图片...';
-            
-            // 创建下载链接
-            const link = document.createElement('a');
-            const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
-            link.download = `模组分析报告_${timestamp}.png`;
-            link.href = canvas.toDataURL('image/png');
-            
-            // 更新进度提示
-            progressText.textContent = '正在下载报告...';
-            
-            // 触发下载
-            link.click();
-            
-            // 恢复原始状态（收起之前收起的模组）
-            modHeaders.forEach((header, index) => {
-                if (originallyExpanded.includes(index)) {
-                    const content = header.nextElementSibling;
-                    if (content) {
-                        content.style.display = 'none';
-                        // 更新折叠图标
-                        const toggleIcon = header.querySelector('.mod-toggle-icon');
-                        if (toggleIcon) {
-                            toggleIcon.textContent = '▼';
-                        }
-                    }
-                }
-            });
-            
-            // 恢复原始状态（收起之前收起的ID类型详情）
-            idTypeHeaders.forEach((header, index) => {
-                if (originallyCollapsedIdTypes.includes(index)) {
-                    const content = header.nextElementSibling;
-                    if (content) {
-                        content.style.display = 'none';
-                        // 更新折叠图标
-                        const toggleIcon = header.querySelector('.id-type-toggle');
-                        if (toggleIcon) {
-                            toggleIcon.textContent = '▶';
-                            toggleIcon.style.transform = 'rotate(0deg)';
-                        }
-                    }
-                }
-            });
-            
-            // 恢复结果相关部分的原始显示状态
-            document.querySelector('.result-section').style.display = originalStates.resultSection;
-            document.getElementById('duplicate-section').style.display = originalStates.duplicateSection;
-            document.getElementById('visualization-section').style.display = originalStates.visualizationSection;
-            
-            // 恢复原始进度显示
-            setTimeout(() => {
-                progressSection.style.display = originalProgressDisplay;
-                progressText.textContent = originalProgressText;
-            }, 1000);
-            
-            // 提示导出成功
-            alert('PNG报告导出成功！');
-        } catch (error) {
-            console.error('导出报告失败:', error);
-            
-            // 恢复原始状态
-            modHeaders.forEach((header, index) => {
-                if (originallyExpanded.includes(index)) {
-                    const content = header.nextElementSibling;
-                    if (content) {
-                        content.style.display = 'none';
-                        // 更新折叠图标
-                        const toggleIcon = header.querySelector('.mod-toggle-icon');
-                        if (toggleIcon) {
-                            toggleIcon.textContent = '▼';
-                        }
-                    }
-                }
-            });
-            
-            // 恢复原始状态（收起之前收起的ID类型详情）
-            idTypeHeaders.forEach((header, index) => {
-                if (originallyCollapsedIdTypes.includes(index)) {
-                    const content = header.nextElementSibling;
-                    if (content) {
-                        content.style.display = 'none';
-                        // 更新折叠图标
-                        const toggleIcon = header.querySelector('.id-type-toggle');
-                        if (toggleIcon) {
-                            toggleIcon.textContent = '▶';
-                            toggleIcon.style.transform = 'rotate(0deg)';
-                        }
-                    }
-                }
-            });
-            
-            // 恢复结果相关部分的原始显示状态
-            document.querySelector('.result-section').style.display = originalStates.resultSection;
-            document.getElementById('duplicate-section').style.display = originalStates.duplicateSection;
-            document.getElementById('visualization-section').style.display = originalStates.visualizationSection;
-            
-            // 恢复原始进度显示
-            progressSection.style.display = originalProgressDisplay;
-            progressText.textContent = originalProgressText;
-            
-            // 提示导出失败
-            alert('导出报告失败，请查看控制台获取详细信息');
-        }
-    }
-    
-    /**
      * 导出报告为JSON格式
      */
     exportAsJSON() {
@@ -1295,7 +1065,10 @@ class ModEventApp {
                 
                 // 获取模组详情内容
                 const content = header.nextElementSibling;
-                if (!content) return null;
+                if (!content) {
+                    console.warn('[Export] 模组详情内容不存在:', modTitle);
+                    return null;
+                }
                 
                 // 展开模组详情以便获取内容
                 const wasExpanded = content.style.display === 'block';
@@ -1305,32 +1078,48 @@ class ModEventApp {
                 
                 // 收集模组统计信息
                 const stats = {};
-                const statItems = content.querySelectorAll('.summary-item');
-                statItems.forEach(item => {
-                    const label = item.querySelector('.summary-label')?.textContent || '';
-                    const value = item.querySelector('.summary-value')?.textContent || '';
-                    stats[label] = value;
+                // 注意：模组详情中的统计信息不是使用.summary-item类，而是直接在div中
+                const statRows = content.querySelectorAll('div[style*="font-size: 1.2rem; font-weight: 600"]');
+                statRows.forEach((valueElement, i) => {
+                    // 找到对应的标签元素（在valueElement的前一个兄弟元素）
+                    const labelElement = valueElement.previousElementSibling;
+                    if (labelElement) {
+                        const label = labelElement.textContent.replace(':', '');
+                        const value = valueElement.textContent;
+                        stats[label] = value;
+                    }
                 });
                 
                 // 收集重复ID信息
                 const duplicateIds = [];
-                const duplicateSections = content.querySelectorAll('.duplicate-section');
-                duplicateSections.forEach(section => {
-                    const idType = section.querySelector('h3')?.textContent || '';
-                    const duplicateItems = section.querySelectorAll('.duplicate-item');
-                    duplicateItems.forEach(item => {
-                        const id = item.querySelector('.duplicate-id')?.textContent || '';
-                        duplicateIds.push({
-                            type: idType,
-                            id: id.trim()
+                // 注意：模组详情中的重复ID列表不是使用.duplicate-section类，而是直接在div中
+                const duplicateIdSections = content.querySelectorAll('strong[style*="color: var(--danger-color)"]');
+                duplicateIdSections.forEach(section => {
+                    const idType = section.textContent.replace('重复', '').replace('ID列表：', '');
+                    // 找到包含重复ID的容器
+                    const idContainer = section.nextElementSibling;
+                    if (idContainer) {
+                        const idSpans = idContainer.querySelectorAll('span[style*="background: var(--danger-light)"]');
+                        idSpans.forEach(span => {
+                            duplicateIds.push({
+                                type: idType,
+                                id: span.textContent.trim()
+                            });
                         });
-                    });
+                    }
                 });
                 
                 // 恢复原始状态
                 if (!wasExpanded) {
                     content.style.display = 'none';
                 }
+                
+                console.log('[Export] 收集到的模组详情:', {
+                    title: modTitle,
+                    name: modName,
+                    stats: stats,
+                    duplicateIds: duplicateIds
+                });
                 
                 return {
                     title: modTitle,
@@ -1339,6 +1128,8 @@ class ModEventApp {
                     duplicateIds: duplicateIds
                 };
             }).filter(Boolean);
+            
+            console.log('[Export] 总模组详情数量:', analysisData.modDetails.length);
         }
         
         // 创建JSON字符串
@@ -1437,36 +1228,47 @@ class ModEventApp {
                     
                     // 收集模组统计信息
                     markdownContent += `#### 模组统计\n\n`;
-                    const statItems = content.querySelectorAll('.summary-item');
-                    if (statItems.length > 0) {
+                    // 注意：模组详情中的统计信息不是使用.summary-item类，而是直接在div中
+                    const statRows = content.querySelectorAll('div[style*="font-size: 1.2rem; font-weight: 600"]');
+                    if (statRows.length > 0) {
                         markdownContent += `| 统计项 | 数值 |\n|-------|------|\n`;
-                        statItems.forEach(item => {
-                            const label = item.querySelector('.summary-label')?.textContent || '';
-                            const value = item.querySelector('.summary-value')?.textContent || '';
-                            markdownContent += `| ${label} | ${value} |\n`;
+                        statRows.forEach((valueElement, i) => {
+                            // 找到对应的标签元素（在valueElement的前一个兄弟元素）
+                            const labelElement = valueElement.previousElementSibling;
+                            if (labelElement) {
+                                const label = labelElement.textContent.replace(':', '');
+                                const value = valueElement.textContent;
+                                markdownContent += `| ${label} | ${value} |\n`;
+                            }
                         });
                         markdownContent += `\n`;
+                    } else {
+                        markdownContent += `无统计信息\n\n`;
                     }
                     
                     // 收集重复ID信息
-                    const duplicateSections = content.querySelectorAll('.duplicate-section');
-                    duplicateSections.forEach(section => {
-                        const idType = section.querySelector('h3')?.textContent || '';
-                        const duplicateItems = section.querySelectorAll('.duplicate-item');
-                        if (duplicateItems.length > 0) {
-                            markdownContent += `#### ${idType}\n\n`;
-                            markdownContent += `| 重复ID | 所属模组 |\n|-------|---------|\n`;
-                            duplicateItems.forEach(item => {
-                                const id = item.querySelector('.duplicate-id')?.textContent || '';
-                                const modules = item.querySelectorAll('.module-item');
-                                modules.forEach(module => {
-                                    const moduleName = module.querySelector('.module-name')?.textContent || '';
-                                    markdownContent += `| ${id.trim()} | ${moduleName} |\n`;
-                                });
-                            });
-                            markdownContent += `\n`;
-                        }
-                    });
+                    // 注意：模组详情中的重复ID列表不是使用.duplicate-section类，而是直接在div中
+                    const duplicateIdSections = content.querySelectorAll('strong[style*="color: var(--danger-color)"]');
+                    if (duplicateIdSections.length > 0) {
+                        duplicateIdSections.forEach(section => {
+                            const idType = section.textContent.replace('重复', '').replace('ID列表：', '');
+                            // 找到包含重复ID的容器
+                            const idContainer = section.nextElementSibling;
+                            if (idContainer) {
+                                const idSpans = idContainer.querySelectorAll('span[style*="background: var(--danger-light)"]');
+                                if (idSpans.length > 0) {
+                                    markdownContent += `#### 重复${idType}ID\n\n`;
+                                    markdownContent += `| 重复ID |\n|-------|\n`;
+                                    idSpans.forEach(span => {
+                                        markdownContent += `| ${span.textContent.trim()} |\n`;
+                                    });
+                                    markdownContent += `\n`;
+                                }
+                            }
+                        });
+                    } else {
+                        markdownContent += `无重复ID\n\n`;
+                    }
                     
                     // 恢复原始状态
                     if (!wasExpanded) {
@@ -1550,6 +1352,29 @@ class ModEventApp {
             this.renderer.summaryContent.innerHTML = '';
             this.renderer.duplicateSection.style.display = 'none';
         }
+    }
+    
+    /**
+     * 等待所有资源就绪
+     */
+    async waitForAssetsReady() {
+        // 等待图片加载完成
+        const imgs = Array.from(document.querySelectorAll('img'));
+        const imgPromises = imgs.map(img => {
+            if (img.complete) return Promise.resolve();
+            return new Promise(resolve => {
+                img.onload = resolve;
+                img.onerror = resolve; // 即使图片加载失败也继续
+            });
+        });
+        await Promise.all(imgPromises);
+        
+        // 等待字体加载完成
+        if (document.fonts && document.fonts.ready) {
+            await document.fonts.ready;
+        }
+        
+        console.log('所有资源已就绪');
     }
 }
 

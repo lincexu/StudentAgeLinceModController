@@ -1,0 +1,716 @@
+{
+    "1": {
+        "id": 1, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_dog"
+    }, 
+    "2": {
+        "id": 2, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xiyi"
+    }, 
+    "3": {
+        "id": 3, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_chuangmao"
+    }, 
+    "4": {
+        "id": 4, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_bird"
+    }, 
+    "5": {
+        "id": 5, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_yun"
+    }, 
+    "6": {
+        "id": 6, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_gufang"
+    }, 
+    "7": {
+        "id": 7, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_hua"
+    }, 
+    "8": {
+        "id": 8, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_ziran"
+    }, 
+    "9": {
+        "id": 9, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_lin"
+    }, 
+    "10": {
+        "id": 10, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shu"
+    }, 
+    "11": {
+        "id": 11, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xi"
+    }, 
+    "12": {
+        "id": 12, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shan"
+    }, 
+    "13": {
+        "id": 13, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_ri"
+    }, 
+    "14": {
+        "id": 14, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_starsky"
+    }, 
+    "15": {
+        "id": 15, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_galaxy"
+    }, 
+    "16": {
+        "id": 16, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_pumpkin"
+    }, 
+    "17": {
+        "id": 17, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_jiazhuang"
+    }, 
+    "18": {
+        "id": 18, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_bird2"
+    }, 
+    "19": {
+        "id": 19, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_chouxiang"
+    }, 
+    "20": {
+        "id": 20, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_congzhongren"
+    }, 
+    "21": {
+        "id": 21, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_sunrise"
+    }, 
+    "22": {
+        "id": 22, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xiaohua"
+    }, 
+    "23": {
+        "id": 23, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_galaxy2"
+    }, 
+    "24": {
+        "id": 24, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xuanzhuankazhi"
+    }, 
+    "25": {
+        "id": 25, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_coffee"
+    }, 
+    "26": {
+        "id": 26, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_dongjing"
+    }, 
+    "27": {
+        "id": 27, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_dongwuaiqing"
+    }, 
+    "28": {
+        "id": 28, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_galaxy3"
+    }, 
+    "29": {
+        "id": 29, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_girl"
+    }, 
+    "30": {
+        "id": 30, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_huanxiong"
+    }, 
+    "31": {
+        "id": 31, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_lvgezi"
+    }, 
+    "32": {
+        "id": 32, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shari"
+    }, 
+    "33": {
+        "id": 33, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shukafei"
+    }, 
+    "34": {
+        "id": 34, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shumao"
+    }, 
+    "35": {
+        "id": 35, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_tuwen"
+    }, 
+    "36": {
+        "id": 36, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zaocan"
+    }, 
+    "37": {
+        "id": 37, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zixingche"
+    }, 
+    "38": {
+        "id": 38, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fengjing"
+    }, 
+    "39": {
+        "id": 39, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fengjing2"
+    }, 
+    "40": {
+        "id": 40, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fengjing3"
+    }, 
+    "41": {
+        "id": 41, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fengjing4"
+    }, 
+    "42": {
+        "id": 42, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_youleyuan"
+    }, 
+    "43": {
+        "id": 43, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_star"
+    }, 
+    "44": {
+        "id": 44, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_dreamstar"
+    }, 
+    "45": {
+        "id": 45, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_aixinmao"
+    }, 
+    "46": {
+        "id": 46, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_qiutian"
+    }, 
+    "47": {
+        "id": 47, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fenhua"
+    }, 
+    "48": {
+        "id": 48, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_beiying"
+    }, 
+    "49": {
+        "id": 49, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xueshan"
+    }, 
+    "50": {
+        "id": 50, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_chonglang"
+    }, 
+    "51": {
+        "id": 51, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_lanxingkong"
+    }, 
+    "52": {
+        "id": 52, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_jita"
+    }, 
+    "53": {
+        "id": 53, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_miao"
+    }, 
+    "54": {
+        "id": 54, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_jianbixin"
+    }, 
+    "55": {
+        "id": 55, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_nvshengbaoxiong"
+    }, 
+    "56": {
+        "id": 56, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_erjimao"
+    }, 
+    "57": {
+        "id": 57, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_guduhezi"
+    }, 
+    "58": {
+        "id": 58, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_heinv"
+    }, 
+    "59": {
+        "id": 59, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_hongfa"
+    }, 
+    "60": {
+        "id": 60, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_laoshu"
+    }, 
+    "61": {
+        "id": 61, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_maoqiu"
+    }, 
+    "62": {
+        "id": 62, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_ningmeng"
+    }, 
+    "63": {
+        "id": 63, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_qie"
+    }, 
+    "64": {
+        "id": 64, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shuiyu"
+    }, 
+    "65": {
+        "id": 65, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_robot"
+    }, 
+    "66": {
+        "id": 66, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_yunv"
+    }, 
+    "67": {
+        "id": 67, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_juzi"
+    }, 
+    "68": {
+        "id": 68, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_renhegou"
+    }, 
+    "69": {
+        "id": 69, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_suixing"
+    }, 
+    "70": {
+        "id": 70, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_tianshi"
+    }, 
+    "71": {
+        "id": 71, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_tomato"
+    }, 
+    "72": {
+        "id": 72, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_wuya"
+    }, 
+    "73": {
+        "id": 73, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_yipenhua"
+    }, 
+    "74": {
+        "id": 74, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zonggou"
+    }, 
+    "75": {
+        "id": 75, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_baichuju"
+    }, 
+    "76": {
+        "id": 76, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_beikehaixing"
+    }, 
+    "77": {
+        "id": 77, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_chaiquan"
+    }, 
+    "78": {
+        "id": 78, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fentaohua"
+    }, 
+    "79": {
+        "id": 79, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_haian_fenglang"
+    }, 
+    "80": {
+        "id": 80, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_haioujiaoshi"
+    }, 
+    "81": {
+        "id": 81, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_hupan_riluo_feiniao"
+    }, 
+    "82": {
+        "id": 82, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_konglong"
+    }, 
+    "83": {
+        "id": 83, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_luobotuzi"
+    }, 
+    "84": {
+        "id": 84, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_maomikafeibei"
+    }, 
+    "85": {
+        "id": 85, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_maoxianmao"
+    }, 
+    "86": {
+        "id": 86, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_maque"
+    }, 
+    "87": {
+        "id": 87, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_niaoju"
+    }, 
+    "88": {
+        "id": 88, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_qingwa"
+    }, 
+    "89": {
+        "id": 89, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_qingxinningmeng"
+    }, 
+    "90": {
+        "id": 90, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_senlinhuli"
+    }, 
+    "91": {
+        "id": 91, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shouhuihuli"
+    }, 
+    "92": {
+        "id": 92, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shouhuilu"
+    }, 
+    "93": {
+        "id": 93, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shouhuitaiyang"
+    }, 
+    "94": {
+        "id": 94, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_shouhuixiaoxiong"
+    }, 
+    "95": {
+        "id": 95, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_siyecaotuzi"
+    }, 
+    "96": {
+        "id": 96, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_sumiao_mao"
+    }, 
+    "97": {
+        "id": 97, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xiaofanchuan"
+    }, 
+    "98": {
+        "id": 98, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_xueshanrenjia"
+    }, 
+    "99": {
+        "id": 99, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_youhuaban"
+    }, 
+    "101": {
+        "id": 101, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_food_sandwich"
+    }, 
+    "102": {
+        "id": 102, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_food_burger"
+    }, 
+    "201": {
+        "id": 201, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_anim_dog"
+    }, 
+    "202": {
+        "id": 202, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_anim_cat"
+    }, 
+    "301": {
+        "id": 301, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_ghost"
+    }, 
+    "302": {
+        "id": 302, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_ghost2"
+    }, 
+    "401": {
+        "id": 401, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_huihua"
+    }, 
+    "402": {
+        "id": 402, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_huazhongzhuiluo"
+    }, 
+    "501": {
+        "id": 501, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_gou"
+    }, 
+    "502": {
+        "id": 502, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_gou2"
+    }, 
+    "601": {
+        "id": 601, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_heimao"
+    }, 
+    "602": {
+        "id": 602, 
+        "type": 1, 
+        "state": 0, 
+        "icon": "kzone_head/img_heimao2"
+    }, 
+    "1001": {
+        "id": 1001, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_yunduoguai"
+    }, 
+    "1002": {
+        "id": 1002, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_yusan"
+    }, 
+    "1003": {
+        "id": 1003, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zhentougou"
+    }, 
+    "1004": {
+        "id": 1004, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zisehua"
+    }, 
+    "1005": {
+        "id": 1005, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_zongsemao"
+    }, 
+    "1006": {
+        "id": 1006, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_baihuaping"
+    }, 
+    "1007": {
+        "id": 1007, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_fengyeshu"
+    }, 
+    "1008": {
+        "id": 1008, 
+        "type": 0, 
+        "state": 0, 
+        "icon": "kzone_head/img_ningmengshui"
+    }
+}
