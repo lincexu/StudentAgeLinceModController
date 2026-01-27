@@ -292,6 +292,34 @@ body.dark-mode .duplicate-item:hover {
     border-color: var(--danger-color);
 }
 
+/* 搜索功能样式 */
+.search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* 旋转动画 */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 暗夜模式下的搜索输入框样式 */
+body.dark-mode .search-input {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-mode .search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
 body.dark-mode .module-item {
     background: var(--bg-primary);
     border-color: var(--border-color);

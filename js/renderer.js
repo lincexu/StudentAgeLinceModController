@@ -789,7 +789,32 @@ class ResultRenderer {
                                                 <div class="id-type-toggle" style="font-size: 0.8rem; color: #667eea; font-weight: bold; transition: transform 0.2s ease;">▶</div>
                                             </div>
                                             <div class="id-type-content" style="display: none; padding: 20px; background: #fff; border: 1px solid #e0e7ff; border-top: none; border-radius: 0 0 8px 8px;">
-                                                ${idTypeContent()}
+                                                <!-- 搜索输入框 -->
+                                                <div style="margin-bottom: 20px; position: relative;">
+                                                    <input type="text" placeholder="搜索${typeConfig.displayName}ID或名称..." 
+                                                           class="search-input" 
+                                                           data-type="${type}" 
+                                                           style="width: 100%; padding: 10px 40px 10px 15px; border: 1px solid #ced4da; border-radius: 25px; font-size: 14px; outline: none; transition: all 0.3s ease;">
+                                                    <div class="search-icon" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;">🔍</div>
+                                                </div>
+                                                
+                                                <!-- 搜索结果区域 -->
+                                                <div class="search-results" data-type="${type}">
+                                                    ${idTypeContent()}
+                                                </div>
+                                                
+                                                <!-- 空状态提示 -->
+                                                <div class="search-empty" data-type="${type}" style="display: none; text-align: center; padding: 40px; color: #6c757d;">
+                                                    <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
+                                                    <div style="font-size: 18px; font-weight: 500; margin-bottom: 10px;">未找到匹配项</div>
+                                                    <div style="font-size: 14px;">请尝试使用其他关键词进行搜索</div>
+                                                </div>
+                                                
+                                                <!-- 加载状态提示 -->
+                                                <div class="search-loading" data-type="${type}" style="display: none; text-align: center; padding: 40px; color: #6c757d;">
+                                                    <div style="font-size: 2rem; margin-bottom: 15px; animation: spin 1s linear infinite;">🔄</div>
+                                                    <div style="font-size: 14px;">搜索中...</div>
+                                                </div>
                                             </div>
                                         </div>
                                         `;
@@ -838,7 +863,120 @@ class ResultRenderer {
                     }
                 });
             });
+            
+            // 初始化搜索功能，确保DOM元素完全加载
+            setTimeout(() => {
+                this.initSearchFunctionality();
+            }, 100);
         }, 0);
+    }
+    
+    /**
+     * 初始化搜索功能
+     */
+    initSearchFunctionality() {
+        // 防抖函数
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+        
+        // 搜索函数
+        const performSearch = (inputElement) => {
+            const searchTerm = inputElement.value.trim().toLowerCase();
+            const type = inputElement.dataset.type;
+            const parentContent = inputElement.closest('.id-type-content');
+            const resultsContainer = parentContent.querySelector('.search-results');
+            const emptyState = parentContent.querySelector('.search-empty');
+            const loadingState = parentContent.querySelector('.search-loading');
+            
+            // 显示加载状态
+            loadingState.style.display = 'block';
+            resultsContainer.style.display = 'none';
+            emptyState.style.display = 'none';
+            
+            // 模拟搜索延迟（实际搜索是同步的，这里只是为了显示加载状态）
+            setTimeout(() => {
+                // 隐藏加载状态
+                loadingState.style.display = 'none';
+                
+                // 获取所有列表项
+                const items = resultsContainer.querySelectorAll('.vertical-table-card, tr:not(thead tr)');
+                let hasMatches = false;
+                
+                // 过滤结果
+                items.forEach(item => {
+                    // 对于竖列式布局
+                    if (item.classList.contains('vertical-table-card')) {
+                        const titleElement = item.querySelector('.card-title');
+                        const idElement = item.querySelector('.row-value');
+                        const titleText = titleElement ? titleElement.textContent.toLowerCase() : '';
+                        const idText = idElement ? idElement.textContent.toLowerCase() : '';
+                        
+                        const matches = titleText.includes(searchTerm) || idText.includes(searchTerm);
+                        item.style.display = matches ? 'block' : 'none';
+                        if (matches) hasMatches = true;
+                    }
+                    // 对于横列式布局
+                    else if (item.tagName === 'TR') {
+                        const cells = item.querySelectorAll('td');
+                        let rowMatches = false;
+                        
+                        cells.forEach(cell => {
+                            const cellText = cell.textContent.toLowerCase();
+                            if (cellText.includes(searchTerm)) {
+                                rowMatches = true;
+                            }
+                        });
+                        
+                        item.style.display = rowMatches ? '' : 'none';
+                        if (rowMatches) hasMatches = true;
+                    }
+                });
+                
+                // 显示结果或空状态
+                if (searchTerm === '') {
+                    // 搜索框为空，显示所有结果
+                    items.forEach(item => {
+                        item.style.display = item.classList.contains('vertical-table-card') ? 'block' : '';
+                    });
+                    resultsContainer.style.display = 'block';
+                    emptyState.style.display = 'none';
+                } else {
+                    resultsContainer.style.display = 'block';
+                    emptyState.style.display = hasMatches ? 'none' : 'block';
+                }
+            }, 100); // 100ms延迟，模拟搜索过程
+        };
+        
+        // 为所有搜索输入框添加事件监听
+        const searchInputs = document.querySelectorAll('.search-input');
+        searchInputs.forEach(input => {
+            // 使用防抖处理输入事件
+            const debouncedSearch = debounce(() => {
+                performSearch(input);
+            }, 300);
+            
+            // 输入事件
+            input.addEventListener('input', debouncedSearch);
+            
+            // 键盘事件
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch(input);
+                } else if (e.key === 'Escape') {
+                    input.value = '';
+                    performSearch(input);
+                }
+            });
+        });
     }
 
     /**
