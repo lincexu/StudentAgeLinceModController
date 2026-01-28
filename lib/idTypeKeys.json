@@ -1,0 +1,1111 @@
+{
+    "ItemKey": {
+        "id": {
+            "name": "ID",
+            "desc": "物品id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "物品名称",
+            "rule": "text"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "建议150×150",
+            "rule": "path"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "物品类型，影响使用方式",
+            "rule": "lib/Cfg/ItemTypeCfg #7154.json"
+        },
+        "itemTag": {
+            "name": "标签",
+            "desc": "物品标签，影响送礼",
+            "rule": "lib/rules/itemTagRules"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "触发效果",
+            "rule": "lib/rules/effectRules"
+        },
+        "usingEffect": {
+            "name": "使用效果",
+            "desc": "使用物品后的效果",
+            "rule": "lib/rules/effectRules"
+        },
+        "value": {
+            "name": "价值",
+            "desc": "影响送礼好感度，-1为不可赠送",
+            "rule": "number"
+        },
+        "sell": {
+            "name": "售价",
+            "desc": "影响跳蚤市场出售，-1为不可购买",
+            "rule": "number"
+        },
+        "desc": {
+            "name": "介绍",
+            "desc": "物品介绍",
+            "rule": "text"
+        },
+        "talkId": {
+            "name": "对话id",
+            "desc": "不予检索，可通过TalkCfg.json手动查询",
+            "rule": "index"
+        },
+        "maxcount": {
+            "name": "最大数量",
+            "desc": "物品最大数量",
+            "rule": "number"
+        },
+        "btn": {
+            "name": "按钮",
+            "desc": "使用物品的按钮",
+            "rule": "text"
+        },
+        "clothType": {
+            "name": "服饰类型",
+            "desc": "物品服饰类型",
+            "rule": "lib/Cfg/ClothTypeCfg #7211.json"
+        },
+        "precondition": {
+            "name": "前置条件",
+            "desc": "物品前置条件",
+            "rule": "lib/rules/conditionRules"
+        },
+        "rarity": {
+            "name": "稀有度",
+            "desc": "物品稀有度，未知具体效果，暂定为数值越大越稀有",
+            "rule": "number"
+        },
+        "sex": {
+            "name": "性别",
+            "desc": "物品性别",
+            "rule": "lib/rules/sexRules"
+        },
+        "subType": {
+            "name": "子类型",
+            "desc": "物品子类型，官方仅用id=1001零食，id=1002海报，id=0所有，慎重选择其他",
+            "rule": "lib/rules/itemTypeRules"
+        }
+    },
+    "EvtKey": {
+        "id": {
+            "name": "ID",
+            "desc": "事件id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "title": {
+            "name": "标题",
+            "desc": "事件标题",
+            "rule": "text"
+        },
+        "type": {
+            "name": "事件类型",
+            "desc": "事件类型",
+            "rule": "lib/Cfg/EvtTypeCfg #7218.json"
+        },
+        "talkId": {
+            "name": "第一句话id",
+            "desc": "不予检索，可通过TalkCfg.json手动查询",
+            "rule": "index"
+        },
+        "rate": {
+            "name": "概率",
+            "desc": "事件概率",
+            "rule": "number"
+        },
+        "npc": {
+            "name": "对象",
+            "desc": "事件对象",
+            "rule": "lib/Cfg/PersonCfg #7200.json"
+        },
+        "maxcount": {
+            "name": "最大数量",
+            "desc": "事件最大数量",
+            "rule": "number"
+        },
+        "mapId": {
+            "name": "发生地点id",
+            "desc": "事件发生地点id",
+            "rule": "lib/Cfg/MapCfg #7306.json"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "事件触发效果",
+            "rule": "lib/rules/effectRules"
+        },
+        "condition": {
+            "name": "触发条件",
+            "desc": "事件触发条件",
+            "rule": "lib/rules/conditionRules"
+        },
+        "content": {
+            "name": "内容",
+            "desc": "事件内容",
+            "rule": "text"
+        },
+        "desc": {
+            "name": "介绍",
+            "desc": "事件介绍",
+            "rule": "text"
+        },
+        "displayType": {
+            "name": "显示类型",
+            "desc": "事件显示类型，1或0目前未知",
+            "rule": "number"
+        },
+        "maxoptions": {
+            "name": "最大选项数",
+            "desc": "事件最大选项数",
+            "rule": "number"
+        },
+        "miniGame": {
+            "name": "小游戏",
+            "desc": "事件小游戏",
+            "rule": "lib/Cfg/MinigameCfg #7277.json"
+        },
+        "options": {
+            "name": "选项",
+            "desc": "同对话id，暂不支持检索",
+            "rule": "index"
+        },
+        "probability": {
+            "name": "可能性",
+            "desc": "事件可能性",
+            "rule": "number"
+        },
+        "replace": {
+            "name": "替换",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "weight": {
+            "name": "权重",
+            "desc": "事件权重，未知",
+            "rule": "number"
+        }
+    },
+    "ActionKey": {
+        "id": {
+            "name": "ID",
+            "desc": "事件id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "事件名称",
+            "rule": "text"
+        },
+        "anime": {
+            "name": "动画",
+            "desc": "事件动画",
+            "rule": "lib/Cfg/AnimationCfg #7265.json"
+        },
+        "attrs": {
+            "name": "属性",
+            "desc": "事件属性",
+            "rule": "lib/Cfg/PersonAttrCfg #7185.json"
+        },
+        "audio": {
+            "name": "音频",
+            "desc": "事件音频",
+            "rule": "lib/Cfg/AudioCfg #7174.json"
+        },
+        "beginTime": {
+            "name": "开始时间",
+            "desc": "事件开始时间",
+            "rule": "number"
+        },
+        "bg": {
+            "name": "背景",
+            "desc": "事件背景",
+            "rule": "lib/Cfg/BgCfg #7390.json"
+        },
+        "cnt": {
+            "name": "计数",
+            "desc": "事件计数",
+            "rule": "number"
+        },
+        "cost": {
+            "name": "消耗",
+            "desc": "事件消耗",
+            "rule": "number"
+        },
+        "disableTxt": {
+            "name": "禁用文本",
+            "desc": "事件禁用文本",
+            "rule": "text"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "事件效果",
+            "rule": "lib/rules/effectRules"
+        },
+        "endTime": {
+            "name": "结束时间",
+            "desc": "事件结束时间",
+            "rule": "number"
+        },
+        "evtId": {
+            "name": "事件ID",
+            "desc": "事件ID",
+            "rule": "lib/Cfg/EvtCfg #7313.json"
+        },
+        "evtType": {
+            "name": "事件类型",
+            "desc": "事件类型",
+            "rule": "lib/Cfg/EvtTypeCfg #7218.json"
+        },
+        "expReward": {
+            "name": "经验奖励",
+            "desc": "事件经验奖励",
+            "rule": "number"
+        },
+        "funcId": {
+            "name": "函数ID",
+            "desc": "事件函数ID",
+            "rule": "lib/Cfg/FuncCfg #7293.json"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "事件图标",
+            "rule": "path"
+        },
+        "interactable": {
+            "name": "可交互",
+            "desc": "事件可交互",
+            "rule": "text"
+        },
+        "label": {
+            "name": "标签",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "map": {
+            "name": "发生地点",
+            "desc": "事件发生地点",
+            "rule": "lib/Cfg/MapCfg #7306.json"
+        },
+        "minigameId": {
+            "name": "小游戏ID",
+            "desc": "事件小游戏ID",
+            "rule": "lib/Cfg/MinigameCfg #7277.json"
+        },
+        "needExp": {
+            "name": "需要经验",
+            "desc": "事件需要经验",
+            "rule": "number"
+        },
+        "next": {
+            "name": "下一个",
+            "desc": "事件下一个",
+            "rule": "text"
+        },
+        "tag": {
+            "name": "标签",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "事件类型",
+            "rule": "text"
+        },
+        "unlock": {
+            "name": "解锁",
+            "desc": "事件解锁",
+            "rule": "text"
+        }
+    },
+    "Action_evtKey": {
+        "id": {
+            "name": "ID",
+            "desc": "事件id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "evts": {
+            "name": "事件列表",
+            "desc": "事件列表",
+            "rule": "lib/Cfg/EvtCfg #7313.json"
+        },
+        "rate": {
+            "name": "概率",
+            "desc": "事件概率",
+            "rule": "number"
+        }
+    },
+    "AudioKey": {
+        "name": {
+            "name": "名称",
+            "desc": "音频名称",
+            "rule": "text"
+        },
+        "id": {
+            "name": "ID",
+            "desc": "音频id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "disable": {
+            "name": "禁用",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "group": {
+            "name": "组",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "音频类型",
+            "rule": "text"
+        },
+        "uiType": {
+            "name": "Ui Type",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "url": {
+            "name": "Url",
+            "desc": "音频Url",
+            "rule": "path"
+        },
+        "volumn": {
+            "name": "Volumn",
+            "desc": "音频音量",
+            "rule": "number"
+        }
+    },
+    "BgKey": {
+        "id": {
+            "name": "ID",
+            "desc": "背景id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "背景名称",
+            "rule": "text"
+        },
+        "url": {
+            "name": "Url",
+            "desc": "背景Url",
+            "rule": "path"
+        },
+        "audio": {
+            "name": "音频",
+            "desc": "背景音频",
+            "rule": "lib/Cfg/AudioCfg #7174.json"
+        },
+        "cloth": {
+            "name": "服饰",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "gaozhongCond": {
+            "name": "高中条件",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "gaozhongUrl": {
+            "name": "高中Url",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "BookKey": {
+        "id": {
+            "name": "ID",
+            "desc": "物品id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "capacity": {
+            "name": "页数",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "未知",
+            "rule": "lib/rules/effectRules"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "未知",
+            "rule": "path"
+        },
+        "itemTag": {
+            "name": "标签",
+            "desc": "未知",
+            "rule": "lib/rules/itemTagRules"
+        },
+        "need": {
+            "name": "需求",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "precondition": {
+            "name": "前置条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "sell": {
+            "name": "售价",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "talk": {
+            "name": "对话",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "usingEffect": {
+            "name": "使用效果",
+            "desc": "未知",
+            "rule": "lib/rules/effectRules"
+        },
+        "value": {
+            "name": "价值",
+            "desc": "未知",
+            "rule": "number"
+        }
+    },
+    "C_gKey": {
+        "id": {
+            "name": "ID",
+            "desc": "漫画id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "comic": {
+            "name": "漫画",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "group": {
+            "name": "组",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "idx": {
+            "name": "索引",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "move": {
+            "name": "移动",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "startTalks": {
+            "name": "开始对话",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "urls": {
+            "name": "Urls",
+            "desc": "未知",
+            "rule": "path"
+        }
+    },
+    "IntentKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "before": {
+            "name": "Before",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "condition": {
+            "name": "条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "demand": {
+            "name": "需求",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "fail": {
+            "name": "失败",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "failTalk": {
+            "name": "失败对话",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "finishTalk": {
+            "name": "完成对话",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "finishType": {
+            "name": "完成类型",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "group": {
+            "name": "组",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "next": {
+            "name": "下一个",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "npc": {
+            "name": "角色",
+            "desc": "未知",
+            "rule": "lib/Cfg/PersonCfg #7200.json"
+        },
+        "renshengguan": {
+            "name": "人生观",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "reward": {
+            "name": "奖励",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "round": {
+            "name": "回合",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "tag": {
+            "name": "标签",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "targetRound": {
+            "name": "目标回合",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "weight": {
+            "name": "权重",
+            "desc": "未知",
+            "rule": "number"
+        }
+    },
+    "K_zone_avatarKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "未知",
+            "rule": "path"
+        },
+        "state": {
+            "name": "状态",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "K_zone_commentKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "comments": {
+            "name": "评论列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "condition": {
+            "name": "条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "content": {
+            "name": "内容",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "未知",
+            "rule": "lib/rules/effectRules"
+        },
+        "options": {
+            "name": "选项",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "parent": {
+            "name": "父评论ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "personality": {
+            "name": "个性",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "roles": {
+            "name": "角色列表",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "K_zone_contentKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "title": {
+            "name": "标题",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "comments": {
+            "name": "评论列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "content": {
+            "name": "内容",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "imgs": {
+            "name": "图片列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "options": {
+            "name": "选项",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "role": {
+            "name": "角色",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "thumbCnt": {
+            "name": "点赞数量",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "thumbs": {
+            "name": "点赞列表",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "K_zone_profileKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "bgm": {
+            "name": "背景音乐",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "font": {
+            "name": "字体",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "fontColor": {
+            "name": "字体颜色",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "fontSize": {
+            "name": "字体大小",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "hometown": {
+            "name": "家乡",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "未知",
+            "rule": "path"
+        },
+        "isVip": {
+            "name": "是否VIP",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "job": {
+            "name": "职业",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "living": {
+            "name": "居住地",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "marriage": {
+            "name": "婚姻状况",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "school": {
+            "name": "学校",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "theme": {
+            "name": "主题",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "PersonKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "birthday": {
+            "name": "生日",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "bubbleParm": {
+            "name": "气泡参数",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "bubbleParm2": {
+            "name": "气泡参数2",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "clickAudio": {
+            "name": "点击音频",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "gender": {
+            "name": "性别",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "init": {
+            "name": "初始化",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "introduction": {
+            "name": "介绍",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "kzoneHeadId": {
+            "name": "空间头像ID",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "l2d": {
+            "name": "Live2D模型",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "l2d2": {
+            "name": "Live2D模型2",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "l2dParm": {
+            "name": "Live2D参数",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "l2dParm2": {
+            "name": "Live2D参数2",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "nicknames": {
+            "name": "昵称列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "telephone": {
+            "name": "电话号码",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "url": {
+            "name": "图片路径",
+            "desc": "未知",
+            "rule": "path"
+        },
+        "url2": {
+            "name": "图片路径2",
+            "desc": "未知",
+            "rule": "path"
+        },
+        "urlParm": {
+            "name": "图片参数",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "urlParm2": {
+            "name": "图片参数2",
+            "desc": "未知",
+            "rule": "text"
+        }
+    },
+    "Person_growKey": {
+        "ItemPref": {
+            "name": "物品偏好",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "attr": {
+            "name": "属性",
+            "desc": "未知",
+            "rule": "lib/Cfg/PersonAttrCfg #7185.json"
+        },
+        "className": {
+            "name": "班级名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "focusAttrId": {
+            "name": "关注属性ID",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "grow": {
+            "name": "成长",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "items": {
+            "name": "物品列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "minigame": {
+            "name": "小游戏",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "order": {
+            "name": "订单",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "personalitys": {
+            "name": "个性列表",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "speciality": {
+            "name": "专业",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "state": {
+            "name": "状态",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "studyRank": {
+            "name": "学习等级",
+            "desc": "未知",
+            "rule": "number"
+        }
+    },
+    "Renshengguan_memoryKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "title": {
+            "name": "标题",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "npcId": {
+            "name": "Npc Id",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "sceneId": {
+            "name": "场景 Id",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "url": {
+            "name": "路径",
+            "desc": "未知",
+            "rule": "path"
+        }
+    },
+    "ShopKey": {
+        "buyTalk": {
+            "name": "购买对话",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "disappearTime": {
+            "name": "消失时间",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "discountRound": {
+            "name": "折扣回合",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "group": {
+            "name": "组",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "limcount": {
+            "name": "Limcount",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "maxcount": {
+            "name": "最大数量",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "next": {
+            "name": "下一个",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "precondition": {
+            "name": "前置条件",
+            "desc": "未知",
+            "rule": "lib/rules/conditionRules"
+        },
+        "price": {
+            "name": "Price",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "probability": {
+            "name": "可能性",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "time": {
+            "name": "时间",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "未知",
+            "rule": "text"
+        }
+    }
+}

@@ -1,0 +1,1183 @@
+{
+    "0": {
+        "id": 0, 
+        "name": [
+            "心情"
+        ], 
+        "min": -1.0, 
+        "max": 200.0, 
+        "sprite": [
+            6
+        ], 
+        "order": 0, 
+        "desc": "每10点心情可增加1%的智力、情商、体魄获取率", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 2, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "1": {
+        "id": 1, 
+        "name": [
+            "智力"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            1
+        ], 
+        "order": 1, 
+        "desc": "智力升级时可掌握学习方法", 
+        "tag": 11, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 1, 
+        "color": [
+            1703, 
+            1709
+        ], 
+        "waysTxt": null
+    }, 
+    "2": {
+        "id": 2, 
+        "name": [
+            "情商"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            2
+        ], 
+        "order": 2, 
+        "desc": "情商升级时可激活价值观", 
+        "tag": 11, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 1, 
+        "color": [
+            1701, 
+            1710
+        ], 
+        "waysTxt": null
+    }, 
+    "3": {
+        "id": 3, 
+        "name": [
+            "信任"
+        ], 
+        "min": -1.0, 
+        "max": null, 
+        "sprite": [
+            8
+        ], 
+        "order": 6, 
+        "desc": "用于跟妈妈交涉或与同学互动", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 2, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "4": {
+        "id": 4, 
+        "name": [
+            "体魄"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            3
+        ], 
+        "order": 3, 
+        "desc": "体魄升级时提升精力回复", 
+        "tag": 11, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 1, 
+        "color": [
+            1702, 
+            1711
+        ], 
+        "waysTxt": null
+    }, 
+    "6": {
+        "id": 6, 
+        "name": [
+            "恋爱值（弃用）"
+        ], 
+        "min": -999.0, 
+        "max": 300.0, 
+        "sprite": [
+            21
+        ], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "7": {
+        "id": 7, 
+        "name": [
+            "精力"
+        ], 
+        "min": -1.0, 
+        "max": null, 
+        "sprite": [
+            0
+        ], 
+        "order": 101, 
+        "desc": "采取行动需要消耗精力", 
+        "tag": 10, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 1, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "8": {
+        "id": 8, 
+        "name": [
+            "精力恢复"
+        ], 
+        "min": 10.0, 
+        "max": null, 
+        "sprite": [
+            0
+        ], 
+        "order": 0, 
+        "desc": "每回合开始时，会获得的精力", 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "10": {
+        "id": 10, 
+        "name": [
+            "阅历"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            9
+        ], 
+        "order": 103, 
+        "desc": null, 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "11": {
+        "id": 11, 
+        "name": [
+            "热情"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            24
+        ], 
+        "order": 0, 
+        "desc": "社交需要消耗热情，反复与同一角色社交，需要消耗更多热情", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 1, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "12": {
+        "id": 12, 
+        "name": [
+            "热情恢复（弃用）"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            24
+        ], 
+        "order": 0, 
+        "desc": "每回合开始时，会获得的热情", 
+        "tag": 0, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "20": {
+        "id": 20, 
+        "name": [
+            "探索点"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            26
+        ], 
+        "order": 0, 
+        "desc": "提升智力、情商、体魄等级可以获得探索点，用以探索更大的世界", 
+        "tag": 10, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 1, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "30": {
+        "id": 30, 
+        "name": [
+            "零花钱"
+        ], 
+        "min": -1.0, 
+        "max": null, 
+        "sprite": [
+            4
+        ], 
+        "order": 102, 
+        "desc": "辛苦积累下来的小金库，可购买玩具和零食", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 1, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "33": {
+        "id": 33, 
+        "name": [
+            "打折概率"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "61": {
+        "id": 61, 
+        "name": [
+            "娱乐"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 14, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": "通关游戏"
+    }, 
+    "62": {
+        "id": 62, 
+        "name": [
+            "社交"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 14, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": "闲聊\n触发社交事件\n社交小游戏"
+    }, 
+    "63": {
+        "id": 63, 
+        "name": [
+            "个性"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 14, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "100": {
+        "id": 100, 
+        "name": [
+            "成就"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [
+            5
+        ], 
+        "order": 104, 
+        "desc": "老师和同学们对你的赞赏程度，提高成就等级可获得新的称号", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "101": {
+        "id": 101, 
+        "name": [
+            "外向"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            10
+        ], 
+        "order": 102, 
+        "desc": "热情，开朗，奔放，你是同学们眼中的小太阳", 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3801
+        ], 
+        "waysTxt": null
+    }, 
+    "102": {
+        "id": 102, 
+        "name": [
+            "内向"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            11
+        ], 
+        "order": 101, 
+        "desc": "安静而拘谨，你总是沉浸在自己的内心世界中", 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3802
+        ], 
+        "waysTxt": null
+    }, 
+    "103": {
+        "id": 103, 
+        "name": [
+            "开放"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            12
+        ], 
+        "order": 104, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3803
+        ], 
+        "waysTxt": null
+    }, 
+    "104": {
+        "id": 104, 
+        "name": [
+            "务实"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            13
+        ], 
+        "order": 103, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3804
+        ], 
+        "waysTxt": null
+    }, 
+    "105": {
+        "id": 105, 
+        "name": [
+            "感性"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            14
+        ], 
+        "order": 106, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3805
+        ], 
+        "waysTxt": null
+    }, 
+    "106": {
+        "id": 106, 
+        "name": [
+            "理性"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            15
+        ], 
+        "order": 105, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3806
+        ], 
+        "waysTxt": null
+    }, 
+    "109": {
+        "id": 109, 
+        "name": [
+            "随性"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            16
+        ], 
+        "order": 110, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3807
+        ], 
+        "waysTxt": null
+    }, 
+    "110": {
+        "id": 110, 
+        "name": [
+            "上进"
+        ], 
+        "min": 0.0, 
+        "max": 300.0, 
+        "sprite": [
+            17
+        ], 
+        "order": 109, 
+        "desc": null, 
+        "tag": 12, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [
+            3808
+        ], 
+        "waysTxt": null
+    }, 
+    "161": {
+        "id": 161, 
+        "name": [
+            "娱乐需求"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 15, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "162": {
+        "id": 162, 
+        "name": [
+            "社交需求"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 15, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "163": {
+        "id": 163, 
+        "name": [
+            "个性需求"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 15, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "301": {
+        "id": 301, 
+        "name": [
+            "动力"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            23
+        ], 
+        "order": 0, 
+        "desc": "学习将消耗学习动力，可以通过交涉、读书获取", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "302": {
+        "id": 302, 
+        "name": [
+            "学习效率"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            18
+        ], 
+        "order": 0, 
+        "desc": "决定主动学习知识时增加的进度", 
+        "tag": 10, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "303": {
+        "id": 303, 
+        "name": [
+            "自习"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": "每回合各学科知识会自动提升进度，提升的数值相当于学习效率x自习能力", 
+        "tag": 0, 
+        "onlyValueInUI": 1, 
+        "valueInUI": "{0:P0}", 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "321": {
+        "id": 321, 
+        "name": [
+            "影响力"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            25
+        ], 
+        "order": 0, 
+        "desc": "在朋友们进行社交活动时的话语权，随着信任增加一起获得", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": -1, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "331": {
+        "id": 331, 
+        "name": [
+            "阅读速度"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            19
+        ], 
+        "order": 0, 
+        "desc": "决定在读的书籍，每回合能读完的页数", 
+        "tag": 10, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "341": {
+        "id": 341, 
+        "name": [
+            "硬核"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "361": {
+        "id": 361, 
+        "name": [
+            "二次元浓度"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            27
+        ], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "381": {
+        "id": 381, 
+        "name": [
+            "手工速度"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [
+            20
+        ], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "401": {
+        "id": 401, 
+        "name": [
+            "文笔"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 1, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "421": {
+        "id": 421, 
+        "name": [
+            "训练点"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "501": {
+        "id": 501, 
+        "name": [
+            "正直"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 501, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "502": {
+        "id": 502, 
+        "name": [
+            "叛逆"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 502, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "503": {
+        "id": 503, 
+        "name": [
+            "贪婪"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 503, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "504": {
+        "id": 504, 
+        "name": [
+            "圆滑"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 504, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "505": {
+        "id": 505, 
+        "name": [
+            "冷静"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 505, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "506": {
+        "id": 506, 
+        "name": [
+            "勇敢"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 506, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "507": {
+        "id": 507, 
+        "name": [
+            "慷慨"
+        ], 
+        "min": -999.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "508": {
+        "id": 508, 
+        "name": [
+            "谨慎"
+        ], 
+        "min": -999.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "509": {
+        "id": 509, 
+        "name": [
+            "网瘾"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "510": {
+        "id": 510, 
+        "name": [
+            "幻想"
+        ], 
+        "min": 0.0, 
+        "max": 999.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 13, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "520": {
+        "id": 520, 
+        "name": [
+            "亲密度"
+        ], 
+        "min": 0.0, 
+        "max": 520.0, 
+        "sprite": [
+            22
+        ], 
+        "order": 0, 
+        "desc": "0-解锁友谊赛（操场）\n10-解锁看电影（达万影院）\n20-解锁共同绘画（游乐场）\n40-解锁情侣头像（企鹅空间）\n60-解锁共同祈福（祈福树）\n80-解锁拍大头贴（娱乐区）\n100-解锁爱心礼物（学校走廊）", 
+        "tag": 10, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "1000": {
+        "id": 1000, 
+        "name": [
+            "心情上限"
+        ], 
+        "min": 0.0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9000": {
+        "id": 9000, 
+        "name": [
+            "职业竞争力"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9002": {
+        "id": 9002, 
+        "name": [
+            "珍视上限"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9004": {
+        "id": 9004, 
+        "name": [
+            "特质效果"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9005": {
+        "id": 9005, 
+        "name": [
+            "好友"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9006": {
+        "id": 9006, 
+        "name": [
+            "好感（仅用于占位）"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9007": {
+        "id": 9007, 
+        "name": [
+            "反思"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9008": {
+        "id": 9008, 
+        "name": [
+            "林嘉宇态度改变"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9009": {
+        "id": 9009, 
+        "name": [
+            "经历"
+        ], 
+        "min": -100.0, 
+        "max": 100.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9010": {
+        "id": 9010, 
+        "name": [
+            "林嘉宇想当医生"
+        ], 
+        "min": -100.0, 
+        "max": 100.0, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": -1, 
+        "color": [], 
+        "waysTxt": null
+    }, 
+    "9011": {
+        "id": 9011, 
+        "name": [
+            "可保留精力"
+        ], 
+        "min": 0, 
+        "max": null, 
+        "sprite": [], 
+        "order": 0, 
+        "desc": null, 
+        "tag": 0, 
+        "onlyValueInUI": 0, 
+        "valueInUI": null, 
+        "consume": 0, 
+        "uiType": 0, 
+        "color": [], 
+        "waysTxt": null
+    }
+}

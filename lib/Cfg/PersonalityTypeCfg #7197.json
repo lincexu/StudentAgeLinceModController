@@ -1,0 +1,330 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "游戏迷", 
+        "name2": "ENFP", 
+        "icon": "common6/icon_renge_enfp", 
+        "progressIcon": "common6/img_rengeleixing_progress_nf", 
+        "weight": 7, 
+        "ids": [
+            101, 
+            103, 
+            105, 
+            109
+        ], 
+        "tag": 1359, 
+        "replace": [
+            201, 
+            5
+        ], 
+        "effectDesc": "可以转变心态", 
+        "attrId": 109, 
+        "desc": "你充满创意，喜欢尝试新事物，渴望自由。社交时敏感有热情，有很强的洞察力，是最优秀的沟通者，因此有着广泛的社交圈。\n\n对新鲜感和趣味性的追求经常导致你花太多时间在娱乐上，对实际的、具体的事情关注不够。"
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "万人迷", 
+        "name2": "ENFJ", 
+        "icon": "common6/icon_renge_enfj", 
+        "progressIcon": "common6/img_rengeleixing_progress_nf", 
+        "weight": 2, 
+        "ids": [
+            101, 
+            103, 
+            105, 
+            110
+        ], 
+        "tag": 1360, 
+        "replace": [], 
+        "effectDesc": "可以购买日记本来写日记", 
+        "attrId": 103, 
+        "desc": "你真诚而坦率，是充满爱心的理想主义者，拥有很强的同理心，总是热情地帮助身边的人，这种激情与魅力为你吸引了许多朋友。\n\n然而你经常会过于善解人意，为了他人的问题而烦恼，导致身心疲惫。"
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "智多星", 
+        "name2": "ENTP", 
+        "icon": "common6/icon_renge_entp", 
+        "progressIcon": "common6/img_rengeleixing_progress_nt", 
+        "weight": 3, 
+        "ids": [
+            101, 
+            103, 
+            106, 
+            109
+        ], 
+        "tag": 1369, 
+        "replace": [
+            202, 
+            2
+        ], 
+        "effectDesc": "可以思考哲学问题", 
+        "attrId": 106, 
+        "desc": "你对新事物充满好奇，重视灵感而富有创造力，同时思维敏捷，善于打破常规，最讨厌陈腐死板的规则。\n\n你总是追寻新鲜有趣的事物，导致你很难对具体而琐碎的事情保持专注。"
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "指挥官", 
+        "name2": "ENTJ", 
+        "icon": "common6/icon_renge_entj", 
+        "progressIcon": "common6/img_rengeleixing_progress_nt", 
+        "weight": 2, 
+        "ids": [
+            101, 
+            103, 
+            106, 
+            110
+        ], 
+        "tag": 1370, 
+        "replace": [], 
+        "effectDesc": "可以组建社交圈", 
+        "attrId": 101, 
+        "desc": "你自信而独立，拥有充沛的精力和坚定的决心，勇于挑战困难，是天生的领导者。\n\n然而，你容易轻视意志不够坚定的人，在与他们的相处中变得不耐烦。"
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "乐天派", 
+        "name2": "ESFP", 
+        "icon": "common6/icon_renge_esfp", 
+        "progressIcon": "common6/img_rengeleixing_progress_sp", 
+        "weight": 9, 
+        "ids": [
+            101, 
+            104, 
+            105, 
+            109
+        ], 
+        "tag": 1459, 
+        "replace": [], 
+        "effectDesc": "可以帮助同学以获取信任", 
+        "attrId": 105, 
+        "desc": "你充满激情，对美学有惊人的天赋。你把生活当做是舞台，会全身心地去体验和感受它，并且毫不介意成为众人的焦点。\n\n沉浸在当下的生活中让你感到满意，因此往往会缺少对未来长期的规划。\n"
+    }, 
+    "6": {
+        "id": 6, 
+        "name": "东道主", 
+        "name2": "ESFJ", 
+        "icon": "common6/icon_renge_esfj", 
+        "progressIcon": "common6/img_rengeleixing_progress_sj", 
+        "weight": 12, 
+        "ids": [
+            101, 
+            104, 
+            105, 
+            110
+        ], 
+        "tag": 1460, 
+        "replace": [], 
+        "effectDesc": "可以组建社交圈", 
+        "attrId": 101, 
+        "desc": "你务实而可靠，具有强烈的责任感，是非常值得信赖的朋友。你关心朋友，乐意帮他们解决问题，因此在社交中很受欢迎。\n\n你享受稳定、有序、和谐的生活，有时会显得过于谨慎而不够灵活。\n"
+    }, 
+    "7": {
+        "id": 7, 
+        "name": "探险家", 
+        "name2": "ESTP", 
+        "icon": "common6/icon_renge_estp", 
+        "progressIcon": "common6/img_rengeleixing_progress_sp", 
+        "weight": 5, 
+        "ids": [
+            101, 
+            104, 
+            106, 
+            109
+        ], 
+        "tag": 1469, 
+        "replace": [
+            201, 
+            5
+        ], 
+        "effectDesc": "可以转变心态", 
+        "attrId": 109, 
+        "desc": "你大胆而果断，倾向于直接行动而不是瞻前顾后。因此没有东西能够束缚你，一旦你确定了目标，你就会勇往直前，无所畏惧。\n\n作为雷厉风行的行动派，即使来不及考虑长期后果，你也会开始采取行动。"
+    }, 
+    "8": {
+        "id": 8, 
+        "name": "监管者", 
+        "name2": "ESTJ", 
+        "icon": "common6/icon_renge_estj", 
+        "progressIcon": "common6/img_rengeleixing_progress_sj", 
+        "weight": 11, 
+        "ids": [
+            101, 
+            104, 
+            106, 
+            110
+        ], 
+        "tag": 1470, 
+        "replace": [], 
+        "effectDesc": "可以消耗心情采用座右铭", 
+        "attrId": 110, 
+        "desc": "你注重事实和秩序，对身边的事物和自己的知识有充足的认识，因此总能坚守原则。你的诚实和可靠，换来了朋友的信赖和认可。\n\n然而，过于关注事实和效率，也让你难以表达情感和感受同理心。"
+    }, 
+    "9": {
+        "id": 9, 
+        "name": "文学家", 
+        "name2": "INFP", 
+        "icon": "common6/icon_renge_infp", 
+        "progressIcon": "common6/img_rengeleixing_progress_nf", 
+        "weight": 4, 
+        "ids": [
+            102, 
+            103, 
+            105, 
+            109
+        ], 
+        "tag": 2359, 
+        "replace": [], 
+        "effectDesc": "可以购买日记本来写日记", 
+        "attrId": 103, 
+        "desc": "你具有惊人的敏感性，这让你体贴而善良，讨厌任何伤害别人的想法。同时你思想开放，能够宽容并接受异见，因此很多人把你当作最亲密的知己。\n\n你渴望与他人建立联系，但未必知道要怎么去做，因此有时可能会感到孤独。"
+    }, 
+    "10": {
+        "id": 10, 
+        "name": "咨询师", 
+        "name2": "INFJ", 
+        "icon": "common6/icon_renge_infj", 
+        "progressIcon": "common6/img_rengeleixing_progress_nf", 
+        "weight": 1, 
+        "ids": [
+            102, 
+            103, 
+            105, 
+            110
+        ], 
+        "tag": 2360, 
+        "replace": [], 
+        "effectDesc": "可以帮助同学以获取信任", 
+        "attrId": 105, 
+        "desc": "你拥有强烈的信念，能够坚持自己的原则。同时你也有很强的道德感和同理心，在乎他人的感受和想法，且善于与他们建立联系。\n\n作为经典的理想主义者，你总是被宏大的目标所激励，但现实并不美好，导致你常常受挫。"
+    }, 
+    "11": {
+        "id": 11, 
+        "name": "思想家", 
+        "name2": "INTP", 
+        "icon": "common6/icon_renge_intp", 
+        "progressIcon": "common6/img_rengeleixing_progress_nt", 
+        "weight": 3, 
+        "ids": [
+            102, 
+            103, 
+            106, 
+            109
+        ], 
+        "tag": 2369, 
+        "replace": [
+            202, 
+            2
+        ], 
+        "effectDesc": "可以思考哲学问题", 
+        "attrId": 106, 
+        "desc": "你思想开放，想象力丰富，对一切新事物新知识都充满好奇。你擅长分析，注重客观，孜孜不倦地探寻事物表面之下的真实。\n\n由于你过度注重逻辑与理性，有时会低估了情感和同情心的重要性。"
+    }, 
+    "12": {
+        "id": 12, 
+        "name": "战略家", 
+        "name2": "INTJ", 
+        "icon": "common6/icon_renge_intj", 
+        "progressIcon": "common6/img_rengeleixing_progress_nt", 
+        "weight": 2, 
+        "ids": [
+            102, 
+            103, 
+            106, 
+            110
+        ], 
+        "tag": 2370, 
+        "replace": [], 
+        "effectDesc": "可以消耗心情采用座右铭", 
+        "attrId": 110, 
+        "desc": "你渴望知识，崇尚理性，总是独立思考和坚守原则。你渴望进步，野心勃勃，乐于应对各种挑战，并有信心攻克它们。\n\n高度的自信容易让你变得傲慢，并轻视那些对于智力不如你的人。"
+    }, 
+    "13": {
+        "id": 13, 
+        "name": "收藏家", 
+        "name2": "ISFP", 
+        "icon": "common6/icon_renge_isfp", 
+        "progressIcon": "common6/img_rengeleixing_progress_sp", 
+        "weight": 7, 
+        "ids": [
+            102, 
+            104, 
+            105, 
+            109
+        ], 
+        "tag": 2459, 
+        "replace": [
+            204, 
+            4
+        ], 
+        "effectDesc": "可以购买工具箱来做手工", 
+        "attrId": 104, 
+        "desc": "你的生活轻松和充满热情，乐于享受当下，会寻找各种机会来感受刺激，释放激情。虽然对他人情绪有很强的洞察力，你还是更享受独处的时光。\n\n你不喜欢长期的承诺和计划，这为你的学习和生活带来了许多麻烦。"
+    }, 
+    "14": {
+        "id": 14, 
+        "name": "护卫者", 
+        "name2": "ISFJ", 
+        "icon": "common6/icon_renge_isfj", 
+        "progressIcon": "common6/img_rengeleixing_progress_sj", 
+        "weight": 14, 
+        "ids": [
+            102, 
+            104, 
+            105, 
+            110
+        ], 
+        "tag": 2460, 
+        "replace": [
+            203, 
+            8
+        ], 
+        "effectDesc": "可以消耗心情进行反思", 
+        "attrId": 102, 
+        "desc": "你积极进取，有很强的责任感，是一丝不苟的完美主义者。同时你关注细节，敏感而富有爱心，常常不遗余力地帮助身边的人。\n\n你经常由于过于谦逊或害羞，而无法有效地展示自己，取得自己应有的认可。"
+    }, 
+    "15": {
+        "id": 15, 
+        "name": "手艺人", 
+        "name2": "ISTP", 
+        "icon": "common6/icon_renge_istp", 
+        "progressIcon": "common6/img_rengeleixing_progress_sp", 
+        "weight": 5, 
+        "ids": [
+            102, 
+            104, 
+            106, 
+            109
+        ], 
+        "tag": 2469, 
+        "replace": [
+            204, 
+            4
+        ], 
+        "effectDesc": "可以购买工具箱来做手工", 
+        "attrId": 104, 
+        "desc": "你务实而细致，推崇实用主义，喜欢直接动手来探索事物。你擅长拆卸与组装物体，并乐此不疲，是天生的手工艺者。\n\n你沉浸在自己的世界中，经常拒绝听取批评与做出改变，有时还会对批评感到愤怒。"
+    }, 
+    "16": {
+        "id": 16, 
+        "name": "精算师", 
+        "name2": "ISTJ", 
+        "icon": "common6/icon_renge_istj", 
+        "progressIcon": "common6/img_rengeleixing_progress_sj", 
+        "weight": 13, 
+        "ids": [
+            102, 
+            104, 
+            106, 
+            110
+        ], 
+        "tag": 2470, 
+        "replace": [
+            203, 
+            8
+        ], 
+        "effectDesc": "可以消耗心情进行反思", 
+        "attrId": 102, 
+        "desc": "你忠诚可靠，意志坚强，充满责任心，对任何细节都严阵以待，恪尽职守。同时你坦率而真诚，反感一切谎言和心机，宁愿独自一人也不愿与这些人同行。\n\n然而，你不擅长表达自己的感受和想法，常常封闭自己的内心，让人感到难以接近。"
+    }
+}

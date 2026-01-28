@@ -1,0 +1,1843 @@
+{
+    "2": {
+        "id": 2, 
+        "name": "价值观", 
+        "icon": "common2/icon_valueview", 
+        "parm": [
+            5
+        ], 
+        "type": 0, 
+        "tips": "这里是功能描述", 
+        "tipsType": 0, 
+        "chain": [
+            504
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "背包", 
+        "icon": "common6/icon_bag_", 
+        "parm": [
+            102
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 100, 
+        "debug": 1
+    }, 
+    "6": {
+        "id": 6, 
+        "name": "小卖部", 
+        "icon": "common2/icon_shop", 
+        "parm": [
+            2001
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 201, 
+        "debug": 0
+    }, 
+    "7": {
+        "id": 7, 
+        "name": "交涉", 
+        "icon": "common6/icon_nego_", 
+        "parm": [
+            105
+        ], 
+        "type": 3, 
+        "tips": "这里是功能描述", 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1300, 
+        "debug": 1
+    }, 
+    "8": {
+        "id": 8, 
+        "name": "专长", 
+        "icon": "common2/icon_achievement", 
+        "parm": [
+            4
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            504
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "9": {
+        "id": 9, 
+        "name": "军情六处", 
+        "icon": "common2/img_mi6", 
+        "parm": [
+            -2
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 71, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "10": {
+        "id": 10, 
+        "name": "心情", 
+        "icon": null, 
+        "parm": [
+            0
+        ], 
+        "type": 1, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "11": {
+        "id": 11, 
+        "name": "零花钱", 
+        "icon": null, 
+        "parm": [
+            30
+        ], 
+        "type": 1, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 2
+    }, 
+    "13": {
+        "id": 13, 
+        "name": "阅历", 
+        "icon": null, 
+        "parm": [
+            10
+        ], 
+        "type": 8, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "14": {
+        "id": 14, 
+        "name": "精力", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "15": {
+        "id": 15, 
+        "name": "成就", 
+        "icon": null, 
+        "parm": [
+            100
+        ], 
+        "type": 8, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            504
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "16": {
+        "id": 16, 
+        "name": "信任", 
+        "icon": null, 
+        "parm": [
+            3
+        ], 
+        "type": 1, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "17": {
+        "id": 17, 
+        "name": "阅读速度", 
+        "icon": null, 
+        "parm": [
+            331
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "18": {
+        "id": 18, 
+        "name": "手工速度", 
+        "icon": null, 
+        "parm": [
+            381
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "19": {
+        "id": 19, 
+        "name": "学习效率", 
+        "icon": null, 
+        "parm": [
+            302
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "20": {
+        "id": 20, 
+        "name": "亲密度", 
+        "icon": null, 
+        "parm": [
+            520
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "42": {
+        "id": 42, 
+        "name": "社交", 
+        "icon": null, 
+        "parm": [
+            11
+        ], 
+        "type": 1, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            503
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "43": {
+        "id": 43, 
+        "name": "学习", 
+        "icon": "common6/icon_study", 
+        "parm": [
+            101
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            502, 
+            555, 
+            556, 
+            557
+        ], 
+        "preFunc": 0, 
+        "redpoint": 1100, 
+        "debug": 0
+    }, 
+    "44": {
+        "id": 44, 
+        "name": "行动", 
+        "icon": "action/img_star", 
+        "parm": [
+            104
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 400, 
+        "debug": 2
+    }, 
+    "45": {
+        "id": 45, 
+        "name": "衣柜", 
+        "icon": "item/img_qiufu", 
+        "parm": [
+            105
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            124, 
+            125
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "46": {
+        "id": 46, 
+        "name": "手机", 
+        "icon": "common6/icon_phone", 
+        "parm": [
+            106
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            701, 
+            702, 
+            703, 
+            704, 
+            705, 
+            706, 
+            707, 
+            708, 
+            709
+        ], 
+        "preFunc": 0, 
+        "redpoint": 1800, 
+        "debug": 0
+    }, 
+    "51": {
+        "id": 51, 
+        "name": "跑团", 
+        "icon": "common3/img_sword", 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "52": {
+        "id": 52, 
+        "name": "漫展", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "53": {
+        "id": 53, 
+        "name": "跳蚤市场", 
+        "icon": "common2/icon_shop", 
+        "parm": [
+            2713
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "54": {
+        "id": 54, 
+        "name": "投稿", 
+        "icon": "common3/img_pen", 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "55": {
+        "id": 55, 
+        "name": "比赛", 
+        "icon": "common3/img_basketball_match", 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "56": {
+        "id": 56, 
+        "name": "方法论", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            504
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "57": {
+        "id": 57, 
+        "name": "复习", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "58": {
+        "id": 58, 
+        "name": "上课", 
+        "icon": null, 
+        "parm": [
+            2012
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "59": {
+        "id": 59, 
+        "name": "刷题", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "61": {
+        "id": 61, 
+        "name": "游戏库", 
+        "icon": "common3/img_joystick", 
+        "parm": [
+            2004
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "62": {
+        "id": 62, 
+        "name": "看动漫", 
+        "icon": null, 
+        "parm": [
+            2714
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1900, 
+        "debug": 0
+    }, 
+    "63": {
+        "id": 63, 
+        "name": "手工", 
+        "icon": "common3/img_wrench", 
+        "parm": [
+            2007
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 404, 
+        "debug": 0
+    }, 
+    "64": {
+        "id": 64, 
+        "name": "写日记", 
+        "icon": "common3/img_notebook", 
+        "parm": [
+            2008
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 403, 
+        "debug": 0
+    }, 
+    "65": {
+        "id": 65, 
+        "name": "篮球主线", 
+        "icon": "common3/img_basketball", 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "67": {
+        "id": 67, 
+        "name": "羽毛球主线", 
+        "icon": "common3/img_basketball", 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "68": {
+        "id": 68, 
+        "name": "百乐门网吧", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "70": {
+        "id": 70, 
+        "name": "属性组", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            501, 
+            550
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "71": {
+        "id": 71, 
+        "name": "属性-人格", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "72": {
+        "id": 72, 
+        "name": "属性-人格-外向内向", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "73": {
+        "id": 73, 
+        "name": "属性-人格-开放务实", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "74": {
+        "id": 74, 
+        "name": "属性-人格-友善警惕", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "75": {
+        "id": 75, 
+        "name": "属性-人格-随性上进", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "76": {
+        "id": 76, 
+        "name": "属性-人格类型", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "100": {
+        "id": 100, 
+        "name": "人生观", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 2
+    }, 
+    "101": {
+        "id": 101, 
+        "name": "心态", 
+        "icon": null, 
+        "parm": [
+            0
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "102": {
+        "id": 102, 
+        "name": "出门", 
+        "icon": "common2/img_map", 
+        "parm": [
+            2
+        ], 
+        "type": 0, 
+        "tips": "前往鹅城的各个角落", 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 200, 
+        "debug": 1
+    }, 
+    "103": {
+        "id": 103, 
+        "name": "日志", 
+        "icon": "common2/img_log", 
+        "parm": [
+            1
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            501, 
+            552
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "104": {
+        "id": 104, 
+        "name": "结束回合", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "105": {
+        "id": 105, 
+        "name": "反思", 
+        "icon": "common4/icon_neixing", 
+        "parm": [
+            2706
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 406, 
+        "debug": 0
+    }, 
+    "106": {
+        "id": 106, 
+        "name": "阅读", 
+        "icon": "common6/icon_book", 
+        "parm": [
+            103
+        ], 
+        "type": 3, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1500, 
+        "debug": 0
+    }, 
+    "107": {
+        "id": 107, 
+        "name": "主角", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "108": {
+        "id": 108, 
+        "name": "座右铭", 
+        "icon": null, 
+        "parm": [
+            2709
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "109": {
+        "id": 109, 
+        "name": "新闻", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "110": {
+        "id": 110, 
+        "name": "目标", 
+        "icon": "common4/icon_intent", 
+        "parm": [
+            5
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            505, 
+            553, 
+            554
+        ], 
+        "preFunc": 0, 
+        "redpoint": 1600, 
+        "debug": 1
+    }, 
+    "111": {
+        "id": 111, 
+        "name": "书店", 
+        "icon": "common2/icon_shop", 
+        "parm": [
+            2002
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 202, 
+        "debug": 0
+    }, 
+    "112": {
+        "id": 112, 
+        "name": "社交圈", 
+        "icon": "common4/icon_socialclub", 
+        "parm": [
+            2705
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 405, 
+        "debug": 0
+    }, 
+    "113": {
+        "id": 113, 
+        "name": "看电影", 
+        "icon": null, 
+        "parm": [
+            2003
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "114": {
+        "id": 114, 
+        "name": "百科", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "115": {
+        "id": 115, 
+        "name": "里程碑", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            504
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "116": {
+        "id": 116, 
+        "name": "请求", 
+        "icon": null, 
+        "parm": [
+            2707
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 402, 
+        "debug": 0
+    }, 
+    "117": {
+        "id": 117, 
+        "name": "心情等级", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "118": {
+        "id": 118, 
+        "name": "新年计划", 
+        "icon": null, 
+        "parm": [
+            2710
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            558
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "119": {
+        "id": 119, 
+        "name": "状态", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [
+            501
+        ], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "120": {
+        "id": 120, 
+        "name": "人生轨迹", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "121": {
+        "id": 121, 
+        "name": "收藏", 
+        "icon": "item/img_shell_beike", 
+        "parm": [], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1700, 
+        "debug": 0
+    }, 
+    "122": {
+        "id": 122, 
+        "name": "捐献者名录", 
+        "icon": null, 
+        "parm": [
+            2009
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "123": {
+        "id": 123, 
+        "name": "祈福", 
+        "icon": null, 
+        "parm": [
+            2011
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "124": {
+        "id": 124, 
+        "name": "买衣服", 
+        "icon": null, 
+        "parm": [
+            2010
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "125": {
+        "id": 125, 
+        "name": "理发店", 
+        "icon": null, 
+        "parm": [
+            2013
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "126": {
+        "id": 126, 
+        "name": "旅行", 
+        "icon": null, 
+        "parm": [
+            2711
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "127": {
+        "id": 127, 
+        "name": "探索", 
+        "icon": null, 
+        "parm": [], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "128": {
+        "id": 128, 
+        "name": "珍藏", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "129": {
+        "id": 129, 
+        "name": "哲学思辨", 
+        "icon": null, 
+        "parm": [
+            2715
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "130": {
+        "id": 130, 
+        "name": "钓鱼", 
+        "icon": "item/img_shell_beike", 
+        "parm": [], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "201": {
+        "id": 201, 
+        "name": "智力", 
+        "icon": null, 
+        "parm": [
+            1
+        ], 
+        "type": 2, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "202": {
+        "id": 202, 
+        "name": "情商", 
+        "icon": null, 
+        "parm": [
+            2
+        ], 
+        "type": 2, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "203": {
+        "id": 203, 
+        "name": "爆发概率", 
+        "icon": null, 
+        "parm": [
+            60
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "204": {
+        "id": 204, 
+        "name": "体魄", 
+        "icon": null, 
+        "parm": [
+            4
+        ], 
+        "type": 2, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "301": {
+        "id": 301, 
+        "name": "社交", 
+        "icon": null, 
+        "parm": [
+            2403, 
+            2407
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "302": {
+        "id": 302, 
+        "name": "赠送", 
+        "icon": null, 
+        "parm": [], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "303": {
+        "id": 303, 
+        "name": "再见", 
+        "icon": null, 
+        "parm": [
+            2402, 
+            2406
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "304": {
+        "id": 304, 
+        "name": "交谈", 
+        "icon": null, 
+        "parm": [
+            2404, 
+            2408
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "305": {
+        "id": 305, 
+        "name": "社交小游戏", 
+        "icon": null, 
+        "parm": [
+            2409, 
+            2410
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "306": {
+        "id": 306, 
+        "name": "表白", 
+        "icon": null, 
+        "parm": [
+            2409, 
+            2410
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "307": {
+        "id": 307, 
+        "name": "邀请加入社交圈", 
+        "icon": null, 
+        "parm": [
+            2409, 
+            2410
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "308": {
+        "id": 308, 
+        "name": "话题", 
+        "icon": null, 
+        "parm": [], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "309": {
+        "id": 309, 
+        "name": "辅导程良", 
+        "icon": null, 
+        "parm": [
+            9908
+        ], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "310": {
+        "id": 310, 
+        "name": "请教经验", 
+        "icon": null, 
+        "parm": [], 
+        "type": 6, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "401": {
+        "id": 401, 
+        "name": "扣扣空间", 
+        "icon": null, 
+        "parm": [
+            2703
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 500, 
+        "debug": 0
+    }, 
+    "402": {
+        "id": 402, 
+        "name": "打电话", 
+        "icon": null, 
+        "parm": [
+            2704
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 407, 
+        "debug": 0
+    }, 
+    "403": {
+        "id": 403, 
+        "name": "看电视", 
+        "icon": null, 
+        "parm": [
+            2701
+        ], 
+        "type": 4, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 600, 
+        "debug": 1
+    }, 
+    "501": {
+        "id": 501, 
+        "name": "角色", 
+        "icon": null, 
+        "parm": [
+            550, 
+            119, 
+            552
+        ], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "502": {
+        "id": 502, 
+        "name": "学习", 
+        "icon": null, 
+        "parm": [
+            555, 
+            556, 
+            557
+        ], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "503": {
+        "id": 503, 
+        "name": "社交", 
+        "icon": null, 
+        "parm": [], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "504": {
+        "id": 504, 
+        "name": "成长", 
+        "icon": null, 
+        "parm": [
+            56, 
+            2, 
+            8, 
+            15
+        ], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "505": {
+        "id": 505, 
+        "name": "目标", 
+        "icon": null, 
+        "parm": [
+            553, 
+            554, 
+            558
+        ], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "506": {
+        "id": 506, 
+        "name": "其他", 
+        "icon": null, 
+        "parm": [
+            103, 
+            114, 
+            115
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "507": {
+        "id": 507, 
+        "name": "职业", 
+        "icon": null, 
+        "parm": [], 
+        "type": 7, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "550": {
+        "id": 550, 
+        "name": "属性", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "552": {
+        "id": 552, 
+        "name": "日志", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "553": {
+        "id": 553, 
+        "name": "主线", 
+        "icon": null, 
+        "parm": [
+            0
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "554": {
+        "id": 554, 
+        "name": "支线", 
+        "icon": null, 
+        "parm": [
+            1
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "555": {
+        "id": 555, 
+        "name": "小学", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "556": {
+        "id": 556, 
+        "name": "初中", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "557": {
+        "id": 557, 
+        "name": "高中", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "558": {
+        "id": 558, 
+        "name": "计划", 
+        "icon": null, 
+        "parm": [
+            2
+        ], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "601": {
+        "id": 601, 
+        "name": "友谊赛（操场）", 
+        "icon": null, 
+        "parm": [
+            52001
+        ], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "602": {
+        "id": 602, 
+        "name": "看电影（电影院）", 
+        "icon": null, 
+        "parm": [
+            52002
+        ], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "603": {
+        "id": 603, 
+        "name": "共同绘画（游乐园）", 
+        "icon": null, 
+        "parm": [
+            52003
+        ], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "604": {
+        "id": 604, 
+        "name": "情侣头像（企鹅空间）", 
+        "icon": null, 
+        "parm": [], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "605": {
+        "id": 605, 
+        "name": "祈福丝带（双子峰）", 
+        "icon": null, 
+        "parm": [
+            52004
+        ], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "606": {
+        "id": 606, 
+        "name": "大头贴（商场2楼）", 
+        "icon": null, 
+        "parm": [
+            52005
+        ], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "607": {
+        "id": 607, 
+        "name": "爱心早餐（教室）", 
+        "icon": null, 
+        "parm": [], 
+        "type": 9, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "701": {
+        "id": 701, 
+        "name": "游戏", 
+        "icon": "icon_game", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "702": {
+        "id": 702, 
+        "name": "音乐", 
+        "icon": "icon_music", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1803, 
+        "debug": 0
+    }, 
+    "703": {
+        "id": 703, 
+        "name": "设置", 
+        "icon": "icon_setting", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "704": {
+        "id": 704, 
+        "name": "新闻", 
+        "icon": "icon_news", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1802, 
+        "debug": 0
+    }, 
+    "705": {
+        "id": 705, 
+        "name": "空间", 
+        "icon": "icon_kzone", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 500, 
+        "debug": 0
+    }, 
+    "706": {
+        "id": 706, 
+        "name": "相册", 
+        "icon": "icon_cam", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "707": {
+        "id": 707, 
+        "name": "备忘录", 
+        "icon": "icon_note", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 0
+    }, 
+    "708": {
+        "id": 708, 
+        "name": "电话", 
+        "icon": "icon_phone", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1804, 
+        "debug": 0
+    }, 
+    "709": {
+        "id": 709, 
+        "name": "短信", 
+        "icon": "icon_msg", 
+        "parm": [], 
+        "type": 10, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 1801, 
+        "debug": 0
+    }, 
+    "1001": {
+        "id": 1001, 
+        "name": "舌战-克制关系", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "1002": {
+        "id": 1002, 
+        "name": "舌战-技能", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }, 
+    "1003": {
+        "id": 1003, 
+        "name": "舌战-BUFF", 
+        "icon": null, 
+        "parm": [], 
+        "type": 0, 
+        "tips": null, 
+        "tipsType": 0, 
+        "chain": [], 
+        "preFunc": 0, 
+        "redpoint": 0, 
+        "debug": 1
+    }
+}

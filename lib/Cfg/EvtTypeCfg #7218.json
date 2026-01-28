@@ -1,0 +1,452 @@
+{
+    "0": {
+        "id": 0, 
+        "name": "回合开始触发", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "1": {
+        "id": 1, 
+        "name": "不弹窗，可跳过，独立按钮", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "只能由社交触发", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "结束回合后触发", 
+        "type": [
+            2
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "行动触发", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "10": {
+        "id": 10, 
+        "name": "不弹出，不可跳过", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "11": {
+        "id": 11, 
+        "name": "约会", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "12": {
+        "id": 12, 
+        "name": "篮球主线任务，条件满足自动触发", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "13": {
+        "id": 13, 
+        "name": "篮球主线任务，不自动触发，用于成功失败的事件", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "14": {
+        "id": 14, 
+        "name": "羽毛球主线任务，条件满足自动触发", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "15": {
+        "id": 15, 
+        "name": "羽毛球主线任务，不自动触发，用于成功失败的事件", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "20": {
+        "id": 20, 
+        "name": "关系任务", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "21": {
+        "id": 21, 
+        "name": "打招呼", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "22": {
+        "id": 22, 
+        "name": "话题", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "30": {
+        "id": 30, 
+        "name": "点击场景物品触发", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "36": {
+        "id": 36, 
+        "name": "漫展", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "37": {
+        "id": 37, 
+        "name": "生日派对", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "40": {
+        "id": 40, 
+        "name": "考试", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "41": {
+        "id": 41, 
+        "name": "考试后，放榜前，点击查看成绩按钮触发", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "50": {
+        "id": 50, 
+        "name": "通知", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "51": {
+        "id": 51, 
+        "name": "流程", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "60": {
+        "id": 60, 
+        "name": "状态", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "61": {
+        "id": 61, 
+        "name": "路人", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "62": {
+        "id": 62, 
+        "name": "点击物品触发", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "63": {
+        "id": 63, 
+        "name": "路人-每回合检查，条件符合才出现", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "70": {
+        "id": 70, 
+        "name": "玩家打电话", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "71": {
+        "id": 71, 
+        "name": "玩家接电话", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "80": {
+        "id": 80, 
+        "name": "新闻", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "90": {
+        "id": 90, 
+        "name": "节日", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "101": {
+        "id": 101, 
+        "name": "不弹窗，不可跳过，独立按钮", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "102": {
+        "id": 102, 
+        "name": "不弹出，不可跳过，精力≤20才显示", 
+        "type": [
+            1, 
+            3
+        ], 
+        "emptyIsTrue": 0
+    }, 
+    "104": {
+        "id": 104, 
+        "name": "捣蛋事件", 
+        "type": [
+            2
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "110": {
+        "id": 110, 
+        "name": "送礼", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "200": {
+        "id": 200, 
+        "name": "人生轨迹", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "500": {
+        "id": 500, 
+        "name": "高考", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "520": {
+        "id": 520, 
+        "name": "表白", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "521": {
+        "id": 521, 
+        "name": "由情侣看电影行动触发", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "522": {
+        "id": 522, 
+        "name": "恋爱社交（社交按钮触发）", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "523": {
+        "id": 523, 
+        "name": "生日礼物（送礼按钮触发）", 
+        "type": [], 
+        "emptyIsTrue": 1
+    }, 
+    "750": {
+        "id": 750, 
+        "name": "学习", 
+        "type": [], 
+        "emptyIsTrue": 0
+    }, 
+    "801": {
+        "id": 801, 
+        "name": "家", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "802": {
+        "id": 802, 
+        "name": "学校教学楼", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "803": {
+        "id": 803, 
+        "name": "学校操场", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "804": {
+        "id": 804, 
+        "name": "欣欣小卖部", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "805": {
+        "id": 805, 
+        "name": "百乐门游戏厅", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "806": {
+        "id": 806, 
+        "name": "新华书店", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "807": {
+        "id": 807, 
+        "name": "好宜多商场", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "808": {
+        "id": 808, 
+        "name": "星河电影院", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "811": {
+        "id": 811, 
+        "name": "长隆游乐园", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "817": {
+        "id": 817, 
+        "name": "双子峰", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "901": {
+        "id": 901, 
+        "name": "家", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "902": {
+        "id": 902, 
+        "name": "学校教学楼", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "903": {
+        "id": 903, 
+        "name": "学校操场", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "904": {
+        "id": 904, 
+        "name": "欣欣小卖部", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "905": {
+        "id": 905, 
+        "name": "百乐门游戏厅", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "906": {
+        "id": 906, 
+        "name": "新华书店", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "907": {
+        "id": 907, 
+        "name": "好宜多商场", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "908": {
+        "id": 908, 
+        "name": "星河电影院", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "911": {
+        "id": 911, 
+        "name": "长隆游乐园", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }, 
+    "917": {
+        "id": 917, 
+        "name": "双子峰", 
+        "type": [
+            1
+        ], 
+        "emptyIsTrue": 1
+    }
+}

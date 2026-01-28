@@ -21,7 +21,6 @@
     },
     "EvtKey": {
         "id": "id",
-        "name":"标题",
         "title": "标题",
         "type": "事件类型",
         "talkId": "第一句话id",

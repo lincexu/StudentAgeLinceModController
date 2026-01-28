@@ -1,0 +1,51 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "体能", 
+        "action": 0, 
+        "redpoint": 0, 
+        "desc": "长跑耐力增强"
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "篮球", 
+        "action": 2005, 
+        "redpoint": 900, 
+        "desc": "篮球小游戏能力增强"
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "羽毛球", 
+        "action": 2006, 
+        "redpoint": 0, 
+        "desc": "羽毛球小游戏能力增强"
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "武术", 
+        "action": 0, 
+        "redpoint": 0, 
+        "desc": "打架小游戏能力增强"
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "钓鱼", 
+        "action": 0, 
+        "redpoint": 0, 
+        "desc": "鱼的重量平均+10%"
+    }, 
+    "8": {
+        "id": 8, 
+        "name": "手工", 
+        "action": 2007, 
+        "redpoint": 800, 
+        "desc": null
+    }, 
+    "10": {
+        "id": 10, 
+        "name": "创作", 
+        "action": 2008, 
+        "redpoint": 1000, 
+        "desc": null
+    }
+}
