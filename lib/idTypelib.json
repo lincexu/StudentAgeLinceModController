@@ -1,0 +1,232 @@
+{
+    "allType": {
+        "ActionId": {
+            "name": "行动",
+            "file": "ActionCfg*.json"
+        },
+        "ActionEvtId": {
+            "name": "行动事件",
+            "file": "ActionEvtCfg*.json"
+        },
+        "AudioId": {
+            "name": "音频",
+            "file": "AudioCfg*.json"
+        },
+        "BgId": {
+            "name": "背景",
+            "file": "BgCfg*.json"
+        },
+        "BookId": {
+            "name": "书籍",
+            "file": "BookCfg*.json"
+        },
+        "CGId": {
+            "name": "CG",
+            "file": "CGCfg*.json"
+        },
+        "EvtId": {
+            "name": "事件",
+            "file": "EvtCfg*.json"
+        },
+        "IntentId": {
+            "name": "意图",
+            "file": "IntentCfg*.json"
+        },
+        "ItemId": {
+            "name": "物品",
+            "file": "ItemCfg.json*"
+        },
+        "KZoneAvatarId": {
+            "name": "空间头像",
+            "file": "KZoneAvatarCfg*.json"
+        },
+        "KZoneCommentId": {
+            "name": "空间评论",
+            "file": "KZoneCommentCfg*.json"
+        },
+        "KZoneContentId": {
+            "name": "空间动态",
+            "file": "KZoneContentCfg*.json"
+        },
+        "KZoneProfileId": {
+            "name": "空间主页",
+            "file": "KZoneProfileCfg*.json"
+        },
+        "PersonId": {
+            "name": "角色",
+            "file": "PersonCfg*.json"
+        },
+        "PersonGrowId": {
+            "name": "角色成长",
+            "file": "PersonGrowCfg*.json"
+        },
+        "RenshengguanMemoryId": {
+            "name": "人生观记忆",
+            "file": "RenshengguanMemoryCfg*.json"
+        },
+        "ShopId": {
+            "name": "商店",
+            "file": "ShopCfg*.json"
+        },
+        "AnimationId": {
+            "name": "动画",
+            "file": "AnimationCfg*.json"
+        },
+        "ClothTypeId": {
+            "name": "衣服类型",
+            "file": "ClothTypeCfg*.json"
+        },
+        "EvtTypeId": {
+            "name": "事件类型",
+            "file": "EvtTypeCfg*.json"
+        },
+        "FuncId": {
+            "name": "功能",
+            "file": "FuncCfg*.json"
+        },
+        "ItemTypeId": {
+            "name": "物品类型",
+            "file": "ItemTypeCfg*.json"
+        },
+        "MapId": {
+            "name": "地图",
+            "file": "MapCfg*.json"
+        },
+        "MinigameId": {
+            "name": "迷你游戏",
+            "file": "MinigameCfg*.json"
+        },
+        "PersonalityTypeId": {
+            "name": "价值观与人格",
+            "file": "PersonalityTypeCfg*.json"
+        },
+        "PersonAttrId": {
+            "name": "角色属性",
+            "file": "PersonAttrCfg*.json"
+        },
+        "personStateID": {
+            "name": "角色状态",
+            "file": "PersonStateCfg*.json"
+        },
+        "RelationId": {
+            "name": "关系",
+            "file": "RelationCfg*.json"
+        },
+        "ScoreRankId": {
+            "name": "积分排名",
+            "file": "ScoreRankCfg*.json"
+        },
+        "SkillId": {
+            "name": "技能",
+            "file": "SkillCfg*.json"
+        },
+        "TalkId": {
+            "name": "对话",
+            "file": "TalkCfg*.json"
+        }
+    },
+    "listType": {
+        "ActionId": {
+            "name": "行动",
+            "file": "ActionCfg*.json",
+            "failName": "未知行动",
+            "keyList": "ActionKey"
+        },
+        "ActionEvtId": {
+            "name": "行动事件",
+            "file": "ActionEvtCfg*.json",
+            "failName": "未知行动事件",
+            "keyList": "ActionEvtKey"
+        },
+        "AudioId": {
+            "name": "音频",
+            "file": "AudioCfg*.json",
+            "failName": "未知音频",
+            "keyList": "AudioKey"
+        },
+        "BgId": {
+            "name": "背景",
+            "file": "BgCfg*.json",
+            "failName": "未知背景",
+            "keyList": "BgKey"
+        },
+        "BookId": {
+            "name": "书籍",
+            "file": "BookCfg*.json",
+            "failName": "未知书籍",
+            "keyList": "BookKey"
+        },
+        "CGId": {
+            "name": "CG",
+            "file": "CGCfg*.json",
+            "failName": "未知CG",
+            "keyList": "CGKey"
+        },
+        "EvtId": {
+            "name": "事件",
+            "file": "EvtCfg*.json",
+            "failName": "未知事件",
+            "keyList": "EvtKey"
+        },
+        "IntentId": {
+            "name": "意图",
+            "file": "IntentCfg*.json",
+            "failName": "未知意图",
+            "keyList": "IntentKey"
+        },
+        "ItemId": {
+            "name": "物品",
+            "file": "ItemCfg*.json*",
+            "failName": "未知物品",
+            "keyList": "ItemKey"
+        },
+        "KZoneAvatarId": {
+            "name": "空间头像",
+            "file": "KZoneAvatarCfg*.json",
+            "failName": "未知空间头像",
+            "keyList": "KZoneAvatarKey"
+        },
+        "KZoneCommentId": {
+            "name": "空间评论",
+            "file": "KZoneCommentCfg*.json",
+            "failName": "未知空间评论",
+            "keyList": "KZoneCommentKey"
+        },
+        "KZoneContentId": {
+            "name": "空间动态",
+            "file": "KZoneContentCfg*.json",
+            "failName": "未知空间动态",
+            "keyList": "KZoneContentKey"
+        },
+        "KZoneProfileId": {
+            "name": "空间主页",
+            "file": "KZoneProfileCfg*.json",
+            "failName": "未知空间主页",
+            "keyList": "KZoneProfileKey"
+        },
+        "PersonId": {
+            "name": "角色",
+            "file": "PersonCfg*.json",
+            "failName": "未知角色",
+            "keyList": "PersonKey"
+        },
+        "PersonGrowId": {
+            "name": "角色成长",
+            "file": "PersonGrowCfg*.json",
+            "failName": "未知角色成长",
+            "keyList": "PersonGrowKey"
+        },
+        "RenshengguanMemoryId": {
+            "name": "人生观记忆",
+            "file": "RenshengguanMemoryCfg*.json",
+            "failName": "未知人生观记忆",
+            "keyList": "RenshengguanMemoryKey"
+        },
+        "ShopId": {
+            "name": "商店",
+            "file": "ShopCfg*.json",
+            "failName": "未知商店",
+            "keyList": "ShopKey"
+        }
+    }
+}

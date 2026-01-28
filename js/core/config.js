@@ -5,7 +5,8 @@ class ConfigManager {
         this.defaultConfig = null;
         this.listeners = [];
         this.translations = null;
-        this.attributeCN = null;
+        this.idTypeKeys = null;
+        this.idTypelib = null;
         // 简繁映射表
         this.simplifiedToTraditional = {
             "学生时代模组兼容分析工具": "學生時代模組兼容分析工具",
@@ -78,50 +79,51 @@ class ConfigManager {
             }
         };
         
-        // 默认的属性中文映射
-        this.attributeCN = {};
+        // 初始化idTypeKeys
+        this.idTypeKeys = {};
     }
     
     /**
-     * 加载属性中文映射
+     * 加载idTypeKeys.json文件
      */
-    async loadAttributeCN() {
+    async loadIdTypeKeys() {
         try {
-            const response = await fetch('./localization/zh-cn/attributeCN.json', {
-                cache: 'no-cache'
-            });
+            const response = await fetch('lib/idTypeKeys.json');
             if (response.ok) {
-                this.attributeCN = await response.json();
-                console.log('[Config] 属性中文映射加载成功:', this.attributeCN);
+                this.idTypeKeys = await response.json();
+                console.log('[Config] 从idTypeKeys.json加载属性定义成功');
+                return true;
             } else {
-                console.log('[Config] 属性中文映射加载失败，使用默认映射，状态码:', response.status);
+                console.warn('[Config] 无法加载idTypeKeys.json，使用默认属性定义');
+                this.idTypeKeys = {};
+                return false;
             }
         } catch (error) {
-            console.log('[Config] 无法加载属性中文映射，使用默认映射:', error.message);
-            // 手动设置默认映射，确保基本功能可用
-            this.attributeCN = {
-                "ItemKey": {
-                    "id": "id",
-                    "name": "名称",
-                    "icon": "图标",
-                    "type": "类型"
-                },
-                "EvtKey": {
-                    "id": "id",
-                    "title": "标题",
-                    "type": "类型"
-                },
-                "BookKey": {
-                    "id": "id",
-                    "name": "名称",
-                    "type": "类型"
-                },
-                "ActionKey": {
-                    "id": "id",
-                    "name": "名称",
-                    "type": "类型"
-                }
-            };
+            console.error('[Config] 加载idTypeKeys.json出错:', error);
+            this.idTypeKeys = {};
+            return false;
+        }
+    }
+    
+    /**
+     * 加载idTypelib.json文件
+     */
+    async loadIdTypelib() {
+        try {
+            const response = await fetch('lib/idTypelib.json');
+            if (response.ok) {
+                this.idTypelib = await response.json();
+                console.log('[Config] 从idTypelib.json加载类型配置成功');
+                return true;
+            } else {
+                console.warn('[Config] 无法加载idTypelib.json，使用默认配置');
+                this.idTypelib = {};
+                return false;
+            }
+        } catch (error) {
+            console.error('[Config] 加载idTypelib.json出错:', error);
+            this.idTypelib = {};
+            return false;
         }
     }
     
@@ -241,8 +243,11 @@ class ConfigManager {
             // 5. 保存合并后的配置到localStorage
             localStorage.setItem('appConfig', JSON.stringify(this.config));
             
-            // 6. 加载属性中文映射
-            await this.loadAttributeCN();
+            // 6. 加载idTypeKeys.json文件
+            await this.loadIdTypeKeys();
+            
+            // 7. 加载idTypelib.json文件
+            await this.loadIdTypelib();
             
             console.log('[Config] 配置加载成功:', this.config);
             return this.config;
@@ -252,11 +257,18 @@ class ConfigManager {
             this.config = { ...this.defaultConfig };
             console.log('[Config] 使用默认配置:', this.config);
             
-            // 尝试加载属性中文映射
+            // 尝试加载idTypeKeys.json文件
             try {
-                await this.loadAttributeCN();
+                await this.loadIdTypeKeys();
             } catch (e) {
-                console.error('[Config] 加载属性中文映射失败:', e);
+                console.error('[Config] 加载idTypeKeys.json失败:', e);
+            }
+            
+            // 尝试加载idTypelib.json文件
+            try {
+                await this.loadIdTypelib();
+            } catch (e) {
+                console.error('[Config] 加载idTypelib.json失败:', e);
             }
             
             return this.config;
@@ -273,7 +285,7 @@ class ConfigManager {
         // 移除类型名称中的下划线，使其与映射表匹配
         const normalizedType = type.replace(/_/g, '');
         
-        // 类型名称到attributeCN.json中keyName的映射表
+        // 类型名称到idTypeKeys.json中keyName的映射表
         const typeToKeyNameMap = {
             // 基础类型
             'event': 'EvtKey',
@@ -285,21 +297,21 @@ class ConfigManager {
             'actionevt': 'Action_evtKey', // 对应Action_evtKey
             'audio': 'AudioKey',
             'bg': 'BgKey',
-            'cg': 'C_gKey', // 对应C_gKey
+            'cg': 'CGKey', // 对应CGKey
             'intent': 'IntentKey',
-            'kzoneavatar': 'K_zone_avatarKey', // 对应K_zone_avatarKey
-            'kzonecomment': 'K_zone_commentKey', // 对应K_zone_commentKey
-            'kzonecontent': 'K_zone_contentKey', // 对应K_zone_contentKey
-            'kzoneprofile': 'K_zone_profileKey', // 对应K_zone_profileKey
+            'kzoneavatar': 'KZoneAvatarKey', // 对应KZoneAvatarKey
+            'kzonecomment': 'KZoneCommentKey', // 对应KZoneCommentKey
+            'kzonecontent': 'KZoneContentKey', // 对应KZoneContentKey
+            'kzoneprofile': 'KZoneProfileKey', // 对应KZoneProfileKey
             'person': 'PersonKey',
-            'persongrow': 'Person_growKey', // 对应Person_growKey
-            'renshengguanmemory': 'Renshengguan_memoryKey', // 对应Renshengguan_memoryKey
+            'persongrow': 'PersonGrowKey', // 对应PersonGrowKey
+            'renshengguanmemory': 'RenshengguanMemoryKey', // 对应RenshengguanMemoryKey
             'shop': 'ShopKey'
         };
         
         const keyName = typeToKeyNameMap[normalizedType] || `${type.charAt(0).toUpperCase() + type.slice(1)}Key`;
-        if (this.attributeCN && this.attributeCN[keyName] && this.attributeCN[keyName][key]) {
-            return this.attributeCN[keyName][key];
+        if (this.idTypeKeys && this.idTypeKeys[keyName] && this.idTypeKeys[keyName][key] && this.idTypeKeys[keyName][key].name) {
+            return this.idTypeKeys[keyName][key].name;
         }
         return key;
     }

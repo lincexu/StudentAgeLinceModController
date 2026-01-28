@@ -320,7 +320,7 @@
             "rule": "text"
         }
     },
-    "Action_evtKey": {
+    "ActionEvtKey": {
         "id": {
             "name": "ID",
             "desc": "事件id，七位数字组成，1XXXXXX",
@@ -493,7 +493,7 @@
             "rule": "number"
         }
     },
-    "C_gKey": {
+    "CGKey": {
         "id": {
             "name": "ID",
             "desc": "漫画id，七位数字组成，1XXXXXX",
@@ -632,7 +632,7 @@
             "rule": "number"
         }
     },
-    "K_zone_avatarKey": {
+    "KZoneAvatarKey": {
         "id": {
             "name": "ID",
             "desc": "未知",
@@ -654,7 +654,7 @@
             "rule": "text"
         }
     },
-    "K_zone_commentKey": {
+    "KZoneCommentKey": {
         "id": {
             "name": "ID",
             "desc": "未知",
@@ -701,7 +701,7 @@
             "rule": "text"
         }
     },
-    "K_zone_contentKey": {
+    "KZoneContentKey": {
         "id": {
             "name": "ID",
             "desc": "未知",
@@ -753,7 +753,7 @@
             "rule": "text"
         }
     },
-    "K_zone_profileKey": {
+    "KZoneProfileKey": {
         "id": {
             "name": "ID",
             "desc": "未知",
@@ -932,7 +932,7 @@
             "rule": "text"
         }
     },
-    "Person_growKey": {
+    "PersonGrowKey": {
         "ItemPref": {
             "name": "物品偏好",
             "desc": "未知",
@@ -999,7 +999,7 @@
             "rule": "number"
         }
     },
-    "Renshengguan_memoryKey": {
+    "RenshengguanMemoryKey": {
         "id": {
             "name": "ID",
             "desc": "未知",
@@ -1042,6 +1042,11 @@
         }
     },
     "ShopKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
         "buyTalk": {
             "name": "购买对话",
             "desc": "未知",
@@ -1061,11 +1066,6 @@
             "name": "组",
             "desc": "未知",
             "rule": "text"
-        },
-        "id": {
-            "name": "ID",
-            "desc": "未知",
-            "rule": "index"
         },
         "limcount": {
             "name": "Limcount",

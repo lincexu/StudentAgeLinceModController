@@ -529,24 +529,24 @@ class ResultRenderer {
                         }
                         
                         // 获取事件、物品、书籍、行动的重复ID（兼容旧代码）
-                        const modEventIdsSet = result.modEventIds.get(modName);
+                        const modEventIdsSet = result.modEventIds ? result.modEventIds.get(modName) : null;
                         const duplicateEventsInMod = Array.from(modEventIdsSet || []).filter(id => 
-                            result.allEventIds.get(id).size > 1
+                            result.allEventIds && result.allEventIds.get(id)?.size > 1
                         );
                         
-                        const modItemIdsSet = result.modItemIds.get(modName);
+                        const modItemIdsSet = result.modItemIds ? result.modItemIds.get(modName) : null;
                         const duplicateItemsInMod = Array.from(modItemIdsSet || []).filter(id => 
-                            result.allItemIds.get(id).size > 1
+                            result.allItemIds && result.allItemIds.get(id)?.size > 1
                         );
                         
-                        const modBookIdsSet = result.modBookIds.get(modName);
+                        const modBookIdsSet = result.modBookIds ? result.modBookIds.get(modName) : null;
                         const duplicateBooksInMod = Array.from(modBookIdsSet || []).filter(id => 
-                            result.allBookIds.get(id).size > 1
+                            result.allBookIds && result.allBookIds.get(id)?.size > 1
                         );
                         
-                        const modActionIdsSet = result.modActionIds.get(modName);
+                        const modActionIdsSet = result.modActionIds ? result.modActionIds.get(modName) : null;
                         const duplicateActionsInMod = Array.from(modActionIdsSet || []).filter(id => 
-                            result.allActionIds.get(id).size > 1
+                            result.allActionIds && result.allActionIds.get(id)?.size > 1
                         );
                         
                         return `
@@ -654,7 +654,33 @@ class ResultRenderer {
                                         // 获取重复ID检查的方法
                                         const allIdsKey = `all${type.charAt(0).toUpperCase() + type.slice(1)}Ids`;
                                         
-                                        // 收集所有唯一的key
+                                        // 从idTypelib中获取对应的keyList
+                                        let keyName = null;
+                                        
+                                        // 遍历idTypelib.listType，找到对应的类型配置
+                                        if (configManager.idTypelib && configManager.idTypelib.listType) {
+                                            for (const [typeId, typeConfig] of Object.entries(configManager.idTypelib.listType)) {
+                                                // 将typeId转换为snake_case格式，与当前type比较
+                                                const convertedTypeId = typeId.replace('Id', '');
+                                                const snakeCaseTypeId = convertedTypeId.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+                                                
+                                                if (snakeCaseTypeId === type) {
+                                                    keyName = typeConfig.keyList;
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        
+                                        // 如果没有找到对应的keyList，使用默认命名规则
+                                        if (!keyName) {
+                                            // 处理带下划线的类型名称，生成正确的驼峰命名
+                                            const camelCaseType = type.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
+                                            keyName = `${camelCaseType.charAt(0).toUpperCase() + camelCaseType.slice(1)}Key`;
+                                        }
+                                        
+                                        const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
+                                        
+                                        // 收集所有唯一的key（用于验证）
                                         const allKeys = new Set();
                                         items.forEach(item => {
                                             if (typeof item === 'object' && item !== null) {
@@ -662,28 +688,28 @@ class ResultRenderer {
                                             }
                                         });
                                         
-                                        // 确保id和name（或title）在最前面，其余key按顺序排列
-                                        const keysArray = Array.from(allKeys);
                                         const sortedKeys = [];
                                         
-                                        // 1. 优先添加id（如果存在）
-                                        if (keysArray.includes('id')) {
-                                            sortedKeys.push('id');
-                                        }
-                                        
-                                        // 2. 添加名称相关字段（只添加实际存在的一个）
-                                        if (keysArray.includes('name')) {
-                                            sortedKeys.push('name');
-                                        } else if (keysArray.includes('title')) {
-                                            sortedKeys.push('title');
-                                        }
-                                        
-                                        // 3. 添加剩余的key（不包括已经添加的id和名称字段）
-                                        keysArray.forEach(key => {
-                                            if (key !== 'id' && key !== 'name' && key !== 'title' && !sortedKeys.includes(key)) {
+                                        if (idTypeKeyDef) {
+                                            // 严格按照idTypeKeys.json中定义的key和顺序，只渲染定义的key
+                                            Object.keys(idTypeKeyDef).forEach(key => {
                                                 sortedKeys.push(key);
+                                            });
+                                        } else {
+                                            // 如果没有定义，则使用默认排序（只渲染id、name/title）
+                                            const keysArray = Array.from(allKeys);
+                                            // 1. 优先添加id（如果存在）
+                                            if (keysArray.includes('id')) {
+                                                sortedKeys.push('id');
                                             }
-                                        });
+                                            
+                                            // 2. 添加名称相关字段（只添加实际存在的一个）
+                                            if (keysArray.includes('name')) {
+                                                sortedKeys.push('name');
+                                            } else if (keysArray.includes('title')) {
+                                                sortedKeys.push('title');
+                                            }
+                                        }
                                         
                                         // 获取当前表格布局配置
                                         const tableLayout = configManager.get().tableLayout || 'vertical';
@@ -716,12 +742,11 @@ class ResultRenderer {
                                                                         if (value === undefined && (key === 'name' || key === 'title')) {
                                                                             value = key === 'name' ? item.title : item.name;
                                                                         }
-                                                                        if (value === undefined) return '';
                                                                         return `
                                                                         <div class="vertical-table-row">
                                                                             <div class="row-label">${configManager.getAttributeCN(type, key)}:</div>
                                                                             <div class="row-value" title="${JSON.stringify(value)}">
-                                                                                ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
+                                                                                ${value === undefined || value === null ? '-' : (typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value)}
                                                                             </div>
                                                                         </div>
                                                                         `;
@@ -759,7 +784,7 @@ class ResultRenderer {
                                                                         }
                                                                         return `
                                                                         <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                            ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
+                                                                            ${value === undefined || value === null ? '-' : (typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value)}
                                                                         </td>
                                                                         `;
                                                                     }).join('')}
@@ -993,7 +1018,7 @@ class ResultRenderer {
                 ${Array.from(modDetails.entries()).map(([modName, modDetail]) => 
                     modDetail.events.map(event => {
                         // 检查事件ID是否重复
-                        const isDuplicate = result.allEventIds.get(event.id).size > 1;
+                        const isDuplicate = result.allEventIds && result.allEventIds.get(event.id)?.size > 1;
                         return `
                             <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}">
                                 <div class="card-header">

@@ -1,131 +1,8 @@
 // 事件分析模块
 class EventAnalyzer {
     constructor() {
-        // 支持的ID类型配置（包含TestMod/SALMC/Cfgs/zh-cn/下的所有JSON文件）
-        this.idTypes = {
-            // 基础类型
-            event: {
-                fileName: 'EvtCfg.json',
-                displayName: '事件',
-                getIdField: 'id',
-                getNameField: (data) => Utils.getEventTitle(data) || '未知事件',
-                description: '事件ID'
-            },
-            item: {
-                fileName: 'ItemCfg.json',
-                displayName: '物品',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知物品',
-                description: '物品ID'
-            },
-            book: {
-                fileName: 'BookCfg.json',
-                displayName: '书籍',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知书籍',
-                description: '书籍ID'
-            },
-            action: {
-                fileName: 'ActionCfg.json',
-                displayName: '行动',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知行动',
-                description: '行动ID'
-            },
-            
-            // 从TestMod/SALMC/Cfgs/zh-cn/添加的新类型
-            actionevt: {
-                fileName: 'ActionEvtCfg.json',
-                displayName: '行动事件',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知行动事件',
-                description: '行动事件ID'
-            },
-            audio: {
-                fileName: 'AudioCfg.json',
-                displayName: '音乐',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知音乐',
-                description: '音乐ID'
-            },
-            bg: {
-                fileName: 'BgCfg.json',
-                displayName: '背景',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知背景',
-                description: '背景ID'
-            },
-            cg: {
-                fileName: 'CGCfg.json',
-                displayName: 'CG',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知CG',
-                description: 'CGID'
-            },
-            intent: {
-                fileName: 'IntentCfg.json',
-                displayName: '目标',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知目标',
-                description: '目标ID'
-            },
-            kzoneavatar: {
-                fileName: 'KZoneAvatarCfg.json',
-                displayName: '空间头像',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知空间头像',
-                description: '空间头像ID'
-            },
-            kzonecomment: {
-                fileName: 'KZoneCommentCfg.json',
-                displayName: '空间评论',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知空间评论',
-                description: '空间评论ID'
-            },
-            kzonecontent: {
-                fileName: 'KZoneContentCfg.json',
-                displayName: '空间动态',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知空间动态',
-                description: '空间动态ID'
-            },
-            kzoneprofile: {
-                fileName: 'KZoneProfileCfg.json',
-                displayName: '空间主页',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知空间主页',
-                description: '空间主页ID'
-            },
-            person: {
-                fileName: 'PersonCfg.json',
-                displayName: '人物',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知人物',
-                description: '人物ID'
-            },
-            persongrow: {
-                fileName: 'PersonGrowCfg.json',
-                displayName: '个人成长',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知个人成长',
-                description: '个人成长ID'
-            },
-            renshengguanmemory: {
-                fileName: 'RenshengguanMemoryCfg.json',
-                displayName: '回忆',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知回忆',
-                description: '回忆ID'
-            },
-            shop: {
-                fileName: 'ShopCfg.json',
-                displayName: '商店',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知商店',
-                description: '商店ID'
-            }
-        };
+        // 支持的ID类型配置，将从idTypelib.json加载
+        this.idTypes = {};
         
         // 初始化数据结构
         this.modIds = {}; // type => modName => Set(ids)
@@ -142,6 +19,177 @@ class EventAnalyzer {
         // 初始化数据结构
         this.initDataStructures();
     }
+    
+    /**
+     * 从idTypelib.json加载ID类型配置
+     */
+    async loadIdTypeConfig() {
+        try {
+            const response = await fetch('lib/idTypelib.json');
+            if (response.ok) {
+                const idTypelib = await response.json();
+                const listType = idTypelib.listType;
+                
+                // 清空现有配置
+                this.idTypes = {};
+                
+                // 基于listType构建ID类型配置
+                for (const [typeId, typeConfig] of Object.entries(listType)) {
+                    // 生成小写的类型名（用于内部使用）
+                    const typeName = Utils.toSnakeCase(typeId.replace('Id', ''));
+                    
+                    this.idTypes[typeName] = {
+                        fileName: typeConfig.file,
+                        displayName: typeConfig.name,
+                        getIdField: 'id',
+                        getNameField: (data) => {
+                            // 优先使用name属性，然后尝试其他常见的名称字段
+                            return data.name || data.title || '未知' + typeConfig.name;
+                        },
+                        description: typeConfig.name + 'ID',
+                        keyList: typeConfig.keyList
+                    };
+                }
+                
+                console.log('[Analyzer] 从idTypelib.json加载ID类型配置成功:', this.idTypes);
+                
+                // 重新初始化数据结构
+                this.initDataStructures();
+                return true;
+            } else {
+                console.warn('[Analyzer] 无法加载idTypelib.json，使用默认配置');
+                this.useDefaultIdTypeConfig();
+                return false;
+            }
+        } catch (error) {
+            console.error('[Analyzer] 加载idTypelib.json出错:', error);
+            this.useDefaultIdTypeConfig();
+            return false;
+        }
+    }
+    
+    /**
+     * 从idTypeKeys.json加载属性定义
+     */
+    async loadIdTypeKeys() {
+        try {
+            const response = await fetch('lib/idTypeKeys.json');
+            if (response.ok) {
+                this.idTypeKeys = await response.json();
+                console.log('[Analyzer] 从idTypeKeys.json加载属性定义成功');
+                return true;
+            } else {
+                console.warn('[Analyzer] 无法加载idTypeKeys.json，使用默认属性定义');
+                this.idTypeKeys = {};
+                return false;
+            }
+        } catch (error) {
+            console.error('[Analyzer] 加载idTypeKeys.json出错:', error);
+            this.idTypeKeys = {};
+            return false;
+        }
+    }
+    
+    /**
+     * 获取类型对应的属性定义
+     * @param {string} type - ID类型
+     * @returns {Object|null} 属性定义对象
+     */
+    getTypeAttributes(type) {
+        const typeConfig = this.idTypes[type];
+        if (!typeConfig || !typeConfig.keyList) {
+            return null;
+        }
+        
+        const keyList = typeConfig.keyList;
+        return this.idTypeKeys[keyList] || null;
+    }
+    
+    /**
+     * 根据类型和数据提取关键属性
+     * @param {string} type - ID类型
+     * @param {Object} data - 数据对象
+     * @returns {Object} 提取的关键属性
+     */
+    extractKeyAttributes(type, data) {
+        const attributes = this.getTypeAttributes(type);
+        const result = {};
+        
+        // 提取id属性
+        if (data.id !== undefined) {
+            result.id = data.id;
+        }
+        
+        // 提取name属性（优先使用data中的name，然后尝试title等其他字段）
+        if (data.name !== undefined) {
+            result.name = data.name;
+        } else if (data.title !== undefined) {
+            result.name = data.title;
+        }
+        
+        // 提取icon属性
+        if (data.icon !== undefined) {
+            result.icon = data.icon;
+        }
+        
+        // 基于属性定义提取其他关键属性
+        if (attributes) {
+            for (const [key, attrConfig] of Object.entries(attributes)) {
+                if (data[key] !== undefined && !result[key]) {
+                    result[key] = data[key];
+                }
+            }
+        }
+        
+        return result;
+    }
+    
+    /**
+     * 使用默认ID类型配置（当无法加载idTypelib.json时）
+     */
+    useDefaultIdTypeConfig() {
+        // 默认ID类型配置
+        this.idTypes = {
+            // 基础类型
+            event: {
+                fileName: 'EvtCfg.json',
+                displayName: '事件',
+                getIdField: 'id',
+                getNameField: (data) => data.name || data.title || '未知事件',
+                description: '事件ID',
+                keyList: 'EvtKey'
+            },
+            item: {
+                fileName: 'ItemCfg.json',
+                displayName: '物品',
+                getIdField: 'id',
+                getNameField: (data) => data.name || '未知物品',
+                description: '物品ID',
+                keyList: 'ItemKey'
+            },
+            book: {
+                fileName: 'BookCfg.json',
+                displayName: '书籍',
+                getIdField: 'id',
+                getNameField: (data) => data.name || '未知书籍',
+                description: '书籍ID',
+                keyList: 'BookKey'
+            },
+            action: {
+                fileName: 'ActionCfg.json',
+                displayName: '行动',
+                getIdField: 'id',
+                getNameField: (data) => data.name || '未知行动',
+                description: '行动ID',
+                keyList: 'ActionKey'
+            }
+        };
+        
+        console.log('[Analyzer] 使用默认ID类型配置:', this.idTypes);
+    }
+    
+    
+    
     
     /**
      * 初始化数据结构
@@ -168,6 +216,12 @@ class EventAnalyzer {
         this.processedMods = 0;
 
         try {
+            // 加载ID类型配置
+            await this.loadIdTypeConfig();
+            
+            // 加载属性定义
+            await this.loadIdTypeKeys();
+            
             // 遍历所有选中的文件夹，查找配置文件
             for (const folder of folders) {
                 await this.processFolder(folder, allFiles);
@@ -268,34 +322,36 @@ class EventAnalyzer {
             if (dirResponse.ok) {
                 const dirContent = await dirResponse.text();
                 // 从目录内容中提取文件名
-                const fileNames = this.extractFileNamesFromDirContent(dirContent);
+                const fileNames = Utils.extractFileNamesFromDirContent(dirContent);
                 console.log(`[Analyzer] 找到 ${fileNames.length} 个文件:`, fileNames);
                 
                 // 遍历所有支持的ID类型，尝试读取对应文件
                 for (const type in this.idTypes) {
                     const typeConfig = this.idTypes[type];
                     try {
-                        // 尝试获取文件名（支持带井号和编号的格式）
-                        const baseFileName = typeConfig.fileName;
-                        const baseNameWithoutExt = baseFileName.replace('.json', '');
+                        // 尝试获取文件名模式
+                        const filePattern = typeConfig.fileName;
                         
                         // 查找匹配当前类型的文件
-                        const matchingFile = fileNames.find(name => {
-                            return name.includes(baseNameWithoutExt);
+                        const matchingFiles = fileNames.filter(name => {
+                            return Utils.matchFileName(name, filePattern);
                         });
-                        if (matchingFile) {
-                            // 读取找到的文件
-                            console.log(`[Analyzer] 找到匹配文件: ${matchingFile} 对应类型: ${type}`);
-                            const fileResponse = await fetch(`${cfgDir}${matchingFile}`);
-                            if (fileResponse.ok) {
-                                const content = await fileResponse.text();
-                                const jsonData = JSON.parse(content);
-                                await this.processBaseGameFileData(folder, type, typeConfig, jsonData);
-                            } else {
-                                console.warn(`[Analyzer] 无法读取文件 ${matchingFile}，状态码: ${fileResponse.status}`);
+                        
+                        if (matchingFiles.length > 0) {
+                            // 处理所有匹配的文件
+                            for (const matchingFile of matchingFiles) {
+                                console.log(`[Analyzer] 找到匹配文件: ${matchingFile} 对应类型: ${type}`);
+                                const fileResponse = await fetch(`${cfgDir}${matchingFile}`);
+                                if (fileResponse.ok) {
+                                    const content = await fileResponse.text();
+                                    const jsonData = JSON.parse(content);
+                                    await this.processBaseGameFileData(folder, type, typeConfig, jsonData);
+                                } else {
+                                    console.warn(`[Analyzer] 无法读取文件 ${matchingFile}，状态码: ${fileResponse.status}`);
+                                }
                             }
                         } else {
-                            console.warn(`[Analyzer] 未找到匹配 ${baseNameWithoutExt} 的文件`);
+                            console.warn(`[Analyzer] 未找到匹配 ${filePattern} 的文件`);
                         }
                     } catch (error) {
                         console.warn(`[Analyzer] 处理类型 ${type} 时出错:`, error);
@@ -307,22 +363,6 @@ class EventAnalyzer {
         } catch (error) {
             console.warn(`[Analyzer] 处理baseGame文件夹时出错:`, error);
         }
-    }
-    
-    /**
-     * 从目录内容中提取文件名
-     * @param {string} dirContent - 目录内容
-     * @returns {string[]} 文件名列表
-     */
-    extractFileNamesFromDirContent(dirContent) {
-        // 简单的正则表达式，从HTML目录列表中提取文件名
-        const fileNameRegex = /href="([^"]+\.json)"/g;
-        const fileNames = [];
-        let match;
-        while ((match = fileNameRegex.exec(dirContent)) !== null) {
-            fileNames.push(match[1]);
-        }
-        return fileNames;
     }
     
     /**
@@ -353,16 +393,15 @@ class EventAnalyzer {
                     }
                     this.allIds[type].get(id).add(folder.name);
                     
-                    // 保存详情，创建一个新的对象，只包含数据属性，不包含getter函数
+                    // 保存详情，使用新的extractKeyAttributes方法提取关键属性
                     const detailArray = modDetail[type + 's'];
-                    // 创建一个新对象，确保只包含可枚举的数据属性
-                    const dataCopy = JSON.parse(JSON.stringify(data));
-                    // 添加name属性，确保显示名称可用
-                    const itemWithName = {
-                        ...dataCopy,
-                        name: typeConfig.getNameField(data)
-                    };
-                    detailArray.push(itemWithName);
+                    // 提取关键属性
+                    const itemWithAttributes = this.extractKeyAttributes(type, data);
+                    // 确保添加name属性
+                    if (!itemWithAttributes.name) {
+                        itemWithAttributes.name = typeConfig.getNameField(data);
+                    }
+                    detailArray.push(itemWithAttributes);
                     
                     // 更新总数
                     this.totalCounts[type]++;
@@ -406,23 +445,28 @@ class EventAnalyzer {
                 const fileName = file.name;
                 const relativePath = file.webkitRelativePath;
                 
-                // 宽松匹配规则：匹配文件名（支持包含井号和编号的格式，如EvtCfg #7313.json），且路径中包含Cfgs/zh-cn或Cfgs\zh-cn
-                const baseFileName = typeConfig.fileName;
-                // 提取文件名的主要部分（不包含扩展名）
-                const baseNameWithoutExt = baseFileName.replace('.json', '');
-                // 检查文件名是否以baseNameWithoutExt开头，或者是否包含baseNameWithoutExt
-                const isCfgFile = fileName.startsWith(baseNameWithoutExt) || fileName.includes(baseNameWithoutExt);
+                // 检查路径是否包含Cfgs/zh-cn或Cfgs\zh-cn
                 const isInCorrectPath = relativePath.includes('Cfgs/zh-cn') || relativePath.includes('Cfgs\\zh-cn');
                 
-                return isCfgFile && isInCorrectPath;
+                if (!isInCorrectPath) {
+                    return false;
+                }
+                
+                // 处理文件名匹配，支持通配符
+                const filePattern = typeConfig.fileName;
+                const isCfgFile = Utils.matchFileName(fileName, filePattern);
+                
+                return isCfgFile;
             });
         
         if (cfgFiles.length > 0) {
             if (cfgFiles.length > 1) {
-                console.warn(`文件夹 ${folder.name} 中找到多个 ${typeConfig.fileName} 文件，仅处理第一个`);
+                console.warn(`文件夹 ${folder.name} 中找到多个匹配 ${typeConfig.fileName} 的文件，仅处理第一个`);
             }
-            // 仅处理第一个找到的配置文件
-            await this.processCfgFile(folder, cfgFiles[0], type, typeConfig);
+            // 处理所有找到的配置文件
+            for (const cfgFile of cfgFiles) {
+                await this.processCfgFile(folder, cfgFile, type, typeConfig);
+            }
         }
     }
     
@@ -435,13 +479,16 @@ class EventAnalyzer {
      */
     async processCfgFile(folder, file, type, typeConfig) {
         try {
+            // 读取文件内容
             const content = await Utils.readFile(file);
+            // 解析JSON数据
             const jsonData = JSON.parse(content);
             
+            // 获取当前模组的ID集合和详情
             const idSet = this.modIds[type].get(folder.name);
             const modDetail = this.modDetails.get(folder.name);
             
-            // 提取ID
+            // 提取ID和属性
             for (const [key, data] of Object.entries(jsonData)) {
                 // 确保是有效的对象且包含ID字段
                 if (data && typeof data === 'object') {
@@ -458,16 +505,15 @@ class EventAnalyzer {
                         }
                         this.allIds[type].get(id).add(folder.name);
                         
-                        // 保存详情，创建一个新的对象，只包含数据属性，不包含getter函数
+                        // 保存详情，使用extractKeyAttributes方法提取关键属性
                         const detailArray = modDetail[type + 's'];
-                        // 创建一个新对象，确保只包含可枚举的数据属性
-                        const dataCopy = JSON.parse(JSON.stringify(data));
-                        // 添加name属性，确保显示名称可用
-                        const itemWithName = {
-                            ...dataCopy,
-                            name: typeConfig.getNameField(data)
-                        };
-                        detailArray.push(itemWithName);
+                        // 提取关键属性
+                        const itemWithAttributes = this.extractKeyAttributes(type, data);
+                        // 确保添加name属性
+                        if (!itemWithAttributes.name) {
+                            itemWithAttributes.name = typeConfig.getNameField(data);
+                        }
+                        detailArray.push(itemWithAttributes);
                         
                         // 更新总数
                         this.totalCounts[type]++;
