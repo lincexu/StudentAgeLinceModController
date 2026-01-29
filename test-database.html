@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID数据库测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 0;
+        }
+        .test-result {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .success {
+            border-left: 4px solid #4CAF50;
+        }
+        .error {
+            border-left: 4px solid #f44336;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #007B9E;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status-loading {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+        .status-success {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .status-error {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ID类型实时数据库测试</h1>
+        
+        <div class="test-section">
+            <h2>1. 数据库初始化</h2>
+            <button onclick="testInitialization()">初始化数据库</button>
+            <span id="init-status" class="status"></span>
+            <div id="init-result" class="test-result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>2. 数据库统计信息</h2>
+            <button onclick="testStatistics()">获取统计信息</button>
+            <div id="stats-result" class="test-result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>3. 数据查询</h2>
+            <div>
+                <label for="type-select">选择类型：</label>
+                <select id="type-select">
+                    <option value="">请选择类型</option>
+                </select>
+            </div>
+            <div style="margin-top: 10px;">
+                <label for="id-input">输入ID：</label>
+                <input type="text" id="id-input" placeholder="请输入ID值">
+            </div>
+            <div style="margin-top: 10px;">
+                <button onclick="testQuery()">查询完整数据</button>
+                <button onclick="testIdToName()">只查询Name</button>
+            </div>
+            <div id="query-result" class="test-result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>4. Name查询ID</h2>
+            <div>
+                <label for="name-to-id-type">选择类型：</label>
+                <select id="name-to-id-type">
+                    <option value="">请选择类型</option>
+                </select>
+            </div>
+            <div style="margin-top: 10px;">
+                <label for="name-to-id-input">输入Name：</label>
+                <input type="text" id="name-to-id-input" placeholder="请输入Name的一部分">
+            </div>
+            <button onclick="testNameToId()" style="margin-top: 10px;">查询ID</button>
+            <div id="name-to-id-result" class="test-result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>5. 数据库操作</h2>
+            <button onclick="testClear()">清空数据库</button>
+            <button onclick="testReload()">重新加载数据</button>
+            <div id="op-result" class="test-result"></div>
+        </div>
+    </div>
+    
+    <!-- 引入必要的脚本 -->
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/config.js"></script>
+    <script src="js/core/idDatabase.js"></script>
+    
+    <script>
+        // 测试数据库初始化
+        async function testInitialization() {
+            const statusEl = document.getElementById('init-status');
+            const resultEl = document.getElementById('init-result');
+            
+            statusEl.className = 'status status-loading';
+            statusEl.textContent = '加载中...';
+            resultEl.textContent = '正在初始化数据库...';
+            
+            try {
+                const success = await idDatabase.initialize();
+                
+                if (success) {
+                    statusEl.className = 'status status-success';
+                    statusEl.textContent = '成功';
+                    resultEl.className = 'test-result success';
+                    resultEl.textContent = '数据库初始化成功！\n\n';
+                    
+                    // 显示数据库状态
+                    resultEl.textContent += '数据库状态:\n';
+                    resultEl.textContent += `- 初始化状态: ${idDatabase.initialized}\n`;
+                    resultEl.textContent += `- 加载状态: ${idDatabase.loading}\n`;
+                    resultEl.textContent += `- 错误信息: ${idDatabase.error || '无'}\n`;
+                    
+                    // 显示支持的ID类型
+                    const types = idDatabase.getTypes();
+                    resultEl.textContent += '\n支持的ID类型:\n';
+                    types.forEach(type => {
+                        const config = idDatabase.getTypeConfig(type);
+                        resultEl.textContent += `- ${type} (${config?.displayName || '未知'})\n`;
+                    });
+                    
+                    // 更新类型选择器
+                    updateTypeOptions();
+                } else {
+                    statusEl.className = 'status status-error';
+                    statusEl.textContent = '失败';
+                    resultEl.className = 'test-result error';
+                    resultEl.textContent = '数据库初始化失败！\n\n';
+                    resultEl.textContent += `错误信息: ${idDatabase.error?.message || '未知错误'}`;
+                }
+            } catch (error) {
+                statusEl.className = 'status status-error';
+                statusEl.textContent = '错误';
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '初始化过程中发生错误:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 测试数据库统计信息
+        function testStatistics() {
+            const resultEl = document.getElementById('stats-result');
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            try {
+                const stats = idDatabase.getStatistics();
+                resultEl.className = 'test-result success';
+                resultEl.textContent = '数据库统计信息:\n\n';
+                
+                for (const [type, stat] of Object.entries(stats)) {
+                    resultEl.textContent += `${type} (${stat.displayName}):\n`;
+                    resultEl.textContent += `- 数据条数: ${stat.count}\n`;
+                    resultEl.textContent += `- 数据来源: ${stat.sources}\n\n`;
+                }
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '获取统计信息失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 测试数据查询
+        function testQuery() {
+            const typeSelect = document.getElementById('type-select');
+            const idInput = document.getElementById('id-input');
+            const resultEl = document.getElementById('query-result');
+            
+            const type = typeSelect.value;
+            const id = idInput.value.trim();
+            
+            if (!type || !id) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '请选择类型并输入ID！';
+                return;
+            }
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            try {
+                const data = idDatabase.query(type, id);
+                resultEl.className = 'test-result success';
+                resultEl.textContent = `查询结果 (${type}: ${id}):\n\n`;
+                resultEl.textContent += JSON.stringify(data, null, 2);
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '查询失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 测试清空数据库
+        function testClear() {
+            const resultEl = document.getElementById('op-result');
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            try {
+                idDatabase.clear();
+                resultEl.className = 'test-result success';
+                resultEl.textContent = '数据库已清空！';
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '清空数据库失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 测试重新加载数据
+        async function testReload() {
+            const resultEl = document.getElementById('op-result');
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            resultEl.textContent = '正在重新加载数据...';
+            
+            try {
+                // 清空数据库
+                idDatabase.clear();
+                // 重新加载数据
+                await idDatabase.loadDefaultData();
+                await idDatabase.loadBaseGameData();
+                
+                resultEl.className = 'test-result success';
+                resultEl.textContent = '数据重新加载成功！';
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '重新加载数据失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 更新类型选择器
+        function updateTypeOptions() {
+            const typeSelects = [
+                document.getElementById('type-select'),
+                document.getElementById('id-to-name-type'),
+                document.getElementById('name-to-id-type')
+            ];
+            
+            if (!idDatabase.initialized) {
+                return;
+            }
+            
+            // 清空并更新所有类型选择器
+            typeSelects.forEach(select => {
+                if (select) {
+                    // 清空现有选项
+                    select.innerHTML = '<option value="">请选择类型</option>';
+                    
+                    // 添加类型选项
+                    const types = idDatabase.getTypes();
+                    types.forEach(type => {
+                        const config = idDatabase.getTypeConfig(type);
+                        const option = document.createElement('option');
+                        option.value = type;
+                        option.textContent = `${type} (${config?.displayName || '未知'})`;
+                        select.appendChild(option);
+                    });
+                }
+            });
+        }
+        
+        // 测试ID查询Name
+        function testIdToName() {
+            const typeSelect = document.getElementById('type-select');
+            const idInput = document.getElementById('id-input');
+            const resultEl = document.getElementById('query-result');
+            
+            const type = typeSelect.value;
+            const id = idInput.value.trim();
+            
+            if (!type || !id) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '请选择类型并输入ID！';
+                return;
+            }
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            try {
+                const data = idDatabase.query(type, id);
+                if (data) {
+                    resultEl.className = 'test-result success';
+                    resultEl.textContent = `查询结果 (${type}: ${id}):\n\n`;
+                    resultEl.textContent += `Name: ${data.name || '未知'}`;
+                } else {
+                    resultEl.className = 'test-result error';
+                    resultEl.textContent = `未找到ID为 ${id} 的数据！`;
+                }
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '查询失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 测试Name查询ID
+        function testNameToId() {
+            const typeSelect = document.getElementById('name-to-id-type');
+            const nameInput = document.getElementById('name-to-id-input');
+            const resultEl = document.getElementById('name-to-id-result');
+            
+            const type = typeSelect.value;
+            const name = nameInput.value.trim();
+            
+            if (!type || !name) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '请选择类型并输入Name！';
+                return;
+            }
+            
+            if (!idDatabase.initialized) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
+                return;
+            }
+            
+            try {
+                const idMap = idDatabase.query(type);
+                const matchingItems = [];
+                
+                if (idMap) {
+                    idMap.forEach((item, id) => {
+                        // 检查item.name是否是字符串
+                        if (item.name && typeof item.name === 'string' && item.name.toLowerCase().includes(name.toLowerCase())) {
+                            matchingItems.push({ id, name: item.name });
+                        }
+                    });
+                }
+                
+                if (matchingItems.length > 0) {
+                    resultEl.className = 'test-result success';
+                    resultEl.textContent = `查询结果 (${type}, Name包含 "${name}"):\n\n`;
+                    matchingItems.forEach((item, index) => {
+                        resultEl.textContent += `${index + 1}. ID: ${item.id}, Name: ${item.name}\n`;
+                    });
+                    resultEl.textContent += `\n共找到 ${matchingItems.length} 个匹配项`;
+                } else {
+                    resultEl.className = 'test-result error';
+                    resultEl.textContent = `未找到Name包含 "${name}" 的数据！`;
+                }
+            } catch (error) {
+                resultEl.className = 'test-result error';
+                resultEl.textContent = '查询失败:\n\n';
+                resultEl.textContent += error.message;
+            }
+        }
+        
+        // 页面加载时初始化
+        window.onload = function() {
+            console.log('页面加载完成，准备测试ID数据库');
+        };
+    </script>
+</body>
+</html>

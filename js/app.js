@@ -4,6 +4,7 @@ class ModEventApp {
         this.uploader = null;
         this.analyzer = null;
         this.renderer = null;
+        this.idDatabase = null;
         this.analyzeBtn = null;
         this.clearBtn = null;
         
@@ -26,6 +27,37 @@ class ModEventApp {
         this.analyzeBtn = document.getElementById('analyze-btn');
         this.clearBtn = document.getElementById('clear-selection');
         
+        // 显示进度条，初始化数据库
+        this.showProgressBar('初始化ID数据库...', 0);
+        
+        // 初始化ID类型实时数据库
+        this.idDatabase = idDatabase;
+        
+        // 设置进度更新回调
+        this.idDatabase.setOnProgressUpdate((status, progress) => {
+            this.updateProgressBar(status, progress);
+        });
+        
+        // 禁用分析按钮
+        if (this.analyzeBtn) {
+            this.analyzeBtn.disabled = true;
+            this.analyzeBtn.style.opacity = '0.6';
+            this.analyzeBtn.style.cursor = 'not-allowed';
+        }
+        
+        // 初始化数据库
+        await this.idDatabase.initialize();
+        
+        // 启用分析按钮
+        if (this.analyzeBtn) {
+            this.analyzeBtn.disabled = false;
+            this.analyzeBtn.style.opacity = '1';
+            this.analyzeBtn.style.cursor = 'pointer';
+        }
+        
+        // 隐藏进度条
+        this.hideProgressBar();
+        
         // 设置主题模式
         this.setupThemeMode();
         
@@ -46,6 +78,129 @@ class ModEventApp {
         
         // 绑定事件
         this.bindEvents();
+    }
+    
+    /**
+     * 显示进度条
+     * @param {string} text 进度文本
+     * @param {number} progress 进度值（0-100）
+     */
+    showProgressBar(text, progress) {
+        const progressSection = document.getElementById('progress-section');
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const progressPercentage = document.getElementById('progress-percentage');
+        
+        if (progressSection) {
+            progressSection.style.display = 'block';
+            progressSection.className = 'progress-section loading';
+        }
+        
+        if (progressFill) {
+            progressFill.style.width = `${progress}%`;
+        }
+        
+        if (progressText) {
+            progressText.textContent = text;
+        }
+        
+        if (progressPercentage) {
+            progressPercentage.textContent = `${progress}%`;
+        }
+    }
+    
+    /**
+     * 更新进度条
+     * @param {string} text 进度文本
+     * @param {number} progress 进度值（0-100）
+     */
+    updateProgressBar(text, progress) {
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const progressPercentage = document.getElementById('progress-percentage');
+        
+        if (progressFill) {
+            progressFill.style.width = `${progress}%`;
+        }
+        
+        if (progressText) {
+            progressText.textContent = text;
+        }
+        
+        if (progressPercentage) {
+            progressPercentage.textContent = `${progress}%`;
+        }
+    }
+    
+    /**
+     * 隐藏进度条
+     */
+    hideProgressBar() {
+        const progressSection = document.getElementById('progress-section');
+        if (progressSection) {
+            progressSection.style.display = 'none';
+        }
+    }
+    
+    /**
+     * 显示成功状态的进度条
+     * @param {string} text 成功文本
+     */
+    showSuccessProgressBar(text) {
+        const progressSection = document.getElementById('progress-section');
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const progressPercentage = document.getElementById('progress-percentage');
+        
+        if (progressSection) {
+            progressSection.style.display = 'block';
+            progressSection.className = 'progress-section success';
+        }
+        
+        if (progressFill) {
+            progressFill.style.width = '100%';
+        }
+        
+        if (progressText) {
+            progressText.textContent = text;
+        }
+        
+        if (progressPercentage) {
+            progressPercentage.textContent = '100%';
+        }
+        
+        // 2秒后自动隐藏
+        setTimeout(() => {
+            this.hideProgressBar();
+        }, 2000);
+    }
+    
+    /**
+     * 显示错误状态的进度条
+     * @param {string} text 错误文本
+     */
+    showErrorProgressBar(text) {
+        const progressSection = document.getElementById('progress-section');
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const progressPercentage = document.getElementById('progress-percentage');
+        
+        if (progressSection) {
+            progressSection.style.display = 'block';
+            progressSection.className = 'progress-section error';
+        }
+        
+        if (progressFill) {
+            progressFill.style.width = '100%';
+        }
+        
+        if (progressText) {
+            progressText.textContent = text;
+        }
+        
+        if (progressPercentage) {
+            progressPercentage.textContent = '100%';
+        }
     }
     
     /**
@@ -1377,7 +1532,7 @@ class ModEventApp {
         }
         
         // 显示进度条
-        this.renderer.showProgress();
+        this.showProgressBar('准备分析...', 0);
         
         try {
             // 从uploader中获取所有文件
@@ -1390,11 +1545,15 @@ class ModEventApp {
             // 开始分析
             const result = await this.analyzer.analyze(folders, allFiles);
             
+            // 显示成功进度条
+            this.showSuccessProgressBar('分析完成！');
+            
             // 渲染结果
             this.renderer.renderResults(result);
         } catch (error) {
             console.error('分析出错:', error);
-            this.renderer.updateProgress('分析出错，请查看控制台', 100);
+            // 显示错误进度条
+            this.showErrorProgressBar(`分析失败: ${error.message}`);
             alert('分析出错: ' + error.message);
         }
     }

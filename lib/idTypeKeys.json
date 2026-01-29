@@ -19,6 +19,7 @@
             "name": "类型",
             "desc": "物品类型，影响使用方式",
             "rule": "lib/Cfg/ItemTypeCfg #7154.json"
+            
         },
         "itemTag": {
             "name": "标签",

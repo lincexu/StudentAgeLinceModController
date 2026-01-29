@@ -819,28 +819,241 @@ main:hover {
 /* Progress Section */
 .progress-section {
     margin-bottom: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    animation: progress-shimmer 3s infinite;
+}
+
+@keyframes progress-shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.progress-section:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
 }
 
 .progress-bar {
     width: 100%;
-    height: 20px;
-    background: var(--border-color);
-    border-radius: 10px;
+    height: 28px;
+    background: var(--bg-light);
+    border-radius: 14px;
     overflow: hidden;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress-fill {
     height: 100%;
     background: var(--primary-gradient);
     width: 0%;
-    transition: width var(--transition-base);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(102, 126, 234, 0.8), 0 0 35px rgba(102, 126, 234, 0.4);
+    }
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 .progress-text {
     text-align: center;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-fast);
+    position: relative;
+    z-index: 1;
+}
+
+.progress-percentage {
+    text-align: center;
     color: var(--text-secondary);
-    font-size: var(--font-size-sm);
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--spacing-xs);
+    transition: all var(--transition-fast);
+    position: relative;
+    z-index: 1;
+}
+
+/* 进度条状态样式 */
+.progress-section.loading .progress-fill {
+    background: var(--primary-gradient);
+    animation: glow-pulse 2s infinite alternate;
+}
+
+.progress-section.loading .progress-fill {
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+}
+
+.progress-section.success .progress-fill {
+    background: linear-gradient(135deg, var(--success-color) 0%, #38a169 100%);
+    animation: success-glow-pulse 2s infinite alternate;
+}
+
+@keyframes success-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(40, 167, 69, 0.8), 0 0 35px rgba(40, 167, 69, 0.4);
+    }
+}
+
+.progress-section.error .progress-fill {
+    background: linear-gradient(135deg, var(--danger-color) 0%, #c53030 100%);
+    animation: error-glow-pulse 2s infinite alternate;
+}
+
+@keyframes error-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(220, 53, 69, 0.8), 0 0 35px rgba(220, 53, 69, 0.4);
+    }
+}
+
+.progress-section.success .progress-text {
+    color: var(--success-color);
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+
+.progress-section.error .progress-text {
+    color: var(--danger-color);
+    text-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+}
+
+/* 暗夜模式下的进度条辉光效果 */
+body.dark-mode .progress-section.loading .progress-fill {
+    box-shadow: 0 0 15px rgba(165, 180, 252, 0.5);
+}
+
+body.dark-mode .progress-section.loading .progress-fill {
+    animation: dark-glow-pulse 2s infinite alternate;
+}
+
+@keyframes dark-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(165, 180, 252, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(165, 180, 252, 0.8), 0 0 35px rgba(165, 180, 252, 0.4);
+    }
+}
+
+body.dark-mode .progress-section.success .progress-fill {
+    animation: dark-success-glow-pulse 2s infinite alternate;
+}
+
+@keyframes dark-success-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(74, 222, 128, 0.8), 0 0 35px rgba(74, 222, 128, 0.4);
+    }
+}
+
+body.dark-mode .progress-section.error .progress-fill {
+    animation: dark-error-glow-pulse 2s infinite alternate;
+}
+
+@keyframes dark-error-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(248, 113, 113, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(248, 113, 113, 0.8), 0 0 35px rgba(248, 113, 113, 0.4);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .progress-section {
+        padding: var(--spacing-md);
+    }
+    
+    .progress-bar {
+        height: 24px;
+        border-radius: 12px;
+    }
+    
+    .progress-fill {
+        border-radius: 11px;
+    }
+    
+    .progress-text {
+        font-size: 16px;
+    }
+    
+    .progress-percentage {
+        font-size: 14px;
+    }
 }
 
 /* Result Section */

@@ -17,16 +17,39 @@
 - 📋 支持表格横竖列布局切换，支持热更新
 - ⚙️ 丰富的设置选项，个性化定制
 
+- 🗃️ ID类型实时数据库
+  - 基于idTypelib.json中定义的所有ID类型创建
+  - 支持从lib/Cfg和baseGame目录加载默认数据
+  - 支持用户临时上传的数据
+  - 记录每项ID类型的所有ID以及对应name属性
+  - 支持根据ID查询Name和根据Name查询ID
+  - 修复了id=0时数据无法获取的问题
+
 ## 新增功能 (v0.4.0)
 
-- 🔧 优化表格渲染逻辑
+- 🗃️ ID类型实时数据库
+  - 基于idTypelib.json中allType定义的所有ID类型创建
+  - 支持从lib/Cfg和baseGame目录加载默认数据
+  - 支持用户临时上传的数据
+  - 记录每项ID类型的所有ID以及对应name属性
+  - 支持根据ID查询Name和根据Name查询ID
+  - 修复了id=0时数据无法获取的问题
+  - 添加了test-database.html文件，提供完整的数据库测试功能
+
+- 🔧 表格渲染优化
   - 严格遵循idTypeKeys.json中的定义排列key
   - 直接从idTypelib.json中获取keyList，避免硬编码
-  - 修复了类型映射问题，确保所有类型（包括行动事件、角色成长、人生观记忆等）都能正确映射
+  - 修复了类型映射问题，确保所有类型都能正确映射
   - 统一了类型id变量的命名，基于idTypelib中的定义
-- 📋 增强了表格显示
   - 对于idTypeKeys.json中定义但实际数据中不存在的key，显示为"-"
-  - 保持了对名称相关字段的处理（如果name不存在，尝试使用title）
+
+- 🎨 进度条优化
+  - 实现了流畅的炫酷动态视觉效果
+  - 改进了配色方案，确保色彩搭配协调
+  - 添加了霓虹灯辉光效果，使进度显示更加醒目
+  - 为不同状态（加载中、成功、错误）设计了专属的辉光效果
+  - 优化了暗夜模式下的视觉效果
+
 - 🛠️ 代码优化
   - 修改了config.js，添加了加载idTypelib.json的功能
   - 修改了renderer.js，使其更加灵活和可维护
@@ -135,15 +158,17 @@ python -m http.server 8000
 学生时代模组兼容分析工具/
 ├── js/
 │   ├── core/
-│   │   └── config.js          # 配置管理
+│   │   ├── config.js          # 配置管理
+│   │   ├── idDatabase.js      # ID类型实时数据库
+│   │   ├── renderer.js        # 结果渲染模块
+│   │   └── utils.js           # 工具函数
 │   ├── analyzer.js           # 分析器模块
 │   ├── app.js                # 主应用逻辑
-│   ├── renderer.js           # 结果渲染模块
 │   ├── script.js             # 辅助脚本
-│   ├── uploader.js           # 文件上传模块
-│   └── utils.js              # 工具函数
-├── lib/                      # 第三方库
-│   └── chart.umd.min.js      # Chart.js 本地库
+│   └── uploader.js           # 文件上传模块
+├── lib/                      # 第三方库和配置
+│   ├── chart.umd.min.js      # Chart.js 本地库
+│   └── idTypelib.json        # 类型配置文件
 ├── localization/
 │   └── zh-cn/                # 中文本地化文件
 │       ├── attributeCN.json
@@ -154,6 +179,7 @@ python -m http.server 8000
 ├── TestMod/                  # 测试用模组
 ├── config.jsonc              # 应用配置文件
 ├── index.html                # 主页面
+├── test-database.html        # 数据库测试页面
 ├── README.md                 # 项目说明文档
 ├── start_server.bat          # Windows启动脚本
 ├── start_server.py           # Python启动脚本
@@ -167,20 +193,39 @@ python -m http.server 8000
 - **样式**：CSS3 (使用CSS变量实现主题切换)
 - **数据可视化**：Chart.js
 - **数据处理**：JavaScript原生JSON解析
+- **数据库**：ID类型实时数据库（基于JavaScript Map实现）
 - **服务器**：Python内置HTTP服务器
 - **开发环境**：任意现代浏览器
 
 ## 更新日志
 
 ### v0.4.0 (2026-01-29)
-- 🔧 优化表格渲染逻辑
+- 🗃️ ID类型实时数据库
+  - 创建了js/core/idDatabase.js文件，实现完整的数据库功能
+  - 基于idTypelib.json中allType定义的所有ID类型创建数据库
+  - 支持从lib/Cfg和baseGame目录加载默认数据
+  - 支持用户临时上传的数据
+  - 记录每项ID类型的所有ID以及对应name属性
+  - 支持根据ID查询Name和根据Name查询ID
+  - 修复了id=0时数据无法获取的问题
+  - 添加了test-database.html文件，提供完整的数据库测试功能
+  - 添加了详细的日志和错误处理机制
+  - 实现了灵活的查询系统，支持多种查询方式
+
+- 🔧 表格渲染优化
   - 严格遵循idTypeKeys.json中的定义排列key
   - 直接从idTypelib.json中获取keyList，避免硬编码
-  - 修复了类型映射问题，确保所有类型（包括行动事件、角色成长、人生观记忆等）都能正确映射
+  - 修复了类型映射问题，确保所有类型都能正确映射
   - 统一了类型id变量的命名，基于idTypelib中的定义
-- 📋 增强了表格显示
   - 对于idTypeKeys.json中定义但实际数据中不存在的key，显示为"-"
-  - 保持了对名称相关字段的处理（如果name不存在，尝试使用title）
+
+- 🎨 进度条优化
+  - 实现了流畅的炫酷动态视觉效果
+  - 改进了配色方案，确保色彩搭配协调
+  - 添加了霓虹灯辉光效果，使进度显示更加醒目
+  - 为不同状态（加载中、成功、错误）设计了专属的辉光效果
+  - 优化了暗夜模式下的视觉效果
+
 - 🛠️ 代码优化
   - 修改了config.js，添加了加载idTypelib.json的功能
   - 修改了renderer.js，使其更加灵活和可维护

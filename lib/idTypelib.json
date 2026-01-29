@@ -34,7 +34,7 @@
         },
         "ItemId": {
             "name": "物品",
-            "file": "ItemCfg.json*"
+            "file": "ItemCfg*.json"
         },
         "KZoneAvatarId": {
             "name": "空间头像",
