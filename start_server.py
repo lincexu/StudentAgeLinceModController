@@ -154,7 +154,8 @@ def start_server(port=None):
     print(f"{Colors.CYAN}│{Colors.RESET} {Colors.BOLD}{Colors.YELLOW}关闭此页面将导致HTTP服务中断{Colors.RESET} {Colors.CYAN}│{Colors.RESET}")
     print(border_bottom)
     print()
-    print(f"{Colors.CYAN}●{Colors.RESET} {Colors.BOLD}当前服务运行在{Colors.RESET} {Colors.GREEN}http://localhost:{port}{Colors.RESET}")
+    print(f"{Colors.CYAN}●{Colors.RESET} {Colors.BOLD}当前服务运行在{Colors.RESET}")
+    print(f"{Colors.CYAN}  {Colors.RESET} {Colors.GREEN}http://localhost:{port}{Colors.RESET}")
     print(f"{Colors.CYAN}●{Colors.RESET} {Colors.BOLD}您也可以通过{Colors.RESET} {Colors.YELLOW}Ctrl+C{Colors.RESET} {Colors.BOLD}安全地结束服务{Colors.RESET}")
     print()
 
