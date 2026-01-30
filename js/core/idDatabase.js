@@ -1,4 +1,7 @@
 // ID类型实时数据库模块
+// 直接使用全局的configManager，不重新声明
+// 确保在config.js之后加载
+
 class IdDatabase {
     constructor() {
         // 数据库存储结构: Map<type, Map<id, { id, name, ...otherProperties }>>
@@ -61,7 +64,7 @@ class IdDatabase {
         this.error = null;
         
         try {
-            // 从idTypelib.json加载ID类型配置
+            // 从idTypelib.json加载ID类型配置（总是重新加载以获取最新配置）
             this.updateProgress('加载ID类型配置...', 10);
             await this.loadIdTypeConfig();
             
@@ -69,24 +72,58 @@ class IdDatabase {
             this.updateProgress('初始化数据库结构...', 20);
             this.initDatabaseStructure();
             
-            // 获取总类型数
-            const totalTypes = Object.keys(this.idTypes).length;
-            let processedTypes = 0;
+            // 检查是否需要自动加载默认数据
+            const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
+            console.log('[IdDatabase] autoLoadDefaultData配置:', autoLoadDefaultData);
             
-            // 加载默认数据
-            this.updateProgress('加载默认数据...', 30);
-            await this.loadDefaultData();
-            processedTypes += Object.keys(this.idTypes).length;
-            
-            // 加载baseGame数据
-            this.updateProgress('加载baseGame数据...', 70);
-            await this.loadBaseGameData();
-            processedTypes += Object.keys(this.idTypes).length;
+            if (!autoLoadDefaultData) {
+                // 尝试从存储中恢复数据
+                this.updateProgress('恢复数据库数据...', 30);
+                const restored = await this.restoreFromStorage();
+                
+                // 检查恢复的数据是否完整
+                const missingTypes = [];
+                for (const type in this.idTypes) {
+                    const typeData = this.database.get(type);
+                    if (!typeData || typeData.size === 0) {
+                        missingTypes.push(type);
+                    }
+                }
+                
+                if (!restored || missingTypes.length > 0) {
+                    // 恢复失败或数据不完整，重新加载数据
+                    // 获取总类型数
+                    const totalTypes = Object.keys(this.idTypes).length;
+                    let processedTypes = 0;
+                    
+                    // 加载默认数据
+                    this.updateProgress('加载默认数据...', 40);
+                    await this.loadDefaultData();
+                    processedTypes += Object.keys(this.idTypes).length;
+                    
+                    // 加载baseGame数据
+                    this.updateProgress('加载baseGame数据...', 70);
+                    await this.loadBaseGameData();
+                    processedTypes += Object.keys(this.idTypes).length;
+                }
+            } else {
+                // 自动加载默认数据
+                this.updateProgress('加载默认数据...', 40);
+                await this.loadDefaultData();
+                
+                // 加载baseGame数据
+                this.updateProgress('加载baseGame数据...', 70);
+                await this.loadBaseGameData();
+            }
             
             // 完成初始化
             this.updateProgress('数据库初始化完成...', 100);
             this.initialized = true;
             this.loading = false;
+            
+            // 初始化完成后持久化数据
+            await this.persistToStorage();
+            
             return true;
         } catch (error) {
             this.error = error;
@@ -235,7 +272,7 @@ class IdDatabase {
                                 const jsonData = this.parseJson(content);
                                 
                                 // 处理数据
-                                this.processData(type, jsonData, { 
+                                await this.processData(type, jsonData, { 
                                     source: `lib/Cfg/${matchingFile}`,
                                     type: 'default'
                                 });
@@ -262,31 +299,59 @@ class IdDatabase {
      */
     async tryLoadCommonFiles(type, typeConfig) {
         try {
-            // 构建可能的文件路径
-            const possibleFiles = [
-                `lib/Cfg/${typeConfig.fileName.replace('*', '')}`,
-                `lib/Cfg/${typeConfig.fileName.replace('*', ' #7000')}`,
-                `lib/Cfg/${typeConfig.fileName.replace('*', ' #7200')}`,
-                `lib/Cfg/${typeConfig.fileName.replace('*', ' #7300')}`,
-                `lib/Cfg/${typeConfig.fileName.replace('*', ' #7400')}`
-            ];
+            const cfgDir = 'lib/Cfg/';
             
-            for (const filePath of possibleFiles) {
-                try {
-                    const fileResponse = await fetch(filePath);
-                    if (fileResponse.ok) {
-                        const content = await fileResponse.text();
-                        const jsonData = this.parseJson(content);
+            // 获取目录下所有文件
+            const fileNames = await this.getDirectoryContents(cfgDir);
+            
+            if (fileNames && fileNames.length > 0) {
+                // 过滤出符合当前类型配置的文件
+                const matchingFiles = fileNames.filter(name => {
+                    return this.matchFileName(name, typeConfig.fileName);
+                });
+                
+                if (matchingFiles.length > 0) {
+                    // 对匹配的文件进行排序，优先加载无后缀的文件，然后按照编号顺序加载
+                    matchingFiles.sort((a, b) => {
+                        // 检查是否有 # 后缀
+                        const aHasSuffix = a.includes(' #');
+                        const bHasSuffix = b.includes(' #');
                         
-                        // 处理数据
-                        this.processData(type, jsonData, { 
-                            source: filePath,
-                            type: 'default'
-                        });
-                        break; // 成功加载一个文件后停止尝试
+                        // 无后缀的文件排在前面
+                        if (!aHasSuffix && bHasSuffix) return -1;
+                        if (aHasSuffix && !bHasSuffix) return 1;
+                        
+                        // 都有后缀，按照编号排序
+                        if (aHasSuffix && bHasSuffix) {
+                            const aNum = parseInt(a.match(/#(\d+)/)?.[1] || '0');
+                            const bNum = parseInt(b.match(/#(\d+)/)?.[1] || '0');
+                            return aNum - bNum;
+                        }
+                        
+                        // 都无后缀，按原顺序
+                        return 0;
+                    });
+                    
+                    // 尝试加载匹配的文件，直到成功为止
+                    for (const fileName of matchingFiles) {
+                        try {
+                            const filePath = `${cfgDir}${fileName}`;
+                            const fileResponse = await fetch(filePath);
+                            if (fileResponse.ok) {
+                                const content = await fileResponse.text();
+                                const jsonData = this.parseJson(content);
+                                
+                                // 处理数据
+                                await this.processData(type, jsonData, { 
+                                    source: filePath,
+                                    type: 'default'
+                                });
+                                break; // 成功加载一个文件后停止尝试
+                            }
+                        } catch (error) {
+                            // 静默处理错误
+                        }
                     }
-                } catch (error) {
-                    // 静默处理错误
                 }
             }
         } catch (error) {
@@ -325,7 +390,7 @@ class IdDatabase {
                                     const jsonData = this.parseJson(content);
                                     
                                     // 处理数据
-                                    this.processData(type, jsonData, { 
+                                    await this.processData(type, jsonData, { 
                                         source: `baseGame/Cfgs/zh-cn/${matchingFile}`,
                                         type: 'baseGame'
                                     });
@@ -360,7 +425,7 @@ class IdDatabase {
             const jsonData = this.parseJson(content);
             
             // 处理数据
-            this.processData(type, jsonData, { 
+            await this.processData(type, jsonData, { 
                 source: `user_upload/${file.name}`,
                 type: 'user'
             });
@@ -379,7 +444,7 @@ class IdDatabase {
      * @param {Object} jsonData JSON数据
      * @param {Object} sourceInfo 数据来源信息
      */
-    processData(type, jsonData, sourceInfo) {
+    async processData(type, jsonData, sourceInfo) {
         const typeConfig = this.idTypes[type];
         const idMap = this.database.get(type);
         const sourceList = this.sources.get(type);
@@ -402,9 +467,14 @@ class IdDatabase {
                 // 检查id是否为undefined或null，而不是简单的if(id)，因为id=0时会被评估为false
                 if (id !== undefined && id !== null) {
                     // 提取数据
+                    let nameValue = data.name;
+                    // 处理name是数组的情况
+                    if (Array.isArray(nameValue) && nameValue.length > 0) {
+                        nameValue = nameValue[0];
+                    }
                     const item = {
                         id: id,
-                        name: data.name || data.title || typeConfig.getNameField(data)
+                        name: nameValue || data.title || typeConfig.getNameField(data)
                     };
                     
                     // 提取其他属性
@@ -430,6 +500,233 @@ class IdDatabase {
         if (batch.length > 0) {
             this.batchAddToMap(idMap, batch);
         }
+        
+        // 数据更新后持久化到存储
+        await this.persistToStorage();
+    }
+    
+    /**
+     * 将数据库数据持久化到localStorage
+     */
+    async persistToStorage() {
+        try {
+            // 转换Map为可序列化的对象
+            const serializedDatabase = {};
+            for (const [type, idMap] of this.database.entries()) {
+                serializedDatabase[type] = Array.from(idMap.entries());
+            }
+            
+            const serializedSources = {};
+            for (const [type, sourceList] of this.sources.entries()) {
+                serializedSources[type] = sourceList;
+            }
+            
+            const dataToStore = {
+                database: serializedDatabase,
+                sources: serializedSources,
+                initialized: this.initialized
+                // 不再存储idTypes，因为它包含不可序列化的函数
+                // idTypes会在每次初始化时从idTypelib.json重新加载
+            };
+            
+            // 优先存储到IndexedDB
+            const indexedDbSuccess = await this.storeToIndexedDB('idDatabase_data', dataToStore);
+            
+            if (!indexedDbSuccess) {
+                // IndexedDB存储失败，回退到localStorage
+                try {
+                    localStorage.setItem('idDatabase_data', JSON.stringify(dataToStore));
+                } catch (localStorageError) {
+                    console.error('[IdDatabase] 存储到localStorage失败:', localStorageError);
+                }
+            }
+        } catch (error) {
+            console.error('[IdDatabase] 持久化数据失败:', error);
+        }
+    }
+    
+    /**
+     * 打开IndexedDB数据库
+     * @returns {Promise<IDBDatabase>} 数据库实例
+     */
+    async openIndexedDB() {
+        return new Promise((resolve, reject) => {
+            if (!('indexedDB' in window)) {
+                reject(new Error('IndexedDB not supported'));
+                return;
+            }
+            
+            const request = indexedDB.open('IdDatabase', 1);
+            
+            request.onerror = () => {
+                reject(new Error('Failed to open IndexedDB'));
+            };
+            
+            request.onsuccess = () => {
+                resolve(request.result);
+            };
+            
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                if (!db.objectStoreNames.contains('idDatabase')) {
+                    db.createObjectStore('idDatabase');
+                }
+            };
+        });
+    }
+    
+    /**
+     * 存储数据到IndexedDB
+     * @param {string} key 存储键
+     * @param {any} value 存储值
+     * @returns {Promise<boolean>} 存储是否成功
+     */
+    async storeToIndexedDB(key, value) {
+        try {
+            const db = await this.openIndexedDB();
+            return new Promise((resolve) => {
+                const transaction = db.transaction('idDatabase', 'readwrite');
+                const store = transaction.objectStore('idDatabase');
+                const request = store.put(value, key);
+                
+                request.onsuccess = () => {
+                    resolve(true);
+                };
+                
+                request.onerror = () => {
+                    resolve(false);
+                };
+            });
+        } catch (error) {
+            console.error('[IdDatabase] 存储到IndexedDB失败:', error);
+            return false;
+        }
+    }
+    
+    /**
+     * 从IndexedDB读取数据
+     * @param {string} key 存储键
+     * @returns {Promise<any>} 存储的值
+     */
+    async getFromIndexedDB(key) {
+        try {
+            const db = await this.openIndexedDB();
+            return new Promise((resolve) => {
+                const transaction = db.transaction('idDatabase', 'readonly');
+                const store = transaction.objectStore('idDatabase');
+                const request = store.get(key);
+                
+                request.onsuccess = () => {
+                    resolve(request.result);
+                };
+                
+                request.onerror = () => {
+                    resolve(null);
+                };
+            });
+        } catch (error) {
+            console.error('[IdDatabase] 从IndexedDB读取失败:', error);
+            return null;
+        }
+    }
+    
+    /**
+     * 从存储中恢复数据库数据（优先使用IndexedDB）
+     */
+    async restoreFromStorage() {
+        try {
+            // 优先从IndexedDB恢复数据
+            const indexedDbRestored = await this.restoreFromIndexedDB();
+            if (indexedDbRestored) {
+                return true;
+            }
+            
+            // IndexedDB恢复失败，回退到localStorage
+            try {
+                const storedData = localStorage.getItem('idDatabase_data');
+                if (storedData) {
+                    const parsedData = JSON.parse(storedData);
+                    
+                    // 恢复数据库数据
+                    if (parsedData.database) {
+                        for (const [type, entries] of Object.entries(parsedData.database)) {
+                            // 只恢复当前已加载类型的数据
+                            if (this.idTypes[type]) {
+                                const idMap = new Map(entries);
+                                this.database.set(type, idMap);
+                            }
+                        }
+                    }
+                    
+                    // 恢复来源数据
+                    if (parsedData.sources) {
+                        for (const [type, sourceList] of Object.entries(parsedData.sources)) {
+                            // 只恢复当前已加载类型的来源数据
+                            if (this.idTypes[type]) {
+                                this.sources.set(type, sourceList);
+                            }
+                        }
+                    }
+                    
+                    // 恢复初始化状态
+                    if (parsedData.initialized) {
+                        this.initialized = true;
+                    }
+                    
+                    // 不再恢复ID类型配置，使用最新加载的配置
+                    
+                    return true;
+                }
+            } catch (localStorageError) {
+                console.error('[IdDatabase] 从localStorage恢复数据失败:', localStorageError);
+            }
+        } catch (error) {
+            console.error('[IdDatabase] 恢复数据失败:', error);
+        }
+        return false;
+    }
+    
+    /**
+     * 从IndexedDB恢复数据库数据
+     */
+    async restoreFromIndexedDB() {
+        try {
+            const storedData = await this.getFromIndexedDB('idDatabase_data');
+            if (storedData) {
+                // 恢复数据库数据
+                if (storedData.database) {
+                    for (const [type, entries] of Object.entries(storedData.database)) {
+                        // 只恢复当前已加载类型的数据
+                        if (this.idTypes[type]) {
+                            const idMap = new Map(entries);
+                            this.database.set(type, idMap);
+                        }
+                    }
+                }
+                
+                // 恢复来源数据
+                if (storedData.sources) {
+                    for (const [type, sourceList] of Object.entries(storedData.sources)) {
+                        // 只恢复当前已加载类型的来源数据
+                        if (this.idTypes[type]) {
+                            this.sources.set(type, sourceList);
+                        }
+                    }
+                }
+                
+                // 恢复初始化状态
+                if (storedData.initialized) {
+                    this.initialized = true;
+                }
+                
+                // 不再恢复ID类型配置，使用最新加载的配置
+                
+                return true;
+            }
+        } catch (error) {
+            console.error('[IdDatabase] 从IndexedDB恢复数据失败:', error);
+        }
+        return false;
     }
     
     /**
@@ -788,6 +1085,26 @@ class IdDatabase {
     }
     
     /**
+     * 根据类型和ID获取名称
+     * @param {string} type 类型名称
+     * @param {number} id ID值
+     * @returns {string} 名称
+     */
+    getNameById(type, id) {
+        if (!this.database || !this.database.has(type)) {
+            return null;
+        }
+        
+        const typeData = this.database.get(type);
+        if (!typeData) {
+            return null;
+        }
+        
+        const item = typeData.get(id);
+        return item ? item.name : null;
+    }
+    
+    /**
      * 转换为蛇形命名
      * @param {string} str 字符串
      * @returns {string} 蛇形命名的字符串
@@ -799,3 +1116,8 @@ class IdDatabase {
 
 // 导出单例实例
 const idDatabase = new IdDatabase();
+
+// 暴露为全局变量，以便在renderer.js中使用
+if (typeof window !== 'undefined') {
+    window.idDatabase = idDatabase;
+}

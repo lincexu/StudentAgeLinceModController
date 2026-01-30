@@ -51,6 +51,9 @@ class EventAnalyzer {
                     };
                 }
                 
+                // 调试信息
+                console.log('[Analyzer] 生成的idTypes:', this.idTypes);
+                
                 console.log('[Analyzer] 从idTypelib.json加载ID类型配置成功:', this.idTypes);
                 
                 // 重新初始化数据结构

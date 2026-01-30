@@ -60,7 +60,8 @@ class ConfigManager {
             developerMode: false, // 是否开启开发者模式
             developerPassword: "", // 开发者模式密码
             opacity: 85, // 页面透明度，默认85%
-            includeOfficialContent: true // 是否自动添加baseGame文件夹到待解析列表
+            includeOfficialContent: true, // 是否自动添加baseGame文件夹到待解析列表
+            autoLoadDefaultData: false // 是否每次启动自动加载默认数据
         };
         
         // 直接使用简体中文作为默认翻译
@@ -231,12 +232,15 @@ class ConfigManager {
             }
             
             // 3. 合并配置
-            // 先合并默认配置和用户配置
-            let mergedConfig = this.mergeConfig(this.defaultConfig, config);
+            // 先合并默认配置和文件配置，确保文件配置中的所有项都被加载
+            let mergedConfig = this.mergeConfig(this.defaultConfig, fileConfig);
             
-            // 然后单独合并文件配置中的应用信息（确保应用信息始终从文件配置中读取）
+            // 然后合并用户配置，用户配置会覆盖文件配置中的非应用信息项
+            mergedConfig = this.mergeConfig(mergedConfig, config);
+            
+            // 最后确保应用信息和开发者密码始终从文件配置中读取（如果存在）
             if (fileConfig) {
-                const appInfoKeys = ['projectName', 'author', 'version', 'description'];
+                const appInfoKeys = ['projectName', 'author', 'version', 'description', 'developerPassword'];
                 appInfoKeys.forEach(key => {
                     if (fileConfig.hasOwnProperty(key)) {
                         mergedConfig[key] = fileConfig[key];
@@ -291,34 +295,41 @@ class ConfigManager {
      * @returns {string} 中文名称
      */
     getAttributeCN(type, key) {
-        // 移除类型名称中的下划线，使其与映射表匹配
-        const normalizedType = type.replace(/_/g, '');
+        let keyName = null;
         
-        // 类型名称到idTypeKeys.json中keyName的映射表
-        const typeToKeyNameMap = {
-            // 基础类型
-            'event': 'EvtKey',
-            'item': 'ItemKey',
-            'book': 'BookKey',
-            'action': 'ActionKey',
-            
-            // 从analyzer.js中获取的正确类型名映射
-            'actionevt': 'Action_evtKey', // 对应Action_evtKey
-            'audio': 'AudioKey',
-            'bg': 'BgKey',
-            'cg': 'CGKey', // 对应CGKey
-            'intent': 'IntentKey',
-            'kzoneavatar': 'KZoneAvatarKey', // 对应KZoneAvatarKey
-            'kzonecomment': 'KZoneCommentKey', // 对应KZoneCommentKey
-            'kzonecontent': 'KZoneContentKey', // 对应KZoneContentKey
-            'kzoneprofile': 'KZoneProfileKey', // 对应KZoneProfileKey
-            'person': 'PersonKey',
-            'persongrow': 'PersonGrowKey', // 对应PersonGrowKey
-            'renshengguanmemory': 'RenshengguanMemoryKey', // 对应RenshengguanMemoryKey
-            'shop': 'ShopKey'
-        };
+        // 尝试从idTypelib中动态查找keyList
+        if (this.idTypelib && this.idTypelib.listType) {
+            // 遍历idTypelib.listType，查找匹配的类型
+            for (const [typeId, typeConfig] of Object.entries(this.idTypelib.listType)) {
+                // 生成与输入type匹配的类型名（移除Id后缀并转换为蛇形命名）
+                const typeNameWithoutId = typeId.replace('Id', '');
+                const snakeCaseTypeName = typeNameWithoutId.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+                
+                // 直接比较蛇形命名的类型名
+                if (snakeCaseTypeName === type) {
+                    keyName = typeConfig.keyList;
+                    break;
+                }
+                
+                // 如果没有匹配，尝试移除下划线后比较
+                const normalizedSnakeCase = snakeCaseTypeName.replace(/_/g, '');
+                const normalizedInputType = type.replace(/_/g, '');
+                
+                if (normalizedSnakeCase === normalizedInputType) {
+                    keyName = typeConfig.keyList;
+                    break;
+                }
+            }
+        }
         
-        const keyName = typeToKeyNameMap[normalizedType] || `${type.charAt(0).toUpperCase() + type.slice(1)}Key`;
+        // 如果没有找到，使用默认的命名规则
+        if (!keyName) {
+            // 移除下划线并转换为驼峰命名
+            const camelCaseType = type.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
+            keyName = `${camelCaseType.charAt(0).toUpperCase() + camelCaseType.slice(1)}Key`;
+        }
+        
+        // 从idTypeKeys中获取属性名称
         if (this.idTypeKeys && this.idTypeKeys[keyName] && this.idTypeKeys[keyName][key] && this.idTypeKeys[keyName][key].name) {
             return this.idTypeKeys[keyName][key].name;
         }
@@ -396,6 +407,7 @@ class ConfigManager {
         this.config.autoOpenBrowser = Boolean(this.config.autoOpenBrowser);
         this.config.developerMode = Boolean(this.config.developerMode);
         this.config.includeOfficialContent = Boolean(this.config.includeOfficialContent);
+        this.config.autoLoadDefaultData = Boolean(this.config.autoLoadDefaultData);
     }
 
     /**

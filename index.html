@@ -188,6 +188,10 @@
                         <input type="checkbox" id="include-official-content" class="settings-checkbox">
                         <label for="include-official-content">自动添加baseGame解析</label>
                     </div>
+                    <div class="settings-item checkbox-item">
+                        <input type="checkbox" id="auto-load-default-data" class="settings-checkbox">
+                        <label for="auto-load-default-data">每次启动自动加载默认数据</label>
+                    </div>
                 </div>
                 
                 <div class="settings-section">
@@ -220,12 +224,18 @@
                             <input type="checkbox" id="developer-mode" class="settings-checkbox">
                             <label for="developer-mode">开启开发者模式</label>
                         </div>
+                        <div class="settings-item" style="margin-top: 15px;" id="test-database-container">
+                            <button id="open-test-database" class="settings-btn developer-btn" style="padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">
+                                📊 打开ID数据库测试页面
+                            </button>
+                        </div>
                         <div class="developer-hint" style="margin-top: 15px; padding: 10px; background: #f0f0f0; border-radius: 8px; font-size: 0.9rem; color: #666;">
                             开发者模式说明：
                             <ul style="margin-top: 10px; margin-left: 20px;">
                                 <li>开启后可编辑应用信息</li>
                                 <li>提供更多调试信息</li>
                                 <li>允许修改高级配置</li>
+                                <li>访问ID数据库测试工具</li>
                             </ul>
                         </div>
                     </div>

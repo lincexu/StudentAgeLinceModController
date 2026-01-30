@@ -9,7 +9,56 @@ class ResultRenderer {
         this.progressFill = null;
         this.progressText = null;
         
+        // 规则文件缓存
+        this.rulesCache = {};
+        
+        // 暴露为全局变量，以便在回调中使用
+        window.resultRenderer = this;
+        
         this.init();
+        // 预加载规则文件
+        this.preloadRules();
+    }
+    
+    /**
+     * 预加载所有规则文件
+     */
+    async preloadRules() {
+        try {
+            // 预加载effectRules
+            const effectRules = await this.loadRuleFile('effectRules');
+            if (effectRules) {
+                this.rulesCache['effectRules'] = effectRules;
+            }
+            
+            // 预加载其他规则文件
+            const ruleFiles = ['conditionRules', 'itemTagRules', 'sexRules', 'costReplace', 'Replace'];
+            for (const ruleFile of ruleFiles) {
+                const rules = await this.loadRuleFile(ruleFile);
+                if (rules) {
+                    this.rulesCache[ruleFile] = rules;
+                }
+            }
+        } catch (error) {
+            console.error('预加载规则文件出错:', error);
+        }
+    }
+    
+    /**
+     * 异步加载规则文件
+     * @param {string} ruleName 规则名称
+     * @returns {Promise<Object>} 规则数据
+     */
+    async loadRuleFile(ruleName) {
+        try {
+            const response = await fetch(`lib/rules/${ruleName.toLowerCase()}.json`);
+            if (response.ok) {
+                return await response.json();
+            }
+        } catch (error) {
+            console.error(`加载规则文件 ${ruleName} 出错:`, error);
+        }
+        return null;
     }
 
     init() {
@@ -654,31 +703,24 @@ class ResultRenderer {
                                         // 获取重复ID检查的方法
                                         const allIdsKey = `all${type.charAt(0).toUpperCase() + type.slice(1)}Ids`;
                                         
-                                        // 从idTypelib中获取对应的keyList
-                                        let keyName = null;
+                                        // 直接使用typeConfig中的keyList
+                                        let keyName = typeConfig.keyList;
                                         
-                                        // 遍历idTypelib.listType，找到对应的类型配置
-                                        if (configManager.idTypelib && configManager.idTypelib.listType) {
-                                            for (const [typeId, typeConfig] of Object.entries(configManager.idTypelib.listType)) {
-                                                // 将typeId转换为snake_case格式，与当前type比较
-                                                const convertedTypeId = typeId.replace('Id', '');
-                                                const snakeCaseTypeId = convertedTypeId.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
-                                                
-                                                if (snakeCaseTypeId === type) {
-                                                    keyName = typeConfig.keyList;
-                                                    break;
-                                                }
-                                            }
-                                        }
+                                        // 调试信息
+                                        console.log('[Renderer] 处理类型:', type);
+                                        console.log('[Renderer] typeConfig:', typeConfig);
+                                        console.log('[Renderer] keyName:', keyName);
                                         
                                         // 如果没有找到对应的keyList，使用默认命名规则
                                         if (!keyName) {
                                             // 处理带下划线的类型名称，生成正确的驼峰命名
                                             const camelCaseType = type.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
                                             keyName = `${camelCaseType.charAt(0).toUpperCase() + camelCaseType.slice(1)}Key`;
+                                            console.log('[Renderer] 使用默认命名规则生成keyName:', keyName);
                                         }
                                         
                                         const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
+                                        console.log('[Renderer] idTypeKeyDef:', idTypeKeyDef);
                                         
                                         // 收集所有唯一的key（用于验证）
                                         const allKeys = new Set();
@@ -742,11 +784,49 @@ class ResultRenderer {
                                                                         if (value === undefined && (key === 'name' || key === 'title')) {
                                                                             value = key === 'name' ? item.title : item.name;
                                                                         }
+                                                                        
+                                                                        // 保存原始值用于鼠标悬浮显示
+                                                                        const originalValue = value;
+                                                                        
+                                                                        // 获取当前key对应的rule属性
+                                                                        let rule = null;
+                                                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                            rule = idTypeKeyDef[key].rule;
+                                                                        }
+                                                                        
+                                                                        // 应用ID替换功能
+                                                                        let displayValue = value;
+                                                                        if (rule) {
+                                                                            if (typeof value === 'object' && value !== null) {
+                                                                                // 如果是对象，尝试JSON.stringify后替换
+                                                                                try {
+                                                                                    const jsonString = JSON.stringify(value);
+                                                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                } catch (e) {
+                                                                                    // 忽略错误，使用原始值
+                                                                                }
+                                                                            } else {
+                                                                                // 直接替换
+                                                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        // 获取属性的中文名称
+                                                                        let attributeName = key;
+                                                                        if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                                            attributeName = idTypeKeyDef[key].name;
+                                                                            console.log('[Renderer] 为属性', key, '找到中文名称:', attributeName);
+                                                                        } else {
+                                                                            // 尝试使用configManager.getAttributeCN
+                                                                            attributeName = configManager.getAttributeCN(type, key);
+                                                                            console.log('[Renderer] 使用configManager.getAttributeCN为属性', key, '生成中文名称:', attributeName);
+                                                                        }
+                                                                        
                                                                         return `
                                                                         <div class="vertical-table-row">
-                                                                            <div class="row-label">${configManager.getAttributeCN(type, key)}:</div>
-                                                                            <div class="row-value" title="${JSON.stringify(value)}">
-                                                                                ${value === undefined || value === null ? '-' : (typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value)}
+                                                                            <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                                            <div class="row-value" title="${JSON.stringify(originalValue)} ${rule ? `[${rule}]` : ''}">
+                                                                                ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                                                             </div>
                                                                         </div>
                                                                         `;
@@ -765,9 +845,25 @@ class ResultRenderer {
                                                     <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: var(--bg-primary); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); table-layout: auto; border: 1px solid var(--border-color);">
                                                         <thead style="background: var(--primary-gradient); color: white;">
                                                             <tr>
-                                                                ${sortedKeys.map(key => `
-                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;">${configManager.getAttributeCN(type, key)}</th>
-                                                                `).join('')}
+                                                                ${sortedKeys.map(key => {
+                                                                    // 获取属性的中文名称
+                                                                    let attributeName = key;
+                                                                    let attributeDesc = '';
+                                                                    if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                        if (idTypeKeyDef[key].name) {
+                                                                            attributeName = idTypeKeyDef[key].name;
+                                                                        }
+                                                                        if (idTypeKeyDef[key].desc) {
+                                                                            attributeDesc = idTypeKeyDef[key].desc;
+                                                                        }
+                                                                    } else {
+                                                                        // 尝试使用configManager.getAttributeCN
+                                                                        attributeName = configManager.getAttributeCN(type, key);
+                                                                    }
+                                                                    return `
+                                                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" title="${attributeDesc}">${attributeName}</th>
+                                                                    `;
+                                                                }).join('')}
                                                                 <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
                                                             </tr>
                                                         </thead>
@@ -782,9 +878,36 @@ class ResultRenderer {
                                                                         if (value === undefined && (key === 'name' || key === 'title')) {
                                                                             value = key === 'name' ? item.title : item.name;
                                                                         }
+                                                                        
+                                                                        // 保存原始值用于鼠标悬浮显示
+                                                                        const originalValue = value;
+                                                                        
+                                                                        // 获取当前key对应的rule属性
+                                                                        let rule = null;
+                                                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                            rule = idTypeKeyDef[key].rule;
+                                                                        }
+                                                                        
+                                                                        // 应用ID替换功能
+                                                                        let displayValue = value;
+                                                                        if (rule) {
+                                                                            if (typeof value === 'object' && value !== null) {
+                                                                                // 如果是对象，尝试JSON.stringify后替换
+                                                                                try {
+                                                                                    const jsonString = JSON.stringify(value);
+                                                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                } catch (e) {
+                                                                                    // 忽略错误，使用原始值
+                                                                                }
+                                                                            } else {
+                                                                                // 直接替换
+                                                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                            }
+                                                                        }
+                                                                        
                                                                         return `
-                                                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                            ${value === undefined || value === null ? '-' : (typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value)}
+                                                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${JSON.stringify(originalValue)} ${rule ? `[${rule}]` : ''}">
+                                                                            ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                                                         </td>
                                                                         `;
                                                                     }).join('')}
@@ -897,6 +1020,382 @@ class ResultRenderer {
     }
     
     /**
+     * 根据rule属性和文本内容进行ID检索和替换
+     * @param {string} text 原始文本
+     * @param {string} rule rule属性值
+     * @returns {string} 替换后的文本
+     */
+    replaceIdWithName(text, rule) {
+        // 检查rule是否为*Id类型
+        if (rule && rule.endsWith('Id')) {
+            // 检查idDatabase是否可用
+            if (!window.idDatabase || !window.idDatabase.initialized) {
+                return text;
+            }
+            
+            // 提取类型名称（去掉Id后缀）
+            const typeName = rule.replace('Id', '');
+            // 转换为snake_case格式，与idDatabase中的类型名称一致
+            const snakeCaseTypeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+            
+            // 检查该类型是否存在于数据库中
+            if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[snakeCaseTypeName]) {
+                return text;
+            }
+            
+            // 处理不同格式的文本
+            if (typeof text === 'string') {
+                // 情况1: 纯数字文本
+                if (/^\d+$/.test(text)) {
+                    const id = parseInt(text);
+                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                    return name || text;
+                }
+                
+                // 情况2: [x]
+                if (/^\[(\d+)\]$/.test(text)) {
+                    const id = parseInt(text.match(/^\[(\d+)\]$/)[1]);
+                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                    return name || text;
+                }
+                
+                // 情况3: [x,y,……]
+                if (/^\[(\d+(,\s*\d+)*)\]$/.test(text)) {
+                    const ids = text.match(/^\[(\d+(,\s*\d+)*)\]$/)[1].split(',').map(id => parseInt(id.trim()));
+                    const names = ids.map(id => {
+                        const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                        return name || id;
+                    });
+                    return names.join(', ');
+                }
+                
+                // 情况4: "x"
+                if (/^"(\d+)"$/.test(text)) {
+                    const id = parseInt(text.match(/^"(\d+)"$/)[1]);
+                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                    return name || text;
+                }
+                
+                // 情况5: ["x"]
+                if (/^\["(\d+)"\]$/.test(text)) {
+                    const id = parseInt(text.match(/^\["(\d+)"\]$/)[1]);
+                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                    return name || text;
+                }
+                
+                // 情况6: ["x","y",……]
+                if (/^\[("\d+"(,\s*"\d+")*)\]$/.test(text)) {
+                    const ids = text.match(/^\[("\d+"(,\s*"\d+")*)\]$/)[1].split(',').map(id => parseInt(id.trim().replace(/"/g, '')));
+                    const names = ids.map(id => {
+                        const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
+                        return name || id;
+                    });
+                    return names.join(', ');
+                }
+            } else if (typeof text === 'number') {
+                // 纯数字情况
+                const name = window.idDatabase.getNameById(snakeCaseTypeName, text);
+                return name || text;
+            }
+            
+            return text;
+        } 
+        // 检查rule是否为*Rules类型
+        else if (rule && rule.endsWith('Rules')) {
+            // 尝试从缓存中获取规则文件
+            const rulesData = this.rulesCache[rule];
+            if (rulesData) {
+                return this.processRulesSync(text, rulesData);
+            }
+            
+            // 如果缓存中没有，返回原始文本
+            // 规则文件会在后台预加载，下次渲染时会使用缓存
+            return text;
+        }
+        // 检查rule是否为*Replace类型
+        else if (rule && rule.endsWith('Replace')) {
+            // 尝试从缓存中获取规则文件
+            const rulesData = this.rulesCache[rule];
+            if (rulesData) {
+                return this.processReplaceSync(text, rulesData, rule);
+            }
+            
+            // 如果缓存中没有，返回原始文本
+            // 规则文件会在后台预加载，下次渲染时会使用缓存
+            return text;
+        }
+        
+        return text;
+    }
+    
+    /**
+     * 检查rule是否为*Replace类型
+     * @param {string} rule rule属性值
+     * @returns {boolean} 是否为*Replace类型
+     */
+    isReplaceRule(rule) {
+        return rule && rule.endsWith('Replace');
+    }
+    
+    /**
+     * 同步处理*Replace类型的文本替换
+     * @param {string|Array} text 原始文本
+     * @param {Object} rulesData 规则数据
+     * @param {string} ruleName 规则名称
+     * @returns {string} 替换后的文本
+     */
+    processReplaceSync(text, rulesData, ruleName) {
+        // 处理不同格式的文本
+        if (typeof text === 'string') {
+            // 情况1: [[x1,y1],[x2,y2],……] - 多个数组
+            if (/^\[\[((-?\d+)(,\s*-?\d+)*)\](\s*,\s*\[((-?\d+)(,\s*-?\d+)*)\])*\]$/.test(text)) {
+                // 提取所有内部数组
+                const arrayMatches = text.match(/\[((-?\d+)(,\s*-?\d+)*)\]/g);
+                if (arrayMatches) {
+                    const replacedArrays = arrayMatches.map(arrayStr => {
+                        const match = arrayStr.match(/\[((-?\d+)(,\s*-?\d+)*)\]/);
+                        if (match) {
+                            const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                            return this.processReplaceValues(values, rulesData, ruleName);
+                        }
+                        return arrayStr;
+                    });
+                    return replacedArrays.join('，');
+                }
+            }
+            // 情况2: [[x,y]] - 单个数组被双层[]包含
+            else if (/^\[\[((-?\d+)(,\s*-?\d+)*)\]\]$/.test(text)) {
+                const match = text.match(/^\[\[((-?\d+)(,\s*-?\d+)*)\]\]$/);
+                if (match) {
+                    const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                    const replacedText = this.processReplaceValues(values, rulesData, ruleName);
+                    return replacedText;
+                }
+            }
+            // 情况3: [x,y] - 普通数组
+            else if (/^\[((-?\d+)(,\s*-?\d+)*)\]$/.test(text)) {
+                const match = text.match(/^\[((-?\d+)(,\s*-?\d+)*)\]$/);
+                if (match) {
+                    const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                    const replacedText = this.processReplaceValues(values, rulesData, ruleName);
+                    return replacedText;
+                }
+            }
+        }
+        
+        return text;
+    }
+    
+    /**
+     * 处理替换规则值数组，根据规则文件生成替换文本
+     * @param {Array<number>} values 值数组
+     * @param {Object} rulesData 规则数据
+     * @param {string} ruleName 规则名称
+     * @returns {string} 替换后的文本
+     */
+    processReplaceValues(values, rulesData, ruleName) {
+        if (!values || values.length === 0) {
+            return values.toString();
+        }
+        
+        // 获取规则配置
+        const ruleConfig = rulesData[ruleName];
+        if (!ruleConfig || !ruleConfig.rule || !ruleConfig.desc) {
+            return values.toString();
+        }
+        
+        const ruleArray = ruleConfig.rule;
+        const descTemplate = ruleConfig.desc;
+        
+        if (!ruleArray || ruleArray.length === 0) {
+            return values.toString();
+        }
+        
+        // 生成替换文本
+        let desc = descTemplate;
+        
+        // 替换规则中的占位符
+        ruleArray.forEach((ruleKey, index) => {
+            if (index < values.length) {
+                const value = values[index];
+                
+                // 如果是ID类型的规则，尝试从数据库中获取名称
+                if (ruleKey.endsWith('Id')) {
+                    const name = this.getNameByIdFromRule(ruleKey, value);
+                    if (name) {
+                        desc = desc.replace(`{${ruleKey}}`, name);
+                    }
+                } else if (ruleKey === 'value') {
+                    // 直接替换value占位符
+                    desc = desc.replace('{value}', value);
+                }
+            }
+        });
+        
+        return desc;
+    }
+    
+    /**
+     * 同步处理*Rules类型的文本替换
+     * @param {string|Array} text 原始文本
+     * @param {Object} rulesData 规则数据
+     * @returns {string} 替换后的文本
+     */
+    processRulesSync(text, rulesData) {
+        // 处理不同格式的文本
+        if (typeof text === 'string') {
+            // 情况1: [[a,b,c,……]] - 在普通规则数组基础上增加一层[]
+            if (/^\[\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]\]$/.test(text)) {
+                const match = text.match(/^\[\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]\]$/);
+                if (match) {
+                    const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                    const replacedText = this.processRuleValues(values, rulesData);
+                    return replacedText;
+                }
+            }
+            
+            // 情况2: [[a,b,c,……],[a,b,c,……],……] - 多个普通规则数组用逗号隔开，再整体加上一层[]
+            else if (/^\[\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\](\s*,\s*\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\])*\]$/.test(text)) {
+                // 提取所有普通规则数组
+                const arrayMatches = text.match(/\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]/g);
+                if (arrayMatches) {
+                    const replacedArrays = arrayMatches.map(arrayStr => {
+                        const match = arrayStr.match(/\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]/);
+                        if (match) {
+                            const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                            const replacedText = this.processRuleValues(values, rulesData);
+                            return replacedText;
+                        }
+                        return arrayStr;
+                    });
+                    return replacedArrays.join('，');
+                }
+            }
+            
+            // 情况3: [a,b,c,……] - 普通规则数组
+            else if (/^\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]$/.test(text)) {
+                const match = text.match(/^\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]$/);
+                if (match) {
+                    const values = match[1].split(',').map(v => parseFloat(v.trim()));
+                    const replacedText = this.processRuleValues(values, rulesData);
+                    return replacedText;
+                }
+            }
+        }
+        
+        return text;
+    }
+    
+    /**
+     * 处理规则值数组，根据规则文件生成替换文本
+     * @param {Array<number>} values 值数组
+     * @param {Object} rulesData 规则数据
+     * @returns {string} 替换后的文本
+     */
+    processRuleValues(values, rulesData) {
+        if (!values || values.length === 0) {
+            return values.toString();
+        }
+        
+        // 获取第一个数字作为规则ID
+        const ruleId = values[0].toString();
+        const ruleConfig = rulesData[ruleId];
+        
+        if (!ruleConfig || !ruleConfig.type) {
+            return values.toString();
+        }
+        
+        // 遍历所有可能的类型配置，找到匹配的规则
+        for (const typeKey in ruleConfig.type) {
+            const typeConfig = ruleConfig.type[typeKey];
+            if (typeConfig.rule && typeConfig.desc) {
+                // 检查规则是否匹配
+                const ruleArray = typeConfig.rule;
+                if (ruleArray.length <= values.length) {
+                    // 检查前几个数字是否匹配
+                    const match = ruleArray.slice(0, 2).every((ruleValue, index) => {
+                        return ruleValue === values[index];
+                    });
+                    
+                    if (match) {
+                        // 生成替换文本
+                        let desc = typeConfig.desc;
+                        
+                        // 替换{direction}（如果有）
+                        if (desc.includes('{direction}')) {
+                            // 找到value字段的位置
+                            const valueIndex = ruleArray.indexOf('value');
+                            if (valueIndex !== -1 && valueIndex < values.length) {
+                                const value = values[valueIndex];
+                                desc = desc.replace('{direction}', value >= 0 ? '+' : '-');
+                            }
+                        }
+                        
+                        // 替换其他字段
+                        ruleArray.forEach((ruleValue, index) => {
+                            if (typeof ruleValue === 'string' && index < values.length) {
+                                const value = values[index];
+                                
+                                // 处理ID类型的字段（以Id结尾）
+                                if (ruleValue.endsWith('Id')) {
+                                    // 尝试从数据库中获取名称
+                                    const name = this.getNameByIdFromRule(ruleValue, value);
+                                    if (name) {
+                                        desc = desc.replace(`{${ruleValue}}`, name);
+                                    }
+                                }
+                                // 处理value相关字段（value, value1, value2等）
+                                else if (ruleValue.startsWith('value')) {
+                                    // 直接替换{valueX}占位符
+                                    desc = desc.replace(`{${ruleValue}}`, value);
+                                }
+                                // 处理evtId相关字段（evtId1, evtId2等）
+                                else if (ruleValue.startsWith('evtId')) {
+                                    // 尝试从数据库中获取事件名称
+                                    const name = this.getNameByIdFromRule('EvtId', value);
+                                    if (name) {
+                                        desc = desc.replace(`{${ruleValue}}`, name);
+                                    }
+                                }
+                            }
+                        });
+                        
+                        return desc;
+                    }
+                }
+            }
+        }
+        
+        return values.toString();
+    }
+    
+    /**
+     * 根据规则中的ID类型和ID值获取名称
+     * @param {string} idType ID类型
+     * @param {number} idValue ID值
+     * @returns {string} 名称
+     */
+    getNameByIdFromRule(idType, idValue) {
+        // 检查idDatabase是否可用
+        if (!window.idDatabase || !window.idDatabase.initialized) {
+            return null;
+        }
+        
+        // 提取类型名称（去掉Id后缀）
+        const typeName = idType.replace('Id', '');
+        // 转换为snake_case格式，与idDatabase中的类型名称一致
+        const snakeCaseTypeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+        
+        // 检查该类型是否存在于数据库中
+        if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[snakeCaseTypeName]) {
+            return null;
+        }
+        
+        // 从数据库中获取名称
+        return window.idDatabase.getNameById(snakeCaseTypeName, idValue);
+    }
+    
+    /**
      * 初始化搜索功能
      */
     initSearchFunctionality() {
@@ -940,12 +1439,9 @@ class ResultRenderer {
                 items.forEach(item => {
                     // 对于竖列式布局
                     if (item.classList.contains('vertical-table-card')) {
-                        const titleElement = item.querySelector('.card-title');
-                        const idElement = item.querySelector('.row-value');
-                        const titleText = titleElement ? titleElement.textContent.toLowerCase() : '';
-                        const idText = idElement ? idElement.textContent.toLowerCase() : '';
-                        
-                        const matches = titleText.includes(searchTerm) || idText.includes(searchTerm);
+                        // 搜索整个卡片的所有内容
+                        const cardText = item.textContent.toLowerCase();
+                        const matches = cardText.includes(searchTerm);
                         item.style.display = matches ? 'block' : 'none';
                         if (matches) hasMatches = true;
                     }

@@ -88,6 +88,10 @@
             "name": "物品类型",
             "file": "ItemTypeCfg*.json"
         },
+        "ItemTagId": {
+            "name": "物品标签",
+            "file": "ItemTagCfg*.json"
+        },
         "MapId": {
             "name": "地图",
             "file": "MapCfg*.json"

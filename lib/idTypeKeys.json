@@ -18,23 +18,23 @@
         "type": {
             "name": "类型",
             "desc": "物品类型，影响使用方式",
-            "rule": "lib/Cfg/ItemTypeCfg #7154.json"
-            
+            "rule": "ItemTypeId"
+
         },
         "itemTag": {
             "name": "标签",
             "desc": "物品标签，影响送礼",
-            "rule": "lib/rules/itemTagRules"
+            "rule": "ItemTagId"
         },
         "effect": {
             "name": "效果",
             "desc": "触发效果",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "usingEffect": {
             "name": "使用效果",
             "desc": "使用物品后的效果",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "value": {
             "name": "价值",
@@ -69,12 +69,12 @@
         "clothType": {
             "name": "服饰类型",
             "desc": "物品服饰类型",
-            "rule": "lib/Cfg/ClothTypeCfg #7211.json"
+            "rule": "ClothTypeId"
         },
         "precondition": {
             "name": "前置条件",
             "desc": "物品前置条件",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "rarity": {
             "name": "稀有度",
@@ -84,12 +84,12 @@
         "sex": {
             "name": "性别",
             "desc": "物品性别",
-            "rule": "lib/rules/sexRules"
+            "rule": "sexRules"
         },
         "subType": {
             "name": "子类型",
             "desc": "物品子类型，官方仅用id=1001零食，id=1002海报，id=0所有，慎重选择其他",
-            "rule": "lib/rules/itemTypeRules"
+            "rule": "ItemTypeId"
         }
     },
     "EvtKey": {
@@ -106,7 +106,7 @@
         "type": {
             "name": "事件类型",
             "desc": "事件类型",
-            "rule": "lib/Cfg/EvtTypeCfg #7218.json"
+            "rule": "EvtTypeId"
         },
         "talkId": {
             "name": "第一句话id",
@@ -121,7 +121,7 @@
         "npc": {
             "name": "对象",
             "desc": "事件对象",
-            "rule": "lib/Cfg/PersonCfg #7200.json"
+            "rule": "PersonId"
         },
         "maxcount": {
             "name": "最大数量",
@@ -131,17 +131,17 @@
         "mapId": {
             "name": "发生地点id",
             "desc": "事件发生地点id",
-            "rule": "lib/Cfg/MapCfg #7306.json"
+            "rule": "MapId"
         },
         "effect": {
             "name": "效果",
             "desc": "事件触发效果",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "condition": {
             "name": "触发条件",
             "desc": "事件触发条件",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "content": {
             "name": "内容",
@@ -166,7 +166,7 @@
         "miniGame": {
             "name": "小游戏",
             "desc": "事件小游戏",
-            "rule": "lib/Cfg/MinigameCfg #7277.json"
+            "rule": "MinigameId"
         },
         "options": {
             "name": "选项",
@@ -203,17 +203,17 @@
         "anime": {
             "name": "动画",
             "desc": "事件动画",
-            "rule": "lib/Cfg/AnimationCfg #7265.json"
+            "rule": "AnimationId"
         },
         "attrs": {
             "name": "属性",
             "desc": "事件属性",
-            "rule": "lib/Cfg/PersonAttrCfg #7185.json"
+            "rule": "PersonAttrId"
         },
         "audio": {
             "name": "音频",
             "desc": "事件音频",
-            "rule": "lib/Cfg/AudioCfg #7174.json"
+            "rule": "AudioId"
         },
         "beginTime": {
             "name": "开始时间",
@@ -223,7 +223,7 @@
         "bg": {
             "name": "背景",
             "desc": "事件背景",
-            "rule": "lib/Cfg/BgCfg #7390.json"
+            "rule": "BgId"
         },
         "cnt": {
             "name": "计数",
@@ -233,7 +233,7 @@
         "cost": {
             "name": "消耗",
             "desc": "事件消耗",
-            "rule": "number"
+            "rule": "costReplace"
         },
         "disableTxt": {
             "name": "禁用文本",
@@ -243,7 +243,7 @@
         "effect": {
             "name": "效果",
             "desc": "事件效果",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "endTime": {
             "name": "结束时间",
@@ -253,12 +253,12 @@
         "evtId": {
             "name": "事件ID",
             "desc": "事件ID",
-            "rule": "lib/Cfg/EvtCfg #7313.json"
+            "rule": "EvtId"
         },
         "evtType": {
             "name": "事件类型",
             "desc": "事件类型",
-            "rule": "lib/Cfg/EvtTypeCfg #7218.json"
+            "rule": "EvtTypeId"
         },
         "expReward": {
             "name": "经验奖励",
@@ -268,7 +268,7 @@
         "funcId": {
             "name": "函数ID",
             "desc": "事件函数ID",
-            "rule": "lib/Cfg/FuncCfg #7293.json"
+            "rule": "FuncId"
         },
         "icon": {
             "name": "图标",
@@ -288,12 +288,12 @@
         "map": {
             "name": "发生地点",
             "desc": "事件发生地点",
-            "rule": "lib/Cfg/MapCfg #7306.json"
+            "rule": "MapId"
         },
         "minigameId": {
             "name": "小游戏ID",
             "desc": "事件小游戏ID",
-            "rule": "lib/Cfg/MinigameCfg #7277.json"
+            "rule": "MinigameId"
         },
         "needExp": {
             "name": "需要经验",
@@ -318,7 +318,7 @@
         "unlock": {
             "name": "解锁",
             "desc": "事件解锁",
-            "rule": "text"
+            "rule": "conditionRules"
         }
     },
     "ActionEvtKey": {
@@ -330,7 +330,7 @@
         "evts": {
             "name": "事件列表",
             "desc": "事件列表",
-            "rule": "lib/Cfg/EvtCfg #7313.json"
+            "rule": "EvtId"
         },
         "rate": {
             "name": "概率",
@@ -339,15 +339,15 @@
         }
     },
     "AudioKey": {
+                "id": {
+            "name": "ID",
+            "desc": "音频id，七位数字组成，1XXXXXX",
+            "rule": "index"
+        },
         "name": {
             "name": "名称",
             "desc": "音频名称",
             "rule": "text"
-        },
-        "id": {
-            "name": "ID",
-            "desc": "音频id，七位数字组成，1XXXXXX",
-            "rule": "index"
         },
         "cond": {
             "name": "条件",
@@ -404,12 +404,12 @@
         "audio": {
             "name": "音频",
             "desc": "背景音频",
-            "rule": "lib/Cfg/AudioCfg #7174.json"
+            "rule": "AudioId"
         },
         "cloth": {
             "name": "服饰",
             "desc": "未知",
-            "rule": "text"
+            "rule": "ClothTypeId"
         },
         "gaozhongCond": {
             "name": "高中条件",
@@ -446,7 +446,7 @@
         "effect": {
             "name": "效果",
             "desc": "未知",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "icon": {
             "name": "图标",
@@ -456,7 +456,7 @@
         "itemTag": {
             "name": "标签",
             "desc": "未知",
-            "rule": "lib/rules/itemTagRules"
+            "rule": "ItemTagId"
         },
         "need": {
             "name": "需求",
@@ -466,7 +466,7 @@
         "precondition": {
             "name": "前置条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "sell": {
             "name": "售价",
@@ -481,12 +481,12 @@
         "type": {
             "name": "类型",
             "desc": "未知",
-            "rule": "text"
+            "rule": "ItemTagId"
         },
         "usingEffect": {
             "name": "使用效果",
             "desc": "未知",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "value": {
             "name": "价值",
@@ -555,12 +555,12 @@
         "condition": {
             "name": "条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "demand": {
             "name": "需求",
             "desc": "未知",
-            "rule": "text"
+            "rule": "conditionRules"
         },
         "desc": {
             "name": "描述",
@@ -600,7 +600,7 @@
         "npc": {
             "name": "角色",
             "desc": "未知",
-            "rule": "lib/Cfg/PersonCfg #7200.json"
+            "rule": "PersonId"
         },
         "renshengguan": {
             "name": "人生观",
@@ -610,7 +610,7 @@
         "reward": {
             "name": "奖励",
             "desc": "未知",
-            "rule": "text"
+            "rule": "effectRules"
         },
         "round": {
             "name": "回合",
@@ -669,7 +669,7 @@
         "condition": {
             "name": "条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "content": {
             "name": "内容",
@@ -679,7 +679,7 @@
         "effect": {
             "name": "效果",
             "desc": "未知",
-            "rule": "lib/rules/effectRules"
+            "rule": "effectRules"
         },
         "options": {
             "name": "选项",
@@ -721,7 +721,7 @@
         "cond": {
             "name": "条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "content": {
             "name": "内容",
@@ -942,7 +942,7 @@
         "attr": {
             "name": "属性",
             "desc": "未知",
-            "rule": "lib/Cfg/PersonAttrCfg #7185.json"
+            "rule": "PersonAttrId"
         },
         "className": {
             "name": "班级名称",
@@ -1014,7 +1014,7 @@
         "cond": {
             "name": "条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "desc": {
             "name": "描述",
@@ -1046,7 +1046,7 @@
         "id": {
             "name": "ID",
             "desc": "未知",
-            "rule": "index"
+            "rule": "itemId"
         },
         "buyTalk": {
             "name": "购买对话",
@@ -1086,7 +1086,7 @@
         "precondition": {
             "name": "前置条件",
             "desc": "未知",
-            "rule": "lib/rules/conditionRules"
+            "rule": "conditionRules"
         },
         "price": {
             "name": "Price",

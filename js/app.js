@@ -493,6 +493,12 @@ class ModEventApp {
             includeOfficialContentCheckbox.checked = this.config.includeOfficialContent;
         }
         
+        // 自动加载默认数据
+        const autoLoadDefaultDataCheckbox = document.getElementById('auto-load-default-data');
+        if (autoLoadDefaultDataCheckbox) {
+            autoLoadDefaultDataCheckbox.checked = this.config.autoLoadDefaultData;
+        }
+        
         // 透明度设置
         const opacity = this.config.opacity || 85;
         const opacitySlider = document.getElementById('opacity-slider');
@@ -510,8 +516,12 @@ class ModEventApp {
         // 开发者模式
         const developerModeCheckbox = document.getElementById('developer-mode');
         if (developerModeCheckbox) {
-            developerModeCheckbox.checked = this.config.developerMode;
-            this.toggleAppInfoEditability(this.config.developerMode);
+            // 首先检查sessionStorage中的开发者模式状态
+            const sessionDeveloperMode = sessionStorage.getItem('developerMode') === 'true';
+            // 如果sessionStorage中有值，使用它；否则使用config中的值
+            const isDeveloperMode = sessionDeveloperMode || this.config.developerMode;
+            developerModeCheckbox.checked = isDeveloperMode;
+            this.toggleAppInfoEditability(isDeveloperMode);
         }
         
         // 应用信息
@@ -545,6 +555,8 @@ class ModEventApp {
                         .then(password => {
                             if (configManager.verifyDeveloperPassword(password)) {
                                 this.toggleAppInfoEditability(true);
+                                // 保存开发者模式状态到sessionStorage
+                                sessionStorage.setItem('developerMode', 'true');
                             } else {
                                 // 密码错误，恢复原状
                                 e.target.checked = false;
@@ -558,6 +570,8 @@ class ModEventApp {
                 } else {
                     // 关闭开发者模式，直接切换
                     this.toggleAppInfoEditability(false);
+                    // 从sessionStorage中移除开发者模式状态
+                    sessionStorage.removeItem('developerMode');
                 }
             });
         }
@@ -615,8 +629,15 @@ class ModEventApp {
      */
     showDeveloperPasswordDialog() {
         return new Promise((resolve, reject) => {
+            // 先移除已存在的开发者密码对话框，防止重叠
+            const existingDialogs = document.querySelectorAll('.developer-password-dialog');
+            existingDialogs.forEach(dialog => {
+                dialog.remove();
+            });
+            
             // 创建对话框元素
             const dialog = document.createElement('div');
+            dialog.className = 'developer-password-dialog';
             dialog.style.cssText = `
                 position: fixed;
                 top: 0;
@@ -789,11 +810,17 @@ class ModEventApp {
         const appVersionInput = document.getElementById('app-version');
         const appAuthorInput = document.getElementById('app-author');
         const appDescriptionTextarea = document.getElementById('app-description');
+        const testDatabaseBtn = document.getElementById('open-test-database');
         
         if (appNameInput) appNameInput.disabled = !editable;
         if (appVersionInput) appVersionInput.disabled = !editable;
         if (appAuthorInput) appAuthorInput.disabled = !editable;
         if (appDescriptionTextarea) appDescriptionTextarea.disabled = !editable;
+        
+        // 控制测试数据库按钮的显示/隐藏
+        if (testDatabaseBtn) {
+            testDatabaseBtn.style.display = editable ? 'inline-block' : 'none';
+        }
     }
     
     /**
@@ -809,6 +836,7 @@ class ModEventApp {
         const generateDetailedReport = document.getElementById('generate-detailed-report').checked;
         const autoOpenBrowser = document.getElementById('auto-open-browser').checked;
         const includeOfficialContent = document.getElementById('include-official-content').checked;
+        const autoLoadDefaultData = document.getElementById('auto-load-default-data').checked;
         const developerMode = document.getElementById('developer-mode').checked;
         const opacity = parseInt(document.getElementById('opacity-slider').value) || 85;
         
@@ -818,7 +846,14 @@ class ModEventApp {
         const appAuthor = document.getElementById('app-author').value;
         const appDescription = document.getElementById('app-description').value;
         
-        // 更新配置
+        // 保存开发者模式状态到sessionStorage，只在当前浏览器会话中保持
+        if (developerMode) {
+            sessionStorage.setItem('developerMode', 'true');
+        } else {
+            sessionStorage.removeItem('developerMode');
+        }
+        
+        // 更新配置（不包含developerMode，因为它应该只在会话中保持）
         const newConfig = {
             themeMode,
             language,
@@ -828,7 +863,7 @@ class ModEventApp {
             generateDetailedReport,
             autoOpenBrowser,
             includeOfficialContent,
-            developerMode,
+            autoLoadDefaultData,
             opacity,
             projectName: appName,
             version: appVersion,
@@ -1039,6 +1074,23 @@ class ModEventApp {
         
         // 设置面板相关事件
         this.setupSettingsPanel();
+        
+        // 绑定开发者工具事件
+        this.bindDeveloperToolsEvents();
+    }
+    
+    /**
+     * 绑定开发者工具事件
+     */
+    bindDeveloperToolsEvents() {
+        // 打开ID数据库测试页面按钮
+        const openTestDatabaseBtn = document.getElementById('open-test-database');
+        if (openTestDatabaseBtn) {
+            openTestDatabaseBtn.addEventListener('click', () => {
+                // 在新窗口打开测试页面
+                window.open('test-database.html', '_blank', 'width=900,height=800,top=100,left=100');
+            });
+        }
     }
     
     /**
@@ -1542,7 +1594,12 @@ class ModEventApp {
             console.log(`文件夹数量: ${folders.length}`);
             console.log(`文件数量: ${allFiles.length}`);
             
+            // 加载用户上传的文件到数据库
+            this.updateProgressBar('加载用户上传文件到数据库...', 10);
+            await this.loadUserFilesToDatabase(allFiles);
+            
             // 开始分析
+            this.updateProgressBar('开始分析...', 50);
             const result = await this.analyzer.analyze(folders, allFiles);
             
             // 显示成功进度条
@@ -1555,6 +1612,74 @@ class ModEventApp {
             // 显示错误进度条
             this.showErrorProgressBar(`分析失败: ${error.message}`);
             alert('分析出错: ' + error.message);
+        }
+    }
+    
+    /**
+     * 加载用户上传的文件到数据库
+     * @param {File[]} files 用户上传的文件列表
+     */
+    async loadUserFilesToDatabase(files) {
+        // 获取所有支持的ID类型
+        const supportedTypes = this.idDatabase.getTypes();
+        
+        // 过滤出可能包含ID数据的文件
+        const jsonFiles = files.filter(file => file.name.endsWith('.json'));
+        
+        if (jsonFiles.length === 0) {
+            return;
+        }
+        
+        let processedFiles = 0;
+        const totalFiles = jsonFiles.length;
+        
+        // 并行处理文件，提高效率
+        const loadPromises = jsonFiles.map(async (file) => {
+            try {
+                // 根据文件名确定文件类型
+                for (const type of supportedTypes) {
+                    const typeConfig = this.idDatabase.getTypeConfig(type);
+                    if (typeConfig && this.matchFileName(file.name, typeConfig.fileName)) {
+                        // 加载文件到数据库
+                        await this.idDatabase.loadDataFromUserFile(file, type);
+                        break;
+                    }
+                }
+            } catch (error) {
+                console.error(`加载文件 ${file.name} 时出错:`, error);
+            } finally {
+                processedFiles++;
+                // 更新进度
+                const progress = Math.min(40, Math.round((processedFiles / totalFiles) * 40));
+                this.updateProgressBar(`加载用户文件: ${processedFiles}/${totalFiles}`, 10 + progress);
+            }
+        });
+        
+        // 等待所有文件加载完成
+        await Promise.all(loadPromises);
+    }
+    
+    /**
+     * 匹配文件名
+     * @param {string} fileName 文件名
+     * @param {string} pattern 模式
+     * @returns {boolean} 是否匹配
+     */
+    matchFileName(fileName, pattern) {
+        try {
+            // 简单的通配符匹配
+            // 处理特殊字符，确保正则表达式正确
+            let regexPattern = pattern;
+            // 转义除了*之外的特殊字符
+            regexPattern = regexPattern.replace(/([.+?^${}()|[\]\\])/g, '\\$1');
+            // 将*替换为.*
+            regexPattern = regexPattern.replace(/\*/g, '.*');
+            // 创建正则表达式，忽略大小写
+            const regex = new RegExp(`^${regexPattern}$`, 'i');
+            return regex.test(fileName);
+        } catch (error) {
+            console.error(`匹配文件名时出错:`, error);
+            return false;
         }
     }
 

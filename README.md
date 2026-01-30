@@ -1,10 +1,14 @@
 # 学生时代模组兼容分析工具
 
 一个用于分析学生时代游戏模组兼容性的Web应用，能够检测模组中的重复ID，避免游戏冲突。
+## b站链接 [图文](https://www.bilibili.com/opus/1162123484982149144?spm_id_from=333.1387.0.0)
+## github链接[仓库](https://github.com/lincexu/StudentAgeLinceModController)
+
+### 本文件由ai总结生成，请注意！
 
 ## 版本信息
 
-**当前版本：0.4.0**
+**当前版本：0.4.1**
 
 ## 核心功能
 
@@ -25,36 +29,15 @@
   - 支持根据ID查询Name和根据Name查询ID
   - 修复了id=0时数据无法获取的问题
 
-## 新增功能 (v0.4.0)
+## 新增功能 (v0.4.1)
 
-- 🗃️ ID类型实时数据库
-  - 基于idTypelib.json中allType定义的所有ID类型创建
-  - 支持从lib/Cfg和baseGame目录加载默认数据
-  - 支持用户临时上传的数据
-  - 记录每项ID类型的所有ID以及对应name属性
-  - 支持根据ID查询Name和根据Name查询ID
-  - 修复了id=0时数据无法获取的问题
-  - 添加了test-database.html文件，提供完整的数据库测试功能
-
-- 🔧 表格渲染优化
-  - 严格遵循idTypeKeys.json中的定义排列key
-  - 直接从idTypelib.json中获取keyList，避免硬编码
-  - 修复了类型映射问题，确保所有类型都能正确映射
-  - 统一了类型id变量的命名，基于idTypelib中的定义
-  - 对于idTypeKeys.json中定义但实际数据中不存在的key，显示为"-"
-
-- 🎨 进度条优化
-  - 实现了流畅的炫酷动态视觉效果
-  - 改进了配色方案，确保色彩搭配协调
-  - 添加了霓虹灯辉光效果，使进度显示更加醒目
-  - 为不同状态（加载中、成功、错误）设计了专属的辉光效果
-  - 优化了暗夜模式下的视觉效果
-
-- 🛠️ 代码优化
-  - 修改了config.js，添加了加载idTypelib.json的功能
-  - 修改了renderer.js，使其更加灵活和可维护
-  - 添加了js/core/utils.js文件，提供工具函数
-  - 添加了lib/idTypelib.json文件，定义类型配置
+- ⚙️ 配置管理优化：修改配置加载逻辑，确保config.jsonc中的所有配置项都被优先加载，包括新增的autoLoadDefaultData属性
+- 📝 数据处理优化：修复了name字段为数组时的处理问题，确保包含HTML标签的名称能够正确显示
+- 🔍 表格搜索功能增强：修改表格搜索框，支持搜索表格的所有内容，而不仅仅是id和name
+- 🛠️ 代码优化：修复了configManager重复声明的问题，改进了错误处理机制
+ - ℹ️ 表格属性悬浮提示：为表格各属性新增悬浮提示，
+- 🔧 开发者模式状态管理：优化开发者模式状态管理，
+- 📝 优化文本系统：显示更加简洁，友好
 
 ## 环境要求（强烈建议）
 
@@ -152,52 +135,29 @@ python -m http.server 8000
 3. 选择「竖列式布局」或「横列式布局」
 4. 布局将自动更新，无需刷新页面
 
-## 项目结构
-
-```
-学生时代模组兼容分析工具/
-├── js/
-│   ├── core/
-│   │   ├── config.js          # 配置管理
-│   │   ├── idDatabase.js      # ID类型实时数据库
-│   │   ├── renderer.js        # 结果渲染模块
-│   │   └── utils.js           # 工具函数
-│   ├── analyzer.js           # 分析器模块
-│   ├── app.js                # 主应用逻辑
-│   ├── script.js             # 辅助脚本
-│   └── uploader.js           # 文件上传模块
-├── lib/                      # 第三方库和配置
-│   ├── chart.umd.min.js      # Chart.js 本地库
-│   └── idTypelib.json        # 类型配置文件
-├── localization/
-│   └── zh-cn/                # 中文本地化文件
-│       ├── attributeCN.json
-│       └── attributeKeyDesc.json
-├── resources/                # 资源文件
-│   ├── bg.jpg
-│   └── icon.jpg
-├── TestMod/                  # 测试用模组
-├── config.jsonc              # 应用配置文件
-├── index.html                # 主页面
-├── test-database.html        # 数据库测试页面
-├── README.md                 # 项目说明文档
-├── start_server.bat          # Windows启动脚本
-├── start_server.py           # Python启动脚本
-├── start_server.sh           # Linux/macOS启动脚本
-└── style.css                 # 样式文件
-```
-
-## 技术栈
-
-- **前端框架**：原生JavaScript (ES6+)
-- **样式**：CSS3 (使用CSS变量实现主题切换)
-- **数据可视化**：Chart.js
-- **数据处理**：JavaScript原生JSON解析
-- **数据库**：ID类型实时数据库（基于JavaScript Map实现）
-- **服务器**：Python内置HTTP服务器
-- **开发环境**：任意现代浏览器
-
 ## 更新日志
+
+### v0.4.1 (2026-01-30)
+- ⚙️ 配置管理优化
+  - 修改了config.js中的loadConfig方法，改变了配置加载的优先级顺序
+  - 现在会先合并默认配置和文件配置，确保文件配置中的所有项都被加载
+  - 然后合并用户配置，用户配置会覆盖文件配置中的非应用信息项
+  - 最后确保应用信息和开发者密码始终从文件配置中读取
+
+- 📝 数据处理优化
+  - 修改了idDatabase.js中的processData方法，添加了对name字段为数组的处理
+  - 当name字段是数组时，会取数组的第一个元素作为nameValue
+  - 确保包含HTML标签的名称能够正确显示
+
+- 🔍 表格搜索功能增强
+  - 修改了renderer.js中的performSearch函数，更新了竖列式布局的搜索逻辑
+  - 现在会搜索整个卡片的所有内容，而不仅仅是id和name
+  - 提高了搜索的灵活性和准确性
+
+- 🛠️ 代码优化
+  - 修复了configManager重复声明的问题
+  - 改进了错误处理机制，提高了系统的稳定性
+  - 优化了配置验证逻辑，确保所有配置项都被正确验证
 
 ### v0.4.0 (2026-01-29)
 - 🗃️ ID类型实时数据库
@@ -225,6 +185,13 @@ python -m http.server 8000
   - 添加了霓虹灯辉光效果，使进度显示更加醒目
   - 为不同状态（加载中、成功、错误）设计了专属的辉光效果
   - 优化了暗夜模式下的视觉效果
+
+- 📝 Rules规则处理
+  - 支持*Rules类型的文本替换，能够处理多个规则数组
+  - 支持包含小数和负数的规则数组
+  - 根据规则文件生成友好的文本描述
+  - 实现了规则文件的预加载和缓存机制，提高性能
+  - 修复了同步XMLHttpRequest的弃用警告
 
 - 🛠️ 代码优化
   - 修改了config.js，添加了加载idTypelib.json的功能

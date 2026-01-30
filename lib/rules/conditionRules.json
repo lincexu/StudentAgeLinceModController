@@ -111,6 +111,15 @@
                     1
                 ],
                 "desc": "当前主角生日"
+            },
+            "currentDate": {
+                "rule": [
+                    2,
+                    11,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "当前日期在{value1}年{value2}月"
             }
         }
     },
@@ -157,17 +166,17 @@
                 "rule": [
                     3,
                     3,
-                    "talkID"
+                    "talkId"
                 ],
-                "desc": "对话{talkID}已发生"
+                "desc": "对话{talkId}已发生"
             },
             "evtDialogNotOccurred": {
                 "rule": [
                     3,
                     -3,
-                    "talkID"
+                    "talkId"
                 ],
-                "desc": "对话{talkID}未发生"
+                "desc": "对话{talkId}未发生"
             },
             "evtOr": {
                 "rule": [
@@ -209,53 +218,53 @@
                 "rule": [
                     3,
                     3,
-                    "talkID1",
-                    "talkID2"
+                    "talkId1",
+                    "talkId2"
                 ],
-                "desc": "对话{talkID1}或{talkID2}已发生"
+                "desc": "对话{talkId1}或{talkId2}已发生"
             },
             "evtOrDialogNotOccurred": {
                 "rule": [
                     3,
                     -3,
-                    "talkID1",
-                    "talkID2"
+                    "talkId1",
+                    "talkId2"
                 ],
-                "desc": "对话{talkID1}或{talkID2}未发生"
+                "desc": "对话{talkId1}或{talkId2}未发生"
             },
             "evtDialogOccurredInThisRound": {
                 "rule": [
                     3,
                     30,
-                    "talkID"
+                    "talkId"
                 ],
-                "desc": "本回合已发生对话{talkID}"
+                "desc": "本回合已发生对话{talkId}"
             },
             "evtDialogNotOccurredInThisRound": {
                 "rule": [
                     3,
                     -30,
-                    "talkID"
+                    "talkId"
                 ],
-                "desc": "本回合未发生对话{talkID}"
+                "desc": "本回合未发生对话{talkId}"
             },
             "evtOrDialogOccurredInThisRound": {
                 "rule": [
                     3,
                     30,
-                    "talkID1",
-                    "talkID2"
+                    "talkId1",
+                    "talkId2"
                 ],
-                "desc": "本回合已发生对话{talkID1}或{talkID2}"
+                "desc": "本回合已发生对话{talkId1}或{talkId2}"
             },
             "evtOrDialogNotOccurredInThisRound": {
                 "rule": [
                     3,
                     -30,
-                    "talkID1",
-                    "talkID2"
+                    "talkId1",
+                    "talkId2"
                 ],
-                "desc": "本回合未发生对话{talkID1}或{talkID2}"
+                "desc": "本回合未发生对话{talkId1}或{talkId2}"
             }
         }
     },
@@ -268,58 +277,58 @@
                 "rule": [
                     4,
                     1,
-                    "attrId",
+                    "PersonAttrId",
                     "value"
                 ],
-                "desc": "属性{attrId}大于{value}"
+                "desc": "属性{PersonAttrId}大于{value}"
             },
             "attrLessThan": {
                 "rule": [
                     4,
                     2,
-                    "attrId",
+                    "PersonAttrId",
                     "value"
                 ],
-                "desc": "属性{attrId}小于{value}"
+                "desc": "属性{PersonAttrId}小于{value}"
             },
             "attrBetween": {
                 "rule": [
                     4,
                     3,
-                    "attrId",
+                    "PersonAttrId",
                     "value1",
                     "value2"
                 ],
-                "desc": "属性{attrId}在{value1}到{value2}之间"
+                "desc": "属性{PersonAttrId}在{value1}到{value2}之间"
             },
             "attrGreaterThanOrEqualNPC": {
                 "rule": [
                     4,
                     40,
                     1,
-                    "attrId",
-                    "personID"
+                    "PersonAttrId",
+                    "personId"
                 ],
-                "desc": "主角的{attrId}属性≥人物{personID}的{attrId}属性"
+                "desc": "主角的{PersonAttrId}属性≥人物{personId}的{PersonAttrId}属性"
             },
             "attrLessThanOrEqual": {
                 "rule": [
                     4,
                     40,
                     -1,
-                    "attrId",
-                    "personID"
+                    "PersonAttrId",
+                    "personId"
                 ],
-                "desc": "主角的{attrId}属性≤人物{personID}的{attrId}属性"
+                "desc": "主角的{PersonAttrId}属性≤人物{personId}的{PersonAttrId}属性"
             },
             "attrGreaterThanOrEqual": {
                 "rule": [
                     4,
                     30,
-                    "attrID",
+                    "PersonAttrId",
                     "value"
                 ],
-                "desc": "主角的{attrID}属性等级≥{value}"
+                "desc": "主角的{PersonAttrId}属性等级≥{value}"
             }
 
         }
@@ -381,36 +390,36 @@
                 "rule": [
                     7,
                     0,
-                    "personID",
-                    "RelationTypID"
+                    "personId",
+                    "RelationTypId"
                 ],
-                "desc": "与{personID}是{RelationTypID}关系"
+                "desc": "与{personId}是{RelationTypId}关系"
             },
             "NpcFavoritismGreaterThanOrEqual":{
                 "rule": [
                     7,
                     1,
-                    "personID",
+                    "personId",
                     "value"
                 ],
-                "desc": "与{personID}的好感≥{value}"
+                "desc": "与{personId}的好感≥{value}"
             },
             "NpcFavoritismLessThanOrEqual":{
                 "rule": [
                     7,
                     -1,
-                    "personID",
+                    "personId",
                     "value"
                 ],
-                "desc": "与{personID}的好感≤{value}"
+                "desc": "与{personId}的好感≤{value}"
             },
             "NpcIsFavoritismHighestAsexual":{
                 "rule": [
                     7,
                     22,
-                    "personID"
+                    "personId"
                 ],
-                "desc": "与{personID}是好感最高的异性"
+                "desc": "与{personId}是好感最高的异性"
             }
         }
     },
@@ -423,17 +432,17 @@
                 "rule": [
                     8,
                     1,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "主角的状态{personStateID}"
+                "desc": "主角的状态{personStateId}"
             },
             "statusNot":{
                 "rule": [
                     8,
                     -1,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "主角未拥有状态{personStateID}"
+                "desc": "主角未拥有状态{personStateId}"
             }
         }
     },
@@ -446,10 +455,10 @@
                 "rule": [
                     10,
                     1,
-                    "knowledgeID",
+                    "knowledgeId",
                     "value"
                 ],
-                "desc": "科目{knowledgeID}的预估分≥{value}"
+                "desc": "科目{knowledgeId}的预估分≥{value}"
             },
             "cumulativeNotWriteHomeworkTimesGreaterThanOrEqual":{
                 "rule": [
@@ -486,17 +495,17 @@
                 "rule": [
                     10,
                     99,
-                    "scoreRankID"
+                    "scoreRankId"
                 ],
-                "desc": "学习段位等级≤{scoreRankID}"
+                "desc": "学习段位等级≤{scoreRankId}"
             },
             "learningLevelGreaterThanOrEqual":{
                 "rule": [
                     10,
                     100,
-                    "scoreRankID"
+                    "scoreRankId"
                 ],
-                "desc": "学习段位等级≥{scoreRankID}"
+                "desc": "学习段位等级≥{scoreRankId}"
             }
         }
     },
@@ -515,18 +524,18 @@
                     12,
                     2,
                     1,
-                    "actionID"
+                    "actionId"
                 ],
-                "desc": "主角已拥有行动{actionID}"
+                "desc": "主角已拥有行动{actionId}"
             },
             "actionTimesGreaterThanOrEqual":{
                 "rule": [
                     12,
                     1,
-                    "actionID",
+                    "actionId",
                     "value"
                 ],
-                "desc": "{actionID}已行动{value}次"
+                "desc": "{actionId}已行动{value}次"
             }
         }
     },
@@ -547,18 +556,18 @@
                 "rule": [
                     13,
                     12,
-                    "itemTypeID",
+                    "itemTypeId",
                     "value"
                 ],
-                "desc": "已阅读{value}本{itemTypeID}类型的书"
+                "desc": "已阅读{value}本{itemTypeId}类型的书"
             },
-            "readTimesGreaterThanOrEqualID":{
+            "readTimesGreaterThanOrEqualId":{
                 "rule": [
                     13,
                     2,
-                    "bookID"
+                    "bookId"
                 ],
-                "desc": "已阅读{bookID}"
+                "desc": "已阅读{bookId}"
             }
         }
     },
@@ -571,33 +580,33 @@
                 "rule": [
                     15,
                     1,
-                    "targetID"
+                    "targetId"
                 ],
-                "desc": "目标{targetID}已经完成"
+                "desc": "目标{targetId}已经完成"
             },
             "targetNotComplete":{
                 "rule": [
                     15,
                     -1,
-                    "intentID"
+                    "intentId"
                 ],
-                "desc": "目标{intentID}已经失败"
+                "desc": "目标{intentId}已经失败"
             },
             "currentTarget":{
                 "rule": [
                     15,
                     3,
-                    "intentID"
+                    "intentId"
                 ],
-                "desc": "当前拥有目标{intentID}"
+                "desc": "当前拥有目标{intentId}"
             },
             "currentTargetNotComplete":{
                 "rule": [
                     15,
                     -3,
-                    "intentID"
+                    "intentId"
                 ],
-                "desc": "当前未拥有目标{intentID}"
+                "desc": "当前未拥有目标{intentId}"
             }
         }
     },
@@ -667,18 +676,18 @@
                     52,
                     2,
                     1,
-                    "personID"
+                    "personId"
                 ],
-                "desc": "人物{personID}是主角的恋人"
+                "desc": "人物{personId}是主角的恋人"
             },
             "Npc不是主角的恋人":{
                 "rule": [
                     52,
                     2,
                     -1,
-                    "personID"
+                    "personId"
                 ],
-                "desc": "人物{personID}不是主角的恋人"
+                "desc": "人物{personId}不是主角的恋人"
             }
         }
     },
@@ -691,25 +700,25 @@
                 "rule": [
                     60,
                     1,
-                    "itemID"
+                    "itemId"
                 ],
-                "desc": "已获得物品{itemID}"
+                "desc": "已获得物品{itemId}"
             },
             "obtainItemNot":{
                 "rule": [
                     60,
                     -1,
-                    "itemID"
+                    "itemId"
                 ],
-                "desc": "未获得物品{itemID}"
+                "desc": "未获得物品{itemId}"
             },
             "obtainBook":{
                 "rule": [
                     60,
                     2,
-                    "bookID"
+                    "bookId"
                 ],
-                "desc": "已获得书籍{bookID}"
+                "desc": "已获得书籍{bookId}"
             }
         }
     },

@@ -1,5 +1,0 @@
-{
-    "rule":{
-        "keepOrigin": ["index","text","number","path",""]
-    }
-}

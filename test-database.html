@@ -237,13 +237,8 @@
                 return;
             }
             
-            if (!idDatabase.initialized) {
-                resultEl.className = 'test-result error';
-                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
-                return;
-            }
-            
             try {
+                // 尝试查询，即使数据库未初始化也允许查询
                 const data = idDatabase.query(type, id);
                 resultEl.className = 'test-result success';
                 resultEl.textContent = `查询结果 (${type}: ${id}):\n\n`;
@@ -259,12 +254,6 @@
         function testClear() {
             const resultEl = document.getElementById('op-result');
             
-            if (!idDatabase.initialized) {
-                resultEl.className = 'test-result error';
-                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
-                return;
-            }
-            
             try {
                 idDatabase.clear();
                 resultEl.className = 'test-result success';
@@ -279,12 +268,6 @@
         // 测试重新加载数据
         async function testReload() {
             const resultEl = document.getElementById('op-result');
-            
-            if (!idDatabase.initialized) {
-                resultEl.className = 'test-result error';
-                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
-                return;
-            }
             
             resultEl.textContent = '正在重新加载数据...';
             
@@ -350,13 +333,8 @@
                 return;
             }
             
-            if (!idDatabase.initialized) {
-                resultEl.className = 'test-result error';
-                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
-                return;
-            }
-            
             try {
+                // 尝试查询，即使数据库未初始化也允许查询
                 const data = idDatabase.query(type, id);
                 if (data) {
                     resultEl.className = 'test-result success';
@@ -388,13 +366,8 @@
                 return;
             }
             
-            if (!idDatabase.initialized) {
-                resultEl.className = 'test-result error';
-                resultEl.textContent = '数据库未初始化，请先执行初始化测试！';
-                return;
-            }
-            
             try {
+                // 尝试查询，即使数据库未初始化也允许查询
                 const idMap = idDatabase.query(type);
                 const matchingItems = [];
                 
