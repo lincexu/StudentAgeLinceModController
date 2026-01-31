@@ -19,7 +19,6 @@
             "name": "类型",
             "desc": "物品类型，影响使用方式",
             "rule": "ItemTypeId"
-
         },
         "itemTag": {
             "name": "标签",
@@ -218,7 +217,7 @@
         "beginTime": {
             "name": "开始时间",
             "desc": "事件开始时间",
-            "rule": "number"
+            "rule": "dataReplace"
         },
         "bg": {
             "name": "背景",
@@ -313,7 +312,7 @@
         "type": {
             "name": "类型",
             "desc": "事件类型",
-            "rule": "text"
+            "rule": "actionTypeId"
         },
         "unlock": {
             "name": "解锁",
@@ -339,7 +338,7 @@
         }
     },
     "AudioKey": {
-                "id": {
+        "id": {
             "name": "ID",
             "desc": "音频id，七位数字组成，1XXXXXX",
             "rule": "index"
@@ -370,17 +369,17 @@
             "rule": "text"
         },
         "uiType": {
-            "name": "Ui Type",
+            "name": "UI类型",
             "desc": "未知",
             "rule": "text"
         },
         "url": {
-            "name": "Url",
-            "desc": "音频Url",
+            "name": "路径",
+            "desc": "音频路径",
             "rule": "path"
         },
         "volumn": {
-            "name": "Volumn",
+            "name": "音量",
             "desc": "音频音量",
             "rule": "number"
         }
@@ -481,7 +480,7 @@
         "type": {
             "name": "类型",
             "desc": "未知",
-            "rule": "ItemTagId"
+            "rule": "ItemTypeId"
         },
         "usingEffect": {
             "name": "使用效果",
@@ -934,6 +933,16 @@
         }
     },
     "PersonGrowKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "focusAttrId": {
+            "name": "关注属性ID",
+            "desc": "未知",
+            "rule": "text"
+        },
         "ItemPref": {
             "name": "物品偏好",
             "desc": "未知",
@@ -949,20 +958,10 @@
             "desc": "未知",
             "rule": "text"
         },
-        "focusAttrId": {
-            "name": "关注属性ID",
-            "desc": "未知",
-            "rule": "text"
-        },
         "grow": {
             "name": "成长",
             "desc": "未知",
             "rule": "text"
-        },
-        "id": {
-            "name": "ID",
-            "desc": "未知",
-            "rule": "index"
         },
         "items": {
             "name": "物品列表",

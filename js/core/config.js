@@ -101,7 +101,7 @@ class ConfigManager {
             const response = await fetch('lib/idTypeKeys.json');
             if (response.ok) {
                 this.idTypeKeys = await response.json();
-                console.log('[Config] 从idTypeKeys.json加载属性定义成功');
+    
                 return true;
             } else {
                 console.warn('[Config] 无法加载idTypeKeys.json，使用默认属性定义');
@@ -123,7 +123,7 @@ class ConfigManager {
             const response = await fetch('lib/idTypelib.json');
             if (response.ok) {
                 this.idTypelib = await response.json();
-                console.log('[Config] 从idTypelib.json加载类型配置成功');
+    
                 return true;
             } else {
                 console.warn('[Config] 无法加载idTypelib.json，使用默认配置');
@@ -145,7 +145,7 @@ class ConfigManager {
     verifyDeveloperPassword(password) {
         // 开发者模式密码（可以通过配置文件修改）
         const devPassword = this.get('developerPassword') || "salmc-dev-2024";
-        console.log('[Config] 验证开发者密码:', password, 'vs', devPassword);
+
         return password === devPassword;
     }
     
@@ -209,25 +209,25 @@ class ConfigManager {
             
             // 1. 尝试从配置文件加载最新配置
             try {
-                console.log('[Config] 尝试从配置文件加载最新配置');
+
                 const response = await fetch('config.jsonc', {
                     cache: 'no-cache'
                 });
                 if (response.ok) {
                     const jsoncText = await response.text();
                     fileConfig = this.parseJSONC(jsoncText);
-                    console.log('[Config] 从配置文件加载配置成功:', fileConfig);
+
                 } else {
-                    console.log('[Config] 配置文件加载失败');
+
                 }
             } catch (error) {
-                console.log('[Config] 无法加载配置文件:', error.message);
+
             }
             
             // 2. 从localStorage加载用户配置
             const savedConfig = localStorage.getItem('appConfig');
             if (savedConfig) {
-                console.log('[Config] 从localStorage加载用户配置');
+
                 config = JSON.parse(savedConfig);
             }
             
@@ -262,13 +262,13 @@ class ConfigManager {
             // 7. 加载idTypelib.json文件
             await this.loadIdTypelib();
             
-            console.log('[Config] 配置加载成功:', this.config);
+
             return this.config;
         } catch (error) {
             console.error('[Config] 加载配置失败:', error);
             // 使用默认配置
             this.config = { ...this.defaultConfig };
-            console.log('[Config] 使用默认配置:', this.config);
+
             
             // 尝试加载idTypeKeys.json文件
             try {

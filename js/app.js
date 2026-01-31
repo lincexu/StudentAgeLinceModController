@@ -349,7 +349,7 @@ class ModEventApp {
                     const config = JSON.parse(cleanedJson);
                     const version = config.version || this.config.version || '0.2.0';
                     versionElement.textContent = `Student Age LMC v${version}`;
-                    console.log('版本信息更新后:', versionElement.textContent);
+
                     return;
                 }
             } catch (error) {
@@ -359,7 +359,7 @@ class ModEventApp {
             //  fallback to current config
             const version = this.config.version || '0.2.0';
             versionElement.textContent = `Student Age LMC v${version}`;
-            console.log('使用fallback版本信息:', versionElement.textContent);
+
         }
     }
     
@@ -902,7 +902,7 @@ class ModEventApp {
             }
         }
         
-        console.log('设置已保存:', this.config);
+
     }
     
     /**
@@ -921,7 +921,7 @@ class ModEventApp {
         // 保存配置
         this.saveConfig();
         
-        console.log('设置已重置为默认值:', this.config);
+
     }
 
     /**

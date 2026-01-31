@@ -31,8 +31,10 @@ class ResultRenderer {
                 this.rulesCache['effectRules'] = effectRules;
             }
             
-            // 预加载其他规则文件
-            const ruleFiles = ['conditionRules', 'itemTagRules', 'sexRules', 'costReplace', 'Replace'];
+            // 获取rule目录下的所有文件
+            const ruleFiles = await this.getRuleFiles();
+            
+            // 预加载规则文件
             for (const ruleFile of ruleFiles) {
                 const rules = await this.loadRuleFile(ruleFile);
                 if (rules) {
@@ -42,6 +44,42 @@ class ResultRenderer {
         } catch (error) {
             console.error('预加载规则文件出错:', error);
         }
+    }
+    
+    /**
+     * 获取rule目录下所有带Rules的文件
+     * @returns {Promise<Array<string>>} 规则文件名称列表
+     */
+    async getRuleFiles() {
+        try {
+            // 发送请求获取目录内容
+            const response = await fetch('lib/rules/');
+            if (response.ok) {
+                const dirContent = await response.text();
+                
+                // 提取文件名
+                const fileNames = [];
+                const regex = /href="([^"\/]+\.json)"/g;
+                let match;
+                
+                while ((match = regex.exec(dirContent)) !== null) {
+                    const fileName = match[1];
+                    // 筛选出带Rules的文件
+                    if (fileName.includes('Rules') || fileName.includes('Replace')) {
+                        // 移除.json后缀
+                        const ruleName = fileName.replace('.json', '');
+                        fileNames.push(ruleName);
+                    }
+                }
+                
+                return fileNames;
+            }
+        } catch (error) {
+            console.error('获取规则文件列表出错:', error);
+        }
+        
+        // 失败时返回默认文件列表
+        return ['conditionRules', 'itemTagRules', 'sexRules', 'costReplace', 'Replace', 'ruleReplace'];
     }
     
     /**
@@ -706,21 +744,14 @@ class ResultRenderer {
                                         // 直接使用typeConfig中的keyList
                                         let keyName = typeConfig.keyList;
                                         
-                                        // 调试信息
-                                        console.log('[Renderer] 处理类型:', type);
-                                        console.log('[Renderer] typeConfig:', typeConfig);
-                                        console.log('[Renderer] keyName:', keyName);
-                                        
                                         // 如果没有找到对应的keyList，使用默认命名规则
                                         if (!keyName) {
                                             // 处理带下划线的类型名称，生成正确的驼峰命名
                                             const camelCaseType = type.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
                                             keyName = `${camelCaseType.charAt(0).toUpperCase() + camelCaseType.slice(1)}Key`;
-                                            console.log('[Renderer] 使用默认命名规则生成keyName:', keyName);
                                         }
                                         
                                         const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
-                                        console.log('[Renderer] idTypeKeyDef:', idTypeKeyDef);
                                         
                                         // 收集所有唯一的key（用于验证）
                                         const allKeys = new Set();
@@ -760,167 +791,205 @@ class ResultRenderer {
                                         const idTypeContent = () => {
                                             // 渲染竖列式布局
                                             if (tableLayout === 'vertical') {
+                                                const fullItems = items;
+                                                const itemsPerPage = 50;
                                                 return `
-                                                <div class="vertical-table-container">
-                                                    ${items.map((item, itemIndex) => {
-                                                        const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
-                                                        return `
-                                                        <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}">
-                                                            <div class="card-header">
-                                                                <div class="card-title">
-                                                                    ${item.name || item.title || item.id}
-                                                                </div>
-                                                                <div class="card-status">
-                                                                    <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
-                                                                        ${isDuplicate ? '重复' : '唯一'}
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="vertical-table-rows">
-                                                                    ${sortedKeys.map((key, index) => {
-                                                                        let value = item[key];
-                                                                        // 如果是名称相关列，且当前值为undefined，尝试使用另一个名称字段
-                                                                        if (value === undefined && (key === 'name' || key === 'title')) {
-                                                                            value = key === 'name' ? item.title : item.name;
-                                                                        }
-                                                                        
-                                                                        // 保存原始值用于鼠标悬浮显示
-                                                                        const originalValue = value;
-                                                                        
-                                                                        // 获取当前key对应的rule属性
-                                                                        let rule = null;
-                                                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
-                                                                            rule = idTypeKeyDef[key].rule;
-                                                                        }
-                                                                        
-                                                                        // 应用ID替换功能
-                                                                        let displayValue = value;
-                                                                        if (rule) {
-                                                                            if (typeof value === 'object' && value !== null) {
-                                                                                // 如果是对象，尝试JSON.stringify后替换
-                                                                                try {
-                                                                                    const jsonString = JSON.stringify(value);
-                                                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
-                                                                                } catch (e) {
-                                                                                    // 忽略错误，使用原始值
+                                                <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${JSON.stringify(fullItems).replace(/"/g, '&quot;')}'>
+                                                    <div class="vertical-table-container" style="overflow-y: auto; max-height: 600px;">
+                                                        ${fullItems.slice(0, itemsPerPage).map((item, itemIndex) => {
+                                                            const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
+                                                            return `
+                                                            <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}" data-index="${itemIndex}">
+                                                                <div class="card-header">
+                                                                    <div class="card-title">
+                                                                        ${sortedKeys.length > 0 ? (() => {
+                                                                            // 尝试从sortedKeys中获取第一个非空值作为标题
+                                                                            for (const key of sortedKeys) {
+                                                                                if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
+                                                                                    return item[key];
                                                                                 }
-                                                                            } else {
-                                                                                // 直接替换
-                                                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
                                                                             }
-                                                                        }
-                                                                        
-                                                                        // 获取属性的中文名称
-                                                                        let attributeName = key;
-                                                                        if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
-                                                                            attributeName = idTypeKeyDef[key].name;
-                                                                            console.log('[Renderer] 为属性', key, '找到中文名称:', attributeName);
-                                                                        } else {
-                                                                            // 尝试使用configManager.getAttributeCN
-                                                                            attributeName = configManager.getAttributeCN(type, key);
-                                                                            console.log('[Renderer] 使用configManager.getAttributeCN为属性', key, '生成中文名称:', attributeName);
-                                                                        }
-                                                                        
-                                                                        return `
-                                                                        <div class="vertical-table-row">
-                                                                            <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                                            <div class="row-value" title="${JSON.stringify(originalValue)} ${rule ? `[${rule}]` : ''}">
-                                                                                ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                                            return '-';
+                                                                        })() : '-'}
+                                                                    </div>
+                                                                    <div class="card-status">
+                                                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                                            ${isDuplicate ? '重复' : '唯一'}
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="vertical-table-rows">
+                                                                        ${sortedKeys.map((key, index) => {
+                                                                            let value = item[key];
+                                                                             
+                                                                            // 保存原始值用于鼠标悬浮显示
+                                                                            const originalValue = value;
+                                                                             
+                                                                            // 获取当前key对应的rule属性
+                                                                            let rule = null;
+                                                                            if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                                rule = idTypeKeyDef[key].rule;
+                                                                            }
+                                                                             
+                                                                            // 应用ID替换功能
+                                                                            let displayValue = value;
+                                                                            if (rule) {
+                                                                                if (typeof value === 'object' && value !== null) {
+                                                                                    // 如果是对象，尝试JSON.stringify后替换
+                                                                                    try {
+                                                                                        const jsonString = JSON.stringify(value);
+                                                                                        displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                    } catch (e) {
+                                                                                        // 忽略错误，使用原始值
+                                                                                    }
+                                                                                } else {
+                                                                                    // 直接替换
+                                                                                    displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                                }
+                                                                            }
+                                                                             
+                                                                            // 获取属性的中文名称
+                                                                            let attributeName = key;
+                                                                            if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                                                attributeName = idTypeKeyDef[key].name;
+                                                                            } else {
+                                                                                // 尝试使用configManager.getAttributeCN
+                                                                                attributeName = configManager.getAttributeCN(type, key);
+                                                                            }
+                                                                             
+                                                                            return `
+                                                                            <div class="vertical-table-row">
+                                                                                <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                                                <div class="row-value" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
+                                                                                    ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        `;
-                                                                    }).join('')}
+                                                                            `;
+                                                                        }).join('')}
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            `;
+                                                        }).join('')}
+                                                    </div>
+                                                    ${fullItems.length > itemsPerPage ? `
+                                                    <div class="pagination-controls" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px; border-top: 2px solid #667eea; margin-top: 15px; background: #f8f9ff; border-radius: 0 0 8px 8px;">
+                                                        <div style="color: #666; font-size: 1rem; font-weight: 500;">
+                                                            共 ${fullItems.length} 项，每页 ${itemsPerPage} 项
                                                         </div>
-                                                        `;
-                                                    }).join('')}
+                                                        <div style="display: flex; gap: 15px; align-items: center;">
+                                                            <button class="page-btn" data-action="prev" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
+                                                                上一页
+                                                            </button>
+                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px;">第 <span class="current-page">1</span> 页</span>
+                                                            <button class="page-btn" data-action="next" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
+                                                                下一页
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    ` : ''}
                                                 </div>
                                                 `;
                                             } else {
                                                 // 渲染横列式布局
+                                                const fullItems = items;
+                                                const itemsPerPage = 50;
                                                 return `
-                                                <div style="overflow-x: auto;">
-                                                    <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: var(--bg-primary); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); table-layout: auto; border: 1px solid var(--border-color);">
-                                                        <thead style="background: var(--primary-gradient); color: white;">
-                                                            <tr>
-                                                                ${sortedKeys.map(key => {
-                                                                    // 获取属性的中文名称
-                                                                    let attributeName = key;
-                                                                    let attributeDesc = '';
-                                                                    if (idTypeKeyDef && idTypeKeyDef[key]) {
-                                                                        if (idTypeKeyDef[key].name) {
-                                                                            attributeName = idTypeKeyDef[key].name;
-                                                                        }
-                                                                        if (idTypeKeyDef[key].desc) {
-                                                                            attributeDesc = idTypeKeyDef[key].desc;
-                                                                        }
-                                                                    } else {
-                                                                        // 尝试使用configManager.getAttributeCN
-                                                                        attributeName = configManager.getAttributeCN(type, key);
-                                                                    }
-                                                                    return `
-                                                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" title="${attributeDesc}">${attributeName}</th>
-                                                                    `;
-                                                                }).join('')}
-                                                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            ${items.map((item, itemIndex) => {
-                                                                const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
-                                                                return `
-                                                                <tr style="${isDuplicate ? 'background: var(--danger-light);' : ''};">
+                                                <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${JSON.stringify(fullItems).replace(/"/g, '&quot;')}'>
+                                                    <div style="overflow-x: auto; overflow-y: auto; max-height: 600px;">
+                                                        <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: var(--bg-primary); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); table-layout: auto; border: 1px solid var(--border-color);">
+                                                            <thead style="background: var(--primary-gradient); color: white; position: sticky; top: 0; z-index: 1;">
+                                                                <tr>
                                                                     ${sortedKeys.map(key => {
-                                                                        let value = item[key];
-                                                                        // 如果是名称相关列，且当前值为undefined，尝试使用另一个名称字段
-                                                                        if (value === undefined && (key === 'name' || key === 'title')) {
-                                                                            value = key === 'name' ? item.title : item.name;
-                                                                        }
-                                                                        
-                                                                        // 保存原始值用于鼠标悬浮显示
-                                                                        const originalValue = value;
-                                                                        
-                                                                        // 获取当前key对应的rule属性
-                                                                        let rule = null;
+                                                                        // 获取属性的中文名称
+                                                                        let attributeName = key;
+                                                                        let attributeDesc = '';
                                                                         if (idTypeKeyDef && idTypeKeyDef[key]) {
-                                                                            rule = idTypeKeyDef[key].rule;
-                                                                        }
-                                                                        
-                                                                        // 应用ID替换功能
-                                                                        let displayValue = value;
-                                                                        if (rule) {
-                                                                            if (typeof value === 'object' && value !== null) {
-                                                                                // 如果是对象，尝试JSON.stringify后替换
-                                                                                try {
-                                                                                    const jsonString = JSON.stringify(value);
-                                                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
-                                                                                } catch (e) {
-                                                                                    // 忽略错误，使用原始值
-                                                                                }
-                                                                            } else {
-                                                                                // 直接替换
-                                                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                            if (idTypeKeyDef[key].name) {
+                                                                                attributeName = idTypeKeyDef[key].name;
                                                                             }
+                                                                            if (idTypeKeyDef[key].desc) {
+                                                                                attributeDesc = idTypeKeyDef[key].desc;
+                                                                            }
+                                                                        } else {
+                                                                            // 尝试使用configManager.getAttributeCN
+                                                                            attributeName = configManager.getAttributeCN(type, key);
                                                                         }
-                                                                        
                                                                         return `
-                                                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${JSON.stringify(originalValue)} ${rule ? `[${rule}]` : ''}">
-                                                                            ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
-                                                                        </td>
+                                                                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" title="${attributeDesc}">${attributeName}</th>
                                                                         `;
                                                                     }).join('')}
-                                                                    <td style="padding: 12px; border-bottom: 1px solid #eee;">
-                                                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
-                                                                            ${isDuplicate ? '重复' : '唯一'}
-                                                                        </span>
-                                                                    </td>
+                                                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
                                                                 </tr>
-                                                                `;
-                                                            }).join('')}
-                                                        </tbody>
-                                                    </table>
+                                                            </thead>
+                                                            <tbody>
+                                                                ${fullItems.slice(0, itemsPerPage).map((item, itemIndex) => {
+                                                                    const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
+                                                                    return `
+                                                                    <tr style="${isDuplicate ? 'background: var(--danger-light);' : ''};" data-index="${itemIndex}">
+                                                                        ${sortedKeys.map(key => {
+                                                                            let value = item[key];
+                                                                             
+                                                                            // 保存原始值用于鼠标悬浮显示
+                                                                            const originalValue = value;
+                                                                             
+                                                                            // 获取当前key对应的rule属性
+                                                                            let rule = null;
+                                                                            if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                                rule = idTypeKeyDef[key].rule;
+                                                                            }
+                                                                             
+                                                                            // 应用ID替换功能
+                                                                            let displayValue = value;
+                                                                            if (rule) {
+                                                                                if (typeof value === 'object' && value !== null) {
+                                                                                    // 如果是对象，尝试JSON.stringify后替换
+                                                                                    try {
+                                                                                        const jsonString = JSON.stringify(value);
+                                                                                        displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                    } catch (e) {
+                                                                                        // 忽略错误，使用原始值
+                                                                                    }
+                                                                                } else {
+                                                                                    // 直接替换
+                                                                                    displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                                }
+                                                                            }
+                                                                             
+                                                                            return `
+                                                                            <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
+                                                                                ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                                            </td>
+                                                                            `;
+                                                                        }).join('')}
+                                                                        <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                                                            <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                                                ${isDuplicate ? '重复' : '唯一'}
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    `;
+                                                                }).join('')}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    ${fullItems.length > itemsPerPage ? `
+                                                    <div class="pagination-controls" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px; border-top: 2px solid #667eea; margin-top: 15px; background: #f8f9ff; border-radius: 0 0 8px 8px;">
+                                                        <div style="color: #666; font-size: 1rem; font-weight: 500;">
+                                                            共 ${fullItems.length} 项，每页 ${itemsPerPage} 项
+                                                        </div>
+                                                        <div style="display: flex; gap: 15px; align-items: center;">
+                                                            <button class="page-btn" data-action="prev" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
+                                                                上一页
+                                                            </button>
+                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px;">第 <span class="current-page">1</span> 页</span>
+                                                            <button class="page-btn" data-action="next" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
+                                                                下一页
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    ` : ''}
                                                 </div>
                                                 `;
                                             }
@@ -1015,6 +1084,7 @@ class ResultRenderer {
             // 初始化搜索功能，确保DOM元素完全加载
             setTimeout(() => {
                 this.initSearchFunctionality();
+                this.initVirtualScroll();
             }, 100);
         }, 0);
     }
@@ -1114,15 +1184,9 @@ class ResultRenderer {
         }
         // 检查rule是否为*Replace类型
         else if (rule && rule.endsWith('Replace')) {
-            // 尝试从缓存中获取规则文件
-            const rulesData = this.rulesCache[rule];
-            if (rulesData) {
-                return this.processReplaceSync(text, rulesData, rule);
-            }
-            
-            // 如果缓存中没有，返回原始文本
-            // 规则文件会在后台预加载，下次渲染时会使用缓存
-            return text;
+            // 直接调用processReplaceSync，传入null作为rulesData
+            // processReplaceValues会从ruleReplace文件中获取规则配置
+            return this.processReplaceSync(text, null, rule);
         }
         
         return text;
@@ -1198,8 +1262,14 @@ class ResultRenderer {
             return values.toString();
         }
         
-        // 获取规则配置
-        const ruleConfig = rulesData[ruleName];
+        // 获取规则配置，优先从ruleReplace文件中获取
+        let ruleConfig = null;
+        if (this.rulesCache['ruleReplace'] && this.rulesCache['ruleReplace'][ruleName]) {
+            ruleConfig = this.rulesCache['ruleReplace'][ruleName];
+        } else if (rulesData && rulesData[ruleName]) {
+            ruleConfig = rulesData[ruleName];
+        }
+        
         if (!ruleConfig || !ruleConfig.rule || !ruleConfig.desc) {
             return values.toString();
         }
@@ -1225,9 +1295,9 @@ class ResultRenderer {
                     if (name) {
                         desc = desc.replace(`{${ruleKey}}`, name);
                     }
-                } else if (ruleKey === 'value') {
-                    // 直接替换value占位符
-                    desc = desc.replace('{value}', value);
+                } else {
+                    // 直接替换占位符
+                    desc = desc.replace(`{${ruleKey}}`, value);
                 }
             }
         });
@@ -1396,6 +1466,260 @@ class ResultRenderer {
     }
     
     /**
+     * 初始化虚拟滚动功能
+     */
+    initVirtualScroll() {
+        // 分页按钮点击事件处理函数
+        const handlePageClick = (e) => {
+            const button = e.target.closest('.page-btn');
+            if (!button) return;
+            
+            const action = button.dataset.action;
+            const container = button.closest('.virtual-scroll-container');
+            const type = container.dataset.type;
+            const totalItems = parseInt(container.dataset.total);
+            const pageSize = parseInt(container.dataset.pageSize);
+            let currentPage = parseInt(container.dataset.currentPage) || 1;
+            
+            // 计算总页数
+            const totalPages = Math.ceil(totalItems / pageSize);
+            
+            // 处理上一页和下一页
+            if (action === 'prev' && currentPage > 1) {
+                currentPage--;
+            } else if (action === 'next' && currentPage < totalPages) {
+                currentPage++;
+            }
+            
+            // 更新当前页码
+            container.dataset.currentPage = currentPage;
+            container.querySelector('.current-page').textContent = currentPage;
+            
+            // 计算数据范围
+            const startIndex = (currentPage - 1) * pageSize;
+            const endIndex = Math.min(startIndex + pageSize, totalItems);
+            
+            // 显示加载提示
+            const loadingIndicator = document.createElement('div');
+            loadingIndicator.className = 'loading-indicator';
+            loadingIndicator.style.cssText = 'text-align: center; padding: 10px; color: #666; font-size: 0.9rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 8px; z-index: 10;';
+            loadingIndicator.textContent = '加载中...';
+            container.appendChild(loadingIndicator);
+            
+            // 模拟加载延迟
+            setTimeout(() => {
+                try {
+                    // 移除加载提示
+                    if (container.contains(loadingIndicator)) {
+                        container.removeChild(loadingIndicator);
+                    }
+                    
+                    // 从data-items属性中获取完整的数据源
+                    const itemsData = JSON.parse(container.dataset.items);
+                    
+                    // 计算需要加载的数据范围
+                    const startIndex = (currentPage - 1) * pageSize;
+                    const endIndex = Math.min(startIndex + pageSize, totalItems);
+                    const pageItems = itemsData.slice(startIndex, endIndex);
+                    
+                    console.log(`加载第 ${currentPage} 页数据: ${type}类型，从${startIndex}到${endIndex}`);
+                    
+                    // 获取容器中的内容区域
+                    let contentContainer;
+                    if (container.querySelector('.vertical-table-container')) {
+                        contentContainer = container.querySelector('.vertical-table-container');
+                    } else if (container.querySelector('table.horizontal-table')) {
+                        contentContainer = container.querySelector('table.horizontal-table tbody');
+                    }
+                    
+                    if (contentContainer) {
+                        // 清空当前容器内容
+                        contentContainer.innerHTML = '';
+                        
+                        // 检查当前是哪种布局
+                        if (contentContainer.classList.contains('vertical-table-container')) {
+                            // 竖列式布局
+                            const tableLayout = configManager.get().tableLayout || 'vertical';
+                            const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                            const sortedKeys = [];
+                            
+                            if (idTypeKeyDef) {
+                                Object.keys(idTypeKeyDef).forEach(key => {
+                                    sortedKeys.push(key);
+                                });
+                            } else {
+                                // 默认排序
+                                sortedKeys.push('id');
+                                if (pageItems[0] && pageItems[0].name) {
+                                    sortedKeys.push('name');
+                                } else if (pageItems[0] && pageItems[0].title) {
+                                    sortedKeys.push('title');
+                                }
+                            }
+                            
+                            // 渲染新页的数据
+                            contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                const isDuplicate = false;
+                                
+                                return `
+                                <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}" data-index="${startIndex + itemIndex}">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            ${sortedKeys.length > 0 ? (() => {
+                                                for (const key of sortedKeys) {
+                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
+                                                        return item[key];
+                                                    }
+                                                }
+                                                return '-';
+                                            })() : '-'}
+                                        </div>
+                                        <div class="card-status">
+                                            <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                ${isDuplicate ? '重复' : '唯一'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="vertical-table-rows">
+                                            ${sortedKeys.map((key, index) => {
+                                                let value = item[key];
+                                                const originalValue = value;
+                                                let rule = null;
+                                                
+                                                if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                    rule = idTypeKeyDef[key].rule;
+                                                }
+                                                
+                                                // 应用ID替换功能
+                                                let displayValue = value;
+                                                if (rule) {
+                                                    if (typeof value === 'object' && value !== null) {
+                                                        try {
+                                                            const jsonString = JSON.stringify(value);
+                                                            displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                        } catch (e) {
+                                                            // 忽略错误，使用原始值
+                                                        }
+                                                    } else {
+                                                        displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                    }
+                                                }
+                                                
+                                                // 获取属性的中文名称
+                                                let attributeName = key;
+                                                if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                    attributeName = idTypeKeyDef[key].name;
+                                                } else {
+                                                    attributeName = configManager.getAttributeCN(type, key);
+                                                }
+                                                
+                                                return `
+                                                <div class="vertical-table-row">
+                                                    <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                    <div class="row-value" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
+                                                        ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                    </div>
+                                                </div>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                            }).join('');
+                        } else if (contentContainer.tagName === 'TBODY') {
+                            // 横列式布局
+                            const tableLayout = configManager.get().tableLayout || 'horizontal';
+                            const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                            const sortedKeys = [];
+                            
+                            if (idTypeKeyDef) {
+                                Object.keys(idTypeKeyDef).forEach(key => {
+                                    sortedKeys.push(key);
+                                });
+                            } else {
+                                // 默认排序
+                                sortedKeys.push('id');
+                                if (pageItems[0] && pageItems[0].name) {
+                                    sortedKeys.push('name');
+                                } else if (pageItems[0] && pageItems[0].title) {
+                                    sortedKeys.push('title');
+                                }
+                            }
+                            
+                            // 渲染新页的数据
+                            contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                const isDuplicate = false;
+                                
+                                return `
+                                <tr style="${isDuplicate ? 'background: var(--danger-light);' : ''};" data-index="${startIndex + itemIndex}">
+                                    ${sortedKeys.map(key => {
+                                        let value = item[key];
+                                        const originalValue = value;
+                                        let rule = null;
+                                        
+                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                            rule = idTypeKeyDef[key].rule;
+                                        }
+                                        
+                                        // 应用ID替换功能
+                                        let displayValue = value;
+                                        if (rule) {
+                                            if (typeof value === 'object' && value !== null) {
+                                                try {
+                                                    const jsonString = JSON.stringify(value);
+                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                } catch (e) {
+                                                    // 忽略错误，使用原始值
+                                                }
+                                            } else {
+                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                            }
+                                        }
+                                        
+                                        return `
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
+                                            ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                        </td>
+                                        `;
+                                    }).join('')}
+                                    <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                            ${isDuplicate ? '重复' : '唯一'}
+                                        </span>
+                                    </td>
+                                </tr>
+                                `;
+                            }).join('');
+                        }
+                    }
+                    
+                } catch (error) {
+                    console.error('加载数据时出错:', error);
+                    // 确保加载指示器被移除
+                    if (container.contains(loadingIndicator)) {
+                        container.removeChild(loadingIndicator);
+                    }
+                }
+            }, 500);
+        };
+        
+        // 为所有分页按钮添加点击事件监听
+        const containers = document.querySelectorAll('.virtual-scroll-container');
+        containers.forEach(container => {
+            // 移除滚动事件监听（如果有）
+            container.removeEventListener('scroll', container._scrollHandler);
+            
+            // 添加分页按钮点击事件监听
+            const pageButtons = container.querySelectorAll('.page-btn');
+            pageButtons.forEach(button => {
+                button.addEventListener('click', handlePageClick);
+            });
+        });
+    }
+    
+    /**
      * 初始化搜索功能
      */
     initSearchFunctionality() {
@@ -1464,7 +1788,7 @@ class ResultRenderer {
                 
                 // 显示结果或空状态
                 if (searchTerm === '') {
-                    // 搜索框为空，显示所有结果
+                    // 搜索框为空，恢复虚拟滚动状态
                     items.forEach(item => {
                         item.style.display = item.classList.contains('vertical-table-card') ? 'block' : '';
                     });

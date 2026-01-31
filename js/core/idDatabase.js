@@ -74,7 +74,7 @@ class IdDatabase {
             
             // 检查是否需要自动加载默认数据
             const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
-            console.log('[IdDatabase] autoLoadDefaultData配置:', autoLoadDefaultData);
+
             
             if (!autoLoadDefaultData) {
                 // 尝试从存储中恢复数据
@@ -107,7 +107,7 @@ class IdDatabase {
                     processedTypes += Object.keys(this.idTypes).length;
                 }
             } else {
-                // 自动加载默认数据
+                // 自动加载默认数据，直接从源文件读取
                 this.updateProgress('加载默认数据...', 40);
                 await this.loadDefaultData();
                 
@@ -795,7 +795,7 @@ class IdDatabase {
         }
         
         if (expiredEntries.length > 0) {
-            console.log(`[IdDatabase] 清理了 ${expiredEntries.length} 个过期缓存项`);
+
         }
     }
     
@@ -919,12 +919,12 @@ class IdDatabase {
             if (this.database.has(type)) {
                 this.database.set(type, new Map());
                 this.sources.set(type, []);
-                console.log(`[IdDatabase] 已清空类型 ${type} 的数据`);
+
             }
         } else {
             // 清空所有类型
             this.initDatabaseStructure();
-            console.log('[IdDatabase] 已清空所有数据');
+
         }
     }
     
@@ -1076,7 +1076,7 @@ class IdDatabase {
             // 创建正则表达式，忽略大小写
             const regex = new RegExp(`^${regexPattern}$`, 'i');
             const result = regex.test(fileName);
-            console.log(`[IdDatabase] 匹配文件名: ${fileName} vs ${pattern} => ${result}`);
+
             return result;
         } catch (error) {
             console.error(`[IdDatabase] 匹配文件名出错:`, error);

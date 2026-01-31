@@ -52,9 +52,7 @@ class EventAnalyzer {
                 }
                 
                 // 调试信息
-                console.log('[Analyzer] 生成的idTypes:', this.idTypes);
                 
-                console.log('[Analyzer] 从idTypelib.json加载ID类型配置成功:', this.idTypes);
                 
                 // 重新初始化数据结构
                 this.initDataStructures();
@@ -79,7 +77,7 @@ class EventAnalyzer {
             const response = await fetch('lib/idTypeKeys.json');
             if (response.ok) {
                 this.idTypeKeys = await response.json();
-                console.log('[Analyzer] 从idTypeKeys.json加载属性定义成功');
+
                 return true;
             } else {
                 console.warn('[Analyzer] 无法加载idTypeKeys.json，使用默认属性定义');
@@ -118,27 +116,10 @@ class EventAnalyzer {
         const attributes = this.getTypeAttributes(type);
         const result = {};
         
-        // 提取id属性
-        if (data.id !== undefined) {
-            result.id = data.id;
-        }
-        
-        // 提取name属性（优先使用data中的name，然后尝试title等其他字段）
-        if (data.name !== undefined) {
-            result.name = data.name;
-        } else if (data.title !== undefined) {
-            result.name = data.title;
-        }
-        
-        // 提取icon属性
-        if (data.icon !== undefined) {
-            result.icon = data.icon;
-        }
-        
-        // 基于属性定义提取其他关键属性
+        // 基于属性定义提取关键属性
         if (attributes) {
             for (const [key, attrConfig] of Object.entries(attributes)) {
-                if (data[key] !== undefined && !result[key]) {
+                if (data[key] !== undefined) {
                     result[key] = data[key];
                 }
             }
@@ -188,7 +169,7 @@ class EventAnalyzer {
             }
         };
         
-        console.log('[Analyzer] 使用默认ID类型配置:', this.idTypes);
+
     }
     
     

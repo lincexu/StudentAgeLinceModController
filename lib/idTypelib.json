@@ -127,6 +127,10 @@
         "TalkId": {
             "name": "对话",
             "file": "TalkCfg*.json"
+        },
+        "actionType": {
+            "name": "行动类型",
+            "file": "ActionTypeCfg*.json"
         }
     },
     "listType": {

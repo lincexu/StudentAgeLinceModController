@@ -13,6 +13,6 @@
   "developerPassword": "lince",
   "opacity": 85,
   "includeOfficialContent": true,
-  "autoLoadDefaultData": false,
-  "tableLayout": "vertical"
+  "autoLoadDefaultData": true,
+  "tableLayout": "horizontal"
 }
