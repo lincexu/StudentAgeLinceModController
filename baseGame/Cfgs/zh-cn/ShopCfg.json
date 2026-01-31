@@ -1,0 +1,3407 @@
+{
+    "1": {
+        "id": 1, 
+        "group": 2412, 
+        "price": 5.0, 
+        "time": 2002, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "呦，打算写日记了？"
+    }, 
+    "2": {
+        "id": 2, 
+        "group": 2413, 
+        "price": 5.0, 
+        "time": 2077, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "呦，准备做手工了？"
+    }, 
+    "41": {
+        "id": 41, 
+        "group": 0, 
+        "price": 6.0, 
+        "time": 2077, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 99, 
+        "precondition": [
+            [
+                2.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这草莓绝对新鲜"
+    }, 
+    "42": {
+        "id": 42, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2077, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 99, 
+        "precondition": [
+            [
+                2.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这西瓜绝对新鲜"
+    }, 
+    "43": {
+        "id": 43, 
+        "group": 0, 
+        "price": 4.0, 
+        "time": 2077, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 99, 
+        "precondition": [
+            [
+                2.0, 
+                4.0, 
+                3.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这橙子绝对新鲜"
+    }, 
+    "44": {
+        "id": 44, 
+        "group": 0, 
+        "price": 3.0, 
+        "time": 2077, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 99, 
+        "precondition": [
+            [
+                2.0, 
+                4.0, 
+                4.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这甘蔗绝对新鲜"
+    }, 
+    "1001": {
+        "id": 1001, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "买了存钱罐，可要好好存钱啊"
+    }, 
+    "1011": {
+        "id": 1011, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 1012, 
+        "buyTalk": "好嘞，祝你中大奖哈！"
+    }, 
+    "1012": {
+        "id": 1012, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1013, 
+        "buyTalk": "好嘞，祝你中大奖哈！"
+    }, 
+    "1013": {
+        "id": 1013, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1014, 
+        "buyTalk": "好嘞，祝你中大奖哈！"
+    }, 
+    "1014": {
+        "id": 1014, 
+        "group": 0, 
+        "price": 12.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1015, 
+        "buyTalk": "好嘞，祝你中大奖哈！"
+    }, 
+    "1015": {
+        "id": 1015, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 10, 
+        "limcount": 10, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "好嘞，祝你中大奖哈！"
+    }, 
+    "1021": {
+        "id": 1021, 
+        "group": 0, 
+        "price": 3.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1022, 
+        "buyTalk": "嚼完的口香糖可别乱扔哈"
+    }, 
+    "1022": {
+        "id": 1022, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1023, 
+        "buyTalk": "嚼完的口香糖可别乱扔哈"
+    }, 
+    "1023": {
+        "id": 1023, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1024, 
+        "buyTalk": "嚼完的口香糖可别乱扔哈"
+    }, 
+    "1024": {
+        "id": 1024, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "嚼完的口香糖可别乱扔哈"
+    }, 
+    "1031": {
+        "id": 1031, 
+        "group": 0, 
+        "price": 3.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1032, 
+        "buyTalk": "这个划炮在水里也会响哦"
+    }, 
+    "1032": {
+        "id": 1032, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1033, 
+        "buyTalk": "这个划炮在水里也会响哦"
+    }, 
+    "1033": {
+        "id": 1033, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1034, 
+        "buyTalk": "这个划炮在水里也会响哦"
+    }, 
+    "1034": {
+        "id": 1034, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "这个划炮在水里也会响哦"
+    }, 
+    "1041": {
+        "id": 1041, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 1042, 
+        "buyTalk": "这个黄牛味道不错吧？"
+    }, 
+    "1042": {
+        "id": 1042, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1043, 
+        "buyTalk": "我也经常喝这个黄牛"
+    }, 
+    "1043": {
+        "id": 1043, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1044, 
+        "buyTalk": "黄牛喝多了不好，要试试其他饮料吗？"
+    }, 
+    "1044": {
+        "id": 1044, 
+        "group": 0, 
+        "price": 12.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1045, 
+        "buyTalk": "又是你，这么喜欢喝黄牛吗？"
+    }, 
+    "1045": {
+        "id": 1045, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 10, 
+        "limcount": 10, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "还是你，难道这黄牛会上瘾吗？"
+    }, 
+    "1051": {
+        "id": 1051, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 1052, 
+        "buyTalk": "送给妈妈？不错，很孝顺"
+    }, 
+    "1052": {
+        "id": 1052, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1053, 
+        "buyTalk": "送给妈妈？不错，很孝顺"
+    }, 
+    "1053": {
+        "id": 1053, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1054, 
+        "buyTalk": "又是你啊，{0}真的很孝顺啊"
+    }, 
+    "1054": {
+        "id": 1054, 
+        "group": 0, 
+        "price": 12.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1055, 
+        "buyTalk": "还是你啊，唉，我家女儿怎么就没有这么孝顺"
+    }, 
+    "1055": {
+        "id": 1055, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 10, 
+        "limcount": 10, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "又来买贺卡了？真羡慕你妈有这么孝顺的孩子"
+    }, 
+    "1081": {
+        "id": 1081, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 1082, 
+        "buyTalk": "挑得好，这个口味最好喝了"
+    }, 
+    "1082": {
+        "id": 1082, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1083, 
+        "buyTalk": "挑得好，这个口味最好喝了"
+    }, 
+    "1083": {
+        "id": 1083, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1084, 
+        "buyTalk": "挑得好，这个口味最好喝了"
+    }, 
+    "1084": {
+        "id": 1084, 
+        "group": 0, 
+        "price": 12.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1085, 
+        "buyTalk": "挑得好，这个口味最好喝了"
+    }, 
+    "1085": {
+        "id": 1085, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 10, 
+        "limcount": 10, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "挑得好，这个口味最好喝了"
+    }, 
+    "1091": {
+        "id": 1091, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 2077, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1092, 
+        "buyTalk": "喏，你的辣条"
+    }, 
+    "1092": {
+        "id": 1092, 
+        "group": 0, 
+        "price": 7.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1093, 
+        "buyTalk": "这个辣条这么受欢迎吗？"
+    }, 
+    "1093": {
+        "id": 1093, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 2, 
+        "limcount": 2, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1094, 
+        "buyTalk": "又是你啊，这个辣条这么好吃吗？"
+    }, 
+    "1094": {
+        "id": 1094, 
+        "group": 0, 
+        "price": 12.0, 
+        "time": 2077, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 5, 
+        "limcount": 5, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 1095, 
+        "buyTalk": "{10}真能吃辣啊"
+    }, 
+    "1095": {
+        "id": 1095, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 10, 
+        "limcount": 10, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "你这么能吃辣，不是本地人吧?"
+    }, 
+    "1101": {
+        "id": 1101, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2002, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                301.0
+            ], 
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1102": {
+        "id": 1102, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2002, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1103": {
+        "id": 1103, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2002, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                301.0
+            ], 
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1104": {
+        "id": 1104, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2002, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1105": {
+        "id": 1105, 
+        "group": 0, 
+        "price": 30.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                301.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1106": {
+        "id": 1106, 
+        "group": 0, 
+        "price": 30.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1107": {
+        "id": 1107, 
+        "group": 0, 
+        "price": 30.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                301.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "1108": {
+        "id": 1108, 
+        "group": 0, 
+        "price": 30.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "霍，这海报不错啊"
+    }, 
+    "2101": {
+        "id": 2101, 
+        "group": 2101, 
+        "price": 5.0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                16.0
+            ]
+        ], 
+        "probability": 10.0, 
+        "buyTalk": "它能拼出上百种花样，记得多试试新组合"
+    }, 
+    "2102": {
+        "id": 2102, 
+        "group": 2101, 
+        "price": 5.0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                16.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "捏完记得盖紧盖子，不然一会就干了"
+    }, 
+    "2103": {
+        "id": 2103, 
+        "group": 2101, 
+        "price": 5.0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                16.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "别看它这样，用力一搓，能飞三层楼高呢"
+    }, 
+    "2201": {
+        "id": 2201, 
+        "group": 2201, 
+        "price": 15.0, 
+        "time": 2002, 
+        "discountRound": 9, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 10.0, 
+        "buyTalk": "拼图这玩意儿，我根本看不过来"
+    }, 
+    "2202": {
+        "id": 2202, 
+        "group": 2201, 
+        "price": 15.0, 
+        "time": 2002, 
+        "discountRound": 9, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "这扇子还有股竹子清香呢"
+    }, 
+    "2203": {
+        "id": 2203, 
+        "group": 2201, 
+        "price": 15.0, 
+        "time": 2002, 
+        "discountRound": 9, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                24.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "最近怎么又流行玩水枪了，这么多人买"
+    }, 
+    "2204": {
+        "id": 2204, 
+        "group": 2201, 
+        "price": 15.0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                35.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "它续航超强，能听一整天呢！"
+    }, 
+    "2301": {
+        "id": 2301, 
+        "group": 2301, 
+        "price": 40.0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                35.0
+            ]
+        ], 
+        "probability": 10.0, 
+        "buyTalk": "这东西到底咋玩啊"
+    }, 
+    "2302": {
+        "id": 2302, 
+        "group": 2301, 
+        "price": 40.0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                35.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "用完了记得再回来买哈"
+    }, 
+    "2303": {
+        "id": 2303, 
+        "group": 2301, 
+        "price": 40.0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                -100.0, 
+                35.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}眼光不错，这款悠悠球可是爆款"
+    }, 
+    "2401": {
+        "id": 2401, 
+        "group": 2401, 
+        "price": 90.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "呦，准备学象棋了？"
+    }, 
+    "2402": {
+        "id": 2402, 
+        "group": 2401, 
+        "price": 90.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "上课千万别玩，好多人都被没收啦"
+    }, 
+    "2403": {
+        "id": 2403, 
+        "group": 2401, 
+        "price": 90.0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "正版赛车，品质绝对有保障"
+    }, 
+    "2501": {
+        "id": 2501, 
+        "group": 2501, 
+        "price": 150.0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "别看贵了点，这积木可是牌子货，质量好着呢"
+    }, 
+    "2502": {
+        "id": 2502, 
+        "group": 2501, 
+        "price": 150.0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "记住了，电池仓得用螺丝刀开，省得到时候又找我"
+    }, 
+    "2503": {
+        "id": 2503, 
+        "group": 2501, 
+        "price": 150.0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "记得戴好护膝啊，多摔几下就学会了"
+    }, 
+    "2601": {
+        "id": 2601, 
+        "group": 2601, 
+        "price": 250.0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "笔要轻点戳，别使劲按，屏幕可经不起瞎划拉"
+    }, 
+    "2602": {
+        "id": 2602, 
+        "group": 2601, 
+        "price": 250.0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这把小吉他是入门款，弦软，练手不磨手指"
+    }, 
+    "2603": {
+        "id": 2603, 
+        "group": 2601, 
+        "price": 250.0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}眼光不错，这鞋真好看呐"
+    }, 
+    "3011": {
+        "id": 3011, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3012": {
+        "id": 3012, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3013": {
+        "id": 3013, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3014": {
+        "id": 3014, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3015": {
+        "id": 3015, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                303.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3016": {
+        "id": 3016, 
+        "group": 3011, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3021": {
+        "id": 3021, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3022": {
+        "id": 3022, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3023": {
+        "id": 3023, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3024": {
+        "id": 3024, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3025": {
+        "id": 3025, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3026": {
+        "id": 3026, 
+        "group": 3012, 
+        "price": 10.0, 
+        "next": 0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3031": {
+        "id": 3031, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3032": {
+        "id": 3032, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3033": {
+        "id": 3033, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3034": {
+        "id": 3034, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3035": {
+        "id": 3035, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                304.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3036": {
+        "id": 3036, 
+        "group": 3013, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3041": {
+        "id": 3041, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3042": {
+        "id": 3042, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3043": {
+        "id": 3043, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3044": {
+        "id": 3044, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3045": {
+        "id": 3045, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3046": {
+        "id": 3046, 
+        "group": 3014, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 2007, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3051": {
+        "id": 3051, 
+        "group": 3015, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3052": {
+        "id": 3052, 
+        "group": 3015, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3053": {
+        "id": 3053, 
+        "group": 3015, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3054": {
+        "id": 3054, 
+        "group": 3015, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3055": {
+        "id": 3055, 
+        "group": 3015, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2009, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3061": {
+        "id": 3061, 
+        "group": 3016, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3062": {
+        "id": 3062, 
+        "group": 3016, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3063": {
+        "id": 3063, 
+        "group": 3016, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3064": {
+        "id": 3064, 
+        "group": 3016, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "这本教辅我女儿也在用呢！"
+    }, 
+    "3065": {
+        "id": 3065, 
+        "group": 3016, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3071": {
+        "id": 3071, 
+        "group": 3017, 
+        "price": 50.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 60, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 10.0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3072": {
+        "id": 3072, 
+        "group": 3017, 
+        "price": 50.0, 
+        "next": 0, 
+        "time": 2011, 
+        "discountRound": 60, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "不错，多看名著有好处！"
+    }, 
+    "3306": {
+        "id": 3306, 
+        "group": 3301, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 2014, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                4.0, 
+                101.0, 
+                1.0, 
+                105.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3307": {
+        "id": 3307, 
+        "group": 3301, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2014, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                4.0, 
+                101.0, 
+                1.0, 
+                106.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3308": {
+        "id": 3308, 
+        "group": 3301, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2014, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                4.0, 
+                101.0, 
+                1.0, 
+                109.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3309": {
+        "id": 3309, 
+        "group": 3301, 
+        "price": 15.0, 
+        "next": 0, 
+        "time": 2014, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                4.0, 
+                101.0, 
+                1.0, 
+                110.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3310": {
+        "id": 3310, 
+        "group": 3301, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 2014, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                4.0, 
+                101.0, 
+                1.0, 
+                111.0
+            ]
+        ], 
+        "probability": 0, 
+        "buyTalk": "{10}有眼光，这是最畅销的书了！"
+    }, 
+    "3318": {
+        "id": 3318, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}怎么看这个啊？"
+    }, 
+    "3319": {
+        "id": 3319, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}怎么看这个啊？"
+    }, 
+    "3320": {
+        "id": 3320, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}怎么看这个啊？"
+    }, 
+    "3321": {
+        "id": 3321, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 3, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": "{10}怎么看这个啊？"
+    }, 
+    "4001": {
+        "id": 4001, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2001, 
+        "discountRound": 9, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4002, 
+        "buyTalk": "这个书包拉链不行，经常坏，你可要小心点"
+    }, 
+    "4002": {
+        "id": 4002, 
+        "group": 0, 
+        "price": 40.0, 
+        "time": 2077, 
+        "discountRound": 25, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4003, 
+        "buyTalk": "一分钱一分货，这书包用料一般，要看看更好的吗？"
+    }, 
+    "4003": {
+        "id": 4003, 
+        "group": 0, 
+        "price": 70.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4004, 
+        "buyTalk": "好多人都爱买这书包，我就不懂了，这颜色哪里好看了"
+    }, 
+    "4004": {
+        "id": 4004, 
+        "group": 0, 
+        "price": 100.0, 
+        "time": 2077, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "呦！{10}真阔气，我马上给你把书包装好"
+    }, 
+    "4101": {
+        "id": 4101, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4102, 
+        "buyTalk": "这表不防水，别带着洗澡啊，弄坏了不退不换！"
+    }, 
+    "4102": {
+        "id": 4102, 
+        "group": 0, 
+        "price": 40.0, 
+        "time": 2077, 
+        "discountRound": 25, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4103, 
+        "buyTalk": "这个枕头特舒服，我自己也用呢"
+    }, 
+    "4103": {
+        "id": 4103, 
+        "group": 0, 
+        "price": 100.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "{10}，骑自行车要注意安全啊"
+    }, 
+    "4201": {
+        "id": 4201, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4202, 
+        "buyTalk": "这个书架的质量很差的，要不看看别的？"
+    }, 
+    "4202": {
+        "id": 4202, 
+        "group": 0, 
+        "price": 40.0, 
+        "time": 2077, 
+        "discountRound": 25, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4203, 
+        "buyTalk": "你确定要买这个书架吗？我这还有更好的"
+    }, 
+    "4203": {
+        "id": 4203, 
+        "group": 0, 
+        "price": 70.0, 
+        "time": 2077, 
+        "discountRound": 42, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 4204, 
+        "buyTalk": "这个书架性价比最高，我逢人就推荐呢"
+    }, 
+    "4204": {
+        "id": 4204, 
+        "group": 0, 
+        "price": 100.0, 
+        "time": 2077, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "{10}有眼光，这书架除了贵没一点缺点"
+    }, 
+    "4301": {
+        "id": 4301, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2001, 
+        "discountRound": 5, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "便利贴很快就用完的，多买几个吧!"
+    }, 
+    "4302": {
+        "id": 4302, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2001, 
+        "discountRound": 17, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                13.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这计算器还有记忆功能，记得看看说明书"
+    }, 
+    "4303": {
+        "id": 4303, 
+        "group": 0, 
+        "price": 35.0, 
+        "time": 2001, 
+        "discountRound": 25, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                21.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "{10}，买了钢笔不买瓶墨水吗？"
+    }, 
+    "4304": {
+        "id": 4304, 
+        "group": 0, 
+        "price": 50.0, 
+        "time": 2001, 
+        "discountRound": 36, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                30.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "拿好喽，这是你的录音机"
+    }, 
+    "4305": {
+        "id": 4305, 
+        "group": 0, 
+        "price": 75.0, 
+        "time": 2001, 
+        "discountRound": 48, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                42.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这个台灯虽然贵了点，但是对眼睛好"
+    }, 
+    "4306": {
+        "id": 4306, 
+        "group": 0, 
+        "price": 100.0, 
+        "time": 2001, 
+        "discountRound": 54, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                48.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这个书桌特结实，怎么踩都踩不坏的！"
+    }, 
+    "4307": {
+        "id": 4307, 
+        "group": 0, 
+        "price": 130.0, 
+        "time": 2001, 
+        "discountRound": 60, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                2.0, 
+                100.0, 
+                54.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这个词典真的好用，我女儿也在用呢"
+    }, 
+    "4401": {
+        "id": 4401, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                302.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这运动服很好看，真有眼光"
+    }, 
+    "4402": {
+        "id": 4402, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "这球服很合身呐，很适合你"
+    }, 
+    "4403": {
+        "id": 4403, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "我跟你说，这球拍可结实了，怎么拍都拍不坏"
+    }, 
+    "4404": {
+        "id": 4404, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2003, 
+        "discountRound": 13, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                999.0, 
+                200.0, 
+                302.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "我这还有护膝呢，你要吗？"
+    }, 
+    "4405": {
+        "id": 4405, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2005, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "呵呵，我女儿也喜欢放风筝来着"
+    }, 
+    "4406": {
+        "id": 4406, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 2077, 
+        "discountRound": 60, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 1.0, 
+        "next": 0, 
+        "buyTalk": "你也要打算去山脚钓鱼呀？"
+    }, 
+    "4412": {
+        "id": 4412, 
+        "group": 0, 
+        "price": 40.0, 
+        "time": 2077, 
+        "discountRound": 21, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 4422, 
+        "buyTalk": null
+    }, 
+    "4422": {
+        "id": 4422, 
+        "group": 0, 
+        "price": 60.0, 
+        "time": 2077, 
+        "discountRound": 30, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": null
+    }, 
+    "6101": {
+        "id": 6101, 
+        "group": 0, 
+        "price": 8.0, 
+        "time": 2077, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "小心点拿，这磁铁可沉了"
+    }, 
+    "7301": {
+        "id": 7301, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 2077, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "这是最后一个了，你要再来晚点就没了"
+    }, 
+    "8211": {
+        "id": 8211, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8212": {
+        "id": 8212, 
+        "group": 0, 
+        "price": 15.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8213": {
+        "id": 8213, 
+        "group": 0, 
+        "price": 20.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8214": {
+        "id": 8214, 
+        "group": 0, 
+        "price": 30.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8215": {
+        "id": 8215, 
+        "group": 0, 
+        "price": 40.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8216": {
+        "id": 8216, 
+        "group": 0, 
+        "price": 60.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 2, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8221": {
+        "id": 8221, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 1, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8222": {
+        "id": 8222, 
+        "group": 0, 
+        "price": 5.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8223": {
+        "id": 8223, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "8224": {
+        "id": 8224, 
+        "group": 0, 
+        "price": 10.0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "buyTalk": null
+    }, 
+    "9031": {
+        "id": 9031, 
+        "group": 0, 
+        "price": 80.0, 
+        "time": 2077, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "{10}，你买录音笔要干嘛用？"
+    }, 
+    "9032": {
+        "id": 9032, 
+        "group": 0, 
+        "price": 80.0, 
+        "time": 2077, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 4, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [], 
+        "probability": 0, 
+        "next": 0, 
+        "buyTalk": "现在的小孩，还有钱买掌机，哪像我们当年……"
+    }, 
+    "69303": {
+        "id": 69303, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "运动衣就要这样，宽松舒服"
+    }, 
+    "69304": {
+        "id": 69304, 
+        "group": 0, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "休闲，你穿着正合适！"
+    }, 
+    "69305": {
+        "id": 69305, 
+        "group": 0, 
+        "price": 50.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "这衣衬得你特别有涵养！"
+    }, 
+    "69306": {
+        "id": 69306, 
+        "group": 0, 
+        "price": 60.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "我这么多顾客，就你穿这件最好看"
+    }, 
+    "69307": {
+        "id": 69307, 
+        "group": 0, 
+        "price": 70.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "一个字，帅！"
+    }, 
+    "69308": {
+        "id": 69308, 
+        "group": 0, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ], 
+            [
+                999.0, 
+                200.0, 
+                810.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "这才是潮男嘛"
+    }, 
+    "69310": {
+        "id": 69310, 
+        "group": 0, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "69703": {
+        "id": 69703, 
+        "group": 0, 
+        "price": 30.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "穿这个显得你真青春活力"
+    }, 
+    "69704": {
+        "id": 69704, 
+        "group": 0, 
+        "price": 40.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "可爱的人穿可爱的衣"
+    }, 
+    "69705": {
+        "id": 69705, 
+        "group": 0, 
+        "price": 50.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "这件很显曲线的，漂亮"
+    }, 
+    "69706": {
+        "id": 69706, 
+        "group": 0, 
+        "price": 60.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "可爱的衣可算找到它的主人了"
+    }, 
+    "69707": {
+        "id": 69707, 
+        "group": 0, 
+        "price": 70.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "酷酷的，回头率爆炸！"
+    }, 
+    "69708": {
+        "id": 69708, 
+        "group": 0, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ], 
+            [
+                999.0, 
+                200.0, 
+                810.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "还是你有眼光！"
+    }, 
+    "69709": {
+        "id": 69709, 
+        "group": 0, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ], 
+            [
+                999.0, 
+                200.0, 
+                810.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": "你穿上后像个可爱的小蛋糕"
+    }, 
+    "69711": {
+        "id": 69711, 
+        "group": 0, 
+        "price": 20.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 0, 
+        "disappearTime": 0, 
+        "type": 6, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79301": {
+        "id": 79301, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79304": {
+        "id": 79304, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79305": {
+        "id": 79305, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79306": {
+        "id": 79306, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79307": {
+        "id": 79307, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79308": {
+        "id": 79308, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79309": {
+        "id": 79309, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79310": {
+        "id": 79310, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79311": {
+        "id": 79311, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79312": {
+        "id": 79312, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79313": {
+        "id": 79313, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79314": {
+        "id": 79314, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79315": {
+        "id": 79315, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79316": {
+        "id": 79316, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79701": {
+        "id": 79701, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79704": {
+        "id": 79704, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79705": {
+        "id": 79705, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79706": {
+        "id": 79706, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79707": {
+        "id": 79707, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79708": {
+        "id": 79708, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79709": {
+        "id": 79709, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79710": {
+        "id": 79710, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79711": {
+        "id": 79711, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79712": {
+        "id": 79712, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79713": {
+        "id": 79713, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79714": {
+        "id": 79714, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79715": {
+        "id": 79715, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }, 
+    "79716": {
+        "id": 79716, 
+        "group": 0, 
+        "price": 5.0, 
+        "next": 0, 
+        "time": 0, 
+        "discountRound": 999, 
+        "disappearTime": 0, 
+        "type": 7, 
+        "maxcount": 1, 
+        "limcount": 1, 
+        "precondition": [
+            [
+                1.0, 
+                99.0, 
+                2.0
+            ]
+        ], 
+        "probability": 1.0, 
+        "buyTalk": null
+    }
+}

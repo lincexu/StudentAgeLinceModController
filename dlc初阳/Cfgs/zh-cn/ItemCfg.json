@@ -1,0 +1,272 @@
+{
+    "7101": {
+        "id": 7101, 
+        "rarity": 1, 
+        "name": "机械键盘", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_jxjp", 
+        "desc": "陈心慈打多份工才为你送的生日礼物", 
+        "talkId": 0
+    }, 
+    "7102": {
+        "id": 7102, 
+        "rarity": 1, 
+        "name": "B牌耳机", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_lanyaerji", 
+        "desc": "陈心慈打多份工才为你送的生日礼物", 
+        "talkId": 0
+    }, 
+    "7103": {
+        "id": 7103, 
+        "rarity": 1, 
+        "name": "奈克球鞋", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_nkpx", 
+        "desc": "陈心慈打多份工才为你送的生日礼物", 
+        "talkId": 0
+    }, 
+    "7104": {
+        "id": 7104, 
+        "rarity": 1, 
+        "name": "《画笔的奇迹》", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_lianxianshu", 
+        "desc": "连线成画书，是陈心慈把你视为知音的证明", 
+        "talkId": 0
+    }, 
+    "7201": {
+        "id": 7201, 
+        "rarity": 1, 
+        "name": "小药瓶", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                22.0, 
+                4.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 1.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_yao", 
+        "desc": "奇怪的小药瓶", 
+        "talkId": 0
+    }, 
+    "7202": {
+        "id": 7202, 
+        "rarity": 2, 
+        "name": "迷你围巾", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 1.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_weijin", 
+        "desc": "和谢辰晖一起织的小围巾，人戴不上，但给玩偶戴正正好", 
+        "talkId": 0
+    }, 
+    "7203": {
+        "id": 7203, 
+        "rarity": 2, 
+        "name": "“荣誉队长”胸针", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_rongyuduizhang", 
+        "desc": "闪闪亮的胸针，代表着田径队全员对你的认可", 
+        "talkId": 0
+    }, 
+    "7301": {
+        "id": 7301, 
+        "rarity": 1, 
+        "name": "工具包", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_gjx", 
+        "desc": "内涵多种小工具，还送小剪刀和胶带，店里卖得最好的一款", 
+        "talkId": 0
+    }, 
+    "7302": {
+        "id": 7302, 
+        "rarity": 1, 
+        "name": "录音笔", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_luyinbi", 
+        "desc": "专业录音笔，在钓鱼比赛中跟一个空军佬换来的", 
+        "talkId": 0
+    }, 
+    "7303": {
+        "id": 7303, 
+        "rarity": 1, 
+        "name": "白头翁", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                7.0, 
+                -10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_baitouwong", 
+        "desc": "一只受伤的白头翁，需要精心的照料", 
+        "talkId": 0
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "costReplace": {
-        "rule": [
-            "personAttrId",
-            "value"
-        ],
-        "desc": "消耗{personAttrId}{value}"
-    }
-}

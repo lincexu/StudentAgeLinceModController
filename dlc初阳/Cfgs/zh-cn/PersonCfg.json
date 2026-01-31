@@ -1,0 +1,440 @@
+{
+    "4001": {
+        "id": 4001, 
+        "note": null, 
+        "name": "谢爸爸", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_xieba"
+        ], 
+        "urlParm2": [
+            -36.0, 
+            172.0, 
+            0.85
+        ], 
+        "bubbleParm2": [
+            1150.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4002": {
+        "id": 4002, 
+        "note": null, 
+        "name": "谢妈妈", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 2, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_xiema"
+        ], 
+        "urlParm2": [
+            -23.0, 
+            140.0, 
+            0.85
+        ], 
+        "bubbleParm2": [
+            1060.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4003": {
+        "id": 4003, 
+        "note": "田径队队员", 
+        "name": "王亮", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_student_zhongxue_1"
+        ], 
+        "urlParm2": [
+            0.0, 
+            184.0, 
+            0.58
+        ], 
+        "bubbleParm2": [
+            960.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4004": {
+        "id": 4004, 
+        "note": "田径队队员", 
+        "name": "刘连", 
+        "nicknames": [
+            "榴莲"
+        ], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_liulian2"
+        ], 
+        "urlParm2": [
+            100.0, 
+            150.0, 
+            1.0
+        ], 
+        "bubbleParm2": [
+            1030.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4005": {
+        "id": 4005, 
+        "note": "田径队队员", 
+        "name": "李大鹏", 
+        "nicknames": [
+            "大胖"
+        ], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_student_zhongxue_9"
+        ], 
+        "urlParm2": [
+            0.0, 
+            180.0, 
+            0.77
+        ], 
+        "bubbleParm2": [
+            960.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4006": {
+        "id": 4006, 
+        "note": "田径队队员", 
+        "name": "徐家栋", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_student_zhongxue_6"
+        ], 
+        "urlParm2": [
+            -10.0, 
+            180.0, 
+            0.6
+        ], 
+        "bubbleParm2": [
+            960.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4007": {
+        "id": 4007, 
+        "note": "陈心慈继父", 
+        "name": "郑金生", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_chenba"
+        ], 
+        "urlParm2": [
+            29.0, 
+            69.0, 
+            0.95
+        ], 
+        "bubbleParm2": [
+            1066.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4008": {
+        "id": 4008, 
+        "note": null, 
+        "name": "陈妈妈", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 2, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_chenma"
+        ], 
+        "urlParm2": [
+            25.0, 
+            178.0, 
+            0.8
+        ], 
+        "bubbleParm2": [
+            1060.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4009": {
+        "id": 4009, 
+        "note": "陈弟弟", 
+        "name": "阿弘", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 1, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [
+            "role_chendidi"
+        ], 
+        "urlParm": [
+            25.0, 
+            207.0, 
+            0.55
+        ], 
+        "bubbleParm": [
+            800.0
+        ], 
+        "url2": [], 
+        "urlParm2": [], 
+        "bubbleParm2": [], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4010": {
+        "id": 4010, 
+        "note": "文科班女同学", 
+        "name": "张依然", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 2, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_zhangyiran2"
+        ], 
+        "urlParm2": [
+            20.0, 
+            190.0, 
+            0.95
+        ], 
+        "bubbleParm2": [
+            950.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4011": {
+        "id": 4011, 
+        "note": "文科班女同学", 
+        "name": "汤婉莹", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 0, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_tanwanyin2"
+        ], 
+        "urlParm2": [
+            20.0, 
+            190.0, 
+            0.95
+        ], 
+        "bubbleParm2": [
+            950.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4012": {
+        "id": 4012, 
+        "note": "理科班男同学", 
+        "name": "辛逸辰", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 0, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_xinyichen2"
+        ], 
+        "urlParm2": [
+            0.0, 
+            200.0, 
+            0.9
+        ], 
+        "bubbleParm2": [
+            960.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4013": {
+        "id": 4013, 
+        "note": "理科班男同学", 
+        "name": "黄佑麒", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 0, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_huangyoulin2"
+        ], 
+        "urlParm2": [
+            20.0, 
+            180.0, 
+            0.9
+        ], 
+        "bubbleParm2": [
+            920.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }, 
+    "4014": {
+        "id": 4014, 
+        "note": "文科班男同学", 
+        "name": "叶衡", 
+        "nicknames": [], 
+        "init": [], 
+        "birthday": [], 
+        "gender": 0, 
+        "introduction": null, 
+        "telephone": null, 
+        "clickAudio": 0, 
+        "kzoneHeadId": 0, 
+        "url": [], 
+        "urlParm": [], 
+        "bubbleParm": [], 
+        "url2": [
+            "role_yeheng2"
+        ], 
+        "urlParm2": [
+            0.0, 
+            184.0, 
+            0.9
+        ], 
+        "bubbleParm2": [
+            960.0
+        ], 
+        "l2d": [], 
+        "l2dParm": [], 
+        "l2d2": [], 
+        "l2dParm2": []
+    }
+}

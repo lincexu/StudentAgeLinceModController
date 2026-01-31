@@ -1,1 +1,0 @@
-python talkcfg_simplifier.py -f TalkCfg #7403.json

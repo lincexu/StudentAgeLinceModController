@@ -1,0 +1,5981 @@
+{
+    "1030101": {
+        "id": 1030101, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "<sprite=70>", 
+        "comments": [
+            [
+                1030102, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030102": {
+        "id": 1030102, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1030101, 
+        "content": "<sprite=0>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030103": {
+        "id": 1030103, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "一个敢教，一个敢学", 
+        "comments": [
+            [
+                1030104, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030104": {
+        "id": 1030104, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030103, 
+        "content": "哦？", 
+        "comments": [
+            [
+                1030105, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030105": {
+        "id": 1030105, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1030103, 
+        "content": "小蕾是我们班的数码达人，真的", 
+        "comments": [
+            [
+                1030106, 
+                2
+            ], 
+            [
+                1030107, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030106": {
+        "id": 1030106, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030103, 
+        "content": "真的啊？小蕾好厉害哦", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030107": {
+        "id": 1030107, 
+        "roles": [
+            201, 
+            3
+        ], 
+        "parent": 1030103, 
+        "content": "路过抓走一只杰哥，顺手打死了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030201": {
+        "id": 1030201, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "@梁超杰，把辣鸡组长圈出来挨打，下周到咱们组了，你PPT做到哪儿了", 
+        "comments": [
+            [
+                1030202, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030202": {
+        "id": 1030202, 
+        "roles": [
+            3, 
+            3039
+        ], 
+        "parent": 1030201, 
+        "content": "卧槽忘了！", 
+        "comments": [
+            [
+                1030203, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030203": {
+        "id": 1030203, 
+        "roles": [
+            3039, 
+            3
+        ], 
+        "parent": 1030201, 
+        "content": "不是吧哥们<sprite=42>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030204": {
+        "id": 1030204, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你们组也超棒！", 
+        "comments": [
+            [
+                1030205, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030205": {
+        "id": 1030205, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030204, 
+        "content": "还好啦", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030206": {
+        "id": 1030206, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你也帮了我们组大忙，谢谢啦", 
+        "comments": [
+            [
+                1030207, 
+                2
+            ], 
+            [
+                1030208, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030207": {
+        "id": 1030207, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030206, 
+        "content": "没什么啦", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030208": {
+        "id": 1030208, 
+        "roles": [
+            3, 
+            0
+        ], 
+        "parent": 1030206, 
+        "content": "阿慈，江湖救急！", 
+        "comments": [
+            [
+                1030209, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030209": {
+        "id": 1030209, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030206, 
+        "content": "哦，好哦<sprite=38>", 
+        "comments": [
+            [
+                1030210, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030210": {
+        "id": 1030210, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 1030206, 
+        "content": "玛德有这么个组长真的丢脸丢大发了……", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030301": {
+        "id": 1030301, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "这奶茶谁送你的？<sprite=61>", 
+        "comments": [
+            [
+                1030302, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030302": {
+        "id": 1030302, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030301, 
+        "content": "干嘛啦", 
+        "comments": [
+            [
+                1030303, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030303": {
+        "id": 1030303, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1030301, 
+        "content": "不说就是有问题！", 
+        "comments": [
+            [
+                1030304, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030304": {
+        "id": 1030304, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030301, 
+        "content": "<sprite=50>才没有", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030401": {
+        "id": 1030401, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "奶茶有什么好纪念的", 
+        "comments": [
+            [
+                1030402, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030402": {
+        "id": 1030402, 
+        "roles": [
+            201, 
+            3
+        ], 
+        "parent": 1030401, 
+        "content": "杰哥，你知道操场后面有片树林不", 
+        "comments": [
+            [
+                1030403, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030403": {
+        "id": 1030403, 
+        "roles": [
+            3, 
+            201
+        ], 
+        "parent": 1030401, 
+        "content": "知道啊，你当我傻子啊", 
+        "comments": [
+            [
+                1030404, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030404": {
+        "id": 1030404, 
+        "roles": [
+            201, 
+            3
+        ], 
+        "parent": 1030401, 
+        "content": "那里凉快，你呆那儿去吧", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030405": {
+        "id": 1030405, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "好喝吗", 
+        "comments": [
+            [
+                1030406, 
+                2
+            ], 
+            [
+                1030407, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030406": {
+        "id": 1030406, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030405, 
+        "content": "好喝好喝！超好喝的<sprite=3>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030407": {
+        "id": 1030407, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030405, 
+        "content": "谢谢你", 
+        "comments": [], 
+        "options": [
+            1030408
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030408": {
+        "id": 1030408, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1030405, 
+        "content": "谢我干什么，你自己也出了钱的", 
+        "comments": [
+            [
+                1030409, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030409": {
+        "id": 1030409, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030405, 
+        "content": "谢谢你想着分我一杯啊", 
+        "comments": [
+            [
+                1030410, 
+                2
+            ], 
+            [
+                1030411, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030410": {
+        "id": 1030410, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1030405, 
+        "content": "啥？！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030411": {
+        "id": 1030411, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1030405, 
+        "content": "卧槽", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030412": {
+        "id": 1030412, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "喜欢这个口味吗", 
+        "comments": [
+            [
+                1030413, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030413": {
+        "id": 1030413, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030412, 
+        "content": "喜欢的。我还是第一次喝呢", 
+        "comments": [], 
+        "options": [
+            1030414
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030414": {
+        "id": 1030414, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1030412, 
+        "content": "第一次？", 
+        "comments": [
+            [
+                1030415, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030415": {
+        "id": 1030415, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030412, 
+        "content": "嗯", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030501": {
+        "id": 1030501, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "生日快乐，红桃粿很好吃", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030502": {
+        "id": 1030502, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "生日快乐！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030503": {
+        "id": 1030503, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "生日快乐！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030504": {
+        "id": 1030504, 
+        "roles": [
+            3050, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "生日快乐！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030505": {
+        "id": 1030505, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "生日快乐！", 
+        "comments": [
+            [
+                1030506, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030506": {
+        "id": 1030506, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030505, 
+        "content": "借这里统一回复下，谢谢祝福哦~", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030507": {
+        "id": 1030507, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "辛苦了，有没有好好休息休息？", 
+        "comments": [
+            [
+                1030508, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030508": {
+        "id": 1030508, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030507, 
+        "content": "<sprite=37>为什么要休息", 
+        "comments": [], 
+        "options": [
+            1030509
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030509": {
+        "id": 1030509, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1030507, 
+        "content": "今天是你的日子，你忙活了那么久当然要好好休息了", 
+        "comments": [
+            [
+                1030510, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030510": {
+        "id": 1030510, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1030507, 
+        "content": "这样哦。那我去乖乖休息吧，不过有什么事还是可以找我的哈", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030601": {
+        "id": 1030601, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "加一加一！我也想像彤哥那么高", 
+        "comments": [
+            [
+                1030602, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030602": {
+        "id": 1030602, 
+        "roles": [
+            112, 
+            3049
+        ], 
+        "parent": 1030601, 
+        "content": "<sprite=103>喜欢我宽厚的臂膀吗", 
+        "comments": [
+            [
+                1030603, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030603": {
+        "id": 1030603, 
+        "roles": [
+            3049, 
+            112
+        ], 
+        "parent": 1030601, 
+        "content": "喜欢喜欢！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030604": {
+        "id": 1030604, 
+        "roles": [
+            214, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我的新年愿望是我爸能突然告诉我其实他是个隐藏的富豪，这样我就不用认真读书了", 
+        "comments": [
+            [
+                1030605, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030605": {
+        "id": 1030605, 
+        "roles": [
+            3039, 
+            214
+        ], 
+        "parent": 1030604, 
+        "content": "呵，世俗的愿望", 
+        "comments": [
+            [
+                1030606, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030606": {
+        "id": 1030606, 
+        "roles": [
+            214, 
+            3039
+        ], 
+        "parent": 1030604, 
+        "content": "<sprite=88>就要世俗就要世俗", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030701": {
+        "id": 1030701, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "怎么样，没见过这么鸡贼的老师吧，还会把后面的答案给撕了", 
+        "comments": [
+            [
+                1030702, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030702": {
+        "id": 1030702, 
+        "roles": [
+            103, 
+            3039
+        ], 
+        "parent": 1030701, 
+        "content": "没见过，完全不知道为什么要撕", 
+        "comments": [
+            [
+                1030703, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030703": {
+        "id": 1030703, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 1030701, 
+        "content": "免得我们直接抄啊", 
+        "comments": [
+            [
+                1030704, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030704": {
+        "id": 1030704, 
+        "roles": [
+            103, 
+            3039
+        ], 
+        "parent": 1030701, 
+        "content": "作业当然要自己写啊", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030705": {
+        "id": 1030705, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "农村作业很少吗", 
+        "comments": [
+            [
+                1030706, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030706": {
+        "id": 1030706, 
+        "roles": [
+            103, 
+            3049
+        ], 
+        "parent": 1030705, 
+        "content": "嗯！也比较简单", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030801": {
+        "id": 1030801, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "<sprite=16>", 
+        "comments": [
+            [
+                1030802, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030802": {
+        "id": 1030802, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1030801, 
+        "content": "怎么啦", 
+        "comments": [
+            [
+                1030803, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030803": {
+        "id": 1030803, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 1030801, 
+        "content": "阿慈你被骗了", 
+        "comments": [
+            [
+                1030804, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030804": {
+        "id": 1030804, 
+        "roles": [
+            3, 
+            102
+        ], 
+        "parent": 1030801, 
+        "content": "你怎么说出来了", 
+        "comments": [
+            [
+                1030805, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030805": {
+        "id": 1030805, 
+        "roles": [
+            102, 
+            3
+        ], 
+        "parent": 1030801, 
+        "content": "被骗了当然要说", 
+        "comments": [
+            [
+                1030806, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030806": {
+        "id": 1030806, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1030801, 
+        "content": "我是在专柜买的诶，应该不会骗我吧", 
+        "comments": [
+            [
+                1030807, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030807": {
+        "id": 1030807, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 1030801, 
+        "content": "经典骗术。你没把手链给你妈吧？没有的话我明天陪你去退", 
+        "comments": [
+            [
+                1030808, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030808": {
+        "id": 1030808, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1030801, 
+        "content": "还没有还没有！谢谢小蕾！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031001": {
+        "id": 1031001, 
+        "roles": [
+            3074, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "人间小确幸", 
+        "comments": [
+            [
+                1031002, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031002": {
+        "id": 1031002, 
+        "roles": [
+            103, 
+            3074
+        ], 
+        "parent": 1031001, 
+        "content": "对呀对呀", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031101": {
+        "id": 1031101, 
+        "roles": [
+            112, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "感谢提醒", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031102": {
+        "id": 1031102, 
+        "roles": [
+            214, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我出20，能不能不印我的卷子，求求了，写不完<sprite=16>", 
+        "comments": [
+            [
+                1031103, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031103": {
+        "id": 1031103, 
+        "roles": [
+            103, 
+            214
+        ], 
+        "parent": 1031102, 
+        "content": "<sprite=45>我帮你问问老师好不", 
+        "comments": [
+            [
+                1031104, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031104": {
+        "id": 1031104, 
+        "roles": [
+            214, 
+            103
+        ], 
+        "parent": 1031102, 
+        "content": "不要！！！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031105": {
+        "id": 1031105, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "突然想起来，数学老师说要多印点数学卷子，阿慈你记一下", 
+        "comments": [
+            [
+                1031106, 
+                2
+            ], 
+            [
+                1031107, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031106": {
+        "id": 1031106, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1031105, 
+        "content": "收到！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031107": {
+        "id": 1031107, 
+        "roles": [
+            3, 
+            102
+        ], 
+        "parent": 1031105, 
+        "content": "<sprite=65>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031201": {
+        "id": 1031201, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "辛苦了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031202": {
+        "id": 1031202, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "没有阿慈，就没有红旗的不流动", 
+        "comments": [
+            [
+                1031203, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031203": {
+        "id": 1031203, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1031202, 
+        "content": "是大家一起努力的！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031204": {
+        "id": 1031204, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "还真有点舍不得这面红旗了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031301": {
+        "id": 1031301, 
+        "roles": [
+            3051, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你跟谁分一个班了？", 
+        "comments": [
+            [
+                1031302, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031302": {
+        "id": 1031302, 
+        "roles": [
+            103, 
+            3051
+        ], 
+        "parent": 1031301, 
+        "content": "{0}", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031303": {
+        "id": 1031303, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "开心到发说说？", 
+        "comments": [
+            [
+                1031304, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031304": {
+        "id": 1031304, 
+        "roles": [
+            3, 
+            3
+        ], 
+        "parent": 1031303, 
+        "content": "不说话就是有问题", 
+        "comments": [
+            [
+                1031305, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031305": {
+        "id": 1031305, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1031303, 
+        "content": "和老同学分在一起当然开心！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031401": {
+        "id": 1031401, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "又分在同一个班啦<sprite=0>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031402": {
+        "id": 1031402, 
+        "roles": [
+            214, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "又分在同一个班啦<sprite=0>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031403": {
+        "id": 1031403, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "又分在同一个班啦<sprite=0>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031404": {
+        "id": 1031404, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "又分在同一个班啦<sprite=0>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031405": {
+        "id": 1031405, 
+        "roles": [
+            103, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你们在干嘛啦", 
+        "comments": [
+            [
+                1031406, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031406": {
+        "id": 1031406, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1031405, 
+        "content": "@{0}，快来看这里~<sprite=0>", 
+        "comments": [
+            [
+                1031407, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031407": {
+        "id": 1031407, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1031405, 
+        "content": "<sprite=47>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031601": {
+        "id": 1031601, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "做讲解员好玩么", 
+        "comments": [
+            [
+                1031602, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031602": {
+        "id": 1031602, 
+        "roles": [
+            103, 
+            201
+        ], 
+        "parent": 1031601, 
+        "content": "还挺有意思的，你想来吗，我可以跟工作人员姐姐推荐下你", 
+        "comments": [
+            [
+                1031603, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031603": {
+        "id": 1031603, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 1031601, 
+        "content": "你跟博物馆的人这么熟？", 
+        "comments": [
+            [
+                1031604, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031604": {
+        "id": 1031604, 
+        "roles": [
+            103, 
+            201
+        ], 
+        "parent": 1031601, 
+        "content": "还好啦，偶尔来帮帮忙，一来二去就混个脸熟了", 
+        "comments": [
+            [
+                1031605, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031605": {
+        "id": 1031605, 
+        "roles": [
+            201, 
+            103
+        ], 
+        "parent": 1031601, 
+        "content": "行，我也想去博物馆体验体验", 
+        "comments": [
+            [
+                1031606, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031606": {
+        "id": 1031606, 
+        "roles": [
+            103, 
+            201
+        ], 
+        "parent": 1031601, 
+        "content": "好", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031607": {
+        "id": 1031607, 
+        "roles": [
+            3051, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "还没见过你当讲解员的样子呢，你平常连讲台都不怎么上的", 
+        "comments": [
+            [
+                1031608, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031608": {
+        "id": 1031608, 
+        "roles": [
+            103, 
+            3051
+        ], 
+        "parent": 1031607, 
+        "content": "所以才想着锻炼锻炼自己嘛", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031701": {
+        "id": 1031701, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我感觉拍得挺好的，比我好", 
+        "comments": [
+            [
+                1031702, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031702": {
+        "id": 1031702, 
+        "roles": [
+            3, 
+            102
+        ], 
+        "parent": 1031701, 
+        "content": "很难有人拍得比你差<sprite=65>", 
+        "comments": [
+            [
+                1031703, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031703": {
+        "id": 1031703, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1031701, 
+        "content": "<sprite=50>不要那么说小蕾", 
+        "comments": [
+            [
+                1031704, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031704": {
+        "id": 1031704, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1031701, 
+        "content": "差点忘了你是跟她学的用手机。那更好笑了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031801": {
+        "id": 1031801, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "有缘再会", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031802": {
+        "id": 1031802, 
+        "roles": [
+            3074, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "舍不得啊，怎么日子过得这么快啊<sprite=92>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031803": {
+        "id": 1031803, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "用不着十年，大学放假的时候我们也能聚的嘛", 
+        "comments": [
+            [
+                1031804, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031804": {
+        "id": 1031804, 
+        "roles": [
+            3039, 
+            3
+        ], 
+        "parent": 1031803, 
+        "content": "没错！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031901": {
+        "id": 1031901, 
+        "roles": [
+            3044, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "还得是阿慈", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031902": {
+        "id": 1031902, 
+        "roles": [
+            3092, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "好诶！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031903": {
+        "id": 1031903, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "阿慈最棒了！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031904": {
+        "id": 1031904, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "烧退了吗？舒服些没", 
+        "comments": [
+            [
+                1031905, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                20.0, 
+                1.0, 
+                103.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031905": {
+        "id": 1031905, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1031904, 
+        "content": "退了，感觉好多了", 
+        "comments": [], 
+        "options": [
+            1031906
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031906": {
+        "id": 1031906, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1031904, 
+        "content": "退烧了也再歇歇嘛", 
+        "comments": [
+            [
+                1031907, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1031907": {
+        "id": 1031907, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1031904, 
+        "content": "把手头上的活干完，我一定去休息", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032001": {
+        "id": 1032001, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "谜语人是要扣分的", 
+        "comments": [
+            [
+                1032002, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032002": {
+        "id": 1032002, 
+        "roles": [
+            201, 
+            3
+        ], 
+        "parent": 1032001, 
+        "content": "知道你为什么单身吗", 
+        "comments": [
+            [
+                1032003, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032003": {
+        "id": 1032003, 
+        "roles": [
+            3, 
+            201
+        ], 
+        "parent": 1032001, 
+        "content": "？", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032004": {
+        "id": 1032004, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "谢谢世界把你送给了我", 
+        "comments": [
+            [
+                1032005, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032005": {
+        "id": 1032005, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032004, 
+        "content": "<sprite=0>", 
+        "comments": [
+            [
+                1032006, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032006": {
+        "id": 1032006, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1032004, 
+        "content": "你们俩是没有对方的手机号吗？非要在空间聊<sprite=65>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032007": {
+        "id": 1032007, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你自己也是一道耀眼的光，这是双向奔赴", 
+        "comments": [
+            [
+                1032008, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032008": {
+        "id": 1032008, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032007, 
+        "content": "我也可以是吗", 
+        "comments": [], 
+        "options": [
+            1032009
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032009": {
+        "id": 1032009, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1032007, 
+        "content": "不是可以，是你本来就是", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032101": {
+        "id": 1032101, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "不是我说，你唱四月天的歌真的唱得太好了，感觉比有的明星翻唱的效果都要好", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032102": {
+        "id": 1032102, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "喜欢四月天的人很多的", 
+        "comments": [
+            [
+                1032103, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                22.0, 
+                2.0, 
+                -1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032103": {
+        "id": 1032103, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032102, 
+        "content": "是哦，不差我一个啊", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032104": {
+        "id": 1032104, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "人总是要从青春里长大的", 
+        "comments": [
+            [
+                1032105, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                22.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032105": {
+        "id": 1032105, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032104, 
+        "content": "嗯，哪有青春不遗憾的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032201": {
+        "id": 1032201, 
+        "roles": [
+            3074, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "今天我们小区也停电了！原来你也！", 
+        "comments": [
+            [
+                1032202, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032202": {
+        "id": 1032202, 
+        "roles": [
+            103, 
+            3074
+        ], 
+        "parent": 1032201, 
+        "content": "对啊，你们那儿现在来电了吗", 
+        "comments": [
+            [
+                1032203, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032203": {
+        "id": 1032203, 
+        "roles": [
+            3074, 
+            103
+        ], 
+        "parent": 1032201, 
+        "content": "来了来了早来了，抢修的人来的特别早", 
+        "comments": [
+            [
+                1032204, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032204": {
+        "id": 1032204, 
+        "roles": [
+            103, 
+            3074
+        ], 
+        "parent": 1032201, 
+        "content": "那就好", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032205": {
+        "id": 1032205, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "好久没有这么好好看过夜色了", 
+        "comments": [
+            [
+                1032206, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032206": {
+        "id": 1032206, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032205, 
+        "content": "人有时候果然要慢下来才好呢", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032207": {
+        "id": 1032207, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "好久没有这么好好地和爸妈一起做点什么了", 
+        "comments": [
+            [
+                1032208, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032208": {
+        "id": 1032208, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032207, 
+        "content": "你家气氛真的好好哦", 
+        "comments": [], 
+        "options": [
+            1032209
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032209": {
+        "id": 1032209, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1032207, 
+        "content": "嗯，我爸我妈确实都特别好", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032301": {
+        "id": 1032301, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "高考加油！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032302": {
+        "id": 1032302, 
+        "roles": [
+            3089, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "加油加油！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032303": {
+        "id": 1032303, 
+        "roles": [
+            3050, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我们一定要考上心仪的大学！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032304": {
+        "id": 1032304, 
+        "roles": [
+            3051, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "祝我们超常发挥！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032305": {
+        "id": 1032305, 
+        "roles": [
+            112, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "冲呀！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032306": {
+        "id": 1032306, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "高考加油！", 
+        "comments": [
+            [
+                1032307, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032307": {
+        "id": 1032307, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032306, 
+        "content": "大家都加油！！！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032308": {
+        "id": 1032308, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "兔子加油！", 
+        "comments": [
+            [
+                1032309, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032309": {
+        "id": 1032309, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032308, 
+        "content": "你也是！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032401": {
+        "id": 1032401, 
+        "roles": [
+            3045, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "还得是阿慈", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032402": {
+        "id": 1032402, 
+        "roles": [
+            3094, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "好！！！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032403": {
+        "id": 1032403, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "阿慈最棒了！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032404": {
+        "id": 1032404, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "烧退了吗？舒服些没", 
+        "comments": [
+            [
+                1032405, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                20.0, 
+                1.0, 
+                103.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032405": {
+        "id": 1032405, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032404, 
+        "content": "退了，感觉好多了", 
+        "comments": [], 
+        "options": [
+            1032406
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032406": {
+        "id": 1032406, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1032404, 
+        "content": "退烧了也再歇歇嘛", 
+        "comments": [
+            [
+                1032407, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032407": {
+        "id": 1032407, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032404, 
+        "content": "把手头上的活干完，我一定去休息", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032501": {
+        "id": 1032501, 
+        "roles": [
+            3089, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "<sprite=92>被你的画和发言感动到了呜呜呜", 
+        "comments": [
+            [
+                1032502, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032502": {
+        "id": 1032502, 
+        "roles": [
+            103, 
+            3089
+        ], 
+        "parent": 1032501, 
+        "content": "抱抱~", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032503": {
+        "id": 1032503, 
+        "roles": [
+            3051, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你将来一定会成为大画家的对吧对吧对吧", 
+        "comments": [
+            [
+                1032504, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032504": {
+        "id": 1032504, 
+        "roles": [
+            103, 
+            3051
+        ], 
+        "parent": 1032503, 
+        "content": "大不大的不重要，能画出我心中所想就很满足了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032505": {
+        "id": 1032505, 
+        "roles": [
+            3070, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "有态度的才是艺术，今天很受触动", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032506": {
+        "id": 1032506, 
+        "roles": [
+            3074, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你今天真的超美的！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032507": {
+        "id": 1032507, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "今天的你比任何人都要耀眼", 
+        "comments": [
+            [
+                1032508, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                20.0, 
+                1.0, 
+                103.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032508": {
+        "id": 1032508, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032507, 
+        "content": "我也算是破茧成蝶了吗", 
+        "comments": [], 
+        "options": [
+            1032509
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032509": {
+        "id": 1032509, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1032507, 
+        "content": "嗯，是一只最漂亮的蝴蝶", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032510": {
+        "id": 1032510, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "多年以后，人们提起今天，就会说这是著名画家陈心慈的首秀", 
+        "comments": [
+            [
+                1032511, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032511": {
+        "id": 1032511, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032510, 
+        "content": "<sprite=3>我会努力做更棒的自己！著名不著名的随便啦", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032601": {
+        "id": 1032601, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "在哪里报名", 
+        "comments": [
+            [
+                1032602, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032602": {
+        "id": 1032602, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1032601, 
+        "content": "扫楼的时候你没在吗", 
+        "comments": [
+            [
+                1032603, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032603": {
+        "id": 1032603, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 1032601, 
+        "content": "可能刚好去自习了", 
+        "comments": [
+            [
+                1032604, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032604": {
+        "id": 1032604, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1032601, 
+        "content": "没事，现在还来得及报名，干脆你在我这里报好了", 
+        "comments": [
+            [
+                1032605, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032605": {
+        "id": 1032605, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 1032601, 
+        "content": "行", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032606": {
+        "id": 1032606, 
+        "roles": [
+            3089, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "已经报名啦，坐等拍卖！", 
+        "comments": [
+            [
+                1032607, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032607": {
+        "id": 1032607, 
+        "roles": [
+            103, 
+            3089
+        ], 
+        "parent": 1032606, 
+        "content": "棒棒哒！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032608": {
+        "id": 1032608, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我来捧个钱场了！", 
+        "comments": [
+            [
+                1032609, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032609": {
+        "id": 1032609, 
+        "roles": [
+            103, 
+            3039
+        ], 
+        "parent": 1032608, 
+        "content": "<sprite=110>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032610": {
+        "id": 1032610, 
+        "roles": [
+            3035, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "厉害啊，这活动真就搞出来了", 
+        "comments": [
+            [
+                1032611, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032611": {
+        "id": 1032611, 
+        "roles": [
+            103, 
+            3035
+        ], 
+        "parent": 1032610, 
+        "content": "还没正式举办呢，有点紧张", 
+        "comments": [
+            [
+                1032612, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032612": {
+        "id": 1032612, 
+        "roles": [
+            3035, 
+            103
+        ], 
+        "parent": 1032610, 
+        "content": "一看就会成功的，加油", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032613": {
+        "id": 1032613, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "现在多少人报名了", 
+        "comments": [
+            [
+                1032614, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032614": {
+        "id": 1032614, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032613, 
+        "content": "太多了，反倒要筛一筛了，不然坐不下那么多人", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032615": {
+        "id": 1032615, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你这海报画得是真的好看", 
+        "comments": [
+            [
+                1032616, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032616": {
+        "id": 1032616, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032615, 
+        "content": "时间赶了点，要不能再优化优化", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032701": {
+        "id": 1032701, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "萤火虫诶！这是在哪儿看见的！我也想看", 
+        "comments": [
+            [
+                1032702, 
+                2
+            ], 
+            [
+                1032703, 
+                4
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032702": {
+        "id": 1032702, 
+        "roles": [
+            103, 
+            3049
+        ], 
+        "parent": 1032701, 
+        "content": "老城的西湖景区再往前走一些，没什么人的河边就行了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032703": {
+        "id": 1032703, 
+        "roles": [
+            103, 
+            3049
+        ], 
+        "parent": 1032701, 
+        "content": "不过不保证一定能看到哈", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032704": {
+        "id": 1032704, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你们年轻人真会玩浪漫，我老了", 
+        "comments": [
+            [
+                1032705, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032705": {
+        "id": 1032705, 
+        "roles": [
+            3039, 
+            3
+        ], 
+        "parent": 1032704, 
+        "content": "<sprite=110>这么老还单身？", 
+        "comments": [
+            [
+                1032706, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032706": {
+        "id": 1032706, 
+        "roles": [
+            3, 
+            3039
+        ], 
+        "parent": 1032704, 
+        "content": "没礼貌！！！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032707": {
+        "id": 1032707, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你也是我的奇迹", 
+        "comments": [
+            [
+                1032708, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032708": {
+        "id": 1032708, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032707, 
+        "content": "你也是", 
+        "comments": [
+            [
+                1032709, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032709": {
+        "id": 1032709, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1032707, 
+        "content": "<sprite=65>认识你俩是我的福气", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032710": {
+        "id": 1032710, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "以后我们可以年年都一起看萤火虫", 
+        "comments": [
+            [
+                1032711, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032711": {
+        "id": 1032711, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1032710, 
+        "content": "好哇好哇", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032801": {
+        "id": 1032801, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "哦？今天是干什么了？", 
+        "comments": [
+            [
+                1032802, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032802": {
+        "id": 1032802, 
+        "roles": [
+            103, 
+            3049
+        ], 
+        "parent": 1032801, 
+        "content": "没什么，就是穿了条新裙子", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032803": {
+        "id": 1032803, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "女生都做过这种梦吗", 
+        "comments": [
+            [
+                1032804, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032804": {
+        "id": 1032804, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1032803, 
+        "content": "也不是啦，也分人分情况的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032901": {
+        "id": 1032901, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "鸟呢", 
+        "comments": [
+            [
+                1032902, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032902": {
+        "id": 1032902, 
+        "roles": [
+            103, 
+            3
+        ], 
+        "parent": 1032901, 
+        "content": "飞了呀", 
+        "comments": [
+            [
+                1032903, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032903": {
+        "id": 1032903, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1032901, 
+        "content": "早说啊，我眼睛都快找瞎了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032904": {
+        "id": 1032904, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "看图觉得那里空气好好哦", 
+        "comments": [
+            [
+                1032905, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1032905": {
+        "id": 1032905, 
+        "roles": [
+            103, 
+            102
+        ], 
+        "parent": 1032904, 
+        "content": "对啊，是大清早，早上的空气一般都比较好的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033001": {
+        "id": 1033001, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "广东这气温跟蹦极似的，冷得猝不及防", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033002": {
+        "id": 1033002, 
+        "roles": [
+            3049, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我厚衣服都没带学校里，今天真的冷死", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033003": {
+        "id": 1033003, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我有围巾，我不冷~", 
+        "comments": [
+            [
+                1033004, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033004": {
+        "id": 1033004, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033003, 
+        "content": "真的吗？好棒哦", 
+        "comments": [
+            [
+                1033005, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033005": {
+        "id": 1033005, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1033003, 
+        "content": "谁没有似的，有啥好炫耀的，我也有", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033006": {
+        "id": 1033006, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你围巾在哪里买的", 
+        "comments": [
+            [
+                1033007, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033007": {
+        "id": 1033007, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033006, 
+        "content": "好宜多", 
+        "comments": [], 
+        "options": [
+            1033008
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033008": {
+        "id": 1033008, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1033006, 
+        "content": "巧了！我今天也去好宜多买围巾了", 
+        "comments": [
+            [
+                1033009, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033009": {
+        "id": 1033009, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033006, 
+        "content": "哦？你有看到我吗", 
+        "comments": [], 
+        "options": [
+            1033010
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033010": {
+        "id": 1033010, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 1033006, 
+        "content": "有啊", 
+        "comments": [
+            [
+                1033011, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033011": {
+        "id": 1033011, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033006, 
+        "content": "嘻嘻~", 
+        "comments": [
+            [
+                1033012, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033012": {
+        "id": 1033012, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1033006, 
+        "content": "tm我今天也在好宜多，看着你俩一起买的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033101": {
+        "id": 1033101, 
+        "roles": [
+            3050, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "小时候我看它整晚没睡着觉", 
+        "comments": [
+            [
+                1033102, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033102": {
+        "id": 1033102, 
+        "roles": [
+            3049, 
+            3050
+        ], 
+        "parent": 1033101, 
+        "content": "没睡着+1", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033103": {
+        "id": 1033103, 
+        "roles": [
+            3039, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "我只听过没看过，真的有那么吓人吗", 
+        "comments": [
+            [
+                1033104, 
+                2
+            ], 
+            [
+                1033105, 
+                4
+            ], 
+            [
+                1033106, 
+                6
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033104": {
+        "id": 1033104, 
+        "roles": [
+            3, 
+            3039
+        ], 
+        "parent": 1033103, 
+        "content": "有", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033105": {
+        "id": 1033105, 
+        "roles": [
+            102, 
+            3039
+        ], 
+        "parent": 1033103, 
+        "content": "有", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033106": {
+        "id": 1033106, 
+        "roles": [
+            214, 
+            3039
+        ], 
+        "parent": 1033103, 
+        "content": "有", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033107": {
+        "id": 1033107, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "你看到后面不是没怕了吗？为什么啊~", 
+        "comments": [
+            [
+                1033108, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033108": {
+        "id": 1033108, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033107, 
+        "content": "明知故问><", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033109": {
+        "id": 1033109, 
+        "roles": [
+            0, 
+            103
+        ], 
+        "parent": 0, 
+        "content": "不怕不怕，摸摸头(,,´•ω•)ノ”(´っω•｀。)", 
+        "comments": [
+            [
+                1033110, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1033110": {
+        "id": 1033110, 
+        "roles": [
+            103, 
+            0
+        ], 
+        "parent": 1033109, 
+        "content": "那我不怕不怕啦", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040101": {
+        "id": 2040101, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "我怀疑你在炫耀但我没有证据。", 
+        "comments": [
+            [
+                2040102, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040102": {
+        "id": 2040102, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2040101, 
+        "content": "嘻嘻", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040201": {
+        "id": 2040201, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "……真的洒洒水吗？", 
+        "comments": [
+            [
+                2040202, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040202": {
+        "id": 2040202, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2040201, 
+        "content": "假的，累死我了，终于可以休息一段时间了", 
+        "comments": [
+            [
+                2040203, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040203": {
+        "id": 2040203, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 2040201, 
+        "content": "哈哈哈哈哈哈哈", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040204": {
+        "id": 2040204, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "对了，能不能教教我起跑？", 
+        "comments": [
+            [
+                2040205, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040205": {
+        "id": 2040205, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2040204, 
+        "content": "没问题的兄弟！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040301": {
+        "id": 2040301, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "可以去老城区看看，那边好吃的有很多。", 
+        "comments": [
+            [
+                2040302, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040302": {
+        "id": 2040302, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2040301, 
+        "content": "米饭不限量吗？", 
+        "comments": [
+            [
+                2040303, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040303": {
+        "id": 2040303, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 2040301, 
+        "content": "这个估计得和老板商量一下了。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040304": {
+        "id": 2040304, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "我有几家，我私发你。", 
+        "comments": [
+            [
+                2040305, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040305": {
+        "id": 2040305, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2040304, 
+        "content": "可以可以", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040401": {
+        "id": 2040401, 
+        "roles": [
+            104, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "这啥？你打架子鼓？", 
+        "comments": [
+            [
+                2040402, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040402": {
+        "id": 2040402, 
+        "roles": [
+            204, 
+            104
+        ], 
+        "parent": 2040401, 
+        "content": "不打架子鼓，我打毛线。", 
+        "comments": [
+            [
+                2040403, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040403": {
+        "id": 2040403, 
+        "roles": [
+            104, 
+            204
+        ], 
+        "parent": 2040401, 
+        "content": "？", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040404": {
+        "id": 2040404, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "你这兴趣爱好也挺特别的", 
+        "comments": [
+            [
+                2040405, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040405": {
+        "id": 2040405, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2040404, 
+        "content": "打毛衣很解压啊，你们不这样觉得吗？", 
+        "comments": [
+            [
+                2040406, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040406": {
+        "id": 2040406, 
+        "roles": [
+            104, 
+            204
+        ], 
+        "parent": 2040404, 
+        "content": "我晕，我还以为你在骂人呢。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040501": {
+        "id": 2040501, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "收藏了", 
+        "comments": [
+            [
+                2040502, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040502": {
+        "id": 2040502, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2040501, 
+        "content": "别光收藏啊，明天一起试试？", 
+        "comments": [
+            [
+                2040503, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040503": {
+        "id": 2040503, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 2040501, 
+        "content": "行", 
+        "comments": [
+            [
+                2040504, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040504": {
+        "id": 2040504, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2040501, 
+        "content": "把点赞的那堆也拉上！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040601": {
+        "id": 2040601, 
+        "roles": [
+            104, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "借你吉言", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040602": {
+        "id": 2040602, 
+        "roles": [
+            3, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "借你吉言", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040603": {
+        "id": 2040603, 
+        "roles": [
+            4006, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "那我们这么办，上次复习咱俩可是半天都没蒙出来一题。", 
+        "comments": [
+            [
+                2040604, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040604": {
+        "id": 2040604, 
+        "roles": [
+            204, 
+            4006
+        ], 
+        "parent": 2040603, 
+        "content": "凉拌，会多少写多少吧。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040701": {
+        "id": 2040701, 
+        "roles": [
+            214, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "牛的，三个人防都防不住", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040702": {
+        "id": 2040702, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "带带我", 
+        "comments": [
+            [
+                2040703, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040703": {
+        "id": 2040703, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2040702, 
+        "content": "行啊", 
+        "comments": [
+            [
+                2040704, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040704": {
+        "id": 2040704, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 2040702, 
+        "content": "对了，我还有几个兄弟也想来", 
+        "comments": [
+            [
+                2040705, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040705": {
+        "id": 2040705, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2040702, 
+        "content": "带上呗，哈哈！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040706": {
+        "id": 2040706, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "还在回味呢？", 
+        "comments": [
+            [
+                2040707, 
+                2
+            ], 
+            [
+                2040708, 
+                4
+            ], 
+            [
+                2040709, 
+                6
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040707": {
+        "id": 2040707, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2040706, 
+        "content": "嘿嘿，毕竟我们三个后面的配合太棒了。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040708": {
+        "id": 2040708, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2040706, 
+        "content": "尤其是你，我觉得你是真的有天赋在身上的！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040709": {
+        "id": 2040709, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2040706, 
+        "content": "下次继续一起打？", 
+        "comments": [], 
+        "options": [
+            2040710
+        ], 
+        "effect": [
+            [
+                20.0, 
+                1.0, 
+                204.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040710": {
+        "id": 2040710, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 2040706, 
+        "content": "没问题！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040801": {
+        "id": 2040801, 
+        "roles": [
+            214, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "牛的，居然追平了。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040802": {
+        "id": 2040802, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "怎么没赢啊？", 
+        "comments": [
+            [
+                2040803, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040803": {
+        "id": 2040803, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2040802, 
+        "content": "玩儿嘛，打得爽就行，不在乎输赢哈哈哈。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040804": {
+        "id": 2040804, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "不容易啊，我到最后都没体力了。", 
+        "comments": [
+            [
+                2040805, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040805": {
+        "id": 2040805, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2040804, 
+        "content": "多练练就行，下次继续一起打？", 
+        "comments": [], 
+        "options": [
+            2040806
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040806": {
+        "id": 2040806, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 2040804, 
+        "content": "好啊！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [
+            [
+                20.0, 
+                1.0, 
+                204.0, 
+                2.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040901": {
+        "id": 2040901, 
+        "roles": [
+            3, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "不是，我还没答应你呢<sprite=102>", 
+        "comments": [
+            [
+                2040902, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040902": {
+        "id": 2040902, 
+        "roles": [
+            204, 
+            3
+        ], 
+        "parent": 2040901, 
+        "content": "老梁你<sprite=58>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040903": {
+        "id": 2040903, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "这会是哪路大佬？", 
+        "comments": [
+            [
+                2040904, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040904": {
+        "id": 2040904, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2040903, 
+        "content": "班上一同学，我纠结好久的题她三两下就给我说明白了，厉害吧？", 
+        "comments": [
+            [
+                2040905, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040905": {
+        "id": 2040905, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 2040903, 
+        "content": "那的确很厉害了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040906": {
+        "id": 2040906, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "低调低调", 
+        "comments": [
+            [
+                2040907, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2040907": {
+        "id": 2040907, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2040906, 
+        "content": "好的老大没问题老大", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041001": {
+        "id": 2041001, 
+        "roles": [
+            201, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "这也太严重了，怎么搞的？", 
+        "comments": [
+            [
+                2041002, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041002": {
+        "id": 2041002, 
+        "roles": [
+            204, 
+            201
+        ], 
+        "parent": 2041001, 
+        "content": "打球扭到了，现在就是后悔，十分后悔。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041003": {
+        "id": 2041003, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "放心吧谢队，我们不会太想你的。", 
+        "comments": [
+            [
+                2041004, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041004": {
+        "id": 2041004, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2041003, 
+        "content": "你小子，罚你回去再读十遍，再加跑五圈！", 
+        "comments": [
+            [
+                2041005, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041005": {
+        "id": 2041005, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 2041003, 
+        "content": "<sprite=92>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041006": {
+        "id": 2041006, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "好好休息，乖乖养伤。", 
+        "comments": [
+            [
+                2041007, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041007": {
+        "id": 2041007, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2041006, 
+        "content": "嗯！我一定乖乖的。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041101": {
+        "id": 2041101, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "说话算话", 
+        "comments": [
+            [
+                2041102, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041102": {
+        "id": 2041102, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2041101, 
+        "content": "说话算话，保证保护好自己", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041103": {
+        "id": 2041103, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "队长，我看不懂", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041104": {
+        "id": 2041104, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "队长，我看不懂", 
+        "comments": [
+            [
+                2041105, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041105": {
+        "id": 2041105, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2041104, 
+        "content": "你俩也是，训练不要太过，要把身体放在第一位。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041201": {
+        "id": 2041201, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "冲冲冲！", 
+        "comments": [
+            [
+                2041202, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041202": {
+        "id": 2041202, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2041201, 
+        "content": "flighting！", 
+        "comments": [], 
+        "options": [
+            2041203
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041203": {
+        "id": 2041203, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 2041201, 
+        "content": "是fighting……", 
+        "comments": [
+            [
+                2041204, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [
+            [
+                1.0, 
+                22.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041204": {
+        "id": 2041204, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2041201, 
+        "content": "<sprite=37>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041205": {
+        "id": 2041205, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "加油！", 
+        "comments": [
+            [
+                2041206, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2041206": {
+        "id": 2041206, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2041205, 
+        "content": "一起加油！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042101": {
+        "id": 2042101, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "头一次见人把上课睡觉说得如此清新脱俗……", 
+        "comments": [
+            [
+                2042102, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042102": {
+        "id": 2042102, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2042101, 
+        "content": "嘘，不要戳穿", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042103": {
+        "id": 2042103, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "真的？下次我也试试！", 
+        "comments": [
+            [
+                2042104, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042104": {
+        "id": 2042104, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2042103, 
+        "content": "别学！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042201": {
+        "id": 2042201, 
+        "roles": [
+            214, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "阿姨还缺儿子吗？", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042202": {
+        "id": 2042202, 
+        "roles": [
+            4006, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "卧槽！帅！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042203": {
+        "id": 2042203, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "卧槽！帅！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042204": {
+        "id": 2042204, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "我也想玩！", 
+        "comments": [
+            [
+                2042205, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042205": {
+        "id": 2042205, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042204, 
+        "content": "没问题，我去和她说一声", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042206": {
+        "id": 2042206, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "别开太快啊……", 
+        "comments": [
+            [
+                2042207, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042207": {
+        "id": 2042207, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042206, 
+        "content": "哈哈！她只让我在车库里玩了会，时速5公里<sprite=7>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042301": {
+        "id": 2042301, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "你家不让养狗？", 
+        "comments": [
+            [
+                2042302, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042302": {
+        "id": 2042302, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2042301, 
+        "content": "哈哈，我爸狗毛过敏<sprite=11>", 
+        "comments": [
+            [
+                2042303, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042303": {
+        "id": 2042303, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 2042301, 
+        "content": "太惨了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042304": {
+        "id": 2042304, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "好拼，难怪最近又进步了。", 
+        "comments": [
+            [
+                2042305, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042305": {
+        "id": 2042305, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2042304, 
+        "content": "你也试试，放松跑，跑完可舒服了。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042306": {
+        "id": 2042306, 
+        "roles": [
+            101, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "原来最近公园里会和狗狗一起在沙坑里打滚的人是你啊", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042401": {
+        "id": 2042401, 
+        "roles": [
+            3, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "哈哈哈哈哈哈哈哥们你两双都买，可以cos红绿灯", 
+        "comments": [
+            [
+                2042402, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042402": {
+        "id": 2042402, 
+        "roles": [
+            204, 
+            3
+        ], 
+        "parent": 2042401, 
+        "content": "哈哈哈哈哈好主意", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042403": {
+        "id": 2042403, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "右边好看", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042404": {
+        "id": 2042404, 
+        "roles": [
+            4004, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "左边好看", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042405": {
+        "id": 2042405, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "右边好看", 
+        "comments": [
+            [
+                2042406, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042406": {
+        "id": 2042406, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042405, 
+        "content": "行！2：1，我买右边的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042407": {
+        "id": 2042407, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "左边好看", 
+        "comments": [
+            [
+                2042408, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042408": {
+        "id": 2042408, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042407, 
+        "content": "行！2：1，我买左边的", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042409": {
+        "id": 2042409, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "都很一言难尽……", 
+        "comments": [
+            [
+                2042410, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042410": {
+        "id": 2042410, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042409, 
+        "content": "真的？？？？", 
+        "comments": [], 
+        "options": [
+            2042411
+        ], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042411": {
+        "id": 2042411, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 2042409, 
+        "content": "真的", 
+        "comments": [
+            [
+                2042412, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042412": {
+        "id": 2042412, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042409, 
+        "content": "那我再回去挑挑……", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042501": {
+        "id": 2042501, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "哈哈哈哈哈哈哈哈哈哈怎么搞的？", 
+        "comments": [
+            [
+                2042502, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042502": {
+        "id": 2042502, 
+        "roles": [
+            204, 
+            112
+        ], 
+        "parent": 2042501, 
+        "content": "她说要给我煲排骨汤", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042503": {
+        "id": 2042503, 
+        "roles": [
+            3, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "阿姨这厨艺破坏力堪比导弹<sprite=38>", 
+        "comments": [
+            [
+                2042504, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042504": {
+        "id": 2042504, 
+        "roles": [
+            204, 
+            3
+        ], 
+        "parent": 2042503, 
+        "content": "没有那么温和", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042505": {
+        "id": 2042505, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "难怪那天你要拉我出去吃", 
+        "comments": [
+            [
+                2042506, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042506": {
+        "id": 2042506, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042505, 
+        "content": "能不能多来做客拉我出去吃，我真扛不住了……", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042601": {
+        "id": 2042601, 
+        "roles": [
+            4004, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "难怪下午没见到你，腿又伤了？", 
+        "comments": [
+            [
+                2042602, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042602": {
+        "id": 2042602, 
+        "roles": [
+            204, 
+            4004
+        ], 
+        "parent": 2042601, 
+        "content": "嗯，你们记得好好拉伸", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042603": {
+        "id": 2042603, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "腿好点了吗？", 
+        "comments": [
+            [
+                2042604, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042604": {
+        "id": 2042604, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042603, 
+        "content": "腿是好多了，人快没了<sprite=7>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042701": {
+        "id": 2042701, 
+        "roles": [
+            4006, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "我作证，去了一次就老实了，这辈子不想再去第二次", 
+        "comments": [
+            [
+                2042702, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042702": {
+        "id": 2042702, 
+        "roles": [
+            204, 
+            4006
+        ], 
+        "parent": 2042701, 
+        "content": "你也去过？", 
+        "comments": [
+            [
+                2042703, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042703": {
+        "id": 2042703, 
+        "roles": [
+            4006, 
+            204
+        ], 
+        "parent": 2042701, 
+        "content": "对，当时上腿按了两下我什么都招了", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042704": {
+        "id": 2042704, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "怕了吧，好好恢复啊！", 
+        "comments": [
+            [
+                2042705, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042705": {
+        "id": 2042705, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042704, 
+        "content": "我一定！这下是真怕了……", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042801": {
+        "id": 2042801, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "谢队我们也爱你！", 
+        "comments": [
+            [
+                2042802, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042802": {
+        "id": 2042802, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2042801, 
+        "content": "别偷玩手机了，训练去！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042803": {
+        "id": 2042803, 
+        "roles": [
+            4004, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "谢队我们也爱你！", 
+        "comments": [
+            [
+                2042804, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042804": {
+        "id": 2042804, 
+        "roles": [
+            204, 
+            4004
+        ], 
+        "parent": 2042803, 
+        "content": "认真训练，你就快破pr了，拿个名次不成问题", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042805": {
+        "id": 2042805, 
+        "roles": [
+            4006, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "谢队我们也爱你！", 
+        "comments": [
+            [
+                2042806, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042806": {
+        "id": 2042806, 
+        "roles": [
+            204, 
+            4006
+        ], 
+        "parent": 2042805, 
+        "content": "好好好……知道了！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042807": {
+        "id": 2042807, 
+        "roles": [
+            4003, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "谢队我们也爱你！", 
+        "comments": [
+            [
+                2042808, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042808": {
+        "id": 2042808, 
+        "roles": [
+            204, 
+            4003
+        ], 
+        "parent": 2042807, 
+        "content": "……我也爱你们！行了吧！", 
+        "comments": [
+            [
+                2042809, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042809": {
+        "id": 2042809, 
+        "roles": [
+            4005, 
+            204
+        ], 
+        "parent": 2042807, 
+        "content": "谢队你怎么只凶我们不凶他？", 
+        "comments": [
+            [
+                2042810, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042810": {
+        "id": 2042810, 
+        "roles": [
+            204, 
+            4005
+        ], 
+        "parent": 2042807, 
+        "content": "你，加练，十圈，现在就去。", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042901": {
+        "id": 2042901, 
+        "roles": [
+            4004, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "太厉害了谢队！我们大家一起看的，当时全员都紧张到下楼跑了一圈。", 
+        "comments": [
+            [
+                2042902, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042902": {
+        "id": 2042902, 
+        "roles": [
+            112, 
+            4004
+        ], 
+        "parent": 2042901, 
+        "content": "还好裁判给力哈哈哈哈！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042903": {
+        "id": 2042903, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "恭喜啊！！！！", 
+        "comments": [
+            [
+                2042904, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2042904": {
+        "id": 2042904, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2042903, 
+        "content": "听到你欢呼了！谢谢你来为我加油！<sprite=79>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2043001": {
+        "id": 2043001, 
+        "roles": [
+            112, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "太焦灼了！到后面我和{3}都不敢看了！", 
+        "comments": [
+            [
+                2043002, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2043002": {
+        "id": 2043002, 
+        "roles": [
+            4004, 
+            112
+        ], 
+        "parent": 2043001, 
+        "content": "我们队里大家一起看的，当时全员都紧张到下楼跑了一圈。", 
+        "comments": [
+            [
+                2043003, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2043003": {
+        "id": 2043003, 
+        "roles": [
+            112, 
+            4004
+        ], 
+        "parent": 2043001, 
+        "content": "还好裁判给力哈哈哈哈！", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2043004": {
+        "id": 2043004, 
+        "roles": [
+            0, 
+            204
+        ], 
+        "parent": 0, 
+        "content": "恭喜啊！！！！", 
+        "comments": [
+            [
+                2043005, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "2043005": {
+        "id": 2043005, 
+        "roles": [
+            204, 
+            0
+        ], 
+        "parent": 2043004, 
+        "content": "<sprite=79>", 
+        "comments": [], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }
+}

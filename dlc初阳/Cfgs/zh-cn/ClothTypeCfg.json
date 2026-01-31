@@ -1,0 +1,210 @@
+{
+    "2103": {
+        "id": 2103, 
+        "name": "maoyi", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            201
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2203": {
+        "id": 2203, 
+        "name": "xianglian", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            202
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2303": {
+        "id": 2303, 
+        "name": "kuojiao", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            203
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2402": {
+        "id": 2402, 
+        "name": "majia", 
+        "blend": [
+            -1, 
+            3
+        ], 
+        "roles": [
+            3
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2503": {
+        "id": 2503, 
+        "name": "fengyi", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            105
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2605": {
+        "id": 2605, 
+        "name": "baiqun", 
+        "blend": [
+            -1, 
+            6
+        ], 
+        "roles": [
+            102
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2702": {
+        "id": 2702, 
+        "name": "shuishou", 
+        "blend": [
+            -1, 
+            3
+        ], 
+        "roles": [
+            104
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2803": {
+        "id": 2803, 
+        "name": "dongzhuang", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            101
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2901": {
+        "id": 2901, 
+        "name": "weiyi", 
+        "blend": [
+            -1, 
+            2
+        ], 
+        "roles": [
+            204
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2902": {
+        "id": 2902, 
+        "name": "yundong", 
+        "blend": [
+            -1, 
+            3
+        ], 
+        "roles": [
+            204
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "2903": {
+        "id": 2903, 
+        "name": "niuzai", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            204
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "3001": {
+        "id": 3001, 
+        "name": "gewen", 
+        "blend": [
+            -1, 
+            2
+        ], 
+        "roles": [
+            103
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "3002": {
+        "id": 3002, 
+        "name": "gufeng", 
+        "blend": [
+            -1, 
+            3
+        ], 
+        "roles": [
+            103
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "3003": {
+        "id": 3003, 
+        "name": "lianyi", 
+        "blend": [
+            -1, 
+            4
+        ], 
+        "roles": [
+            103
+        ], 
+        "hair": 0, 
+        "hair2": 0
+    }, 
+    "3308": {
+        "id": 3308, 
+        "name": "cloth_10", 
+        "blend": [
+            -1, 
+            10
+        ], 
+        "roles": [
+            0
+        ], 
+        "hair": 312, 
+        "hair2": 0
+    }, 
+    "7308": {
+        "id": 7308, 
+        "name": "cloth_10", 
+        "blend": [
+            -1, 
+            10
+        ], 
+        "roles": [
+            0
+        ], 
+        "hair": 712, 
+        "hair2": 0
+    }
+}

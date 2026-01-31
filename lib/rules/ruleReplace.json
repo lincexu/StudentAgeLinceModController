@@ -1,0 +1,16 @@
+{
+    "costReplace": {
+        "rule": [
+            "personAttrId",
+            "value"
+        ],
+        "desc": "消耗{personAttrId}{value}"
+    },
+    "dataReplace": {
+        "rule": [
+            "value1",
+            "value2"
+        ],
+        "desc": "{value1}年{value2}月"
+    }
+}

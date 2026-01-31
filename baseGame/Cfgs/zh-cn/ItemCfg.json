@@ -1,0 +1,7607 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "日记本", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_rjb", 
+        "desc": "写心事的地方", 
+        "talkId": 0
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "工具箱", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_gjx", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "41": {
+        "id": 41, 
+        "name": "一盒草莓", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            41
+        ], 
+        "maxcount": 2, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                7.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.5, 
+        "precondition": [], 
+        "icon": "item/img_caomei", 
+        "desc": "新鲜的草莓，春季佳果，换季时会腐烂", 
+        "talkId": 0
+    }, 
+    "42": {
+        "id": 42, 
+        "name": "大块西瓜", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            42
+        ], 
+        "maxcount": 2, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                6.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_xigua", 
+        "desc": "清凉的西瓜，夏季佳果，换季时会腐烂", 
+        "talkId": 0
+    }, 
+    "43": {
+        "id": 43, 
+        "name": "一串葡萄", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            43
+        ], 
+        "maxcount": 2, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 1.5, 
+        "precondition": [], 
+        "icon": "item/img_putao", 
+        "desc": "甘甜的葡萄，秋季佳果，换季时会腐烂", 
+        "talkId": 0
+    }, 
+    "44": {
+        "id": 44, 
+        "name": "一根甘蔗", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            44
+        ], 
+        "maxcount": 2, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                4.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 1.2000000000000002, 
+        "precondition": [], 
+        "icon": "item/img_ganze", 
+        "desc": "爽脆的甘蔗，冬季佳果，换季时会腐烂", 
+        "talkId": 0
+    }, 
+    "1001": {
+        "id": 1001, 
+        "name": "存钱罐", 
+        "type": 1, 
+        "btn": "打碎", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_cqg", 
+        "desc": "从来就没装满过", 
+        "talkId": 10009001
+    }, 
+    "1011": {
+        "id": 1011, 
+        "name": "奖券", 
+        "type": 1, 
+        "btn": "刮开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                4.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_jq", 
+        "desc": "谢谢惠顾~", 
+        "talkId": 10001021
+    }, 
+    "1012": {
+        "id": 1012, 
+        "name": "奖券", 
+        "type": 1, 
+        "btn": "刮开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                5.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.8000000000000003, 
+        "precondition": [], 
+        "icon": "item/img_jq", 
+        "desc": "谢谢惠顾~", 
+        "talkId": 10001021
+    }, 
+    "1013": {
+        "id": 1013, 
+        "name": "奖券", 
+        "type": 1, 
+        "btn": "刮开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                6.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_jq", 
+        "desc": "谢谢惠顾~", 
+        "talkId": 10001021
+    }, 
+    "1014": {
+        "id": 1014, 
+        "name": "奖券", 
+        "type": 1, 
+        "btn": "刮开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                7.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 4.800000000000001, 
+        "precondition": [], 
+        "icon": "item/img_jq", 
+        "desc": "谢谢惠顾~", 
+        "talkId": 10001021
+    }, 
+    "1015": {
+        "id": 1015, 
+        "name": "奖券", 
+        "type": 1, 
+        "btn": "刮开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                8.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_jq", 
+        "desc": "谢谢惠顾~", 
+        "talkId": 10001021
+    }, 
+    "1021": {
+        "id": 1021, 
+        "name": "口香糖", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 1001, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_kxt", 
+        "desc": "嚼起来特别硬，很难吹泡泡", 
+        "talkId": 10001011
+    }, 
+    "1022": {
+        "id": 1022, 
+        "name": "口香糖", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 1001, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                5.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.8000000000000003, 
+        "precondition": [], 
+        "icon": "item/img_kxt", 
+        "desc": "嚼起来特别硬，很难吹泡泡", 
+        "talkId": 10001011
+    }, 
+    "1023": {
+        "id": 1023, 
+        "name": "口香糖", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 1001, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                6.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_kxt", 
+        "desc": "嚼起来特别硬，很难吹泡泡", 
+        "talkId": 10001011
+    }, 
+    "1024": {
+        "id": 1024, 
+        "name": "口香糖", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 1001, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                7.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 4.800000000000001, 
+        "precondition": [], 
+        "icon": "item/img_kxt", 
+        "desc": "嚼起来特别硬，很难吹泡泡", 
+        "talkId": 10001011
+    }, 
+    "1025": {
+        "id": 1025, 
+        "name": "口香糖", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 1001, 
+        "itemTag": [], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                8.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_kxt", 
+        "desc": "嚼起来特别硬，很难吹泡泡", 
+        "talkId": 10001011
+    }, 
+    "1031": {
+        "id": 1031, 
+        "name": "划炮", 
+        "type": 1, 
+        "btn": "点着", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 1.2000000000000002, 
+        "precondition": [], 
+        "icon": "item/img_hp", 
+        "desc": "可惜城里没有牛粪，所以只能扔水里", 
+        "talkId": 10001031
+    }, 
+    "1032": {
+        "id": 1032, 
+        "name": "划炮", 
+        "type": 1, 
+        "btn": "点着", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                6.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_hp", 
+        "desc": "可惜城里没有牛粪，所以只能扔水里", 
+        "talkId": 10001031
+    }, 
+    "1033": {
+        "id": 1033, 
+        "name": "划炮", 
+        "type": 1, 
+        "btn": "点着", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                7.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_hp", 
+        "desc": "可惜城里没有牛粪，所以只能扔水里", 
+        "talkId": 10001031
+    }, 
+    "1034": {
+        "id": 1034, 
+        "name": "划炮", 
+        "type": 1, 
+        "btn": "点着", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                8.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hp", 
+        "desc": "可惜城里没有牛粪，所以只能扔水里", 
+        "talkId": 10001031
+    }, 
+    "1041": {
+        "id": 1041, 
+        "name": "黄牛", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                8.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_hn", 
+        "desc": "小孩子不许喝黄牛，有激素的！", 
+        "talkId": 10001041
+    }, 
+    "1042": {
+        "id": 1042, 
+        "name": "黄牛", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.8000000000000003, 
+        "precondition": [], 
+        "icon": "item/img_hn", 
+        "desc": "小孩子不许喝黄牛，有激素的！", 
+        "talkId": 10001041
+    }, 
+    "1043": {
+        "id": 1043, 
+        "name": "黄牛", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                12.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_hn", 
+        "desc": "小孩子不许喝黄牛，有激素的！", 
+        "talkId": 10001041
+    }, 
+    "1044": {
+        "id": 1044, 
+        "name": "黄牛", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                14.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 4.800000000000001, 
+        "precondition": [], 
+        "icon": "item/img_hn", 
+        "desc": "小孩子不许喝黄牛，有激素的！", 
+        "talkId": 10001041
+    }, 
+    "1045": {
+        "id": 1045, 
+        "name": "黄牛", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            31
+        ], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                16.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hn", 
+        "desc": "小孩子不许喝黄牛，有激素的！", 
+        "talkId": 10001041
+    }, 
+    "1051": {
+        "id": 1051, 
+        "name": "贺卡", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_hk", 
+        "desc": "制作简单的小贺卡，可以讨妈妈开心", 
+        "talkId": 10001051
+    }, 
+    "1052": {
+        "id": 1052, 
+        "name": "贺卡", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                5.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 2.8000000000000003, 
+        "precondition": [], 
+        "icon": "item/img_hk", 
+        "desc": "制作简单的小贺卡，可以讨妈妈开心", 
+        "talkId": 10001051
+    }, 
+    "1053": {
+        "id": 1053, 
+        "name": "贺卡", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                6.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_hk", 
+        "desc": "制作简单的小贺卡，可以讨妈妈开心", 
+        "talkId": 10001051
+    }, 
+    "1054": {
+        "id": 1054, 
+        "name": "贺卡", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                7.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 4.800000000000001, 
+        "precondition": [], 
+        "icon": "item/img_hk", 
+        "desc": "制作简单的小贺卡，可以讨妈妈开心", 
+        "talkId": 10001051
+    }, 
+    "1055": {
+        "id": 1055, 
+        "name": "贺卡", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                8.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hk", 
+        "desc": "制作简单的小贺卡，可以讨妈妈开心", 
+        "talkId": 10001051
+    }, 
+    "1081": {
+        "id": 1081, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                4.0
+            ]
+        ], 
+        "value": 0.5, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 10001081
+    }, 
+    "1082": {
+        "id": 1082, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 0.5, 
+        "sell": 2.8000000000000003, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 10001081
+    }, 
+    "1083": {
+        "id": 1083, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                6.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 10001081
+    }, 
+    "1084": {
+        "id": 1084, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                7.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 4.800000000000001, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 10001081
+    }, 
+    "1085": {
+        "id": 1085, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                8.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 10001081
+    }, 
+    "1091": {
+        "id": 1091, 
+        "name": "辣条", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 0.5, 
+        "sell": 1.2000000000000002, 
+        "precondition": [], 
+        "icon": "item/img_lt", 
+        "desc": "小学生的硬通货", 
+        "talkId": 10001091
+    }, 
+    "1092": {
+        "id": 1092, 
+        "name": "辣条", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                6.0
+            ]
+        ], 
+        "value": 0.5, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_lt", 
+        "desc": "小学生的硬通货", 
+        "talkId": 10001091
+    }, 
+    "1093": {
+        "id": 1093, 
+        "name": "辣条", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 10, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                7.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_lt", 
+        "desc": "小学生的硬通货", 
+        "talkId": 10001091
+    }, 
+    "1094": {
+        "id": 1094, 
+        "name": "辣条", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 99, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                8.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_lt", 
+        "desc": "小学生的硬通货", 
+        "talkId": 10001091
+    }, 
+    "1101": {
+        "id": 1101, 
+        "name": "温馨的海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hb2", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1102": {
+        "id": 1102, 
+        "name": "动感的海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                0.5
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hb3", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1103": {
+        "id": 1103, 
+        "name": "新奇的海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hb6", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1104": {
+        "id": 1104, 
+        "name": "振奋的海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                1.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hb8", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1105": {
+        "id": 1105, 
+        "name": "新版温馨海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                2.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 12.0, 
+        "precondition": [], 
+        "icon": "item/img_hb9", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1106": {
+        "id": 1106, 
+        "name": "新版动感海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                1.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 12.0, 
+        "precondition": [], 
+        "icon": "item/img_hb10", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1107": {
+        "id": 1107, 
+        "name": "新版新奇海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                10.0, 
+                2.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 12.0, 
+        "precondition": [], 
+        "icon": "item/img_hb11", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "1108": {
+        "id": 1108, 
+        "name": "新版振奋海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                2.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 12.0, 
+        "precondition": [], 
+        "icon": "item/img_hb12", 
+        "desc": "同时只能张贴一张海报", 
+        "talkId": 10001101
+    }, 
+    "2101": {
+        "id": 2101, 
+        "name": "七巧板", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_qqb", 
+        "desc": "看我来给你拼个狐狸", 
+        "talkId": 0
+    }, 
+    "2102": {
+        "id": 2102, 
+        "name": "橡皮泥", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_xiangpini", 
+        "desc": "总被捏成歪鼻子小怪兽，混色后像坨神秘外星便便。", 
+        "talkId": 0
+    }, 
+    "2103": {
+        "id": 2103, 
+        "name": "竹蜻蜓", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_zqt", 
+        "desc": "塑料翅膀永远飞不过二楼，但能精准砸中教导主任的光头", 
+        "talkId": 0
+    }, 
+    "2201": {
+        "id": 2201, 
+        "name": "拼图", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_pintu", 
+        "desc": "还有一片呢？怎么找不到了？", 
+        "talkId": 0
+    }, 
+    "2202": {
+        "id": 2202, 
+        "name": "折扇", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_zs", 
+        "desc": "别看它小，扇起来还真挺凉快的", 
+        "talkId": 0
+    }, 
+    "2203": {
+        "id": 2203, 
+        "name": "玩具水枪", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            4
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_wjsq", 
+        "desc": "小李子同款水枪", 
+        "talkId": 0
+    }, 
+    "2204": {
+        "id": 2204, 
+        "name": "mp3", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7, 
+            11
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_mp3", 
+        "desc": "内存212M", 
+        "talkId": 0
+    }, 
+    "2210": {
+        "id": 2210, 
+        "rarity": 1, 
+        "name": "小熊", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_ktro", 
+        "desc": "毛绒绒的小熊，针脚很密，看得出来罗晓纯做得十分用心", 
+        "talkId": 0
+    }, 
+    "2301": {
+        "id": 2301, 
+        "name": "魔方", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 16.0, 
+        "precondition": [], 
+        "icon": "item/img_mf", 
+        "desc": "3阶魔方，附带魔方还原公式", 
+        "talkId": 0
+    }, 
+    "2302": {
+        "id": 2302, 
+        "name": "水彩笔", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            11
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 16.0, 
+        "precondition": [], 
+        "icon": "item/img_shuicaibi", 
+        "desc": "24色里永远缺了“天蓝”，盖子总在课桌缝里玩捉迷藏", 
+        "talkId": 0
+    }, 
+    "2303": {
+        "id": 2303, 
+        "name": "悠悠球", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            4
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 16.0, 
+        "precondition": [], 
+        "icon": "item/img_yoyoqiu", 
+        "desc": "炫技三秒后，线立马缠成中国结", 
+        "talkId": 0
+    }, 
+    "2401": {
+        "id": 2401, 
+        "name": "象棋", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                4.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 36.0, 
+        "precondition": [], 
+        "icon": "item/img_xiangqi", 
+        "desc": "少了颗“車”就用瓶盖代替，爷爷教的“当头炮”是唯一战术", 
+        "talkId": 0
+    }, 
+    "2402": {
+        "id": 2402, 
+        "name": "宠物蛋", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                4.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 36.0, 
+        "precondition": [], 
+        "icon": "item/img_cwd", 
+        "desc": "这次可不能养死了", 
+        "talkId": 0
+    }, 
+    "2403": {
+        "id": 2403, 
+        "name": "四驱车", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                4.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 36.0, 
+        "precondition": [], 
+        "icon": "item/img_sqc", 
+        "desc": "奥笛双钻，我的伙伴", 
+        "talkId": 0
+    }, 
+    "2501": {
+        "id": 2501, 
+        "name": "高乐积木", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                6.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 8.0, 
+        "sell": 60.0, 
+        "precondition": [], 
+        "icon": "item/img_legao", 
+        "desc": "说明书早被折成纸飞机", 
+        "talkId": 0
+    }, 
+    "2502": {
+        "id": 2502, 
+        "name": "智能小狗", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                6.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 8.0, 
+        "sell": 60.0, 
+        "precondition": [], 
+        "icon": "item/img_jiqigou", 
+        "desc": "充电2小时续航5分钟，翻跟头只会啃到自己的尾巴。", 
+        "talkId": 0
+    }, 
+    "2503": {
+        "id": 2503, 
+        "name": "旱冰鞋", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            4
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                6.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 8.0, 
+        "sell": 60.0, 
+        "precondition": [], 
+        "icon": "item/img_hanbinxie", 
+        "desc": "初学像笨企鹅，熟练后溜出“放学别走”的嚣张尾烟", 
+        "talkId": 0
+    }, 
+    "2601": {
+        "id": 2601, 
+        "name": "点读机", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                8.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 10.0, 
+        "sell": 100.0, 
+        "precondition": [], 
+        "icon": "item/img_dianduji", 
+        "desc": "哪里不会点哪里", 
+        "talkId": 0
+    }, 
+    "2602": {
+        "id": 2602, 
+        "name": "吉他", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            11
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                8.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 10.0, 
+        "sell": 100.0, 
+        "precondition": [], 
+        "icon": "item/img_jita", 
+        "desc": "三根弦自学《小星星》，按错和弦时像驴叫", 
+        "talkId": 0
+    }, 
+    "2603": {
+        "id": 2603, 
+        "name": "跑鞋", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            4
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                8.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 10.0, 
+        "sell": 100.0, 
+        "precondition": [], 
+        "icon": "item/img_px", 
+        "desc": "葡田高仿，结实耐操", 
+        "talkId": 0
+    }, 
+    "4001": {
+        "id": 4001, 
+        "name": "廉价书包", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_shubao1", 
+        "desc": "硬帆布勉勉强强缝起来的书包，小心拉链被拉坏", 
+        "talkId": 0
+    }, 
+    "4002": {
+        "id": 4002, 
+        "name": "普通书包", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                2.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4001.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_shubao", 
+        "desc": "基础款尼龙混纺书包，适合日常背到毕业——前提是你别往里面塞哑铃", 
+        "talkId": 0
+    }, 
+    "4003": {
+        "id": 4003, 
+        "name": "耐用书包", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                3.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4002.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_shubao2", 
+        "desc": "军用级牛津布+防泼水涂层，拉链顺滑得能当解压玩具，接缝处缝了足足八道线！", 
+        "talkId": 0
+    }, 
+    "4004": {
+        "id": 4004, 
+        "name": "名牌书包", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                4.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4003.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_shubao3", 
+        "desc": "经典格纹皮拼接高密尼龙，肩带加了两片记忆棉，塞满习题册也不至于勒出红印子", 
+        "talkId": 0
+    }, 
+    "4101": {
+        "id": 4101, 
+        "name": "电子手表", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_dzsb", 
+        "desc": "按时睡觉X\n盯着秒表等铃声√", 
+        "talkId": 0
+    }, 
+    "4102": {
+        "id": 4102, 
+        "name": "记忆枕", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 16.0, 
+        "precondition": [], 
+        "icon": "item/img_jiyizhen", 
+        "desc": "量子开光记忆枕，守护睡眠每一天", 
+        "talkId": 0
+    }, 
+    "4103": {
+        "id": 4103, 
+        "name": "自行车", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 40.0, 
+        "precondition": [], 
+        "icon": "item/img_danche", 
+        "desc": "拉风的自行车，帮助你更轻松地在鹅城闲逛", 
+        "talkId": 0
+    }, 
+    "4104": {
+        "id": 4104, 
+        "name": "小灵通", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 40.0, 
+        "precondition": [], 
+        "icon": "item/img_sj", 
+        "desc": "数字键早已被磨损得看不清数字", 
+        "talkId": 0
+    }, 
+    "4201": {
+        "id": 4201, 
+        "name": "廉价书架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                331.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4202": {
+        "id": 4202, 
+        "name": "普通书架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                331.0, 
+                20.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4201.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4203": {
+        "id": 4203, 
+        "name": "耐用书架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                331.0, 
+                30.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4202.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4204": {
+        "id": 4204, 
+        "name": "精致书架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                331.0, 
+                40.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4203.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4301": {
+        "id": 4301, 
+        "name": "便利贴", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_bianlitie", 
+        "desc": "不但能记笔记，还能传纸条", 
+        "talkId": 0
+    }, 
+    "4302": {
+        "id": 4302, 
+        "name": "计算器", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_jsq", 
+        "desc": "妈妈再也不用担心我的数学了！", 
+        "talkId": 0
+    }, 
+    "4303": {
+        "id": 4303, 
+        "name": "钢笔", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                4.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 14.0, 
+        "precondition": [], 
+        "icon": "item/img_gb", 
+        "desc": "考试专用“漏墨大魔王”", 
+        "talkId": 0
+    }, 
+    "4304": {
+        "id": 4304, 
+        "name": "录音机", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 20.0, 
+        "precondition": [], 
+        "icon": "item/img_luyinji", 
+        "desc": "英语磁带B面录过同桌打呼，快进键磨出班主任的同款秃斑", 
+        "talkId": 0
+    }, 
+    "4305": {
+        "id": 4305, 
+        "name": "护眼台灯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                6.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 30.0, 
+        "precondition": [], 
+        "icon": "item/img_huyandeng", 
+        "desc": "三档光效切换，暖黄写情书，冷白抄作业，闪烁是催你睡觉的摩斯密码", 
+        "talkId": 0
+    }, 
+    "4306": {
+        "id": 4306, 
+        "name": "床上书桌", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                7.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 40.0, 
+        "precondition": [], 
+        "icon": "item/img_xuexizhuo", 
+        "desc": "除了用来写作业，趴着睡觉也不错", 
+        "talkId": 0
+    }, 
+    "4307": {
+        "id": 4307, 
+        "name": "电子词典", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                8.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 52.0, 
+        "precondition": [], 
+        "icon": "item/img_dianzicidian", 
+        "desc": "查单词的伪装模式下，长按休眠键可召唤贪吃蛇彩蛋", 
+        "talkId": 0
+    }, 
+    "4401": {
+        "id": 4401, 
+        "name": "运动服", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_qiufu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4402": {
+        "id": 4402, 
+        "name": "篮球", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_lanqiu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4403": {
+        "id": 4403, 
+        "name": "羽毛球拍", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_qiupai", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4404": {
+        "id": 4404, 
+        "name": "人字拖", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_tuoxie", 
+        "desc": "多功能人字拖，居家必备", 
+        "talkId": 0
+    }, 
+    "4405": {
+        "id": 4405, 
+        "name": "风筝", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                40.0, 
+                1.0, 
+                9905.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_fz", 
+        "desc": "到了春天，可以去游乐园放风筝", 
+        "talkId": 0
+    }, 
+    "4406": {
+        "id": 4406, 
+        "name": "鱼竿", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                40.0, 
+                1.0, 
+                2716.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_yugan", 
+        "desc": "可以到双子峰山脚钓鱼", 
+        "talkId": 0
+    }, 
+    "4412": {
+        "id": 4412, 
+        "name": "普通篮球", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4402.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 16.0, 
+        "precondition": [], 
+        "icon": "item/img_lanqiu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "4422": {
+        "id": 4422, 
+        "name": "耐用篮球", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                2.0, 
+                3.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4412.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 24.0, 
+        "precondition": [], 
+        "icon": "item/img_lanqiu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "5101": {
+        "id": 5101, 
+        "rarity": 1, 
+        "name": "迷你玩偶", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_miniwanou", 
+        "desc": "谭梓君在抓娃娃机上的战利品", 
+        "talkId": 0
+    }, 
+    "5102": {
+        "id": 5102, 
+        "rarity": 1, 
+        "name": "小芊的游戏卡", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_shk2", 
+        "desc": "小芊珍藏的超稀有卡片", 
+        "talkId": 0
+    }, 
+    "5103": {
+        "id": 5103, 
+        "rarity": 1, 
+        "name": "正版变身器", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_bsq", 
+        "desc": "真正的变身器，里面蕴藏着光之力量，由守护世界之人所拥有", 
+        "talkId": 0
+    }, 
+    "5104": {
+        "id": 5104, 
+        "rarity": 1, 
+        "name": "游戏机", 
+        "type": 2, 
+        "btn": "携带", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_xxj", 
+        "desc": "孟怀安的游戏机，被保管得很好，看起来像新的一样。", 
+        "talkId": 0
+    }, 
+    "5105": {
+        "id": 5105, 
+        "rarity": 1, 
+        "name": "穿云箭", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_bianpao", 
+        "desc": "一支穿云箭，千军万马来相见", 
+        "talkId": 0
+    }, 
+    "5106": {
+        "id": 5106, 
+        "rarity": 1, 
+        "name": "毛绒熊", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xiong", 
+        "desc": "肖清雅给的毛茸茸的温暖小熊", 
+        "talkId": 0
+    }, 
+    "5107": {
+        "id": 5107, 
+        "rarity": 1, 
+        "name": "蒂蒂猫手表", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hellokiti", 
+        "desc": "爸爸送的蒂蒂猫联名手表", 
+        "talkId": 0
+    }, 
+    "5108": {
+        "id": 5108, 
+        "rarity": 1, 
+        "name": "程意的画", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_laoshuhua", 
+        "desc": "充满想象力的蜡笔画", 
+        "talkId": 0
+    }, 
+    "5109": {
+        "id": 5109, 
+        "rarity": 1, 
+        "name": "奥数奖杯", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_tejb", 
+        "desc": "鹅城小学生奥数竞赛一等奖", 
+        "talkId": 0
+    }, 
+    "5110": {
+        "id": 5110, 
+        "rarity": 1, 
+        "name": "水晶球", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_sjq", 
+        "desc": "妈妈送的水晶球，和商店卖的一模一样", 
+        "talkId": 0
+    }, 
+    "5111": {
+        "id": 5111, 
+        "rarity": 1, 
+        "name": "钢笔", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                1.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_gb", 
+        "desc": "老师送的钢笔，是有名的牌子", 
+        "talkId": 0
+    }, 
+    "5112": {
+        "id": 5112, 
+        "rarity": 1, 
+        "name": "脑黄金豪华版", 
+        "type": 1, 
+        "btn": "尝试", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                999.0, 
+                20.0, 
+                5101.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_naohuangjin", 
+        "desc": "包装盒十分华丽，上面写满了你看不懂的词语。\n据说服用后能大幅度提升智力。", 
+        "talkId": 340002001
+    }, 
+    "5113": {
+        "id": 5113, 
+        "rarity": 1, 
+        "name": "毛衣", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_jiumaoyi", 
+        "desc": "奶奶亲手织的毛衣。虽然穿不上，但还是好好留着吧。", 
+        "talkId": 0
+    }, 
+    "5114": {
+        "id": 5114, 
+        "rarity": 1, 
+        "name": "旧旧的红扇子", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hongshanzi", 
+        "desc": "奶奶珍藏多年的扇子，承载了不少老一辈人青春的回忆。", 
+        "talkId": 0
+    }, 
+    "5115": {
+        "id": 5115, 
+        "rarity": 1, 
+        "name": "钢笔", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                1.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_gb", 
+        "desc": "爸妈送的钢笔，是有名的牌子", 
+        "talkId": 0
+    }, 
+    "5116": {
+        "id": 5116, 
+        "rarity": 1, 
+        "name": "丑蝴蝶", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                -1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -2.0, 
+        "sell": -4.0, 
+        "precondition": [], 
+        "icon": "item/img_chd", 
+        "desc": "什么鬼丑东西", 
+        "talkId": 0
+    }, 
+    "5117": {
+        "id": 5117, 
+        "rarity": 1, 
+        "name": "志愿者徽章", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                501.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                4.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_zhiyuanzhe", 
+        "desc": "小溪送你的志愿者徽章", 
+        "talkId": 0
+    }, 
+    "5118": {
+        "id": 5118, 
+        "rarity": 1, 
+        "name": "金属板照片", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_jinshuban", 
+        "desc": "可疑组织售卖的治疗仪的内部照片", 
+        "talkId": 0
+    }, 
+    "5119": {
+        "id": 5119, 
+        "rarity": 1, 
+        "name": "铝热剂", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_lureji", 
+        "desc": "铝粉与金属混合物，点燃后可放出大量热量", 
+        "talkId": 0
+    }, 
+    "5120": {
+        "id": 5120, 
+        "rarity": 1, 
+        "name": "无线电地图", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_ditu", 
+        "desc": "官方人员不慎遗落的无线电比赛地图", 
+        "talkId": 0
+    }, 
+    "5121": {
+        "id": 5121, 
+        "rarity": 1, 
+        "name": "小君的吉他", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            11
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_jita", 
+        "desc": "小君心爱的吉他，从记事起就陪伴着她", 
+        "talkId": 0
+    }, 
+    "5122": {
+        "id": 5122, 
+        "rarity": 1, 
+        "name": "周边徽章", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_cybj", 
+        "desc": "一个薄薄的铁皮，不知道为什么这么贵", 
+        "talkId": 0
+    }, 
+    "5123": {
+        "id": 5123, 
+        "rarity": 1, 
+        "name": "孟怀安护身符", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                20.0, 
+                10.0, 
+                201.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_hsf", 
+        "desc": "孟怀安送的护身符，说让你好好保管", 
+        "talkId": 0
+    }, 
+    "5124": {
+        "id": 5124, 
+        "rarity": 1, 
+        "name": "披萨代金券", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_djj", 
+        "desc": "兑换一份免费披萨，怎么周末还不能使用啊？", 
+        "talkId": 0
+    }, 
+    "5125": {
+        "id": 5125, 
+        "rarity": 1, 
+        "name": "狗狗项圈", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xiangquan", 
+        "desc": "你仿佛又回到了那个和可乐玩扔球游戏的下午……", 
+        "talkId": 0
+    }, 
+    "5126": {
+        "id": 5126, 
+        "rarity": 1, 
+        "name": "护身符", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                20.0, 
+                10.0, 
+                201.0, 
+                0.2
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_hsf", 
+        "desc": "从记事起就陪伴在你身边，不知道是什么时候有的", 
+        "talkId": 0
+    }, 
+    "5127": {
+        "id": 5127, 
+        "rarity": 1, 
+        "name": "印章", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_yinzhangyou", 
+        "desc": "赵老师送你的“优”字印章", 
+        "talkId": 0
+    }, 
+    "5128": {
+        "id": 5128, 
+        "rarity": 1, 
+        "name": "动漫手办", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_shouban", 
+        "desc": "围脖活动参与奖奖品", 
+        "talkId": 0
+    }, 
+    "5129": {
+        "id": 5129, 
+        "rarity": 1, 
+        "name": "空白游戏盒", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                20.0, 
+                10.0, 
+                201.0, 
+                0.1
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_kongbaiyouxihe", 
+        "desc": "孟怀安送的空白游戏盒，不知道到底是什么游戏", 
+        "talkId": 0
+    }, 
+    "5130": {
+        "id": 5130, 
+        "rarity": 1, 
+        "name": "空白盒", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                20.0, 
+                10.0, 
+                201.0, 
+                0.1
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_kongbaiyouxihe", 
+        "desc": "从记事起就陪伴在你身边的空盒子，不知道是什么时候有的", 
+        "talkId": 0
+    }, 
+    "5131": {
+        "id": 5131, 
+        "rarity": 1, 
+        "name": "水晶蝴蝶项链", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_sjdz", 
+        "desc": "孟怀安送的项链，绳子是他亲手编的", 
+        "talkId": 0
+    }, 
+    "5132": {
+        "id": 5132, 
+        "rarity": 1, 
+        "name": "高级自动铅笔", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_autopen", 
+        "desc": "贵有贵的道理啊！", 
+        "talkId": 0
+    }, 
+    "5133": {
+        "id": 5133, 
+        "rarity": 1, 
+        "name": "纸花", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                15.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_zh", 
+        "desc": "弟弟上手工课时，专门为陈心慈折的纸花", 
+        "talkId": 0
+    }, 
+    "5134": {
+        "id": 5134, 
+        "rarity": 1, 
+        "name": "二手mp3", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7, 
+            11
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 0.0, 
+        "sell": 0.0, 
+        "precondition": [], 
+        "icon": "item/img_mp3", 
+        "desc": "掉了很多漆，不知道用了多久了", 
+        "talkId": 0
+    }, 
+    "5135": {
+        "id": 5135, 
+        "rarity": 1, 
+        "name": "钥匙扣", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_yaoshikou", 
+        "desc": "薛诗蕾送的钥匙扣，你们的定情信物。", 
+        "talkId": 0
+    }, 
+    "5136": {
+        "id": 5136, 
+        "rarity": 1, 
+        "name": "草戒指", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_caojiezhi", 
+        "desc": "肖清雅为你编制的订婚草戒。", 
+        "talkId": 0
+    }, 
+    "5137": {
+        "id": 5137, 
+        "rarity": 1, 
+        "name": "溜冰折扣券", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                40.0, 
+                4.0, 
+                3245.0, 
+                30.0, 
+                -3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_zhekou", 
+        "desc": "背包客小王赠送的折扣券，可以在溜冰时打折。", 
+        "talkId": 0
+    }, 
+    "5138": {
+        "id": 5138, 
+        "rarity": 1, 
+        "name": "推销员名片", 
+        "type": 1, 
+        "btn": "阅读", 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                5.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_mingpian", 
+        "desc": "推销员硬塞给你的名片。", 
+        "talkId": 10001061
+    }, 
+    "5139": {
+        "id": 5139, 
+        "rarity": 1, 
+        "name": "振奋的海报", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hb12", 
+        "desc": "早睡早起，锻炼身体！", 
+        "talkId": 0
+    }, 
+    "5140": {
+        "id": 5140, 
+        "rarity": 1, 
+        "name": "签名篮球", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                6.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 16.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_lanqiu", 
+        "desc": "姚名亲笔签名的篮球", 
+        "talkId": 0
+    }, 
+    "6101": {
+        "id": 6101, 
+        "rarity": 1, 
+        "name": "磁铁", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                0.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_ct", 
+        "desc": "帮助谭梓君修复指南针的道具", 
+        "talkId": 0
+    }, 
+    "6102": {
+        "id": 6102, 
+        "rarity": 1, 
+        "name": "银色手链", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_yssl", 
+        "desc": "谭梓君心爱的手链", 
+        "talkId": 0
+    }, 
+    "6103": {
+        "id": 6103, 
+        "rarity": 1, 
+        "name": "草莓蛋糕", 
+        "type": 1, 
+        "btn": "分享", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                10.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_dangao", 
+        "desc": "送给妈妈的蛋糕，可以增加妈妈对你的信任", 
+        "talkId": 10006103
+    }, 
+    "6104": {
+        "id": 6104, 
+        "rarity": 1, 
+        "name": "胸针", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_xiongzhen", 
+        "desc": "薛诗蕾的胸针", 
+        "talkId": 0
+    }, 
+    "6106": {
+        "id": 6106, 
+        "rarity": 1, 
+        "name": "双人小雕塑", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_diaosu", 
+        "desc": "完成孟怀安挚友任务后获得的小雕塑", 
+        "talkId": 0
+    }, 
+    "6601": {
+        "id": 6601, 
+        "rarity": 1, 
+        "name": "基础工具箱", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                38.0, 
+                4.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_gjx", 
+        "desc": "除了针和白线，其他啥都没有，突出一个简陋", 
+        "talkId": 0
+    }, 
+    "6602": {
+        "id": 6602, 
+        "rarity": 1, 
+        "name": "进阶工具箱", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                38.0, 
+                4.0, 
+                1.0, 
+                2.0
+            ], 
+            [
+                60.0, 
+                -1.0, 
+                4001.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_gjx", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6603": {
+        "id": 6603, 
+        "rarity": 1, 
+        "name": "高级工具箱", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                38.0, 
+                4.0, 
+                1.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_gjx", 
+        "desc": "牛津布材质，耐磨便携，送小剪刀和纽扣。店里卖得最好的一款", 
+        "talkId": 0
+    }, 
+    "6611": {
+        "id": 6611, 
+        "rarity": 1, 
+        "name": "纸飞机", 
+        "type": 1, 
+        "btn": "放飞", 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                8.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_zfj", 
+        "desc": null, 
+        "talkId": 10004103
+    }, 
+    "6612": {
+        "id": 6612, 
+        "rarity": 1, 
+        "name": "笔筒", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_bt", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6613": {
+        "id": 6613, 
+        "rarity": 1, 
+        "name": "纸花", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                15.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_zh", 
+        "desc": null, 
+        "talkId": 10004105
+    }, 
+    "6621": {
+        "id": 6621, 
+        "rarity": 1, 
+        "name": "潜望镜", 
+        "type": 1, 
+        "btn": "玩", 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                12.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 7.0, 
+        "precondition": [], 
+        "icon": "item/img_qwj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6622": {
+        "id": 6622, 
+        "rarity": 1, 
+        "name": "不倒翁", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 7.0, 
+        "precondition": [], 
+        "icon": "item/img_bdw", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6623": {
+        "id": 6623, 
+        "rarity": 1, 
+        "name": "中国结", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 7.0, 
+        "precondition": [], 
+        "icon": "item/img_zgj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6624": {
+        "id": 6624, 
+        "rarity": 1, 
+        "name": "简易展示架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 7.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6631": {
+        "id": 6631, 
+        "rarity": 1, 
+        "name": "简易鱼竿", 
+        "type": 1, 
+        "btn": "玩", 
+        "subType": 0, 
+        "itemTag": [
+            7, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                15.0
+            ]
+        ], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_yg", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6632": {
+        "id": 6632, 
+        "rarity": 1, 
+        "name": "灯笼", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                1.5
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_dl", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6633": {
+        "id": 6633, 
+        "rarity": 1, 
+        "name": "书签", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                331.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_sq", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6634": {
+        "id": 6634, 
+        "rarity": 1, 
+        "name": "小白龙", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                10.0, 
+                2.0, 
+                0.15
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_xbl", 
+        "desc": "纸制的龙模型，跟罗晓纯提升关系后，她会教授制作方法", 
+        "talkId": 0
+    }, 
+    "6635": {
+        "id": 6635, 
+        "rarity": 1, 
+        "name": "小白龙", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                10.0, 
+                2.0, 
+                0.1
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_xbl", 
+        "desc": "纸制的龙模型，细节讲究，威严霸气", 
+        "talkId": 0
+    }, 
+    "6641": {
+        "id": 6641, 
+        "rarity": 1, 
+        "name": "小风筝", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            4, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 5.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_fz", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6642": {
+        "id": 6642, 
+        "rarity": 1, 
+        "name": "电动小船", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                1.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 5.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_ddxc", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "6643": {
+        "id": 6643, 
+        "rarity": 1, 
+        "name": "展示架", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                60.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 5.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_zsj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "8001": {
+        "id": 8001, 
+        "rarity": 1, 
+        "name": "贝壳藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_beike", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8002": {
+        "id": 8002, 
+        "rarity": 1, 
+        "name": "海螺藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_luo", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8003": {
+        "id": 8003, 
+        "rarity": 1, 
+        "name": "石头藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_shi", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8004": {
+        "id": 8004, 
+        "rarity": 1, 
+        "name": "小型藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_s", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8005": {
+        "id": 8005, 
+        "rarity": 1, 
+        "name": "中型藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_m", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8006": {
+        "id": 8006, 
+        "rarity": 1, 
+        "name": "大型藏品盒", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 99, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_shellbox_l", 
+        "desc": "从海滩上捡来的各种漂亮小玩意儿", 
+        "talkId": 0
+    }, 
+    "8011": {
+        "id": 8011, 
+        "rarity": 1, 
+        "name": "水草", 
+        "type": 1, 
+        "btn": "丢弃", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_shuicao", 
+        "desc": "从湖里钓上来的水草，一无是处", 
+        "talkId": 0
+    }, 
+    "8012": {
+        "id": 8012, 
+        "rarity": 1, 
+        "name": "破鞋", 
+        "type": 1, 
+        "btn": "丢弃", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                2.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_poxie", 
+        "desc": "从湖里钓上来的破鞋，一无是处", 
+        "talkId": 0
+    }, 
+    "8013": {
+        "id": 8013, 
+        "rarity": 1, 
+        "name": "大块磁铁", 
+        "type": 1, 
+        "btn": "出售", 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                30.0, 
+                20.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 20.0, 
+        "precondition": [], 
+        "icon": "item/img_citie", 
+        "desc": "从湖里钓上来的磁铁，可以卖不少钱", 
+        "talkId": 0
+    }, 
+    "8014": {
+        "id": 8014, 
+        "rarity": 1, 
+        "name": "玻璃瓶", 
+        "type": 1, 
+        "btn": "打开", 
+        "subType": 0, 
+        "itemTag": [], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                999.0, 
+                20.0, 
+                5101.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_piaoliuping", 
+        "desc": "从湖里钓上来的塑料瓶子，里面似乎有个纸条", 
+        "talkId": 340003001
+    }, 
+    "8015": {
+        "id": 8015, 
+        "rarity": 1, 
+        "name": "古钱币", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_tongbao", 
+        "desc": "从湖里钓上来的古钱币，不知真假", 
+        "talkId": 0
+    }, 
+    "8101": {
+        "id": 8101, 
+        "rarity": 1, 
+        "name": "椰子", 
+        "type": 1, 
+        "btn": "赠送", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_yezi", 
+        "desc": "从椰子树上敲下来的新鲜椰子，可以送给妈妈煲汤", 
+        "talkId": 0
+    }, 
+    "8102": {
+        "id": 8102, 
+        "rarity": 1, 
+        "name": "平整的字条", 
+        "type": 4, 
+        "btn": "阅读", 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_zitiao1", 
+        "desc": "“旧时观内连理梦，而今<color=#ff8000>堂外青砖</color>中。”", 
+        "talkId": 0
+    }, 
+    "8103": {
+        "id": 8103, 
+        "rarity": 1, 
+        "name": "皱巴巴的字条", 
+        "type": 4, 
+        "btn": "阅读", 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_zitiao3", 
+        "desc": "“观<color=#ff8000>三世之贤</color>，思万民所愿。”", 
+        "talkId": 0
+    }, 
+    "8104": {
+        "id": 8104, 
+        "rarity": 1, 
+        "name": "整洁的字条", 
+        "type": 4, 
+        "btn": "阅读", 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_zitiao2", 
+        "desc": "“<color=#ff8000>石敢当</color>，镇百鬼，同教盛，礼乐昌。”", 
+        "talkId": 0
+    }, 
+    "8105": {
+        "id": 8105, 
+        "rarity": 1, 
+        "name": "菠萝", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_boluo", 
+        "desc": "从树上长出来的菠萝——也许吧，谁在乎呢", 
+        "talkId": 0
+    }, 
+    "8106": {
+        "id": 8106, 
+        "rarity": 1, 
+        "name": "白鹤洋的试题", 
+        "type": 1, 
+        "btn": "做", 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                301.0, 
+                -10.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                2.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_shijuan", 
+        "desc": "2班学霸自己出的试题，难度适中，居家必备", 
+        "talkId": 0
+    }, 
+    "8107": {
+        "id": 8107, 
+        "rarity": 1, 
+        "name": "绝世好剑", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_shuzhi", 
+        "desc": "聪明的人能看出它是把绝世好剑，不聪明的只觉得它是根树枝", 
+        "talkId": 0
+    }, 
+    "8108": {
+        "id": 8108, 
+        "rarity": 1, 
+        "name": "呱籽的扇子", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_sanzi", 
+        "desc": "呱籽最爱的扇子，不过主要用途是用它来砸核桃", 
+        "talkId": 0
+    }, 
+    "8109": {
+        "id": 8109, 
+        "rarity": 1, 
+        "name": "高大达模型", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5, 
+            6
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_gaoda", 
+        "desc": "肖清雅特地让爸爸制作的玩具模型，附带灯光和光翼展开等功能", 
+        "talkId": 0
+    }, 
+    "8110": {
+        "id": 8110, 
+        "rarity": 1, 
+        "name": "珍贵卡片", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xiyouka", 
+        "desc": "一张珍贵的游机王稀有卡片，备受游机王玩家的追捧", 
+        "talkId": 0
+    }, 
+    "8201": {
+        "id": 8201, 
+        "rarity": 1, 
+        "name": "万绿湖纪念品", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_fozhu", 
+        "desc": "精美的纪念品，适合用来送礼。", 
+        "talkId": 0
+    }, 
+    "8203": {
+        "id": 8203, 
+        "rarity": 1, 
+        "name": "瑶寨纪念品", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_zhulan", 
+        "desc": "精美的纪念品，适合用来送礼。", 
+        "talkId": 0
+    }, 
+    "8204": {
+        "id": 8204, 
+        "rarity": 1, 
+        "name": "长城纪念品", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                10.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 10.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_changcheng", 
+        "desc": "精美的纪念品，适合用来送礼。", 
+        "talkId": 0
+    }, 
+    "8205": {
+        "id": 8205, 
+        "rarity": 1, 
+        "name": "九寨沟纪念品", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 10.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_zhuanjingtng", 
+        "desc": "精美的纪念品，适合用来送礼。", 
+        "talkId": 0
+    }, 
+    "8211": {
+        "id": 8211, 
+        "rarity": 1, 
+        "name": "动漫海报", 
+        "type": 1, 
+        "btn": "张贴", 
+        "subType": 1002, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                11.0, 
+                361.0, 
+                2.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hb_anime", 
+        "desc": "等回家后一定要贴墙上，证明你看过。", 
+        "talkId": 0
+    }, 
+    "8212": {
+        "id": 8212, 
+        "rarity": 1, 
+        "name": "忍者钥匙圈", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                5.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                361.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_yaoshikou2", 
+        "desc": "撒撕给！！！！纳努托！！！", 
+        "talkId": 0
+    }, 
+    "8213": {
+        "id": 8213, 
+        "rarity": 1, 
+        "name": "猫耳发箍", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                1.0
+            ], 
+            [
+                1.0, 
+                11.0, 
+                361.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_faku", 
+        "desc": "头上戴猫耳可是漫展经久不衰的潮流之一。", 
+        "talkId": 0
+    }, 
+    "8214": {
+        "id": 8214, 
+        "rarity": 1, 
+        "name": "萌物抱枕", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                10.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                361.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_baozhen2", 
+        "desc": "萌萌软软，抱着很舒服。", 
+        "talkId": 0
+    }, 
+    "8215": {
+        "id": 8215, 
+        "rarity": 1, 
+        "name": "Q版手办", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                11.0, 
+                361.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 5.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_shouban2", 
+        "desc": "谁能拒绝自己的本命粘土人！还能更换表情配件呢！", 
+        "talkId": 0
+    }, 
+    "8216": {
+        "id": 8216, 
+        "rarity": 1, 
+        "name": "玩具武士刀", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                3.0
+            ], 
+            [
+                1.0, 
+                11.0, 
+                361.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 20.0, 
+        "precondition": [], 
+        "icon": "item/img_wushidao", 
+        "desc": "很有份量，但放心好了，它没开刃。", 
+        "talkId": 0
+    }, 
+    "8221": {
+        "id": 8221, 
+        "rarity": 1, 
+        "name": "自制明信片", 
+        "type": 1, 
+        "btn": "寄出", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                361.0, 
+                10.0
+            ]
+        ], 
+        "value": 4.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_zzmingxingpian", 
+        "desc": "谁又舍得寄出这张明信片呢？", 
+        "talkId": 0
+    }, 
+    "8222": {
+        "id": 8222, 
+        "rarity": 1, 
+        "name": "微妙的制品", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                504.0, 
+                5.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                361.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_weimiaozhipin", 
+        "desc": "很……微妙，只可意会不可言传。", 
+        "talkId": 0
+    }, 
+    "8223": {
+        "id": 8223, 
+        "rarity": 1, 
+        "name": "可动立牌", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                301.0, 
+                0.5
+            ], 
+            [
+                1.0, 
+                11.0, 
+                361.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_lipai", 
+        "desc": "可以摆在书桌上，起到一个让本命盯着你学习的效果。", 
+        "talkId": 0
+    }, 
+    "8224": {
+        "id": 8224, 
+        "rarity": 1, 
+        "name": "同人合志", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                5.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                361.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": 3.0, 
+        "precondition": [], 
+        "icon": "item/img_tongrenzazhi", 
+        "desc": "凝聚了无数同人女的爱。", 
+        "talkId": 0
+    }, 
+    "8231": {
+        "id": 8231, 
+        "rarity": 1, 
+        "name": "杰哥签名照", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                3.0, 
+                3.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 2.0, 
+        "sell": -2.0, 
+        "precondition": [], 
+        "icon": "item/img_jiezipai", 
+        "desc": "杰哥签名的自拍照，背面写着“等我出名了，这张照片就值钱了”", 
+        "talkId": 0
+    }, 
+    "8232": {
+        "id": 8232, 
+        "rarity": 1, 
+        "name": "二手充电宝", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 8.0, 
+        "sell": 20.0, 
+        "precondition": [], 
+        "icon": "item/img_chongdianbao", 
+        "desc": "手机充满电，人就活了", 
+        "talkId": 0
+    }, 
+    "8233": {
+        "id": 8233, 
+        "rarity": 1, 
+        "name": "盒装四国杀", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 15.0, 
+        "precondition": [], 
+        "icon": "item/img_siguosha", 
+        "desc": "风靡全国的桌游，快把你的老师做成新角色，约上朋友来一局吧！", 
+        "talkId": 0
+    }, 
+    "8234": {
+        "id": 8234, 
+        "rarity": 1, 
+        "name": "杰哥的红包", 
+        "type": 1, 
+        "btn": "打开", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                30.0, 
+                20.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_hongbao", 
+        "desc": "生日派对的奖品，用的还是过年的红包皮", 
+        "talkId": 0
+    }, 
+    "8235": {
+        "id": 8235, 
+        "rarity": 1, 
+        "name": "零食大礼包", 
+        "type": 1, 
+        "btn": "享受", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                20.0
+            ]
+        ], 
+        "value": 4.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_lingshidalibao", 
+        "desc": "好不好吃不知道，但肯定量大管饱", 
+        "talkId": 0
+    }, 
+    "8236": {
+        "id": 8236, 
+        "rarity": 1, 
+        "name": "魔鬼辣条", 
+        "type": 1, 
+        "btn": "挑战", 
+        "subType": 1001, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                10.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                -2.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_lt", 
+        "desc": "新上市的辣条，辣得你怀疑人生。", 
+        "talkId": 0
+    }, 
+    "8241": {
+        "id": 8241, 
+        "rarity": 1, 
+        "name": "世博护照", 
+        "type": 2, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                90.0, 
+                4.0, 
+                2.0, 
+                100.0, 
+                1.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 5.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_passport", 
+        "desc": "上海世博会纪念品，里面盖着{4002}个场馆的印章", 
+        "talkId": 0
+    }, 
+    "9001": {
+        "id": 9001, 
+        "rarity": 1, 
+        "name": "冠军奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_tejb", 
+        "desc": "首届知识竞赛冠军奖杯", 
+        "talkId": 0
+    }, 
+    "9002": {
+        "id": 9002, 
+        "rarity": 1, 
+        "name": "金牌", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_jinpai", 
+        "desc": "只是镀金而已，不要拿去卖了", 
+        "talkId": 0
+    }, 
+    "9003": {
+        "id": 9003, 
+        "rarity": 1, 
+        "name": "天鹅奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_tejb", 
+        "desc": "第24届天鹅杯冠军奖杯", 
+        "talkId": 0
+    }, 
+    "9004": {
+        "id": 9004, 
+        "rarity": 1, 
+        "name": "知识赛冠军奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_guanjun", 
+        "desc": "鹅城艺体节知识赛冠军奖杯", 
+        "talkId": 0
+    }, 
+    "9005": {
+        "id": 9005, 
+        "rarity": 1, 
+        "name": "艺体节金牌", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_jinpai2", 
+        "desc": "鹅城艺体节长跑金牌", 
+        "talkId": 0
+    }, 
+    "9006": {
+        "id": 9006, 
+        "rarity": 1, 
+        "name": "辩论赛冠军奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 4.0, 
+        "sell": 10.0, 
+        "precondition": [], 
+        "icon": "item/img_guanjun", 
+        "desc": "鹅城艺体节辩论赛冠军奖杯", 
+        "talkId": 0
+    }, 
+    "9007": {
+        "id": 9007, 
+        "rarity": 1, 
+        "name": "知识赛亚军奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_yajun", 
+        "desc": "鹅城艺体节知识赛亚军奖杯", 
+        "talkId": 0
+    }, 
+    "9008": {
+        "id": 9008, 
+        "rarity": 1, 
+        "name": "艺体节银牌", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_yinpai2", 
+        "desc": "鹅城艺体节长跑银牌", 
+        "talkId": 0
+    }, 
+    "9009": {
+        "id": 9009, 
+        "rarity": 1, 
+        "name": "辩论赛亚军奖杯", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_yajun", 
+        "desc": "鹅城艺体节辩论赛亚军奖杯", 
+        "talkId": 0
+    }, 
+    "9010": {
+        "id": 9010, 
+        "rarity": 1, 
+        "name": "十佳歌手冠军奖章", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            10
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                5.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 5.0, 
+        "precondition": [], 
+        "icon": "item/img_jinpai3", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "9020": {
+        "id": 9020, 
+        "rarity": 1, 
+        "name": "智能手机", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                2.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                46.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "common6/icon_telephone", 
+        "desc": "月底了，流量又不够了", 
+        "talkId": 0
+    }, 
+    "9031": {
+        "id": 9031, 
+        "rarity": 1, 
+        "name": "录音笔", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                3.0
+            ], 
+            [
+                100.0, 
+                50.0, 
+                11.0, 
+                6.0, 
+                50.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 30.0, 
+        "precondition": [], 
+        "icon": "item/img_luyinbi", 
+        "desc": "专业录音笔，用过就会知道平时会错过多少对话中的细节。", 
+        "talkId": 0
+    }, 
+    "9032": {
+        "id": 9032, 
+        "rarity": 1, 
+        "name": "掌机", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                5.0
+            ], 
+            [
+                100.0, 
+                50.0, 
+                11.0, 
+                8.0, 
+                50.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 6.0, 
+        "sell": 30.0, 
+        "precondition": [], 
+        "icon": "item/img_youxiji", 
+        "desc": "任地狱第三代掌机，让你随时随地享受快乐。", 
+        "talkId": 0
+    }, 
+    "9033": {
+        "id": 9033, 
+        "rarity": 1, 
+        "name": "家庭音响套装", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                10.0, 
+                2.0, 
+                0.1
+            ], 
+            [
+                100.0, 
+                50.0, 
+                11.0, 
+                2.0, 
+                50.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_ktv", 
+        "desc": "将音量调到最大，可以让整栋楼跟你一起摇滚。", 
+        "talkId": 0
+    }, 
+    "9034": {
+        "id": 9034, 
+        "rarity": 1, 
+        "name": "天文望远镜", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                10.0, 
+                1.0, 
+                0.1
+            ], 
+            [
+                100.0, 
+                50.0, 
+                11.0, 
+                7.0, 
+                50.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": -1.0, 
+        "sell": -1.0, 
+        "precondition": [], 
+        "icon": "item/img_wangyuanjing", 
+        "desc": "入门级天文望远镜，专为吃灰而生。", 
+        "talkId": 0
+    }, 
+    "20320": {
+        "id": 20320, 
+        "rarity": 1, 
+        "name": "杰哥的U盘", 
+        "type": 4, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                10.0, 
+                2.0
+            ]
+        ], 
+        "usingEffect": [], 
+        "value": 3.0, 
+        "sell": 8.0, 
+        "precondition": [], 
+        "icon": "item/img_upan", 
+        "desc": "杰哥珍藏的U盘，据说里面有丰富的学习资料", 
+        "talkId": 0
+    }, 
+    "52001": {
+        "id": 52001, 
+        "rarity": 0, 
+        "name": "干脆面", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_gcm", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52002": {
+        "id": 52002, 
+        "rarity": 0, 
+        "name": "好运水晶", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hysj", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52003": {
+        "id": 52003, 
+        "rarity": 0, 
+        "name": "棒棒糖", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_bbt", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52004": {
+        "id": 52004, 
+        "rarity": 0, 
+        "name": "小人书", 
+        "type": 1, 
+        "btn": "读", 
+        "subType": 0, 
+        "itemTag": [
+            9
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_xrs", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52005": {
+        "id": 52005, 
+        "rarity": 0, 
+        "name": "好看的弹珠", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_danzhu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52006": {
+        "id": 52006, 
+        "rarity": 0, 
+        "name": "俄罗斯方块机", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_elsfk", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52007": {
+        "id": 52007, 
+        "rarity": 0, 
+        "name": "水宝宝", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_sbb", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52008": {
+        "id": 52008, 
+        "rarity": 0, 
+        "name": "跳跳糖", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_ttcandy", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52009": {
+        "id": 52009, 
+        "rarity": 0, 
+        "name": "小猪香囊", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xzxn", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52010": {
+        "id": 52010, 
+        "rarity": 0, 
+        "name": "凉茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                3.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_lc", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52011": {
+        "id": 52011, 
+        "rarity": 0, 
+        "name": "孟怀安的画", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                -2.0
+            ]
+        ], 
+        "value": -1.0, 
+        "sell": -2.0, 
+        "precondition": [], 
+        "icon": "item/img_zjhdh", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52012": {
+        "id": 52012, 
+        "rarity": 0, 
+        "name": "姜饼人饼干", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_jbrbg", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52013": {
+        "id": 52013, 
+        "rarity": 0, 
+        "name": "学霸笔记", 
+        "type": 1, 
+        "btn": "研读", 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                302.0, 
+                1.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xbbj", 
+        "desc": "五套不同解法是笔记本的上限，不是学霸的上限", 
+        "talkId": 0
+    }, 
+    "52014": {
+        "id": 52014, 
+        "rarity": 0, 
+        "name": "暖宝宝", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_nbb", 
+        "desc": "哪里冷就贴哪里，但要小心烫伤哦", 
+        "talkId": 0
+    }, 
+    "52015": {
+        "id": 52015, 
+        "rarity": 0, 
+        "name": "护手霜", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_hss", 
+        "desc": "不许撕你那手上的倒刺了！", 
+        "talkId": 0
+    }, 
+    "52016": {
+        "id": 52016, 
+        "rarity": 0, 
+        "name": "润唇膏", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            0
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_rcg", 
+        "desc": "有着淡淡的薄荷味", 
+        "talkId": 0
+    }, 
+    "52017": {
+        "id": 52017, 
+        "rarity": 0, 
+        "name": "小笼包", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                20.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_xiaolongbao", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52018": {
+        "id": 52018, 
+        "rarity": 0, 
+        "name": "糖葫芦", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_tanghulu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52019": {
+        "id": 52019, 
+        "rarity": 0, 
+        "name": "牛奶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 0, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_niunai", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52020": {
+        "id": 52020, 
+        "rarity": 0, 
+        "name": "橡皮小猪", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_xiangpizhu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52021": {
+        "id": 52021, 
+        "rarity": 0, 
+        "name": "饺子", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                20.0
+            ]
+        ], 
+        "value": 3.0, 
+        "sell": 6.0, 
+        "precondition": [], 
+        "icon": "item/img_jiaozi", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52022": {
+        "id": 52022, 
+        "rarity": 0, 
+        "name": "珍珠奶茶", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 1001, 
+        "itemTag": [
+            3, 
+            31
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_naicha", 
+        "desc": "QQNeNe好喝到咩噗茶", 
+        "talkId": 0
+    }, 
+    "52023": {
+        "id": 52023, 
+        "rarity": 0, 
+        "name": "钵仔糕", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_bozaigao", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52024": {
+        "id": 52024, 
+        "rarity": 0, 
+        "name": "爱心叠纸", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_aixin", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52025": {
+        "id": 52025, 
+        "rarity": 0, 
+        "name": "小猪抱枕", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_baozhen", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52026": {
+        "id": 52026, 
+        "rarity": 0, 
+        "name": "彩色手链", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_caiseshoulian", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52027": {
+        "id": 52027, 
+        "rarity": 0, 
+        "name": "磁带", 
+        "type": 1, 
+        "btn": "听", 
+        "subType": 0, 
+        "itemTag": [
+            1
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                10.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_cidai", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52028": {
+        "id": 52028, 
+        "rarity": 0, 
+        "name": "花瓣洗手液", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_feizhao", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52029": {
+        "id": 52029, 
+        "rarity": 0, 
+        "name": "红薯", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_hongshu", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52030": {
+        "id": 52030, 
+        "rarity": 0, 
+        "name": "动脉饮料", 
+        "type": 1, 
+        "btn": "喝", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_maidong", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52031": {
+        "id": 52031, 
+        "rarity": 0, 
+        "name": "巧克力", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_qiaokeli", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52032": {
+        "id": 52032, 
+        "rarity": 0, 
+        "name": "保暖手套", 
+        "type": 1, 
+        "btn": "穿上", 
+        "subType": 0, 
+        "itemTag": [
+            7
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_shoutao", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52033": {
+        "id": 52033, 
+        "rarity": 0, 
+        "name": "套圈机", 
+        "type": 1, 
+        "btn": "玩", 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_taoquanji", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52034": {
+        "id": 52034, 
+        "rarity": 0, 
+        "name": "铁皮青蛙", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            2
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_tiaotiaowa", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52035": {
+        "id": 52035, 
+        "rarity": 0, 
+        "name": "豆腐花", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_toufuhua", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52036": {
+        "id": 52036, 
+        "rarity": 0, 
+        "name": "折纸星星", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "item/img_xingxing", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52037": {
+        "id": 52037, 
+        "rarity": 0, 
+        "name": "纸鹤与星", 
+        "type": 1, 
+        "btn": "欣赏", 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                5.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_zihexing", 
+        "desc": null, 
+        "talkId": 0
+    }, 
+    "52038": {
+        "id": 52038, 
+        "rarity": 0, 
+        "name": "兔子抱枕", 
+        "type": 1, 
+        "btn": null, 
+        "subType": 0, 
+        "itemTag": [
+            5
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                2.0
+            ]
+        ], 
+        "value": 1.0, 
+        "sell": 2.0, 
+        "precondition": [], 
+        "icon": "dlc_item/img_tuzibaozhen", 
+        "desc": "像陈心慈一样可爱的抱枕", 
+        "talkId": 0
+    }, 
+    "52039": {
+        "id": 52039, 
+        "rarity": 0, 
+        "name": "苹果", 
+        "type": 1, 
+        "btn": "吃", 
+        "subType": 0, 
+        "itemTag": [
+            3
+        ], 
+        "maxcount": 1, 
+        "effect": [], 
+        "usingEffect": [
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                10.0
+            ]
+        ], 
+        "value": 2.0, 
+        "sell": 4.0, 
+        "precondition": [], 
+        "icon": "item/img_pingguo", 
+        "desc": "an apple a day keeps the doctor away", 
+        "talkId": 0
+    }, 
+    "69001": {
+        "id": 69001, 
+        "name": "默认常服", 
+        "type": 6, 
+        "sex": 0, 
+        "effect": [], 
+        "icon": "cloth/img_cloth_changfu", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 0, 
+        "needDLC": 0
+    }, 
+    "69002": {
+        "id": 69002, 
+        "name": "校服", 
+        "type": 6, 
+        "sex": 0, 
+        "effect": [], 
+        "icon": "cloth/img_cloth_xiaofu", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 1, 
+        "needDLC": 0
+    }, 
+    "69004": {
+        "id": 69004, 
+        "name": "牛仔裤", 
+        "type": 6, 
+        "sex": 0, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                0.0, 
+                1.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3301, 
+        "needDLC": 0
+    }, 
+    "69303": {
+        "id": 69303, 
+        "name": "篮球服", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_lanqiufu", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3201, 
+        "needDLC": 0
+    }, 
+    "69304": {
+        "id": 69304, 
+        "name": "卫衣", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                2.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_weiyi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3302, 
+        "needDLC": 0
+    }, 
+    "69305": {
+        "id": 69305, 
+        "name": "古风装", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                1.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_gufeng", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3305, 
+        "needDLC": 0
+    }, 
+    "69306": {
+        "id": 69306, 
+        "name": "背带裤", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_beidai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3304, 
+        "needDLC": 0
+    }, 
+    "69307": {
+        "id": 69307, 
+        "name": "杀马特", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                10.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_smart", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3303, 
+        "needDLC": 0
+    }, 
+    "69308": {
+        "id": 69308, 
+        "name": "耳机潮服", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_erji", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3306, 
+        "needDLC": 0
+    }, 
+    "69309": {
+        "id": 69309, 
+        "name": "拜年服", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_bainian", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3307, 
+        "needDLC": 2
+    }, 
+    "69310": {
+        "id": 69310, 
+        "name": "海滩服", 
+        "type": 6, 
+        "sex": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_boy_haitan", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 3308, 
+        "needDLC": 1
+    }, 
+    "69703": {
+        "id": 69703, 
+        "name": "羽毛球服", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_sport", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7201, 
+        "needDLC": 0
+    }, 
+    "69704": {
+        "id": 69704, 
+        "name": "毛衣裙", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                100.0, 
+                2.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_maoyi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7301, 
+        "needDLC": 0
+    }, 
+    "69705": {
+        "id": 69705, 
+        "name": "旗袍", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                11.0, 
+                1.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_qipao", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7302, 
+        "needDLC": 0
+    }, 
+    "69706": {
+        "id": 69706, 
+        "name": "背带裤", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                11.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_beidai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7303, 
+        "needDLC": 0
+    }, 
+    "69707": {
+        "id": 69707, 
+        "name": "Y2K装", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                8.0, 
+                10.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_y2k", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7304, 
+        "needDLC": 0
+    }, 
+    "69708": {
+        "id": 69708, 
+        "name": "黑白短裙", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_heibai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7305, 
+        "needDLC": 0
+    }, 
+    "69709": {
+        "id": 69709, 
+        "name": "蛋糕裙", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_mao", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7306, 
+        "needDLC": 0
+    }, 
+    "69710": {
+        "id": 69710, 
+        "name": "拜年服", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_bainian", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7307, 
+        "needDLC": 2
+    }, 
+    "69711": {
+        "id": 69711, 
+        "name": "多巴胺", 
+        "type": 6, 
+        "sex": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                0.0, 
+                15.0
+            ]
+        ], 
+        "icon": "cloth/img_cloth_girl_duo", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 7308, 
+        "needDLC": 1
+    }, 
+    "79301": {
+        "id": 79301, 
+        "name": "默认发型", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 1, 
+        "needDLC": 0
+    }, 
+    "79304": {
+        "id": 79304, 
+        "name": "刘海", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_weiyi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 301, 
+        "needDLC": 0
+    }, 
+    "79305": {
+        "id": 79305, 
+        "name": "国风", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_gufeng", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 304, 
+        "needDLC": 0
+    }, 
+    "79306": {
+        "id": 79306, 
+        "name": "中分", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_beidai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 303, 
+        "needDLC": 0
+    }, 
+    "79307": {
+        "id": 79307, 
+        "name": "杀马特", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_smart", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 302, 
+        "needDLC": 0
+    }, 
+    "79308": {
+        "id": 79308, 
+        "name": "偏分", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_pianfen", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 305, 
+        "needDLC": 0
+    }, 
+    "79309": {
+        "id": 79309, 
+        "name": "偏分刘海", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_pianfen2", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 306, 
+        "needDLC": 0
+    }, 
+    "79310": {
+        "id": 79310, 
+        "name": "狼尾刘海", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_pianfen3", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 307, 
+        "needDLC": 0
+    }, 
+    "79311": {
+        "id": 79311, 
+        "name": "呆毛", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_daimao", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 308, 
+        "needDLC": 0
+    }, 
+    "79312": {
+        "id": 79312, 
+        "name": "M字", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_mzi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 309, 
+        "needDLC": 0
+    }, 
+    "79313": {
+        "id": 79313, 
+        "name": "长鬓角", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_changbin", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 310, 
+        "needDLC": 0
+    }, 
+    "79314": {
+        "id": 79314, 
+        "name": "拜年", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_bainian", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 311, 
+        "needDLC": 2
+    }, 
+    "79315": {
+        "id": 79315, 
+        "name": "斜分", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_xiefen", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 312, 
+        "needDLC": 1
+    }, 
+    "79316": {
+        "id": 79316, 
+        "name": "挑染", 
+        "type": 7, 
+        "sex": 1, 
+        "effect": [], 
+        "icon": "cloth/img_hair_boy_tiaoran", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 313, 
+        "needDLC": 1
+    }, 
+    "79701": {
+        "id": 79701, 
+        "name": "默认发型", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 1, 
+        "needDLC": 0
+    }, 
+    "79704": {
+        "id": 79704, 
+        "name": "长发", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_maoyi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 701, 
+        "needDLC": 0
+    }, 
+    "79705": {
+        "id": 79705, 
+        "name": "国风", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_qipao", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 702, 
+        "needDLC": 0
+    }, 
+    "79706": {
+        "id": 79706, 
+        "name": "单辫", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_beidai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 703, 
+        "needDLC": 0
+    }, 
+    "79707": {
+        "id": 79707, 
+        "name": "Y2K长发", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_y2k", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 704, 
+        "needDLC": 0
+    }, 
+    "79708": {
+        "id": 79708, 
+        "name": "短发", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_heibai", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 705, 
+        "needDLC": 0
+    }, 
+    "79709": {
+        "id": 79709, 
+        "name": "猫耳短发", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_mao", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 706, 
+        "needDLC": 0
+    }, 
+    "79710": {
+        "id": 79710, 
+        "name": "丸子头", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_wanzi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 707, 
+        "needDLC": 0
+    }, 
+    "79711": {
+        "id": 79711, 
+        "name": "酷萌", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_kumeng", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 708, 
+        "needDLC": 0
+    }, 
+    "79712": {
+        "id": 79712, 
+        "name": "M字", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_mzi", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 709, 
+        "needDLC": 0
+    }, 
+    "79713": {
+        "id": 79713, 
+        "name": "短耳兔", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_duanertu", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 710, 
+        "needDLC": 0
+    }, 
+    "79714": {
+        "id": 79714, 
+        "name": "拜年", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_bainian", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 711, 
+        "needDLC": 2
+    }, 
+    "79715": {
+        "id": 79715, 
+        "name": "多巴胺", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_duo", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 712, 
+        "needDLC": 1
+    }, 
+    "79716": {
+        "id": 79716, 
+        "name": "挑染", 
+        "type": 7, 
+        "sex": 2, 
+        "effect": [], 
+        "icon": "cloth/img_hair_girl_tiaoran", 
+        "maxcount": 1, 
+        "value": 0, 
+        "desc": null, 
+        "clothType": 713, 
+        "needDLC": 1
+    }
+}

@@ -1,0 +1,5758 @@
+{
+    "31415301": {
+        "id": 31415301, 
+        "content": "有", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314153003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31415302": {
+        "id": 31415302, 
+        "content": "没有", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314153010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490101": {
+        "id": 31490101, 
+        "content": "对老板坦白疏漏", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314901003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490102": {
+        "id": 31490102, 
+        "content": "放在前面赶快卖掉", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314901005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490103": {
+        "id": 31490103, 
+        "content": "自己贴钱处理", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314901010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490104": {
+        "id": 31490104, 
+        "content": "仔细观察", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                505.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314901013
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490201": {
+        "id": 31490201, 
+        "content": "顺势倒下", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314902004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490202": {
+        "id": 31490202, 
+        "content": "默默走开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314902006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490203": {
+        "id": 31490203, 
+        "content": "找他们的家长告状", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314902008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490204": {
+        "id": 31490204, 
+        "content": "卖萌哭诉", 
+        "precondition": [
+            [
+                4.0, 
+                44.0, 
+                2.0, 
+                0.8
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314902010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490301": {
+        "id": 31490301, 
+        "content": "装作没看见", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314903003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490302": {
+        "id": 31490302, 
+        "content": "我要告老师", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314903005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490303": {
+        "id": 31490303, 
+        "content": "大声咳嗽", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314903007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490304": {
+        "id": 31490304, 
+        "content": "趁火打劫", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                504.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314903009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490401": {
+        "id": 31490401, 
+        "content": "自己回家查资料", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314904003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490402": {
+        "id": 31490402, 
+        "content": "咨询工作人员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314904005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490403": {
+        "id": 31490403, 
+        "content": "拍照后去问老师", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314904007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490501": {
+        "id": 31490501, 
+        "content": "把书抽出来", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314905003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490502": {
+        "id": 31490502, 
+        "content": "找店员帮忙", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314905004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490503": {
+        "id": 31490503, 
+        "content": "回去找电子版", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314905006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490601": {
+        "id": 31490601, 
+        "content": "同意", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314906003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490602": {
+        "id": 31490602, 
+        "content": "拒绝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314906010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490603": {
+        "id": 31490603, 
+        "content": "直言提醒", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314906005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490604": {
+        "id": 31490604, 
+        "content": "帮她伴唱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314906007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490701": {
+        "id": 31490701, 
+        "content": "偷记偷学", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314907004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490702": {
+        "id": 31490702, 
+        "content": "出去追问", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314907007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490703": {
+        "id": 31490703, 
+        "content": "回班里报信", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314907010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490801": {
+        "id": 31490801, 
+        "content": "主动介绍猪肚鸡", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314908004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490802": {
+        "id": 31490802, 
+        "content": "热情科普别的菜", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314908007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490803": {
+        "id": 31490803, 
+        "content": "默默帮他们点单", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314908009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490804": {
+        "id": 31490804, 
+        "content": "从旁观察", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314908012
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490901": {
+        "id": 31490901, 
+        "content": "先吃瓜再说", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314909003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490902": {
+        "id": 31490902, 
+        "content": "干饭第一", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314909005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31490903": {
+        "id": 31490903, 
+        "content": "你们不要再打啦", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314909007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491001": {
+        "id": 31491001, 
+        "content": "拆开看看", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314910003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491002": {
+        "id": 31491002, 
+        "content": "扔回海里", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314910005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491003": {
+        "id": 31491003, 
+        "content": "这不环保", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314910007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491101": {
+        "id": 31491101, 
+        "content": "喊醒他，拿钱交货", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314911004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491102": {
+        "id": 31491102, 
+        "content": "还给他钱，送他出门", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314911007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491103": {
+        "id": 31491103, 
+        "content": "趁机贪下这笔钱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314911010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491201": {
+        "id": 31491201, 
+        "content": "不动如山", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314912004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491202": {
+        "id": 31491202, 
+        "content": "破功互动", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314912007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491203": {
+        "id": 31491203, 
+        "content": "赶走它", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314912010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491301": {
+        "id": 31491301, 
+        "content": "静静欣赏", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314913003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491302": {
+        "id": 31491302, 
+        "content": "让妈妈帮忙辨认", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314913005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491303": {
+        "id": 31491303, 
+        "content": "找爸爸要相机拍照", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314913008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491401": {
+        "id": 31491401, 
+        "content": "看到了就是我的了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314914004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491402": {
+        "id": 31491402, 
+        "content": "暂时拿着，寻找失主", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314914007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491403": {
+        "id": 31491403, 
+        "content": "专心发传单", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314914010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491501": {
+        "id": 31491501, 
+        "content": "挺身而出，帮他缓冲", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                506.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314915003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491502": {
+        "id": 31491502, 
+        "content": "赶紧溜走，让出位置", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314915009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491503": {
+        "id": 31491503, 
+        "content": "事已至此，先拍照吧", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314915012
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491601": {
+        "id": 31491601, 
+        "content": "立即续费", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314916004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491602": {
+        "id": 31491602, 
+        "content": "极限操作", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314916007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491603": {
+        "id": 31491603, 
+        "content": "到点下机", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314916010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491701": {
+        "id": 31491701, 
+        "content": "花言巧语", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                504.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314917004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491702": {
+        "id": 31491702, 
+        "content": "通知店长", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314917007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491703": {
+        "id": 31491703, 
+        "content": "坚定拒绝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314917010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491801": {
+        "id": 31491801, 
+        "content": "直接上前推销", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314918003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491802": {
+        "id": 31491802, 
+        "content": "先夸赞搭配再推荐", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                504.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314918005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491803": {
+        "id": 31491803, 
+        "content": "结账时再推销", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314918007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491901": {
+        "id": 31491901, 
+        "content": "挺身而出，帮忙翻译", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314919004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31491902": {
+        "id": 31491902, 
+        "content": "事已至此，先吃饭吧", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314919011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31492001": {
+        "id": 31492001, 
+        "content": "直接告诉家长", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314920004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31492002": {
+        "id": 31492002, 
+        "content": "帮忙隐瞒", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314920006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31492003": {
+        "id": 31492003, 
+        "content": "引导她主动承认", 
+        "precondition": [
+            [
+                4.0, 
+                44.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            314920008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600101": {
+        "id": 31600101, 
+        "content": "使用经费购买零食", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316001005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600102": {
+        "id": 31600102, 
+        "content": "禁止带零食观影", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316001008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600103": {
+        "id": 31600103, 
+        "content": "自掏零花钱买零食", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316001011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600201": {
+        "id": 31600201, 
+        "content": "如实上报学校", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316002004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600202": {
+        "id": 31600202, 
+        "content": "让损坏设备的成员负责", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316002006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600203": {
+        "id": 31600203, 
+        "content": "与成员一起检查修理", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316002009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600301": {
+        "id": 31600301, 
+        "content": "接受全部赞助条件", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316003004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600302": {
+        "id": 31600302, 
+        "content": "谈判降低推广力度", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316003007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600303": {
+        "id": 31600303, 
+        "content": "拒绝合作", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316003009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600501": {
+        "id": 31600501, 
+        "content": "尊重选择", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316005003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600502": {
+        "id": 31600502, 
+        "content": "全力挽留", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316005005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600503": {
+        "id": 31600503, 
+        "content": "保留团籍", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316005007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600601": {
+        "id": 31600601, 
+        "content": "全力推进", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316006003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600602": {
+        "id": 31600602, 
+        "content": "建立核心小组", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316006005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600603": {
+        "id": 31600603, 
+        "content": "分阶段推进", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316006008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600701": {
+        "id": 31600701, 
+        "content": "安排社员及时送医", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316007004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600702": {
+        "id": 31600702, 
+        "content": "让社员自行前往医院，活动继续", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316007007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600703": {
+        "id": 31600703, 
+        "content": "暂停活动，核心成员陪同送医", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316007009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600801": {
+        "id": 31600801, 
+        "content": "同意对方的条件", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316008004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600802": {
+        "id": 31600802, 
+        "content": "拒绝对方的条件", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316008007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600803": {
+        "id": 31600803, 
+        "content": "主动谈判", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316008009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600901": {
+        "id": 31600901, 
+        "content": "全部报销", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316009004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600902": {
+        "id": 31600902, 
+        "content": "部分报销", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316009006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31600903": {
+        "id": 31600903, 
+        "content": "不予报销", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316009008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601001": {
+        "id": 31601001, 
+        "content": "大闹一场", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316010004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601002": {
+        "id": 31601002, 
+        "content": "递交联名申请", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316010007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601003": {
+        "id": 31601003, 
+        "content": "递交运营计划", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316010010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601101": {
+        "id": 31601101, 
+        "content": "优先购买书籍", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316011004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601102": {
+        "id": 31601102, 
+        "content": "优先活动筹备", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316011007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601103": {
+        "id": 31601103, 
+        "content": "折中使用", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316011010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601201": {
+        "id": 31601201, 
+        "content": "强硬交涉", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316012004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601202": {
+        "id": 31601202, 
+        "content": "买新的指示牌", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316012007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601203": {
+        "id": 31601203, 
+        "content": "调动更多社员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316012010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601301": {
+        "id": 31601301, 
+        "content": "全部通过退团申请", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316013004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601302": {
+        "id": 31601302, 
+        "content": "试图挽留退团成员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316013006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601303": {
+        "id": 31601303, 
+        "content": "全面清退低意愿社员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316013009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601401": {
+        "id": 31601401, 
+        "content": "立刻重新复印资料", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316014003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601402": {
+        "id": 31601402, 
+        "content": "动员社员分头寻找", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316014008
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601403": {
+        "id": 31601403, 
+        "content": "脱稿宣传", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316014011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601404": {
+        "id": 31601404, 
+        "content": "补上", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316014006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "31601405": {
+        "id": 31601405, 
+        "content": "不补", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            316014007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090101": {
+        "id": 32090101, 
+        "content": "接住她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320901042
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090102": {
+        "id": 32090102, 
+        "content": "躲开她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320901071
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090201": {
+        "id": 32090201, 
+        "content": "分她个卤蛋", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320902035
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090202": {
+        "id": 32090202, 
+        "content": "自己大快朵颐", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320902066
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090301": {
+        "id": 32090301, 
+        "content": "回头多关心陈心慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903031
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090302": {
+        "id": 32090302, 
+        "content": "认真扶受伤的同学", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903047
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090303": {
+        "id": 32090303, 
+        "content": "回头关心陈心慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903070
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090304": {
+        "id": 32090304, 
+        "content": "认真扶受伤的同学", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903086
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090305": {
+        "id": 32090305, 
+        "content": "回头关心她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903106
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090306": {
+        "id": 32090306, 
+        "content": "认真扶同学", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320903122
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090401": {
+        "id": 32090401, 
+        "content": "再来一杯", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904031
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090402": {
+        "id": 32090402, 
+        "content": "不用了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090403": {
+        "id": 32090403, 
+        "content": "送给陈心慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904055
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090404": {
+        "id": 32090404, 
+        "content": "带去餐厅喝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904051
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090405": {
+        "id": 32090405, 
+        "content": "买杯奶茶亲自送给她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090406": {
+        "id": 32090406, 
+        "content": "买杯奶茶托店员送她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904090
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090407": {
+        "id": 32090407, 
+        "content": "不关我事，吃饭要紧", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320904121
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090501": {
+        "id": 32090501, 
+        "content": "挺身而出", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320905045
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090502": {
+        "id": 32090502, 
+        "content": "静观其变", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320905103
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090503": {
+        "id": 32090503, 
+        "content": "假装警察家庭", 
+        "precondition": [
+            [
+                4.0, 
+                44.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320905046
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090504": {
+        "id": 32090504, 
+        "content": "带头仗义执言", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320905070
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090601": {
+        "id": 32090601, 
+        "content": "反对下周再做", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320906031
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090602": {
+        "id": 32090602, 
+        "content": "起哄下周再做", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320906048
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090701": {
+        "id": 32090701, 
+        "content": "叫妈妈帮她开家长会", 
+        "precondition": [
+            [
+                4.0, 
+                1.0, 
+                3.0, 
+                15.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320907027
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                -5.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090702": {
+        "id": 32090702, 
+        "content": "叫她坐到你爸爸身边", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320907038
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090801": {
+        "id": 32090801, 
+        "content": "反对丢给陈心慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090802": {
+        "id": 32090802, 
+        "content": "帮陈心慈分担", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908021
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090803": {
+        "id": 32090803, 
+        "content": "不同意丢给陈心慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090804": {
+        "id": 32090804, 
+        "content": "提出帮陈心慈分担", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908046
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090805": {
+        "id": 32090805, 
+        "content": "摸她额头温度", 
+        "precondition": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                103.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908059
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090806": {
+        "id": 32090806, 
+        "content": "问她身体情况", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320908067
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090901": {
+        "id": 32090901, 
+        "content": "拉她出去玩", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                103.0
+            ]
+        ], 
+        "showTxt": null, 
+        "talkId": [
+            320909027
+        ], 
+        "talkId2": [
+            320909028
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32090902": {
+        "id": 32090902, 
+        "content": "陪她继续烤", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320909094
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091001": {
+        "id": 32091001, 
+        "content": "直接干他！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                5.0, 
+                1.0, 
+                4.0, 
+                5.0
+            ]
+        ], 
+        "showTxt": "武术等级5", 
+        "talkId": [
+            320910049
+        ], 
+        "talkId2": [
+            320910080
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091002": {
+        "id": 32091002, 
+        "content": "呵斥并防御", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                5.0, 
+                1.0, 
+                4.0, 
+                4.0
+            ]
+        ], 
+        "showTxt": "武术等级≥4", 
+        "talkId": [
+            320910123
+        ], 
+        "talkId2": [
+            320910132
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091003": {
+        "id": 32091003, 
+        "content": "再来一拳！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320910054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091004": {
+        "id": 32091004, 
+        "content": "再来一拳！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320910054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091005": {
+        "id": 32091005, 
+        "content": "再来一脚！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320910061
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091006": {
+        "id": 32091006, 
+        "content": "乘胜追击！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320910063
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091007": {
+        "id": 32091007, 
+        "content": "及时收手", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320910074
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091101": {
+        "id": 32091101, 
+        "content": "答应告白", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320911048
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091102": {
+        "id": 32091102, 
+        "content": "拒绝告白", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320911069
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091201": {
+        "id": 32091201, 
+        "content": "过去瞧瞧", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320912005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091202": {
+        "id": 32091202, 
+        "content": "回家汇报", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                505.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320912029
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091203": {
+        "id": 32091203, 
+        "content": "厨房", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320912094
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091204": {
+        "id": 32091204, 
+        "content": "天台", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320912108
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091301": {
+        "id": 32091301, 
+        "content": "静观其变", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320913006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091302": {
+        "id": 32091302, 
+        "content": "替她拒绝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320913025
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091401": {
+        "id": 32091401, 
+        "content": "和阿弘去客厅", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320914022
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091402": {
+        "id": 32091402, 
+        "content": "留在厨房帮忙", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320914032
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091501": {
+        "id": 32091501, 
+        "content": "坦诚相待，实话实说", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320915022
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091502": {
+        "id": 32091502, 
+        "content": "故作神秘，将错就错", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320915045
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091503": {
+        "id": 32091503, 
+        "content": "坦诚相待，实话实说", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320915086
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091504": {
+        "id": 32091504, 
+        "content": "故作神秘，将错就错", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320915109
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091601": {
+        "id": 32091601, 
+        "content": "先捂她眼开玩笑", 
+        "precondition": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                103.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320916003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091602": {
+        "id": 32091602, 
+        "content": "径直过去送汤", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320916025
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091801": {
+        "id": 32091801, 
+        "content": "告诉", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320918024
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091802": {
+        "id": 32091802, 
+        "content": "不告诉", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320918054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091901": {
+        "id": 32091901, 
+        "content": "挡在陈心慈面前", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320919009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32091902": {
+        "id": 32091902, 
+        "content": "上楼找大人帮忙", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320919061
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32092501": {
+        "id": 32092501, 
+        "content": "画海报", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320925050
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32092502": {
+        "id": 32092502, 
+        "content": "扫楼宣传", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320925054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32092901": {
+        "id": 32092901, 
+        "content": "一定要拍下", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320929039
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32092902": {
+        "id": 32092902, 
+        "content": "不继续拍了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320929042
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32093001": {
+        "id": 32093001, 
+        "content": "听歌", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320930007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32093002": {
+        "id": 32093002, 
+        "content": "运动", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320930010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32093003": {
+        "id": 32093003, 
+        "content": "打游戏", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320930014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094101": {
+        "id": 32094101, 
+        "content": "在跳楼机表白", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320941020
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094102": {
+        "id": 32094102, 
+        "content": "在射击场表白", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320941056
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094301": {
+        "id": 32094301, 
+        "content": "主动牵手", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320943017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094302": {
+        "id": 32094302, 
+        "content": "等着她牵", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320943023
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094401": {
+        "id": 32094401, 
+        "content": "去陈心慈家学酱料", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320944020
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094402": {
+        "id": 32094402, 
+        "content": "大方请陈心慈进来", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320944074
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094501": {
+        "id": 32094501, 
+        "content": "正常长度", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320945021
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094502": {
+        "id": 32094502, 
+        "content": "超长长度", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320945054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094601": {
+        "id": 32094601, 
+        "content": "大方喝，秀恩爱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320946016
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094602": {
+        "id": 32094602, 
+        "content": "羞涩喝，让他们笑", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320946053
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32094603": {
+        "id": 32094603, 
+        "content": "怼同学，安抚阿慈", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            320946070
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32190101": {
+        "id": 32190101, 
+        "content": "坐这里看", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            321901005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32190102": {
+        "id": 32190102, 
+        "content": "回家看", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            321901007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32190501": {
+        "id": 32190501, 
+        "content": "等她一起", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            321905003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32190502": {
+        "id": 32190502, 
+        "content": "继续领跑", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            321905007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32292301": {
+        "id": 32292301, 
+        "content": "20块", 
+        "precondition": [
+            [
+                6.0, 
+                1.0, 
+                503.0
+            ]
+        ], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322923007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32292302": {
+        "id": 32292302, 
+        "content": "10块", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322923011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32292303": {
+        "id": 32292303, 
+        "content": "5块", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322923014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32292304": {
+        "id": 32292304, 
+        "content": "开始做鱼竿", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322923030
+        ], 
+        "talkId2": [
+            322923037
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            9.0, 
+            33.0
+        ], 
+        "tag": null
+    }, 
+    "32292305": {
+        "id": 32292305, 
+        "content": "开始做鱼竿", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322923030
+        ], 
+        "talkId2": [
+            322923037
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            9.0, 
+            33.0
+        ], 
+        "tag": null
+    }, 
+    "32293101": {
+        "id": 32293101, 
+        "content": "喜欢", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293102": {
+        "id": 32293102, 
+        "content": "大家都喜欢", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293103": {
+        "id": 32293103, 
+        "content": "小孩懂什么喜欢", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931021
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293104": {
+        "id": 32293104, 
+        "content": "喜欢", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293105": {
+        "id": 32293105, 
+        "content": "大家都喜欢她", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293106": {
+        "id": 32293106, 
+        "content": "小孩懂什么喜欢！", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322931017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293301": {
+        "id": 32293301, 
+        "content": "恳求老板", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322933010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293302": {
+        "id": 32293302, 
+        "content": "劝说老板", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322933019
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293303": {
+        "id": 32293303, 
+        "content": "开始舌战", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322933020
+        ], 
+        "talkId2": [
+            322933033
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            6.0, 
+            319.0
+        ], 
+        "tag": null
+    }, 
+    "32293501": {
+        "id": 32293501, 
+        "content": "运动女装区", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                3.0, 
+                3.0, 
+                322935005.0
+            ]
+        ], 
+        "showTxt": null, 
+        "talkId": [
+            322935004
+        ], 
+        "talkId2": [
+            322935005
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293502": {
+        "id": 32293502, 
+        "content": "女式内衣区", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                3.0, 
+                3.0, 
+                322935010.0
+            ]
+        ], 
+        "showTxt": null, 
+        "talkId": [
+            322935009
+        ], 
+        "talkId2": [
+            322935010
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32293503": {
+        "id": 32293503, 
+        "content": "休闲女装区", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            322935016
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32390101": {
+        "id": 32390101, 
+        "content": "开始连线成画", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32390201": {
+        "id": 32390201, 
+        "content": "开始连线成画", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32390301": {
+        "id": 32390301, 
+        "content": "开始连线成画", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32390401": {
+        "id": 32390401, 
+        "content": "开始连线成画", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32390501": {
+        "id": 32390501, 
+        "content": "开始连线成画", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591101": {
+        "id": 32591101, 
+        "content": "人都有饮食偏好", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325911003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591102": {
+        "id": 32591102, 
+        "content": "小孩子挑食不好", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325911009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591701": {
+        "id": 32591701, 
+        "content": "送她一个杯子", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325917007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591702": {
+        "id": 32591702, 
+        "content": "和她一起买新杯子", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325917013
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591901": {
+        "id": 32591901, 
+        "content": "相信", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325919003
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32591902": {
+        "id": 32591902, 
+        "content": "不相信", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325919010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592001": {
+        "id": 32592001, 
+        "content": "没有区别", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325920005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592002": {
+        "id": 32592002, 
+        "content": "爱是深层次的喜欢", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325920007
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592003": {
+        "id": 32592003, 
+        "content": "喜欢是占有，爱是成全", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325920012
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592301": {
+        "id": 32592301, 
+        "content": "抱一抱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325923004
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592302": {
+        "id": 32592302, 
+        "content": "卖个萌", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325923010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592401": {
+        "id": 32592401, 
+        "content": "放过", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325924011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592402": {
+        "id": 32592402, 
+        "content": "不放过", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [
+            [
+                8.0, 
+                1.0, 
+                502.0
+            ]
+        ], 
+        "showTxt": null, 
+        "talkId": [
+            325924015
+        ], 
+        "talkId2": [
+            325924029
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592801": {
+        "id": 32592801, 
+        "content": "没错", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325928011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32592802": {
+        "id": 32592802, 
+        "content": "错了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            325928017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110201": {
+        "id": 35110201, 
+        "content": "先进去找小鱼姐", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351102004
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110202": {
+        "id": 35110202, 
+        "content": "先排队买点东西吃", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351102035
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                -1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110301": {
+        "id": 35110301, 
+        "content": "出去摆摊", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351103049
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110302": {
+        "id": 35110302, 
+        "content": "在早餐店卖", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351103059
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                -1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110401": {
+        "id": 35110401, 
+        "content": "不开了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351104024
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110402": {
+        "id": 35110402, 
+        "content": "还开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351104042
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                -1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110501": {
+        "id": 35110501, 
+        "content": "询问食客", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351105030
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                -1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110502": {
+        "id": 35110502, 
+        "content": "询问婶婶", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351105047
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                50.0, 
+                2.0, 
+                351101.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110901": {
+        "id": 35110901, 
+        "content": "深情开场", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351109034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "35110902": {
+        "id": 35110902, 
+        "content": "浮夸开场", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            351109054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100101": {
+        "id": 72100101, 
+        "content": "继续听课", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721001009
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100102": {
+        "id": 72100102, 
+        "content": "加入讨论", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721001023
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100103": {
+        "id": 72100103, 
+        "content": "好心提醒", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721001080
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100201": {
+        "id": 72100201, 
+        "content": "好心帮助", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721002014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100202": {
+        "id": 72100202, 
+        "content": "借机溜走", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721002066
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100203": {
+        "id": 72100203, 
+        "content": "观察", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721002080
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100204": {
+        "id": 72100204, 
+        "content": "离开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721002084
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100301": {
+        "id": 72100301, 
+        "content": "直接插队", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721003011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100302": {
+        "id": 72100302, 
+        "content": "按序排队", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721003066
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100303": {
+        "id": 72100303, 
+        "content": "劝他回去", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721003077
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100304": {
+        "id": 72100304, 
+        "content": "不为所动", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721003083
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100401": {
+        "id": 72100401, 
+        "content": "质问对方球员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721004034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100402": {
+        "id": 72100402, 
+        "content": "安抚己方队员", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721004057
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100403": {
+        "id": 72100403, 
+        "content": "专注照顾谢辰晖", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721004073
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100501": {
+        "id": 72100501, 
+        "content": "严厉拒绝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721005034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100502": {
+        "id": 72100502, 
+        "content": "哄他干轻活", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721005049
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100701": {
+        "id": 72100701, 
+        "content": "希望他不再受伤", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721007017
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100702": {
+        "id": 72100702, 
+        "content": "祝福他比赛顺利", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721007032
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100703": {
+        "id": 72100703, 
+        "content": "别多想干就完了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721007046
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100801": {
+        "id": 72100801, 
+        "content": "无视他继续聊天", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721008027
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100802": {
+        "id": 72100802, 
+        "content": "给他眼神鼓励", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721008067
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100901": {
+        "id": 72100901, 
+        "content": "质疑他", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721009038
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72100902": {
+        "id": 72100902, 
+        "content": "支持他", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721009065
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102101": {
+        "id": 72102101, 
+        "content": "接受他的好意", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721021033
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102102": {
+        "id": 72102102, 
+        "content": "拒绝他的好意", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721021062
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102201": {
+        "id": 72102201, 
+        "content": "提议谢辰晖模仿教练", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721022030
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102202": {
+        "id": 72102202, 
+        "content": "提议谢辰晖模仿豺狼", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721022054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102301": {
+        "id": 72102301, 
+        "content": "大胆喊出豺狼外号", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721023006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102302": {
+        "id": 72102302, 
+        "content": "吐槽学校管理严苛", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721023025
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102303": {
+        "id": 72102303, 
+        "content": "抱怨读书没用要退学", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721023049
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102401": {
+        "id": 72102401, 
+        "content": "巧妙拉回他的状态", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721024025
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102402": {
+        "id": 72102402, 
+        "content": "严肃批评他的态度", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721024047
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102403": {
+        "id": 72102403, 
+        "content": "加入讨论彻底放开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721024066
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102501": {
+        "id": 72102501, 
+        "content": "提醒谢辰晖不要矫枉过正", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721025031
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102502": {
+        "id": 72102502, 
+        "content": "鼓励谢辰晖一路凶下去", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721025056
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102601": {
+        "id": 72102601, 
+        "content": "替谢辰晖分辨解围", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721026032
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102602": {
+        "id": 72102602, 
+        "content": "巧妙转移话题解围", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721026053
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102701": {
+        "id": 72102701, 
+        "content": "找借口提前带他离开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721027028
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102702": {
+        "id": 72102702, 
+        "content": "看完电影后一起离开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721027058
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102801": {
+        "id": 72102801, 
+        "content": "通知谢辰晖爸妈来接他", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721028019
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102802": {
+        "id": 72102802, 
+        "content": "自己带谢辰晖去医院", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721028055
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102901": {
+        "id": 72102901, 
+        "content": "假装受伤分散他注意力", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721029037
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72102902": {
+        "id": 72102902, 
+        "content": "直接提醒他松弛一点", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721029072
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72103001": {
+        "id": 72103001, 
+        "content": "亲自去现场加油", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721030015
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72103002": {
+        "id": 72103002, 
+        "content": "和好友一起观赛", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721030065
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105201": {
+        "id": 72105201, 
+        "content": "喜欢蓝色", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721052031
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105202": {
+        "id": 72105202, 
+        "content": "不喜欢蓝色", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721052032
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105203": {
+        "id": 72105203, 
+        "content": "答应", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721052059
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105204": {
+        "id": 72105204, 
+        "content": "拒绝", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721052072
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105301": {
+        "id": 72105301, 
+        "content": "找借口离开", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721053078
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105302": {
+        "id": 72105302, 
+        "content": "尝试自己一个人玩", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721053060
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105401": {
+        "id": 72105401, 
+        "content": "转身就走", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721054054
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105402": {
+        "id": 72105402, 
+        "content": "理性质问", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721054091
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105501": {
+        "id": 72105501, 
+        "content": "主动亲吻", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721055072
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105502": {
+        "id": 72105502, 
+        "content": "暗示他主动", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721055098
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105701": {
+        "id": 72105701, 
+        "content": "大方承认情侣关系", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721057058
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105702": {
+        "id": 72105702, 
+        "content": "含蓄点头", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721057061
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105703": {
+        "id": 72105703, 
+        "content": "向家人坦白", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721057099
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72105704": {
+        "id": 72105704, 
+        "content": "继续隐瞒家人", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            721057101
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72300201": {
+        "id": 72300201, 
+        "content": "仔细搜索", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723002008
+        ], 
+        "talkId2": [
+            723002010
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            9.0, 
+            34.0
+        ], 
+        "tag": null
+    }, 
+    "72300401": {
+        "id": 72300401, 
+        "content": "仔细搜索", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723004005
+        ], 
+        "talkId2": [
+            723004007
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            9.0, 
+            34.0
+        ], 
+        "tag": null
+    }, 
+    "72301201": {
+        "id": 72301201, 
+        "content": "追上去", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723012010
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72301202": {
+        "id": 72301202, 
+        "content": "靠自己", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723012024
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72301203": {
+        "id": 72301203, 
+        "content": "组织语言", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723012015
+        ], 
+        "talkId2": [
+            723012016
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            13.0, 
+            4.0
+        ], 
+        "tag": null
+    }, 
+    "72301204": {
+        "id": 72301204, 
+        "content": "尝试还原", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723012025
+        ], 
+        "talkId2": [
+            723012027
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            23.0, 
+            3.0
+        ], 
+        "tag": null
+    }, 
+    "72301301": {
+        "id": 72301301, 
+        "content": "开始编织", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723013019
+        ], 
+        "talkId2": [
+            723013027
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            46.0, 
+            1.0
+        ], 
+        "tag": null
+    }, 
+    "72301302": {
+        "id": 72301302, 
+        "content": "再试试", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723013019
+        ], 
+        "talkId2": [
+            723013027
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            46.0, 
+            1.0
+        ], 
+        "tag": null
+    }, 
+    "72302201": {
+        "id": 72302201, 
+        "content": "讲价", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723022027
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72302202": {
+        "id": 72302202, 
+        "content": "在门口等", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723022064
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72302203": {
+        "id": 72302203, 
+        "content": "讲道理", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723022030
+        ], 
+        "talkId2": [
+            723022061
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            8.0, 
+            346.0
+        ], 
+        "tag": null
+    }, 
+    "72302401": {
+        "id": 72302401, 
+        "content": "上前劝架", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723024016
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72302402": {
+        "id": 72302402, 
+        "content": "按兵不动", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723024048
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72302501": {
+        "id": 72302501, 
+        "content": "没谈恋爱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723025023
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72302502": {
+        "id": 72302502, 
+        "content": "谈了恋爱", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723025052
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72303201": {
+        "id": 72303201, 
+        "content": "想借口", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723032011
+        ], 
+        "talkId2": [
+            723032014
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [
+            13.0, 
+            5.0
+        ], 
+        "tag": null
+    }, 
+    "72303501": {
+        "id": 72303501, 
+        "content": "直接推门进去", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723035005
+        ], 
+        "talkId2": [], 
+        "effect": [
+            [
+                1.0, 
+                22.0, 
+                506.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72303502": {
+        "id": 72303502, 
+        "content": "在门口偷听", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723035022
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72303701": {
+        "id": 72303701, 
+        "content": "打就打", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723037014
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72303702": {
+        "id": 72303702, 
+        "content": "继续说服", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            723037032
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72400101": {
+        "id": 72400101, 
+        "content": "开始织花样", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72400201": {
+        "id": 72400201, 
+        "content": "开始织花样", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72400301": {
+        "id": 72400301, 
+        "content": "开始织花样", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72400401": {
+        "id": 72400401, 
+        "content": "开始织围巾", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72400501": {
+        "id": 72400501, 
+        "content": "开始织围巾", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72601501": {
+        "id": 72601501, 
+        "content": "很合我的口味", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            726015006
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "72601502": {
+        "id": 72601502, 
+        "content": "感觉盐放少了", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            726015011
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "75110901": {
+        "id": 75110901, 
+        "content": "深情开场", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            751109034
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "75110902": {
+        "id": 75110902, 
+        "content": "浮夸开场", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            751109055
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }
+}

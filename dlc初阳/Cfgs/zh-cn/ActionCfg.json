@@ -1,0 +1,17 @@
+{
+    "2000": {
+        "id": 2000, 
+        "name": "[DLC]寻找阿强", 
+        "cnt": 1, 
+        "effect": [], 
+        "evtId": 722747, 
+        "map": 10, 
+        "cost": [
+            [
+                7.0, 
+                10.0
+            ]
+        ], 
+        "icon": "dlc_action/icon_phone"
+    }
+}

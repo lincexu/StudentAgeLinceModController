@@ -1,0 +1,6099 @@
+{
+    "100": {
+        "id": 100, 
+        "url": "bg/img_keting", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "101": {
+        "id": 101, 
+        "url": "bg/img_xxzoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202451
+    }, 
+    "102": {
+        "id": 102, 
+        "url": "bg/img_xiangzi", 
+        "audio": 30011, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "103": {
+        "id": 103, 
+        "url": "bg/img_zuqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202471
+    }, 
+    "104": {
+        "id": 104, 
+        "url": "bg/img_bangongshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "105": {
+        "id": 105, 
+        "url": "bg/img_tiantai", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "106": {
+        "id": 106, 
+        "url": "bg/img_louwai", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "107": {
+        "id": 107, 
+        "url": "bg/img_cesuo", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "108": {
+        "id": 108, 
+        "url": "bg/img_louti", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "109": {
+        "id": 109, 
+        "url": "bg/img_Ajia", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "110": {
+        "id": 110, 
+        "url": "bg/img_gangqinshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "111": {
+        "id": 111, 
+        "url": "bg/img_xiaoqumenkou", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "112": {
+        "id": 112, 
+        "url": "bg/img_bingfang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "113": {
+        "id": 113, 
+        "url": "bg/img_xiaoxuejiaoshi_ri", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1110
+    }, 
+    "114": {
+        "id": 114, 
+        "url": "bg/img_damen", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "115": {
+        "id": 115, 
+        "url": "bg/img_jiaodaochu", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "116": {
+        "id": 116, 
+        "url": "bg/img_hebian", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "117": {
+        "id": 117, 
+        "url": "bg/img_shanding", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "118": {
+        "id": 118, 
+        "url": "bg/img_wuding", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "119": {
+        "id": 119, 
+        "url": "bg/img_xiaomaibu", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120": {
+        "id": 120, 
+        "url": "bg/img_shangyejie", 
+        "audio": 30013, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "121": {
+        "id": 121, 
+        "url": "bg/img_malushang", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "122": {
+        "id": 122, 
+        "url": "bg/img_shudian", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "123": {
+        "id": 123, 
+        "url": "bg/img_dianyingyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "124": {
+        "id": 124, 
+        "url": "bg/img_youlechang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "125": {
+        "id": 125, 
+        "url": "bg/img_youxiting", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "126": {
+        "id": 126, 
+        "url": "bg/img_ktv", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "127": {
+        "id": 127, 
+        "url": "bg/img_haibian", 
+        "audio": 30014, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "128": {
+        "id": 128, 
+        "url": "bg/img_lanqiuchang", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "129": {
+        "id": 129, 
+        "url": "bg/img_gongyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "130": {
+        "id": 130, 
+        "url": "bg/img_shangchang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "131": {
+        "id": 131, 
+        "url": "bg/img_feiqigongyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "140": {
+        "id": 140, 
+        "url": "bg/img_chufang", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "141": {
+        "id": 141, 
+        "url": "bg/img_woshi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "142": {
+        "id": 142, 
+        "url": "bg/img_jiazhongcesuo", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "143": {
+        "id": 143, 
+        "url": "bg/img_louxia", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "144": {
+        "id": 144, 
+        "url": "bg/img_zhuxitai", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "145": {
+        "id": 145, 
+        "url": "bg/img_shudianyuelanshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "146": {
+        "id": 146, 
+        "url": "bg/img_zhaoxiangguan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "147": {
+        "id": 147, 
+        "url": "bg/img_fangyingting", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "148": {
+        "id": 148, 
+        "url": "bg/img_lieshilingyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "149": {
+        "id": 149, 
+        "url": "bg/img_caishichang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "150": {
+        "id": 150, 
+        "url": "bg/img_tiantai_ye", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "151": {
+        "id": 151, 
+        "url": "bg/img_xxzoulang2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202461
+    }, 
+    "152": {
+        "id": 152, 
+        "url": "bg/img_tiantai_xi", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "153": {
+        "id": 153, 
+        "url": "bg/img_damen_xi", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "154": {
+        "id": 154, 
+        "url": "bg/img_ziliaoyingyinshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "155": {
+        "id": 155, 
+        "url": "bg/img_xuexiaozoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "156": {
+        "id": 156, 
+        "url": "bg/img_zuqiuchang_yin", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202474
+    }, 
+    "157": {
+        "id": 157, 
+        "url": "bg/img_jiamenkou", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "158": {
+        "id": 158, 
+        "url": "bg/img_yumaoqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "160": {
+        "id": 160, 
+        "url": "bg/img_gongjiaozhan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "161": {
+        "id": 161, 
+        "url": "bg/img_zuqiuchang_ye", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202473
+    }, 
+    "162": {
+        "id": 162, 
+        "url": "bg/img_bamawoshi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "163": {
+        "id": 163, 
+        "url": "bg/img_kongdi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "164": {
+        "id": 164, 
+        "url": "bg/img_xiaoqumenkou_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "165": {
+        "id": 165, 
+        "url": "bg/img_feiqigongyuan_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "166": {
+        "id": 166, 
+        "url": "bg/img_xiaowoshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "167": {
+        "id": 167, 
+        "url": "bg/img_gongyuan_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "168": {
+        "id": 168, 
+        "url": "bg/img_gongyuan_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "169": {
+        "id": 169, 
+        "url": "bg/img_xiangxia_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "170": {
+        "id": 170, 
+        "url": "bg/img_youlechang_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "171": {
+        "id": 171, 
+        "url": "bg/img_shiyanshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "172": {
+        "id": 172, 
+        "url": "bg/img_xiangxia", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "173": {
+        "id": 173, 
+        "url": "bg/img_yiwushi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "174": {
+        "id": 174, 
+        "url": "bg/img_kfc", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "175": {
+        "id": 175, 
+        "url": "bg/img_bingchuang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "176": {
+        "id": 176, 
+        "url": "bg/img_bingchuang_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "177": {
+        "id": 177, 
+        "url": "bg/img_houzhen", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "178": {
+        "id": 178, 
+        "url": "bg/img_zhenshiwai", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "179": {
+        "id": 179, 
+        "url": "bg/img_zuqiuchang_xi", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202472
+    }, 
+    "180": {
+        "id": 180, 
+        "url": "bg/img_zawujian", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "181": {
+        "id": 181, 
+        "url": "bg/img_yiyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "182": {
+        "id": 182, 
+        "url": "bg/img_yiyuanzoulang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "183": {
+        "id": 183, 
+        "url": "bg/img_zhenliaoshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "184": {
+        "id": 184, 
+        "url": "bg/img_yuanzi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "185": {
+        "id": 185, 
+        "url": "bg/img_yuanzi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "186": {
+        "id": 186, 
+        "url": "bg/img_xiangzi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "187": {
+        "id": 187, 
+        "url": "bg/img_kongdi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "188": {
+        "id": 188, 
+        "url": "bg/img_zhenliaoshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "189": {
+        "id": 189, 
+        "url": "bg/img_shangyejie_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "190": {
+        "id": 190, 
+        "url": "bg/img_shanding_xi", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "191": {
+        "id": 191, 
+        "url": "bg/img_shanding_ye", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "192": {
+        "id": 192, 
+        "url": "bg/img_keting_xi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "193": {
+        "id": 193, 
+        "url": "bg/img_keting_ye", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "194": {
+        "id": 194, 
+        "url": "bg/img_louxia_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "195": {
+        "id": 195, 
+        "url": "bg/img_louxia_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "196": {
+        "id": 196, 
+        "url": "bg/img_malushang_xi", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "197": {
+        "id": 197, 
+        "url": "bg/img_malushang_ye", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "198": {
+        "id": 198, 
+        "url": "bg/img_chufang_xi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "199": {
+        "id": 199, 
+        "url": "bg/img_chufang_ye", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "201": {
+        "id": 201, 
+        "url": "bg/img_future", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "202": {
+        "id": 202, 
+        "url": "bg/img_memory", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "203": {
+        "id": 203, 
+        "url": "bg/img_chengxuyuan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "204": {
+        "id": 204, 
+        "url": "bg/img_gongdi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "205": {
+        "id": 205, 
+        "url": "bg/img_hospital", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "206": {
+        "id": 206, 
+        "url": "bg/img_livingroom", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "207": {
+        "id": 207, 
+        "url": "bg/img_room", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "208": {
+        "id": 208, 
+        "url": "bg/img_waimai", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "209": {
+        "id": 209, 
+        "url": "bg/img_lab", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "210": {
+        "id": 210, 
+        "url": "bg/img_futureclass", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "211": {
+        "id": 211, 
+        "url": "bg/img_controlroom", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "212": {
+        "id": 212, 
+        "url": "bg/img_spaceship", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "213": {
+        "id": 213, 
+        "url": "bg/img_jiedao", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "214": {
+        "id": 214, 
+        "url": "bg/img_jiedao_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "215": {
+        "id": 215, 
+        "url": "bg/img_jiedao_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "216": {
+        "id": 216, 
+        "url": "bg/img_dianwancheng", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "401": {
+        "id": 401, 
+        "url": "bg/img_dnd_town", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "402": {
+        "id": 402, 
+        "url": "bg/img_jiuguan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "403": {
+        "id": 403, 
+        "url": "bg/img_huiketing", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "900": {
+        "id": 900, 
+        "url": "bg/img_map_2", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1101": {
+        "id": 1101, 
+        "url": "bg/img_xiaoxuejiaoshi_xi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1111
+    }, 
+    "1102": {
+        "id": 1102, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1112
+    }, 
+    "1103": {
+        "id": 1103, 
+        "url": "bg/img_xxzoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202452
+    }, 
+    "1104": {
+        "id": 1104, 
+        "url": "bg/img_xxzoulang_ye", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202453
+    }, 
+    "1105": {
+        "id": 1105, 
+        "url": "bg/img_xxzoulang2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202462
+    }, 
+    "1106": {
+        "id": 1106, 
+        "url": "bg/img_xxzoulang2_ye", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202463
+    }, 
+    "1107": {
+        "id": 1107, 
+        "url": "bg/img_xiaoxuejiaoshi_huiyi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1120
+    }, 
+    "1110": {
+        "id": 1110, 
+        "url": "bg/img_jiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1111": {
+        "id": 1111, 
+        "url": "bg/img_jiaoshi_xi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1112": {
+        "id": 1112, 
+        "url": "bg/img_jiaoshi_ye", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1113": {
+        "id": 1113, 
+        "url": "bg/img_xiaoxuejiaoshi2_ri", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1110
+    }, 
+    "1114": {
+        "id": 1114, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1115": {
+        "id": 1115, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1116": {
+        "id": 1116, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1117": {
+        "id": 1117, 
+        "url": "bg/img_xiaoxuejiaoshi2_xi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1111
+    }, 
+    "1118": {
+        "id": 1118, 
+        "url": "bg/img_xiaoxuejiaoshi2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1112
+    }, 
+    "1119": {
+        "id": 1119, 
+        "url": "bg/img_xiaoxuejiaoshi2_huiyi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1120
+    }, 
+    "1120": {
+        "id": 1120, 
+        "url": "bg/img_jiaoshi2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "1201": {
+        "id": 1201, 
+        "url": "bg/img_shan_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1202": {
+        "id": 1202, 
+        "url": "bg/img_lin_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1203": {
+        "id": 1203, 
+        "url": "bg/img_hebian_xi", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1204": {
+        "id": 1204, 
+        "url": "bg/img_hebian_ye", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1205": {
+        "id": 1205, 
+        "url": "bg/img_xiangzi_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1206": {
+        "id": 1206, 
+        "url": "bg/img_xiangzi_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1207": {
+        "id": 1207, 
+        "url": "bg/img_lin", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1208": {
+        "id": 1208, 
+        "url": "bg/img_lin_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1209": {
+        "id": 1209, 
+        "url": "bg/img_shan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1210": {
+        "id": 1210, 
+        "url": "bg/img_bowuguan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1301": {
+        "id": 1301, 
+        "url": "bg/img_shangyejie_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "1302": {
+        "id": 1302, 
+        "url": "bg/img_leyuanmenkou", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "7001": {
+        "id": 7001, 
+        "url": "tmp/img_quanjiafu2"
+    }, 
+    "10001": {
+        "id": 10001, 
+        "url": "bg/img_keting", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10101": {
+        "id": 10101, 
+        "url": "bg/img_xxzoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202451
+    }, 
+    "10201": {
+        "id": 10201, 
+        "url": "bg/img_xiangzi", 
+        "audio": 30011, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10301": {
+        "id": 10301, 
+        "url": "bg/img_zuqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202471
+    }, 
+    "10302": {
+        "id": 10302, 
+        "url": "bg/img_zuqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202471
+    }, 
+    "10303": {
+        "id": 10303, 
+        "url": "bg/img_zuqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202471
+    }, 
+    "10401": {
+        "id": 10401, 
+        "url": "bg/img_bangongshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10501": {
+        "id": 10501, 
+        "url": "bg/img_tiantai", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10601": {
+        "id": 10601, 
+        "url": "bg/img_louwai", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10701": {
+        "id": 10701, 
+        "url": "bg/img_cesuo", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10801": {
+        "id": 10801, 
+        "url": "bg/img_louti", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "10901": {
+        "id": 10901, 
+        "url": "bg/img_Ajia", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11001": {
+        "id": 11001, 
+        "url": "bg/img_gangqinshi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11101": {
+        "id": 11101, 
+        "url": "bg/img_xiaoqumenkou", 
+        "audio": 30003, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11201": {
+        "id": 11201, 
+        "url": "bg/img_bingfang", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11301": {
+        "id": 11301, 
+        "url": "bg/img_xiaoxuejiaoshi_ri", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1110
+    }, 
+    "11401": {
+        "id": 11401, 
+        "url": "bg/img_damen", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11501": {
+        "id": 11501, 
+        "url": "bg/img_jiaodaochu", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11601": {
+        "id": 11601, 
+        "url": "bg/img_hebian", 
+        "audio": 30009, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11701": {
+        "id": 11701, 
+        "url": "bg/img_shanding", 
+        "audio": 30007, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11801": {
+        "id": 11801, 
+        "url": "bg/img_wuding", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "11901": {
+        "id": 11901, 
+        "url": "bg/img_xiaomaibu", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12001": {
+        "id": 12001, 
+        "url": "bg/img_shangyejie", 
+        "audio": 30013, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12101": {
+        "id": 12101, 
+        "url": "bg/img_malushang", 
+        "audio": 30003, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12201": {
+        "id": 12201, 
+        "url": "bg/img_shudian", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12301": {
+        "id": 12301, 
+        "url": "bg/img_dianyingyuan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12401": {
+        "id": 12401, 
+        "url": "bg/img_youlechang", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12501": {
+        "id": 12501, 
+        "url": "bg/img_youxiting", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12601": {
+        "id": 12601, 
+        "url": "bg/img_ktv", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12701": {
+        "id": 12701, 
+        "url": "bg/img_haibian", 
+        "audio": 30014, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12801": {
+        "id": 12801, 
+        "url": "bg/img_lanqiuchang", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "12901": {
+        "id": 12901, 
+        "url": "bg/img_gongyuan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "13001": {
+        "id": 13001, 
+        "url": "bg/img_shangchang", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "13101": {
+        "id": 13101, 
+        "url": "bg/img_feiqigongyuan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14001": {
+        "id": 14001, 
+        "url": "bg/img_chufang", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14101": {
+        "id": 14101, 
+        "url": "bg/img_woshi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14201": {
+        "id": 14201, 
+        "url": "bg/img_jiazhongcesuo", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14301": {
+        "id": 14301, 
+        "url": "bg/img_louxia", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "14401": {
+        "id": 14401, 
+        "url": "bg/img_zhuxitai", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14402": {
+        "id": 14402, 
+        "url": "bg/img_zhuxitai", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14501": {
+        "id": 14501, 
+        "url": "bg/img_shudianyuelanshi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14601": {
+        "id": 14601, 
+        "url": "bg/img_zhaoxiangguan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14701": {
+        "id": 14701, 
+        "url": "bg/img_fangyingting", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14801": {
+        "id": 14801, 
+        "url": "bg/img_lieshilingyuan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "14901": {
+        "id": 14901, 
+        "url": "bg/img_caishichang", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15001": {
+        "id": 15001, 
+        "url": "bg/img_tiantai_ye", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15101": {
+        "id": 15101, 
+        "url": "bg/img_xxzoulang2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202461
+    }, 
+    "15201": {
+        "id": 15201, 
+        "url": "bg/img_tiantai_xi", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15301": {
+        "id": 15301, 
+        "url": "bg/img_damen_xi", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15401": {
+        "id": 15401, 
+        "url": "bg/img_ziliaoyingyinshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15501": {
+        "id": 15501, 
+        "url": "bg/img_xuexiaozoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "15601": {
+        "id": 15601, 
+        "url": "bg/img_zuqiuchang_yin", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202474
+    }, 
+    "15701": {
+        "id": 15701, 
+        "url": "bg/img_jiamenkou", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "15801": {
+        "id": 15801, 
+        "url": "bg/img_yumaoqiuchang", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16001": {
+        "id": 16001, 
+        "url": "bg/img_malushang", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "16101": {
+        "id": 16101, 
+        "url": "bg/img_zuqiuchang_ye", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202473
+    }, 
+    "16201": {
+        "id": 16201, 
+        "url": "bg/img_bamawoshi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16301": {
+        "id": 16301, 
+        "url": "bg/img_kongdi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "16401": {
+        "id": 16401, 
+        "url": "bg/img_xiaoqumenkou_ye", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16501": {
+        "id": 16501, 
+        "url": "bg/img_feiqigongyuan_ye", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16601": {
+        "id": 16601, 
+        "url": "bg/img_xiaowoshi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "16701": {
+        "id": 16701, 
+        "url": "bg/img_gongyuan_xi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16801": {
+        "id": 16801, 
+        "url": "bg/img_gongyuan_ye", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "16901": {
+        "id": 16901, 
+        "url": "bg/img_xiangxia_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "17001": {
+        "id": 17001, 
+        "url": "bg/img_youlechang_xi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17101": {
+        "id": 17101, 
+        "url": "bg/img_shiyanshi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17201": {
+        "id": 17201, 
+        "url": "bg/img_xiangxia", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "17301": {
+        "id": 17301, 
+        "url": "bg/img_yiwushi", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17501": {
+        "id": 17501, 
+        "url": "bg/img_bingchuang", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17601": {
+        "id": 17601, 
+        "url": "bg/img_bingchuang_ye", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17701": {
+        "id": 17701, 
+        "url": "bg/img_houzhen", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17801": {
+        "id": 17801, 
+        "url": "bg/img_zhenshiwai", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "17901": {
+        "id": 17901, 
+        "url": "bg/img_zuqiuchang_xi", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202472
+    }, 
+    "18001": {
+        "id": 18001, 
+        "url": "bg/img_kfc", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "18401": {
+        "id": 18401, 
+        "url": "bg/img_yuanzi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "18501": {
+        "id": 18501, 
+        "url": "bg/img_yuanzi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "18601": {
+        "id": 18601, 
+        "url": "bg/img_xiangzi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "18701": {
+        "id": 18701, 
+        "url": "bg/img_kongdi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "18901": {
+        "id": 18901, 
+        "url": "bg/img_shangyejie_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "19001": {
+        "id": 19001, 
+        "url": "bg/img_shanding_xi", 
+        "audio": 30007, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19101": {
+        "id": 19101, 
+        "url": "bg/img_shanding_ye", 
+        "audio": 30007, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19201": {
+        "id": 19201, 
+        "url": "bg/img_keting_xi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19301": {
+        "id": 19301, 
+        "url": "bg/img_keting_ye", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19401": {
+        "id": 19401, 
+        "url": "bg/img_louxia_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "19501": {
+        "id": 19501, 
+        "url": "bg/img_louxia_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "19601": {
+        "id": 19601, 
+        "url": "bg/img_malushang_xi", 
+        "audio": 30003, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19701": {
+        "id": 19701, 
+        "url": "bg/img_malushang_ye", 
+        "audio": 30003, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19801": {
+        "id": 19801, 
+        "url": "bg/img_chufang_xi", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "19901": {
+        "id": 19901, 
+        "url": "bg/img_chufang_ye", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20101": {
+        "id": 20101, 
+        "url": "bg/img_future", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20201": {
+        "id": 20201, 
+        "url": "bg/img_memory", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20301": {
+        "id": 20301, 
+        "url": "bg/img_chengxuyuan", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20401": {
+        "id": 20401, 
+        "url": "bg/img_gongdi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20501": {
+        "id": 20501, 
+        "url": "bg/img_hospital", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20601": {
+        "id": 20601, 
+        "url": "bg/img_livingroom", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20701": {
+        "id": 20701, 
+        "url": "bg/img_room", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20801": {
+        "id": 20801, 
+        "url": "bg/img_waimai", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "20901": {
+        "id": 20901, 
+        "url": "bg/img_lab", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21001": {
+        "id": 21001, 
+        "url": "bg/img_futureclass", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "21101": {
+        "id": 21101, 
+        "url": "bg/img_controlroom", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21201": {
+        "id": 21201, 
+        "url": "bg/img_spaceship", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21301": {
+        "id": 21301, 
+        "url": "bg/img_jiedao", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21401": {
+        "id": 21401, 
+        "url": "bg/img_jiedao_xi", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21501": {
+        "id": 21501, 
+        "url": "bg/img_jiedao_ye", 
+        "audio": 0, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "21601": {
+        "id": 21601, 
+        "url": "bg/img_dianwancheng", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "40101": {
+        "id": 40101, 
+        "url": "bg/img_dnd_town", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "40201": {
+        "id": 40201, 
+        "url": "bg/img_jiuguan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "90001": {
+        "id": 90001, 
+        "url": "bg/img_map_2", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "110101": {
+        "id": 110101, 
+        "url": "bg/img_xiaoxuejiaoshi_xi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1111
+    }, 
+    "110201": {
+        "id": 110201, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1112
+    }, 
+    "110301": {
+        "id": 110301, 
+        "url": "bg/img_xxzoulang", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202452
+    }, 
+    "110401": {
+        "id": 110401, 
+        "url": "bg/img_xxzoulang_ye", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202453
+    }, 
+    "110501": {
+        "id": 110501, 
+        "url": "bg/img_xxzoulang2", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202462
+    }, 
+    "110601": {
+        "id": 110601, 
+        "url": "bg/img_xxzoulang2_ye", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202463
+    }, 
+    "110701": {
+        "id": 110701, 
+        "url": "bg/img_xiaoxuejiaoshi_huiyi", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 1111
+    }, 
+    "120101": {
+        "id": 120101, 
+        "url": "bg/img_shan_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120201": {
+        "id": 120201, 
+        "url": "bg/img_lin_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120301": {
+        "id": 120301, 
+        "url": "bg/img_hebian_xi", 
+        "audio": 30009, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "120401": {
+        "id": 120401, 
+        "url": "bg/img_hebian_ye", 
+        "audio": 30009, 
+        "cloth": [
+            0
+        ], 
+        "gaozhongUrl": 0
+    }, 
+    "120501": {
+        "id": 120501, 
+        "url": "bg/img_xiangzi_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120601": {
+        "id": 120601, 
+        "url": "bg/img_xiangzi_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120701": {
+        "id": 120701, 
+        "url": "bg/img_lin", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120801": {
+        "id": 120801, 
+        "url": "bg/img_lin_xi", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "120901": {
+        "id": 120901, 
+        "url": "bg/img_shan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "121001": {
+        "id": 121001, 
+        "url": "bg/img_bowuguan", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "130101": {
+        "id": 130101, 
+        "url": "bg/img_shangyejie_ye", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "130201": {
+        "id": 130201, 
+        "url": "bg/img_leyuanmenkou", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0
+    }, 
+    "201011": {
+        "id": 201011, 
+        "url": "bg/img_keting", 
+        "name": "客厅", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201012": {
+        "id": 201012, 
+        "url": "bg/img_keting_xi", 
+        "name": "客厅（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201013": {
+        "id": 201013, 
+        "url": "bg/img_keting_ye", 
+        "name": "客厅（夜）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201021": {
+        "id": 201021, 
+        "url": "bg/img_chufang", 
+        "name": "厨房", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201022": {
+        "id": 201022, 
+        "url": "bg/img_chufang_xi", 
+        "name": "厨房（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201023": {
+        "id": 201023, 
+        "url": "bg/img_chufang_ye", 
+        "name": "厨房（夜）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201031": {
+        "id": 201031, 
+        "url": "bg/img_room_xiaoxue", 
+        "name": "卧室", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 201101, 
+        "gaozhongCond": []
+    }, 
+    "201032": {
+        "id": 201032, 
+        "url": "bg/img_room_xiaoxue_noon", 
+        "name": "卧室（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 201102, 
+        "gaozhongCond": []
+    }, 
+    "201033": {
+        "id": 201033, 
+        "url": "bg/img_room_xiaoxue_night", 
+        "name": "卧室（夜）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 201103, 
+        "gaozhongCond": []
+    }, 
+    "201041": {
+        "id": 201041, 
+        "url": "bg/img_jiazhongcesuo", 
+        "name": "主角家厕所", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201051": {
+        "id": 201051, 
+        "url": "bg/img_louxia", 
+        "name": "主角小区楼下", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201052": {
+        "id": 201052, 
+        "url": "bg/img_louxia_xi", 
+        "name": "主角小区楼下（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201053": {
+        "id": 201053, 
+        "url": "bg/img_louxia_ye", 
+        "name": "主角小区楼下（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201061": {
+        "id": 201061, 
+        "url": "bg/img_jiamenkou", 
+        "name": "家门口", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201062": {
+        "id": 201062, 
+        "url": "bg/img_jiamenkou_xi", 
+        "name": "家门口（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201071": {
+        "id": 201071, 
+        "url": "bg/img_bamawoshi", 
+        "name": "父母卧室", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201081": {
+        "id": 201081, 
+        "url": "bg/img_zawujian", 
+        "name": "杂物间", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201091": {
+        "id": 201091, 
+        "url": "bg/img_zhujuejiatiantai", 
+        "name": "主角家天台", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201092": {
+        "id": 201092, 
+        "url": "bg/img_zhujuejiatiantai_xi", 
+        "name": "主角家天台（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201093": {
+        "id": 201093, 
+        "url": "bg/img_zhujuejiatiantai_ye", 
+        "name": "主角家天台（夜）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201101": {
+        "id": 201101, 
+        "url": "bg/img_room_zhongxue", 
+        "name": "中学卧室", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201102": {
+        "id": 201102, 
+        "url": "bg/img_room_zhongxue_noon", 
+        "name": "中学卧室（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201103": {
+        "id": 201103, 
+        "url": "bg/img_room_zhongxue_night", 
+        "name": "中学卧室（夜）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201111": {
+        "id": 201111, 
+        "url": "bg/img_jiamenloutiguaijiao", 
+        "name": "家门楼梯拐角", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "201112": {
+        "id": 201112, 
+        "url": "bg/img_jiamenloutiguaijiao_xi", 
+        "name": "家门楼梯拐角（夕）", 
+        "audio": 0, 
+        "cloth": [
+            0, 
+            1101
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202011": {
+        "id": 202011, 
+        "url": "bg/img_xiaoxuejiaoshi_ri", 
+        "name": "教室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202021, 
+        "gaozhongCond": []
+    }, 
+    "202012": {
+        "id": 202012, 
+        "url": "bg/img_xiaoxuejiaoshi_xi", 
+        "name": "教室（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202022, 
+        "gaozhongCond": []
+    }, 
+    "202013": {
+        "id": 202013, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "name": "教室（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202023, 
+        "gaozhongCond": []
+    }, 
+    "202014": {
+        "id": 202014, 
+        "url": "bg/img_xiaoxuejiaoshi_huiyi", 
+        "name": "教室（回忆）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202024, 
+        "gaozhongCond": []
+    }, 
+    "202021": {
+        "id": 202021, 
+        "url": "bg/img_jiaoshi", 
+        "name": "中学教室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202022": {
+        "id": 202022, 
+        "url": "bg/img_jiaoshi_xi", 
+        "name": "中学教室（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202023": {
+        "id": 202023, 
+        "url": "bg/img_jiaoshi_ye", 
+        "name": "中学教室（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202024": {
+        "id": 202024, 
+        "url": "bg/img_jiaoshi2", 
+        "name": "中学教室（回忆）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202025": {
+        "id": 202025, 
+        "url": "bg/img_jiaoshi_yu", 
+        "name": "中学教室（雨）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202031": {
+        "id": 202031, 
+        "url": "bg/img_xiaoxuejiaoshi2_ri", 
+        "name": "空教室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202041, 
+        "gaozhongCond": []
+    }, 
+    "202032": {
+        "id": 202032, 
+        "url": "bg/img_xiaoxuejiaoshi2_xi", 
+        "name": "空教室（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202042, 
+        "gaozhongCond": []
+    }, 
+    "202033": {
+        "id": 202033, 
+        "url": "bg/img_xiaoxuejiaoshi2", 
+        "name": "空教室（夜晚）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202043, 
+        "gaozhongCond": []
+    }, 
+    "202034": {
+        "id": 202034, 
+        "url": "bg/img_xiaoxuejiaoshi2_huiyi", 
+        "name": "空教室（回忆）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202044, 
+        "gaozhongCond": []
+    }, 
+    "202041": {
+        "id": 202041, 
+        "url": "bg/img_xiaoxuejiaoshi_ri", 
+        "name": "小学教室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202042": {
+        "id": 202042, 
+        "url": "bg/img_xiaoxuejiaoshi_xi", 
+        "name": "小学教室（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202043": {
+        "id": 202043, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "name": "小学教室（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202044": {
+        "id": 202044, 
+        "url": "bg/img_xiaoxuejiaoshi", 
+        "name": "小学教室（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202051": {
+        "id": 202051, 
+        "url": "bg/img_xxzoulang", 
+        "name": "教室走廊", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202451, 
+        "gaozhongCond": []
+    }, 
+    "202052": {
+        "id": 202052, 
+        "url": "bg/img_xxzoulang", 
+        "name": "教室走廊（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202452, 
+        "gaozhongCond": []
+    }, 
+    "202053": {
+        "id": 202053, 
+        "url": "bg/img_xxzoulang_ye", 
+        "name": "教室走廊（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202453, 
+        "gaozhongCond": []
+    }, 
+    "202054": {
+        "id": 202054, 
+        "url": "bg/img_xxzoulang2", 
+        "name": "教室走廊（楼梯右）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202461, 
+        "gaozhongCond": []
+    }, 
+    "202055": {
+        "id": 202055, 
+        "url": "bg/img_xxzoulang2", 
+        "name": "教室走廊（楼梯右夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202462, 
+        "gaozhongCond": []
+    }, 
+    "202056": {
+        "id": 202056, 
+        "url": "bg/img_xxzoulang2_ye", 
+        "name": "教室走廊（楼梯右夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202463, 
+        "gaozhongCond": []
+    }, 
+    "202061": {
+        "id": 202061, 
+        "url": "bg/img_zuqiuchang", 
+        "name": "操场", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202471, 
+        "gaozhongCond": []
+    }, 
+    "202062": {
+        "id": 202062, 
+        "url": "bg/img_zuqiuchang_xi", 
+        "name": "操场（夕）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202472, 
+        "gaozhongCond": []
+    }, 
+    "202063": {
+        "id": 202063, 
+        "url": "bg/img_zuqiuchang_ye", 
+        "name": "操场（夜）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202473, 
+        "gaozhongCond": []
+    }, 
+    "202064": {
+        "id": 202064, 
+        "url": "bg/img_zuqiuchang_yin", 
+        "name": "操场（阴）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202474, 
+        "gaozhongCond": []
+    }, 
+    "202071": {
+        "id": 202071, 
+        "url": "bg/img_bangongshi", 
+        "name": "学校办公室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202072": {
+        "id": 202072, 
+        "url": "bg/img_bangonshi_xi", 
+        "name": "学校办公室（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202081": {
+        "id": 202081, 
+        "url": "bg/img_tiantai", 
+        "name": "学校天台", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202082": {
+        "id": 202082, 
+        "url": "bg/img_tiantai_xi", 
+        "name": "学校天台（夕）", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202083": {
+        "id": 202083, 
+        "url": "bg/img_tiantai_ye", 
+        "name": "学校天台（夜）", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202091": {
+        "id": 202091, 
+        "url": "bg/img_louwai", 
+        "name": "教学楼外", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202092": {
+        "id": 202092, 
+        "url": "bg/img_louwai_xi", 
+        "name": "教学楼外（夕）", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202101": {
+        "id": 202101, 
+        "url": "bg/img_louti", 
+        "name": "学校楼梯", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202111": {
+        "id": 202111, 
+        "url": "bg/img_damen", 
+        "name": "学校大门", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202591, 
+        "gaozhongCond": []
+    }, 
+    "202112": {
+        "id": 202112, 
+        "url": "bg/img_damen_xi", 
+        "name": "学校大门（夕）", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 202592, 
+        "gaozhongCond": []
+    }, 
+    "202121": {
+        "id": 202121, 
+        "url": "bg/img_jiaodaochu", 
+        "name": "学校教导处", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202131": {
+        "id": 202131, 
+        "url": "bg/img_cesuo", 
+        "name": "厕所", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202141": {
+        "id": 202141, 
+        "url": "bg/img_lanqiuchang", 
+        "name": "篮球场", 
+        "audio": 0, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202151": {
+        "id": 202151, 
+        "url": "bg/img_zhuxitai", 
+        "name": "学校主席台", 
+        "audio": 30017, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202161": {
+        "id": 202161, 
+        "url": "bg/img_ziliaoyingyinshi", 
+        "name": "资料影印室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202171": {
+        "id": 202171, 
+        "url": "bg/img_xuexiaozoulang", 
+        "name": "学校走廊", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202172": {
+        "id": 202172, 
+        "url": "bg/img_xuexiaozoulang_xi", 
+        "name": "学校走廊（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202173": {
+        "id": 202173, 
+        "url": "bg/img_xuexiaozoulang_ye", 
+        "name": "学校走廊（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202181": {
+        "id": 202181, 
+        "url": "bg/img_yumaoqiuchang", 
+        "name": "羽毛球场", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202191": {
+        "id": 202191, 
+        "url": "bg/img_shiyanshi", 
+        "name": "实验室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202201": {
+        "id": 202201, 
+        "url": "bg/img_yiwushi", 
+        "name": "医务室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202211": {
+        "id": 202211, 
+        "url": "bg/img_qicaishi", 
+        "name": "器材室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202221": {
+        "id": 202221, 
+        "url": "bg/img_loutiguaijiao", 
+        "name": "楼梯拐角", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202222": {
+        "id": 202222, 
+        "url": "bg/img_loutiguaijiao_xi", 
+        "name": "楼梯拐角（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202223": {
+        "id": 202223, 
+        "url": "bg/img_loutiguaijiao_ye", 
+        "name": "楼梯拐角（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202231": {
+        "id": 202231, 
+        "url": "bg/img_guangboshi", 
+        "name": "广播室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202241": {
+        "id": 202241, 
+        "url": "bg/img_shitang", 
+        "name": "食堂", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202242": {
+        "id": 202242, 
+        "url": "bg/img_shitang_xi", 
+        "name": "食堂（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202251": {
+        "id": 202251, 
+        "url": "bg/img_xiaozhangshi", 
+        "name": "校长室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202252": {
+        "id": 202252, 
+        "url": "bg/img_xiaozhangshi_xi", 
+        "name": "校长室（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202261": {
+        "id": 202261, 
+        "url": "bg/img_wutai", 
+        "name": "舞台", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202271": {
+        "id": 202271, 
+        "url": "bg/img_yanchuhoutai", 
+        "name": "演出后台", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202281": {
+        "id": 202281, 
+        "url": "bg/img_xiaodao", 
+        "name": "校道", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202282": {
+        "id": 202282, 
+        "url": "bg/img_xiaodao_xi", 
+        "name": "校道（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202283": {
+        "id": 202283, 
+        "url": "bg/img_xiaodao_ye", 
+        "name": "校道（夜）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202291": {
+        "id": 202291, 
+        "url": "bg/img_xiaodaozoulang", 
+        "name": "校道走廊", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202292": {
+        "id": 202292, 
+        "url": "bg/img_xiaodaozoulang_xi", 
+        "name": "校道走廊（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202293": {
+        "id": 202293, 
+        "url": "bg/img_xiaodaozoulang_yu", 
+        "name": "校道走廊（雨）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202301": {
+        "id": 202301, 
+        "url": "bg/img_xuexiaoguangchang", 
+        "name": "学校广场", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202302": {
+        "id": 202302, 
+        "url": "bg/img_xuexiaoguangchang_xi", 
+        "name": "学校广场（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202311": {
+        "id": 202311, 
+        "url": "bg/img_qitazoulang", 
+        "name": "其它教室走廊", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202312": {
+        "id": 202312, 
+        "url": "bg/img_qitazoulang_xi", 
+        "name": "其它教室走廊（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202321": {
+        "id": 202321, 
+        "url": "bg/img_aoshujiaoshi", 
+        "name": "奥数教室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202322": {
+        "id": 202322, 
+        "url": "bg/img_aoshujiaoshi_xi", 
+        "name": "奥数教室（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202331": {
+        "id": 202331, 
+        "url": "bg/img_aoshuzoulang", 
+        "name": "奥数走廊", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202332": {
+        "id": 202332, 
+        "url": "bg/img_aoshuzoulang_xi", 
+        "name": "奥数走廊（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202341": {
+        "id": 202341, 
+        "url": "bg/img_jiaoshi2", 
+        "name": "外校教室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202351": {
+        "id": 202351, 
+        "url": "bg/img_xuexiaowaiqiang", 
+        "name": "学校外墙", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202361": {
+        "id": 202361, 
+        "url": "bg/img_jietijiaoshi", 
+        "name": "阶梯教室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202362": {
+        "id": 202362, 
+        "url": "bg/img_jietijiaoshi_xi", 
+        "name": "阶梯教室（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202371": {
+        "id": 202371, 
+        "url": "bg/img_tiyuguankantai", 
+        "name": "体育馆看台", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202372": {
+        "id": 202372, 
+        "url": "bg/img_tiyuguankantai_xi", 
+        "name": "体育馆看台（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202381": {
+        "id": 202381, 
+        "url": "bg/img_zuqiuchangkantai_xi", 
+        "name": "足球场看台（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202391": {
+        "id": 202391, 
+        "url": "bg/img_nanshengsushe", 
+        "name": "男生宿舍", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202392": {
+        "id": 202392, 
+        "url": "bg/img_nanshengsushe_xi", 
+        "name": "男生宿舍（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202393": {
+        "id": 202393, 
+        "url": "bg/img_nanshengsushe_ye", 
+        "name": "男生宿舍（夜）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202401": {
+        "id": 202401, 
+        "url": "bg/img_nvshengsushe", 
+        "name": "女生宿舍", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202402": {
+        "id": 202402, 
+        "url": "bg/img_nvshengsushe_xi", 
+        "name": "女生宿舍（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202403": {
+        "id": 202403, 
+        "url": "bg/img_nvshengsushe_ye", 
+        "name": "女生宿舍（夜）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202411": {
+        "id": 202411, 
+        "url": "bg/img_jifang", 
+        "name": "机房", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202421": {
+        "id": 202421, 
+        "url": "bg/img_shetuanshi", 
+        "name": "社团室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202422": {
+        "id": 202422, 
+        "url": "bg/img_shetuanshi_xi", 
+        "name": "社团室（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202431": {
+        "id": 202431, 
+        "url": "bg/img_gonggaolan", 
+        "name": "公告栏", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202432": {
+        "id": 202432, 
+        "url": "bg/img_gonggaolan_ye", 
+        "name": "公告栏（夜）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202433": {
+        "id": 202433, 
+        "url": "bg/img_gonggaolan_xi", 
+        "name": "公告栏（夕）", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202441": {
+        "id": 202441, 
+        "url": "bg/img_meishushi", 
+        "name": "美术室", 
+        "audio": 30002, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202451": {
+        "id": 202451, 
+        "url": "bg/img_zoulang", 
+        "name": "中学教室走廊", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202452": {
+        "id": 202452, 
+        "url": "bg/img_zoulang_xi", 
+        "name": "中学教室走廊（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202453": {
+        "id": 202453, 
+        "url": "bg/img_zoulang_ye", 
+        "name": "中学教室走廊（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202461": {
+        "id": 202461, 
+        "url": "bg/img_zoulang2", 
+        "name": "中学教室走廊（楼梯右）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202462": {
+        "id": 202462, 
+        "url": "bg/img_zoulang2_xi", 
+        "name": "中学教室走廊（楼梯右夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202463": {
+        "id": 202463, 
+        "url": "bg/img_zoulang2_ye", 
+        "name": "中学教室走廊（楼梯右夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202471": {
+        "id": 202471, 
+        "url": "bg/img_caochang", 
+        "name": "中学操场", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202472": {
+        "id": 202472, 
+        "url": "bg/img_caochang_xi", 
+        "name": "中学操场（夕）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202473": {
+        "id": 202473, 
+        "url": "bg/img_caochang_ye", 
+        "name": "中学操场（夜）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202474": {
+        "id": 202474, 
+        "url": "bg/img_caochang", 
+        "name": "中学操场（阴）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202481": {
+        "id": 202481, 
+        "url": "bg/img_zuqiuchang", 
+        "name": "小学操场", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202482": {
+        "id": 202482, 
+        "url": "bg/img_zuqiuchang_xi", 
+        "name": "小学操场（夕）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202483": {
+        "id": 202483, 
+        "url": "bg/img_zuqiuchang_ye", 
+        "name": "小学操场（夜）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202484": {
+        "id": 202484, 
+        "url": "bg/img_zuqiuchang_yin", 
+        "name": "小学操场（阴）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202491": {
+        "id": 202491, 
+        "url": "bg/img_meishujiaoshi", 
+        "name": "美术教室", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202501": {
+        "id": 202501, 
+        "url": "bg/img_wudaoshi", 
+        "name": "舞蹈室", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202511": {
+        "id": 202511, 
+        "url": "bg/img_shitangmenkou", 
+        "name": "食堂门口", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202521": {
+        "id": 202521, 
+        "url": "bg/img_shiyanlouxia", 
+        "name": "实验楼下", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202522": {
+        "id": 202522, 
+        "url": "bg/img_shiyanlouxia_ye", 
+        "name": "实验楼下（夜）", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202531": {
+        "id": 202531, 
+        "url": "bg/img_erzhongxiaomen", 
+        "name": "二中校门", 
+        "audio": 30007, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202541": {
+        "id": 202541, 
+        "url": "bg/img_xxzoulang", 
+        "name": "小学教室走廊", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202542": {
+        "id": 202542, 
+        "url": "bg/img_xxzoulang", 
+        "name": "小学教室走廊（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202543": {
+        "id": 202543, 
+        "url": "bg/img_xxzoulang_ye", 
+        "name": "小学教室走廊（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202544": {
+        "id": 202544, 
+        "url": "bg/img_xxzoulang2", 
+        "name": "小学教室走廊（楼梯右）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202545": {
+        "id": 202545, 
+        "url": "bg/img_xxzoulang2", 
+        "name": "小学教室走廊（楼梯右夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202546": {
+        "id": 202546, 
+        "url": "bg/img_xxzoulang2_ye", 
+        "name": "小学教室走廊（楼梯右夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202551": {
+        "id": 202551, 
+        "url": "bg/img_jiyouban_ye", 
+        "name": "绩优班教室（夜）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202561": {
+        "id": 202561, 
+        "url": "bg/img_xueshenghuishi", 
+        "name": "学生会室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202571": {
+        "id": 202571, 
+        "url": "bg/img_yinyuejiaoshi", 
+        "name": "音乐教室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202572": {
+        "id": 202572, 
+        "url": "bg/img_yinyuejiaoshi_xi", 
+        "name": "音乐教室（夕）", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202581": {
+        "id": 202581, 
+        "url": "bg/img_xuexiaotushushi", 
+        "name": "学校图书室", 
+        "audio": 30012, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202591": {
+        "id": 202591, 
+        "url": "bg/img_zhongxuedamen", 
+        "name": "中学学校大门", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202592": {
+        "id": 202592, 
+        "url": "bg/img_zhongxuedamen_xi", 
+        "name": "中学学校大门（夕）", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202601": {
+        "id": 202601, 
+        "url": "bg/img_gaokaodamen", 
+        "name": "高考大门", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "202602": {
+        "id": 202602, 
+        "url": "bg/img_gaokaodamen_xi", 
+        "name": "高考大门（夕）", 
+        "audio": 30003, 
+        "cloth": [
+            1
+        ], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203011": {
+        "id": 203011, 
+        "url": "bg/img_xiangzi", 
+        "name": "民居巷子", 
+        "audio": 30011, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203012": {
+        "id": 203012, 
+        "url": "bg/img_xiangzi_xi", 
+        "name": "民居巷子（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203013": {
+        "id": 203013, 
+        "url": "bg/img_xiangzi_ye", 
+        "name": "民居巷子（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203021": {
+        "id": 203021, 
+        "url": "bg/img_Ajia", 
+        "name": "谭梓君家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203031": {
+        "id": 203031, 
+        "url": "bg/img_gangqinshi", 
+        "name": "谭梓君家钢琴室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203041": {
+        "id": 203041, 
+        "url": "bg/img_xiaoqumenkou", 
+        "name": "高档小区门口", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203042": {
+        "id": 203042, 
+        "url": "bg/img_xiaoqumenkou_ye", 
+        "name": "高档小区门口（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203043": {
+        "id": 203043, 
+        "url": "bg/img_xiaoqumenkou_xi", 
+        "name": "高档小区门口（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203051": {
+        "id": 203051, 
+        "url": "bg/img_hebian", 
+        "name": "河边", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203052": {
+        "id": 203052, 
+        "url": "bg/img_hebian_xi", 
+        "name": "河边（夕）", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203053": {
+        "id": 203053, 
+        "url": "bg/img_hebian_ye", 
+        "name": "河边（夜）", 
+        "audio": 30009, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203061": {
+        "id": 203061, 
+        "url": "bg/img_shanding", 
+        "name": "山顶", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203062": {
+        "id": 203062, 
+        "url": "bg/img_shanding_xi", 
+        "name": "山顶（夕）", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203063": {
+        "id": 203063, 
+        "url": "bg/img_shanding_ye", 
+        "name": "山顶（夜）", 
+        "audio": 30007, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203071": {
+        "id": 203071, 
+        "url": "bg/img_wuding", 
+        "name": "屋顶", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203081": {
+        "id": 203081, 
+        "url": "bg/img_haibian", 
+        "name": "海边", 
+        "audio": 30014, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203091": {
+        "id": 203091, 
+        "url": "bg/img_kongdi", 
+        "name": "空地", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203101": {
+        "id": 203101, 
+        "url": "bg/img_xiaowoshi", 
+        "name": "肖清雅卧室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203111": {
+        "id": 203111, 
+        "url": "bg/img_xiangxia", 
+        "name": "乡下", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203112": {
+        "id": 203112, 
+        "url": "bg/img_xiangxia_xi", 
+        "name": "乡下（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203121": {
+        "id": 203121, 
+        "url": "bg/img_yuanzi", 
+        "name": "破旧院落", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203122": {
+        "id": 203122, 
+        "url": "bg/img_yuanzi_xi", 
+        "name": "破旧院落（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203131": {
+        "id": 203131, 
+        "url": "bg/img_yuanzi", 
+        "name": "破旧院落门口", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203141": {
+        "id": 203141, 
+        "url": "bg/img_xiangzi", 
+        "name": "老城区巷子", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203151": {
+        "id": 203151, 
+        "url": "bg/img_kongdi", 
+        "name": "老城区空地", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203161": {
+        "id": 203161, 
+        "url": "bg/img_shan", 
+        "name": "山", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203162": {
+        "id": 203162, 
+        "url": "bg/img_shan_ye", 
+        "name": "山（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203171": {
+        "id": 203171, 
+        "url": "bg/img_lin", 
+        "name": "林", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203172": {
+        "id": 203172, 
+        "url": "bg/img_lin_xi", 
+        "name": "林（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203173": {
+        "id": 203173, 
+        "url": "bg/img_lin_ye", 
+        "name": "林（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203181": {
+        "id": 203181, 
+        "url": "bg/img_wenxinketing", 
+        "name": "温馨客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203191": {
+        "id": 203191, 
+        "url": "bg/img_xiaoquloutikou", 
+        "name": "小区楼梯口", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203192": {
+        "id": 203192, 
+        "url": "bg/img_xiaoquloutikou_xi", 
+        "name": "小区楼梯口（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203193": {
+        "id": 203193, 
+        "url": "bg/img_xiaoquloutikou_ye", 
+        "name": "小区楼梯口（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203201": {
+        "id": 203201, 
+        "url": "bg/img_haibian", 
+        "name": "黄金海滩", 
+        "audio": 30014, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203202": {
+        "id": 203202, 
+        "url": "bg/img_haibian_xi", 
+        "name": "黄金海滩（夕）", 
+        "audio": 30014, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203203": {
+        "id": 203203, 
+        "url": "bg/img_haibian_ye", 
+        "name": "黄金海滩（夜）", 
+        "audio": 30014, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203211": {
+        "id": 203211, 
+        "url": "bg/img_qifushu", 
+        "name": "祈福树", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203212": {
+        "id": 203212, 
+        "url": "bg/img_qifushu_xi", 
+        "name": "祈福树（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203213": {
+        "id": 203213, 
+        "url": "bg/img_qifushu_ye", 
+        "name": "祈福树（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203221": {
+        "id": 203221, 
+        "url": "bg/img_shanjiao", 
+        "name": "山脚", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203231": {
+        "id": 203231, 
+        "url": "bg/img_jiankongshi", 
+        "name": "监控室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203241": {
+        "id": 203241, 
+        "url": "bg/img_jiandanketing", 
+        "name": "简单客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203251": {
+        "id": 203251, 
+        "url": "bg/img_livingroom_xi", 
+        "name": "林嘉宇家（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203252": {
+        "id": 203252, 
+        "url": "bg/img_livingroom", 
+        "name": "林嘉宇家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203261": {
+        "id": 203261, 
+        "url": "bg/img_chengliangketing", 
+        "name": "程良家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203271": {
+        "id": 203271, 
+        "url": "bg/img_dixiashi", 
+        "name": "地下室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203281": {
+        "id": 203281, 
+        "url": "bg/img_linbamajia", 
+        "name": "林嘉宇爸妈家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203282": {
+        "id": 203282, 
+        "url": "bg/img_linbamajia_ye", 
+        "name": "林嘉宇爸妈家（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203291": {
+        "id": 203291, 
+        "url": "bg/img_linwoshi", 
+        "name": "林嘉宇卧室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203292": {
+        "id": 203292, 
+        "url": "bg/img_linwoshi_ye", 
+        "name": "林嘉宇卧室（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203301": {
+        "id": 203301, 
+        "url": "bg/img_tanchufang", 
+        "name": "谭梓君家厨房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203311": {
+        "id": 203311, 
+        "url": "bg/img_linmawoshi_ye", 
+        "name": "林妈卧室（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203321": {
+        "id": 203321, 
+        "url": "bg/img_linshufang", 
+        "name": "林嘉宇书房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203331": {
+        "id": 203331, 
+        "url": "bg/img_linshufang", 
+        "name": "林嘉宇爸妈书房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203341": {
+        "id": 203341, 
+        "url": "bg/img_linkefang_ye", 
+        "name": "林客房（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203351": {
+        "id": 203351, 
+        "url": "bg/img_mengwoshi", 
+        "name": "孟怀安卧室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203361": {
+        "id": 203361, 
+        "url": "bg/img_mengketing", 
+        "name": "孟怀安家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203362": {
+        "id": 203362, 
+        "url": "bg/img_mengketing_xi", 
+        "name": "孟怀安家客厅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203371": {
+        "id": 203371, 
+        "url": "bg/img_mengxuanguan", 
+        "name": "孟怀安家玄关", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203381": {
+        "id": 203381, 
+        "url": "bg/img_mengguguketing", 
+        "name": "孟姑姑家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203391": {
+        "id": 203391, 
+        "url": "bg/img_mengzoulang", 
+        "name": "孟怀安家走廊", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203401": {
+        "id": 203401, 
+        "url": "bg/img_diantijian", 
+        "name": "电梯间", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203411": {
+        "id": 203411, 
+        "url": "bg/img_diantinei", 
+        "name": "电梯内", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203412": {
+        "id": 203412, 
+        "url": "bg/img_diantinei_kai", 
+        "name": "电梯内（开）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203421": {
+        "id": 203421, 
+        "url": "bg/img_shandao", 
+        "name": "山道", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203422": {
+        "id": 203422, 
+        "url": "bg/img_shandao_xi", 
+        "name": "山道（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203423": {
+        "id": 203423, 
+        "url": "bg/img_shandao_ye", 
+        "name": "山道（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203431": {
+        "id": 203431, 
+        "url": "bg/img_shanlu", 
+        "name": "山路", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203432": {
+        "id": 203432, 
+        "url": "bg/img_shanlu_xi", 
+        "name": "山路（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203433": {
+        "id": 203433, 
+        "url": "bg/img_shanlu_ye", 
+        "name": "山路（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203441": {
+        "id": 203441, 
+        "url": "bg/img_xuejiaketing", 
+        "name": "薛诗蕾家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203451": {
+        "id": 203451, 
+        "url": "bg/img_xiaoyeyejiuju", 
+        "name": "肖爷爷旧居", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203461": {
+        "id": 203461, 
+        "url": "bg/img_miaohui", 
+        "name": "庙会", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203471": {
+        "id": 203471, 
+        "url": "bg/img_danrenwoshi", 
+        "name": "单人卧室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203481": {
+        "id": 203481, 
+        "url": "bg/img_xiaochunjia", 
+        "name": "小纯家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203482": {
+        "id": 203482, 
+        "url": "bg/img_xiaochunjia_xi", 
+        "name": "小纯家客厅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203483": {
+        "id": 203483, 
+        "url": "bg/img_xiaochunjia_ye", 
+        "name": "小纯家客厅（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203484": {
+        "id": 203484, 
+        "url": "bg/img_xiaochunjia_ye2", 
+        "name": "小纯家客厅（夜2）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203491": {
+        "id": 203491, 
+        "url": "bg/img_xiaochunchufang_xi", 
+        "name": "小纯家厨房（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203492": {
+        "id": 203492, 
+        "url": "bg/img_xiaochunchufang_ye", 
+        "name": "小纯家厨房（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203501": {
+        "id": 203501, 
+        "url": "bg/img_xiaochufang", 
+        "name": "肖清雅家厨房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203511": {
+        "id": 203511, 
+        "url": "bg/img_zhuzhailouti_xi", 
+        "name": "住宅楼梯（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203521": {
+        "id": 203521, 
+        "url": "bg/img_laoxiaoqu", 
+        "name": "老小区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203531": {
+        "id": 203531, 
+        "url": "bg/img_laoxiaoquzoulang", 
+        "name": "老小区走廊", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203541": {
+        "id": 203541, 
+        "url": "bg/img_xiejia", 
+        "name": "谢辰晖家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203542": {
+        "id": 203542, 
+        "url": "bg/img_xiejia_xi", 
+        "name": "谢辰晖家客厅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203551": {
+        "id": 203551, 
+        "url": "bg/img_zhoujia", 
+        "name": "周映彤家客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203552": {
+        "id": 203552, 
+        "url": "bg/img_zhoujia_ye1", 
+        "name": "周映彤家客厅（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203553": {
+        "id": 203553, 
+        "url": "bg/img_zhoujia_ye2", 
+        "name": "周映彤家客厅（夜2）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203561": {
+        "id": 203561, 
+        "url": "bg/img_aciwoshi", 
+        "name": "陈心慈卧室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203571": {
+        "id": 203571, 
+        "url": "bg/img_acijiujia", 
+        "name": "陈心慈旧家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "203581": {
+        "id": 203581, 
+        "url": "bg/img_acixinjia", 
+        "name": "陈心慈新家", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204011": {
+        "id": 204011, 
+        "url": "bg/img_bowuguan2", 
+        "name": "博物馆", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204021": {
+        "id": 204021, 
+        "url": "bg/img_gongyuan", 
+        "name": "公园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204022": {
+        "id": 204022, 
+        "url": "bg/img_gongyuan_xi", 
+        "name": "公园（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204023": {
+        "id": 204023, 
+        "url": "bg/img_gongyuan_ye", 
+        "name": "公园（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204031": {
+        "id": 204031, 
+        "url": "bg/img_jiedao", 
+        "name": "街道", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204032": {
+        "id": 204032, 
+        "url": "bg/img_jiedao_xi", 
+        "name": "街道（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204033": {
+        "id": 204033, 
+        "url": "bg/img_jiedao_ye", 
+        "name": "街道（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204041": {
+        "id": 204041, 
+        "url": "bg/img_malushang", 
+        "name": "马路上", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204042": {
+        "id": 204042, 
+        "url": "bg/img_malushang_xi", 
+        "name": "马路上（夕）", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204043": {
+        "id": 204043, 
+        "url": "bg/img_malushang_ye", 
+        "name": "马路上（夜）", 
+        "audio": 30003, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204051": {
+        "id": 204051, 
+        "url": "bg/img_bingfang", 
+        "name": "独立病房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204061": {
+        "id": 204061, 
+        "url": "bg/img_bingchuang", 
+        "name": "病房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204062": {
+        "id": 204062, 
+        "url": "bg/img_bingchuang_ye", 
+        "name": "病房（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204071": {
+        "id": 204071, 
+        "url": "bg/img_houzhen", 
+        "name": "候诊大厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204081": {
+        "id": 204081, 
+        "url": "bg/img_zhenshiwai", 
+        "name": "诊室外", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204091": {
+        "id": 204091, 
+        "url": "bg/img_feiqigongyuan", 
+        "name": "废弃公园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204092": {
+        "id": 204092, 
+        "url": "bg/img_feiqigongyuan_ye", 
+        "name": "废弃公园（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204101": {
+        "id": 204101, 
+        "url": "bg/img_gongjiaozhan", 
+        "name": "公交站", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204102": {
+        "id": 204102, 
+        "url": "bg/img_gongjiaozhan_xi", 
+        "name": "公交站（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204111": {
+        "id": 204111, 
+        "url": "bg/img_yiyuan", 
+        "name": "医院", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204121": {
+        "id": 204121, 
+        "url": "bg/img_yiyuanzoulang", 
+        "name": "医院走廊", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204131": {
+        "id": 204131, 
+        "url": "bg/img_zhenliaoshi", 
+        "name": "诊疗室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204141": {
+        "id": 204141, 
+        "url": "bg/img_zhenliaoshi", 
+        "name": "宠物医院", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204151": {
+        "id": 204151, 
+        "url": "bg/img_lieshilingyuan", 
+        "name": "烈士陵园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204161": {
+        "id": 204161, 
+        "url": "bg/img_gongjiaoneibu", 
+        "name": "公交内部", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204162": {
+        "id": 204162, 
+        "url": "bg/img_gongjiaoneibu_xi", 
+        "name": "公交内部（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204171": {
+        "id": 204171, 
+        "url": "bg/img_jiexinhuayuan", 
+        "name": "街心公园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204172": {
+        "id": 204172, 
+        "url": "bg/img_jiexinhuayuan_xi", 
+        "name": "街心公园（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204173": {
+        "id": 204173, 
+        "url": "bg/img_jiexinhuayuan_ye", 
+        "name": "街心公园（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204181": {
+        "id": 204181, 
+        "url": "bg/img_yangchengshaoniangong_ye", 
+        "name": "羊城少年宫（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204191": {
+        "id": 204191, 
+        "url": "bg/img_gongyuan2", 
+        "name": "公园2", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204201": {
+        "id": 204201, 
+        "url": "bg/img_gangkou_ye", 
+        "name": "港口（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204211": {
+        "id": 204211, 
+        "url": "bg/img_laochengqu_xi", 
+        "name": "老城区（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204212": {
+        "id": 204212, 
+        "url": "bg/img_laochengqu_ye", 
+        "name": "老城区（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204213": {
+        "id": 204213, 
+        "url": "bg/img_laochengqu", 
+        "name": "老城区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204221": {
+        "id": 204221, 
+        "url": "bg/img_fudaoban", 
+        "name": "辅导班", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204231": {
+        "id": 204231, 
+        "url": "bg/img_tiyuzhongxin", 
+        "name": "体育中心", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204241": {
+        "id": 204241, 
+        "url": "bg/img_chezhan", 
+        "name": "车站", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204251": {
+        "id": 204251, 
+        "url": "bg/img_wutaiguanzhongxi", 
+        "name": "舞台观众席", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204261": {
+        "id": 204261, 
+        "url": "bg/img_xichengqu", 
+        "name": "新开发区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204262": {
+        "id": 204262, 
+        "url": "bg/img_xichengqu_xi", 
+        "name": "新开发区（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204271": {
+        "id": 204271, 
+        "url": "bg/img_gongyuanchangyi_xi", 
+        "name": "公园长椅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204272": {
+        "id": 204272, 
+        "url": "bg/img_gongyuanchangyi_ye", 
+        "name": "公园长椅（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204273": {
+        "id": 204273, 
+        "url": "bg/img_gongyuanchangyi", 
+        "name": "公园长椅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204281": {
+        "id": 204281, 
+        "url": "bg/img_jinglaoyuan", 
+        "name": "敬老院", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204282": {
+        "id": 204282, 
+        "url": "bg/img_jinglaoyuan_xi", 
+        "name": "敬老院（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204291": {
+        "id": 204291, 
+        "url": "bg/img_gongyuancaopingx_xi", 
+        "name": "公园草坪（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204292": {
+        "id": 204292, 
+        "url": "bg/img_gongyuancaopingx", 
+        "name": "公园草坪", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204301": {
+        "id": 204301, 
+        "url": "bg/img_luyinghebian", 
+        "name": "露营河边", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204311": {
+        "id": 204311, 
+        "url": "bg/img_camp", 
+        "name": "露营地", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204312": {
+        "id": 204312, 
+        "url": "bg/img_camp_ye", 
+        "name": "露营地（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204321": {
+        "id": 204321, 
+        "url": "bg/img_qiaobian", 
+        "name": "桥边", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204322": {
+        "id": 204322, 
+        "url": "bg/img_qiaobian_xi", 
+        "name": "桥边（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204331": {
+        "id": 204331, 
+        "url": "bg/img_gongyuankongdi_ye", 
+        "name": "公园空地（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204341": {
+        "id": 204341, 
+        "url": "bg/img_gongmu", 
+        "name": "公墓", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "204351": {
+        "id": 204351, 
+        "url": "bg/img_paichusuo_ye", 
+        "name": "派出所（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205011": {
+        "id": 205011, 
+        "url": "bg/img_xiaomaibu", 
+        "name": "小卖部", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205021": {
+        "id": 205021, 
+        "url": "bg/img_shangyejie", 
+        "name": "商业街", 
+        "audio": 30013, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205022": {
+        "id": 205022, 
+        "url": "bg/img_shangyejie_xi", 
+        "name": "商业街（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205023": {
+        "id": 205023, 
+        "url": "bg/img_shangyejie_ye", 
+        "name": "商业街（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205031": {
+        "id": 205031, 
+        "url": "bg/img_shudian", 
+        "name": "书店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205041": {
+        "id": 205041, 
+        "url": "bg/img_dianyingyuan", 
+        "name": "电影院", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205051": {
+        "id": 205051, 
+        "url": "bg/img_youlechang", 
+        "name": "游乐园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205052": {
+        "id": 205052, 
+        "url": "bg/img_youlechang_xi", 
+        "name": "游乐园（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205053": {
+        "id": 205053, 
+        "url": "bg/img_youlechang_ye", 
+        "name": "游乐园（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205061": {
+        "id": 205061, 
+        "url": "bg/img_youxiting", 
+        "name": "游戏厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 205221, 
+        "gaozhongCond": [
+            [
+                101.0, 
+                1.0, 
+                68.0
+            ]
+        ]
+    }, 
+    "205062": {
+        "id": 205062, 
+        "url": "bg/img_youxiting", 
+        "name": "游戏厅（不会变为网吧）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205071": {
+        "id": 205071, 
+        "url": "bg/img_ktv", 
+        "name": "KTV", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205081": {
+        "id": 205081, 
+        "url": "bg/img_shangchang", 
+        "name": "商场", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 205084, 
+        "gaozhongCond": [
+            [
+                3.0, 
+                -1.0, 
+                350107.0
+            ], 
+            [
+                1.0, 
+                12.0, 
+                101.0, 
+                7.0, 
+                10.0
+            ]
+        ]
+    }, 
+    "205082": {
+        "id": 205082, 
+        "url": "bg/img_shangchang_clear", 
+        "name": "商场（空）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205083": {
+        "id": 205083, 
+        "url": "bg/img_shangchangfuzhuang", 
+        "name": "商场二楼", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205084": {
+        "id": 205084, 
+        "url": "bg/img_shangchang_alien", 
+        "name": "商场（外星符号）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205091": {
+        "id": 205091, 
+        "url": "bg/img_kfc", 
+        "name": "商场餐食区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205101": {
+        "id": 205101, 
+        "url": "bg/img_shudianyuelanshi", 
+        "name": "书店阅览室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205111": {
+        "id": 205111, 
+        "url": "bg/img_zhaoxiangguan", 
+        "name": "照相馆", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205121": {
+        "id": 205121, 
+        "url": "bg/img_fangyingting", 
+        "name": "放映厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205131": {
+        "id": 205131, 
+        "url": "bg/img_caishichang", 
+        "name": "菜市场", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205141": {
+        "id": 205141, 
+        "url": "bg/img_dianwancheng", 
+        "name": "商场电玩城", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205151": {
+        "id": 205151, 
+        "url": "bg/img_leyuanmenkou", 
+        "name": "游乐园门口", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205152": {
+        "id": 205152, 
+        "url": "bg/img_leyuanmenkou_ye", 
+        "name": "游乐园门口（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205161": {
+        "id": 205161, 
+        "url": "bg/img_guiwujiaoshi", 
+        "name": "鬼屋教室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205171": {
+        "id": 205171, 
+        "url": "bg/img_guiwubaojianshi", 
+        "name": "鬼屋保健室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205181": {
+        "id": 205181, 
+        "url": "bg/img_shineilive", 
+        "name": "室内live厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205191": {
+        "id": 205191, 
+        "url": "bg/img_kafeidianwai", 
+        "name": "咖啡店外", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205201": {
+        "id": 205201, 
+        "url": "bg/img_dianyingyuan2", 
+        "name": "达万影城", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205211": {
+        "id": 205211, 
+        "url": "bg/img_buxingjie", 
+        "name": "步行街", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205212": {
+        "id": 205212, 
+        "url": "bg/img_buxingjie_xi", 
+        "name": "步行街（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205221": {
+        "id": 205221, 
+        "url": "bg/img_wangba", 
+        "name": "中学网吧", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205231": {
+        "id": 205231, 
+        "url": "bg/img_youxiting", 
+        "name": "小学游戏厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205241": {
+        "id": 205241, 
+        "url": "bg/img_houchu", 
+        "name": "后厨", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205251": {
+        "id": 205251, 
+        "url": "bg/img_shangchangyulequ", 
+        "name": "商场娱乐区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205261": {
+        "id": 205261, 
+        "url": "bg/img_shineizoulang", 
+        "name": "室内走廊", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205271": {
+        "id": 205271, 
+        "url": "bg/img_zhiyebangongshi", 
+        "name": "职业办公室", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205272": {
+        "id": 205272, 
+        "url": "bg/img_shiwusuo", 
+        "name": "事务所", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205281": {
+        "id": 205281, 
+        "url": "bg/img_canting", 
+        "name": "豪华餐厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205291": {
+        "id": 205291, 
+        "url": "bg/img_gongchangmenkou", 
+        "name": "工厂门口", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205301": {
+        "id": 205301, 
+        "url": "bg/img_feiqigongdi", 
+        "name": "废弃工地", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205302": {
+        "id": 205302, 
+        "url": "bg/img_feiqigongdi_ye", 
+        "name": "废弃工地（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205311": {
+        "id": 205311, 
+        "url": "bg/img_xicanting_xi", 
+        "name": "西餐厅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205321": {
+        "id": 205321, 
+        "url": "bg/img_shangchanghuodongtai", 
+        "name": "商场活动台", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205331": {
+        "id": 205331, 
+        "url": "bg/img_shangchangxiuxiqu", 
+        "name": "商场休息区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205341": {
+        "id": 205341, 
+        "url": "bg/img_shipindian", 
+        "name": "礼品店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205351": {
+        "id": 205351, 
+        "url": "bg/img_shougongdian", 
+        "name": "手工店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205361": {
+        "id": 205361, 
+        "url": "bg/img_zhongcanting_xi", 
+        "name": "中餐厅（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205371": {
+        "id": 205371, 
+        "url": "bg/img_huizhanzhongxinguangchang", 
+        "name": "会展中心", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205381": {
+        "id": 205381, 
+        "url": "bg/img_manzhan", 
+        "name": "漫展", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205391": {
+        "id": 205391, 
+        "url": "bg/img_zhanhuiwutai", 
+        "name": "展会舞台", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205401": {
+        "id": 205401, 
+        "url": "bg/img_putongcanting", 
+        "name": "餐厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205411": {
+        "id": 205411, 
+        "url": "bg/img_fuzhuangdian", 
+        "name": "服装店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205421": {
+        "id": 205421, 
+        "url": "bg/img_bianlidian", 
+        "name": "便利店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205431": {
+        "id": 205431, 
+        "url": "bg/img_KTVzoulang", 
+        "name": "KTV走廊", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205432": {
+        "id": 205432, 
+        "url": "bg/img_KTVcesuo", 
+        "name": "KTV厕所", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205441": {
+        "id": 205441, 
+        "url": "bg/img_tianpindian", 
+        "name": "甜品店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205451": {
+        "id": 205451, 
+        "url": "bg/img_shuizuguan", 
+        "name": "水族馆", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205461": {
+        "id": 205461, 
+        "url": "bg/img_dongwuyuanshizi", 
+        "name": "狮园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205471": {
+        "id": 205471, 
+        "url": "bg/img_dongwuyuanchangjinglv", 
+        "name": "长颈鹿园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205481": {
+        "id": 205481, 
+        "url": "bg/img_sheyingpeng", 
+        "name": "摄影棚", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205491": {
+        "id": 205491, 
+        "url": "bg/img_xuanshouqu", 
+        "name": "选手区", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205501": {
+        "id": 205501, 
+        "url": "bg/img_yanboting", 
+        "name": "演播厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205511": {
+        "id": 205511, 
+        "url": "bg/img_huadian", 
+        "name": "花店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205521": {
+        "id": 205521, 
+        "url": "bg/img_wutaiyice", 
+        "name": "舞台一侧", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205531": {
+        "id": 205531, 
+        "url": "bg/img_jiuhuodian", 
+        "name": "旧货店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205532": {
+        "id": 205532, 
+        "url": "bg/img_jiuhuodian_xi", 
+        "name": "旧货店（夕）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205541": {
+        "id": 205541, 
+        "url": "bg/img_chaoshi", 
+        "name": "超市", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205551": {
+        "id": 205551, 
+        "url": "bg/img_manhuashudian", 
+        "name": "漫画书店", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205561": {
+        "id": 205561, 
+        "url": "bg/img_shuishangleyuan", 
+        "name": "水上乐园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205571": {
+        "id": 205571, 
+        "url": "bg/img_yongchitangyi", 
+        "name": "泳池躺椅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205581": {
+        "id": 205581, 
+        "url": "bg/img_jiuba", 
+        "name": "酒吧", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205591": {
+        "id": 205591, 
+        "url": "bg/img_zaocandianyilou", 
+        "name": "早餐店一楼", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205601": {
+        "id": 205601, 
+        "url": "bg/img_zaocandianerlou", 
+        "name": "早餐店二楼", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205611": {
+        "id": 205611, 
+        "url": "bg/img_zancaodianhouchu", 
+        "name": "早餐店后厨", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205621": {
+        "id": 205621, 
+        "url": "bg/img_mishitaotuo", 
+        "name": "密室逃脱", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "205631": {
+        "id": 205631, 
+        "url": "bg/img_shaokaodian_ye", 
+        "name": "烧烤店（夜）", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206001": {
+        "id": 206001, 
+        "url": "bg/img_laofang", 
+        "name": "牢房", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206002": {
+        "id": 206002, 
+        "url": "bg/img_xinghe", 
+        "name": "星河", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206003": {
+        "id": 206003, 
+        "url": "bg/img_xiyang", 
+        "name": "夕阳", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206004": {
+        "id": 206004, 
+        "url": "bg/img_yejing", 
+        "name": "城市夜景", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206005": {
+        "id": 206005, 
+        "url": "bg/img_summersky", 
+        "name": "夜空", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206006": {
+        "id": 206006, 
+        "url": "bg/img_wintersun", 
+        "name": "远山日出", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206007": {
+        "id": 206007, 
+        "url": "bg/img_moon", 
+        "name": "月亮", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206008": {
+        "id": 206008, 
+        "url": "bg/img_yanhua", 
+        "name": "烟花", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206009": {
+        "id": 206009, 
+        "url": "bg/img_hunhouketing", 
+        "name": "落地窗高层客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206010": {
+        "id": 206010, 
+        "url": "bg/img_yibanketing", 
+        "name": "一般客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206011": {
+        "id": 206011, 
+        "url": "bg/img_hunhouketing2", 
+        "name": "独栋客厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206012": {
+        "id": 206012, 
+        "url": "bg/img_yanhuiting", 
+        "name": "宴会厅", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206013": {
+        "id": 206013, 
+        "url": "bg/img_sky", 
+        "name": "蓝天白云", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206014": {
+        "id": 206014, 
+        "url": "bg/img_daxuetushuguan", 
+        "name": "大学图书馆", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206015": {
+        "id": 206015, 
+        "url": "bg/img_youeryuan", 
+        "name": "幼儿园", 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }, 
+    "206016": {
+        "id": 206016, 
+        "url": "bg/img_shuju", 
+        "name": null, 
+        "audio": 0, 
+        "cloth": [], 
+        "gaozhongUrl": 0, 
+        "gaozhongCond": []
+    }
+}
