@@ -75,6 +75,8 @@ class ModEventApp {
         
         // 自动添加baseGame文件夹到待解析列表（如果配置启用）
         this.autoAddBaseGameFolder();
+        // 自动添加DLC初阳文件夹到待解析列表（如果配置启用）
+        this.autoAddDlcFolder();
         
         // 绑定事件
         this.bindEvents();
@@ -243,6 +245,49 @@ class ModEventApp {
                 });
         } else {
             console.log('[App] 配置为不自动添加baseGame文件夹');
+        }
+    }
+
+    /**
+     * 根据配置自动添加DLC初阳文件夹到待解析列表
+     */
+    autoAddDlcFolder() {
+        if (this.config.includeDlcContent) {
+            console.log('[App] 自动添加DLC初阳文件夹到待解析列表');
+            // 检查DLC初阳文件夹是否存在
+            fetch('dlc/初阳/')
+                .then(response => {
+                    if (response.ok) {
+                        console.log('[App] 检测到DLC初阳文件夹存在');
+                        // 先检查是否已经有DLC初阳文件夹
+                        const currentFolders = this.uploader.getSelectedFolders();
+                        const hasDlc = currentFolders.some(folder => folder.name === '初阳');
+                        if (!hasDlc) {
+                            // 创建DLC初阳文件夹对象
+                            const dlcFolder = {
+                                name: '初阳',
+                                fullPath: 'dlc/初阳',
+                                file: null
+                            };
+                            // 手动添加到uploader的selectedFolders中
+                            this.uploader.selectedFolders.set('初阳', dlcFolder);
+                            // 更新UI显示
+                            if (this.renderer) {
+                                this.renderer.updateFolderStats(Array.from(this.uploader.selectedFolders.values()));
+                            }
+                            console.log('[App] DLC初阳文件夹已添加到待解析列表');
+                        } else {
+                            console.log('[App] DLC初阳文件夹已存在于待解析列表中');
+                        }
+                    } else {
+                        console.log('[App] DLC初阳文件夹不存在');
+                    }
+                })
+                .catch(error => {
+                    console.log('[App] 检查DLC初阳文件夹时出错:', error.message);
+                });
+        } else {
+            console.log('[App] 配置为不自动添加DLC初阳文件夹');
         }
     }
 
@@ -469,6 +514,18 @@ class ModEventApp {
             tableLayoutSelect.value = this.config.tableLayout || 'vertical';
         }
         
+        // 竖列表格每页数量
+        const verticalPageSizeInput = document.getElementById('vertical-page-size');
+        if (verticalPageSizeInput) {
+            verticalPageSizeInput.value = this.config.verticalPageSize || 50;
+        }
+        
+        // 横列表格每页数量
+        const horizontalPageSizeInput = document.getElementById('horizontal-page-size');
+        if (horizontalPageSizeInput) {
+            horizontalPageSizeInput.value = this.config.horizontalPageSize || 50;
+        }
+        
         // 显示进度
         const showProgressCheckbox = document.getElementById('show-progress');
         if (showProgressCheckbox) {
@@ -491,6 +548,12 @@ class ModEventApp {
         const includeOfficialContentCheckbox = document.getElementById('include-official-content');
         if (includeOfficialContentCheckbox) {
             includeOfficialContentCheckbox.checked = this.config.includeOfficialContent;
+        }
+        
+        // 自动添加DLC初阳文件夹
+        const includeDlcContentCheckbox = document.getElementById('include-dlc-content');
+        if (includeDlcContentCheckbox) {
+            includeDlcContentCheckbox.checked = this.config.includeDlcContent;
         }
         
         // 自动加载默认数据
@@ -836,9 +899,12 @@ class ModEventApp {
         const generateDetailedReport = document.getElementById('generate-detailed-report').checked;
         const autoOpenBrowser = document.getElementById('auto-open-browser').checked;
         const includeOfficialContent = document.getElementById('include-official-content').checked;
+        const includeDlcContent = document.getElementById('include-dlc-content').checked;
         const autoLoadDefaultData = document.getElementById('auto-load-default-data').checked;
         const developerMode = document.getElementById('developer-mode').checked;
         const opacity = parseInt(document.getElementById('opacity-slider').value) || 85;
+        const verticalPageSize = parseInt(document.getElementById('vertical-page-size').value) || 50;
+        const horizontalPageSize = parseInt(document.getElementById('horizontal-page-size').value) || 50;
         
         // 应用信息
         const appName = document.getElementById('app-name').value;
@@ -863,8 +929,11 @@ class ModEventApp {
             generateDetailedReport,
             autoOpenBrowser,
             includeOfficialContent,
+            includeDlcContent,
             autoLoadDefaultData,
             opacity,
+            verticalPageSize,
+            horizontalPageSize,
             projectName: appName,
             version: appVersion,
             author: appAuthor,
@@ -899,6 +968,18 @@ class ModEventApp {
             const baseGameIndex = currentFolders.findIndex(folder => folder.name === 'baseGame');
             if (baseGameIndex !== -1) {
                 this.uploader.removeFolder(baseGameIndex);
+            }
+        }
+        
+        // 根据新的includeDlcContent设置重新处理DLC初阳文件夹
+        if (this.config.includeDlcContent) {
+            this.autoAddDlcFolder();
+        } else {
+            // 如果关闭了自动添加，移除已添加的DLC初阳文件夹
+            const currentFolders = this.uploader.getSelectedFolders();
+            const dlcIndex = currentFolders.findIndex(folder => folder.name === '初阳');
+            if (dlcIndex !== -1) {
+                this.uploader.removeFolder(dlcIndex);
             }
         }
         

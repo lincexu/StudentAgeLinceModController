@@ -98,6 +98,36 @@ class ResultRenderer {
         }
         return null;
     }
+    
+    /**
+     * 转义JSON字符串以便在HTML属性中使用
+     * @param {Object} obj - 要转义的对象
+     * @returns {string} 转义后的字符串
+     */
+    escapeJSONForHTML(obj) {
+        const jsonString = JSON.stringify(obj);
+        return jsonString
+            .replace(/&/g, '&amp;')
+            .replace(/'/g, '&#39;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+    
+    /**
+     * 从HTML属性中解析转义的JSON字符串
+     * @param {string} str - 转义后的字符串
+     * @returns {Object} 解析后的对象
+     */
+    unescapeJSONFromHTML(str) {
+        let unescaped = str
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, "'")
+            .replace(/&amp;/g, '&');
+        return JSON.parse(unescaped);
+    }
 
     init() {
         this.duplicateSection = document.getElementById('duplicate-section');
@@ -107,6 +137,163 @@ class ResultRenderer {
         this.progressSection = document.getElementById('progress-section');
         this.progressFill = document.getElementById('progress-fill');
         this.progressText = document.getElementById('progress-text');
+        
+        this.initCustomTooltip();
+    }
+    
+    /**
+     * 初始化自定义悬浮提示框
+     */
+    initCustomTooltip() {
+        let tooltip = document.querySelector('.custom-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.className = 'custom-tooltip';
+            document.body.appendChild(tooltip);
+        }
+        
+        let tooltipTimeout = null;
+        let currentElement = null;
+        let isTooltipVisible = false;
+        
+        const showTooltip = (element) => {
+            if (!element) return;
+            
+            let tooltipContent = '';
+            let tooltipTitle = '';
+            let tooltipRule = '';
+            let tooltipValue = '';
+            
+            const rowLabel = element.classList.contains('row-label');
+            const rowValue = element.classList.contains('row-value');
+            const tableHeader = element.tagName === 'TH' && element.closest('.horizontal-table');
+            const tableCell = element.tagName === 'TD' && element.closest('.horizontal-table');
+            
+            if (rowLabel || tableHeader) {
+                const desc = element.getAttribute('data-desc');
+                if (desc) {
+                    tooltipTitle = desc;
+                    tooltipContent = '属性描述';
+                }
+            } else if (rowValue || tableCell) {
+                const original = element.getAttribute('data-original');
+                const rule = element.getAttribute('data-rule');
+                if (original) {
+                    tooltipValue = original;
+                    tooltipTitle = '原始值';
+                }
+                if (rule) {
+                    tooltipRule = rule;
+                }
+            }
+            
+            if (!tooltipTitle && !tooltipContent && !tooltipRule && !tooltipValue) {
+                return;
+            }
+            
+            let html = '';
+            if (tooltipTitle) {
+                html += `<div class="tooltip-title">${tooltipTitle}</div>`;
+            }
+            if (tooltipContent) {
+                html += `<div class="tooltip-content">${tooltipContent}</div>`;
+            }
+            if (tooltipRule) {
+                html += `<div class="tooltip-rule">规则: ${tooltipRule}</div>`;
+            }
+            if (tooltipValue) {
+                html += `<div class="tooltip-value">${tooltipValue}</div>`;
+            }
+            
+            tooltip.innerHTML = html;
+            tooltip.classList.add('visible');
+            isTooltipVisible = true;
+            
+            const rect = element.getBoundingClientRect();
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
+            
+            let top = rect.top - tooltipRect.height - 12;
+            let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+            
+            if (top < 10) {
+                top = rect.bottom + 12;
+                tooltip.classList.add('top');
+            } else {
+                tooltip.classList.remove('top');
+            }
+            
+            if (left < 10) {
+                left = 10;
+            } else if (left + tooltipRect.width > viewportWidth - 10) {
+                left = viewportWidth - tooltipRect.width - 10;
+            }
+            
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
+        };
+        
+        const hideTooltip = () => {
+            tooltip.classList.remove('visible');
+            isTooltipVisible = false;
+            
+            if (tooltipTimeout) {
+                clearTimeout(tooltipTimeout);
+                tooltipTimeout = null;
+            }
+            
+            currentElement = null;
+        };
+        
+        const handleMouseEnter = (e) => {
+            const target = e.target.closest('[data-desc], [data-original]');
+            if (!target) return;
+            
+            if (tooltipTimeout) {
+                clearTimeout(tooltipTimeout);
+            }
+            
+            currentElement = target;
+            
+            tooltipTimeout = setTimeout(() => {
+                showTooltip(currentElement);
+            }, 1000);
+        };
+        
+        const handleMouseLeave = (e) => {
+            const target = e.target.closest('[data-desc], [data-original]');
+            if (target) {
+                hideTooltip();
+            }
+        };
+        
+        const handleMouseMove = (e) => {
+            if (!isTooltipVisible || !currentElement) return;
+            
+            const rect = currentElement.getBoundingClientRect();
+            
+            if (e.clientX < rect.left || e.clientX > rect.right || 
+                e.clientY < rect.top || e.clientY > rect.bottom) {
+                hideTooltip();
+            }
+        };
+        
+        document.addEventListener('mouseover', handleMouseEnter, true);
+        document.addEventListener('mouseout', handleMouseLeave, true);
+        document.addEventListener('mousemove', handleMouseMove, true);
+        
+        window.addEventListener('resize', () => {
+            if (isTooltipVisible && currentElement) {
+                showTooltip(currentElement);
+            }
+        });
+        
+        window.addEventListener('scroll', () => {
+            if (isTooltipVisible) {
+                hideTooltip();
+            }
+        }, true);
     }
 
     /**
@@ -769,19 +956,9 @@ class ResultRenderer {
                                                 sortedKeys.push(key);
                                             });
                                         } else {
-                                            // 如果没有定义，则使用默认排序（只渲染id、name/title）
+                                            // 如果没有定义，则按照原始数据的属性顺序显示所有属性
                                             const keysArray = Array.from(allKeys);
-                                            // 1. 优先添加id（如果存在）
-                                            if (keysArray.includes('id')) {
-                                                sortedKeys.push('id');
-                                            }
-                                            
-                                            // 2. 添加名称相关字段（只添加实际存在的一个）
-                                            if (keysArray.includes('name')) {
-                                                sortedKeys.push('name');
-                                            } else if (keysArray.includes('title')) {
-                                                sortedKeys.push('title');
-                                            }
+                                            sortedKeys.push(...keysArray);
                                         }
                                         
                                         // 获取当前表格布局配置
@@ -790,11 +967,11 @@ class ResultRenderer {
                                         // 生成ID类型详情内容
                                         const idTypeContent = () => {
                                             // 渲染竖列式布局
-                                            if (tableLayout === 'vertical') {
-                                                const fullItems = items;
-                                                const itemsPerPage = 50;
-                                                return `
-                                                <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${JSON.stringify(fullItems).replace(/"/g, '&quot;')}'>
+                if (tableLayout === 'vertical') {
+                    const fullItems = items;
+                    const itemsPerPage = configManager.get('verticalPageSize') || 50;
+                    return `
+                    <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${this.escapeJSONForHTML(fullItems)}'>
                                                     <div class="vertical-table-container" style="overflow-y: auto; max-height: 600px;">
                                                         ${fullItems.slice(0, itemsPerPage).map((item, itemIndex) => {
                                                             const isDuplicate = result[allIdsKey] && result[allIdsKey].get(item.id).size > 1;
@@ -858,11 +1035,22 @@ class ResultRenderer {
                                                                                 attributeName = configManager.getAttributeCN(type, key);
                                                                             }
                                                                              
+                                                                            // 格式化显示值
+                                                                            let formattedValue;
+                                                                            if (displayValue === undefined || displayValue === null) {
+                                                                                formattedValue = '-';
+                                                                            } else if (typeof displayValue === 'object') {
+                                                                                // 如果是对象或数组，格式化为JSON字符串
+                                                                                formattedValue = JSON.stringify(displayValue, null, 2);
+                                                                            } else {
+                                                                                formattedValue = displayValue;
+                                                                            }
+                                                                             
                                                                             return `
                                                                             <div class="vertical-table-row">
-                                                                                <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                                                <div class="row-value" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
-                                                                                    ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                                                <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                                    <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
                                                                                 </div>
                                                                             </div>
                                                                             `;
@@ -892,11 +1080,11 @@ class ResultRenderer {
                                                 </div>
                                                 `;
                                             } else {
-                                                // 渲染横列式布局
-                                                const fullItems = items;
-                                                const itemsPerPage = 50;
-                                                return `
-                                                <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${JSON.stringify(fullItems).replace(/"/g, '&quot;')}'>
+                    // 渲染横列式布局
+                    const fullItems = items;
+                    const itemsPerPage = configManager.get('horizontalPageSize') || 50;
+                    return `
+                    <div class="virtual-scroll-container" style="max-height: 800px; overflow-y: auto; position: relative;" data-type="${type}" data-total="${fullItems.length}" data-page-size="${itemsPerPage}" data-current-page="1" data-items='${this.escapeJSONForHTML(fullItems)}'>
                                                     <div style="overflow-x: auto; overflow-y: auto; max-height: 600px;">
                                                         <table class="horizontal-table" style="width: 100%; border-collapse: collapse; background: var(--bg-primary); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); table-layout: auto; border: 1px solid var(--border-color);">
                                                             <thead style="background: var(--primary-gradient); color: white; position: sticky; top: 0; z-index: 1;">
@@ -917,7 +1105,7 @@ class ResultRenderer {
                                                                             attributeName = configManager.getAttributeCN(type, key);
                                                                         }
                                                                         return `
-                                                                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" title="${attributeDesc}">${attributeName}</th>
+                                                                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" data-desc="${attributeDesc}">${attributeName}</th>
                                                                         `;
                                                                     }).join('')}
                                                                     <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
@@ -957,9 +1145,20 @@ class ResultRenderer {
                                                                                 }
                                                                             }
                                                                              
+                                                                            // 格式化显示值
+                                                                            let formattedValue;
+                                                                            if (displayValue === undefined || displayValue === null) {
+                                                                                formattedValue = '-';
+                                                                            } else if (typeof displayValue === 'object') {
+                                                                                // 如果是对象或数组，格式化为JSON字符串
+                                                                                formattedValue = JSON.stringify(displayValue);
+                                                                            } else {
+                                                                                formattedValue = displayValue;
+                                                                            }
+                                                                             
                                                                             return `
-                                                                            <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
-                                                                                ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                                            <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                                ${formattedValue}
                                                                             </td>
                                                                             `;
                                                                         }).join('')}
@@ -1077,6 +1276,11 @@ class ResultRenderer {
                         content.style.display = 'block';
                         toggleIcon.textContent = '▼';
                         toggleIcon.style.transform = 'rotate(90deg)';
+                        
+                        // 重新初始化虚拟滚动功能，确保分页按钮事件正确绑定
+                        setTimeout(() => {
+                            this.initVirtualScroll();
+                        }, 50);
                     }
                 });
             });
@@ -1478,11 +1682,36 @@ class ResultRenderer {
             const container = button.closest('.virtual-scroll-container');
             const type = container.dataset.type;
             const totalItems = parseInt(container.dataset.total);
-            const pageSize = parseInt(container.dataset.pageSize);
+            
+            // 从配置中重新读取每页数量，确保使用最新的配置值
+            // 首先检查容器中实际渲染的布局类型
+            const isVerticalLayout = container.querySelector('.vertical-table-container') !== null;
+            const isHorizontalLayout = container.querySelector('table.horizontal-table') !== null;
+            
+            let pageSize;
+            if (isVerticalLayout) {
+                // 竖列式布局
+                pageSize = configManager.get('verticalPageSize') || 50;
+                console.log('[VirtualScroll] 竖列式布局，pageSize:', pageSize);
+            } else if (isHorizontalLayout) {
+                // 横列式布局
+                pageSize = configManager.get('horizontalPageSize') || 50;
+                console.log('[VirtualScroll] 横列式布局，pageSize:', pageSize);
+            } else {
+                // 默认值
+                pageSize = 50;
+                console.log('[VirtualScroll] 默认布局，pageSize:', pageSize);
+            }
+            
+            // 更新data-page-size属性，确保下次使用最新值
+            container.dataset.pageSize = pageSize;
+            
             let currentPage = parseInt(container.dataset.currentPage) || 1;
+            console.log('[VirtualScroll] 当前页:', currentPage, '总项数:', totalItems, 'pageSize:', pageSize);
             
             // 计算总页数
             const totalPages = Math.ceil(totalItems / pageSize);
+            console.log('[VirtualScroll] 总页数:', totalPages);
             
             // 处理上一页和下一页
             if (action === 'prev' && currentPage > 1) {
@@ -1515,7 +1744,7 @@ class ResultRenderer {
                     }
                     
                     // 从data-items属性中获取完整的数据源
-                    const itemsData = JSON.parse(container.dataset.items);
+                    const itemsData = this.unescapeJSONFromHTML(container.dataset.items);
                     
                     // 计算需要加载的数据范围
                     const startIndex = (currentPage - 1) * pageSize;
@@ -1544,17 +1773,22 @@ class ResultRenderer {
                             const sortedKeys = [];
                             
                             if (idTypeKeyDef) {
+                                // 严格按照idTypeKeys.json中定义的key和顺序，只渲染定义的key
                                 Object.keys(idTypeKeyDef).forEach(key => {
                                     sortedKeys.push(key);
                                 });
                             } else {
-                                // 默认排序
-                                sortedKeys.push('id');
-                                if (pageItems[0] && pageItems[0].name) {
-                                    sortedKeys.push('name');
-                                } else if (pageItems[0] && pageItems[0].title) {
-                                    sortedKeys.push('title');
-                                }
+                                // 如果没有定义，则按照原始数据的属性顺序显示所有属性
+                                // 收集所有唯一的key（用于验证）
+                                const allKeys = new Set();
+                                itemsData.forEach(item => {
+                                    if (typeof item === 'object' && item !== null) {
+                                        Object.keys(item).forEach(key => allKeys.add(key));
+                                    }
+                                });
+                                
+                                const keysArray = Array.from(allKeys);
+                                sortedKeys.push(...keysArray);
                             }
                             
                             // 渲染新页的数据
@@ -1616,8 +1850,8 @@ class ResultRenderer {
                                                 
                                                 return `
                                                 <div class="vertical-table-row">
-                                                    <div class="row-label" title="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                    <div class="row-value" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
+                                                    <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
                                                         ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                                     </div>
                                                 </div>
@@ -1635,17 +1869,22 @@ class ResultRenderer {
                             const sortedKeys = [];
                             
                             if (idTypeKeyDef) {
+                                // 严格按照idTypeKeys.json中定义的key和顺序，只渲染定义的key
                                 Object.keys(idTypeKeyDef).forEach(key => {
                                     sortedKeys.push(key);
                                 });
                             } else {
-                                // 默认排序
-                                sortedKeys.push('id');
-                                if (pageItems[0] && pageItems[0].name) {
-                                    sortedKeys.push('name');
-                                } else if (pageItems[0] && pageItems[0].title) {
-                                    sortedKeys.push('title');
-                                }
+                                // 如果没有定义，则按照原始数据的属性顺序显示所有属性
+                                // 收集所有唯一的key（用于验证）
+                                const allKeys = new Set();
+                                itemsData.forEach(item => {
+                                    if (typeof item === 'object' && item !== null) {
+                                        Object.keys(item).forEach(key => allKeys.add(key));
+                                    }
+                                });
+                                
+                                const keysArray = Array.from(allKeys);
+                                sortedKeys.push(...keysArray);
                             }
                             
                             // 渲染新页的数据
@@ -1678,9 +1917,20 @@ class ResultRenderer {
                                             }
                                         }
                                         
+                                        // 格式化显示值
+                                        let formattedValue;
+                                        if (displayValue === undefined || displayValue === null) {
+                                            formattedValue = '-';
+                                        } else if (typeof displayValue === 'object') {
+                                            // 如果是对象或数组，格式化为JSON字符串
+                                            formattedValue = JSON.stringify(displayValue);
+                                        } else {
+                                            formattedValue = displayValue;
+                                        }
+                                        
                                         return `
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''} ${rule ? `[${rule}]` : ''}">
-                                            ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                            ${formattedValue}
                                         </td>
                                         `;
                                     }).join('')}
@@ -1714,7 +1964,15 @@ class ResultRenderer {
             // 添加分页按钮点击事件监听
             const pageButtons = container.querySelectorAll('.page-btn');
             pageButtons.forEach(button => {
+                // 检查是否已经绑定过事件
+                if (button._pageClickHandler) {
+                    // 已经绑定过，不再重复绑定
+                    return;
+                }
+                // 添加新的事件监听器
                 button.addEventListener('click', handlePageClick);
+                // 保存事件处理函数引用，以便后续移除
+                button._pageClickHandler = handlePageClick;
             });
         });
     }
@@ -1755,48 +2013,368 @@ class ResultRenderer {
                 // 隐藏加载状态
                 loadingState.style.display = 'none';
                 
-                // 获取所有列表项
-                const items = resultsContainer.querySelectorAll('.vertical-table-card, tr:not(thead tr)');
-                let hasMatches = false;
+                // 获取虚拟滚动容器
+                const virtualContainer = resultsContainer.querySelector('.virtual-scroll-container');
                 
-                // 过滤结果
-                items.forEach(item => {
-                    // 对于竖列式布局
-                    if (item.classList.contains('vertical-table-card')) {
-                        // 搜索整个卡片的所有内容
-                        const cardText = item.textContent.toLowerCase();
-                        const matches = cardText.includes(searchTerm);
-                        item.style.display = matches ? 'block' : 'none';
-                        if (matches) hasMatches = true;
-                    }
-                    // 对于横列式布局
-                    else if (item.tagName === 'TR') {
-                        const cells = item.querySelectorAll('td');
-                        let rowMatches = false;
-                        
-                        cells.forEach(cell => {
-                            const cellText = cell.textContent.toLowerCase();
-                            if (cellText.includes(searchTerm)) {
-                                rowMatches = true;
-                            }
-                        });
-                        
-                        item.style.display = rowMatches ? '' : 'none';
-                        if (rowMatches) hasMatches = true;
-                    }
-                });
-                
-                // 显示结果或空状态
                 if (searchTerm === '') {
                     // 搜索框为空，恢复虚拟滚动状态
-                    items.forEach(item => {
-                        item.style.display = item.classList.contains('vertical-table-card') ? 'block' : '';
-                    });
+                    // 获取容器中的内容区域
+                    let contentContainer;
+                    if (virtualContainer.querySelector('.vertical-table-container')) {
+                        contentContainer = virtualContainer.querySelector('.vertical-table-container');
+                    } else if (virtualContainer.querySelector('table.horizontal-table')) {
+                        contentContainer = virtualContainer.querySelector('table.horizontal-table tbody');
+                    }
+                    
+                    if (contentContainer) {
+                        // 清空搜索结果容器，恢复原始内容
+                        contentContainer.innerHTML = '';
+                        
+                        // 重新渲染第一页数据
+                        // 从配置中读取每页数量
+                        let itemsPerPage;
+                        if (virtualContainer.querySelector('.vertical-table-container')) {
+                            itemsPerPage = configManager.get('verticalPageSize') || 50;
+                        } else if (virtualContainer.querySelector('table.horizontal-table')) {
+                            itemsPerPage = configManager.get('horizontalPageSize') || 50;
+                        } else {
+                            itemsPerPage = 50;
+                        }
+                        
+                        const itemsData = this.unescapeJSONFromHTML(virtualContainer.dataset.items);
+                        const pageItems = itemsData.slice(0, itemsPerPage);
+                        
+                        // 生成sortedKeys
+                        const tableLayout = configManager.get().tableLayout || 'vertical';
+                        const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                        const sortedKeys = [];
+                        
+                        if (idTypeKeyDef) {
+                            // 严格按照idTypeKeys.json中定义的key和顺序，只渲染定义的key
+                            Object.keys(idTypeKeyDef).forEach(key => {
+                                sortedKeys.push(key);
+                            });
+                        } else {
+                            // 如果没有定义，则按照原始数据的属性顺序显示所有属性
+                            // 收集所有唯一的key（用于验证）
+                            const allKeys = new Set();
+                            itemsData.forEach(item => {
+                                if (typeof item === 'object' && item !== null) {
+                                    Object.keys(item).forEach(key => allKeys.add(key));
+                                }
+                            });
+                            
+                            const keysArray = Array.from(allKeys);
+                            sortedKeys.push(...keysArray);
+                        }
+                        
+                        // 重新渲染数据
+                        if (contentContainer.classList.contains('vertical-table-container')) {
+                            // 竖列式布局
+                            contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                return `
+                                <div class="vertical-table-card" data-index="${itemIndex}">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            ${sortedKeys.length > 0 ? (() => {
+                                                for (const key of sortedKeys) {
+                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
+                                                        return item[key];
+                                                    }
+                                                }
+                                                return '-';
+                                            })() : '-'}
+                                        </div>
+                                        <div class="card-status">
+                                            <span class="status-badge unique">唯一</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="vertical-table-rows">
+                                            ${sortedKeys.map((key, index) => {
+                                                let value = item[key];
+                                                const originalValue = value;
+                                                let rule = null;
+                                                
+                                                if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                    rule = idTypeKeyDef[key].rule;
+                                                }
+                                                
+                                                let displayValue = value;
+                                                if (rule) {
+                                                    if (typeof value === 'object' && value !== null) {
+                                                        try {
+                                                            const jsonString = JSON.stringify(value);
+                                                            displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                        } catch (e) {
+                                                        }
+                                                    } else {
+                                                        displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                    }
+                                                }
+                                                
+                                                let attributeName = key;
+                                                if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                    attributeName = idTypeKeyDef[key].name;
+                                                } else {
+                                                    attributeName = configManager.getAttributeCN(type, key);
+                                                }
+                                                
+                                                let formattedValue;
+                                                if (displayValue === undefined || displayValue === null) {
+                                                    formattedValue = '-';
+                                                } else if (typeof displayValue === 'object') {
+                                                    formattedValue = JSON.stringify(displayValue, null, 2);
+                                                } else {
+                                                    formattedValue = displayValue;
+                                                }
+                                                
+                                                return `
+                                                <div class="vertical-table-row">
+                                                    <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                        <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
+                                                    </div>
+                                                </div>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                            }).join('');
+                        } else if (contentContainer.tagName === 'TBODY') {
+                            // 横列式布局
+                            contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                return `
+                                <tr style="" data-index="${itemIndex}">
+                                    ${sortedKeys.map(key => {
+                                        let value = item[key];
+                                        const originalValue = value;
+                                        let rule = null;
+                                        
+                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                            rule = idTypeKeyDef[key].rule;
+                                        }
+                                        
+                                        let displayValue = value;
+                                        if (rule) {
+                                            if (typeof value === 'object' && value !== null) {
+                                                try {
+                                                    const jsonString = JSON.stringify(value);
+                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                } catch (e) {
+                                                }
+                                            } else {
+                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                            }
+                                        }
+                                        
+                                        let formattedValue;
+                                        if (displayValue === undefined || displayValue === null) {
+                                            formattedValue = '-';
+                                        } else if (typeof displayValue === 'object') {
+                                            formattedValue = JSON.stringify(displayValue);
+                                        } else {
+                                            formattedValue = displayValue;
+                                        }
+                                        
+                                        return `
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                            ${formattedValue}
+                                        </td>
+                                        `;
+                                    }).join('')}
+                                    <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                        <span class="status-badge unique">唯一</span>
+                                    </td>
+                                </tr>
+                                `;
+                            }).join('');
+                        }
+                        
+                        // 恢复分页控件
+                        const paginationControls = virtualContainer.querySelector('.pagination-controls');
+                        if (paginationControls) {
+                            paginationControls.style.display = 'flex';
+                        }
+                        
+                        // 重置当前页码
+                        virtualContainer.dataset.currentPage = 1;
+                        const currentPageElement = virtualContainer.querySelector('.current-page');
+                        if (currentPageElement) {
+                            currentPageElement.textContent = 1;
+                        }
+                    }
+                    
                     resultsContainer.style.display = 'block';
                     emptyState.style.display = 'none';
                 } else {
-                    resultsContainer.style.display = 'block';
-                    emptyState.style.display = hasMatches ? 'none' : 'block';
+                    // 从data-items属性中获取所有项的原始数据
+                    const itemsData = this.unescapeJSONFromHTML(virtualContainer.dataset.items);
+                    
+                    // 基于原始数据进行搜索
+                    const matchingItems = itemsData.filter(item => {
+                        // 将item对象转换为字符串，然后搜索
+                        const itemString = JSON.stringify(item).toLowerCase();
+                        return itemString.includes(searchTerm);
+                    });
+                    
+                    // 检查当前是哪种布局
+                    const tableLayout = configManager.get().tableLayout || 'vertical';
+                    const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                    const sortedKeys = [];
+                    
+                    if (idTypeKeyDef) {
+                        // 严格按照idTypeKeys.json中定义的key和顺序，只渲染定义的key
+                        Object.keys(idTypeKeyDef).forEach(key => {
+                            sortedKeys.push(key);
+                        });
+                    } else {
+                        // 如果没有定义，则按照原始数据的属性顺序显示所有属性
+                        // 收集所有唯一的key（用于验证）
+                        const allKeys = new Set();
+                        itemsData.forEach(item => {
+                            if (typeof item === 'object' && item !== null) {
+                                Object.keys(item).forEach(key => allKeys.add(key));
+                            }
+                        });
+                        
+                        const keysArray = Array.from(allKeys);
+                        sortedKeys.push(...keysArray);
+                    }
+                    
+                    // 获取容器中的内容区域
+                    let contentContainer;
+                    if (virtualContainer.querySelector('.vertical-table-container')) {
+                        contentContainer = virtualContainer.querySelector('.vertical-table-container');
+                    } else if (virtualContainer.querySelector('table.horizontal-table')) {
+                        contentContainer = virtualContainer.querySelector('table.horizontal-table tbody');
+                    }
+                    
+                    if (contentContainer) {
+                        // 清空当前容器内容
+                        contentContainer.innerHTML = '';
+                        
+                        // 检查当前是哪种布局
+                        if (contentContainer.classList.contains('vertical-table-container')) {
+                            // 竖列式布局
+                            contentContainer.innerHTML = matchingItems.map((item, itemIndex) => {
+                                return `
+                                <div class="vertical-table-card" data-index="${itemIndex}">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            ${sortedKeys.length > 0 ? (() => {
+                                                for (const key of sortedKeys) {
+                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
+                                                        return item[key];
+                                                    }
+                                                }
+                                                return '-';
+                                            })() : '-'}
+                                        </div>
+                                        <div class="card-status">
+                                            <span class="status-badge unique">唯一</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="vertical-table-rows">
+                                            ${sortedKeys.map((key, index) => {
+                                                let value = item[key];
+                                                  
+                                                // 保存原始值用于鼠标悬浮显示
+                                                const originalValue = value;
+                                                  
+                                                // 获取当前key对应的rule属性
+                                                let rule = null;
+                                                if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                    rule = idTypeKeyDef[key].rule;
+                                                }
+                                                  
+                                                // 应用ID替换功能
+                                                let displayValue = value;
+                                                if (rule) {
+                                                    if (typeof value === 'object' && value !== null) {
+                                                        try {
+                                                            const jsonString = JSON.stringify(value);
+                                                            displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                        } catch (e) {
+                                                            // 忽略错误，使用原始值
+                                                        }
+                                                    } else {
+                                                        displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                    }
+                                                }
+                                                  
+                                                // 获取属性的中文名称
+                                                let attributeName = key;
+                                                if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                    attributeName = idTypeKeyDef[key].name;
+                                                } else {
+                                                    attributeName = configManager.getAttributeCN(type, key);
+                                                }
+                                                  
+                                                return `
+                                                <div class="vertical-table-row">
+                                                    <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                        ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                                    </div>
+                                                </div>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                            }).join('');
+                        } else if (contentContainer.tagName === 'TBODY') {
+                            // 横列式布局
+                            contentContainer.innerHTML = matchingItems.map((item, itemIndex) => {
+                                return `
+                                <tr data-index="${itemIndex}">
+                                    ${sortedKeys.map(key => {
+                                        let value = item[key];
+                                        const originalValue = value;
+                                        let rule = null;
+                                        
+                                        if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                            rule = idTypeKeyDef[key].rule;
+                                        }
+                                        
+                                        // 应用ID替换功能
+                                        let displayValue = value;
+                                        if (rule) {
+                                            if (typeof value === 'object' && value !== null) {
+                                                try {
+                                                    const jsonString = JSON.stringify(value);
+                                                    displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                } catch (e) {
+                                                    // 忽略错误，使用原始值
+                                                }
+                                            } else {
+                                                displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                            }
+                                        }
+                                        
+                                        return `
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                            ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
+                                        </td>
+                                        `;
+                                    }).join('')}
+                                    <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                        <span class="status-badge unique">唯一</span>
+                                    </td>
+                                </tr>
+                                `;
+                            }).join('');
+                        }
+                        
+                        // 显示结果或空状态
+                        resultsContainer.style.display = 'block';
+                        emptyState.style.display = matchingItems.length > 0 ? 'none' : 'block';
+                    }
                 }
             }, 100); // 100ms延迟，模拟搜索过程
         };
@@ -1868,7 +2446,7 @@ class ResultRenderer {
                                         ${Object.entries(event).filter(([key]) => !['id', 'title'].includes(key)).map(([key, value]) => `
                                         <div class="vertical-table-row">
                                             <div class="row-label">${configManager.getAttributeCN('event', key)}:</div>
-                                            <div class="row-value" title="${JSON.stringify(value)}">
+                                            <div class="row-value" data-original="${JSON.stringify(value)}">
                                                 ${typeof value === 'object' ? JSON.stringify(value).replace(/^"|"$/g, '') : value}
                                             </div>
                                         </div>

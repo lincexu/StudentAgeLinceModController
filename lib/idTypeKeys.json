@@ -660,28 +660,8 @@
             "desc": "未知",
             "rule": "index"
         },
-        "comments": {
-            "name": "评论列表",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "condition": {
-            "name": "条件",
-            "desc": "未知",
-            "rule": "conditionRules"
-        },
-        "content": {
-            "name": "内容",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "effect": {
-            "name": "效果",
-            "desc": "未知",
-            "rule": "effectRules"
-        },
-        "options": {
-            "name": "选项",
+        "roles": {
+            "name": "角色列表",
             "desc": "未知",
             "rule": "text"
         },
@@ -690,25 +670,8 @@
             "desc": "未知",
             "rule": "index"
         },
-        "personality": {
-            "name": "个性",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "roles": {
-            "name": "角色列表",
-            "desc": "未知",
-            "rule": "text"
-        }
-    },
-    "KZoneContentKey": {
-        "id": {
-            "name": "ID",
-            "desc": "未知",
-            "rule": "index"
-        },
-        "title": {
-            "name": "标题",
+        "content": {
+            "name": "内容",
             "desc": "未知",
             "rule": "text"
         },
@@ -717,10 +680,38 @@
             "desc": "未知",
             "rule": "text"
         },
-        "cond": {
+        "options": {
+            "name": "选项",
+            "desc": "未知",
+            "rule": "text"
+        },
+         "effect": {
+            "name": "效果",
+            "desc": "未知",
+            "rule": "effectRules"
+        },
+         "condition": {
             "name": "条件",
             "desc": "未知",
             "rule": "conditionRules"
+        },
+        "personality": {
+            "name": "性格",
+            "desc": "未知",
+            "rule": "text"
+        }
+
+    },
+    "KZoneContentKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "role": {
+            "name": "角色",
+            "desc": "未知",
+            "rule": "PersonId"
         },
         "content": {
             "name": "内容",
@@ -732,25 +723,25 @@
             "desc": "未知",
             "rule": "text"
         },
+        "thumbs": {
+            "name": "点赞数",
+            "desc": "未知",
+            "rule": "number"
+        },
+        "comments": {
+            "name": "评论列表",
+            "desc": "未知",
+            "rule": "text"
+        },
         "options": {
             "name": "选项",
             "desc": "未知",
             "rule": "text"
         },
-        "role": {
-            "name": "角色",
+        "cond": {
+            "name": "条件",
             "desc": "未知",
-            "rule": "text"
-        },
-        "thumbCnt": {
-            "name": "点赞数量",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "thumbs": {
-            "name": "点赞列表",
-            "desc": "未知",
-            "rule": "text"
+            "rule": "conditionRules"
         }
     },
     "KZoneProfileKey": {

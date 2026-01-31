@@ -61,7 +61,10 @@ class ConfigManager {
             developerPassword: "", // 开发者模式密码
             opacity: 85, // 页面透明度，默认85%
             includeOfficialContent: true, // 是否自动添加baseGame文件夹到待解析列表
-            autoLoadDefaultData: false // 是否每次启动自动加载默认数据
+            includeDlcContent: true, // 是否自动添加dlc/初阳文件夹到待解析列表
+            autoLoadDefaultData: false, // 是否每次启动自动加载默认数据
+            verticalPageSize: 50, // 竖列表格每页数量
+            horizontalPageSize: 50 // 横列表格每页数量
         };
         
         // 直接使用简体中文作为默认翻译
@@ -407,7 +410,18 @@ class ConfigManager {
         this.config.autoOpenBrowser = Boolean(this.config.autoOpenBrowser);
         this.config.developerMode = Boolean(this.config.developerMode);
         this.config.includeOfficialContent = Boolean(this.config.includeOfficialContent);
+        this.config.includeDlcContent = Boolean(this.config.includeDlcContent);
         this.config.autoLoadDefaultData = Boolean(this.config.autoLoadDefaultData);
+        
+        // 验证分页配置
+        if (typeof this.config.verticalPageSize !== 'number' || this.config.verticalPageSize < 1 || this.config.verticalPageSize > 1000) {
+            console.warn('[Config] verticalPageSize值无效，使用默认值50');
+            this.config.verticalPageSize = 50;
+        }
+        if (typeof this.config.horizontalPageSize !== 'number' || this.config.horizontalPageSize < 1 || this.config.horizontalPageSize > 1000) {
+            console.warn('[Config] horizontalPageSize值无效，使用默认值50');
+            this.config.horizontalPageSize = 50;
+        }
     }
 
     /**

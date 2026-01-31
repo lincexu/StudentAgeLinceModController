@@ -172,6 +172,14 @@
                             <option value="horizontal">横列式布局</option>
                         </select>
                     </div>
+                    <div class="settings-item">
+                        <label for="vertical-page-size">竖列表格每页数量：</label>
+                        <input type="number" id="vertical-page-size" min="1" max="1000" class="settings-input" style="width: 100px;">
+                    </div>
+                    <div class="settings-item">
+                        <label for="horizontal-page-size">横列表格每页数量：</label>
+                        <input type="number" id="horizontal-page-size" min="1" max="1000" class="settings-input" style="width: 100px;">
+                    </div>
                     <div class="settings-item checkbox-item">
                         <input type="checkbox" id="show-progress" class="settings-checkbox">
                         <label for="show-progress">显示分析进度</label>
@@ -187,6 +195,10 @@
                     <div class="settings-item checkbox-item">
                         <input type="checkbox" id="include-official-content" class="settings-checkbox">
                         <label for="include-official-content">自动添加baseGame解析</label>
+                    </div>
+                    <div class="settings-item checkbox-item">
+                        <input type="checkbox" id="include-dlc-content" class="settings-checkbox">
+                        <label for="include-dlc-content">自动添加DLC初阳解析</label>
                     </div>
                     <div class="settings-item checkbox-item">
                         <input type="checkbox" id="auto-load-default-data" class="settings-checkbox">

@@ -11,6 +11,15 @@
                     "value"
                 ],
                 "desc": "概率{value}%"
+            },
+            "propertyValue": {
+                "rule": [
+                    0,
+                    2,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "属性值为{value1}/{value2}%"
             }
         }
     },
@@ -43,6 +52,15 @@
                     "value2"
                 ],
                 "desc": "年龄在{value1}岁到{value2}岁之间"
+            },
+            "ageMonth": {
+                "rule": [
+                    1,
+                    0,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "年龄{value1}岁{value2}月"
             },
             "grade": {
                 "rule": [
@@ -96,6 +114,70 @@
                     2
                 ],
                 "desc": "小学毕业后"
+            },
+            "hasClassified": {
+                "rule": [
+                    1,
+                    97,
+                    1
+                ],
+                "desc": "已经文理分班"
+            },
+            "notClassified": {
+                "rule": [
+                    1,
+                    97,
+                    -1
+                ],
+                "desc": "未文理分班"
+            },
+            "science": {
+                "rule": [
+                    1,
+                    98,
+                    1
+                ],
+                "desc": "理科生"
+            },
+            "art": {
+                "rule": [
+                    1,
+                    98,
+                    2
+                ],
+                "desc": "文科生"
+            },
+            "notScience": {
+                "rule": [
+                    1,
+                    -98,
+                    1
+                ],
+                "desc": "非理科生"
+            },
+            "notArt": {
+                "rule": [
+                    1,
+                    -98,
+                    2
+                ],
+                "desc": "非文科生"
+            },
+            "man": {
+                "rule": [
+                    1,
+                    99,
+                    1
+                ],
+                "desc": "性别为男"
+            },
+            "woman": {
+                "rule": [
+                    1,
+                    99,
+                    2
+                ],
+                "desc": "性别为女"
             }
         }
     },
@@ -330,7 +412,6 @@
                 ],
                 "desc": "主角的{PersonAttrId}属性等级≥{value}"
             }
-
         }
     },
     "5": {
@@ -385,8 +466,8 @@
         "id": 7,
         "toast": 0,
         "name": "社交",
-        "type":{
-            "withNpcRelation":{
+        "type": {
+            "withNpcRelation": {
                 "rule": [
                     7,
                     0,
@@ -395,7 +476,7 @@
                 ],
                 "desc": "与{personId}是{RelationTypId}关系"
             },
-            "NpcFavoritismGreaterThanOrEqual":{
+            "NpcFavoritismGreaterThanOrEqual": {
                 "rule": [
                     7,
                     1,
@@ -404,7 +485,7 @@
                 ],
                 "desc": "与{personId}的好感≥{value}"
             },
-            "NpcFavoritismLessThanOrEqual":{
+            "NpcFavoritismLessThanOrEqual": {
                 "rule": [
                     7,
                     -1,
@@ -413,7 +494,7 @@
                 ],
                 "desc": "与{personId}的好感≤{value}"
             },
-            "NpcIsFavoritismHighestAsexual":{
+            "NpcIsFavoritismHighestAsexual": {
                 "rule": [
                     7,
                     22,
@@ -427,8 +508,8 @@
         "id": 8,
         "toast": 1,
         "name": "状态与压力",
-        "type":{
-            "status":{
+        "type": {
+            "status": {
                 "rule": [
                     8,
                     1,
@@ -436,7 +517,7 @@
                 ],
                 "desc": "主角的状态{personStateId}"
             },
-            "statusNot":{
+            "statusNot": {
                 "rule": [
                     8,
                     -1,
@@ -450,8 +531,8 @@
         "id": 10,
         "toast": 1,
         "name": "学习",
-        "type":{
-            "subjectScoreGreaterThanOrEqual":{
+        "type": {
+            "subjectScoreGreaterThanOrEqual": {
                 "rule": [
                     10,
                     1,
@@ -460,7 +541,7 @@
                 ],
                 "desc": "科目{knowledgeId}的预估分≥{value}"
             },
-            "cumulativeNotWriteHomeworkTimesGreaterThanOrEqual":{
+            "cumulativeNotWriteHomeworkTimesGreaterThanOrEqual": {
                 "rule": [
                     10,
                     -33,
@@ -468,14 +549,14 @@
                 ],
                 "desc": "累计不写作业次数≥{value}"
             },
-            "thisRoundNotWriteHomework":{
+            "thisRoundNotWriteHomework": {
                 "rule": [
                     10,
                     -100
                 ],
                 "desc": "本回合未写作业"
             },
-            "writeHomeworkTimesGreaterThanOrEqual":{
+            "writeHomeworkTimesGreaterThanOrEqual": {
                 "rule": [
                     10,
                     4,
@@ -483,7 +564,7 @@
                 ],
                 "desc": "写作业次数≥{value}次"
             },
-            "obtainTopXNames10,50,X":{
+            "obtainTopXNames10,50,X": {
                 "rule": [
                     10,
                     50,
@@ -491,7 +572,7 @@
                 ],
                 "desc": "获得前{value}名"
             },
-            "learningLevelLessThanOrEqual":{
+            "learningLevelLessThanOrEqual": {
                 "rule": [
                     10,
                     99,
@@ -499,7 +580,7 @@
                 ],
                 "desc": "学习段位等级≤{scoreRankId}"
             },
-            "learningLevelGreaterThanOrEqual":{
+            "learningLevelGreaterThanOrEqual": {
                 "rule": [
                     10,
                     100,
@@ -518,8 +599,8 @@
         "id": 12,
         "toast": 0,
         "name": "行动",
-        "type":{
-            "action":{
+        "type": {
+            "action": {
                 "rule": [
                     12,
                     2,
@@ -528,7 +609,7 @@
                 ],
                 "desc": "主角已拥有行动{actionId}"
             },
-            "actionTimesGreaterThanOrEqual":{
+            "actionTimesGreaterThanOrEqual": {
                 "rule": [
                     12,
                     1,
@@ -543,8 +624,8 @@
         "id": 13,
         "toast": 0,
         "name": "阅读",
-        "type":{
-            "readTimesGreaterThanOrEqual":{
+        "type": {
+            "readTimesGreaterThanOrEqual": {
                 "rule": [
                     13,
                     11,
@@ -552,7 +633,7 @@
                 ],
                 "desc": "已阅读{value}本书"
             },
-            "readTimesGreaterThanOrEqualType":{
+            "readTimesGreaterThanOrEqualType": {
                 "rule": [
                     13,
                     12,
@@ -561,7 +642,7 @@
                 ],
                 "desc": "已阅读{value}本{itemTypeId}类型的书"
             },
-            "readTimesGreaterThanOrEqualId":{
+            "readTimesGreaterThanOrEqualId": {
                 "rule": [
                     13,
                     2,
@@ -575,8 +656,8 @@
         "id": 15,
         "toast": 0,
         "name": "目标",
-        "type":{
-            "targetComplete":{
+        "type": {
+            "targetComplete": {
                 "rule": [
                     15,
                     1,
@@ -584,7 +665,7 @@
                 ],
                 "desc": "目标{targetId}已经完成"
             },
-            "targetNotComplete":{
+            "targetNotComplete": {
                 "rule": [
                     15,
                     -1,
@@ -592,7 +673,7 @@
                 ],
                 "desc": "目标{intentId}已经失败"
             },
-            "currentTarget":{
+            "currentTarget": {
                 "rule": [
                     15,
                     3,
@@ -600,7 +681,7 @@
                 ],
                 "desc": "当前拥有目标{intentId}"
             },
-            "currentTargetNotComplete":{
+            "currentTargetNotComplete": {
                 "rule": [
                     15,
                     -3,
@@ -654,8 +735,8 @@
         "id": 52,
         "toast": 0,
         "name": "恋爱",
-        "type":{
-            "isSingle":{
+        "type": {
+            "isSingle": {
                 "rule": [
                     52,
                     1,
@@ -663,7 +744,7 @@
                 ],
                 "desc": "主角已经脱单"
             },
-            "isSingleNot":{
+            "isSingleNot": {
                 "rule": [
                     52,
                     1,
@@ -671,7 +752,7 @@
                 ],
                 "desc": "主角未脱单"
             },
-            "NpcIsMainLove":{
+            "NpcIsMainLove": {
                 "rule": [
                     52,
                     2,
@@ -680,7 +761,7 @@
                 ],
                 "desc": "人物{personId}是主角的恋人"
             },
-            "Npc不是主角的恋人":{
+            "Npc不是主角的恋人": {
                 "rule": [
                     52,
                     2,
@@ -695,8 +776,8 @@
         "id": 60,
         "toast": 0,
         "name": "物品限制",
-        "type":{
-            "obtainItem":{
+        "type": {
+            "obtainItem": {
                 "rule": [
                     60,
                     1,
@@ -704,7 +785,7 @@
                 ],
                 "desc": "已获得物品{itemId}"
             },
-            "obtainItemNot":{
+            "obtainItemNot": {
                 "rule": [
                     60,
                     -1,
@@ -712,7 +793,7 @@
                 ],
                 "desc": "未获得物品{itemId}"
             },
-            "obtainBook":{
+            "obtainBook": {
                 "rule": [
                     60,
                     2,

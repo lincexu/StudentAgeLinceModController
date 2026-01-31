@@ -22,7 +22,7 @@
     "1": {
         "id": 1, 
         "name": [
-            "<font color='blue'>智力</font>"
+            "<font color='skyblue'>智力</font>"
         ], 
         "min": 0.0, 
         "max": null, 

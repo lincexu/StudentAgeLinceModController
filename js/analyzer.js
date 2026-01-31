@@ -43,8 +43,7 @@ class EventAnalyzer {
                         displayName: typeConfig.name,
                         getIdField: 'id',
                         getNameField: (data) => {
-                            // 优先使用name属性，然后尝试其他常见的名称字段
-                            return data.name || data.title || '未知' + typeConfig.name;
+                            return data.name || data.title || typeConfig.failName || '未知';
                         },
                         description: typeConfig.name + 'ID',
                         keyList: typeConfig.keyList
@@ -58,14 +57,12 @@ class EventAnalyzer {
                 this.initDataStructures();
                 return true;
             } else {
-                console.warn('[Analyzer] 无法加载idTypelib.json，使用默认配置');
-                this.useDefaultIdTypeConfig();
-                return false;
+                console.error('[Analyzer] 无法加载idTypelib.json');
+                throw new Error('无法加载idTypelib.json，请检查文件是否存在');
             }
         } catch (error) {
             console.error('[Analyzer] 加载idTypelib.json出错:', error);
-            this.useDefaultIdTypeConfig();
-            return false;
+            throw error;
         }
     }
     
@@ -127,51 +124,7 @@ class EventAnalyzer {
         
         return result;
     }
-    
-    /**
-     * 使用默认ID类型配置（当无法加载idTypelib.json时）
-     */
-    useDefaultIdTypeConfig() {
-        // 默认ID类型配置
-        this.idTypes = {
-            // 基础类型
-            event: {
-                fileName: 'EvtCfg.json',
-                displayName: '事件',
-                getIdField: 'id',
-                getNameField: (data) => data.name || data.title || '未知事件',
-                description: '事件ID',
-                keyList: 'EvtKey'
-            },
-            item: {
-                fileName: 'ItemCfg.json',
-                displayName: '物品',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知物品',
-                description: '物品ID',
-                keyList: 'ItemKey'
-            },
-            book: {
-                fileName: 'BookCfg.json',
-                displayName: '书籍',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知书籍',
-                description: '书籍ID',
-                keyList: 'BookKey'
-            },
-            action: {
-                fileName: 'ActionCfg.json',
-                displayName: '行动',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知行动',
-                description: '行动ID',
-                keyList: 'ActionKey'
-            }
-        };
-        
 
-    }
-    
     
     
     
@@ -277,6 +230,12 @@ class EventAnalyzer {
             await this.processBaseGameFolder(folder);
         }
         
+        // 如果是DLC初阳文件夹且没有找到文件，尝试通过fetch API读取
+        if (folder.name === '初阳' && folderFiles.length === 0) {
+            console.log('[Analyzer] 尝试通过fetch API读取DLC初阳文件夹中的文件');
+            await this.processDlcFolder(folder);
+        }
+        
         // 更新进度
         this.processedMods++;
         const progress = Math.round((this.processedMods / this.totalMods) * 100);
@@ -346,6 +305,71 @@ class EventAnalyzer {
             }
         } catch (error) {
             console.warn(`[Analyzer] 处理baseGame文件夹时出错:`, error);
+        }
+    }
+    
+    /**
+     * 处理DLC初阳文件夹（通过fetch API）
+     * @param {Object} folder - 文件夹信息
+     */
+    async processDlcFolder(folder) {
+        // 尝试读取DLC初阳文件夹中的文件，使用folder.fullPath确保路径正确
+        const cfgDir = `${folder.fullPath}/Cfgs/zh-cn/`;
+        
+        try {
+            // 首先尝试列出目录内容
+            console.log(`[Analyzer] 尝试列出 ${cfgDir} 目录内容`);
+            const dirResponse = await fetch(cfgDir);
+            console.log(`[Analyzer] 目录请求状态码: ${dirResponse.status}`);
+            if (dirResponse.ok) {
+                const dirContent = await dirResponse.text();
+                console.log(`[Analyzer] 目录内容长度: ${dirContent.length}`);
+                // 从目录内容中提取文件名
+                const fileNames = Utils.extractFileNamesFromDirContent(dirContent);
+                console.log(`[Analyzer] 找到 ${fileNames.length} 个文件:`, fileNames);
+                
+                // 遍历所有支持的ID类型，尝试读取对应文件
+                for (const type in this.idTypes) {
+                    const typeConfig = this.idTypes[type];
+                    try {
+                        // 尝试获取文件名模式
+                        const filePattern = typeConfig.fileName;
+                        console.log(`[Analyzer] 处理类型 ${type}，文件模式: ${filePattern}`);
+                        
+                        // 查找匹配当前类型的文件
+                        const matchingFiles = fileNames.filter(name => {
+                            return Utils.matchFileName(name, filePattern);
+                        });
+                        console.log(`[Analyzer] 匹配 ${type} 类型的文件:`, matchingFiles);
+                        
+                        if (matchingFiles.length > 0) {
+                            // 处理所有匹配的文件
+                            for (const matchingFile of matchingFiles) {
+                                console.log(`[Analyzer] 找到匹配文件: ${matchingFile} 对应类型: ${type}`);
+                                const fileResponse = await fetch(`${cfgDir}${matchingFile}`);
+                                console.log(`[Analyzer] 文件请求状态码: ${fileResponse.status}`);
+                                if (fileResponse.ok) {
+                                    const content = await fileResponse.text();
+                                    console.log(`[Analyzer] 文件内容长度: ${content.length}`);
+                                    const jsonData = JSON.parse(content);
+                                    console.log(`[Analyzer] 解析文件 ${matchingFile} 成功`);
+                                    await this.processBaseGameFileData(folder, type, typeConfig, jsonData);
+                                } else {
+                                    console.warn(`[Analyzer] 无法读取文件 ${matchingFile}，状态码: ${fileResponse.status}`);
+                                }
+                            }
+                        } else {
+                            console.warn(`[Analyzer] 未找到匹配 ${filePattern} 的文件`);
+                        }
+                    } catch (error) {
+                        console.warn(`[Analyzer] 处理类型 ${type} 时出错:`, error);
+                    }
+                }
+            } else {
+                console.warn(`[Analyzer] 无法列出目录内容，状态码: ${dirResponse.status}`);
+            }
+        } catch (error) {
+            console.warn(`[Analyzer] 处理DLC初阳文件夹时出错:`, error);
         }
     }
     

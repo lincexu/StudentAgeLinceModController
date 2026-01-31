@@ -1,0 +1,6 @@
+{
+     "personPlaceHode":{
+       "rule":"sprite={spriteID}",
+       "desc":"精灵图{spriteID}"
+     }
+}
