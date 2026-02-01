@@ -2,135 +2,240 @@
     "allType": {
         "ActionId": {
             "name": "行动",
-            "file": "ActionCfg*.json"
+            "file": "ActionCfg*.json",
+            "desc": "行动ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ActionEvtId": {
             "name": "行动事件",
-            "file": "ActionEvtCfg*.json"
+            "file": "ActionEvtCfg*.json",
+            "desc": "行动事件ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "AudioId": {
             "name": "音频",
-            "file": "AudioCfg*.json"
+            "file": "AudioCfg*.json",
+            "desc": "音频ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "BgId": {
             "name": "背景",
-            "file": "BgCfg*.json"
+            "file": "BgCfg*.json",
+            "desc": "背景ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "BookId": {
             "name": "书籍",
-            "file": "BookCfg*.json"
+            "file": "BookCfg*.json",
+            "desc": "书籍ID",
+            "dataKey": "name",
+            "wiki": true
         },
         "CGId": {
             "name": "CG",
-            "file": "CGCfg*.json"
+            "file": "CGCfg*.json",
+            "desc": "CGID",
+            "dataKey": "name",
+            "wiki": false
         },
         "EvtId": {
             "name": "事件",
-            "file": "EvtCfg*.json"
+            "file": "EvtCfg*.json",
+            "desc": "事件ID",
+            "dataKey": "title",
+            "wiki": false
         },
         "IntentId": {
             "name": "意图",
-            "file": "IntentCfg*.json"
+            "file": "IntentCfg*.json",
+            "desc": "意图ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ItemId": {
             "name": "物品",
-            "file": "ItemCfg*.json"
+            "file": "ItemCfg*.json",
+            "desc": "物品ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "KZoneAvatarId": {
             "name": "空间头像",
-            "file": "KZoneAvatarCfg*.json"
+            "file": "KZoneAvatarCfg*.json",
+            "desc": "空间头像ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "KZoneCommentId": {
             "name": "空间评论",
-            "file": "KZoneCommentCfg*.json"
+            "file": "KZoneCommentCfg*.json",
+            "desc": "空间评论ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "KZoneContentId": {
             "name": "空间动态",
-            "file": "KZoneContentCfg*.json"
+            "file": "KZoneContentCfg*.json",
+            "desc": "空间动态ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "KZoneProfileId": {
             "name": "空间主页",
-            "file": "KZoneProfileCfg*.json"
+            "file": "KZoneProfileCfg*.json",
+            "desc": "空间主页ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "PersonId": {
             "name": "角色",
-            "file": "PersonCfg*.json"
+            "file": "PersonCfg*.json",
+            "desc": "角色ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "PersonGrowId": {
             "name": "角色成长",
-            "file": "PersonGrowCfg*.json"
+            "file": "PersonGrowCfg*.json",
+            "desc": "角色成长ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "RenshengguanMemoryId": {
             "name": "人生观记忆",
-            "file": "RenshengguanMemoryCfg*.json"
+            "file": "RenshengguanMemoryCfg*.json",
+            "desc": "人生观记忆ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ShopId": {
             "name": "商店",
-            "file": "ShopCfg*.json"
+            "file": "ShopCfg*.json",
+            "desc": "商店ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "AnimationId": {
             "name": "动画",
-            "file": "AnimationCfg*.json"
+            "file": "AnimationCfg*.json",
+            "desc": "动画ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ClothTypeId": {
             "name": "衣服类型",
-            "file": "ClothTypeCfg*.json"
+            "file": "ClothTypeCfg*.json",
+            "desc": "衣服类型ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "EvtTypeId": {
             "name": "事件类型",
-            "file": "EvtTypeCfg*.json"
+            "file": "EvtTypeCfg*.json",
+            "desc": "事件类型ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "FuncId": {
             "name": "功能",
-            "file": "FuncCfg*.json"
+            "file": "FuncCfg*.json",
+            "desc": "功能ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ItemTypeId": {
             "name": "物品类型",
-            "file": "ItemTypeCfg*.json"
+            "file": "ItemTypeCfg*.json",
+            "desc": "物品类型ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ItemTagId": {
             "name": "物品标签",
-            "file": "ItemTagCfg*.json"
+            "file": "ItemTagCfg*.json",
+            "desc": "物品标签ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "MapId": {
             "name": "地图",
-            "file": "MapCfg*.json"
+            "file": "MapCfg*.json",
+            "desc": "地图ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "MinigameId": {
             "name": "迷你游戏",
-            "file": "MinigameCfg*.json"
+            "file": "MinigameCfg*.json",
+            "desc": "迷你游戏ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "PersonalityTypeId": {
             "name": "价值观与人格",
-            "file": "PersonalityTypeCfg*.json"
+            "file": "PersonalityTypeCfg*.json",
+            "desc": "价值观与人格ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "PersonAttrId": {
             "name": "角色属性",
-            "file": "PersonAttrCfg*.json"
+            "file": "PersonAttrCfg*.json",
+            "desc": "角色属性ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "personStateID": {
             "name": "角色状态",
-            "file": "PersonStateCfg*.json"
+            "file": "PersonStateCfg*.json",
+            "desc": "角色状态ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "RelationId": {
             "name": "关系",
-            "file": "RelationCfg*.json"
+            "file": "RelationCfg*.json",
+            "desc": "关系ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "ScoreRankId": {
             "name": "积分排名",
-            "file": "ScoreRankCfg*.json"
+            "file": "ScoreRankCfg*.json",
+            "desc": "积分排名ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "SkillId": {
             "name": "技能",
-            "file": "SkillCfg*.json"
+            "file": "SkillCfg*.json",
+            "desc": "技能ID",
+            "dataKey": "name",
+            "wiki": false
         },
         "TalkId": {
             "name": "对话",
-            "file": "TalkCfg*.json"
+            "file": "TalkCfg*.json",
+            "desc": "对话ID",
+            "dataKey": "name"
         },
-        "actionType": {
+        "actionTypeId": {
             "name": "行动类型",
-            "file": "ActionTypeCfg*.json"
+            "file": "ActionTypeCfg*.json",
+            "desc": "行动类型ID",
+            "dataKey": "name",
+            "wiki": false
+        },
+        "sexId": {
+            "name": "性别",
+            "file": "SexCfg*.json",
+            "desc": "性别ID",
+            "dataKey": "desc",
+            "wiki": false
         }
     },
     "listType": {
@@ -235,6 +340,12 @@
             "file": "ShopCfg*.json",
             "failName": "未知商店",
             "keyList": "ShopKey"
+        },
+        "TraitsId": {
+            "name": "人物特质",
+            "file": "TraitsCfg*.json",
+            "failName": "未知人物特质",
+            "keyList": "TraitsKey"
         }
     }
 }

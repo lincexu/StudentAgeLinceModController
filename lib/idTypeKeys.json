@@ -83,7 +83,7 @@
         "sex": {
             "name": "性别",
             "desc": "物品性别",
-            "rule": "sexRules"
+            "rule": "SexId"
         },
         "subType": {
             "name": "子类型",
@@ -854,8 +854,8 @@
         },
         "gender": {
             "name": "性别",
-            "desc": "未知",
-            "rule": "text"
+            "desc": "人物性别",
+            "rule": "SexId"
         },
         "init": {
             "name": "初始化",
@@ -1097,6 +1097,23 @@
             "name": "类型",
             "desc": "未知",
             "rule": "text"
+        }
+    },
+    "TraitsKey": {
+        "id": {
+            "name": "ID",
+            "desc": "未知",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "未知",
+            "rule": "text"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "未知",
+            "rule": "effectRules"
         }
     }
 }

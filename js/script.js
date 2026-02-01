@@ -260,7 +260,7 @@ class ModEventAnalyzer {
                                             <div class="module-name">${modDetail.title || modName}</div>
                                             <div class="module-path">${modDetail.path}</div>
                                         </div>
-                                        <div style="color: #666; font-size: 0.9rem;">事件标题: ${event.title || '未知'}</div>
+                                        <div style="color: #666; font-size: 0.9rem;">事件标题: ${event.title || '-'}</div>
                                     </div>
                                 `;
                             }).join('')}

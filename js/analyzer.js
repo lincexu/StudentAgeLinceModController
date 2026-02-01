@@ -42,9 +42,6 @@ class EventAnalyzer {
                         fileName: typeConfig.file,
                         displayName: typeConfig.name,
                         getIdField: 'id',
-                        getNameField: (data) => {
-                            return data.name || data.title || typeConfig.failName || '未知';
-                        },
                         description: typeConfig.name + 'ID',
                         keyList: typeConfig.keyList
                     };
@@ -405,10 +402,6 @@ class EventAnalyzer {
                     const detailArray = modDetail[type + 's'];
                     // 提取关键属性
                     const itemWithAttributes = this.extractKeyAttributes(type, data);
-                    // 确保添加name属性
-                    if (!itemWithAttributes.name) {
-                        itemWithAttributes.name = typeConfig.getNameField(data);
-                    }
                     detailArray.push(itemWithAttributes);
                     
                     // 更新总数
@@ -517,10 +510,6 @@ class EventAnalyzer {
                         const detailArray = modDetail[type + 's'];
                         // 提取关键属性
                         const itemWithAttributes = this.extractKeyAttributes(type, data);
-                        // 确保添加name属性
-                        if (!itemWithAttributes.name) {
-                            itemWithAttributes.name = typeConfig.getNameField(data);
-                        }
                         detailArray.push(itemWithAttributes);
                         
                         // 更新总数

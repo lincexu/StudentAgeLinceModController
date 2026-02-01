@@ -146,17 +146,13 @@ class IdDatabase {
                 
                 // 构建ID类型配置
                 for (const [typeId, typeConfig] of Object.entries(allType)) {
-                    // 生成小写的类型名（用于内部使用）
                     const typeName = this.toSnakeCase(typeId.replace('Id', ''));
                     
                     this.idTypes[typeName] = {
                         fileName: typeConfig.file,
                         displayName: typeConfig.name,
                         getIdField: 'id',
-                        getNameField: (data) => {
-                            // 优先使用name属性，然后尝试其他常见的名称字段
-                            return data.name || data.title || '未知' + typeConfig.name;
-                        },
+                        dataKey: typeConfig.dataKey || 'name',
                         description: typeConfig.name + 'ID',
                         keyList: typeConfig.keyList
                     };
@@ -164,56 +160,14 @@ class IdDatabase {
                 
                 return true;
             } else {
-                this.useDefaultIdTypeConfig();
+                console.error('[IdDatabase] 无法加载idTypelib.json，请检查文件是否存在');
                 return false;
             }
         } catch (error) {
             console.error('[IdDatabase] 加载idTypelib.json出错:', error);
-            this.useDefaultIdTypeConfig();
+            console.error('[IdDatabase] 请检查idTypelib.json文件是否存在或格式是否正确');
             return false;
         }
-    }
-    
-    /**
-     * 使用默认ID类型配置（当无法加载idTypelib.json时）
-     */
-    useDefaultIdTypeConfig() {
-        // 默认ID类型配置
-        this.idTypes = {
-            // 基础类型
-            event: {
-                fileName: 'EvtCfg.json',
-                displayName: '事件',
-                getIdField: 'id',
-                getNameField: (data) => data.name || data.title || '未知事件',
-                description: '事件ID',
-                keyList: 'EvtKey'
-            },
-            item: {
-                fileName: 'ItemCfg.json',
-                displayName: '物品',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知物品',
-                description: '物品ID',
-                keyList: 'ItemKey'
-            },
-            book: {
-                fileName: 'BookCfg.json',
-                displayName: '书籍',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知书籍',
-                description: '书籍ID',
-                keyList: 'BookKey'
-            },
-            action: {
-                fileName: 'ActionCfg.json',
-                displayName: '行动',
-                getIdField: 'id',
-                getNameField: (data) => data.name || '未知行动',
-                description: '行动ID',
-                keyList: 'ActionKey'
-            }
-        };
     }
     
     /**
@@ -466,15 +420,13 @@ class IdDatabase {
                 
                 // 检查id是否为undefined或null，而不是简单的if(id)，因为id=0时会被评估为false
                 if (id !== undefined && id !== null) {
-                    // 提取数据
-                    let nameValue = data.name;
-                    // 处理name是数组的情况
+                    let nameValue = data[typeConfig.dataKey];
                     if (Array.isArray(nameValue) && nameValue.length > 0) {
                         nameValue = nameValue[0];
                     }
                     const item = {
                         id: id,
-                        name: nameValue || data.title || typeConfig.getNameField(data)
+                        name: nameValue || typeConfig.displayName
                     };
                     
                     // 提取其他属性
@@ -982,9 +934,13 @@ class IdDatabase {
                 const id = typeof idField === 'function' ? idField(item) : item[idField];
                 
                 if (id !== undefined && id !== null) {
+                    let nameValue = item[typeConfig.dataKey];
+                    if (Array.isArray(nameValue) && nameValue.length > 0) {
+                        nameValue = nameValue[0];
+                    }
                     const dataItem = {
                         id: id,
-                        name: item.name || item.title || typeConfig.getNameField(item)
+                        name: nameValue || typeConfig.displayName
                     };
                     
                     if (item.icon) {

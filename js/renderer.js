@@ -21,6 +21,49 @@ class ResultRenderer {
     }
     
     /**
+     * 根据type获取对应的keyName
+     * @param {string} type - 类型名称
+     * @returns {string} keyName
+     */
+    getKeyNameByType(type) {
+        let keyName = null;
+        
+        // 尝试从idTypelib中动态查找keyList
+        if (configManager.idTypelib && configManager.idTypelib.listType) {
+            // 遍历idTypelib.listType，查找匹配的类型
+            for (const [typeId, typeConfig] of Object.entries(configManager.idTypelib.listType)) {
+                // 生成与输入type匹配的类型名（移除Id后缀并转换为蛇形命名）
+                const typeNameWithoutId = typeId.replace('Id', '');
+                const snakeCaseTypeName = typeNameWithoutId.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+                
+                // 直接比较蛇形命名的类型名
+                if (snakeCaseTypeName === type) {
+                    keyName = typeConfig.keyList;
+                    break;
+                }
+                
+                // 如果没有匹配，尝试移除下划线后比较
+                const normalizedSnakeCase = snakeCaseTypeName.replace(/_/g, '');
+                const normalizedInputType = type.replace(/_/g, '');
+                
+                if (normalizedSnakeCase === normalizedInputType) {
+                    keyName = typeConfig.keyList;
+                    break;
+                }
+            }
+        }
+        
+        // 如果没有找到，使用默认的命名规则
+        if (!keyName) {
+            // 移除下划线并转换为驼峰命名
+            const camelCaseType = type.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
+            keyName = `${camelCaseType.charAt(0).toUpperCase() + camelCaseType.slice(1)}Key`;
+        }
+        
+        return keyName;
+    }
+    
+    /**
      * 预加载所有规则文件
      */
     async preloadRules() {
@@ -41,8 +84,23 @@ class ResultRenderer {
                     this.rulesCache[ruleFile] = rules;
                 }
             }
+            
+            // 规则加载完成，触发重新渲染
+            this.onRulesLoaded();
         } catch (error) {
             console.error('预加载规则文件出错:', error);
+        }
+    }
+    
+    /**
+     * 规则加载完成后的回调
+     */
+    onRulesLoaded() {
+        console.log('[ResultRenderer] 规则文件加载完成，重新渲染页面');
+        // 如果有当前结果，重新渲染以应用文本替换
+        if (this.currentResult) {
+            // 重新渲染摘要部分
+            this.renderSummary(this.currentResult);
         }
     }
     
@@ -448,7 +506,7 @@ class ResultRenderer {
                                                 <div class="module-name">${modDetail.title || modName}</div>
                                                 <div class="module-path">${modDetail.path}</div>
                                             </div>
-                                            <div style="color: #666; font-size: 0.9rem;">${typeConfig.displayName}名称: ${item ? (item.name || item.title || '未知') : '未知'}</div>
+                                            <div style="color: #666; font-size: 0.9rem;">${typeConfig.displayName}名称: ${item ? (item.name || item.title || '-') : '-'}</div>
                                         </div>
                                     `;
                                 }).join('')}
@@ -979,15 +1037,15 @@ class ResultRenderer {
                                                             <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}" data-index="${itemIndex}">
                                                                 <div class="card-header">
                                                                     <div class="card-title">
-                                                                        ${sortedKeys.length > 0 ? (() => {
-                                                                            // 尝试从sortedKeys中获取第一个非空值作为标题
-                                                                            for (const key of sortedKeys) {
-                                                                                if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
-                                                                                    return item[key];
-                                                                                }
+                                                                        ${(() => {
+                                                                            if (item.name !== undefined && item.name !== null && item.name !== '') {
+                                                                                return item.name;
+                                                                            } else if (item.title !== undefined && item.title !== null && item.title !== '') {
+                                                                                return item.title;
+                                                                            } else {
+                                                                                return '-';
                                                                             }
-                                                                            return '-';
-                                                                        })() : '-'}
+                                                                        })()}
                                                                     </div>
                                                                     <div class="card-status">
                                                                         <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
@@ -1070,7 +1128,7 @@ class ResultRenderer {
                                                             <button class="page-btn" data-action="prev" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
                                                                 上一页
                                                             </button>
-                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px;">第 <span class="current-page">1</span> 页</span>
+                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px; display: flex; align-items: center; gap: 5px;">第 <input type="number" class="current-page-input" value="1" min="1" style="width: 50px; padding: 6px 4px; border: 2px solid #667eea; border-radius: 4px; text-align: center; font-size: 1rem; font-weight: 600; color: #667eea; outline: none; transition: all 0.3s ease; box-sizing: border-box;"> 页</span>
                                                             <button class="page-btn" data-action="next" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
                                                                 下一页
                                                             </button>
@@ -1182,7 +1240,7 @@ class ResultRenderer {
                                                             <button class="page-btn" data-action="prev" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
                                                                 上一页
                                                             </button>
-                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px;">第 <span class="current-page">1</span> 页</span>
+                                                            <span style="font-size: 1rem; font-weight: 600; color: #667eea; padding: 0 10px; display: flex; align-items: center; gap: 5px;">第 <input type="number" class="current-page-input" value="1" min="1" style="width: 50px; padding: 6px 4px; border: 2px solid #667eea; border-radius: 4px; text-align: center; font-size: 1rem; font-weight: 600; color: #667eea; outline: none; transition: all 0.3s ease; box-sizing: border-box;"> 页</span>
                                                             <button class="page-btn" data-action="next" style="padding: 8px 16px; border: 2px solid #667eea; border-radius: 6px; background: white; color: #667eea; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
                                                                 下一页
                                                             </button>
@@ -1722,7 +1780,10 @@ class ResultRenderer {
             
             // 更新当前页码
             container.dataset.currentPage = currentPage;
-            container.querySelector('.current-page').textContent = currentPage;
+            const currentPageInput = container.querySelector('.current-page-input');
+            if (currentPageInput) {
+                currentPageInput.value = currentPage;
+            }
             
             // 计算数据范围
             const startIndex = (currentPage - 1) * pageSize;
@@ -1765,11 +1826,14 @@ class ResultRenderer {
                         // 清空当前容器内容
                         contentContainer.innerHTML = '';
                         
+                        // 使用getKeyNameByType方法获取keyName
+                        const keyName = this.getKeyNameByType(type);
+                        const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
+                        
                         // 检查当前是哪种布局
                         if (contentContainer.classList.contains('vertical-table-container')) {
                             // 竖列式布局
                             const tableLayout = configManager.get().tableLayout || 'vertical';
-                            const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
                             const sortedKeys = [];
                             
                             if (idTypeKeyDef) {
@@ -1799,14 +1863,15 @@ class ResultRenderer {
                                 <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}" data-index="${startIndex + itemIndex}">
                                     <div class="card-header">
                                         <div class="card-title">
-                                            ${sortedKeys.length > 0 ? (() => {
-                                                for (const key of sortedKeys) {
-                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
-                                                        return item[key];
-                                                    }
+                                            ${(() => {
+                                                if (item.name !== undefined && item.name !== null && item.name !== '') {
+                                                    return item.name;
+                                                } else if (item.title !== undefined && item.title !== null && item.title !== '') {
+                                                    return item.title;
+                                                } else {
+                                                    return '-';
                                                 }
-                                                return '-';
-                                            })() : '-'}
+                                            })()}
                                         </div>
                                         <div class="card-status">
                                             <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
@@ -1865,7 +1930,7 @@ class ResultRenderer {
                         } else if (contentContainer.tagName === 'TBODY') {
                             // 横列式布局
                             const tableLayout = configManager.get().tableLayout || 'horizontal';
-                            const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                            const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
                             const sortedKeys = [];
                             
                             if (idTypeKeyDef) {
@@ -1974,6 +2039,299 @@ class ResultRenderer {
                 // 保存事件处理函数引用，以便后续移除
                 button._pageClickHandler = handlePageClick;
             });
+            
+            // 添加页码输入框的回车事件监听
+            const currentPageInput = container.querySelector('.current-page-input');
+            if (currentPageInput) {
+                // 检查是否已经绑定过事件
+                if (currentPageInput._enterHandler) {
+                    // 已经绑定过，不再重复绑定
+                    return;
+                }
+                
+                // 添加聚焦特效
+                currentPageInput.addEventListener('focus', () => {
+                    currentPageInput.style.borderColor = '#667eea';
+                    currentPageInput.style.boxShadow = '0 0 0 3px rgba(102, 126, 234, 0.3)';
+                    currentPageInput.style.backgroundColor = '#fff';
+                });
+                
+                // 添加离焦事件
+                currentPageInput.addEventListener('blur', () => {
+                    currentPageInput.style.borderColor = '#667eea';
+                    currentPageInput.style.boxShadow = 'none';
+                    
+                    // 离焦时恢复到当前实际显示的页面
+                    const currentPage = parseInt(container.dataset.currentPage) || 1;
+                    currentPageInput.value = currentPage;
+                });
+                
+                // 添加回车事件监听器
+                currentPageInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        
+                        const type = container.dataset.type;
+                        const totalItems = parseInt(container.dataset.total);
+                        
+                        // 从配置中重新读取每页数量
+                        const isVerticalLayout = container.querySelector('.vertical-table-container') !== null;
+                        const isHorizontalLayout = container.querySelector('table.horizontal-table') !== null;
+                        
+                        let pageSize;
+                        if (isVerticalLayout) {
+                            pageSize = configManager.get('verticalPageSize') || 50;
+                        } else if (isHorizontalLayout) {
+                            pageSize = configManager.get('horizontalPageSize') || 50;
+                        } else {
+                            pageSize = 50;
+                        }
+                        
+                        // 计算总页数
+                        const totalPages = Math.ceil(totalItems / pageSize);
+                        
+                        // 获取用户输入的页码
+                        let targetPage = parseInt(currentPageInput.value);
+                        
+                        // 验证页码范围
+                        if (isNaN(targetPage) || targetPage < 1) {
+                            targetPage = 1;
+                        } else if (targetPage > totalPages) {
+                            targetPage = totalPages;
+                        }
+                        
+                        // 更新当前页码
+                        container.dataset.currentPage = targetPage;
+                        currentPageInput.value = targetPage;
+                        
+                        // 计算数据范围
+                        const startIndex = (targetPage - 1) * pageSize;
+                        const endIndex = Math.min(startIndex + pageSize, totalItems);
+                        
+                        // 显示加载提示
+                        const loadingIndicator = document.createElement('div');
+                        loadingIndicator.className = 'loading-indicator';
+                        loadingIndicator.style.cssText = 'text-align: center; padding: 10px; color: #666; font-size: 0.9rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255, 0.9); padding: 20px; border-radius: 8px; z-index: 10;';
+                        loadingIndicator.textContent = '加载中...';
+                        container.appendChild(loadingIndicator);
+                        
+                        // 模拟加载延迟
+                        setTimeout(() => {
+                            try {
+                                // 移除加载提示
+                                if (container.contains(loadingIndicator)) {
+                                    container.removeChild(loadingIndicator);
+                                }
+                                
+                                // 从data-items属性中获取完整的数据源
+                                const itemsData = window.resultRenderer.unescapeJSONFromHTML(container.dataset.items);
+                                
+                                // 计算需要加载的数据范围
+                                const pageItems = itemsData.slice(startIndex, endIndex);
+                                
+                                console.log(`跳转到第 ${targetPage} 页数据: ${type}类型，从${startIndex}到${endIndex}`);
+                                
+                                // 获取容器中的内容区域
+                                let contentContainer;
+                                if (container.querySelector('.vertical-table-container')) {
+                                    contentContainer = container.querySelector('.vertical-table-container');
+                                } else if (container.querySelector('table.horizontal-table')) {
+                                    contentContainer = container.querySelector('table.horizontal-table tbody');
+                                }
+                                
+                                if (contentContainer) {
+                                    // 清空当前容器内容
+                                    contentContainer.innerHTML = '';
+                                    
+                                    // 使用getKeyNameByType方法获取keyName
+                                    const keyName = window.resultRenderer.getKeyNameByType(type);
+                                    const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
+                                    
+                                    // 检查当前是哪种布局
+                                    if (contentContainer.classList.contains('vertical-table-container')) {
+                                        // 竖列式布局
+                                        const tableLayout = configManager.get().tableLayout || 'vertical';
+                                        const sortedKeys = [];
+                                        
+                                        if (idTypeKeyDef) {
+                                            Object.keys(idTypeKeyDef).forEach(key => {
+                                                sortedKeys.push(key);
+                                            });
+                                        } else {
+                                            const allKeys = new Set();
+                                            itemsData.forEach(item => {
+                                                if (typeof item === 'object' && item !== null) {
+                                                    Object.keys(item).forEach(key => allKeys.add(key));
+                                                }
+                                            });
+                                            const keysArray = Array.from(allKeys);
+                                            sortedKeys.push(...keysArray);
+                                        }
+                                        
+                                        // 渲染新页的数据
+                                        contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                            const isDuplicate = false;
+                                            
+                                            return `
+                                            <div class="vertical-table-card ${isDuplicate ? 'duplicate' : ''}" data-index="${startIndex + itemIndex}">
+                                                <div class="card-header">
+                                                    <div class="card-title">
+                                                        ${(() => {
+                                                            if (item.name !== undefined && item.name !== null && item.name !== '') {
+                                                                return item.name;
+                                                            } else if (item.title !== undefined && item.title !== null && item.title !== '') {
+                                                                return item.title;
+                                                            } else {
+                                                                return '-';
+                                                            }
+                                                        })()}
+                                                    </div>
+                                                    <div class="card-status">
+                                                        <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                            ${isDuplicate ? '重复' : '唯一'}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="vertical-table-rows">
+                                                        ${sortedKeys.map((key, index) => {
+                                                            let value = item[key];
+                                                            const originalValue = value;
+                                                            let rule = null;
+                                                            
+                                                            if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                rule = idTypeKeyDef[key].rule;
+                                                            }
+                                                            
+                                                            let displayValue = value;
+                                                            if (rule) {
+                                                                if (typeof value === 'object' && value !== null) {
+                                                                    try {
+                                                                        const jsonString = JSON.stringify(value);
+                                                                        displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                    } catch (e) {
+                                                                    }
+                                                                } else {
+                                                                    displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                }
+                                                            }
+                                                            
+                                                            let attributeName = key;
+                                                            if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
+                                                                attributeName = idTypeKeyDef[key].name;
+                                                            } else {
+                                                                attributeName = configManager.getAttributeCN(type, key);
+                                                            }
+                                                            
+                                                            let formattedValue;
+                                                            if (displayValue === undefined || displayValue === null) {
+                                                                formattedValue = '-';
+                                                            } else if (typeof displayValue === 'object') {
+                                                                formattedValue = JSON.stringify(displayValue, null, 2);
+                                                            } else {
+                                                                formattedValue = displayValue;
+                                                            }
+                                                            
+                                                            return `
+                                                            <div class="vertical-table-row">
+                                                                <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                    <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
+                                                                </div>
+                                                            </div>
+                                                            `;
+                                                        }).join('')}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            `;
+                                        }).join('');
+                                    } else {
+                                        // 横列式布局
+                                        const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
+                                        const sortedKeys = [];
+                                        
+                                        if (idTypeKeyDef) {
+                                            Object.keys(idTypeKeyDef).forEach(key => {
+                                                sortedKeys.push(key);
+                                            });
+                                        } else {
+                                            const allKeys = new Set();
+                                            itemsData.forEach(item => {
+                                                if (typeof item === 'object' && item !== null) {
+                                                    Object.keys(item).forEach(key => allKeys.add(key));
+                                                }
+                                            });
+                                            const keysArray = Array.from(allKeys);
+                                            sortedKeys.push(...keysArray);
+                                        }
+                                        
+                                        // 渲染新页的数据
+                                        contentContainer.innerHTML = pageItems.map((item, itemIndex) => {
+                                            const isDuplicate = false;
+                                            
+                                            return `
+                                            <tr style="${isDuplicate ? 'background: var(--danger-light);' : ''};" data-index="${startIndex + itemIndex}">
+                                                ${sortedKeys.map(key => {
+                                                    let value = item[key];
+                                                    const originalValue = value;
+                                                    let rule = null;
+                                                    
+                                                    if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                        rule = idTypeKeyDef[key].rule;
+                                                    }
+                                                    
+                                                    let displayValue = value;
+                                                    if (rule) {
+                                                        if (typeof value === 'object' && value !== null) {
+                                                            try {
+                                                                const jsonString = JSON.stringify(value);
+                                                                displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                            } catch (e) {
+                                                            }
+                                                        } else {
+                                                            displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                        }
+                                                    }
+                                                    
+                                                    let formattedValue;
+                                                    if (displayValue === undefined || displayValue === null) {
+                                                        formattedValue = '-';
+                                                    } else if (typeof displayValue === 'object') {
+                                                        formattedValue = JSON.stringify(displayValue);
+                                                    } else {
+                                                        formattedValue = displayValue;
+                                                    }
+                                                    
+                                                    return `
+                                                    <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                        ${formattedValue}
+                                                    </td>
+                                                    `;
+                                                }).join('')}
+                                                <td style="padding: 12px; border-bottom: 1px solid #eee;">
+                                                    <span class="status-badge ${isDuplicate ? 'duplicate' : 'unique'}">
+                                                        ${isDuplicate ? '重复' : '唯一'}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            `;
+                                        }).join('');
+                                    }
+                                }
+                            } catch (error) {
+                                console.error('加载数据时出错:', error);
+                                if (container.contains(loadingIndicator)) {
+                                    container.removeChild(loadingIndicator);
+                                }
+                            }
+                        }, 500);
+                    }
+                });
+                
+                // 保存事件处理函数引用，以便后续移除
+                currentPageInput._enterHandler = true;
+            }
         });
     }
     
@@ -2076,14 +2434,15 @@ class ResultRenderer {
                                 <div class="vertical-table-card" data-index="${itemIndex}">
                                     <div class="card-header">
                                         <div class="card-title">
-                                            ${sortedKeys.length > 0 ? (() => {
-                                                for (const key of sortedKeys) {
-                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
-                                                        return item[key];
-                                                    }
+                                            ${(() => {
+                                                if (item.name !== undefined && item.name !== null && item.name !== '') {
+                                                    return item.name;
+                                                } else if (item.title !== undefined && item.title !== null && item.title !== '') {
+                                                    return item.title;
+                                                } else {
+                                                    return '-';
                                                 }
-                                                return '-';
-                                            })() : '-'}
+                                            })()}
                                         </div>
                                         <div class="card-status">
                                             <span class="status-badge unique">唯一</span>
@@ -2201,9 +2560,9 @@ class ResultRenderer {
                         
                         // 重置当前页码
                         virtualContainer.dataset.currentPage = 1;
-                        const currentPageElement = virtualContainer.querySelector('.current-page');
-                        if (currentPageElement) {
-                            currentPageElement.textContent = 1;
+                        const currentPageInput = virtualContainer.querySelector('.current-page-input');
+                        if (currentPageInput) {
+                            currentPageInput.value = 1;
                         }
                     }
                     
@@ -2222,7 +2581,10 @@ class ResultRenderer {
                     
                     // 检查当前是哪种布局
                     const tableLayout = configManager.get().tableLayout || 'vertical';
-                    const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[`${type.charAt(0).toUpperCase() + type.slice(1)}Key`];
+                    
+                    // 使用getKeyNameByType方法获取keyName
+                    const keyName = this.getKeyNameByType(type);
+                    const idTypeKeyDef = configManager.idTypeKeys && configManager.idTypeKeys[keyName];
                     const sortedKeys = [];
                     
                     if (idTypeKeyDef) {
@@ -2264,14 +2626,15 @@ class ResultRenderer {
                                 <div class="vertical-table-card" data-index="${itemIndex}">
                                     <div class="card-header">
                                         <div class="card-title">
-                                            ${sortedKeys.length > 0 ? (() => {
-                                                for (const key of sortedKeys) {
-                                                    if (item[key] !== undefined && item[key] !== null && item[key] !== '') {
-                                                        return item[key];
-                                                    }
+                                            ${(() => {
+                                                if (item.name !== undefined && item.name !== null && item.name !== '') {
+                                                    return item.name;
+                                                } else if (item.title !== undefined && item.title !== null && item.title !== '') {
+                                                    return item.title;
+                                                } else {
+                                                    return '-';
                                                 }
-                                                return '-';
-                                            })() : '-'}
+                                            })()}
                                         </div>
                                         <div class="card-status">
                                             <span class="status-badge unique">唯一</span>

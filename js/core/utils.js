@@ -20,7 +20,7 @@ class Utils {
      * @returns {string} 事件标题
      */
     static getEventTitle(data) {
-        return data.title || data.name || '未知事件';
+        return data.title || data.name || '-';
     }
     
     /**
