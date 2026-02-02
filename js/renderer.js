@@ -1643,15 +1643,28 @@ class ResultRenderer {
             if (typeConfig.rule && typeConfig.desc) {
                 // 检查规则是否匹配
                 const ruleArray = typeConfig.rule;
-                if (ruleArray.length <= values.length) {
-                    // 检查前几个数字是否匹配
-                    const match = ruleArray.slice(0, 2).every((ruleValue, index) => {
+                
+                // 首先检查规则长度是否完全匹配
+                if (ruleArray.length !== values.length) {
+                    continue; // 跳过长度不匹配的规则
+                }
+                
+                // 检查所有数字是否匹配
+                const match = ruleArray.every((ruleValue, index) => {
+                    // 对于数字类型的规则值，直接比较
+                    if (typeof ruleValue === 'number') {
                         return ruleValue === values[index];
-                    });
-                    
-                    if (match) {
-                        // 生成替换文本
-                        let desc = typeConfig.desc;
+                    }
+                    // 对于字符串类型的规则值（如evtId1, value等），直接比较
+                    else if (typeof ruleValue === 'string') {
+                        return ruleValue === values[index];
+                    }
+                    return false;
+                });
+                
+                if (match) {
+                    // 生成替换文本
+                    let desc = typeConfig.desc;
                         
                         // 替换{direction}（如果有）
                         if (desc.includes('{direction}')) {
