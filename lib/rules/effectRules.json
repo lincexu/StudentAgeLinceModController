@@ -171,6 +171,15 @@
                     "actionId"
                 ],
                 "desc": "失去行动{actionId}"
+            },
+            "actionAddRound": {
+                "rule": [
+                    40,
+                    10,
+                    "actionId",
+                    "value"
+                ],
+                "desc": "增加行动{actionId},持续{value}回合"
             }
         }
     },

@@ -147,7 +147,7 @@ class ResultRenderer {
      */
     async loadRuleFile(ruleName) {
         try {
-            const response = await fetch(`lib/rules/${ruleName.toLowerCase()}.json`);
+            const response = await fetch(`lib/rules/${ruleName}.json`);
             if (response.ok) {
                 return await response.json();
             }
@@ -230,7 +230,8 @@ class ResultRenderer {
             if (rowLabel || tableHeader) {
                 const desc = element.getAttribute('data-desc');
                 if (desc) {
-                    tooltipTitle = desc;
+                    // 将换行符转换为<br>标签，以便在HTML中正确显示
+                    tooltipTitle = desc.replace(/\n/g, '<br>');
                     tooltipContent = '属性描述';
                 }
             } else if (rowValue || tableCell) {
@@ -1086,8 +1087,14 @@ class ResultRenderer {
                                                                              
                                                                             // 获取属性的中文名称
                                                                             let attributeName = key;
-                                                                            if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].name) {
-                                                                                attributeName = idTypeKeyDef[key].name;
+                                                                            let labelRule = '';
+                                                                            if (idTypeKeyDef && idTypeKeyDef[key]) {
+                                                                                if (idTypeKeyDef[key].name) {
+                                                                                    attributeName = idTypeKeyDef[key].name;
+                                                                                }
+                                                                                if (idTypeKeyDef[key].rule) {
+                                                                                    labelRule = idTypeKeyDef[key].rule;
+                                                                                }
                                                                             } else {
                                                                                 // 尝试使用configManager.getAttributeCN
                                                                                 attributeName = configManager.getAttributeCN(type, key);
@@ -1103,10 +1110,24 @@ class ResultRenderer {
                                                                             } else {
                                                                                 formattedValue = displayValue;
                                                                             }
+                                                                            
+                                                                            // 解析<sprite=id>标签为表情
+                                                                            if (window.spriteManager && typeof formattedValue === 'string') {
+                                                                                formattedValue = window.spriteManager.parseText(formattedValue);
+                                                                            }
+                                                                            
+                                                                            // 检查是否支持跳转到wiki（rule以Id结尾且对应类型在wiki中）
+                                                                            let wikiLink = '';
+                                                                            if (labelRule && labelRule.endsWith('Id') && configManager.idTypelib && configManager.idTypelib.allType) {
+                                                                                const wikiType = configManager.idTypelib.allType[labelRule];
+                                                                                if (wikiType && wikiType.wiki === true) {
+                                                                                    wikiLink = ` onclick="window.open('wiki.html#${labelRule}', '_blank')" style="cursor: pointer; color: var(--primary-color);" title="点击查看${wikiType.name}Wiki"`;
+                                                                                }
+                                                                            }
                                                                              
                                                                             return `
                                                                             <div class="vertical-table-row">
-                                                                                <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
+                                                                                <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}"${wikiLink}>${attributeName}:</div>
                                                                                 <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
                                                                                     <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
                                                                                 </div>
@@ -1151,6 +1172,8 @@ class ResultRenderer {
                                                                         // 获取属性的中文名称
                                                                         let attributeName = key;
                                                                         let attributeDesc = '';
+                                                                        let isRequired = false;
+                                                                        let ruleValue = '';
                                                                         if (idTypeKeyDef && idTypeKeyDef[key]) {
                                                                             if (idTypeKeyDef[key].name) {
                                                                                 attributeName = idTypeKeyDef[key].name;
@@ -1158,12 +1181,38 @@ class ResultRenderer {
                                                                             if (idTypeKeyDef[key].desc) {
                                                                                 attributeDesc = idTypeKeyDef[key].desc;
                                                                             }
+                                                                            // 检查是否为必填项
+                                                                            if (idTypeKeyDef[key].status === 'required') {
+                                                                                isRequired = true;
+                                                                            }
+                                                                            // 获取rule属性
+                                                                            if (idTypeKeyDef[key].rule) {
+                                                                                ruleValue = idTypeKeyDef[key].rule;
+                                                                            }
                                                                         } else {
                                                                             // 尝试使用configManager.getAttributeCN
                                                                             attributeName = configManager.getAttributeCN(type, key);
                                                                         }
+                                                                        // 检查是否为隐藏项
+                                                                        let isHidden = false;
+                                                                        if (idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].status === 'hide') {
+                                                                            isHidden = true;
+                                                                        }
+                                                                        // 必填项添加星号标记，隐藏项添加锁标记
+                                                                        const requiredMark = isRequired ? '<span style="margin-left: 4px;">⭐</span>' : '';
+                                                                        const hiddenMark = isHidden ? '<span style="margin-left: 4px; opacity: 0.7;">🔓</span>' : '';
+                                                                        
+                                                                        // 检查是否支持跳转到wiki（rule以Id结尾且对应类型在wiki中）
+                                                                        let wikiLink = '';
+                                                                        if (ruleValue && ruleValue.endsWith('Id') && configManager.idTypelib && configManager.idTypelib.allType) {
+                                                                            const wikiType = configManager.idTypelib.allType[ruleValue];
+                                                                            if (wikiType && wikiType.wiki === true) {
+                                                                                wikiLink = ` onclick="window.open('wiki.html#${ruleValue}', '_blank')" style="cursor: pointer;" title="点击查看${wikiType.name}Wiki"`;
+                                                                            }
+                                                                        }
+                                                                        
                                                                         return `
-                                                                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" data-desc="${attributeDesc}">${attributeName}</th>
+                                                                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap; min-width: 100px;" data-desc="${attributeDesc}"${wikiLink}>${attributeName}${requiredMark}${hiddenMark}</th>
                                                                         `;
                                                                     }).join('')}
                                                                     <th style="padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: bold; white-space: nowrap;">状态</th>
@@ -1212,6 +1261,11 @@ class ResultRenderer {
                                                                                 formattedValue = JSON.stringify(displayValue);
                                                                             } else {
                                                                                 formattedValue = displayValue;
+                                                                            }
+                                                                            
+                                                                            // 解析<sprite=id>标签为表情
+                                                                            if (window.spriteManager && typeof formattedValue === 'string') {
+                                                                                formattedValue = window.spriteManager.parseText(formattedValue);
                                                                             }
                                                                              
                                                                             return `
@@ -1556,6 +1610,9 @@ class ResultRenderer {
                     const name = this.getNameByIdFromRule(ruleKey, value);
                     if (name) {
                         desc = desc.replace(`{${ruleKey}}`, name);
+                    } else {
+                        // 如果无法获取名称，使用原始值替换
+                        desc = desc.replace(`{${ruleKey}}`, value);
                     }
                 } else {
                     // 直接替换占位符
@@ -1644,69 +1701,70 @@ class ResultRenderer {
                 // 检查规则是否匹配
                 const ruleArray = typeConfig.rule;
                 
-                // 首先检查规则长度是否完全匹配
+                // 规则1：长度必须完全匹配
                 if (ruleArray.length !== values.length) {
-                    continue; // 跳过长度不匹配的规则
+                    continue;
                 }
                 
-                // 检查所有数字是否匹配
-                const match = ruleArray.every((ruleValue, index) => {
-                    // 对于数字类型的规则值，直接比较
-                    if (typeof ruleValue === 'number') {
-                        return ruleValue === values[index];
+                // 规则2：检查所有固定数字是否匹配
+                let match = true;
+                for (let i = 0; i < ruleArray.length; i++) {
+                    const ruleValue = ruleArray[i];
+                    const value = values[i];
+                    
+                    // 如果规则值是字符串（占位符），跳过检查
+                    if (typeof ruleValue === 'string') {
+                        continue;
                     }
-                    // 对于字符串类型的规则值（如evtId1, value等），直接比较
-                    else if (typeof ruleValue === 'string') {
-                        return ruleValue === values[index];
+                    
+                    // 如果规则值是数字，必须完全匹配
+                    if (ruleValue !== value) {
+                        match = false;
+                        break;
                     }
-                    return false;
-                });
+                }
                 
                 if (match) {
                     // 生成替换文本
                     let desc = typeConfig.desc;
-                        
-                        // 替换{direction}（如果有）
-                        if (desc.includes('{direction}')) {
-                            // 找到value字段的位置
-                            const valueIndex = ruleArray.indexOf('value');
-                            if (valueIndex !== -1 && valueIndex < values.length) {
-                                const value = values[valueIndex];
-                                desc = desc.replace('{direction}', value >= 0 ? '+' : '-');
+                    
+                    // 替换{direction}（如果有）
+                    if (desc.includes('{direction}')) {
+                        // 找到value字段的位置
+                        const valueIndex = ruleArray.indexOf('value');
+                        if (valueIndex !== -1 && valueIndex < values.length) {
+                            const value = values[valueIndex];
+                            desc = desc.replace('{direction}', value >= 0 ? '+' : '-');
+                        }
+                    }
+                    
+                    // 替换其他字段
+                    ruleArray.forEach((ruleValue, index) => {
+                        if (typeof ruleValue === 'string' && index < values.length) {
+                            const value = values[index];
+                            
+                            // 处理value相关字段（value, value1, value2等）- 直接替换为数值
+                            if (ruleValue.startsWith('value')) {
+                                desc = desc.replace(`{${ruleValue}}`, value);
+                            }
+                            // 处理ID类型的字段（以Id结尾，可能带数字如evtId1, optionId2, personId1等）
+                            else if (ruleValue.endsWith('Id') || /Id\d+$/.test(ruleValue)) {
+                                // 提取基础ID类型（去掉末尾的数字）
+                                // 例如：evtId1 -> EvtId, optionId2 -> OptionId, personId1 -> PersonId
+                                const baseIdType = ruleValue.replace(/\d+$/, '');
+                                // 确保首字母大写
+                                const normalizedIdType = baseIdType.charAt(0).toUpperCase() + baseIdType.slice(1);
+                                
+                                // 尝试从数据库中获取名称
+                                const name = this.getNameByIdFromRule(normalizedIdType, value);
+                                if (name) {
+                                    desc = desc.replace(`{${ruleValue}}`, name);
+                                }
                             }
                         }
-                        
-                        // 替换其他字段
-                        ruleArray.forEach((ruleValue, index) => {
-                            if (typeof ruleValue === 'string' && index < values.length) {
-                                const value = values[index];
-                                
-                                // 处理ID类型的字段（以Id结尾）
-                                if (ruleValue.endsWith('Id')) {
-                                    // 尝试从数据库中获取名称
-                                    const name = this.getNameByIdFromRule(ruleValue, value);
-                                    if (name) {
-                                        desc = desc.replace(`{${ruleValue}}`, name);
-                                    }
-                                }
-                                // 处理value相关字段（value, value1, value2等）
-                                else if (ruleValue.startsWith('value')) {
-                                    // 直接替换{valueX}占位符
-                                    desc = desc.replace(`{${ruleValue}}`, value);
-                                }
-                                // 处理evtId相关字段（evtId1, evtId2等）
-                                else if (ruleValue.startsWith('evtId')) {
-                                    // 尝试从数据库中获取事件名称
-                                    const name = this.getNameByIdFromRule('EvtId', value);
-                                    if (name) {
-                                        desc = desc.replace(`{${ruleValue}}`, name);
-                                    }
-                                }
-                            }
-                        });
-                        
-                        return desc;
-                    }
+                    });
+                    
+                    return desc;
                 }
             }
         }
@@ -1716,7 +1774,7 @@ class ResultRenderer {
     
     /**
      * 根据规则中的ID类型和ID值获取名称
-     * @param {string} idType ID类型
+     * @param {string} idType ID类型（如 EvtId, OptionId, ItemId, PersonId 等）
      * @param {number} idValue ID值
      * @returns {string} 名称
      */
@@ -1726,18 +1784,42 @@ class ResultRenderer {
             return null;
         }
         
-        // 提取类型名称（去掉Id后缀）
-        const typeName = idType.replace('Id', '');
-        // 转换为snake_case格式，与idDatabase中的类型名称一致
-        const snakeCaseTypeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+        // ID类型映射表 - 将常见的ID类型映射到数据库中的类型名称
+        const idTypeMapping = {
+            'EvtId': 'evt',
+            'EventId': 'evt',
+            'OptionId': 'option',
+            'ItemId': 'item',
+            'PersonId': 'person',
+            'NpcId': 'person',
+            'TraitId': 'trait',
+            'ShopId': 'shop',
+            'IntentId': 'intent',
+            'ActionId': 'action',
+            'BuffId': 'buff',
+            'KZoneContentId': 'k_zone_content',
+            'KZoneCommentId': 'k_zone_comment',
+            'KZoneAvatarId': 'k_zone_avatar',
+            'KZoneProfileId': 'k_zone_profile'
+        };
+        
+        // 首先尝试从映射表中获取类型名称
+        let typeName = idTypeMapping[idType];
+        
+        // 如果映射表中没有，则动态提取类型名称（去掉Id后缀）
+        if (!typeName) {
+            typeName = idType.replace('Id', '');
+            // 转换为snake_case格式
+            typeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+        }
         
         // 检查该类型是否存在于数据库中
-        if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[snakeCaseTypeName]) {
+        if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[typeName]) {
             return null;
         }
         
         // 从数据库中获取名称
-        return window.idDatabase.getNameById(snakeCaseTypeName, idValue);
+        return window.idDatabase.getNameById(typeName, idValue);
     }
     
     /**
@@ -2006,7 +2088,12 @@ class ResultRenderer {
                                             formattedValue = displayValue;
                                         }
                                         
-                                        return `
+                                        // 解析<sprite=id>标签为表情
+                                         if (window.spriteManager && typeof formattedValue === 'string') {
+                                             formattedValue = window.spriteManager.parseText(formattedValue);
+                                         }
+                                         
+                                         return `
                                         <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
                                             ${formattedValue}
                                         </td>
@@ -2245,7 +2332,12 @@ class ResultRenderer {
                                                                 formattedValue = displayValue;
                                                             }
                                                             
-                                                            return `
+                                                            // 解析<sprite=id>标签为表情
+                                                             if (window.spriteManager && typeof formattedValue === 'string') {
+                                                                 formattedValue = window.spriteManager.parseText(formattedValue);
+                                                             }
+                                                             
+                                                             return `
                                                             <div class="vertical-table-row">
                                                                 <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
                                                                 <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
@@ -2316,7 +2408,12 @@ class ResultRenderer {
                                                         formattedValue = displayValue;
                                                     }
                                                     
-                                                    return `
+                                                    // 解析<sprite=id>标签为表情
+                                                     if (window.spriteManager && typeof formattedValue === 'string') {
+                                                         formattedValue = window.spriteManager.parseText(formattedValue);
+                                                     }
+                                                     
+                                                     return `
                                                     <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
                                                         ${formattedValue}
                                                     </td>
@@ -2501,7 +2598,12 @@ class ResultRenderer {
                                                     formattedValue = displayValue;
                                                 }
                                                 
-                                                return `
+                                                // 解析<sprite=id>标签为表情
+                                                 if (window.spriteManager && typeof formattedValue === 'string') {
+                                                     formattedValue = window.spriteManager.parseText(formattedValue);
+                                                 }
+                                                 
+                                                 return `
                                                 <div class="vertical-table-row">
                                                     <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
                                                     <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
@@ -2551,7 +2653,12 @@ class ResultRenderer {
                                             formattedValue = displayValue;
                                         }
                                         
-                                        return `
+                                        // 解析<sprite=id>标签为表情
+                                         if (window.spriteManager && typeof formattedValue === 'string') {
+                                             formattedValue = window.spriteManager.parseText(formattedValue);
+                                         }
+                                         
+                                         return `
                                         <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
                                             ${formattedValue}
                                         </td>
@@ -2894,6 +3001,18 @@ class ResultRenderer {
             'rgba(253, 103, 200, 0.8)'
         ];
         
+        // 确保颜色数组足够长，如果不够则循环使用
+        const getColor = (index) => {
+            return colors[index % colors.length];
+        };
+        
+        const getBorderColor = (color) => {
+            if (typeof color !== 'string') {
+                return 'rgba(102, 126, 234, 1)';
+            }
+            return color.replace('0.8', '1');
+        };
+        
         // 渲染统计图表（柱状图）
         const statsChartCanvas = document.getElementById('statsChart');
         if (statsChartCanvas) {
@@ -2909,8 +3028,8 @@ class ResultRenderer {
                     datasets: [{
                         label: 'ID总数',
                         data: totalData,
-                        backgroundColor: colors,
-                        borderColor: colors.map(color => color.replace('0.8', '1')),
+                        backgroundColor: labels.map((_, index) => getColor(index)),
+                        borderColor: labels.map((_, index) => getBorderColor(getColor(index))),
                         borderWidth: 1
                     }]
                 },
@@ -2963,7 +3082,7 @@ class ResultRenderer {
                 if (count > 0) {
                     filteredLabels.push(labels[index]);
                     filteredDuplicateData.push(count);
-                    filteredColors.push(colors[index]);
+                    filteredColors.push(getColor(index));
                 }
             });
             
@@ -2980,7 +3099,7 @@ class ResultRenderer {
                         label: '重复ID数量',
                         data: filteredDuplicateData.length > 0 ? filteredDuplicateData : [1],
                         backgroundColor: filteredColors.length > 0 ? filteredColors : ['rgba(102, 126, 234, 0.8)'],
-                        borderColor: filteredColors.length > 0 ? filteredColors.map(color => color.replace('0.8', '1')) : ['rgba(102, 126, 234, 1)'],
+                        borderColor: filteredColors.length > 0 ? filteredColors.map(color => getBorderColor(color)) : ['rgba(102, 126, 234, 1)'],
                         borderWidth: 1
                     }]
                 },

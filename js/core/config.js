@@ -101,10 +101,11 @@ class ConfigManager {
      */
     async loadIdTypeKeys() {
         try {
-            const response = await fetch('lib/idTypeKeys.json');
+            const response = await fetch('lib/idTypeKeys.json', {
+                cache: 'no-cache'
+            });
             if (response.ok) {
                 this.idTypeKeys = await response.json();
-    
                 return true;
             } else {
                 console.warn('[Config] 无法加载idTypeKeys.json，使用默认属性定义');
@@ -123,10 +124,11 @@ class ConfigManager {
      */
     async loadIdTypelib() {
         try {
-            const response = await fetch('lib/idTypelib.json');
+            const response = await fetch('lib/idTypelib.json', {
+                cache: 'no-cache'
+            });
             if (response.ok) {
                 this.idTypelib = await response.json();
-    
                 return true;
             } else {
                 console.warn('[Config] 无法加载idTypelib.json，使用默认配置');
@@ -212,25 +214,20 @@ class ConfigManager {
             
             // 1. 尝试从配置文件加载最新配置
             try {
-
                 const response = await fetch('config.jsonc', {
                     cache: 'no-cache'
                 });
                 if (response.ok) {
                     const jsoncText = await response.text();
                     fileConfig = this.parseJSONC(jsoncText);
-
-                } else {
-
                 }
             } catch (error) {
-
+                console.error('[ConfigManager] config.jsonc加载出错:', error);
             }
             
             // 2. 从localStorage加载用户配置
             const savedConfig = localStorage.getItem('appConfig');
             if (savedConfig) {
-
                 config = JSON.parse(savedConfig);
             }
             
@@ -542,3 +539,8 @@ class ConfigManager {
 
 // 导出单例实例
 const configManager = new ConfigManager();
+
+// 暴露为全局变量，以便其他模块使用
+if (typeof window !== 'undefined') {
+    window.configManager = configManager;
+}

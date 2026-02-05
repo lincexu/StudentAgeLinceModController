@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - 学生时代模组文档</title>
+    <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+    <div class="wiki-container">
+        <!-- 侧边栏导航 -->
+        <aside class="wiki-sidebar">
+            <div class="sidebar-header">
+                <h1>Wiki文档</h1>
+                <p class="subtitle">模组数据参考手册</p>
+            </div>
+            <nav class="wiki-nav" id="wikiNav">
+                <!-- 动态生成导航链接 -->
+                <div class="loading">加载中...</div>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="wiki-main">
+            <!-- 顶部工具栏 -->
+            <header class="wiki-header">
+                <div class="header-left">
+                    <h2 id="currentTypeTitle">请选择数据类型</h2>
+                    <span class="record-count" id="recordCount"></span>
+                </div>
+                <div class="header-right">
+                    <!-- 搜索框 -->
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="搜索..." autocomplete="off">
+                        <button id="searchBtn">🔍</button>
+                    </div>
+                    <!-- 每页显示条数 -->
+                    <div class="page-size-selector">
+                        <label>每页显示:</label>
+                        <select id="pageSizeSelect">
+                            <option value="20">20</option>
+                            <option value="50" selected>50</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 表格容器 -->
+            <div class="table-container">
+                <div class="table-wrapper">
+                    <table class="wiki-table" id="wikiTable">
+                        <thead id="tableHead">
+                            <!-- 动态生成表头 -->
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- 动态生成表格内容 -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 空数据提示 -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">📭</div>
+                    <p>暂无数据</p>
+                </div>
+
+                <!-- 加载状态 -->
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>加载中...</p>
+                </div>
+            </div>
+
+            <!-- 分页控件 -->
+            <div class="pagination" id="pagination">
+                <div class="pagination-info">
+                    <span id="paginationText">第 1 页，共 1 页</span>
+                    <span class="total-records" id="totalRecords"></span>
+                </div>
+                <div class="pagination-controls">
+                    <button class="page-btn" id="firstPage" title="首页">⏮</button>
+                    <button class="page-btn" id="prevPage" title="上一页">◀</button>
+                    <div class="page-input-group">
+                        <input type="number" id="pageInput" min="1" value="1">
+                        <button id="goPage">跳转</button>
+                    </div>
+                    <button class="page-btn" id="nextPage" title="下一页">▶</button>
+                    <button class="page-btn" id="lastPage" title="末页">⏭</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <!-- 引入脚本 -->
+    <script src="js/core/config.js"></script>
+    <script src="js/core/idDatabase.js"></script>
+    <script src="js/spriteManager.js"></script>
+    <script src="js/wiki.js"></script>
+</body>
+</html>

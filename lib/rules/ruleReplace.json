@@ -1,10 +1,10 @@
 {
     "costReplace": {
         "rule": [
-            "personAttrId",
+            "PersonAttrId",
             "value"
         ],
-        "desc": "消耗{personAttrId}{value}"
+        "desc": "消耗{PersonAttrId}{value}"
     },
     "dataReplace": {
         "rule": [
@@ -12,5 +12,51 @@
             "value2"
         ],
         "desc": "{value1}年{value2}月"
+    },
+    "birthdayReplace": {
+        "rule": [
+            "value1",
+            "value2",
+            "value3"
+        ],
+        "desc": "{value1}年{value2}月{value3}日"
+    },
+    "kZoneCommentReplace": {
+        "rule": [
+            "PersonId",
+            "KZoneCommentId"
+        ],
+        "desc": "{PersonId}的评论【{KZoneCommentId}】"
+    },
+    "autoKZoneCommentReplace": {
+        "rule": [
+            "KZoneCommentId",
+            "value"
+        ],
+        "desc": "评论【{KZoneCommentId}】延时{value}s"
+    },
+    "likeReplace": {
+        "rule": [
+            "PersonId",
+            "value"
+        ],
+        "desc": "{PersonId}点赞延时{value}s"
+    },
+    "classReplace": {
+        "rule": [
+            "value1",
+            "value2",
+            "value3",
+            "value4"
+        ],
+        "desc": "小学{value1}班，初中{value2}班，高中{value3}班，文理分{value4}班"
+    },
+    "initAttrReplace": {
+        "rule": [
+            "value1",
+            "value2",
+            "value3"
+        ],
+        "desc": "<sprite=213><font color='#179FFF'>智力</font>{value1},<sprite=212><font color='orange'>情商</font>{value2},<sprite=219><font color='green'>体魄</font>{value3}"
     }
 }

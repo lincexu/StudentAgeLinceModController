@@ -2,1117 +2,1344 @@
     "ItemKey": {
         "id": {
             "name": "ID",
-            "desc": "物品id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "物品名称",
+            "desc": "必填\n物品名称",
+            "status": "required",
             "rule": "text"
         },
         "icon": {
             "name": "图标",
-            "desc": "建议150×150",
+            "desc": "必填\n建议分辨率：150x150像素且背景透明的png",
+            "status": "required",
             "rule": "path"
         },
         "type": {
             "name": "类型",
-            "desc": "物品类型，影响使用方式",
+            "desc": "必填\n物品类型，影响使用方式",
+            "status": "required",
             "rule": "ItemTypeId"
         },
         "itemTag": {
             "name": "标签",
-            "desc": "物品标签，影响送礼",
+            "desc": "必填\n物品标签，影响送礼的好感获取\n可拥有多个标签，用逗号分隔",
+            "status": "required",
             "rule": "ItemTagId"
         },
         "effect": {
-            "name": "效果",
-            "desc": "触发效果",
+            "name": "持续效果",
+            "desc": "珍视物品、工具的效果",
+            "status": "optional",
             "rule": "effectRules"
         },
         "usingEffect": {
             "name": "使用效果",
-            "desc": "使用物品后的效果",
+            "desc": "消耗品使用后的效果",
+            "status": "optional",
             "rule": "effectRules"
         },
         "value": {
             "name": "价值",
-            "desc": "影响送礼好感度，-1为不可赠送",
+            "desc": "必填\n价值越高，送礼获得的好感越高\n-1表示不可赠送",
+            "status": "required",
             "rule": "number"
         },
         "sell": {
             "name": "售价",
-            "desc": "影响跳蚤市场出售，-1为不可购买",
+            "desc": "必填\n跳蚤市场的售价\n-1表示不可出售",
+            "status": "required",
             "rule": "number"
         },
         "desc": {
             "name": "介绍",
-            "desc": "物品介绍",
+            "desc": "物品的介绍",
+            "status": "optional",
             "rule": "text"
         },
         "talkId": {
             "name": "对话id",
-            "desc": "不予检索，可通过TalkCfg.json手动查询",
+            "desc": "物品生效触发的对话id",
+            "status": "optional",
             "rule": "index"
         },
         "maxcount": {
             "name": "最大数量",
-            "desc": "物品最大数量",
+            "desc": "物品的最大数量",
+            "status": "hide",
             "rule": "number"
         },
         "btn": {
             "name": "按钮",
-            "desc": "使用物品的按钮",
+            "desc": "使用消耗品的描述\n如对于物品【奶茶】可以写【喝】",
+            "status": "hide",
             "rule": "text"
         },
         "clothType": {
             "name": "服饰类型",
             "desc": "物品服饰类型",
+            "status": "hide",
             "rule": "ClothTypeId"
         },
         "precondition": {
             "name": "前置条件",
             "desc": "物品前置条件",
+            "status": "hide",
             "rule": "conditionRules"
         },
         "rarity": {
             "name": "稀有度",
-            "desc": "物品稀有度，未知具体效果，暂定为数值越大越稀有",
+            "desc": "物品稀有度\n？？？存疑：\n购买获得=0\n任务获得=1",
+            "status": "hide",
             "rule": "number"
         },
         "sex": {
             "name": "性别",
-            "desc": "物品性别",
+            "desc": "性别",
+            "status": "hide",
             "rule": "SexId"
         },
         "subType": {
             "name": "子类型",
-            "desc": "物品子类型，官方仅用id=1001零食，id=1002海报，id=0所有，慎重选择其他",
+            "desc": "物品子类型",
+            "status": "hide",
             "rule": "ItemTypeId"
         }
     },
     "EvtKey": {
         "id": {
             "name": "ID",
-            "desc": "事件id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "title": {
             "name": "标题",
-            "desc": "事件标题",
+            "desc": "必填\n事件标题",
+            "status": "required",
             "rule": "text"
         },
         "type": {
             "name": "事件类型",
-            "desc": "事件类型",
+            "desc": "必填\n事件触发的方式",
+            "status": "required",
             "rule": "EvtTypeId"
         },
         "talkId": {
-            "name": "第一句话id",
-            "desc": "不予检索，可通过TalkCfg.json手动查询",
+            "name": "首句对话id",
+            "desc": "该事件首句对话的ID\n10位数字组成，左边7位为事件ID\n建议设置为1XXXXXX001",
+            "status": "optional",
             "rule": "index"
         },
         "rate": {
             "name": "概率",
-            "desc": "事件概率",
+            "desc": "事件发生的概率",
+            "status": "optional",
             "rule": "number"
         },
         "npc": {
-            "name": "对象",
-            "desc": "事件对象",
+            "name": "指定对象",
+            "desc": "事件触发指定的对象\n可能为人也可能为物品，需要根据条件判断\n当前因底层代码仅视为人物ID进行转译\n如果发现转译结果为角色可自行前往物品id查阅",
+            "status": "optional",
             "rule": "PersonId"
         },
         "maxcount": {
-            "name": "最大数量",
-            "desc": "事件最大数量",
+            "name": "可发生次数",
+            "desc": "事件发生的最大次数",
+            "status": "optional",
             "rule": "number"
         },
         "mapId": {
             "name": "发生地点id",
             "desc": "事件发生地点id",
+            "status": "optional",
             "rule": "MapId"
         },
         "effect": {
             "name": "效果",
             "desc": "事件触发效果",
+            "status": "optional",
             "rule": "effectRules"
         },
         "condition": {
-            "name": "触发条件",
-            "desc": "事件触发条件",
+            "name": "前提",
+            "desc": "事件触发的前提条件",
+            "status": "optional",
             "rule": "conditionRules"
         },
         "content": {
             "name": "内容",
-            "desc": "事件内容",
+            "desc": "事件触发时屏幕中心弹出的文本\n如：\n期末考试开始了,希望你能考出好成绩!",
+            "status": "hide",
             "rule": "text"
         },
         "desc": {
             "name": "介绍",
             "desc": "事件介绍",
+            "status": "hide",
             "rule": "text"
         },
         "displayType": {
             "name": "显示类型",
-            "desc": "事件显示类型，1或0目前未知",
+            "desc": "事件显示类型，1或0，目前未知",
+            "status": "hide",
             "rule": "number"
         },
         "maxoptions": {
             "name": "最大选项数",
             "desc": "事件最大选项数",
+            "status": "hide",
             "rule": "number"
         },
         "miniGame": {
             "name": "小游戏",
             "desc": "事件小游戏",
+            "status": "hide",
             "rule": "MinigameId"
         },
         "options": {
             "name": "选项",
-            "desc": "同对话id，暂不支持检索",
-            "rule": "index"
+            "desc": "进入事件的选项\n如：\n期末考试开始了,希望你能考出好成绩!\n【确认】",
+            "status": "hide",
+            "rule": "OptionId"
         },
         "probability": {
             "name": "可能性",
-            "desc": "事件可能性",
+            "desc": "事件可能性，未知",
+            "status": "hide",
             "rule": "number"
         },
         "replace": {
             "name": "替换",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "weight": {
             "name": "权重",
             "desc": "事件权重，未知",
+            "status": "hide",
             "rule": "number"
         }
     },
     "ActionKey": {
         "id": {
             "name": "ID",
-            "desc": "事件id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "事件名称",
+            "desc": "必填\n行动名称",
+            "status": "required",
             "rule": "text"
+        },
+        "cnt": {
+            "name": "次数",
+            "desc": "行动可进行的频率\n大于0：每回合X次\n不填：无限次\n小于0：每X回合一次",
+            "status": "optional",
+            "rule": "number"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "行动触发的效果",
+            "status": "optional",
+            "rule": "effectRules"
+        },
+        "evtId": {
+            "name": "事件ID",
+            "desc": "若填写，则必定触发此事件\n若想触发随机事件，请编辑【行动随机触发事件】",
+            "status": "optional",
+            "rule": "EvtId"
+        },
+        "map": {
+            "name": "发生地点",
+            "desc": "事件发生地点",
+            "status": "optional",
+            "rule": "MapId"
+        },
+        "cost": {
+            "name": "花费",
+            "desc": "填属性，数值\n可以填多个用分号分隔\n例如：\n消耗10点精力：7,10",
+            "status": "optional",
+            "rule": "costReplace"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "事件图标",
+            "status": "optional",
+            "rule": "path"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "行动的类型\n0：普通行动\n3：恋爱行动\n4：兼职行动",
+            "status": "optional",
+            "rule": "ActionTypeId"
+        },
+        "needExp": {
+            "name": "需要经验",
+            "desc": "行动获得累计经验奖励需要的次数",
+            "status": "hide",
+            "rule": "number"
+        },
+        "expReward": {
+            "name": "经验奖励",
+            "desc": "达成行动次数后给与的奖励",
+            "status": "hide",
+            "rule": "effectRules"
         },
         "anime": {
             "name": "动画",
-            "desc": "事件动画",
-            "rule": "AnimationId"
+            "desc": "行动时触发的动画名称",
+            "status": "hide",
+            "rule": "text"
+        },
+        "funcId": {
+            "name": "类别（函数）ID",
+            "desc": "行动大类别ID",
+            "status": "hide",
+            "rule": "FuncId"
+        },
+        "minigameId": {
+            "name": "小游戏ID",
+            "desc": "行动小游戏ID",
+            "status": "hide",
+            "rule": "MinigameId"
+        },
+        "next": {
+            "name": "下一级行动",
+            "desc": "该行动更高一级的行动\n如行动【自习】可升级行动【复习】",
+            "status": "hide",
+            "rule": "actionId"
+        },
+        "unlock": {
+            "name": "解锁",
+            "desc": "行动解锁的条件（仅代表是否可见，不代表是否可交互）",
+            "status": "hide",
+            "rule": "conditionRules"
+        },
+        "interactable": {
+            "name": "可交互",
+            "desc": "可交互（仅代表是否可点击，不代表是否可见）",
+            "status": "hide",
+            "rule": "conditionRules"
+        },
+        "disableTxt": {
+            "name": "可交互描述",
+            "desc": "将可交互条件转化为文本描述（即手动翻译数据供游戏内提示）",
+            "status": "hide",
+            "rule": "text"
         },
         "attrs": {
             "name": "属性",
-            "desc": "事件属性",
+            "desc": "一般为行动效果会改变的属性",
+            "status": "hide",
             "rule": "PersonAttrId"
         },
         "audio": {
             "name": "音频",
             "desc": "事件音频",
+            "status": "hide",
             "rule": "AudioId"
         },
         "beginTime": {
             "name": "开始时间",
-            "desc": "事件开始时间",
+            "desc": "行动出现的时间",
+            "status": "hide",
             "rule": "dataReplace"
-        },
-        "bg": {
-            "name": "背景",
-            "desc": "事件背景",
-            "rule": "BgId"
-        },
-        "cnt": {
-            "name": "计数",
-            "desc": "事件计数",
-            "rule": "number"
-        },
-        "cost": {
-            "name": "消耗",
-            "desc": "事件消耗",
-            "rule": "costReplace"
-        },
-        "disableTxt": {
-            "name": "禁用文本",
-            "desc": "事件禁用文本",
-            "rule": "text"
-        },
-        "effect": {
-            "name": "效果",
-            "desc": "事件效果",
-            "rule": "effectRules"
         },
         "endTime": {
             "name": "结束时间",
-            "desc": "事件结束时间",
-            "rule": "number"
-        },
-        "evtId": {
-            "name": "事件ID",
-            "desc": "事件ID",
-            "rule": "EvtId"
+            "desc": "行动消失的时间",
+            "status": "hide",
+            "rule": "dataReplace"
         },
         "evtType": {
             "name": "事件类型",
-            "desc": "事件类型",
+            "desc": "触发事件的类型",
+            "status": "hide",
             "rule": "EvtTypeId"
         },
-        "expReward": {
-            "name": "经验奖励",
-            "desc": "事件经验奖励",
-            "rule": "number"
-        },
-        "funcId": {
-            "name": "函数ID",
-            "desc": "事件函数ID",
-            "rule": "FuncId"
-        },
-        "icon": {
-            "name": "图标",
-            "desc": "事件图标",
-            "rule": "path"
-        },
-        "interactable": {
-            "name": "可交互",
-            "desc": "事件可交互",
-            "rule": "text"
+        "bg": {
+            "name": "背景",
+            "desc": "行动的背景",
+            "status": "hide",
+            "rule": "BgId"
         },
         "label": {
-            "name": "标签",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "map": {
-            "name": "发生地点",
-            "desc": "事件发生地点",
-            "rule": "MapId"
-        },
-        "minigameId": {
-            "name": "小游戏ID",
-            "desc": "事件小游戏ID",
-            "rule": "MinigameId"
-        },
-        "needExp": {
-            "name": "需要经验",
-            "desc": "事件需要经验",
-            "rule": "number"
-        },
-        "next": {
-            "name": "下一个",
-            "desc": "事件下一个",
-            "rule": "text"
+            "name": "标记",
+            "desc": "当前默认为textId类",
+            "status": "hide",
+            "rule": "TextId"
         },
         "tag": {
             "name": "标签",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "type": {
-            "name": "类型",
-            "desc": "事件类型",
-            "rule": "actionTypeId"
-        },
-        "unlock": {
-            "name": "解锁",
-            "desc": "事件解锁",
-            "rule": "conditionRules"
+            "desc": "行动的二级分类，一般描述行动动作",
+            "status": "hide",
+            "rule": "ActionTypeId"
         }
     },
     "ActionEvtKey": {
         "id": {
             "name": "ID",
-            "desc": "事件id，七位数字组成，1XXXXXX",
+            "desc": "必填\n和行动ID一致，以确保该行动能触发随机事件",
+            "status": "required",
             "rule": "index"
         },
         "evts": {
-            "name": "事件列表",
-            "desc": "事件列表",
+            "name": "触发事件id",
+            "desc": "必填\n该行动能触发的事件id",
+            "status": "required",
             "rule": "EvtId"
         },
         "rate": {
             "name": "概率",
-            "desc": "事件概率",
+            "desc": "必填\n触发的概率",
+            "status": "required",
             "rule": "number"
         }
     },
     "AudioKey": {
         "id": {
             "name": "ID",
-            "desc": "音频id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "音频名称",
-            "rule": "text"
-        },
-        "cond": {
-            "name": "条件",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "disable": {
-            "name": "禁用",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "group": {
-            "name": "组",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "type": {
-            "name": "类型",
-            "desc": "音频类型",
-            "rule": "text"
-        },
-        "uiType": {
-            "name": "UI类型",
-            "desc": "未知",
+            "desc": "必填\n音频名称",
+            "status": "required",
             "rule": "text"
         },
         "url": {
             "name": "路径",
-            "desc": "音频路径",
+            "desc": "必填\n仅支持mp3、wav格式",
+            "status": "required",
             "rule": "path"
         },
         "volumn": {
             "name": "音量",
             "desc": "音频音量",
+            "status": "optional",
             "rule": "number"
+        },
+        "group": {
+            "name": "组别",
+            "desc": "填以下数字，可填多个，用逗号分隔\n0：默认\n2：社交时BGM\n3：春季BGM\n4：夏季BGM\n5：秋季BGM\n6：冬季BGM\n8：空间BGM",
+            "status": "optional",
+            "rule": "AudioGroupId"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "触发条件",
+            "status": "hide",
+            "rule": "conditionRules"
+        },
+        "disable": {
+            "name": "禁用",
+            "desc": "未知\n可能为叠加其他音频时设置音量\n官方常以值为0",
+            "status": "hide",
+            "rule": "text"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "音频类型，未知",
+            "status": "hide",
+            "rule": "text"
+        },
+        "uiType": {
+            "name": "UI类型",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "text"
         }
     },
     "BgKey": {
         "id": {
             "name": "ID",
-            "desc": "背景id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "背景名称",
+            "desc": "必填\n背景名称",
+            "status": "required",
             "rule": "text"
         },
         "url": {
             "name": "Url",
-            "desc": "背景Url",
+            "desc": "必填\n建议分辨率：\n1920x1080或2560x1440",
+            "status": "required",
             "rule": "path"
         },
         "audio": {
             "name": "音频",
-            "desc": "背景音频",
+            "desc": "未知，背景音频",
+            "status": "hide",
             "rule": "AudioId"
         },
         "cloth": {
             "name": "服饰",
             "desc": "未知",
+            "status": "hide",
             "rule": "ClothTypeId"
         },
         "gaozhongCond": {
             "name": "高中条件",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "gaozhongUrl": {
             "name": "高中Url",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         }
     },
     "BookKey": {
         "id": {
             "name": "ID",
-            "desc": "物品id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为3\n例如：3XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "未知",
+            "desc": "必填\n需要手动添加书名号",
+            "status": "required",
             "rule": "text"
         },
-        "capacity": {
-            "name": "页数",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "desc": {
-            "name": "描述",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "effect": {
-            "name": "效果",
-            "desc": "未知",
-            "rule": "effectRules"
+        "type": {
+            "name": "类型",
+            "desc": "必填\n3001：故事\n3002：知识",
+            "status": "required",
+            "rule": "ItemTypeId"
         },
         "icon": {
-            "name": "图标",
-            "desc": "未知",
+            "name": "图片",
+            "desc": "必填\n150x150像素",
+            "status": "required",
             "rule": "path"
         },
         "itemTag": {
             "name": "标签",
-            "desc": "未知",
+            "desc": "必填\n影响送礼的好感获取，可拥有多个标签，用逗号分隔",
+            "status": "required",
             "rule": "ItemTagId"
+        },
+        "capacity": {
+            "name": "页数",
+            "desc": "必填\n知识类书籍页数",
+            "status": "required",
+            "rule": "number"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "阅读完成后触发的效果",
+            "status": "optional",
+            "rule": "effectRules"
+        },
+        "value": {
+            "name": "价值",
+            "desc": "必填\n价值越高，送礼获得的好感越高\n-1表示不可赠送",
+            "status": "optional",
+            "rule": "number"
+        },
+        "sell": {
+            "name": "售价",
+            "desc": "必填\n跳蚤市场的售价\n-1表示不可出售",
+            "status": "optional",
+            "rule": "number"
+        },
+        "desc": {
+            "name": "简介",
+            "desc": "未知",
+            "status": "optional",
+            "rule": "text"
+        },
+        "themes": {
+            "name": "主题",
+            "desc": "书籍主题类别",
+            "status": "optional",
+            "rule": "BookThemeId"
+        },
+        "talk": {
+            "name": "对话",
+            "desc": "完成阅读时触发的对话",
+            "status": "hide",
+            "rule": "text"
         },
         "need": {
             "name": "需求",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "precondition": {
             "name": "前置条件",
             "desc": "未知",
+            "status": "hide",
             "rule": "conditionRules"
-        },
-        "sell": {
-            "name": "售价",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "talk": {
-            "name": "对话",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "type": {
-            "name": "类型",
-            "desc": "未知",
-            "rule": "ItemTypeId"
         },
         "usingEffect": {
             "name": "使用效果",
-            "desc": "未知",
+            "desc": "消耗品使用后触发的效果\n此处未知意义",
+            "status": "hide",
             "rule": "effectRules"
-        },
-        "value": {
-            "name": "价值",
-            "desc": "未知",
-            "rule": "number"
         }
     },
     "CGKey": {
         "id": {
             "name": "ID",
-            "desc": "漫画id，七位数字组成，1XXXXXX",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "未知",
+            "desc": "必填\nCG名称",
+            "status": "required",
             "rule": "text"
+        },
+        "urls": {
+            "name": "Urls",
+            "desc": "必填\n建议分辨率：\n1920x1080或2560x1440",
+            "status": "required",
+            "rule": "path"
         },
         "comic": {
             "name": "漫画",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "group": {
             "name": "组",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "idx": {
             "name": "索引",
             "desc": "未知",
+            "status": "hide",
             "rule": "number"
         },
         "move": {
             "name": "移动",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "startTalks": {
             "name": "开始对话",
             "desc": "未知",
-            "rule": "text"
-        },
-        "urls": {
-            "name": "Urls",
-            "desc": "未知",
-            "rule": "path"
+            "status": "hide",
+            "rule": "TalkId"
         }
     },
     "IntentKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "before": {
-            "name": "Before",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "condition": {
-            "name": "条件",
-            "desc": "未知",
-            "rule": "conditionRules"
-        },
-        "demand": {
-            "name": "需求",
-            "desc": "未知",
-            "rule": "conditionRules"
-        },
-        "desc": {
-            "name": "描述",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "fail": {
-            "name": "失败",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "failTalk": {
-            "name": "失败对话",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "finishTalk": {
-            "name": "完成对话",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "finishType": {
-            "name": "完成类型",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "group": {
-            "name": "组",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "next": {
-            "name": "下一个",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "npc": {
-            "name": "角色",
-            "desc": "未知",
-            "rule": "PersonId"
-        },
-        "renshengguan": {
-            "name": "人生观",
-            "desc": "未知",
+            "desc": "必填\n目标名称",
+            "status": "required",
             "rule": "text"
         },
         "reward": {
             "name": "奖励",
-            "desc": "未知",
+            "desc": "完成目标给与的奖励",
+            "status": "optional",
             "rule": "effectRules"
         },
+        "desc": {
+            "name": "描述",
+            "desc": "目标的描述",
+            "status": "optional",
+            "rule": "text"
+        },
+        "demand": {
+            "name": "要求",
+            "desc": "完成目标的要求",
+            "status": "optional",
+            "rule": "conditionRules"
+        },
+        "npc": {
+            "name": "人物id",
+            "desc": "影响目标面板显示谁的头像",
+            "status": "optional",
+            "rule": "PersonId"
+        },
+        "finishType": {
+            "name": "移除规则",
+            "desc": "0：完成时领取奖励后移除nl：完成时自动移除\n2:只能用效果移除",
+            "status": "optional",
+            "rule": "text"
+        },
         "round": {
-            "name": "回合",
-            "desc": "未知",
+            "name": "持续回合",
+            "desc": "持续指定回合数，超过则失败\n若为0，表示持续存在",
+            "status": "optional",
             "rule": "number"
+        },
+        "fail": {
+            "name": "失败",
+            "desc": "目标失败时触发的效果",
+            "status": "hide",
+            "rule": "effectRules"
+        },
+        "failTalk": {
+            "name": "失败对话",
+            "desc": "目标失败的对话",
+            "status": "hide",
+            "rule": "TalkId"
+        },
+        "before": {
+            "name": "完成前",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "effectRules"
+        },
+        "condition": {
+            "name": "条件",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "conditionRules"
+        },
+        "finishTalk": {
+            "name": "完成对话",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "TalkId"
+        },
+        "group": {
+            "name": "组",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "text"
+        },
+        "next": {
+            "name": "下一个目标",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "IntentId"
+        },
+        "renshengguan": {
+            "name": "人生观",
+            "desc": "未知",
+            "status": "hide",
+            "rule": "RenshengguanMemoryId"
         },
         "tag": {
             "name": "标签",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "targetRound": {
             "name": "目标回合",
-            "desc": "未知",
-            "rule": "number"
+            "desc": "持续到指定回合",
+            "status": "hide",
+            "rule": "RoundLinId"
         },
         "weight": {
             "name": "权重",
             "desc": "未知",
+            "status": "hide",
             "rule": "number"
         }
     },
     "KZoneAvatarKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "icon": {
-            "name": "图标",
-            "desc": "未知",
+            "name": "图片",
+            "desc": "必填\n建议分辨率：250x250像素且背景透明的png",
+            "status": "required",
             "rule": "path"
         },
         "state": {
             "name": "状态",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "type": {
             "name": "类型",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         }
     },
     "KZoneCommentKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n9位数字组成，左边7位为动态ID，右边2位为评论序列",
+            "status": "required",
             "rule": "index"
         },
         "roles": {
-            "name": "角色列表",
-            "desc": "未知",
-            "rule": "text"
+            "name": "人物⚠",
+            "desc": "必填\n①某人评论动态：填『人物ID』\n②某人回复某人评论：填『人物ID，评论ID』\n当前由于底层代码<font color='#E28485'>仅提供人物转义，可能有错误</font>",
+            "status": "required",
+            "rule": "PersonId"
         },
         "parent": {
-            "name": "父评论ID",
-            "desc": "未知",
-            "rule": "index"
+            "name": "根部评论",
+            "desc": "必填\n若此评论是直接回复动态，则此动态为根部评论，填0\n否则填写最上级评论的ID",
+            "status": "required",
+            "rule": "KZoneCommentId"
         },
         "content": {
             "name": "内容",
-            "desc": "未知",
+            "desc": "必填\n评论内容",
+            "status": "required",
             "rule": "text"
         },
         "comments": {
-            "name": "评论列表",
-            "desc": "未知",
-            "rule": "text"
+            "name": "自带评论",
+            "desc": "评论ID1，延时；评论ID2，",
+            "status": "optional",
+            "rule": "autoKZoneCommentReplace"
         },
         "options": {
-            "name": "选项",
-            "desc": "未知",
-            "rule": "text"
+            "name": "玩家评论ID",
+            "desc": "必填\n可填多个，用逗号分隔\n玩家只能选择其中一个评论",
+            "status": "optional",
+            "rule": "KZoneCommentId"
         },
-         "effect": {
+        "effect": {
             "name": "效果",
-            "desc": "未知",
+            "desc": "玩家发出此评论之后获得的效果",
+            "status": "optional",
             "rule": "effectRules"
         },
-         "condition": {
-            "name": "条件",
-            "desc": "未知",
+        "condition": {
+            "name": "前提",
+            "desc": "留空或者满足条件时自动评论",
+            "status": "optional",
             "rule": "conditionRules"
         },
         "personality": {
             "name": "性格",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         }
-
     },
     "KZoneContentKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "role": {
-            "name": "角色",
-            "desc": "未知",
+            "name": "人物",
+            "desc": "必填\n动态所有者ID",
+            "status": "required",
             "rule": "PersonId"
         },
         "content": {
             "name": "内容",
-            "desc": "未知",
+            "desc": "必填\n动态内容",
+            "status": "required",
             "rule": "text"
         },
         "imgs": {
-            "name": "图片列表",
-            "desc": "未知",
-            "rule": "text"
+            "name": "配图",
+            "desc": "动态配图路径",
+            "status": "optional",
+            "rule": "path"
         },
         "thumbs": {
-            "name": "点赞数",
-            "desc": "未知",
-            "rule": "number"
+            "name": "点赞者",
+            "desc": "人物id1，延时；人物id2，延时.....\n延时表示动态发出多少秒后，出现此点赞",
+            "status": "optional",
+            "rule": "likeReplace"
         },
         "comments": {
-            "name": "评论列表",
-            "desc": "未知",
-            "rule": "text"
+            "name": "自带评论ID",
+            "desc": "评论id1，延时；评论id2，延时.....\n延时表示动态发出多少秒后，出现此评论\n评论在【空间动态评论】中配置",
+            "status": "optional",
+            "rule": "autoKZoneCommentReplace"
         },
         "options": {
-            "name": "选项",
-            "desc": "未知",
-            "rule": "text"
+            "name": "玩家评论ID",
+            "desc": "可填多个，用逗号分隔\n评论在【空间动态评论】中配置",
+            "status": "optional",
+            "rule": "KZoneCommentId"
         },
         "cond": {
-            "name": "条件",
-            "desc": "未知",
+            "name": "前提",
+            "desc": "条件满足时自动出现\n若不填，只能通过效果发出此动态(23,1,X)",
+            "status": "optional",
             "rule": "conditionRules"
         }
     },
     "KZoneProfileKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n和自定义人物ID一致",
+            "status": "required",
             "rule": "index"
         },
         "name": {
-            "name": "名称",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "bgm": {
-            "name": "背景音乐",
-            "desc": "未知",
+            "name": "昵称",
+            "desc": "主页昵称",
+            "status": "required",
             "rule": "text"
         },
         "desc": {
-            "name": "描述",
-            "desc": "未知",
+            "name": "签名",
+            "desc": "个性签名",
+            "status": "optional",
             "rule": "text"
         },
-        "font": {
-            "name": "字体",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "fontColor": {
-            "name": "字体颜色",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "fontSize": {
-            "name": "字体大小",
-            "desc": "未知",
+        "marriage": {
+            "name": "婚恋",
+            "desc": "单身时的文本，脱单后的文本n例如：单身，恋爱中",
+            "status": "optional",
             "rule": "text"
         },
         "hometown": {
-            "name": "家乡",
-            "desc": "未知",
+            "name": "故乡",
+            "desc": "故乡文本",
+            "status": "optional",
             "rule": "text"
         },
-        "icon": {
-            "name": "图标",
-            "desc": "未知",
-            "rule": "path"
-        },
-        "isVip": {
-            "name": "是否VIP",
-            "desc": "未知",
+        "living": {
+            "name": "现居地",
+            "desc": "现居地文本",
+            "status": "optional",
             "rule": "text"
         },
         "job": {
             "name": "职业",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "living": {
-            "name": "居住地",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "marriage": {
-            "name": "婚姻状况",
-            "desc": "未知",
+            "desc": "职业文本",
+            "status": "optional",
             "rule": "text"
         },
         "school": {
-            "name": "学校",
-            "desc": "未知",
+            "name": "公司/学校",
+            "desc": "学校文本",
+            "status": "optional",
+            "rule": "text"
+        },
+        "isVip": {
+            "name": "尊贵黄钻",
+            "desc": "1为真,0为假",
+            "status": "optional",
             "rule": "text"
         },
         "theme": {
-            "name": "主题",
-            "desc": "未知",
-            "rule": "text"
+            "name": "空间配色ID",
+            "desc": "空间主题",
+            "status": "optional",
+            "rule": "KZoneColorId"
+        },
+        "bgm": {
+            "name": "背景音乐",
+            "desc": "空间背景音乐ID",
+            "status": "optional",
+            "rule": "AudioId"
+        },
+        "font": {
+            "name": "签名字体ID",
+            "desc": "使用的签名字体id",
+            "status": "optional",
+            "rule": "KZoneFontId"
+        },
+        "fontColor": {
+            "name": "签名颜色ID",
+            "desc": "签名颜色ID",
+            "status": "optional",
+            "rule": "ColorId"
+        },
+        "fontSize": {
+            "name": "签名字体大小",
+            "desc": "字体的大小",
+            "status": "optional",
+            "rule": "number"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "空间头像",
+            "status": "hide",
+            "rule": "KZoneAvatarId"
         }
     },
     "PersonKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n人物ID，由六位数组成\n1XXXXX~999999",
+            "status": "required",
             "rule": "index"
         },
         "name": {
-            "name": "名称",
-            "desc": "未知",
+            "name": "姓名",
+            "desc": "必填\n人物姓名",
+            "status": "required",
             "rule": "text"
+        },
+        "gender": {
+            "name": "性别",
+            "desc": "必填\n人物性别",
+            "status": "required",
+            "rule": "SexId"
+        },
+        "init": {
+            "name": "类别",
+            "desc": "必填\n人物社交类别",
+            "status": "required",
+            "rule": "PersonSocialId"
         },
         "birthday": {
             "name": "生日",
-            "desc": "未知",
+            "desc": "必填\n填年月日，用英文逗号间隔，例如1995,1,1",
+            "status": "optional",
+            "rule": "birthdayReplace"
+        },
+        "nicknames": {
+            "name": "称呼",
+            "desc": "格式[恋人称呼,非恋人称呼]\n或[非恋人称呼]\n注意每个称呼使用英文双引号",
+            "status": "optional",
+            "rule": "text"
+        },
+        "kzoneHeadId": {
+            "name": "空间头像ID",
+            "desc": "空间使用的头像id，不填自动使用人物头像",
+            "status": "optional",
+            "rule": "KZoneAvatarId"
+        },
+        "telephone": {
+            "name": "电话号码",
+            "desc": "该角色的电话号码",
+            "status": "hide",
+            "rule": "text"
+        },
+        "clickAudio": {
+            "name": "点击音频",
+            "desc": "一般为0,特殊（角色性质）物品会设定",
+            "status": "hide",
+            "rule": "AudioId"
+        },
+        "introduction": {
+            "name": "介绍",
+            "desc": "对角色的介绍",
+            "status": "hide",
             "rule": "text"
         },
         "bubbleParm": {
             "name": "气泡参数",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "bubbleParm2": {
             "name": "气泡参数2",
             "desc": "未知",
-            "rule": "text"
-        },
-        "clickAudio": {
-            "name": "点击音频",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "gender": {
-            "name": "性别",
-            "desc": "人物性别",
-            "rule": "SexId"
-        },
-        "init": {
-            "name": "初始化",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "introduction": {
-            "name": "介绍",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "kzoneHeadId": {
-            "name": "空间头像ID",
-            "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "l2d": {
-            "name": "Live2D模型",
+            "name": "小学Live2D模型",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "l2d2": {
-            "name": "Live2D模型2",
+            "name": "中学Live2D模型2",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "l2dParm": {
-            "name": "Live2D参数",
+            "name": "小学Live2D参数",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "l2dParm2": {
-            "name": "Live2D参数2",
+            "name": "中学Live2D参数2",
             "desc": "未知",
-            "rule": "text"
-        },
-        "nicknames": {
-            "name": "昵称列表",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "telephone": {
-            "name": "电话号码",
-            "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "url": {
-            "name": "图片路径",
-            "desc": "未知",
+            "name": "小学图片路径",
+            "desc": "小学该角色的图片路径",
+            "status": "hide",
             "rule": "path"
         },
         "url2": {
-            "name": "图片路径2",
-            "desc": "未知",
+            "name": "中学图片路径2",
+            "desc": "中学该角色的图片路径",
+            "status": "hide",
             "rule": "path"
         },
         "urlParm": {
-            "name": "图片参数",
-            "desc": "未知",
+            "name": "小学图片参数",
+            "desc": "小学该角色的图片偏移等参数",
+            "status": "hide",
             "rule": "text"
         },
         "urlParm2": {
-            "name": "图片参数2",
-            "desc": "未知",
+            "name": "中学图片参数2",
+            "desc": "中学该角色的图片偏移等参数",
+            "status": "hide",
             "rule": "text"
         }
     },
     "PersonGrowKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
-            "rule": "index"
+            "desc": "必填\n对应人物id",
+            "status": "required",
+            "rule": "PersonId"
+        },
+        "personalitys": {
+            "name": "人格⚠",
+            "desc": "官方采用的逻辑似乎要靠穷举法，暂不提供转译",
+            "status": "required",
+            "rule": "text"
         },
         "focusAttrId": {
-            "name": "关注属性ID",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "ItemPref": {
-            "name": "物品偏好",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "attr": {
-            "name": "属性",
-            "desc": "未知",
+            "name": "欣赏的属性",
+            "desc": "人物欣赏的属性",
+            "status": "required",
             "rule": "PersonAttrId"
         },
         "className": {
-            "name": "班级名称",
-            "desc": "未知",
-            "rule": "text"
+            "name": "班级",
+            "desc": "必填\n按照【小学,初中,高中分班前,分班后】填写\n如[1,1,1,1]",
+            "status": "required",
+            "rule": "classReplace"
+        },
+        "studyRank": {
+            "name": "学习段位",
+            "desc": "必填\n按照【小学,初中,高中分班前,分班后】填写\n如[1,1,1,1]",
+            "status": "required",
+            "rule": "ScoreRankId"
+        },
+        "ItemPref": {
+            "name": "喜好物品种类⚠",
+            "desc": "必填\n规则为[物品类型id,数字]\n数字越大越喜欢\n由于底层代码暂不提供",
+            "status": "required",
+            "rule": "ItemTypeId"
+        },
+        "traits": {
+            "name": "特质",
+            "desc": "必填\n人物的特质",
+            "status": "required",
+            "rule": "TraitId"
+        },
+        "minigame": {
+            "name": "小游戏",
+            "desc": "必填\n人物互动的小游戏", 
+            "status": "required",   
+            "rule": "MinigameId"
+        },
+        "attr": {
+            "name": "初始属性",
+            "desc": "人物的初始三维属性",
+            "status": "hide",
+            "rule": "initAttrReplace"
         },
         "grow": {
             "name": "成长",
-            "desc": "未知",
+            "desc": "每年三维增长\n格式为[智力,情商,体魄]\n很简单且受限底层代码，暂不提供转义",
+            "status": "hide",
             "rule": "text"
         },
         "items": {
             "name": "物品列表",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "minigame": {
-            "name": "小游戏",
-            "desc": "未知",
-            "rule": "text"
+            "desc": "角色拥有的物品",
+            "status": "hide",
+            "rule": "ItemId"
         },
         "order": {
-            "name": "订单",
+            "name": "指令",
             "desc": "未知",
-            "rule": "text"
-        },
-        "personalitys": {
-            "name": "个性列表",
-            "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "speciality": {
             "name": "专业",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
         },
         "state": {
             "name": "状态",
             "desc": "未知",
+            "status": "hide",
             "rule": "text"
-        },
-        "studyRank": {
-            "name": "学习等级",
-            "desc": "未知",
-            "rule": "number"
         }
     },
     "RenshengguanMemoryKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "title": {
             "name": "标题",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "cond": {
-            "name": "条件",
-            "desc": "未知",
-            "rule": "conditionRules"
-        },
-        "desc": {
-            "name": "描述",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "npcId": {
-            "name": "Npc Id",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "sceneId": {
-            "name": "场景 Id",
-            "desc": "未知",
+            "desc": "必填",
+            "status": "required",
             "rule": "text"
         },
         "type": {
             "name": "类型",
-            "desc": "未知",
+            "desc": "必填，人生观类型\n1=进步：\n可解锁额外的人格机制\n2=陪伴：\n可关注第五个同学，同时社交容量+5，热情+30\n3=责任：\n获得额外的价值观和方法论\n4=洒脱：\n可获得第五项人格，并可强化人格1次",
+            "status": "required",
+            "rule": "RenshengguanTypeId"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "必填",
+            "status": "required",
+            "rule": "conditionRules"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "必填",
+            "status": "required",
             "rule": "text"
         },
         "url": {
-            "name": "路径",
-            "desc": "未知",
+            "name": "图片",
+            "desc": "图片路径",
+            "status": "required",
             "rule": "path"
+        },
+        "npcId": {
+            "name": "人物id",
+            "desc": "涉及人物",
+            "status": "hide",
+            "rule": "PersonId"
+        },
+        "sceneId": {
+            "name": "场景",
+            "desc": "涉及场景",
+            "status": "hide",
+            "rule": "BgId"
         }
     },
     "ShopKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "和物品ID或书籍ID一致\n目前由于底层代码仅显示物品id，可能有误",
+            "status": "required",
             "rule": "itemId"
         },
-        "buyTalk": {
-            "name": "购买对话",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "disappearTime": {
-            "name": "消失时间",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "discountRound": {
-            "name": "折扣回合",
-            "desc": "未知",
-            "rule": "number"
-        },
         "group": {
-            "name": "组",
-            "desc": "未知",
+            "name": "组别",
+            "desc": "同组别的物品只有其中一个会出现在商店中",
+            "status": "optional",
             "rule": "text"
         },
-        "limcount": {
-            "name": "Limcount",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "maxcount": {
-            "name": "最大数量",
-            "desc": "未知",
+        "price": {
+            "name": "售价",
+            "desc": "商品售价",
+            "status": "required",
             "rule": "number"
         },
         "next": {
             "name": "下一个",
-            "desc": "未知",
-            "rule": "text"
-        },
-        "precondition": {
-            "name": "前置条件",
-            "desc": "未知",
-            "rule": "conditionRules"
-        },
-        "price": {
-            "name": "Price",
-            "desc": "未知",
-            "rule": "number"
-        },
-        "probability": {
-            "name": "可能性",
-            "desc": "未知",
-            "rule": "number"
+            "desc": "当此商品被购买后，指定商品立刻在商店出现",
+            "status": "optional",
+            "rule": "itemId"
         },
         "time": {
-            "name": "时间",
-            "desc": "未知",
+            "name": "出现年份",
+            "desc": "出现年份，在每年第一个月刷新",
+            "status": "optional",
             "rule": "number"
+        },
+        "discountRound": {
+            "name": "打折开始回合",
+            "desc": "指定回合开始才有可能参与打折\n游戏共有61回合\n详情见说明文档",
+            "status": "optional",
+            "rule": "RoundLinId"
         },
         "type": {
             "name": "类型",
-            "desc": "未知",
+            "desc": "商品类型",
+            "status": "required",
+            "rule": "ItemTypeId"
+        },
+        "maxcount": {
+            "name": "售卖数量",
+            "desc": "售卖数量",
+            "status": "optional",
+            "rule": "number"
+        },
+        "precondition": {
+            "name": "条件",
+            "desc": "前提满足时出现",
+            "status": "optional",
+            "rule": "conditionRules"
+        },
+        "probability": {
+            "name": "概率",
+            "desc": "每年出现概率（0.0~1.0）",
+            "status": "required",
+            "rule": "number"
+        },
+        "buyTalk": {
+            "name": "购买对话",
+            "desc": "购买物品后，老板的闲聊",
+            "status": "optional",
             "rule": "text"
+        },
+        "limcount": {
+            "name": "允许数量",
+            "desc": "未知，可能为允许持有的最大数量\n建议与购买数量保持一致",
+            "status": "optional",
+            "rule": "number"
+        },
+        "disappearTime": {
+            "name": "消失时间",
+            "desc": "官方目前都填0",
+            "status": "optional",
+            "rule": "number"
         }
     },
     "TraitsKey": {
         "id": {
             "name": "ID",
-            "desc": "未知",
+            "desc": "必填\n官方建议：7位数字组成，左边第一位固定为1\n例如：1XXXXXX",
+            "status": "required",
             "rule": "index"
         },
         "name": {
             "name": "名称",
-            "desc": "未知",
+            "desc": "人物特质名称",
+            "status": "required",
             "rule": "text"
         },
         "effect": {
             "name": "效果",
-            "desc": "未知",
+            "desc": "人物特质效果",
+            "status": "required",
             "rule": "effectRules"
         }
     }

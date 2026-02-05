@@ -10,7 +10,7 @@
                     1,
                     "value"
                 ],
-                "desc": "概率{value}%"
+                "desc": "发生概率为{value}%"
             },
             "propertyValue": {
                 "rule": [
@@ -28,31 +28,6 @@
         "toast": 0,
         "name": "年龄限制",
         "type": {
-            "older": {
-                "rule": [
-                    1,
-                    1,
-                    "value"
-                ],
-                "desc": "年龄大于{value}岁"
-            },
-            "younger": {
-                "rule": [
-                    1,
-                    2,
-                    "value"
-                ],
-                "desc": "年龄小于{value}岁"
-            },
-            "ageBetween": {
-                "rule": [
-                    1,
-                    3,
-                    "value1",
-                    "value2"
-                ],
-                "desc": "年龄在{value1}岁到{value2}岁之间"
-            },
             "ageMonth": {
                 "rule": [
                     1,
@@ -61,6 +36,31 @@
                     "value2"
                 ],
                 "desc": "年龄{value1}岁{value2}月"
+            },
+            "older": {
+                "rule": [
+                    1,
+                    1,
+                    "value"
+                ],
+                "desc": "年龄≥{value}岁"
+            },
+            "younger": {
+                "rule": [
+                    1,
+                    2,
+                    "value"
+                ],
+                "desc": "年龄≤{value}岁"
+            },
+            "ageBetween": {
+                "rule": [
+                    1,
+                    3,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{value1}岁≤年龄≤{value2}岁"
             },
             "grade": {
                 "rule": [
@@ -78,7 +78,7 @@
                     1,
                     "value"
                 ],
-                "desc": "年级大于等于{value}"
+                "desc": "年级≥{value}"
             },
             "youngerGrade": {
                 "rule": [
@@ -87,7 +87,7 @@
                     -1,
                     "value"
                 ],
-                "desc": "年级小于等于{value}"
+                "desc": "年级≤{value}"
             },
             "gradeBetween": {
                 "rule": [
@@ -97,7 +97,7 @@
                     "value1",
                     "value2"
                 ],
-                "desc": "年级在{value1}年级到{value2}年级之间"
+                "desc": "{value1}年级≤年级≤{value2}年级"
             },
             "beforeElementary": {
                 "rule": [
@@ -121,7 +121,7 @@
                     97,
                     1
                 ],
-                "desc": "已经文理分班"
+                "desc": "已文理分班"
             },
             "notClassified": {
                 "rule": [
@@ -137,7 +137,7 @@
                     98,
                     1
                 ],
-                "desc": "理科生"
+                "desc": "文科生"
             },
             "art": {
                 "rule": [
@@ -145,7 +145,7 @@
                     98,
                     2
                 ],
-                "desc": "文科生"
+                "desc": "理科生"
             },
             "notScience": {
                 "rule": [
@@ -153,7 +153,7 @@
                     -98,
                     1
                 ],
-                "desc": "非理科生"
+                "desc": "非文科生"
             },
             "notArt": {
                 "rule": [
@@ -161,23 +161,15 @@
                     -98,
                     2
                 ],
-                "desc": "非文科生"
+                "desc": "非理科生"
             },
-            "man": {
+            "sex": {
                 "rule": [
                     1,
                     99,
-                    1
+                    "SexId"
                 ],
-                "desc": "性别为男"
-            },
-            "woman": {
-                "rule": [
-                    1,
-                    99,
-                    2
-                ],
-                "desc": "性别为女"
+                "desc": "性别为{SexId}"
             }
         }
     },
@@ -190,9 +182,9 @@
                 "rule": [
                     2,
                     0,
-                    "value"
+                    "RoundLinId"
                 ],
-                "desc": "当前回合{value}"
+                "desc": "当前是【{RoundLinId}】"
             },
             "currentMonth": {
                 "rule": [
@@ -202,31 +194,47 @@
                 ],
                 "desc": "当前为{value}月"
             },
+            "currentTurnOrLater": {
+                "rule": [
+                    2,
+                    100,
+                    "RoundLinId"
+                ],
+                "desc": "当前为【{RoundLinId}】或以后"
+            },
+            "beforeTurn": {
+                "rule": [
+                    2,
+                    -100,
+                    "RoundLinId"
+                ],
+                "desc": "当前未到【{RoundLinId}】"
+            },
             "currentSeasonIsEven": {
                 "rule": [
                     2,
                     3,
-                    "value1",
-                    "value2"
+                    "value",
+                    "SeasonId"
                 ],
-                "desc": "当前是{value1}年{value2}季"
+                "desc": "当前是{value}年{SeasonId}季"
             },
             "currentSeasonOrLater": {
                 "rule": [
                     2,
                     30,
-                    "value1",
-                    "value2"
+                    "value",
+                    "SeasonId"
                 ],
-                "desc": "当前为{value1}年{value2}季,或以后"
+                "desc": "当前为{value}年{SeasonId}季,或以后"
             },
             "currentSeason": {
                 "rule": [
                     2,
                     4,
-                    "value"
+                    "SeasonId"
                 ],
-                "desc": "当前为{value}季"
+                "desc": "当前为{SeasonId}季"
             },
             "currentTurnIsHoliday": {
                 "rule": [
@@ -259,59 +267,50 @@
                     "value1",
                     "value2"
                 ],
-                "desc": "{value1}年到{value2}年之间"
+                "desc": "{value1}年≤当前年份≤{value2}年"
             },
             "currentYearIsEven": {
                 "rule": [
                     2,
                     12,
-                    "value"
+                    1
                 ],
-                "desc": "当前是偶数年"
+                "desc": "当前是奇数年"
             },
-            "desc": "当前是{value}季"
-        },
-        "currentTurnOrLater": {
-            "rule": [
-                2,
-                100,
-                "value"
-            ],
-            "desc": "当前回合{value}或以后"
-        },
-        "beforeTurn": {
-            "rule": [
-                2,
-                -100,
-                "value"
-            ],
-            "desc": "当前未到第{value}回合"
-        },
-        "birthday": {
-            "rule": [
-                2,
-                101,
-                1
-            ],
-            "desc": "当前主角生日"
-        },
-        "currentDate": {
-            "rule": [
-                2,
-                11,
-                "value1",
-                "value2"
-            ],
-            "desc": "当前日期在{value1}年{value2}月"
-        },
-        "currentDateOrLater": {
-            "rule": [
-                2,
-                110,
-                "value1",
-                "value2"
-            ],
-            "desc": "当前日期在{value1}年{value2}月或以后"
+            "currentYearIsOdd": {
+                "rule": [
+                    2,
+                    12,
+                    2
+                ],
+                "desc": "当前是偶数年（当前只识别x=2）"
+            },
+            "birthday": {
+                "rule": [
+                    2,
+                    101,
+                    1
+                ],
+                "desc": "当前是主角生日回合"
+            },
+            "currentDate": {
+                "rule": [
+                    2,
+                    11,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "当前日期在{value1}年{value2}月"
+            },
+            "currentDateOrLater": {
+                "rule": [
+                    2,
+                    110,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "当前日期在{value1}年{value2}月或以后"
+            }
         }
     },
     "3": {
@@ -323,18 +322,18 @@
                 "rule": [
                     3,
                     1,
-                    "evtId"
+                    "EvtId"
                 ],
-                "desc": "事件{evtId}已发生"
+                "desc": "事件【<span style=\"font-size: 10px;\">{EvtId}</span>】已发生"
             },
             "evtOrOccurred": {
                 "rule": [
                     3,
                     1,
-                    "evtId1",
-                    "evtId2"
+                    "EvtId1",
+                    "EvtId2"
                 ],
-                "desc": "事件{evtId1}或{evtId2}已发生"
+                "desc": "事件【<span style=\"font-size: 10px;\">{EvtId1}</span>】或<span style=\"font-size: 10px;\">【{EvtId2}</span>】已发生"
             },
             "evtOccurredTimes": {
                 "rule": [
@@ -344,7 +343,7 @@
                     "evtId2",
                     "value"
                 ],
-                "desc": "事件{evtId1}或{evtId2}已发生{value}次"
+                "desc": "事件【<span style=\"font-size: 10px;\">{evtId1}</span>】或【<span style=\"font-size: 10px;\">{evtId2}</span>】已发生{value}次"
             },
             "evtNotOccurred": {
                 "rule": [
@@ -352,7 +351,7 @@
                     -1,
                     "evtId"
                 ],
-                "desc": "事件{evtId}未发生"
+                "desc": "事件【<span style=\"font-size: 10px;\">{evtId}</span>】未发生"
             },
             "evtOrNotOccurred": {
                 "rule": [
@@ -361,16 +360,15 @@
                     "evtId1",
                     "evtId2"
                 ],
-                "desc": "事件{evtId1}或{evtId2}未发生"
+                "desc": "事件【<span style=\"font-size: 10px;\">{evtId1}</span>】或【<span style=\"font-size: 10px;\">{evtId2}</span>】未发生"
             },
             "evtOptionSelected": {
                 "rule": [
                     3,
                     2,
-                    "evtId",
                     "optionId"
                 ],
-                "desc": "选项{optionId}已激活"
+                "desc": "选项【<span style=\"font-size: 10px;\">{optionId}</span>】已激活"
             },
             "evtOrOptionSelected": {
                 "rule": [
@@ -379,15 +377,15 @@
                     "optionId1",
                     "optionId2"
                 ],
-                "desc": "选项{optionId1}或{optionId2}已激活"
+                "desc": "选项【<span style=\"font-size: 10px;\">{optionId1}</span>】或【<span style=\"font-size: 10px;\">{optionId2}</span>】已激活"
             },
             "evtOptionNotSelected": {
                 "rule": [
                     3,
                     -2,
-                    "evtId"
+                    "optionId"
                 ],
-                "desc": "选项{optionId}未激活"
+                "desc": "选项【<span style=\"font-size: 10px;\">{optionId}</span>】未激活"
             },
             "evtOrOptionNotSelected": {
                 "rule": [
@@ -396,7 +394,7 @@
                     "optionId1",
                     "optionId2"
                 ],
-                "desc": "选项{optionId1}或{optionId2}未激活"
+                "desc": "选项【<span style=\"font-size: 10px;\">{optionId1}</span>】或【<span style=\"font-size: 10px;\">{optionId2}</span>】未激活"
             },
             "evtDialogOccurred": {
                 "rule": [
@@ -404,7 +402,7 @@
                     3,
                     "talkId"
                 ],
-                "desc": "对话{talkId}已激活"
+                "desc": "对话【<span style=\"font-size: 10px;\">{talkId}</span>】已激活"
             },
             "evtOrDialogOccurred": {
                 "rule": [
@@ -413,7 +411,7 @@
                     "talkId1",
                     "talkId2"
                 ],
-                "desc": "对话{talkId1}或{talkId2}已激活"
+                "desc": "对话【<span style=\"font-size: 10px;\">{talkId1}</span>】或【<span style=\"font-size: 10px;\">{talkId2}</span>】已激活"
             },
             "evtDialogNotOccurred": {
                 "rule": [
@@ -421,7 +419,7 @@
                     -3,
                     "talkId"
                 ],
-                "desc": "对话{talkId}未激活"
+                "desc": "对话【<span style=\"font-size: 10px;\">{talkId}</span>】未激活"
             },
             "evtOrDialogNotOccurred": {
                 "rule": [
@@ -430,39 +428,39 @@
                     "talkId1",
                     "talkId2"
                 ],
-                "desc": "对话{talkId1}或{talkId2}未激活"
+                "desc": "对话【<span style=\"font-size: 10px;\">{talkId1}</span>】或【<span style=\"font-size: 10px;\">{talkId2}</span>】未激活"
             },
             "ValueXIsActive": {
                 "rule": [
                     3,
                     4,
-                    "value"
+                    "RenshengguanMemoryId"
                 ],
-                "desc": "价值观{value}已激活"
+                "desc": "价值观{RenshengguanMemoryId}已激活"
             },
             "ValueXIsNotActive": {
                 "rule": [
                     3,
                     -4,
-                    "value"
+                    "RenshengguanMemoryId"
                 ],
-                "desc": "价值观{value}未激活"
+                "desc": "价值观{RenshengguanMemoryId}未激活"
             },
             "SmsXIsSent": {
                 "rule": [
                     3,
                     5,
-                    "value"
+                    "PhoneMsgId"
                 ],
-                "desc": "短信{value}已发出"
+                "desc": "短信【<span style=\"font-size: 10px;\">{PhoneMsgId}</span>】已发出"
             },
             "SmsXIsNotSent": {
                 "rule": [
                     3,
                     -5,
-                    "value"
+                    "PhoneMsgId"
                 ],
-                "desc": "短信{value}未发出"
+                "desc": "短信【<span style=\"font-size: 10px;\">{PhoneMsgId}</span>】未发出"
             },
             "RunXIsOccurred": {
                 "rule": [
@@ -470,7 +468,7 @@
                     6,
                     "value"
                 ],
-                "desc": "跑团对话{value}已触发"
+                "desc": "跑团对话【<span style=\"font-size: 10px;\">{value}</span>】已触发"
             },
             "evtDialogOccurredInThisRound": {
                 "rule": [
@@ -478,7 +476,7 @@
                     30,
                     "talkId"
                 ],
-                "desc": "本回合已发生对话{talkId}"
+                "desc": "本回合已发生对话【<span style=\"font-size: 10px;\">{talkId}</span>】"
             },
             "evtDialogNotOccurredInThisRound": {
                 "rule": [
@@ -486,7 +484,7 @@
                     -30,
                     "talkId"
                 ],
-                "desc": "本回合未发生对话{talkId}"
+                "desc": "本回合未发生对话【<span style=\"font-size: 10px;\">{talkId}</span>】"
             },
             "evtOrDialogOccurredInThisRound": {
                 "rule": [
@@ -495,7 +493,7 @@
                     "talkId1",
                     "talkId2"
                 ],
-                "desc": "本回合已发生对话{talkId1}或{talkId2}"
+                "desc": "本回合已发生对话【<span style=\"font-size: 10px;\">{talkId1}</span>】或【<span style=\"font-size: 10px;\">{talkId2}</span>】"
             },
             "evtOrDialogNotOccurredInThisRound": {
                 "rule": [
@@ -504,7 +502,7 @@
                     "talkId1",
                     "talkId2"
                 ],
-                "desc": "本回合未发生对话{talkId1}或{talkId2}"
+                "desc": "本回合未发生对话【<span style=\"font-size: 10px;\">{talkId1}</span>】或【<span style=\"font-size: 10px;\">{talkId2}</span>】"
             }
         }
     },
@@ -520,7 +518,7 @@
                     "PersonAttrId",
                     "value"
                 ],
-                "desc": "属性{PersonAttrId}大于{value}"
+                "desc": "属性{PersonAttrId}≥{value}"
             },
             "attrLessThan": {
                 "rule": [
@@ -529,7 +527,7 @@
                     "PersonAttrId",
                     "value"
                 ],
-                "desc": "属性{PersonAttrId}小于{value}"
+                "desc": "属性{PersonAttrId}＜{value}"
             },
             "attrBetween": {
                 "rule": [
@@ -539,7 +537,7 @@
                     "value1",
                     "value2"
                 ],
-                "desc": "属性{PersonAttrId}在{value1}到{value2}之间"
+                "desc": "{value1}≤{PersonAttrId}≤{value2}"
             },
             "attrGreaterThanOrEqualV": {
                 "rule": [
@@ -557,7 +555,7 @@
                     "PersonAttrId2",
                     "value"
                 ],
-                "desc": "{PersonAttrId1}+{PersonAttrId2}≥{value}"
+                "desc": "{PersonAttrId1}+{PersonAttrId2}>{value}"
             },
             "attrAdditionLessThanOrEqualV2": {
                 "rule": [
@@ -567,7 +565,7 @@
                     "PersonAttrId2",
                     "value"
                 ],
-                "desc": "{PersonAttrId1}+{PersonAttrId2}≤{value}"
+                "desc": "{PersonAttrId1}+{PersonAttrId2}<{value}"
             },
             "attrSubtractionLessThanOrEqualV2": {
                 "rule": [
@@ -714,9 +712,9 @@
                     7,
                     0,
                     "personId",
-                    "RelationTypId"
+                    "RelationTypeId"
                 ],
-                "desc": "与{personId}是{RelationTypId}关系"
+                "desc": "与{personId}是{RelationTypeId}关系"
             },
             "NpcFavoritismGreaterThanOrEqual": {
                 "rule": [

@@ -1,0 +1,344 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "春", 
+        "month": [
+            3, 
+            4, 
+            5
+        ], 
+        "type": 1, 
+        "bg": "season/img_season_1", 
+        "icon": "common6/icon_season_1", 
+        "txtIcon": "common6/txt_season_1", 
+        "colors": [
+            "#ff6092", 
+            "#ffb3a9"
+        ], 
+        "enterSound": 20701, 
+        "video": "videos/video_spring_1080_30_H_8s", 
+        "bgm": 3
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "夏", 
+        "month": [
+            6, 
+            7, 
+            8
+        ], 
+        "type": 2, 
+        "bg": "season/img_season_2", 
+        "icon": "common6/icon_season_2", 
+        "txtIcon": "common6/txt_season_2", 
+        "colors": [
+            "#1dadff", 
+            "#52a2b3"
+        ], 
+        "enterSound": 20702, 
+        "video": "videos/video_summer_1080_30_H_8s", 
+        "bgm": 4
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "秋", 
+        "month": [
+            9, 
+            10, 
+            11
+        ], 
+        "type": 3, 
+        "bg": "season/img_season_3", 
+        "icon": "common6/icon_season_3", 
+        "txtIcon": "common6/txt_season_3", 
+        "colors": [
+            "#e75819", 
+            "#ffb070"
+        ], 
+        "enterSound": 20703, 
+        "video": "videos/video_autumn_1080_30_H_8s", 
+        "bgm": 5
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "冬", 
+        "month": [
+            12, 
+            1, 
+            2
+        ], 
+        "type": 4, 
+        "bg": "season/img_season_4", 
+        "icon": "common6/icon_season_4", 
+        "txtIcon": "common6/txt_season_4", 
+        "colors": [
+            "#5e63a7", 
+            "#afa9ff"
+        ], 
+        "enterSound": 20704, 
+        "video": "videos/video_winter_1080_30_H_8s", 
+        "bgm": 6
+    }, 
+    "11": {
+        "id": 11, 
+        "name": "寒假", 
+        "month": [
+            1, 
+            2
+        ], 
+        "type": 5, 
+        "bg": "season/img_season_4", 
+        "icon": "common6/icon_season_41", 
+        "txtIcon": "common6/txt_season_41", 
+        "colors": [
+            "#5e63a7", 
+            "#afa9ff"
+        ], 
+        "enterSound": 20704, 
+        "video": "videos/video_winter_1080_30_H_8s", 
+        "bgm": 6
+    }, 
+    "12": {
+        "id": 12, 
+        "name": "春", 
+        "month": [
+            3, 
+            4, 
+            5
+        ], 
+        "type": 1, 
+        "bg": "season/img_season_1", 
+        "icon": "common6/icon_season_1", 
+        "txtIcon": "common6/txt_season_1", 
+        "colors": [
+            "#ff6092", 
+            "#ffb3a9"
+        ], 
+        "enterSound": 20701, 
+        "video": "videos/video_spring_1080_30_H_8s", 
+        "bgm": 3
+    }, 
+    "13": {
+        "id": 13, 
+        "name": "夏", 
+        "month": [
+            6
+        ], 
+        "type": 2, 
+        "bg": "season/img_season_2", 
+        "icon": "common6/icon_season_2", 
+        "txtIcon": "common6/txt_season_2", 
+        "colors": [
+            "#1dadff", 
+            "#52a2b3"
+        ], 
+        "enterSound": 20702, 
+        "video": "videos/video_summer_1080_30_H_8s", 
+        "bgm": 4
+    }, 
+    "14": {
+        "id": 14, 
+        "name": "暑假", 
+        "month": [
+            7, 
+            8
+        ], 
+        "type": 6, 
+        "bg": "season/img_season_2", 
+        "icon": "common6/icon_season_21", 
+        "txtIcon": "common6/txt_season_21", 
+        "colors": [
+            "#1dadff", 
+            "#52a2b3"
+        ], 
+        "enterSound": 20702, 
+        "video": "videos/video_summer_1080_30_H_8s", 
+        "bgm": 4
+    }, 
+    "15": {
+        "id": 15, 
+        "name": "秋", 
+        "month": [
+            9, 
+            10, 
+            11
+        ], 
+        "type": 3, 
+        "bg": "season/img_season_3", 
+        "icon": "common6/icon_season_3", 
+        "txtIcon": "common6/txt_season_3", 
+        "colors": [
+            "#e75819", 
+            "#ffb070"
+        ], 
+        "enterSound": 20703, 
+        "video": "videos/video_autumn_1080_30_H_8s", 
+        "bgm": 5
+    }, 
+    "16": {
+        "id": 16, 
+        "name": "冬", 
+        "month": [
+            12
+        ], 
+        "type": 4, 
+        "bg": "season/img_season_4", 
+        "icon": "common6/icon_season_4", 
+        "txtIcon": "common6/txt_season_4", 
+        "colors": [
+            "#5e63a7", 
+            "#afa9ff"
+        ], 
+        "enterSound": 20704, 
+        "video": "videos/video_winter_1080_30_H_8s", 
+        "bgm": 6
+    }, 
+    "21": {
+        "id": 21, 
+        "name": "寒假", 
+        "month": [
+            1, 
+            2
+        ], 
+        "type": 5, 
+        "bg": "season/img_season_4", 
+        "icon": "common6/icon_season_41", 
+        "txtIcon": "common6/txt_season_41", 
+        "colors": [
+            "#5e63a7", 
+            "#afa9ff"
+        ], 
+        "enterSound": 20704, 
+        "video": "videos/video_winter_1080_30_H_8s", 
+        "bgm": 6
+    }, 
+    "22": {
+        "id": 22, 
+        "name": "春上", 
+        "month": [
+            3
+        ], 
+        "type": 1, 
+        "bg": "season/img_season_1", 
+        "icon": "common6/icon_season_11", 
+        "txtIcon": "common6/txt_season_11", 
+        "colors": [
+            "#ff6092", 
+            "#ffb3a9"
+        ], 
+        "enterSound": 20701, 
+        "video": "videos/video_spring_1080_30_H_8s", 
+        "bgm": 3
+    }, 
+    "23": {
+        "id": 23, 
+        "name": "春下", 
+        "month": [
+            4, 
+            5
+        ], 
+        "type": 1, 
+        "bg": "season/img_season_1", 
+        "icon": "common6/icon_season_12", 
+        "txtIcon": "common6/txt_season_12", 
+        "colors": [
+            "#ff6092", 
+            "#ffb3a9"
+        ], 
+        "enterSound": 20701, 
+        "video": "videos/video_spring_1080_30_H_8s", 
+        "bgm": 3
+    }, 
+    "24": {
+        "id": 24, 
+        "name": "夏", 
+        "month": [
+            6
+        ], 
+        "type": 2, 
+        "bg": "season/img_season_2", 
+        "icon": "common6/icon_season_2", 
+        "txtIcon": "common6/txt_season_2", 
+        "colors": [
+            "#1dadff", 
+            "#52a2b3"
+        ], 
+        "enterSound": 20702, 
+        "video": "videos/video_summer_1080_30_H_8s", 
+        "bgm": 4
+    }, 
+    "25": {
+        "id": 25, 
+        "name": "暑假", 
+        "month": [
+            7, 
+            8
+        ], 
+        "type": 6, 
+        "bg": "season/img_season_2", 
+        "icon": "common6/icon_season_21", 
+        "txtIcon": "common6/txt_season_21", 
+        "colors": [
+            "#1dadff", 
+            "#52a2b3"
+        ], 
+        "enterSound": 20702, 
+        "video": "videos/video_summer_1080_30_H_8s", 
+        "bgm": 4
+    }, 
+    "26": {
+        "id": 26, 
+        "name": "秋上", 
+        "month": [
+            9
+        ], 
+        "type": 3, 
+        "bg": "season/img_season_3", 
+        "icon": "common6/icon_season_31", 
+        "txtIcon": "common6/txt_season_31", 
+        "colors": [
+            "#e75819", 
+            "#ffb070"
+        ], 
+        "enterSound": 20703, 
+        "video": "videos/video_autumn_1080_30_H_8s", 
+        "bgm": 5
+    }, 
+    "27": {
+        "id": 27, 
+        "name": "秋下", 
+        "month": [
+            10, 
+            11
+        ], 
+        "type": 3, 
+        "bg": "season/img_season_3", 
+        "icon": "common6/icon_season_32", 
+        "txtIcon": "common6/txt_season_32", 
+        "colors": [
+            "#e75819", 
+            "#ffb070"
+        ], 
+        "enterSound": 20703, 
+        "video": "videos/video_autumn_1080_30_H_8s", 
+        "bgm": 5
+    }, 
+    "28": {
+        "id": 28, 
+        "name": "冬", 
+        "month": [
+            12
+        ], 
+        "type": 4, 
+        "bg": "season/img_season_4", 
+        "icon": "common6/icon_season_4", 
+        "txtIcon": "common6/txt_season_4", 
+        "colors": [
+            "#5e63a7", 
+            "#afa9ff"
+        ], 
+        "enterSound": 20704, 
+        "video": "videos/video_winter_1080_30_H_8s", 
+        "bgm": 6
+    }
+}

@@ -1,2 +1,4 @@
 python talkcfg_simplifier.py -f TalkCfg.json
 py folder_comparator_gui.py
+
+PersonSocial，sex，audiogroup，PersonalitysCfg roundLin

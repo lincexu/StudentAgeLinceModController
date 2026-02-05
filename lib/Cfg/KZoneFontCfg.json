@@ -1,0 +1,159 @@
+{
+    "101": {
+        "id": 101, 
+        "name": "字体1", 
+        "url": "SourceHanSansCN-Regular SDF", 
+        "colors": [], 
+        "show": 1
+    }, 
+    "102": {
+        "id": 102, 
+        "name": "字体2", 
+        "url": "baotuxiaobaiti SDF", 
+        "colors": [], 
+        "show": 1
+    }, 
+    "103": {
+        "id": 103, 
+        "name": "字体3", 
+        "url": "3JXKJT-C SDF", 
+        "colors": [], 
+        "show": 1
+    }, 
+    "104": {
+        "id": 104, 
+        "name": "字体4", 
+        "url": "youshebiaotihei SDF", 
+        "colors": [], 
+        "show": 1
+    }, 
+    "105": {
+        "id": 105, 
+        "name": "字体5", 
+        "url": "youshehaoshenti SDF", 
+        "colors": [], 
+        "show": 0
+    }, 
+    "106": {
+        "id": 106, 
+        "name": "字体6", 
+        "url": "xinyenianti SDF", 
+        "colors": [], 
+        "show": 0
+    }, 
+    "107": {
+        "id": 107, 
+        "name": "字体7", 
+        "url": "YangRenDongZhuShiTi-Regular SDF", 
+        "colors": [], 
+        "show": 0
+    }, 
+    "108": {
+        "id": 108, 
+        "name": "字体8", 
+        "url": "JasonHandwriting2-Regular SDF", 
+        "colors": [], 
+        "show": 0
+    }, 
+    "201": {
+        "id": 201, 
+        "name": "白", 
+        "url": "img_color_0", 
+        "colors": [
+            "#ffffff"
+        ], 
+        "show": 1
+    }, 
+    "202": {
+        "id": 202, 
+        "name": "红", 
+        "url": "img_color_1", 
+        "colors": [
+            "#ff5050"
+        ], 
+        "show": 1
+    }, 
+    "203": {
+        "id": 203, 
+        "name": "橙", 
+        "url": "img_color_10", 
+        "colors": [
+            "#ffb849"
+        ], 
+        "show": 1
+    }, 
+    "204": {
+        "id": 204, 
+        "name": "黄", 
+        "url": "img_color_2", 
+        "colors": [
+            "#fff10f"
+        ], 
+        "show": 1
+    }, 
+    "205": {
+        "id": 205, 
+        "name": "绿", 
+        "url": "img_color_3", 
+        "colors": [
+            "#2dd013"
+        ], 
+        "show": 1
+    }, 
+    "206": {
+        "id": 206, 
+        "name": "蓝", 
+        "url": "img_color_4", 
+        "colors": [
+            "#0789d3"
+        ], 
+        "show": 1
+    }, 
+    "207": {
+        "id": 207, 
+        "name": "紫", 
+        "url": "img_color_8", 
+        "colors": [
+            "#8932eb"
+        ], 
+        "show": 1
+    }, 
+    "208": {
+        "id": 208, 
+        "name": "粉", 
+        "url": "img_color_7", 
+        "colors": [
+            "#f658b1"
+        ], 
+        "show": 1
+    }, 
+    "209": {
+        "id": 209, 
+        "name": "黑", 
+        "url": "img_color_6", 
+        "colors": [
+            "#646464"
+        ], 
+        "show": 1
+    }, 
+    "210": {
+        "id": 210, 
+        "name": "渐变橙", 
+        "url": "img_color_9", 
+        "colors": [
+            "#e85228", 
+            "#fdbe40"
+        ], 
+        "show": 1
+    }, 
+    "211": {
+        "id": 211, 
+        "name": "渐变蓝", 
+        "url": "img_color_5", 
+        "colors": [
+            "#3480e6", 
+            "#41e4fc"
+        ], 
+        "show": 1
+    }
+}

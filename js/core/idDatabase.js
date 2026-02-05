@@ -56,12 +56,48 @@ class IdDatabase {
      * @returns {Promise<boolean>} 初始化是否成功
      */
     async initialize() {
+        // 检查是否需要自动加载默认数据
+        let autoLoadDefaultData = false;
+        if (window.configManager) {
+            // 等待配置管理器初始化完成
+            autoLoadDefaultData = window.configManager.get('autoLoadDefaultData');
+        } else {
+            // 如果配置管理器还没有初始化，尝试直接读取配置文件
+            try {
+                const response = await fetch('config.jsonc', {
+                    cache: 'no-cache'
+                });
+                if (response.ok) {
+                    const jsoncText = await response.text();
+                    // 使用简单的JSON解析，因为JSONC解析在ConfigManager中
+                    const fileConfig = JSON.parse(jsoncText);
+                    autoLoadDefaultData = fileConfig.autoLoadDefaultData || false;
+                }
+            } catch (error) {
+                console.error('[IdDatabase] 直接读取配置文件失败:', error);
+            }
+        }
+        console.log('[IdDatabase] autoLoadDefaultData:', autoLoadDefaultData);
+        
+        // 将autoLoadDefaultData存储为实例变量，以便在其他方法中使用
+        this.autoLoadDefaultData = autoLoadDefaultData;
+        
+        // 如果autoLoadDefaultData为true，强制重新初始化
+        if (autoLoadDefaultData) {
+            this.initialized = false;
+        }
+        
         if (this.initialized) {
+            console.log('[IdDatabase] 数据库已初始化，跳过初始化');
             return true;
         }
         
+        console.log('[IdDatabase] 开始初始化数据库...');
         this.loading = true;
         this.error = null;
+        
+        // 设置标志，控制是否需要持久化数据
+        this.shouldPersist = !autoLoadDefaultData;
         
         try {
             // 从idTypelib.json加载ID类型配置（总是重新加载以获取最新配置）
@@ -71,12 +107,31 @@ class IdDatabase {
             // 初始化数据库结构
             this.updateProgress('初始化数据库结构...', 20);
             this.initDatabaseStructure();
-            
-            // 检查是否需要自动加载默认数据
-            const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
 
-            
-            if (!autoLoadDefaultData) {
+            if (this.autoLoadDefaultData) {
+                // 自动加载默认数据，直接从源文件读取
+                // 清空已有数据，确保每次都重新加载
+                this.updateProgress('清空已有数据...', 30);
+                this.clear();
+                
+                // 清空浏览器存储中的数据
+                console.log('[IdDatabase] 开始清空浏览器存储...');
+                await this.clearStorage();
+                console.log('[IdDatabase] 浏览器存储清空完成');
+                
+                // 清空目录缓存，确保重新读取文件列表
+                console.log('[IdDatabase] 清空目录缓存...');
+                this.directoryCache.clear();
+                console.log('[IdDatabase] 目录缓存清空完成');
+                
+                // 加载默认数据
+                this.updateProgress('加载默认数据...', 40);
+                await this.loadDefaultData();
+                
+                // 加载baseGame数据
+                this.updateProgress('加载baseGame数据...', 70);
+                await this.loadBaseGameData();
+            } else {
                 // 尝试从存储中恢复数据
                 this.updateProgress('恢复数据库数据...', 30);
                 const restored = await this.restoreFromStorage();
@@ -92,6 +147,13 @@ class IdDatabase {
                 
                 if (!restored || missingTypes.length > 0) {
                     // 恢复失败或数据不完整，重新加载数据
+                    // 清空已有数据，确保重新加载
+                    this.updateProgress('清空已有数据...', 35);
+                    this.clear();
+                    
+                    // 清空浏览器存储中的数据
+                    await this.clearStorage();
+                    
                     // 获取总类型数
                     const totalTypes = Object.keys(this.idTypes).length;
                     let processedTypes = 0;
@@ -106,14 +168,6 @@ class IdDatabase {
                     await this.loadBaseGameData();
                     processedTypes += Object.keys(this.idTypes).length;
                 }
-            } else {
-                // 自动加载默认数据，直接从源文件读取
-                this.updateProgress('加载默认数据...', 40);
-                await this.loadDefaultData();
-                
-                // 加载baseGame数据
-                this.updateProgress('加载baseGame数据...', 70);
-                await this.loadBaseGameData();
             }
             
             // 完成初始化
@@ -122,7 +176,13 @@ class IdDatabase {
             this.loading = false;
             
             // 初始化完成后持久化数据
+            // 检查是否需要自动加载默认数据
+        const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
+        
+        // 只有在autoLoadDefaultData为false时才持久化数据
+        if (!autoLoadDefaultData) {
             await this.persistToStorage();
+        }
             
             return true;
         } catch (error) {
@@ -139,7 +199,9 @@ class IdDatabase {
      */
     async loadIdTypeConfig() {
         try {
-            const response = await fetch('lib/idTypelib.json');
+            const response = await fetch('lib/idTypelib.json', {
+                cache: 'no-cache'
+            });
             if (response.ok) {
                 const idTypelib = await response.json();
                 const allType = idTypelib.allType;
@@ -220,7 +282,9 @@ class IdDatabase {
                     for (const matchingFile of matchingFiles) {
                         try {
                             const fileUrl = `${cfgDir}${matchingFile}`;
-                            const fileResponse = await fetch(fileUrl);
+                            const fileResponse = await fetch(fileUrl, {
+                                cache: 'no-cache'
+                            });
                             if (fileResponse.ok) {
                                 const content = await fileResponse.text();
                                 const jsonData = this.parseJson(content);
@@ -290,7 +354,9 @@ class IdDatabase {
                     for (const fileName of matchingFiles) {
                         try {
                             const filePath = `${cfgDir}${fileName}`;
-                            const fileResponse = await fetch(filePath);
+                            const fileResponse = await fetch(filePath, {
+                                cache: 'no-cache'
+                            });
                             if (fileResponse.ok) {
                                 const content = await fileResponse.text();
                                 const jsonData = this.parseJson(content);
@@ -338,7 +404,9 @@ class IdDatabase {
                         // 处理所有匹配的文件
                         for (const matchingFile of matchingFiles) {
                             try {
-                                const fileResponse = await fetch(`${cfgDir}${matchingFile}`);
+                                const fileResponse = await fetch(`${cfgDir}${matchingFile}`, {
+                                    cache: 'no-cache'
+                                });
                                 if (fileResponse.ok) {
                                     const content = await fileResponse.text();
                                     const jsonData = this.parseJson(content);
@@ -420,22 +488,19 @@ class IdDatabase {
                 
                 // 检查id是否为undefined或null，而不是简单的if(id)，因为id=0时会被评估为false
                 if (id !== undefined && id !== null) {
+                    // 根据idTypelib的dataKey获取name值
                     let nameValue = data[typeConfig.dataKey];
+                    
+                    // 处理数组情况（取第一个元素）
                     if (Array.isArray(nameValue) && nameValue.length > 0) {
                         nameValue = nameValue[0];
                     }
+                    
+                    // 只保留id和name两个字段
                     const item = {
                         id: id,
-                        name: nameValue || typeConfig.displayName
+                        name: nameValue || typeConfig.displayName || id
                     };
-                    
-                    // 提取其他属性
-                    if (data.icon) {
-                        item.icon = data.icon;
-                    }
-                    if (data.type) {
-                        item.type = data.type;
-                    }
                     
                     batch.push(item);
                     
@@ -453,8 +518,10 @@ class IdDatabase {
             this.batchAddToMap(idMap, batch);
         }
         
-        // 数据更新后持久化到存储
-        await this.persistToStorage();
+        // 数据更新后持久化到存储（根据标志决定是否需要持久化）
+        if (this.shouldPersist) {
+            await this.persistToStorage();
+        }
     }
     
     /**
@@ -881,6 +948,40 @@ class IdDatabase {
     }
     
     /**
+     * 清空浏览器存储中的数据
+     */
+    async clearStorage() {
+        // 清空IndexedDB
+        try {
+            const db = await this.openIndexedDB();
+            if (db) {
+                await new Promise((resolve) => {
+                    const transaction = db.transaction(['idDatabase'], 'readwrite');
+                    const store = transaction.objectStore('idDatabase');
+                    const request = store.clear();
+                    
+                    request.onsuccess = () => {
+                        resolve(true);
+                    };
+                    
+                    request.onerror = () => {
+                        resolve(false);
+                    };
+                });
+            }
+        } catch (error) {
+            console.error('[IdDatabase] 清空IndexedDB失败:', error);
+        }
+        
+        // 清空localStorage
+        try {
+            localStorage.removeItem('idDatabase_data');
+        } catch (error) {
+            console.error('[IdDatabase] 清空localStorage失败:', error);
+        }
+    }
+    
+    /**
      * 读取文件内容
      * @param {File} file 文件对象
      * @returns {Promise<string>} 文件内容
@@ -901,13 +1002,28 @@ class IdDatabase {
      */
     parseJson(jsonString) {
         try {
-            // 对于大文件，考虑使用Web Worker或其他优化
-            // 这里使用基本的JSON.parse，但添加了错误处理
-            return JSON.parse(jsonString);
+            // 清理JSON字符串中的控制字符
+            const cleanedJson = this.cleanJsonString(jsonString);
+            return JSON.parse(cleanedJson);
         } catch (error) {
             console.error('[IdDatabase] JSON解析失败:', error);
             throw error;
         }
+    }
+    
+    /**
+     * 清理JSON字符串中的控制字符
+     * @param {string} jsonString JSON字符串
+     * @returns {string} 清理后的JSON字符串
+     */
+    cleanJsonString(jsonString) {
+        if (typeof jsonString !== 'string') {
+            return jsonString;
+        }
+        
+        // 移除控制字符（除了换行符、制表符、回车符）
+        // 这些字符在JSON字符串中是不合法的
+        return jsonString.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
     }
     
     /**
@@ -971,8 +1087,10 @@ class IdDatabase {
                 return cached.fileNames;
             }
             
-            // 发送请求获取目录内容
-            const dirResponse = await fetch(directory);
+            // 发送请求获取目录内容（禁用缓存）
+            const dirResponse = await fetch(directory, {
+                cache: 'no-cache'
+            });
             if (dirResponse.ok) {
                 const dirContent = await dirResponse.text();
                 const fileNames = this.extractFileNamesFromDirContent(dirContent);

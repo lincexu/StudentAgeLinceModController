@@ -8,7 +8,7 @@
             "wiki": false
         },
         "ActionEvtId": {
-            "name": "行动事件",
+            "name": "行动随机触发事件",
             "file": "ActionEvtCfg*.json",
             "desc": "行动事件ID",
             "dataKey": "name",
@@ -33,7 +33,7 @@
             "file": "BookCfg*.json",
             "desc": "书籍ID",
             "dataKey": "name",
-            "wiki": true
+            "wiki": false
         },
         "CGId": {
             "name": "CG",
@@ -67,14 +67,14 @@
             "name": "空间头像",
             "file": "KZoneAvatarCfg*.json",
             "desc": "空间头像ID",
-            "dataKey": "name",
+            "dataKey": "icon",
             "wiki": false
         },
         "KZoneCommentId": {
             "name": "空间评论",
             "file": "KZoneCommentCfg*.json",
             "desc": "空间评论ID",
-            "dataKey": "name",
+            "dataKey": "content",
             "wiki": false
         },
         "KZoneContentId": {
@@ -91,12 +91,26 @@
             "dataKey": "name",
             "wiki": false
         },
+        "KZoneColorId": {
+            "name": "空间配色",
+            "file": "KZoneColorCfg*.json",
+            "desc": "空间配色ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "KZoneFontId": {
+            "name": "空间字体",
+            "file": "KZoneFontCfg*.json",
+            "desc": "签名字体ID",
+            "dataKey": "name",
+            "wiki": true
+        },
         "PersonId": {
             "name": "角色",
             "file": "PersonCfg*.json",
             "desc": "角色ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "PersonGrowId": {
             "name": "角色成长",
@@ -131,111 +145,189 @@
             "file": "ClothTypeCfg*.json",
             "desc": "衣服类型ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "EvtTypeId": {
             "name": "事件类型",
             "file": "EvtTypeCfg*.json",
             "desc": "事件类型ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "FuncId": {
             "name": "功能",
             "file": "FuncCfg*.json",
             "desc": "功能ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "ItemTypeId": {
             "name": "物品类型",
             "file": "ItemTypeCfg*.json",
             "desc": "物品类型ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "ItemTagId": {
             "name": "物品标签",
             "file": "ItemTagCfg*.json",
             "desc": "物品标签ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "MapId": {
             "name": "地图",
             "file": "MapCfg*.json",
             "desc": "地图ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "MinigameId": {
             "name": "迷你游戏",
             "file": "MinigameCfg*.json",
             "desc": "迷你游戏ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "PersonalityTypeId": {
             "name": "价值观与人格",
             "file": "PersonalityTypeCfg*.json",
             "desc": "价值观与人格ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "PersonAttrId": {
             "name": "角色属性",
             "file": "PersonAttrCfg*.json",
             "desc": "角色属性ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "personStateID": {
             "name": "角色状态",
             "file": "PersonStateCfg*.json",
             "desc": "角色状态ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "RelationId": {
             "name": "关系",
             "file": "RelationCfg*.json",
             "desc": "关系ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "ScoreRankId": {
-            "name": "积分排名",
+            "name": "段位排名",
             "file": "ScoreRankCfg*.json",
-            "desc": "积分排名ID",
+            "desc": "段位排名ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "SkillId": {
             "name": "技能",
             "file": "SkillCfg*.json",
             "desc": "技能ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "TalkId": {
             "name": "对话",
             "file": "TalkCfg*.json",
             "desc": "对话ID",
-            "dataKey": "name"
+            "dataKey": "name",
+            "wiki": false
         },
-        "actionTypeId": {
+        "ActionTypeId": {
             "name": "行动类型",
             "file": "ActionTypeCfg*.json",
             "desc": "行动类型ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
-        "sexId": {
+        "SexId": {
             "name": "性别",
             "file": "SexCfg*.json",
             "desc": "性别ID",
             "dataKey": "desc",
+            "wiki": true
+        },
+        "OptionId": {
+            "name": "选项",
+            "file": "OptionCfg*.json",
+            "desc": "选项ID",
+            "dataKey": "content",
             "wiki": false
+        },
+        "TextId": {
+            "name": "文本",
+            "file": "TextCfg*.json",
+            "desc": "文本ID",
+            "dataKey": "text",
+            "wiki": true
+        },
+        "AudioGroupId": {
+            "name": "音频组别",
+            "file": "AudioGroupCfg*.json",
+            "desc": "音频组别ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "BookThemeId": {
+            "name": "书籍主题",
+            "file": "BookThemeCfg*.json",
+            "desc": "书籍主题ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "ColorId": {
+            "name": "颜色",
+            "file": "ColorCfg*.json",
+            "desc": "颜色ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "PersonSocialId": {
+            "name": "人物社交类别",
+            "file": "PersonSocialCfg*.json",
+            "desc": "人物社交类别ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "RoundLinId": {
+            "name": "回合",
+            "file": "RoundLinCfg*.json",
+            "desc": "回合ID",
+            "dataKey": "desc",
+            "wiki": true
+        },
+        "RenshengguanTypeId": {
+            "name": "人生观类型",
+            "file": "RenshengguanTypeCfg*.json",
+            "desc": "人生观类型ID",
+            "dataKey": "title",
+            "wiki": true
+        },
+        "OtherAttrId": {
+            "name": "其他属性",
+            "file": "OtherAttrCfg*.json",
+            "desc": "其他属性ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "SeasonId": {
+            "name": "季节",
+            "file": "SeasonCfg*.json",
+            "desc": "季节ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "PhoneMsgId": {
+            "name": "短信（临时可查询）",
+            "file": "PhoneMsgCfg*.json",
+            "desc": "短信ID",
+            "dataKey": "content",
+            "wiki": true
         }
     },
     "listType": {
