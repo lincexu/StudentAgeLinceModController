@@ -12,6 +12,15 @@
                 ],
                 "desc": "{personAttrId}{direction}{value}"
             },
+            "changeAttrValueRound": {
+                "rule": [
+                    1,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}每回合{direction}{value}"
+            },
             "changeAttrPercent": {
                 "rule": [
                     1,
@@ -21,48 +30,1802 @@
                 ],
                 "desc": "{personAttrId}获取率{direction}{value}%"
             },
-            "changeAttrValueRound": {
+            "attrAddUnit": {
                 "rule": [
                     1,
+                    22,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}{direction}{value}单位"
+            },
+            "changeAttrValueRoundMultiply": {
+                "rule": [
+                    1,
+                    12,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "{personAttrId1}每回合{direction}{personAttrId2}的{value}倍"
+            },
+            "changeAttrPercentMultiply": {
+                "rule": [
+                    1,
+                    13,
+                    "personAttrId1",
+                    "value1",
+                    "personAttrId2",
+                    "value2"
+                ],
+                "desc": "{personAttrId1}每回合{direction}{personAttrId2}的{value1}/{value2}倍"
+            },
+            "changeAttrValueExtra": {
+                "rule": [
+                    1,
+                    111,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}增加时,额外{direction}{value}"
+            },
+            "attrAddUnitRound": {
+                "rule": [
+                    1,
+                    110,
+                    "personAttrId",
+                    "value1",
+                    "value2",
+                    "value3"
+                ],
+                "desc": "{personAttrId}每回合+{value1},-{value2},直到≤{value3}"
+            },
+            "attrAddUnitRoundMultiply": {
+                "rule": [
+                    1,
+                    120,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}{direction}当前年级数×{value}"
+            },
+            "attrSetValue": {
+                "rule": [
+                    1,
+                    2,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}设为{value}"
+            },
+            "attrAddSkillLevelMultiply": {
+                "rule": [
+                    1,
+                    3,
+                    "personAttrId",
+                    "skillId",
+                    "value"
+                ],
+                "desc": "{personAttrId}{direction}{skillId}的等级×{value}"
+            },
+            "attrAddSkillLevelMultiplyPercent": {
+                "rule": [
+                    1,
+                    4,
+                    "personAttrId",
+                    "skillId",
+                    "value"
+                ],
+                "desc": "{personAttrId}{direction}{skillId}的等级×{value}%"
+            },
+            "attrAddExperienceMultiply": {
+                "rule": [
+                    1,
+                    5,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "经历使{personAttrId}增长率{direction}{value}"
+            },
+            "attrAddRandom": {
+                "rule": [
+                    1,
+                    6,
+                    "personAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{personAttrId}随机增加({value1}-{value2})"
+            },
+            "attrAddRandomRound": {
+                "rule": [
+                    1,
+                    66,
+                    "personAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "每回合随机增加{personAttrId}({value1}-{value2})"
+            },
+            "attrAddUnitRoundMultiplyV1OrV2": {
+                "rule": [
+                    1,
+                    666,
+                    "personAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "每回合增加{personAttrId}({value1}或{value2})点"
+            },
+            "bothAdd": {
+                "rule": [
+                    1,
+                    101,
+                    "value1",
+                    "personAttrId1",
+                    "value1",
+                    "personAttrId2",
+                    "value2"
+                ],
+                "desc": "每{value1}点{personAttrId1}增加{personAttrId2}{value2}点"
+            },
+            "bothAddMax": {
+                "rule": [
+                    1,
+                    101,
+                    "personAttrId1",
+                    "value1",
+                    "personAttrId2",
+                    "value2",
+                    "value3"
+                ],
+                "desc": "每{value1}点{personAttrId1}增加{personAttrId2}{value2}点,最多+{value3}点"
+            },
+            "whenAddAttr": {
+                "rule": [
+                    1,
+                    1001,
+                    "value1",
+                    "personAttrId1",
+                    "value2",
+                    "personAttrId2"
+                ],
+                "desc": "每当提升{value1}点{personAttrId1}时,提升{value2}点{personAttrId2}"
+            },
+            "attrAddByFriendALL": {
+                "rule": [
+                    1,
+                    20,
+                    "OtherRelationId",
+                    "value",
+                    "personAttrId"
+                ],
+                "desc": "每有一名{OtherRelationId}{direction}{value}点{personAttrId}"
+            },
+            "attrAddByPersonGrade": {
+                "rule": [
+                    1,
+                    8,
+                    1,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "每个{value1}人格等级增加{personAttrId}{value2}点"
+            },
+            "attrAddByPersonGradeRate": {
+                "rule": [
+                    1,
+                    8,
+                    10,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "每个{value1}人格等级使{personAttrId}增长率增长{value2}"
+            },
+            "attrAddByPersonGradePlus": {
+                "rule": [
+                    1,
+                    8,
+                    11,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "每个{value1}人格等级使{personAttrId}每回合增加{value2}"
+            },
+            "attrAddByPersonGradePlusByTag": {
+                "rule": [
+                    1,
+                    40,
+                    "actionTypeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每精通一个{actionTypeId}标签的行动,{personAttrId}属性{direction}{value}"
+            },
+            "attrAddByPersonGradePlusByTagX": {
+                "rule": [
+                    1,
+                    41,
+                    "actionTypeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每精通过1个{actionTypeId}标签的行动,{personAttrId}属性{direction}{value}"
+            },
+            "PressureRatingAddAttr": {
+                "rule": [
+                    1,
+                    300,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级压力使{personAttrId}属性{direction}{value}"
+            },
+            "PressureRatingAddAttrRound": {
+                "rule": [
+                    1,
+                    300,
                     11,
                     "personAttrId",
                     "value"
                 ],
-                "desc": "{personAttrId}每回合{direction}{value}"
+                "desc": "每等级压力使{personAttrId}属性每回合{direction}{value}"
+            },
+            "PressureRatingAddAttrPercent": {
+                "rule": [
+                    1,
+                    300,
+                    10,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级压力使{personAttrId}属性增长率{direction}{value}%"
+            },
+            "SingleAddAttr": {
+                "rule": [
+                    1,
+                    50,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "单身则{personAttrId}属性{direction}{value}"
+            },
+            "SingleAddAttrRound": {
+                "rule": [
+                    1,
+                    50,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "单身则{personAttrId}属性每回合{direction}{value}"
+            },
+            "SingleAddAttrPercent": {
+                "rule": [
+                    1,
+                    50,
+                    10,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "单身则{personAttrId}属性增长率{direction}{value}%"
+            },
+            "singleWinAddAttrPercent": {
+                "rule": [
+                    1,
+                    50,
+                    85,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "单身则每回合{personAttrId}被动收入{direction}{value}%"
+            },
+            "singleWinAddAttrPercentByPersonGrade": {
+                "rule": [
+                    1,
+                    74,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "当某项性格超过{value1}时,每超过1点,其效果增加{value2}%"
+            },
+            "obtainAttrAddRandomAttr": {
+                "rule": [
+                    1,
+                    75,
+                    "personAttrId1",
+                    "value",
+                    "personAttrId2"
+                ],
+                "desc": "获得{personAttrId1}属性时,随机获得{value}×{personAttrId2}"
+            },
+            "intelligenceRatingAddAttr": {
+                "rule": [
+                    1,
+                    76,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "智力评级每提升1次,{personAttrId}属性{direction}{value}"
+            },
+            "emotionalRatingAddAttr": {
+                "rule": [
+                    1,
+                    77,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "情商评级每提升1次,{personAttrId}属性{direction}{value}"
+            },
+            "bodyRatingAddAttr": {
+                "rule": [
+                    1,
+                    78,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "体魄评级每提升1次,{personAttrId}属性{direction}{value}"
+            },
+            "unlockSpecialtyAddAttr": {
+                "rule": [
+                    1,
+                    99,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "解锁的每个专长提供{value}点{personAttrId}属性"
+            },
+            "unlockSpecialtyAddAttrA": {
+                "rule": [
+                    1,
+                    98,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}属性固定为解锁的专长数×{value}"
+            },
+            "whenXAttrGreaterThanVAddYAttrP": {
+                "rule": [
+                    1,
+                    97,
+                    "personAttrId1",
+                    "value1",
+                    "personAttrId2",
+                    "value2"
+                ],
+                "desc": "当{personAttrId1}属性高于{value1}时,{personAttrId2}属性提升{direction}{value2}"
+            },
+            "whenXAttrIsMultipleOfVAddYAttrP": {
+                "rule": [
+                    1,
+                    96,
+                    "personAttrId1",
+                    "value1",
+                    "personAttrId2",
+                    "value2"
+                ],
+                "desc": "当{personAttrId1}属性是{value1}的整数倍时,{personAttrId2}属性{direction}{value2}"
+            },
+            "LowestAttrAddAttrRound": {
+                "rule": [
+                    1,
+                    95,
+                    "value",
+                    0
+                ],
+                "desc": "最低的能力每回合{direction}{value}"
+            },
+            "HighestAttrAddAttrRound": {
+                "rule": [
+                    1,
+                    95,
+                    "value",
+                    1
+                ],
+                "desc": "最高的能力每回合{direction}{value}"
+            },
+            "whenHighestAttrAddAttrRound": {
+                "rule": [
+                    1,
+                    94,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    1
+                ],
+                "desc": "当{personAttrId1}是最高能力时,{personAttrId2}属性每回合{direction}{value}"
+            },
+            "whenLowestAttrAddAttrRound": {
+                "rule": [
+                    1,
+                    93,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    0
+                ],
+                "desc": "当{personAttrId1}是最低能力时,{personAttrId2}属性每回合{direction}{value}"
+            },
+            "attrAddImprove": {
+                "rule": [
+                    1,
+                    93,
+                    "personAttrId",
+                    "value1",
+                    "value2",
+                    "value3"
+                ],
+                "desc": "{personAttrId}属性增加{value1},每回合效果提升{value2},最高提升{value3}"
+            },
+            "whenNoAttrAddAddAttrAdd": {
+                "rule": [
+                    1,
+                    92,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "若本回合属性{personAttrId}无增长,则每{direction}{value}"
+            },
+            "whenAttrBestAttrAdd": {
+                "rule": [
+                    1,
+                    91,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    1
+                ],
+                "desc": "当{personAttrId1}是最高能力时,{personAttrId2}属性{direction}{value}"
+            },
+            "whenAttrWorstAttrAdd": {
+                "rule": [
+                    1,
+                    91,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    0
+                ],
+                "desc": "当{personAttrId1}是最低能力时,{personAttrId2}属性{direction}{value}"
+            },
+            "whenAttrBestAttrAddP": {
+                "rule": [
+                    1,
+                    90,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    1
+                ],
+                "desc": "当{personAttrId1}是最高能力时,{personAttrId2}属性提升{direction}{value}%"
+            },
+            "whenAttrWorstAttrAddP": {
+                "rule": [
+                    1,
+                    90,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "value",
+                    0
+                ],
+                "desc": "当{personAttrId1}是最低能力时,{personAttrId2}属性{direction}{value}%"
+            },
+            "whenMoodIsHigherThanXAddAttr": {
+                "rule": [
+                    1,
+                    89,
+                    "value",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "当心情高于{value}时,{personAttrId}属性{direction}{value2}"
+            },
+            "whenBodyRatingAddAttr": {
+                "rule": [
+                    1,
+                    88,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "体魄评级每提升1次,{personAttrId}属性每回合{direction}{value}"
+            },
+            "whenEmotionRatingAddAttr": {
+                "rule": [
+                    1,
+                    87,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "情商评级每提升1次,{personAttrId}属性每回合{direction}{value}"
+            },
+            "whenIntelligenceRatingAddAttr": {
+                "rule": [
+                    1,
+                    86,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "智力评级每提升1次,{personAttrId}属性每回合{direction}{value}"
+            },
+            "whenAttrAddAttrAdd": {
+                "rule": [
+                    1,
+                    85,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每回合{personAttrId}属性的被动收入{direction}{value}"
+            },
+            "whenAttrAddAttrAddP": {
+                "rule": [
+                    1,
+                    84,
+                    "personAttrId1",
+                    "personAttrId2",
+                    "personAttrId3",
+                    "value"
+                ],
+                "desc": "当{personAttrId1}每高出{personAttrId2}1级时,{personAttrId3}属性{direction}{value}"
+            },
+            "whenRejectAddAttr": {
+                "rule": [
+                    1,
+                    83,
+                    1,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "若你拒绝过表白且{value1}开关打开,则{personAttrId}属性增加{value2}"
+            },
+            "whenRejectAddAttrPercent": {
+                "rule": [
+                    1,
+                    83,
+                    1,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "若你拒绝过表白且{value1}开关打开,则{personAttrId}属性率增加{value2}%"
+            },
+            "whenRejectAddAttrAdd": {
+                "rule": [
+                    1,
+                    83,
+                    1,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "若你拒绝过表白且{value1}开关打开,则{personAttrId}属性每回合增加{value2}"
             }
         }
     },
     "2": {
         "id": 2,
-        "name": "价值观与人格"
+        "name": "价值观与人格",
+        "type": {
+            "breakXPersonalityAny": {
+                "rule": [
+                    2,
+                    1,
+                    -1
+                ],
+                "desc": "突破任一人格"
+            },
+            "breakXPersonality": {
+                "rule": [
+                    2,
+                    1,
+                    "personAttrId"
+                ],
+                "desc": "突破{personAttrId}人格"
+            },
+            "attrByPerLevel": {
+                "rule": [
+                    2,
+                    "personAttrId1",
+                    1,
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每等级{personAttrId1}人格使{personAttrId2}属性{direction}{value}"
+            },
+            "attrByPerLevelRound": {
+                "rule": [
+                    2,
+                    "personAttrId1",
+                    11,
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每等级{personAttrId1}人格使{personAttrId2}属性每回合{direction}{value}"
+            },
+            "attrByPerLevelPercent": {
+                "rule": [
+                    2,
+                    "personAttrId1",
+                    1,
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每等级{personAttrId1}人格使{personAttrId2}属性{direction}{value}%"
+            },
+            "unlockXValues": {
+                "rule": [
+                    2,
+                    2,
+                    "ValueviewId"
+                ],
+                "desc": "解锁{ValueviewId}"
+            },
+            "keepEduCostPercent": {
+                "rule": [
+                    2,
+                    100,
+                    1,
+                    "value"
+                ],
+                "desc": "采用价值观时,保留所消耗阅历的{value}"
+            },
+            "attrByUnlockValuesRound": {
+                "rule": [
+                    2,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}属性每回合{direction}{value}×每个已解锁价值观数量"
+            },
+            "attrByUnlockValues": {
+                "rule": [
+                    2,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}属性{direction}{value}×每个已解锁价值观数量"
+            },
+            "EachEduLevelAddAttr": {
+                "rule": [
+                    2,
+                    21,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级阅历使{personAttrId}属性{direction}{value}"
+            },
+            "EachEduLevelAddAttrRound": {
+                "rule": [
+                    2,
+                    21,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级阅历使{personAttrId}属性每回合{direction}{value}"
+            },
+            "unlockMotto": {
+                "rule": [
+                    2,
+                    110,
+                    1
+                ],
+                "desc": "解锁座右铭"
+            },
+            "attrByShinnyAddPercent": {
+                "rule": [
+                    2,
+                    203,
+                    1,
+                    "value"
+                ],
+                "desc": "灵光一闪增益增加{value}%"
+            },
+            "attrByShinnyAddPercentRound": {
+                "rule": [
+                    2,
+                    203,
+                    2,
+                    "value"
+                ],
+                "desc": "灵光一闪倍率增加{value}%"
+            },
+            "attrByFocusAddPercent": {
+                "rule": [
+                    2,
+                    204,
+                    1,
+                    "value"
+                ],
+                "desc": "全神贯注增益增加{value}%"
+            },
+            "attrByFocusAddPercentRound": {
+                "rule": [
+                    2,
+                    204,
+                    2,
+                    "value"
+                ],
+                "desc": "全神贯注倍率增加{value}%"
+            },
+            "unlockHeistAct": {
+                "rule": [
+                    2,
+                    206,
+                    1
+                ],
+                "desc": "解锁恶作剧行动"
+            },
+            "unlockNewPersonality": {
+                "rule": [
+                    2,
+                    95
+                ],
+                "desc": "可解锁新的人格机制"
+            },
+            "unlockNewValues": {
+                "rule": [
+                    2,
+                    96
+                ],
+                "desc": "可采用新的价值观"
+            },
+            "unlockPersonality": {
+                "rule": [
+                    2,
+                    97,
+                    1
+                ],
+                "desc": "可强化一次人格"
+            },
+            "imitateOtherValues": {
+                "rule": [
+                    2,
+                    98,
+                    1,
+                    "value"
+                ],
+                "desc": "此价值观会模仿其他随机{value}个主人格价值观的效果"
+            },
+            "imitateOtherValuesNotMaster": {
+                "rule": [
+                    2,
+                    98,
+                    -1,
+                    "value"
+                ],
+                "desc": "此价值观会模仿其他非主人格{value}个价值观的效果"
+            },
+            "unlockAllPersonalityValues": {
+                "rule": [
+                    2,
+                    99,
+                    "personAttrId"
+                ],
+                "desc": "解锁所有{personAttrId}人格价值观"
+            },
+            "followLimit": {
+                "rule": [
+                    2,
+                    101,
+                    1,
+                    "value"
+                ],
+                "desc": "社交圈可邀请人数为{value}"
+            },
+            "unlockReflectSlot": {
+                "rule": [
+                    2,
+                    102,
+                    1,
+                    "IntrospectionSlotId"
+                ],
+                "desc": "解锁{IntrospectionSlotId}反思槽"
+            },
+            "unlockMottoLimit": {
+                "rule": [
+                    2,
+                    110,
+                    1,
+                    "value"
+                ],
+                "desc": "可以采用{value}级及以下的座右铭"
+            },
+            "unlockHeat": {
+                "rule": [
+                    2,
+                    999,
+                    101,
+                    1
+                ],
+                "desc": "解锁热情"
+            },
+            "unlockNetwork": {
+                "rule": [
+                    2,
+                    999,
+                    101,
+                    2
+                ],
+                "desc": "解锁人脉"
+            },
+            "unlockShinny": {
+                "rule": [
+                    2,
+                    999,
+                    103,
+                    1
+                ],
+                "desc": "解锁灵光一闪"
+            },
+            "unlockFocus": {
+                "rule": [
+                    2,
+                    999,
+                    104,
+                    1
+                ],
+                "desc": "解锁全神贯注"
+            },
+            "unlockRelax": {
+                "rule": [
+                    2,
+                    999,
+                    109,
+                    1
+                ],
+                "desc": "解锁神清气爽"
+            },
+            "unlockMottoFunc": {
+                "rule": [
+                    2,
+                    999,
+                    110,
+                    1
+                ],
+                "desc": "解锁座右铭"
+            },
+            "unlockIntegrity": {
+                "rule": [
+                    2,
+                    999,
+                    105,
+                    1
+                ],
+                "desc": "解锁正直度"
+            },
+            "unlockSmooth": {
+                "rule": [
+                    2,
+                    999,
+                    106,
+                    1
+                ],
+                "desc": "解锁圆滑度"
+            },
+            "changeMood": {
+                "rule": [
+                    2,
+                    998,
+                    109,
+                    1,
+                    "value"
+                ],
+                "desc": "改变心态为{value}"
+            },
+            "unlockMoodDecay": {
+                "rule": [
+                    2,
+                    998,
+                    109,
+                    2
+                ],
+                "desc": "心情不会衰减"
+            },
+            "unlockPersonalityType": {
+                "rule": [
+                    2,
+                    997,
+                    "personalityType"
+                ],
+                "desc": "解锁{personalityType}人格类型"
+            }
+        }
     },
     "3": {
         "id": 3,
-        "name": "改变技能"
+        "name": "改变技能",
+        "type": {
+            "addSkill": {
+                "rule": [
+                    3,
+                    2,
+                    "skillId"
+                ],
+                "desc": "增加技能{skillId}"
+            },
+            "addSkillAttr": {
+                "rule": [
+                    3,
+                    40,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "练习技能时{personAttrId}属性增加{value}"
+            }
+        }
     },
     "4": {
         "id": 4,
-        "name": "学习"
+        "name": "学习",
+        "type": {
+            "addKnowledge": {
+                "rule": [
+                    4,
+                    1,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "获得{knowledgeId}科目{value}点知识"
+            },
+            "addKnowledgeAttr": {
+                "rule": [
+                    4,
+                    2,
+                    "knowledgeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}科目知识{direction}{personAttrId}属性×{value}"
+            },
+            "reviewKnowledge": {
+                "rule": [
+                    4,
+                    4,
+                    1,
+                    "value"
+                ],
+                "desc": "复习/上课的基础知识点{direction}{value}"
+            },
+            "reviewKnowledgeAttr": {
+                "rule": [
+                    4,
+                    5,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "复习{personAttrId}属性{direction}{value}"
+            },
+            "changeKnowledgeProgress": {
+                "rule": [
+                    4,
+                    6,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}科目进度{direction}{value}"
+            },
+            "reviewEnergyDecay": {
+                "rule": [
+                    4,
+                    7,
+                    "value"
+                ],
+                "desc": "复习的精力消耗减少{value}"
+            },
+            "addKnowledgePerRound": {
+                "rule": [
+                    4,
+                    11,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "每回合获得{knowledgeId}科目{value}点知识"
+            },
+            "changeKnowledgeProgressPerRound": {
+                "rule": [
+                    4,
+                    111,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "每回合为{knowledgeId}科目的当下知识增加{value}点进度"
+            },
+            "changeKnowledgeProgressPerRoundUnlocked": {
+                "rule": [
+                    4,
+                    112,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "每回合为已解锁{knowledgeId}科目的当下知识增加{value}点进度"
+            },
+            "getKnowledgeRateaAllUnlock": {
+                "rule": [
+                    4,
+                    10,
+                    0,
+                    "value"
+                ],
+                "desc": "所有解锁科目知识获取率{direction}{value}"
+            },
+            "getKnowledgeRateaWen": {
+                "rule": [
+                    4,
+                    10,
+                    -2,
+                    "value"
+                ],
+                "desc": "所有解锁科目知识获取率{direction}{value}"
+            },
+            "getKnowledgeRateaLi": {
+                "rule": [
+                    4,
+                    10,
+                    -1,
+                    "value"
+                ],
+                "desc": "所有解锁科目知识获取率{direction}{value}"
+            },
+            "getKnowledgeRateaAll": {
+                "rule": [
+                    4,
+                    10,
+                    0,
+                    "value"
+                ],
+                "desc": "所有科目知识获取率{direction}{value}"
+            },
+            "getKnowledgeRate": {
+                "rule": [
+                    4,
+                    10,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}科目知识获取率{direction}{value}"
+            },
+            "activeLearningEnergyDecay": {
+                "rule": [
+                    4,
+                    12,
+                    "value"
+                ],
+                "desc": "主动学习时,动力消耗增加{value}"
+            },
+            "LearningKnowledgeEfficiency": {
+                "rule": [
+                    4,
+                    20,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}科目学习效率{direction}{value}"
+            },
+            "LearningKnowledgeEfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "每次主动学习{knowledgeId}科目时,其学科效率{direction}{value}"
+            },
+            "LearningKnowledges2EfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId1",
+                    "knowledgeId2"
+                ],
+                "desc": "每次主动学习{knowledgeId1}和{knowledgeId2}科目时,其学科效率{direction}{value}"
+            },
+            "LearningKnowledges3EfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId1",
+                    "knowledgeId2",
+                    "knowledgeId3"
+                ],
+                "desc": "每次主动学习{knowledgeId1}、{knowledgeId2}和{knowledgeId3}科目时,其学科效率{direction}{value}"
+            },
+            "LearningKnowledges4EfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId1",
+                    "knowledgeId2",
+                    "knowledgeId3",
+                    "knowledgeId4"
+                ],
+                "desc": "每次主动学习{knowledgeId1}、{knowledgeId2}、{knowledgeId3}和{knowledgeId4}科目时,其学科效率{direction}{value}"
+            },
+            "LearningKnowledges5EfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId1",
+                    "knowledgeId2",
+                    "knowledgeId3",
+                    "knowledgeId4",
+                    "knowledgeId5"
+                ],
+                "desc": "每次主动学习{knowledgeId1}、{knowledgeId2}、{knowledgeId3}、{knowledgeId4}和{knowledgeId5}科目时,其学科效率{direction}{value}"
+            },
+            "LearningKnowledges6EfficiencyPerRound": {
+                "rule": [
+                    4,
+                    21,
+                    "value",
+                    "knowledgeId1",
+                    "knowledgeId2",
+                    "knowledgeId3",
+                    "knowledgeId4",
+                    "knowledgeId5",
+                    "knowledgeId6"
+                ],
+                "desc": "每次主动学习{knowledgeId1}、{knowledgeId2}、{knowledgeId3}、{knowledgeId4}、{knowledgeId5}和{knowledgeId6}科目时,其学科效率{direction}{value}"
+            },
+            "personAttrIdEfficiencyPerRound": {
+                "rule": [
+                    4,
+                    22,
+                    "personAttrId",
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{personAttrId}超过5级时,每超出1级,使{knowledgeId}学科效率{direction}{valuevalue}"
+            },
+            "increaseInHighScores": {
+                "rule": [
+                    4,
+                    23,
+                    "value1",
+                    "value2",
+                    "value3"
+                ],
+                "desc": "最高分科目的平时成绩超过{value1}分后,每超出{value2}分,所有学科效率增加{value3}(高中文综/理综的平时成绩减半计算)"
+            },
+            "LearningStrategyEfficiencyPerRound": {
+                "rule": [
+                    4,
+                    24,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "每掌握一个学习策略使{knowledgeId}学科效率{direction}{value}"
+            },
+            "LearningStrategyEfficiencyLowest": {
+                "rule": [
+                    4,
+                    25,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}学科效率最低为{value}"
+            },
+            "ReadBookEfficiencyPerRound": {
+                "rule": [
+                    4,
+                    26,
+                    "itemTypeId",
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "每读完过一本{itemTypeId}类书,{knowledgeId}学科效率{direction}{value}"
+            },
+            "personAttrIdEfficiencyPercentRound": {
+                "rule": [
+                    4,
+                    27,
+                    "value",
+                    "personAttrId",
+                    "knowledgeId"
+                ],
+                "desc": "每{value}点{personAttrId}属性,使{knowledgeId}学科效率+1%"
+            },
+            "increaseLearningEfficiencyInHighScores": {
+                "rule": [
+                    4,
+                    28,
+                    "value1",
+                    "value2",
+                    "value3"
+                ],
+                "desc": "最高分科目的平时成绩超过{value1}分后,每超出{value2}分,学习效率增加{value3}(高中文综/理综的平时成绩减半计算)"
+            },
+            "initialLearningPressurePerRound": {
+                "rule": [
+                    4,
+                    29,
+                    "value"
+                ],
+                "desc": "每回合的初始学习压力{direction}{value}"
+            },
+            "increasePersonAttrIdWhenLearning": {
+                "rule": [
+                    4,
+                    40,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "学习(包括做作业)时{personAttrId}属性{direction}{value}"
+            },
+            "knowledgeIdEfficiencyPercentRound": {
+                "rule": [
+                    4,
+                    50,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}类型知识获取率{direction}{value}"
+            },
+            "AddKnowledgeIdToLearningList": {
+                "rule": [
+                    4,
+                    40,
+                    1,
+                    "knowledgeId"
+                ],
+                "desc": "将{knowledgeId}添加到列表"
+            },
+            "RemoveKnowledgeIdFromLearningList": {
+                "rule": [
+                    4,
+                    40,
+                    -1,
+                    "knowledgeId"
+                ],
+                "desc": "将{knowledgeId}从列表删除"
+            },
+            "FocusOnKnowledgeId": {
+                "rule": [
+                    4,
+                    9,
+                    0
+                ],
+                "desc": "专精任一学科"
+            },
+            "FocusOnKnowledgeIdX": {
+                "rule": [
+                    4,
+                    9,
+                    "knowledgeId"
+                ],
+                "desc": "专精{knowledgeId}学科"
+            },
+            "ExamRankEfficiencyPercent": {
+                "rule": [
+                    4,
+                    100,
+                    "value"
+                ],
+                "desc": "考试排名的效果增加{value}%"
+            },
+            "BecomeLiterate": {
+                "rule": [
+                    4,
+                    99,
+                    1
+                ],
+                "desc": "成为文科生"
+            },
+            "BecomeNonLiterate": {
+                "rule": [
+                    4,
+                    99,
+                    2
+                ],
+                "desc": "成为理科生"
+            },
+            "UnlockAdvantageKnowledge": {
+                "rule": [
+                    4,
+                    999
+                ],
+                "desc": "解锁优势学科效果"
+            },
+            "ExamStepEfficiencyPercent": {
+                "rule": [
+                    4,
+                    998,
+                    "value"
+                ],
+                "desc": "考试时步数{direction}{value}"
+            }
+        }
     },
     "5": {
         "id": 5,
-        "name": "改变性格"
+        "name": "改变性格",
+        "type": {
+            "personAttrIdAddRound": {
+                "rule": [
+                    5,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personAttrId}性格每回合{direction}{value}"
+            },
+            "weightedRandomPersonality": {
+                "rule": [
+                    5,
+                    2,
+                    1
+                ],
+                "desc": "加权随机获得性格"
+            },
+            "weightedRandomPersonAttrId": {
+                "rule": [
+                    5,
+                    2,
+                    2
+                ],
+                "desc": "加权随机获得缺点"
+            },
+            "obtainPersonAttrId": {
+                "rule": [
+                    5,
+                    20,
+                    "personAttrId"
+                ],
+                "desc": "获得{personAttrId}"
+            },
+            "losePersonAttrId": {
+                "rule": [
+                    5,
+                    -2,
+                    1
+                ],
+                "desc": "失去一个缺点"
+            },
+            "trainPersonAttrIdEfficiencyPercentRound": {
+                "rule": [
+                    5,
+                    3,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "培养{personAttrId}的效果{direction}{value}/回合"
+            }
+        }
     },
     "6": {
         "id": 6,
-        "name": "改变技能"
+        "name": "改变技能",
+        "type": {
+            "skillAddExp": {
+                "rule": [
+                    6,
+                    1,
+                    "skillId",
+                    "value"
+                ],
+                "desc": "{skillId}技能经验{direction}{value}"
+            },
+            "skillExpEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    10,
+                    "skillId",
+                    "value"
+                ],
+                "desc": "{skillId}技能经验增长{direction}{value}倍"
+            },
+            "skillExpAddEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    11,
+                    "skillId",
+                    "value"
+                ],
+                "desc": "{skillId}技能经验每回合{direction}{value}"
+            },
+            "allSpecializationEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    21,
+                    "value"
+                ],
+                "desc": "所有专长的效果{direction}{value}"
+            },
+            "skillEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    7,
+                    "skillId",
+                    "value"
+                ],
+                "desc": "增加等同于{skillId}技能等级数值×{value}的精力回复效果"
+            },
+            "skillLevelAttrIdAddEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    20,
+                    "skillId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{skillId}技能升级时,增加数值等于技能等级*{value}的{personAttrId}属性,"
+            },
+            "skillLevelBodyAddExpEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    100,
+                    "skillId",
+                    "value"
+                ],
+                "desc": "每等级体魄使{skillId}技能经验{direction}{value}"
+            },
+            "specializationAddEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    110,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每掌握一个专长,使{personAttrId}属性获取率{direction}{value}"
+            },
+            "extraSpecialization": {
+                "rule": [
+                    6,
+                    99
+                ],
+                "desc": "额外掌握一个专长"
+            },
+            "unlockBait": {
+                "rule": [
+                    6,
+                    500,
+                    "FishBaitId"
+                ],
+                "desc": "解锁{FishBaitId}"
+            },
+            "obtainPersonAttrIdWhenCatchNewFish": {
+                "rule": [
+                    6,
+                    501,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "钓上新纪录的鱼时,{personAttrId}{direction}{value}"
+            },
+            "addPersonAttrIdEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    502,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每次钓鱼时,{personAttrId}{direction}{value}"
+            },
+            "addDepartmentEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    602,
+                    "ClubDepartmentId",
+                    "value"
+                ],
+                "desc": "{ClubDepartmentId}部门效率{direction}{value}"
+            },
+            "dailyActivityEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    603,
+                    "value"
+                ],
+                "desc": "日常活动的效果{direction}{value}"
+            },
+            "allowSpendFundEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    604
+                ],
+                "desc": "允许挪用经费"
+            },
+            "largeActivityCompleteRateAddEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    605,
+                    "value"
+                ],
+                "desc": "大型活动完成率{direction}{value}"
+            },
+            "largeActivityFundAddEfficiencyPercentRound": {
+                "rule": [
+                    6,
+                    606,
+                    "value"
+                ],
+                "desc": "大型活动经费{direction}{value}"
+            }
+        }
     },
     "7": {
         "id": 7,
-        "name": "改变状态"
+        "name": "改变状态",
+        "type": {
+            "changeStatusEfficiencyPercentRound": {
+                "rule": [
+                    7,
+                    1,
+                    "personStateID",
+                    "value"
+                ],
+                "desc": "增加{personStateID}状态倾向{value}"
+            },
+            "changePersonStateEfficiencyPercentRound": {
+                "rule": [
+                    7,
+                    11,
+                    "personStateID",
+                    "value"
+                ],
+                "desc": "{personStateID}状态每回合{direction}{value}"
+            },
+            "obtainPersonStateID": {
+                "rule": [
+                    7,
+                    2,
+                    "personStateID"
+                ],
+                "desc": "获得{personStateID}状态"
+            },
+            "obtainPersonStateIDRound": {
+                "rule": [
+                    7,
+                    2,
+                    "personStateID",
+                    "value"
+                ],
+                "desc": "获得{personStateID}状态,持续{value}回合"
+            },
+            "losePersonStateID": {
+                "rule": [
+                    7,
+                    -2,
+                    "personStateID"
+                ],
+                "desc": "失去{personStateID}状态"
+            }
+        }
     },
     "8": {
         "id": 8,
-        "name": "人生观"
+        "name": "人生观",
+        "type": {
+            "renshenguanLevel": {
+                "rule": [
+                    8,
+                    0,
+                    "value"
+                ],
+                "desc": "人生观等级提升{value}"
+            },
+            "enhanceMethodology": {
+                "rule": [
+                    8,
+                    1,
+                    1
+                ],
+                "desc": "强化一个方法论"
+            },
+            "enhanceValues": {
+                "rule": [
+                    8,
+                    1,
+                    2
+                ],
+                "desc": "强化一个价值观"
+            },
+            "forgetMethodology": {
+                "rule": [
+                    8,
+                    2,
+                    1
+                ],
+                "desc": "遗忘一个方法论"
+            },
+            "forgetValues": {
+                "rule": [
+                    8,
+                    2,
+                    2
+                ],
+                "desc": "遗忘一个价值观"
+            },
+            "critiqueMethodology": {
+                "rule": [
+                    8,
+                    3,
+                    1
+                ],
+                "desc": "批判一个方法论"
+            },
+            "critiqueValues": {
+                "rule": [
+                    8,
+                    3,
+                    2
+                ],
+                "desc": "批判一个价值观"
+            },
+            "obtainPreciousMemory": {
+                "rule": [
+                    8,
+                    4,
+                    "RenshengguanMemoryId"
+                ],
+                "desc": "获得珍贵记忆{RenshengguanMemoryId}"
+            },
+            "eachMemoryAddAPropertyV": {
+                "rule": [
+                    8,
+                    11,
+                    -1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每个记忆,使{personAttrId}属性每回合{direction}{value}"
+            },
+            "eachXMemoryAddAPropertyV": {
+                "rule": [
+                    8,
+                    11,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "每{value1}个记忆,使{personAttrId}属性每回合增加{value2}"
+            },
+            "ifSingleEachXMemoryAddAPropertyV": {
+                "rule": [
+                    8,
+                    50,
+                    11,
+                    "value1",
+                    "personAttrId",
+                    "value2"
+                ],
+                "desc": "若你是单身,每个{value1}个记忆,使{personAttrId}属性每回合增加{value2}"
+            },
+            "unlockUniversityCourse": {
+                "rule": [
+                    8,
+                    44,
+                    1
+                ],
+                "desc": "解锁大学课程"
+            },
+            "copyRenshengguanSkill": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId}中复制一项"
+            },
+            "copyRenshengguanSkill2": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId1",
+                    "RenshengguanSkillId2"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId1}和{RenshengguanSkillId2}中复制一项"
+            },
+            "copyRenshengguanSkill3": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId1",
+                    "RenshengguanSkillId2",
+                    "RenshengguanSkillId3"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId1}、{RenshengguanSkillId2}和{RenshengguanSkillId3}中复制一项"
+            },
+            "copyRenshengguanSkill4": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId1",
+                    "RenshengguanSkillId2",
+                    "RenshengguanSkillId3",
+                    "RenshengguanSkillId4"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId1}、{RenshengguanSkillId2}、{RenshengguanSkillId3}和{RenshengguanSkillId4}中复制一项"
+            },
+            "copyRenshengguanSkill5": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId1",
+                    "RenshengguanSkillId2",
+                    "RenshengguanSkillId3",
+                    "RenshengguanSkillId4",
+                    "RenshengguanSkillId5"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId1}、{RenshengguanSkillId2}、{RenshengguanSkillId3}、{RenshengguanSkillId4}和{RenshengguanSkillId5}中复制一项"
+            },
+            "copyRenshengguanSkill6": {
+                "rule": [
+                    8,
+                    44,
+                    2,
+                    "RenshengguanSkillId1",
+                    "RenshengguanSkillId2",
+                    "RenshengguanSkillId3",
+                    "RenshengguanSkillId4",
+                    "RenshengguanSkillId5",
+                    "RenshengguanSkillId6"
+                ],
+                "desc": "从人生观技能{RenshengguanSkillId1}、{RenshengguanSkillId2}、{RenshengguanSkillId3}、{RenshengguanSkillId4}、{RenshengguanSkillId5}和{RenshengguanSkillId6}中复制一项"
+            }
+        }
     },
     "10": {
         "id": 10,
-        "name": "压力相关"
+        "name": "压力相关",
+        "type": {
+            "changePressure": {
+                "rule": [
+                    10,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级{personAttrId}属性{direction}{value}点灵感爆发概率"
+            },
+            "PressureRatingAddAttr": {
+                "rule": [
+                    10,
+                    5,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级压力使{personAttrId}属性{direction}{value}点"
+            },
+            "PressureRatingAddAttrRound": {
+                "rule": [
+                    10,
+                    5,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级压力使{personAttrId}属性每回合{direction}{value}点"
+            },
+            "PressureRatingAddAttrPercent": {
+                "rule": [
+                    10,
+                    5,
+                    10,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每等级压力使{personAttrId}属性{direction}{100*value}%"
+            }
+        }
     },
     "20": {
         "id": 20,
@@ -77,14 +1840,281 @@
                 ],
                 "desc": "与{personId}好感度{direction}{value}"
             },
+            "changeAffectionALL": {
+                "rule": [
+                    20,
+                    1,
+                    -100,
+                    "value",
+                    "otherRelationId"
+                ],
+                "desc": "与所有{otherRelationId}好感度{direction}{value}"
+            },
+            "changeAffectionPerson": {
+                "rule": [
+                    20,
+                    22,
+                    "personId",
+                    "value"
+                ],
+                "desc": "{personId}的好感度{direction}{value}单位"
+            },
+            "changeAffectionPersonRate": {
+                "rule": [
+                    20,
+                    10,
+                    "personId",
+                    "value"
+                ],
+                "desc": "{personId}的好感度上升率{direction}{100*value}%"
+            },
+            "changeAffectionPersonRateAll": {
+                "rule": [
+                    20,
+                    10,
+                    -100,
+                    "value",
+                    "otherRelationId"
+                ],
+                "desc": "所有{otherRelationId}的好感度上升率{direction}{100*value}%"
+            },
+            "changeAffectionPersonRateMax": {
+                "rule": [
+                    20,
+                    12,
+                    "value"
+                ],
+                "desc": "好感度最高的人的好感度上升率{direction}{100*value}%"
+            },
+            "addAffectionPersonRate": {
+                "rule": [
+                    20,
+                    11,
+                    "personId",
+                    "value"
+                ],
+                "desc": "{personId}的好感度每回合{direction}{value}"
+            },
+            "addAffectionPersonRateAll": {
+                "rule": [
+                    20,
+                    11,
+                    "value",
+                    "otherRelationId"
+                ],
+                "desc": "所有{otherRelationId}的好感度每回合{direction}{value}"
+            },
             "changeRel": {
                 "rule": [
                     20,
                     2,
                     "personId",
-                    "relId"
+                    "otherRelationId"
                 ],
-                "desc": "与{personId}变成{relId}"
+                "desc": "{personId}变成{otherRelationId}"
+            },
+            "RealtionAddAttr": {
+                "rule": [
+                    20,
+                    5,
+                    "personAttrId",
+                    "value1",
+                    "value2",
+                    "value3",
+                    "value4"
+                ],
+                "desc": "每结交朋友/好友/密友/挚友时,{personAttrId}属性分别增加{value1}/{value2}/{value3}/{value4}"
+            },
+            "compatibilityAdd": {
+                "rule": [
+                    20,
+                    3,
+                    "personId",
+                    "value"
+                ],
+                "desc": "{personId}的相性{direction}{value}"
+            },
+            "aLLCompatibilityAdd": {
+                "rule": [
+                    20,
+                    3,
+                    0,
+                    "value"
+                ],
+                "desc": "同所有人的相性{direction}{value}"
+            },
+            "compatibilityAddAll": {
+                "rule": [
+                    20,
+                    34,
+                    "otherRelationId",
+                    "value"
+                ],
+                "desc": "所有{otherRelationId}来自人格/熟悉程度/其他的相性{direction}{100*value}%"
+            },
+            "compatibilityAddGroup": {
+                "rule": [
+                    20,
+                    33,
+                    "otherRelationId",
+                    "value"
+                ],
+                "desc": "所有{otherRelationId}相性{direction}{value}"
+            },
+            "friendCompatibilityMin": {
+                "rule": [
+                    20,
+                    4,
+                    "otherRelationId",
+                    "value"
+                ],
+                "desc": "{otherRelationId}的相性最低为{value}"
+            },
+            "friendFollowLimitAdd": {
+                "rule": [
+                    20,
+                    40,
+                    "otherRelationId",
+                    "value"
+                ],
+                "desc": "{otherRelationId}上限{direction}{value}"
+            },
+            "removeFollowLimit": {
+                "rule": [
+                    20,
+                    50,
+                    1
+                ],
+                "desc": "移除早恋影响"
+            },
+            "pressReduceByExpose": {
+                "rule": [
+                    20,
+                    50,
+                    2,
+                    "value"
+                ],
+                "desc": "表白导致的压力减少{100*value}%"
+            },
+            "maxAttrByRelation": {
+                "rule": [
+                    20,
+                    100,
+                    1,
+                    "otherRelationId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{otherRelationId}提供最高属性的P{value1},最高增加{value2}"
+            },
+            "affectionReduceByMonth": {
+                "rule": [
+                    20,
+                    101,
+                    1,
+                    "value"
+                ],
+                "desc": "（不叠加）每年10月所有认识的NPC好感度减少{value}"
+            },
+            "affectionNotReduceByMonth": {
+                "rule": [
+                    20,
+                    101,
+                    -1,
+                    "personId"
+                ],
+                "desc": "{personId}好感度不会衰减"
+            },
+            "firstMeetAffectionAdd": {
+                "rule": [
+                    20,
+                    200,
+                    1,
+                    "value"
+                ],
+                "desc": "初次认识好感{direction}{value}"
+            },
+            "findXAttrAdd": {
+                "rule": [
+                    20,
+                    60,
+                    "personId",
+                    "TraitsId"
+                ],
+                "desc": "发现{personId}的特质：{TraitsId}"
+            },
+            "affectionAddTraits": {
+                "rule": [
+                    20,
+                    61,
+                    "value"
+                ],
+                "desc": "每点好感{direction}{100*value}%特性的效果"
+            },
+            "relationMaxAdd": {
+                "rule": [
+                    20,
+                    62,
+                    "otherRelationId",
+                    "value"
+                ],
+                "desc": "{otherRelationId}三维能力中的最高项,会为你提供{100*value}%的获取率"
+            },
+            "traitsChange": {
+                "rule": [
+                    20,
+                    63,
+                    "personId",
+                    "TraitsId1",
+                    "TraitsId2"
+                ],
+                "desc": "{personId}特质{TraitsId1}变成{TraitsId2}"
+            },
+            "personalityChange": {
+                "rule": [
+                    20,
+                    64,
+                    "personId",
+                    "personAttrId1",
+                    "personAttrId2"
+                ],
+                "desc": "{personId}的{personAttrId1}人格变成{personAttrId2}"
+            },
+            "realtionAttrAdd": {
+                "rule": [
+                    20,
+                    24,
+                    "otherRelationId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每个{otherRelationId}使{personAttrId}属性{direction}{value}"
+            },
+            "realtionAttrAddRound": {
+                "rule": [
+                    20,
+                    25,
+                    "otherRelationId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每个{otherRelationId}使{personAttrId}属性每回合{direction}{value}"
+            },
+            "socialCapacityAdd": {
+                "rule": [
+                    20,
+                    90,
+                    "value"
+                ],
+                "desc": "社交容量{direction}{value}"
+            },
+            "extraFollowAdd": {
+                "rule": [
+                    20,
+                    91,
+                    "value"
+                ],
+                "desc": "可以额外关注一个同学,成为熟人,初始好感为{value}"
             },
             "followLimit": {
                 "rule": [
@@ -93,6 +2123,122 @@
                     "value"
                 ],
                 "desc": "关注上限{direction}{value}"
+            },
+            "socialGameIncomeAdd": {
+                "rule": [
+                    20,
+                    93,
+                    "value"
+                ],
+                "desc": "社交小游戏的收益{direction}{100*value}%"
+            },
+            "affectionAddByAttrDiff": {
+                "rule": [
+                    20,
+                    94,
+                    1,
+                    "personAttrId1",
+                    "otherRelationId",
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每个{personAttrId1}属性比玩家高的{otherRelationId},每回合{personAttrId2}属性{direction}{value}"
+            },
+            "affectionAddByAttrDiff2": {
+                "rule": [
+                    20,
+                    94,
+                    -1,
+                    "personAttrId1",
+                    "otherRelationId",
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每个{personAttrId1}属性比玩家低的{otherRelationId},每回合{personAttrId2}属性{direction}{value}"
+            },
+            "affectionAddByAttrDiff3": {
+                "rule": [
+                    20,
+                    94,
+                    10,
+                    "personAttrId1",
+                    "otherRelationId",
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每个{personAttrId1}属性比玩家高的{otherRelationId},{personAttrId2}属性{direction}{value}"
+            },
+            "affectionAddByAttrDiff4": {
+                "rule": [
+                    20,
+                    94,
+                    -10,
+                    "personAttrId1",
+                    "otherRelationId",
+                    "personAttrId2",
+                    "value"
+                ],
+                "desc": "每个{personAttrId1}属性比玩家低的{otherRelationId},{personAttrId2}属性{direction}{value}"
+            },
+            "affectionAddByTrait": {
+                "rule": [
+                    20,
+                    95,
+                    "value"
+                ],
+                "desc": "特质的效果增加{direction}{value}，不影响非数值特质"
+            },
+            "relationUnlockTrait": {
+                "rule": [
+                    20,
+                    96,
+                    "otherRelationId"
+                ],
+                "desc": "关系达到{otherRelationId}即可解锁特质"
+            },
+            "affectionAddByAttrDiff5": {
+                "rule": [
+                    20,
+                    97,
+                    "personAttrId1",
+                    "value1",
+                    "otherRelationId",
+                    "value2"
+                ],
+                "desc": "属性{personAttrId1}每回合增加{value1},但每个{otherRelationId}使此属性每回合增加{value2}"
+            },
+            "affectionAddByAttrDiff6": {
+                "rule": [
+                    20,
+                    98,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "任一同学的好感低于{value1}时,好感每回合增加{value2}"
+            },
+            "affectionAddByAttrDiff7": {
+                "rule": [
+                    20,
+                    99,
+                    "value"
+                ],
+                "desc": "好感最高的人,每项比你高的能力使你的该项能力每回合{direction}{value}"
+            },
+            "affectionBreak": {
+                "rule": [
+                    20,
+                    -520,
+                    "personId"
+                ],
+                "desc": "你和{personId}分道扬镳"
+            },
+            "affectionComposite": {
+                "rule": [
+                    20,
+                    520,
+                    "personId"
+                ],
+                "desc": "你和{personId}恢复社交"
             },
             "leaveCity": {
                 "rule": [
@@ -109,28 +2255,832 @@
                     "personId"
                 ],
                 "desc": "{personId}回到了城市"
+            },
+            "reappearInCity": {
+                "rule": [
+                    20,
+                    521,
+                    "personId",
+                    "mapId"
+                ],
+                "desc": "{personId}重新出现(在{mapId}地)"
+            },
+            "schoolBreak": {
+                "rule": [
+                    20,
+                    -522,
+                    "personId"
+                ],
+                "desc": "{personId}已休学"
+            },
+            "schoolBack": {
+                "rule": [
+                    20,
+                    522,
+                    "personId"
+                ],
+                "desc": "{personId}已返校"
+            },
+            "contactBreak": {
+                "rule": [
+                    20,
+                    -523,
+                    "personId"
+                ],
+                "desc": "你和{personId}无法联系"
+            },
+            "contactComposite": {
+                "rule": [
+                    20,
+                    523,
+                    "personId"
+                ],
+                "desc": "你和{personId}恢复联系"
             }
         }
     },
     "21": {
         "id": 21,
-        "name": "社交活动"
+        "name": "社交活动",
+        "type": {
+            "affectionAddBySocial": {
+                "rule": [
+                    21,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "社交时{personAttrId}属性{direction}{value}点"
+            },
+            "affectionAddBySocial2": {
+                "rule": [
+                    21,
+                    2,
+                    "value"
+                ],
+                "desc": "社交时NPC对应人格{direction}{value}点"
+            },
+            "affectionAddBySocial3": {
+                "rule": [
+                    21,
+                    3,
+                    "value"
+                ],
+                "desc": "社交消耗的精力{direction}{value}"
+            },
+            "affectionAddBySocial4": {
+                "rule": [
+                    21,
+                    4,
+                    "value"
+                ],
+                "desc": "社交时好感额外{direction}{value}"
+            },
+            "affectionAddBySocial5": {
+                "rule": [
+                    21,
+                    10,
+                    "value"
+                ],
+                "desc": "社交效率{direction}{value}"
+            },
+            "affectionAddBySocial6": {
+                "rule": [
+                    21,
+                    11
+                ],
+                "desc": "获得对应人格的感悟状态"
+            },
+            "affectionAddBySocial7": {
+                "rule": [
+                    21,
+                    60
+                ],
+                "desc": "索取"
+            },
+            "affectionAddBySocial8": {
+                "rule": [
+                    21,
+                    20,
+                    "value"
+                ],
+                "desc": "赠送增加对方好感{direction}{value}"
+            },
+            "affectionAddBySocial9": {
+                "rule": [
+                    21,
+                    100,
+                    "value"
+                ],
+                "desc": "送礼的好感{direction}{100*value%}"
+            },
+            "affectionAddBySocial10": {
+                "rule": [
+                    21,
+                    365,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每年首次社交时{personAttrId}属性{direction}{value}点"
+            },
+            "affectionAddBySocial11": {
+                "rule": [
+                    21,
+                    30,
+                    1,
+                    "negotiationId"
+                ],
+                "desc": "启用{negotiationId}交涉项"
+            },
+            "affectionAddBySocial12": {
+                "rule": [
+                    21,
+                    30,
+                    2,
+                    "negotiationId"
+                ],
+                "desc": "解锁{negotiationId}交涉项"
+            },
+            "askForHelp": {
+                "rule": [
+                    21,
+                    95,
+                    "value"
+                ],
+                "desc": "请教同学的消耗和效果{direction}{100*value}%"
+            },
+            "affectionAddBySocial13": {
+                "rule": [
+                    21,
+                    96
+                ],
+                "desc": "社交的基础好感获取加倍,热情消耗升阶"
+            },
+            "addNegotiationGroup": {
+                "rule": [
+                    21,
+                    97,
+                    "negotiationId"
+                ],
+                "desc": "添加ID为{negotiationId}的交涉组"
+            },
+            "masterNewDebateStrategy": {
+                "rule": [
+                    21,
+                    98
+                ],
+                "desc": "掌握一个新的辩论策略"
+            },
+            "allProposalEffectAddP": {
+                "rule": [
+                    21,
+                    99,
+                    "value"
+                ],
+                "desc": "所有议案的效果提升{direction}{100*value}%，不影响无数值项"
+            }
+        }
     },
     "22": {
         "id": 22,
-        "name": "NPC相关"
+        "name": "NPC相关",
+        "type": {
+            "becomeFriendAddNAttr": {
+                "rule": [
+                    22,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "成为挚友时{personAttrId}属性{direction}{value}点"
+            },
+            "BecomeFriendAddNAttrRound": {
+                "rule": [
+                    22,
+                    11,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "成为挚友时{personAttrId}属性每回合{direction}{value}点"
+            },
+            "BecomeFriendAddNAttrPercent": {
+                "rule": [
+                    22,
+                    10,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "成为挚友时{personAttrId}属性每回合{direction}{100*value}%"
+            },
+            "npcRelationAddPercent": {
+                "rule": [
+                    22,
+                    3,
+                    "value"
+                ],
+                "desc": "NPC人脉属性{direction}{100*value}%"
+            },
+            "npcAffectionAddPercent": {
+                "rule": [
+                    22,
+                    4,
+                    "value"
+                ],
+                "desc": "(NPC)好感{direction}{100*value}%"
+            },
+            "npcRelationAddPercentBySocial": {
+                "rule": [
+                    22,
+                    5,
+                    "value"
+                ],
+                "desc": "相性提高{direction}{value}点(仅对此人有效)"
+            },
+            "npcAttrAddPercent": {
+                "rule": [
+                    22,
+                    6,
+                    "personId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{personId}的{personAttrId}属性增加{value}"
+            },
+            "setChengliangProgress": {
+                "rule": [
+                    22,
+                    7,
+                    203,
+                    "value"
+                ],
+                "desc": "设置程良课程进度{value}"
+            },
+            "enableLuoXiaochunSupport": {
+                "rule": [
+                    22,
+                    8,
+                    101,
+                    "value"
+                ],
+                "desc": "开启罗晓纯支持度,初始值{value}"
+            },
+            "enableTanZijunAnxiousValue": {
+                "rule": [
+                    22,
+                    8,
+                    104,
+                    "value"
+                ],
+                "desc": "开启谭梓君躁动值,初始值{value}"
+            },
+            "enableChengliangExamRank": {
+                "rule": [
+                    22,
+                    8,
+                    203,
+                    "value"
+                ],
+                "desc": "开启程良考试排名,初始课程进度为{value}"
+            },
+            "enableLuoXiaochunSupportAddP": {
+                "rule": [
+                    22,
+                    8,
+                    101,
+                    "value"
+                ],
+                "desc": "支持度{direction}{value}"
+            },
+            "TanZijunAnxiousValueAdd": {
+                "rule": [
+                    22,
+                    8,
+                    104,
+                    "value"
+                ],
+                "desc": "小君躁动值{direction}{value}"
+            },
+            "ChengliangExamRankAdd": {
+                "rule": [
+                    22,
+                    8,
+                    203,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "程良考试排名增加【{value1}+（玩家平均课程进度-程良课程进度）×{value2}】"
+            },
+            "AllFriendNpcGetSStatus": {
+                "rule": [
+                    22,
+                    22,
+                    "personStateID"
+                ],
+                "desc": "所有认识的NPC获得{personStateID}状态"
+            },
+            "AddNpcToFollowList": {
+                "rule": [
+                    22,
+                    999,
+                    1,
+                    "personId"
+                ],
+                "desc": "将{personId}加入可关注列表"
+            }
+        }
     },
     "23": {
         "id": 23,
-        "name": "空间"
+        "name": "空间",
+        "type": {
+            "sendKZoneContent": {
+                "rule": [
+                    23,
+                    1,
+                    "KZoneContentId"
+                ],
+                "desc": "发出动态【{KZoneContentId}】"
+            },
+            "deleteKZoneContent": {
+                "rule": [
+                    23,
+                    -1,
+                    "KZoneContentId"
+                ],
+                "desc": "删除动态【{KZoneContentId}】"
+            },
+            "sendKZoneComment": {
+                "rule": [
+                    23,
+                    2,
+                    "KZoneCommentId"
+                ],
+                "desc": "发出留言【{KZoneCommentId}】"
+            },
+            "deleteKZoneComment": {
+                "rule": [
+                    23,
+                    -2,
+                    "KZoneCommentId"
+                ],
+                "desc": "删除留言【{KZoneCommentId}】"
+            },
+            "replyOrCommentKZoneContentNoCost": {
+                "rule": [
+                    23,
+                    98
+                ],
+                "desc": "在空间中回复或评论不再消耗精力"
+            },
+            "AddNpcToPhoneBook": {
+                "rule": [
+                    23,
+                    99,
+                    "personId"
+                ],
+                "desc": "将{personId}加入电话簿"
+            },
+            "RemoveNpcFromPhoneBook": {
+                "rule": [
+                    23,
+                    -99,
+                    "personId"
+                ],
+                "desc": "将{personId}从电话簿移除"
+            },
+            "PhoneRing": {
+                "rule": [
+                    23,
+                    100,
+                    "evtId"
+                ],
+                "desc": "电话铃响(【事件{evtId}】,且事件类型必须为71——玩家接电话)"
+            },
+            "SendSms": {
+                "rule": [
+                    23,
+                    200,
+                    "PhoneMsgId"
+                ],
+                "desc": "发短信【{PhoneMsgId}】"
+            }
+        }
     },
     "30": {
         "id": 30,
-        "name": "学习相关"
+        "name": "学习相关",
+        "type": {
+            "AddFriendScoreGoodThanPlayer": {
+                "rule": [
+                    30,
+                    1,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每个成绩比玩家好的熟人/朋友/挚友,{personAttrId}属性每回合{direction}{value}"
+            },
+            "AddFriendScoreGoodThanPlayerLevelUp": {
+                "rule": [
+                    30,
+                    1,
+                    2,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每提升一级学习段位,{personAttrId}属性{direction}{value}"
+            },
+            "AddFriendScoreGoodThanPlayerLevelUpAddAttr": {
+                "rule": [
+                    30,
+                    1,
+                    22,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每提升一级学习段位,{personAttrId}属性每回合{direction}{value}"
+            },
+            "AddNpcLearnMethod": {
+                "rule": [
+                    30,
+                    1,
+                    3,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每掌握一个学习方法,{personAttrId}属性{direction}{value}"
+            },
+            "AddNpcReviewFunction": {
+                "rule": [
+                    30,
+                    1,
+                    999
+                ],
+                "desc": "增加复习功能"
+            },
+            "AllowReviewPrimaryKnowledge": {
+                "rule": [
+                    30,
+                    999,
+                    2
+                ],
+                "desc": "允许重温小学知识"
+            },
+            "AddKnowledgePointScore": {
+                "rule": [
+                    30,
+                    2,
+                    1,
+                    "value"
+                ],
+                "desc": "掌握知识点时收益{direction}{100*value}%"
+            },
+            "AddKnowledgePointScoreIfSingle": {
+                "rule": [
+                    30,
+                    2,
+                    2,
+                    "value"
+                ],
+                "desc": "【已废弃】若你是单身,掌握知识点时收益+{100*value}%"
+            },
+            "ReviewPrimaryKnowledgePowerConsumptionAddX": {
+                "rule": [
+                    30,
+                    2,
+                    4,
+                    "value"
+                ],
+                "desc": "复习最擅长的科目动力消耗{direction}{value}"
+            },
+            "ReviewPrimaryKnowledgeCost": {
+                "rule": [
+                    30,
+                    2,
+                    3,
+                    "value"
+                ],
+                "desc": "复习最擅长的科目动力消耗固定为{value},与科目无关"
+            },
+            "LearningAttitudeBoostEffectReduceP": {
+                "rule": [
+                    30,
+                    3,
+                    1,
+                    "value"
+                ],
+                "desc": "学习态度增压效果减少{100*value}%"
+            },
+            "AddKnowledgePointScoreXSubject": {
+                "rule": [
+                    30,
+                    6,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}知识获取率{direction}{100*value}%"
+            },
+            "AddKnowledgePointScoreXKnowledge": {
+                "rule": [
+                    30,
+                    10,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "主动学习{knowledgeId}学习效率{direction}{100*value}%"
+            },
+            "ReduceMoodXSubject": {
+                "rule": [
+                    30,
+                    -10,
+                    "knowledgeId"
+                ],
+                "desc": "每次学习{knowledgeId}时,减少心情常量（5）"
+            },
+            "AddKnowledgePointScoreXKnowledgeAddAttr": {
+                "rule": [
+                    30,
+                    30,
+                    "knowledgeId",
+                    "value"
+                ],
+                "desc": "{knowledgeId}学科进度{direction}{value}"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrAll": {
+                "rule": [
+                    30,
+                    100,
+                    1,
+                    "value",
+                    -1
+                ],
+                "desc": "所有知识点{direction}{value}知识"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttr": {
+                "rule": [
+                    30,
+                    100,
+                    1,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "{knowledgeId}知识点{direction}{value}知识"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrP": {
+                "rule": [
+                    30,
+                    100,
+                    10,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "{knowledgeId}知识点{direction}{100*value}%知识"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrAllP": {
+                "rule": [
+                    30,
+                    100,
+                    10,
+                    "value",
+                    -1
+                ],
+                "desc": "所有知识点{direction}{100*value}%知识"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrC": {
+                "rule": [
+                    30,
+                    100,
+                    11,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "学科{knowledgeId}知识点对智力的要求{direction}{100*value}%"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrAllC": {
+                "rule": [
+                    30,
+                    100,
+                    11,
+                    "value",
+                    -1
+                ],
+                "desc": "所有知识点对智力的要求{direction}{100*value}%"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrCAll": {
+                "rule": [
+                    30,
+                    100,
+                    12,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "学科{knowledgeId}知识点动力消耗{direction}{100*value}%"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrCAllP": {
+                "rule": [
+                    30,
+                    100,
+                    12,
+                    "value",
+                    -1
+                ],
+                "desc": "所有知识点动力消耗{direction}{100*value}%"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrCAllV": {
+                "rule": [
+                    30,
+                    100,
+                    20,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "掌握学科{knowledgeId}知识时额外{direction}{value}智力"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrCAllVAll": {
+                "rule": [
+                    30,
+                    100,
+                    20,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "掌握任一学科知识时额外{direction}{value}智力"
+            },
+            "addKnowledgePointScoreXKnowledgeAddAttrCAllVAll": {
+                "rule": [
+                    30,
+                    100,
+                    30,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "此知识提供的知识点数等于{value}×已掌握的{knowledgeId}学科知识的个数"
+            },
+            "addKnowledgePointScoreKnowledgeAddAttr": {
+                "rule": [
+                    30,
+                    100,
+                    30,
+                    "value",
+                    -1
+                ],
+                "desc": "此知识提供的知识点数等于{value}×已掌握的任一学科知识的个数"
+            },
+            "BeforeExamStudyTimes": {
+                "rule": [
+                    30,
+                    91,
+                    "value"
+                ],
+                "desc": "期末考试前,可以不消耗动力学习{value}次"
+            },
+            "ConsumeVStudyPower": {
+                "rule": [
+                    30,
+                    92,
+                    "value"
+                ],
+                "desc": "消耗{value}次学习的动力"
+            },
+            "LearningLevelRewardP": {
+                "rule": [
+                    30,
+                    93,
+                    "value"
+                ],
+                "desc": "学习段位的奖励{direction}{100*value}%"
+            },
+            "KnowledgeAddAttrP": {
+                "rule": [
+                    30,
+                    94,
+                    "value"
+                ],
+                "desc": "掌握知识时,小游戏提供的知识{direction}{100*value}%"
+            },
+            "FreeReviewOnceInSummer": {
+                "rule": [
+                    30,
+                    95
+                ],
+                "desc": "每年夏天免费复习一次"
+            },
+            "ReviewEffectP": {
+                "rule": [
+                    30,
+                    96,
+                    "value"
+                ],
+                "desc": "复习的效果{direction}{100*value}%"
+            },
+            "UnlockReviewFunction": {
+                "rule": [
+                    30,
+                    97
+                ],
+                "desc": "解锁复习功能"
+            },
+            "KnowledgeAddAttrV": {
+                "rule": [
+                    30,
+                    98,
+                    "knowledgeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "掌握{knowledgeId}知识点时,额外{direction}{value}点{personAttrId}属性"
+            },
+            "allKnowledgeAddAttrV": {
+                "rule": [
+                    30,
+                    98,
+                    -1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "掌握任一知识点时,额外{direction}{value}点{personAttrId}属性"
+            },
+            "UnlockOneMethodology": {
+                "rule": [
+                    30,
+                    99
+                ],
+                "desc": "额外解锁一个方法论"
+            }
+        }
     },
     "31": {
         "id": 31,
-        "name": "话术相关"
+        "name": "话术相关",
+        "type": {
+            "specialTechAdd": {
+                "rule": [
+                    31,
+                    1,
+                    "NegotiationSkillId"
+                ],
+                "desc": "获得特殊技{NegotiationSkillId}"
+            },
+            "initialCardAddX": {
+                "rule": [
+                    31,
+                    2,
+                    "value"
+                ],
+                "desc": "游戏开始时初始卡{direction}[{value}]"
+            },
+            "handCardLimitAddX": {
+                "rule": [
+                    31,
+                    3,
+                    "value"
+                ],
+                "desc": "手牌上限{direction}{value}"
+            },
+            "negotiationSuccessAddAttrX": {
+                "rule": [
+                    31,
+                    4,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "话术成功{personAttrId}属性{direction}{value}点"
+            },
+            "negotiationFailAddAttrX": {
+                "rule": [
+                    31,
+                    -4,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "话术失败{personAttrId}属性{direction}{value}点"
+            },
+            "negotiationEndAddAttrX": {
+                "rule": [
+                    31,
+                    5,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "话术结束后(无论输赢){personAttrId}属性{direction}{value}点"
+            },
+            "permanentBuffAddX": {
+                "rule": [
+                    31,
+                    21,
+                    "NegotiationBuffId"
+                ],
+                "desc": "永久获得{NegotiationBuffId}"
+            },
+            "UnlockProposalX": {
+                "rule": [
+                    31,
+                    10,
+                    "value"
+                ],
+                "desc": "解锁第{value}级的议案"
+            }
+        }
     },
     "32": {
         "id": 32,
@@ -138,19 +3088,329 @@
     },
     "33": {
         "id": 33,
-        "name": "阅读"
+        "name": "阅读",
+        "type": {
+            "ReadBookAddAttrX": {
+                "rule": [
+                    33,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每有一本读完的书,{personAttrId}属性{direction}{value}点"
+            },
+            "BookAddAttrX": {
+                "rule": [
+                    33,
+                    -1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每拥有一本书,{personAttrId}属性{direction}{value}点"
+            },
+            "ReadABookAddAttrX": {
+                "rule": [
+                    33,
+                    2,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "读完一本书时,{personAttrId}属性{direction}{value}点"
+            },
+            "ReadingABookddAttrX": {
+                "rule": [
+                    33,
+                    20,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "阅读时,{personAttrId}属性{direction}{value}点"
+            },
+            "ReadingSpeedAddX": {
+                "rule": [
+                    33,
+                    4,
+                    "value"
+                ],
+                "desc": "阅读速度{direction}{value}"
+            },
+            "BookTypeAddAttrX": {
+                "rule": [
+                    33,
+                    10,
+                    "value",
+                    "itemTypeId"
+                ],
+                "desc": "{itemTypeId}类型的书籍效果增加{100*value}%"
+            },
+            "BookTypeAndAddAttrX": {
+                "rule": [
+                    33,
+                    10,
+                    "value",
+                    "itemTypeId1",
+                    "itemTypeId2"
+                ],
+                "desc": "{itemTypeId1}和{itemTypeId2}类型的书籍效果增加{100*value}%"
+            },
+            "BookTypeAddAttrXOr": {
+                "rule": [
+                    33,
+                    9,
+                    "value",
+                    "itemTypeId"
+                ],
+                "desc": "{itemTypeId}类型的书籍阅读精力减少{value}"
+            },
+            "BookTypeAddAttrXAnd": {
+                "rule": [
+                    33,
+                    9,
+                    "value",
+                    "itemTypeId1",
+                    "itemTypeId2"
+                ],
+                "desc": "{itemTypeId1}和{itemTypeId2}类型的书籍阅读精力减少{value}"
+            },
+            "ReadTypeBookAddAttrX": {
+                "rule": [
+                    33,
+                    22,
+                    "itemTypeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "读完{itemTypeId}类型的书籍时,{personAttrId}属性{direction}{value}点"
+            },
+            "ReadbookByConsumePower": {
+                "rule": [
+                    33,
+                    99,
+                    1
+                ],
+                "desc": "可以主动消耗动力阅读书籍点"
+            },
+            "UnlockReadBookTheme": {
+                "rule": [
+                    33,
+                    99,
+                    2
+                ],
+                "desc": "解锁主题阅读按钮"
+            }
+        }
     },
     "34": {
         "id": 34,
-        "name": "游戏相关"
+        "name": "游戏相关",
+        "type": {
+            "PassGameAddAttrX": {
+                "rule": [
+                    34,
+                    10,
+                    "value",
+                    "personAttrId"
+                ],
+                "desc": "通关任意游戏时,{personAttrId}属性{direction}{value}点"
+            },
+            "BuyBookPriceReduceP": {
+                "rule": [
+                    34,
+                    88,
+                    "value"
+                ],
+                "desc": "购买卡带、光盘的价格减少{100*value}%"
+            },
+            "PlayGameAddAttrX": {
+                "rule": [
+                    34,
+                    12,
+                    "value"
+                ],
+                "desc": "玩游戏时有{100*value}%的概率进度加倍"
+            },
+            "AddGroupButton": {
+                "rule": [
+                    34,
+                    99,
+                    3
+                ],
+                "desc": "添加跑团按钮"
+            },
+            "PlayGameNotLock": {
+                "rule": [
+                    34,
+                    99,
+                    4
+                ],
+                "desc": "玩游戏时不会再卡关"
+            },
+            "PassGameAddMoodX": {
+                "rule": [
+                    34,
+                    99,
+                    5
+                ],
+                "desc": "通关时获得等同于硬核度的心情"
+            },
+            "PassGameAddStarX": {
+                "rule": [
+                    34,
+                    99,
+                    6,
+                    "value"
+                ],
+                "desc": "通关时所有游戏星级{direction}{value}"
+            }
+        }
     },
     "36": {
         "id": 36,
-        "name": "动画相关"
+        "name": "动画相关",
+        "type": {
+            "PlayShowAddAttrX": {
+                "rule": [
+                    36,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每次看番时{personAttrId}属性{direction}{value}点"
+            },
+            "PlayShowAddAttrXAnd": {
+                "rule": [
+                    36,
+                    -1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "每次看番时{personAttrId}属性+二次元等级*{100*value}%"
+            },
+            "FindShowAddNumX": {
+                "rule": [
+                    36,
+                    2,
+                    "value"
+                ],
+                "desc": "找番时数量{direction}{value}"
+            },
+            "UnlockFindShow": {
+                "rule": [
+                    36,
+                    -2,
+                    "value"
+                ],
+                "desc": "解锁再次找番功能(每年一次),消耗{value}精力"
+            },
+            "PlayShowAddConcentrationX": {
+                "rule": [
+                    36,
+                    3,
+                    "value"
+                ],
+                "desc": "(二次元)浓度{direction}{value}"
+            },
+            "AddGodWorkWeightX": {
+                "rule": [
+                    36,
+                    4,
+                    1,
+                    "value"
+                ],
+                "desc": "神作权重{direction}{value}"
+            },
+            "AddGodWorkPersonAttrX": {
+                "rule": [
+                    36,
+                    4,
+                    2,
+                    "value"
+                ],
+                "desc": "神作对应人格{direction}{value}"
+            },
+            "UnlockSearch": {
+                "rule": [
+                    36,
+                    999,
+                    1
+                ],
+                "desc": "解锁搜索功能"
+            },
+            "UnlockShow": {
+                "rule": [
+                    36,
+                    999,
+                    2
+                ],
+                "desc": "解锁漫展功能"
+            }
+        }
     },
     "38": {
         "id": 38,
-        "name": "手工"
+        "name": "手工",
+        "type": {
+            "PlayHandAddAttrX": {
+                "rule": [
+                    38,
+                    1,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "参加手工时增加{personAttrId}属性{direction}{value}"
+            },
+            "PlayHandAddFinishAttrX": {
+                "rule": [
+                    38,
+                    2,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "手工完成时(废弃不算){personAttrId}属性{direction}{value}"
+            },
+            "PlayHandAddSpeedX": {
+                "rule": [
+                    38,
+                    4,
+                    1,
+                    "value"
+                ],
+                "desc": "手工速度{direction}{value}"
+            },
+            "UnlockXItem": {
+                "rule": [
+                    38,
+                    5,
+                    "itemId"
+                ],
+                "desc": "解锁{itemId}物品的制作"
+            },
+            "AddXPricePercent": {
+                "rule": [
+                    38,
+                    6,
+                    10,
+                    "value"
+                ],
+                "desc": "在跳蚤市场中的出售价格增加{100*value}%"
+            },
+            "UnlockFleaMarket": {
+                "rule": [
+                    38,
+                    999,
+                    1
+                ],
+                "desc": "解锁跳蚤市场"
+            },
+            "UnlockXToolbox": {
+                "rule": [
+                    38,
+                    10,
+                    "value"
+                ],
+                "desc": "工具箱等级上限为{value}级"
+            }
+        }
     },
     "40": {
         "id": 40,
@@ -164,6 +3424,15 @@
                 ],
                 "desc": "获得行动{actionId}"
             },
+            "actionAddnvxian": {
+                "rule": [
+                    40,
+                    1,
+                    "actionId1",
+                    "actionId2"
+                ],
+                "desc": "获得行动{actionId1}【男线】或{actionId2}【女线】"
+            },
             "actionLose": {
                 "rule": [
                     40,
@@ -171,6 +3440,15 @@
                     "actionId"
                 ],
                 "desc": "失去行动{actionId}"
+            },
+            "actionLosenvxian": {
+                "rule": [
+                    40,
+                    -1,
+                    "actionId1",
+                    "actionId2"
+                ],
+                "desc": "失去行动{actionId1}【男线】或{actionId2}【女线】"
             },
             "actionAddRound": {
                 "rule": [
@@ -180,12 +3458,202 @@
                     "value"
                 ],
                 "desc": "增加行动{actionId},持续{value}回合"
+            },
+            "actionSetRound": {
+                "rule": [
+                    40,
+                    11,
+                    "actionId",
+                    "value"
+                ],
+                "desc": "行动{actionId}的每回合次数设为{value}"
+            },
+            "actionAddXAttr": {
+                "rule": [
+                    40,
+                    2,
+                    "actionId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{actionId}行动后{personAttrId}属性{direction}{value}"
+            },
+            "actionTypeAddXAttrnvxian": {
+                "rule": [
+                    40,
+                    3,
+                    "ActionTypeId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "{ActionTypeId}类型行动后{personAttrId}属性{direction}{value}"
+            },
+            "actionAddCostX": {
+                "rule": [
+                    40,
+                    4,
+                    "actionId",
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "{actionId}行动消耗的{PersonAttrId}属性{direction}{value}"
+            },
+            "actionReplace": {
+                "rule": [
+                    40,
+                    5,
+                    "actionId1",
+                    "actionId2"
+                ],
+                "desc": "用{actionId1}行动替换{actionId2}行动（继承cd）"
+            },
+            "actionTypeAddXOtherAttr": {
+                "rule": [
+                    40,
+                    301,
+                    "ActionTypeId",
+                    "otherAttrId",
+                    "value"
+                ],
+                "desc": "{ActionTypeId}类型行动后{otherAttrId}属性{direction}{value}"
+            },
+            "homeworkMoodCost": {
+                "rule": [
+                    40,
+                    6,
+                    1,
+                    "value"
+                ],
+                "desc": "做作业的心情消耗{direction}{100*value}%"
+            },
+            "homeworkIncome": {
+                "rule": [
+                    40,
+                    6,
+                    2,
+                    "value"
+                ],
+                "desc": "做作业的收益{direction}{100*value}%"
+            },
+            "tvMoodEffect": {
+                "rule": [
+                    40,
+                    7,
+                    1,
+                    "value"
+                ],
+                "desc": "看电视的???消耗{direction}{100*value}%"
+            },
+            "movieMoodEffect": {
+                "rule": [
+                    40,
+                    7,
+                    2,
+                    "value"
+                ],
+                "desc": "看电影的效果{direction}{100*value}%"
+            },
+            "actionTransfer": {
+                "rule": [
+                    40,
+                    8,
+                    "actionId",
+                    "mapId"
+                ],
+                "desc": "{actionId}行动转移到{mapId}（必须先激活）"
+            },
+            "unlockMasterAction": {
+                "rule": [
+                    40,
+                    9,
+                    1
+                ],
+                "desc": "解锁精通行动机制"
+            },
+            "masterActionProgressAdd": {
+                "rule": [
+                    40,
+                    20,
+                    "actionId",
+                    "value"
+                ],
+                "desc": "{actionId}行动的精通进度{direction}{value}"
+            },
+            "masterActionProgressAddOnAction": {
+                "rule": [
+                    40,
+                    21,
+                    1,
+                    "actionId",
+                    "value"
+                ],
+                "desc": "采取{actionId}行动时,精通进度增长{direction}{100*value}%"
+            },
+            "masterActionProgressAddOnActionByActionType": {
+                "rule": [
+                    40,
+                    21,
+                    2,
+                    "ActionTypeId",
+                    "value"
+                ],
+                "desc": "采取{ActionTypeId}类型行动时,精通进度增长{direction}{100*value}%"
             }
         }
     },
     "41": {
         "id": 41,
-        "name": "创作"
+        "name": "创作",
+        "type": {
+            "everyPointWritingAddPChineseKnowledgeRate": {
+                "rule": [
+                    41,
+                    1,
+                    "value"
+                ],
+                "desc": "每点文笔语文知识获取率{direction}{100*value}%"
+            },
+            "writeDiaryAddPChineseKnowledgeRate": {
+                "rule": [
+                    40,
+                    2,
+                    "value"
+                ],
+                "desc": "写日记提升的文笔(与默认效果合并显示){direction}{100*value}%"
+            },
+            "extraWriteDiaryNum": {
+                "rule": [
+                    41,
+                    3,
+                    "value"
+                ],
+                "desc": "每回合可以额外写{value}次日记"
+            },
+            "upgradeDiaryAchievementAddP": {
+                "rule": [
+                    41,
+                    4,
+                    "value"
+                ],
+                "desc": "升级日记获得的成就{direction}{100*value}%"
+            },
+            "diaryLevelLimit": {
+                "rule": [
+                    41,
+                    5,
+                    "value"
+                ],
+                "desc": "日记本等级上限为{value}级"
+            },
+            "diaryPageAddNum": {
+                "rule": [
+                    41,
+                    6,
+                    "value"
+                ],
+                "desc": "日记本页数{direction}{value}"
+            }
+        }
     },
     "42": {
         "id": 42,
@@ -193,7 +3661,71 @@
     },
     "50": {
         "id": 50,
-        "name": "改变事件"
+        "name": "改变事件",
+        "type": {
+            "triggerEventN": {
+                "rule": [
+                    50,
+                    1,
+                    "evtId"
+                ],
+                "desc": "触发事件{evtId}"
+            },
+            "delayTriggerEventN": {
+                "rule": [
+                    50,
+                    10,
+                    "value1",
+                    "value2",
+                    "evtId"
+                ],
+                "desc": "{value1}个月后{100*value2}%概率触发事件{evtId}"
+            },
+            "eventNValueAddV": {
+                "rule": [
+                    50,
+                    2,
+                    "evtId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "【默认{value1}=0】事件{evtId}的值【{value1}】{direction}{value2}"
+            },
+            "eventNValueAddPersonHConfession": {
+                "rule": [
+                    50,
+                    20,
+                    "evtId",
+                    "value1",
+                    "personId"
+                ],
+                "desc": "【默认{value1}=0】事件{evtId}的值【{value1}】+{personId}的好感值%"
+            },
+            "refreshEventNTypeX": {
+                "rule": [
+                    50,
+                    3,
+                    "EvtTypeId"
+                ],
+                "desc": "刷新{EvtTypeId}事件类型"
+            },
+            "openNotifyX": {
+                "rule": [
+                    50,
+                    4,
+                    "evtId"
+                ],
+                "desc": "开启通知{evtId}"
+            },
+            "makeEventNEnterTriggerQueue": {
+                "rule": [
+                    50,
+                    100,
+                    "evtId"
+                ],
+                "desc": "使【{evtId}事件】进入触发队列（一回合必定触发）"
+            }
+        }
     },
     "52": {
         "id": 52,
@@ -207,6 +3739,79 @@
                     "value"
                 ],
                 "desc": "向{personId}表白成功率{direction}{value}%"
+            },
+            "addConfessionBtnN": {
+                "rule": [
+                    52,
+                    2,
+                    "personId"
+                ],
+                "desc": "增加{personId}的表白按钮"
+            },
+            "removeConfessionBtnAll": {
+                "rule": [
+                    52,
+                    -2,
+                    -1
+                ],
+                "desc": "移除所有人表白按钮"
+            },
+            "removeConfessionBtnN": {
+                "rule": [
+                    52,
+                    -2,
+                    "personId"
+                ],
+                "desc": "移除{personId}的表白按钮"
+            },
+            "openConfessionBtnN": {
+                "rule": [
+                    52,
+                    3,
+                    "personId"
+                ],
+                "desc": "{personId}开放表白"
+            },
+            "friendshipEffectAddX": {
+                "rule": [
+                    52,
+                    4,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "亲密度超过{value1}时,每点超出的亲密度使恋人的挚友特性效果增加{100*value2}%"
+            },
+            "specifyHeartBreakfast": {
+                "rule": [
+                    52,
+                    5,
+                    "itemId"
+                ],
+                "desc": "指定本回合爱心早餐{itemId}"
+            },
+            "breakupMainRole": {
+                "rule": [
+                    52,
+                    6,
+                    1
+                ],
+                "desc": "主角分手(官方申明应该降级挚友官方)"
+            },
+            "friendshipEffectAdd": {
+                "rule": [
+                    52,
+                    7,
+                    1
+                ],
+                "desc": "恋人融洽程度设为融洽"
+            },
+            "friendshipEffectAddBad": {
+                "rule": [
+                    52,
+                    8,
+                    2
+                ],
+                "desc": "恋人融洽程度设为不融洽"
             }
         }
     },
@@ -222,6 +3827,15 @@
                 ],
                 "desc": "获得物品{itemId}"
             },
+            "GetItemOr": {
+                "rule": [
+                    60,
+                    1,
+                    "itemId1",
+                    "itemId2"
+                ],
+                "desc": "获得物品{itemId1}和{itemId2}"
+            },
             "LoseItem": {
                 "rule": [
                     60,
@@ -229,6 +3843,15 @@
                     "itemId"
                 ],
                 "desc": "失去物品{itemId}"
+            },
+            "LoseItemOr": {
+                "rule": [
+                    60,
+                    -1,
+                    "itemId1",
+                    "itemId2"
+                ],
+                "desc": "失去物品{itemId1}和{itemId2}"
             },
             "Getbook": {
                 "rule": [
@@ -246,6 +3869,29 @@
                 ],
                 "desc": "失去书籍{bookId}"
             },
+            "randomGetShell": {
+                "rule": [
+                    60,
+                    3,
+                    "value"
+                ],
+                "desc": "随机获得贝壳{value}个"
+            },
+            "randomGetShellOne": {
+                "rule": [
+                    60,
+                    3
+                ],
+                "desc": "随机获得贝壳1个"
+            },
+            "clothingEffectAddP": {
+                "rule": [
+                    60,
+                    4,
+                    "value"
+                ],
+                "desc": "服装的效果{direction}{100*value}%"
+            },
             "treasureLimit": {
                 "rule": [
                     60,
@@ -253,6 +3899,111 @@
                     "value"
                 ],
                 "desc": "收藏上限{direction}{value}"
+            },
+            "unlockClothing": {
+                "rule": [
+                    60,
+                    8,
+                    11,
+                    "personId",
+                    "clothTypeId"
+                ],
+                "desc": "{personId}解锁id为{clothTypeId}的衣服"
+            },
+            "equipItemAddAttr": {
+                "rule": [
+                    60,
+                    20,
+                    1,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "每装备一个物品{PersonAttrId}{direction}{value}"
+            },
+            "equipItemAddAttrP": {
+                "rule": [
+                    60,
+                    20,
+                    11,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "每装备一个物品{PersonAttrId}每回合{direction}{value}"
+            },
+            "randomGetItem": {
+                "rule": [
+                    60,
+                    22,
+                    "value1",
+                    "itemId1",
+                    "value2",
+                    "itemId2"
+                ],
+                "desc": "{value1}获得物品{itemId1},{value2}获得物品{itemId2}"
+            },
+            "randomGetItem3": {
+                "rule": [
+                    60,
+                    22,
+                    "value1",
+                    "itemId1",
+                    "value2",
+                    "itemId2",
+                    "value3",
+                    "itemId3"
+                ],
+                "desc": "{value1}获得物品{itemId1},{value2}获得物品{itemId2},{value3}获得物品{itemId3}"
+            },
+            "randomGetItem4": {
+                "rule": [
+                    60,
+                    22,
+                    "value1",
+                    "itemId1",
+                    "value2",
+                    "itemId2",
+                    "value3",
+                    "itemId3",
+                    "value4",
+                    "itemId4"
+                ],
+                "desc": "{value1}获得物品{itemId1},{value2}获得物品{itemId2},{value3}获得物品{itemId3},{value4}获得物品{itemId4}"
+            },
+            "randomGetItem5": {
+                "rule": [
+                    60,
+                    22,
+                    "value1",
+                    "itemId1",
+                    "value2",
+                    "itemId2",
+                    "value3",
+                    "itemId3",
+                    "value4",
+                    "itemId4",
+                    "value5",
+                    "itemId5"
+                ],
+                "desc": "{value1}获得物品{itemId1},{value2}获得物品{itemId2},{value3}获得物品{itemId3},{value4}获得物品{itemId4},{value5}获得物品{itemId5}"
+            },
+            "randomGetItem6": {
+                "rule": [
+                    60,
+                    22,
+                    "value1",
+                    "itemId1",
+                    "value2",
+                    "itemId2",
+                    "value3",
+                    "itemId3",
+                    "value4",
+                    "itemId4",
+                    "value5",
+                    "itemId5",
+                    "value6",
+                    "itemId6"
+                ],
+                "desc": "{value1}获得物品{itemId1},{value2}获得物品{itemId2},{value3}获得物品{itemId3},{value4}获得物品{itemId4},{value5}获得物品{itemId5},{value6}获得物品{itemId6}"
             },
             "NPCGetItem": {
                 "rule": [
@@ -284,6 +4035,73 @@
                     "personId"
                 ],
                 "desc": "{personId}失去物品{itemId}"
+            },
+            "equipItemAddAttrUP": {
+                "rule": [
+                    60,
+                    98,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "珍藏栏位增加{value1},珍藏栏位中的物品效果增加{100*value2}%"
+            },
+            "equipItemAddAttrUPLock": {
+                "rule": [
+                    60,
+                    98,
+                    1,
+                    1
+                ],
+                "desc": "珍藏栏位+1,珍藏栏位中的物品效果+100%"
+            },
+            "equipItemUP": {
+                "rule": [
+                    60,
+                    98,
+                    1,
+                    2
+                ],
+                "desc": "将1个珍视栏位升级为珍藏栏位,其效果+100%"
+            },
+            "equipItemAddAttrUPByType": {
+                "rule": [
+                    60,
+                    99,
+                    "itemType",
+                    "value"
+                ],
+                "desc": "{itemType}物品类型的子类型的效果{direction}{value}"
+            },
+            "personGetItem": {
+                "rule": [
+                    60,
+                    100,
+                    1,
+                    "itemId",
+                    "personId"
+                ],
+                "desc": "{personId}获得物品{itemId}"
+            },
+            "personGetItemByPerson": {
+                "rule": [
+                    60,
+                    100,
+                    1,
+                    "itemId//bookId",
+                    "personId1",
+                    "personId2"
+                ],
+                "desc": "{personId1}从{personId2}获得物品{itemId//bookId}"
+            },
+            "personLoseItemByPerson": {
+                "rule": [
+                    60,
+                    100,
+                    -1,
+                    "itemId//bookId",
+                    "personId"
+                ],
+                "desc": "{personId}失去物品{itemId//bookId}"
             }
         }
     },
@@ -291,6 +4109,40 @@
         "id": 61,
         "name": "商店相关",
         "type": {
+            "addPressureByBuy": {
+                "rule": [
+                    61,
+                    20,
+                    "value"
+                ],
+                "desc": "花费金钱时{direction}{value}压力"
+            },
+            "addAttrByBuy": {
+                "rule": [
+                    61,
+                    1,
+                    "personId",
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "花费金钱时{personId}的{personAttrId}增加，最多增加{value}"
+            },
+            "addItemToShop": {
+                "rule": [
+                    61,
+                    2,
+                    "itemId//bookId"
+                ],
+                "desc": "将{itemId//bookId}添加至商店中"
+            },
+            "removeItemFromShop": {
+                "rule": [
+                    61,
+                    -2,
+                    "itemId//bookId"
+                ],
+                "desc": "将{itemId//bookId}从商店中移出"
+            },
             "refreshShop": {
                 "rule": [
                     61,
@@ -298,21 +4150,29 @@
                 ],
                 "desc": "刷新商店物品"
             },
-            "addGoods": {
+            "enablePriceTalk": {
                 "rule": [
                     61,
-                    2,
-                    "shopId"
+                    98,
+                    1
                 ],
-                "desc": "商店添加物品{shopId}"
+                "desc": "开启一次讲价"
             },
-            "removeGoods": {
+            "addDiscountByPriceTalk": {
                 "rule": [
                     61,
-                    -2,
-                    "shopId"
+                    98,
+                    "value"
                 ],
-                "desc": "商店移除物品{shopId}"
+                "desc": "讲价获得的折扣{direction}{value}倍"
+            },
+            "addDiscountProbByPriceTalk": {
+                "rule": [
+                    61,
+                    97,
+                    "value"
+                ],
+                "desc": "讲价获得的折扣概率{direction}{100*value}%"
             }
         }
     },
@@ -335,28 +4195,590 @@
                     "intentId"
                 ],
                 "desc": "失去目标{intentId}"
+            },
+            "loseIntentNotComplete": {
+                "rule": [
+                    70,
+                    -11,
+                    "intentId"
+                ],
+                "desc": "失去目标{intentId},目标不算作完成"
+            },
+            "triggerIntentByTag": {
+                "rule": [
+                    70,
+                    2,
+                    "tag"
+                ],
+                "desc": "?触发标签为{tag}的愿望"
+            },
+            "addConfidenceByCompleteIntent": {
+                "rule": [
+                    70,
+                    3,
+                    "value"
+                ],
+                "desc": "完成目标提供的自信点{direction}{100*value}%"
+            },
+            "focusIntent": {
+                "rule": [
+                    70,
+                    10,
+                    "intentId"
+                ],
+                "desc": "关注目标{intentId}"
+            },
+            "activateXAmbition": {
+                "rule": [
+                    70,
+                    12,
+                    1,
+                    "value"
+                ],
+                "desc": "激活{value}抱负"
             }
         }
     },
     "80": {
         "id": 80,
-        "name": "金钱购物"
+        "name": "金钱购物",
+        "type": {
+            "enableShop": {
+                "rule": [
+                    80,
+                    10
+                ],
+                "desc": "开启商店"
+            },
+            "price": {
+                "rule": [
+                    80,
+                    3,
+                    "value"
+                ],
+                "desc": "商品价格减少{100*value}%"
+            },
+            "addIncomeByRedPacket": {
+                "rule": [
+                    80,
+                    100,
+                    1,
+                    "value"
+                ],
+                "desc": "每个红包收入{direction}{value}"
+            },
+            "addIncomeByRedPacketProb": {
+                "rule": [
+                    80,
+                    10,
+                    1,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "每回合获得当前金钱的{100*value1}%,最多获得{value2}"
+            }
+        }
     },
     "90": {
         "id": 90,
-        "name": "庆典"
+        "name": "庆典",
+        "type": {
+            "addStaminaByRun": {
+                "rule": [
+                    90,
+                    1,
+                    10,
+                    "value"
+                ],
+                "desc": "【长跑】耐力{direction}{value}"
+            },
+            "addStaminaByRunProb": {
+                "rule": [
+                    90,
+                    1,
+                    11,
+                    "value"
+                ],
+                "desc": "【长跑】耐力{direction}{100*value}%"
+            },
+            "addProgressByRun": {
+                "rule": [
+                    90,
+                    1,
+                    20,
+                    "value"
+                ],
+                "desc": "【长跑】进度{direction}{value}"
+            },
+            "addProgressByRunProb": {
+                "rule": [
+                    90,
+                    1,
+                    21,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "【长跑】进度随机加{value1}±{value2}"
+            },
+            "addProgressByRunLead": {
+                "rule": [
+                    90,
+                    1,
+                    22,
+                    "value"
+                ],
+                "desc": "【长跑】(+)领先/(-)落后{value}米"
+            },
+            "addProgressByRunLeadProb": {
+                "rule": [
+                    90,
+                    1,
+                    23,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "【长跑】(+)领先/(-)落后随机{value1}±{value2米}"
+            },
+            "addBetByRun": {
+                "rule": [
+                    90,
+                    1,
+                    30,
+                    "value"
+                ],
+                "desc": "【长跑】下注{value}"
+            },
+            "addStaminaByExpedition": {
+                "rule": [
+                    90,
+                    2,
+                    10,
+                    "value"
+                ],
+                "desc": "【漫展】体力{direction}{value}"
+            },
+            "addRememberValueByExpedition": {
+                "rule": [
+                    90,
+                    2,
+                    20,
+                    "value"
+                ],
+                "desc": "【漫展】难忘值{direction}{value}"
+            },
+            "openShopByExpedition1": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId"
+                ],
+                "desc": "【漫展】打开商店{itemId}"
+            },
+            "openShopByExpedition2": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId1",
+                    "itemId2"
+                ],
+                "desc": "【漫展】打开商店{itemId1},{itemId2}"
+            },
+            "openShopByExpedition3": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId1",
+                    "itemId2",
+                    "itemId3"
+                ],
+                "desc": "【漫展】打开商店{itemId1},{itemId2},{itemId3}"
+            },
+            "openShopByExpedition4": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId1",
+                    "itemId2",
+                    "itemId3",
+                    "itemId4"
+                ],
+                "desc": "【漫展】打开商店{itemId1},{itemId2},{itemId3},{itemId4}"
+            },
+            "openShopByExpedition5": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId1",
+                    "itemId2",
+                    "itemId3",
+                    "itemId4",
+                    "itemId5"
+                ],
+                "desc": "【漫展】打开商店{itemId1},{itemId2},{itemId3},{itemId4},{itemId5}"
+            },
+            "openShopByExpedition6": {
+                "rule": [
+                    90,
+                    2,
+                    1,
+                    "itemId1",
+                    "itemId2",
+                    "itemId3",
+                    "itemId4",
+                    "itemId5",
+                    "itemId6"
+                ],
+                "desc": "【漫展】打开商店{itemId1},{itemId2},{itemId3},{itemId4},{itemId5},{itemId6}"
+            },
+            "getRankByExpedition": {
+                "rule": [
+                    90,
+                    3,
+                    1,
+                    "personId",
+                    "value"
+                ],
+                "desc": "【派对】{personId}在小游戏中获得第{value}名"
+            },
+            "addPartyMoodByExpedition": {
+                "rule": [
+                    90,
+                    3,
+                    2,
+                    "value"
+                ],
+                "desc": "【派对】派对气氛{direction}{value}"
+            },
+            "addPartyScoreByExpedition": {
+                "rule": [
+                    90,
+                    3,
+                    3,
+                    "personId",
+                    "value"
+                ],
+                "desc": "【派对】{personId}游戏积分{direction}{value}"
+            },
+            "addExpeditionScoreByExpedition": {
+                "rule": [
+                    90,
+                    4,
+                    1,
+                    1,
+                    "value"
+                ],
+                "desc": "【世博】科技点数{direction}{value}"
+            },
+            "addExpeditionCultureScoreByExpedition": {
+                "rule": [
+                    90,
+                    4,
+                    2,
+                    2,
+                    "value"
+                ],
+                "desc": "【世博】文化点数{direction}{value}"
+            },
+            "addExpeditionHappyScoreByExpedition": {
+                "rule": [
+                    90,
+                    4,
+                    3,
+                    3,
+                    "value"
+                ],
+                "desc": "【世博】快乐点数{direction}{value}"
+            },
+            "addExpeditionAttrScoreByExpedition": {
+                "rule": [
+                    90,
+                    4,
+                    2,
+                    "personAttrId",
+                    "value"
+                ],
+                "desc": "【世博】{personAttrId}属性每回合{direction}{value}×印章数量"
+            },
+            "addExpeditionVitalityByExpedition": {
+                "rule": [
+                    90,
+                    4,
+                    3,
+                    "value"
+                ],
+                "desc": "【世博】活力{direction}{value}"
+            }
+        }
     },
     "100": {
         "id": 100,
-        "name": "常用"
+        "name": "常用",
+        "type": {
+            "moveToX": {
+                "rule": [
+                    100,
+                    1,
+                    "mapId"
+                ],
+                "desc": "主角移动至{mapId}地点"
+            },
+            "addXAttr": {
+                "rule": [
+                    100,
+                    2,
+                    "value"
+                ],
+                "desc": "增加{direction}{value}点天赋"
+            },
+            "chooseXAttr": {
+                "rule": [
+                    100,
+                    3,
+                    1,
+                    "value"
+                ],
+                "desc": "弹窗,让玩家选择专精某项三维属性,可提升至11级,并且获取率{direction}{value}"
+            },
+            "openSwitch": {
+                "rule": [
+                    100,
+                    10,
+                    "value"
+                ],
+                "desc": "开启{value}开关"
+            },
+            "closeSwitch": {
+                "rule": [
+                    100,
+                    -10,
+                    "value"
+                ],
+                "desc": "关闭{value}开关"
+            },
+            "unlockXBGM": {
+                "rule": [
+                    100,
+                    20,
+                    "audioId"
+                ],
+                "desc": "手机上解锁（{audioId}）BGM"
+            },
+            "skipLearnGame": {
+                "rule": [
+                    100,
+                    30,
+                    1
+                ],
+                "desc": "跳过学习小游戏(不包括复习)"
+            },
+            "unlockXJob": {
+                "rule": [
+                    100,
+                    40,
+                    "jobId"
+                ],
+                "desc": "解锁职业：({jobId})"
+            },
+            "addXScoreByExam": {
+                "rule": [
+                    100,
+                    41,
+                    "value"
+                ],
+                "desc": "高考额外{direction}{value}分"
+            },
+            "jobPointAdd": {
+                "rule": [
+                    100,
+                    50,
+                    1,
+                    "jobId",
+                    "value"
+                ],
+                "desc": "职业({jobId})潜力{direction}{value}"
+            },
+            "jobPointAddRound": {
+                "rule": [
+                    100,
+                    50,
+                    11,
+                    "jobId",
+                    "value"
+                ],
+                "desc": "职业({jobId})潜力每回合{direction}{value}"
+            },
+            "jobPointAddPercent": {
+                "rule": [
+                    100,
+                    50,
+                    10,
+                    "jobId",
+                    "value"
+                ],
+                "desc": "职业({jobId})潜力{direction}{100*value}%"
+            },
+            "addXHonor": {
+                "rule": [
+                    100,
+                    100,
+                    "value"
+                ],
+                "desc": "荣誉{direction}{value}"
+            },
+            "addXHonorByPersonAttr": {
+                "rule": [
+                    100,
+                    101,
+                    "value"
+                ],
+                "desc": "荣誉获取率{direction}{100*value}%"
+            }
+        }
     },
     "101": {
         "id": 101,
-        "name": "UI"
+        "name": "UI",
+        "type": {
+            "unlockFunc": {
+                "rule": [
+                    101,
+                    1,
+                    "funcId"
+                ],
+                "desc": "解锁功能：({funcId})"
+            },
+            "openShop": {
+                "rule": [
+                    101,
+                    2,
+                    2
+                ],
+                "desc": "打开商店"
+            },
+            "triggerGuide": {
+                "rule": [
+                    101,
+                    3,
+                    "guideId"
+                ],
+                "desc": "触发引导：({guideId})"
+            },
+            "unlockXPlace": {
+                "rule": [
+                    101,
+                    4,
+                    "mapId"
+                ],
+                "desc": "解锁地点【{mapId}】"
+            },
+            "removeXPlace": {
+                "rule": [
+                    101,
+                    -4,
+                    "mapId"
+                ],
+                "desc": "移除地点【{mapId}】"
+            },
+            "hideRestButton": {
+                "rule": [
+                    101,
+                    99,
+                    -1
+                ],
+                "desc": "隐藏休息按钮"
+            },
+            "openRestButton": {
+                "rule": [
+                    101,
+                    99,
+                    1
+                ],
+                "desc": "打开休息按钮"
+            },
+            "showNewYearPlanButton": {
+                "rule": [
+                    101,
+                    98
+                ],
+                "desc": "显示新年计划按钮"
+            },
+            "hideMainActionButton": {
+                "rule": [
+                    101,
+                    97,
+                    -1
+                ],
+                "desc": "隐藏主界面行动按钮"
+            },
+            "openMainActionButton": {
+                "rule": [
+                    101,
+                    97,
+                    1
+                ],
+                "desc": "显示主界面行动按钮"
+            },
+            "openMainLearnSmallPage": {
+                "rule": [
+                    101,
+                    96,
+                    "funcId"
+                ],
+                "desc": "打开主界面{funcId}小页面"
+            },
+            "openQuickSocialPanel": {
+                "rule": [
+                    101,
+                    95,
+                    1
+                ],
+                "desc": "打开快捷社交面板"
+            }
+        }
     },
     "160": {
         "id": 160,
-        "name": "需求"
+        "name": "需求",
+        "type": {
+            "unlockXDemand": {
+                "rule": [
+                    160,
+                    1,
+                    "personAttrId"
+                ],
+                "desc": "解锁({personAttrId}"
+            },
+            "closeXDemand": {
+                "rule": [
+                    160,
+                    -1,
+                    "personAttrId"
+                ],
+                "desc": "关闭{personAttrId}"
+            },
+            "noReduceEntertainmentWhenLearn": {
+                "rule": [
+                    160,
+                    61,
+                    1
+                ],
+                "desc": "学习时不再减少娱乐"
+            },
+            "addXEntertainmentWhenInteractWithFriend": {
+                "rule": [
+                    160,
+                    62,
+                    10,
+                    "value"
+                ],
+                "desc": "与朋友互动时,社交{direction}{100*value}%"
+            }
+        }
     },
     "998": {
         "id": 998,
@@ -364,6 +4786,270 @@
     },
     "999": {
         "id": 999,
-        "name": "特殊效果"
+        "name": "特殊效果",
+        "type": {
+            "doubleReplyWhenMoodBelowBenchmark": {
+                "rule": [
+                    999,
+                    0
+                ],
+                "desc": "心情低于基准时,双倍回复"
+            },
+            "noMoodLimit": {
+                "rule": [
+                    999,
+                    1
+                ],
+                "desc": "你的心情没有上限"
+            },
+            "openExamGame": {
+                "rule": [
+                    999,
+                    2
+                ],
+                "desc": "打开考试小游戏"
+            },
+            "openMiniGame": {
+                "rule": [
+                    999,
+                    3,
+                    "MinigameId"
+                ],
+                "desc": "打开小游戏{MinigameId}"
+            },
+            "openRedPacketGame": {
+                "rule": [
+                    999,
+                    4
+                ],
+                "desc": "打开抢红包小游戏"
+            },
+            "openSudokuGame": {
+                "rule": [
+                    999,
+                    5
+                ],
+                "desc": "打开数独小游戏"
+            },
+            "openSpeechGame": {
+                "rule": [
+                    999,
+                    6
+                ],
+                "desc": "打开话术小游戏"
+            },
+            "openDivinationGame": {
+                "rule": [
+                    999,
+                    7
+                ],
+                "desc": "打开占卜小游戏"
+            },
+            "openRideGame": {
+                "rule": [
+                    999,
+                    8
+                ],
+                "desc": "打开跑团小游戏"
+            },
+            "showTopLeftText": {
+                "rule": [
+                    999,
+                    10,
+                    "textId"
+                ],
+                "desc": "左上角显示文本{textId}"
+            },
+            "closePriceGame": {
+                "rule": [
+                    999,
+                    11
+                ],
+                "desc": "关闭讲价功能"
+            },
+            "openNewsGame": {
+                "rule": [
+                    999,
+                    12
+                ],
+                "desc": "开启看报纸效果"
+            },
+            "addMoneyToBank": {
+                "rule": [
+                    999,
+                    13,
+                    "value"
+                ],
+                "desc": "存钱罐的钱{direction}{100*value}%"
+            },
+            "setReserveEnergyPerRound": {
+                "rule": [
+                    999,
+                    14,
+                    "value"
+                ],
+                "desc": "每回合可保留精力设为{value}"
+            },
+            "showEffectText": {
+                "rule": [
+                    999,
+                    20,
+                    "value"
+                ],
+                "desc": "用于触发{value},无效果,文本提示“效果：文本id”,如,效果：未知”"
+            },
+            "setHairStyle": {
+                "rule": [
+                    999,
+                    30,
+                    "HairTypeId"
+                ],
+                "desc": "设置发型为{HairTypeId}"
+            },
+            "setClothesStyle": {
+                "rule": [
+                    999,
+                    31,
+                    "clothTypeId",
+                    "personId"
+                ],
+                "desc": "设置{personId}衣服为{ClothesTypeId}"
+            },
+            "clearAllGlobalAchievement": {
+                "rule": [
+                    999,
+                    100
+                ],
+                "desc": "清空所有全局成就"
+            },
+            "open2WeekGuide": {
+                "rule": [
+                    999,
+                    101
+                ],
+                "desc": "开启2周目引导"
+            },
+            "clearAllHonorProject": {
+                "rule": [
+                    999,
+                    102
+                ],
+                "desc": "清空所有荣誉项目"
+            },
+            "unlockHackGame": {
+                "rule": [
+                    999,
+                    297
+                ],
+                "desc": "解锁恶作剧"
+            },
+            "openXiaojun": {
+                "rule": [
+                    999,
+                    305
+                ],
+                "desc": "开启小君百合"
+            },
+            "openXiaolei": {
+                "rule": [
+                    999,
+                    306
+                ],
+                "desc": "开启小蕾百合"
+            },
+            "openXiaochun": {
+                "rule": [
+                    999,
+                    307
+                ],
+                "desc": "开启小纯白百合"
+            },
+            "addXFunction": {
+                "rule": [
+                    999,
+                    555,
+                    "funcId"
+                ],
+                "desc": "添加{funcId}功能"
+            },
+            "addXYearXMonth": {
+                "rule": [
+                    999,
+                    1212,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "增加{value1}年{value2}月"
+            },
+            "enableXAttr": {
+                "rule": [
+                    999,
+                    999,
+                    1,
+                    "otherAttrId"
+                ],
+                "desc": "启用{otherAttrId}属性"
+            },
+            "consumeTrustToRePropose": {
+                "rule": [
+                    999,
+                    998,
+                    1
+                ],
+                "desc": "可以消耗信任重新提议社交圈活动"
+            },
+            "addTrustToParentNeedP": {
+                "rule": [
+                    999,
+                    998,
+                    2,
+                    "value"
+                ],
+                "desc": "与父母交涉需要的信任增加{100*value}%"
+            },
+            "activateMottoNoConsumeMood": {
+                "rule": [
+                    999,
+                    998,
+                    3
+                ],
+                "desc": "激活座右铭不需要消耗心情"
+            },
+            "ignoreStatusNeedButReduceVMood": {
+                "rule": [
+                    999,
+                    998,
+                    4,
+                    "value"
+                ],
+                "desc": "做选择可以无视状态需求,但会减少{value}心情"
+            },
+            "reflectPlusPlusX": {
+                "rule": [
+                    999,
+                    998,
+                    5,
+                    "value"
+                ],
+                "desc": "【内向】反思每回合{direction}{value}"
+            },
+            "reflectPlusX": {
+                "rule": [
+                    999,
+                    998,
+                    6,
+                    "value"
+                ],
+                "desc": "【内向】反思{direction}{value}"
+            },
+            "jumpToEnd": {
+                "rule": [
+                    999,
+                    1000,
+                    "jobId"
+                ],
+                "desc": "跳到结局{jobId}"
+            }
+        }
     }
 }

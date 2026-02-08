@@ -1,0 +1,7757 @@
+{
+    "1101": {
+        "id": 1101, 
+        "tipsType": 1, 
+        "tips": "这里显示你可以采取的<color=#FF8000>行动</color>，现在可以帮妈妈做家务啦。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                201.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                70.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                202.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                204.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            44
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "1102": {
+        "id": 1102, 
+        "tipsType": 1, 
+        "tips": "这里显示你拥有的<color=#FF8000>零花钱</color>，攒够零花钱就能购买你想要的东西噢。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            30
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "1201": {
+        "id": 1201, 
+        "tipsType": 0, 
+        "tips": null, 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                50.0, 
+                1.0, 
+                310102.0
+            ]
+        ], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "1301": {
+        "id": 1301, 
+        "tipsType": 1, 
+        "tips": "注意采取行动会消耗<color=#FF8000>精力</color>，你现在已经没有精力了。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                14.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "1302": {
+        "id": 1302, 
+        "tipsType": 1, 
+        "tips": "精力可以通过休息来回复，点击<color=#FF8000>结束回合</color>，开始休息，将推进时间，并回复你的精力。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                104.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_go"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2001": {
+        "id": 2001, 
+        "tipsType": 0, 
+        "tips": null, 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                50.0, 
+                1.0, 
+                310104.0
+            ]
+        ], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2101": {
+        "id": 2101, 
+        "tipsType": 1, 
+        "tips": "现在小卖部已经开张了，攒好足够的钱去买一个心仪的<color=#FF8000>玩具</color>吧。", 
+        "beginEffect": [
+            [
+                101.0, 
+                99.0, 
+                -1.0
+            ], 
+            [
+                101.0, 
+                97.0, 
+                -1.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2201": {
+        "id": 2201, 
+        "tipsType": 1, 
+        "tips": "游戏里共有3类物品：消耗品使用后就消失，工具持有就会生效，而珍视物品需要<color=#FF8000>珍视</color>才会生效。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                5.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2202": {
+        "id": 2202, 
+        "tipsType": 1, 
+        "tips": "你刚刚买的玩具是珍视物品，到<color=#FF8000>背包</color>里确认一下吧。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            5
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2301": {
+        "id": 2301, 
+        "tipsType": 1, 
+        "tips": "你可以在这里查看你的<color=#FF8000>目标</color>，完成目标会获得奖励，点击目标可以查看详情。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                110.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_intent"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2401": {
+        "id": 2401, 
+        "tipsType": 0, 
+        "tips": null, 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                50.0, 
+                1.0, 
+                310106.0
+            ], 
+            [
+                101.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2501": {
+        "id": 2501, 
+        "tipsType": 1, 
+        "tips": "这里显示你已获得的称号，通过<color=#FF8000>学习</color>、<color=#FF8000>社交</color>、<color=#FF8000>运动</color>都可以获得成就，从而获取新的称号。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailAchView", 
+                "itemgroup_data"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2601": {
+        "id": 2601, 
+        "tipsType": 1, 
+        "tips": "从现在开始，每年春季都可以选择<color=#FF8000>新年计划</color>，完成计划将获得成就。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_other_go"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2701": {
+        "id": 2701, 
+        "tipsType": 1, 
+        "tips": "剩余的精力会<color=#FF8000>保留</color>至下一回合，但最多保留<color=#FF8000>10</color>点精力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2801": {
+        "id": 2801, 
+        "tipsType": 1, 
+        "tips": "你已经买到喜欢的玩具，赶紧带回家试试吧。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2802": {
+        "id": 2802, 
+        "tipsType": 1, 
+        "tips": "单击<color=#FF8000>右键</color>可以退出当前场景或关闭页面，方便又快捷哦！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "2901": {
+        "id": 2901, 
+        "tipsType": 1, 
+        "tips": "单击物品完成珍视，就能获得收益。下方显示你能够珍视的数量槽。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_bag"
+            ], 
+            [
+                "GenUI.Common.Cell_BagItem5UI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "scroll_equip"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3001": {
+        "id": 3001, 
+        "tipsType": 1, 
+        "tips": "特价商品可以通过<color=#FF8000>讲价</color>进行打折，点击<color=#FF8000>紫色</color>按钮将开始讲价。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3002": {
+        "id": 3002, 
+        "tipsType": 1, 
+        "tips": "折扣持续到年底，每年<color=#FF8000>春季</color>都会刷新特价商品。注意，大多数商品上架<color=#FF8000>2年</color>后才可能打折。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3101": {
+        "id": 3101, 
+        "tipsType": 1, 
+        "tips": "商店推出了特价商品，你可以通过<color=#FF8000>讲价</color>压低它们的价格。", 
+        "beginEffect": [
+            [
+                61.0, 
+                99.0
+            ], 
+            [
+                61.0, 
+                98.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3102": {
+        "id": 3102, 
+        "tipsType": 1, 
+        "tips": "点击<color=#FF8000>紫色</color>按钮就可以进行讲价，折扣会持续至年底，每年春季会更新特价商品。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3201": {
+        "id": 3201, 
+        "tipsType": 1, 
+        "tips": "从成长里进入成就界面", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                15.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3301": {
+        "id": 3301, 
+        "tipsType": 1, 
+        "tips": "现在可以与妈妈<color=#FF8000>交涉</color>，获取各种奖励。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                7.0
+            ], 
+            [
+                1.0, 
+                2.0, 
+                3.0, 
+                15.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            7
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3302": {
+        "id": 3302, 
+        "tipsType": 1, 
+        "tips": "交涉需要消耗<color=#FF8000>信任</color>，这里显示你的信任，可以通过结交<color=#FF8000>好友</color>，在<color=#FF8000>考试</color>中获得好成绩来获取信任。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                16.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3401": {
+        "id": 3401, 
+        "tipsType": 1, 
+        "tips": "这是能够交涉的<color=#FF8000>交涉项</color>，选择交涉项会开启<color=#FF8000>辩论</color>，若能说服妈妈，其效果就会生效。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_nego"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3501": {
+        "id": 3501, 
+        "tipsType": 1, 
+        "tips": "<color=#FF8000>企鹅空间</color>正在流行，在<color=#FF8000>行动</color>中找到空间的入口，来查看同学们的动态吧。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                401.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            44
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3601": {
+        "id": 3601, 
+        "tipsType": 1, 
+        "tips": "在企鹅空间中，你可以浏览朋友们的动态与日志，恰当的回复还能提高他们的好感，赶紧来试试吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3602": {
+        "id": 3602, 
+        "tipsType": 1, 
+        "tips": "开通<color=#FF8000>尊贵黄钻</color>后，可以自定义装扮空间，不过每个季度都要续费，请量力而行~", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.KZoneView", 
+                "btn_vip"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3701": {
+        "id": 3701, 
+        "tipsType": 1, 
+        "tips": "你正在养成<color=#FF8000>性格</color>，点击信息面板查看性格吧", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                119.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                552.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            107
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3801": {
+        "id": 3801, 
+        "tipsType": 1, 
+        "tips": "现在你可以在行动面板中<color=#FF8000>打电话</color>，关注同学后，就可以得知他们的电话号码。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                402.0
+            ], 
+            [
+                23.0, 
+                99.0, 
+                201.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            44
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3901": {
+        "id": 3901, 
+        "tipsType": 1, 
+        "tips": "这里先显示潜在的性格，当性格倾向达到100时，就会形成此性格。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStateView", 
+                "itemgroup_xingge"
+            ], 
+            [
+                "GenUI.Main.Cell_StateItemUI", 
+                "bg_progress"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            501
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3902": {
+        "id": 3902, 
+        "tipsType": 1, 
+        "tips": "勾选培养按钮，可以增加对应的性格倾向。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStateView", 
+                "itemgroup_xingge"
+            ], 
+            [
+                "GenUI.Main.Cell_StateItemUI", 
+                "btn_toggle"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            501
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "3903": {
+        "id": 3903, 
+        "tipsType": 1, 
+        "tips": "你的性格和各种状态会显示在这里。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                103.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStateView", 
+                "itemgroup_state"
+            ], 
+            [
+                "GenUI.Main.Cell_StateItem2UI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4001": {
+        "id": 4001, 
+        "tipsType": 1, 
+        "tips": "现在可以<color=#FF8000>看电视</color>了，点击电视机可观看<color=#FF8000>节目</color>，每年春季会更新节目。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                403.0
+            ], 
+            [
+                101.0, 
+                70.0, 
+                1.0
+            ]
+        ], 
+        "endEffect": [
+            [
+                101.0, 
+                70.0, 
+                0.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_tv"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4101": {
+        "id": 4101, 
+        "tipsType": 1, 
+        "tips": "你在海边捡到的贝壳等藏品可在这里查看。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                121.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "btn_shell"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4102": {
+        "id": 4102, 
+        "tipsType": 1, 
+        "tips": "单个藏品价值很低，但若收集到一套（<color=#FF8000>6个</color>）同类藏品，就可以<color=#FF8000>出售</color>到跳蚤市场或者制作成<color=#FF8000>装饰盒</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4201": {
+        "id": 4201, 
+        "tipsType": 1, 
+        "tips": "你已经步入青春期，<color=#FF8000>人生观</color>正在逐步形成！\n积累足够的阅历和特殊记忆就可以开启人生观。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4202": {
+        "id": 4202, 
+        "tipsType": 1, 
+        "tips": "点击“成长”按钮后，可以在<color=#FF8000>最右侧</color>找到人生观界面", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4301": {
+        "id": 4301, 
+        "tipsType": 1, 
+        "tips": "恭喜你已经找到另一半，愿你们能白头偕老！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4302": {
+        "id": 4302, 
+        "tipsType": 1, 
+        "tips": "你们的亲密度显示在左上角，提高亲密度可以解锁更多恋爱行动。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            520
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4401": {
+        "id": 4401, 
+        "tipsType": 1, 
+        "tips": "你已经升上初中，课程内容变得更多更难，记得要按时到<color=#FF8000>教室</color>上课。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4501": {
+        "id": 4501, 
+        "tipsType": 1, 
+        "tips": "你现在可以规划你的职业发展：你的<color=#FF8000>经历</color>会让你<color=#FF8000>解锁</color>某些职业。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                507.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4502": {
+        "id": 4502, 
+        "tipsType": 1, 
+        "tips": "职业解锁后，会根据你的性格、成绩、三项能力等计算你的职业<color=#FF8000>潜力</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4503": {
+        "id": 4503, 
+        "tipsType": 1, 
+        "tips": "职业潜力决定你的职业星级，当某职业星级达到<color=#FF8000>2星</color>时，将解锁对应的<color=#FF8000>职业效果</color>。", 
+        "beginEffect": [
+            [
+                70.0, 
+                1.0, 
+                9112.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4601": {
+        "id": 4601, 
+        "tipsType": 1, 
+        "tips": "职业面板已经解锁，你可以从中查看各职业的解锁情况和目前的职业潜力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView", 
+                "tabgroup_top"
+            ], 
+            [
+                "GenUI.Main.Cell_DetailTopItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            507
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4701": {
+        "id": 4701, 
+        "tipsType": 1, 
+        "tips": "随着个性的发展，你渴望尝试更多新鲜玩意儿。现在反复采取行动会<color=#FF8000>精通</color>此行动，获得奖励，并可能解锁新的行动，赶紧试试吧！", 
+        "beginEffect": [
+            [
+                40.0, 
+                9.0, 
+                1.0
+            ], 
+            [
+                70.0, 
+                1.0, 
+                9017.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4801": {
+        "id": 4801, 
+        "tipsType": 1, 
+        "tips": "恭喜！你的一项能力已经达到了B+评级（5级），这意味着你已经超过了同龄人许多。从<color=#FF8000>第6级</color>开始，你升级该能力时不再会获得方法论/价值观/精力回复，而是获得珍贵的<color=#FF8000>探索点</color>。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                127.0
+            ], 
+            [
+                101.0, 
+                96.0, 
+                44.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4802": {
+        "id": 4802, 
+        "tipsType": 1, 
+        "tips": "你可以使用探索点来探索全新的<color=#FF8000>生活方式</color>，包括新的剧情、机制和玩法。点击此处可查看探索界面。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "btn_explore"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4803": {
+        "id": 4803, 
+        "tipsType": 1, 
+        "tips": "你可以考虑优先将<color=#FF8000>优势能力</color>提升至6级（300），从而尽快获取探索点。", 
+        "beginEffect": [
+            [
+                70.0, 
+                1.0, 
+                9019.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4901": {
+        "id": 4901, 
+        "tipsType": 1, 
+        "tips": "每解锁<color=#FF8000>2个</color>低级探索项目后，可以解锁1个更高级的探索项目。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            20
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "4902": {
+        "id": 4902, 
+        "tipsType": 1, 
+        "tips": "随着年龄的增长，你还会发现新的探索项目。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5001": {
+        "id": 5001, 
+        "tipsType": 1, 
+        "tips": "从现在开始，每年的<color=#FF8000>寒假</color>你都可以制定新年计划，你可以消耗心情来更改计划，但更改后，后续更改的心情消耗会暂时提高。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                118.0
+            ], 
+            [
+                101.0, 
+                96.0, 
+                44.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_action"
+            ], 
+            [
+                "GenUI.Common.Cell_ActionItem2UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2710
+        ], 
+        "cellData": [
+            "ActionSubData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5002": {
+        "id": 5002, 
+        "tipsType": 1, 
+        "tips": "完成计划会获得大量<color=#FF8000>成就</color>，完成其中至少3项目标，还会获得珍贵的<color=#FF8000>探索点</color>。\n【探索机制会在任一能力达到5级（B+级）时解锁】", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                127.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5101": {
+        "id": 5101, 
+        "tipsType": 1, 
+        "tips": "从初中开始，你可以保留最多<color=#FF8000>20</color>点精力至下一回合", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5201": {
+        "id": 5201, 
+        "tipsType": 1, 
+        "tips": "从高中开始，你可以保留最多<color=#FF8000>30</color>点精力至下一回合", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5301": {
+        "id": 5301, 
+        "tipsType": 1, 
+        "tips": "寒假开始了！各地开始招募兼职工，你可以在<color=#FF8000>寒假/暑假</color>从事<color=#FF8000>兼职</color>，赚取零花钱。", 
+        "beginEffect": [
+            [
+                40.0, 
+                1.0, 
+                3131.0
+            ], 
+            [
+                40.0, 
+                1.0, 
+                3132.0
+            ], 
+            [
+                40.0, 
+                1.0, 
+                3133.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5302": {
+        "id": 5302, 
+        "tipsType": 1, 
+        "tips": "目前<color=#FF8000>小卖部</color>、<color=#FF8000>新华书店</color>、<color=#FF8000>商场一楼</color>正在招募兼职，如果你的能力达标，不妨试试吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5401": {
+        "id": 5401, 
+        "tipsType": 1, 
+        "tips": "随着年龄的增长，你对友谊开始产生自己的理解。从现在开始，<color=#FF8000>社交</color>的效率和<color=#FF8000>热情</color>的消耗均大幅提升了。", 
+        "beginEffect": [
+            [
+                21.0, 
+                96.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            11
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5501": {
+        "id": 5501, 
+        "tipsType": 1, 
+        "tips": "现在你采取行动会增加<color=#FF8000>精通进度</color>，此处显示行动的精通进度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MapSceneView", 
+                "itemgroup_action"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionItem3UI", 
+                "icon_jintong_di"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3111
+        ], 
+        "cellData": [
+            "ActionSubData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5502": {
+        "id": 5502, 
+        "tipsType": 1, 
+        "tips": "当精通进度满时，你会获得一次性的<color=#FF8000>高额奖励度</color>，并且可能会解锁<color=#FF8000>新的行动</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5601": {
+        "id": 5601, 
+        "tipsType": 1, 
+        "tips": "升入高中以来，越来越多的同学开始使用<color=#FF8000>智能手机</color>，你现在可以跟妈妈<color=#FF8000>交涉</color>，为你购买一部智能手机。", 
+        "beginEffect": [
+            [
+                21.0, 
+                30.0, 
+                2.0, 
+                41.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            7
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5701": {
+        "id": 5701, 
+        "tipsType": 1, 
+        "tips": "纸质新闻已经成为过去式，现在你可以在手机上<color=#FF8000>订阅</color>感兴趣的新闻，每类新闻都会稍微提高你的<color=#FF8000>属性</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView"
+            ], 
+            [
+                "View.Main.PhoneView"
+            ], 
+            [
+                "View.Main.PhonePageNewsView", 
+                "itemgroup_type"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5801": {
+        "id": 5801, 
+        "tipsType": 1, 
+        "tips": "默认模式会按照以往的规则，只播放<color=#FF8000>轻松欢快</color>的BGM。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView"
+            ], 
+            [
+                "View.Main.PhoneView"
+            ], 
+            [
+                "View.Main.PhonePageMusicView", 
+                "btn_list"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5802": {
+        "id": 5802, 
+        "tipsType": 1, 
+        "tips": "随机模式可以播放特殊BGM和自行上传的BGM，但可能会导致BGM<color=#FF8000>不合时宜</color>。被删除的BGM不会在随机模式中播放。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView"
+            ], 
+            [
+                "View.Main.PhoneView"
+            ], 
+            [
+                "View.Main.PhonePageMusicView", 
+                "btn_random"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5901": {
+        "id": 5901, 
+        "tipsType": 1, 
+        "tips": "欢迎来到上海世博会！世博之旅持续3天，每天都会恢复8点活力，在场馆排队1小时会消耗1点活力", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Evt.ExpoPartyView", 
+                "root_energy_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5902": {
+        "id": 5902, 
+        "tipsType": 1, 
+        "tips": "参观场馆会得到科技/文化/快乐点数，为你提供多种属性收益。如果某一项点数达到10，你还会获得珍贵记忆", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Evt.ExpoPartyView", 
+                "itemgroup_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "5903": {
+        "id": 5903, 
+        "tipsType": 1, 
+        "tips": "参观过的场馆，会在世博护照中盖章，每个章都会使护照的效果+1成就/回合", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Evt.ExpoPartyView", 
+                "btn_passport"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6001": {
+        "id": 6001, 
+        "tipsType": 1, 
+        "tips": "随着年龄增长，可以前往的地方越来越多，提前做出行动规划必不可少。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6002": {
+        "id": 6002, 
+        "tipsType": 1, 
+        "tips": "你可以<color=#FF8000>点击</color>精力图标进入行动规划页面，快捷地管理你的<color=#FF8000>精力分配</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6101": {
+        "id": 6101, 
+        "tipsType": 1, 
+        "tips": "你已经专精一项能力，它的<color=#FF8000>获取率+10%</color>，且达到1600时可以突破限制，提升至<color=#FF8000>第11级</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6102": {
+        "id": 6102, 
+        "tipsType": 1, 
+        "tips": "提升至11级后，它会成为你的核心能力，另两项能力的数值将<color=#FF8000>无法</color>超过它", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6201": {
+        "id": 6201, 
+        "tipsType": 1, 
+        "tips": "恭喜你成功建立推理社，你的首要任务是提升社员。<color=#FF8000>社员</color>越多，就可以建立更多部门，管理更多的社员还会提升你的<color=#FF8000>智力</color>属性", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            601
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6202": {
+        "id": 6202, 
+        "tipsType": 1, 
+        "tips": "<color=#FF8000>凝聚力</color>会影响各个部门的效率，而且每回合都会衰减10%,不能掉以轻心。凝聚力越高，你获得的<color=#FF8000>信任</color>越多", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            603
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6203": {
+        "id": 6203, 
+        "tipsType": 1, 
+        "tips": "每回合你可以组织2次<color=#FF8000>日常活动</color>，你的能力等级会显著显影活动效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.ClubView", 
+                "group_activity_name"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6301": {
+        "id": 6301, 
+        "tipsType": 1, 
+        "tips": "推理社名义上有<color=#FF8000>3个基础部门</color>，但现在并未发挥作用，你需要尽快招纳更多社员来<color=#FF8000>重组</color>它们", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.ClubView", 
+                "itemgroup_department"
+            ], 
+            [
+                "GenUI.Skill.Cell_ClubDepartmentItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            0
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6302": {
+        "id": 6302, 
+        "tipsType": 1, 
+        "tips": "策划部、宣传部、后勤部都重组以后，你就可以举办<color=#FF8000>大型活动</color>，它需要很长时间来筹办，但奖励也很丰厚", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.ClubView", 
+                "group_big_acitvity"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "6303": {
+        "id": 6303, 
+        "tipsType": 1, 
+        "tips": "当重组3个部门后，继续招纳新人，你就可以建立<color=#FF8000>新部门</color>，确立社团的<color=#FF8000>特色</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.ClubView", 
+                "itemgroup_department"
+            ], 
+            [
+                "GenUI.Skill.Cell_ClubDepartmentItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10001": {
+        "id": 10001, 
+        "tipsType": 1, 
+        "tips": "珍视的物品可以提升你的<color=#FF8000>能力</color>，共有三种能力，分别是：<color=#FF8000>智力</color>，<color=#FF8000>情商</color>，<color=#FF8000>体魄</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_attr"
+            ], 
+            [
+                "GenUI.Common.Cell_RoleAttrItem2UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            1
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10002": {
+        "id": 10002, 
+        "tipsType": 1, 
+        "tips": "能力是最重要的属性，每项能力均有<color=#FF8000>评级</color>，当评级提升时，会得到不同的收益。", 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                101.0, 
+                97.0, 
+                1.0
+            ], 
+            [
+                101.0, 
+                99.0, 
+                1.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.TopView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_attr"
+            ], 
+            [
+                "GenUI.Common.Cell_RoleAttrItem2UI", 
+                "icon_rank"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10101": {
+        "id": 10101, 
+        "tipsType": 1, 
+        "tips": "恭喜迈入小学！从这里进入<color=#FF8000>学习</color>界面，开始你的学生时代吧。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                43.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                7.0, 
+                -20.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            43
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10201": {
+        "id": 10201, 
+        "tipsType": 1, 
+        "tips": "这里显示你的<color=#FF8000>学习段位</color>。提高学习段位可以获取更多<color=#FF8000>零花钱</color>和<color=#FF8000>成就</color>。", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ]
+        ], 
+        "endEffect": [
+            [
+                101.0, 
+                1.0, 
+                15.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "group_top"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10202": {
+        "id": 10202, 
+        "tipsType": 1, 
+        "tips": "这里显示你的成就，积累成就会获得称号，并激活<color=#FF8000>随机的激励</color>。单击成就图案可查看详情。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            100
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10301": {
+        "id": 10301, 
+        "tipsType": 1, 
+        "tips": "学习知识点会增加该知识点的<color=#FF8000>进度</color>，当进度达到上限时，就会掌握此知识点。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10302": {
+        "id": 10302, 
+        "tipsType": 1, 
+        "tips": "掌握知识点会解锁下一个知识点，同时触发对应小游戏，并根据你的表现提升智力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10401": {
+        "id": 10401, 
+        "tipsType": 1, 
+        "tips": "掌握若干知识点可进行<color=#FF8000>复习</color>，回顾已掌握的知识点，根据你的表现，最多提升5点智力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStudyView", 
+                "btn_review"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10501": {
+        "id": 10501, 
+        "tipsType": 1, 
+        "tips": "同一回合反复学习，会<color=#FF8000>不断提高</color>动力消耗。学习是一场长跑，要注意循序渐进，劳逸结合哦。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI", 
+                "btn_study"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10601": {
+        "id": 10601, 
+        "tipsType": 1, 
+        "tips": "这里显示你对语文知识的掌握进度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStudyView", 
+                "itemgroup_subject"
+            ], 
+            [
+                "GenUI.Main.Cell_KnowledgeSubjectItemUI", 
+                "img_progress_guide"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10602": {
+        "id": 10602, 
+        "tipsType": 1, 
+        "tips": "这个三角形代表老师教学的进度，也反映了其他同学的平均水平。如果你的进度和教学进度一致，你的成绩就会是<color=#FF8000>平均分</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailStudyView", 
+                "itemgroup_subject"
+            ], 
+            [
+                "GenUI.Main.Cell_KnowledgeSubjectItemUI", 
+                "img_teach_progress_guide"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10603": {
+        "id": 10603, 
+        "tipsType": 1, 
+        "tips": "每回合，教学进度都会向前<color=#FF8000>推进</color>，意味着其他同学也在认真学习。要保持你的成绩，就要付出更多的努力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10701": {
+        "id": 10701, 
+        "tipsType": 1, 
+        "tips": "现在你可以在<color=#FF8000>书店</color>购买<color=#FF8000>书籍</color>。", 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                101.0, 
+                1.0, 
+                106.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10702": {
+        "id": 10702, 
+        "tipsType": 1, 
+        "tips": "然后可以在这里管理你要<color=#FF8000>阅读</color>的书籍。", 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                40.0, 
+                1.0, 
+                2002.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            106
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10801": {
+        "id": 10801, 
+        "tipsType": 1, 
+        "tips": "当前书籍已被自动设置为“<color=#FF8000>在读</color>”状态，每回合会自动推进页数。读完书籍后，就可以领悟其效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_book"
+            ], 
+            [
+                "GenUI.Common.Cell_BookItem2UI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10802": {
+        "id": 10802, 
+        "tipsType": 1, 
+        "tips": "提高<color=#FF8000>阅读速度</color>来增加每回合推进的页数，更快地读完书籍。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem_read"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "10901": {
+        "id": 10901, 
+        "tipsType": 1, 
+        "tips": "读完一本书后，<color=#FF8000>溢出</color>的阅读进度会<color=#FF8000>保存</color>在阅读速度中，并在阅读下一本书时<color=#FF8000>释放</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem_read"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11001": {
+        "id": 11001, 
+        "tipsType": 1, 
+        "tips": "这里显示你的<color=#FF8000>学习效率</color>，决定你每次学习时推进的进度。", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                56.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            302
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11002": {
+        "id": 11002, 
+        "tipsType": 1, 
+        "tips": "掌握<color=#FF8000>方法论</color>可提高学习效率，从此处查看方法论。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "btn_study_method"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11101": {
+        "id": 11101, 
+        "tipsType": 1, 
+        "tips": "这是数学的<color=#FF8000>知识点</color>，消耗<color=#FF8000>学习动力</color>学习知识点可以提高该学科的成绩。", 
+        "beginEffect": [
+            [
+                70.0, 
+                1.0, 
+                102.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem2"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": -300.0, 
+        "centerParm": []
+    }, 
+    "11102": {
+        "id": 11102, 
+        "tipsType": 1, 
+        "tips": "老师每回合都会布置作业，<color=#FF8000>写作业</color>可以提高所有科目的成绩，但会消耗<color=#FF8000>心情</color>。", 
+        "beginEffect": [], 
+        "endEffect": [
+            [
+                1.0, 
+                2.0, 
+                0.0, 
+                50.0
+            ]
+        ], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "group_homework"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11103": {
+        "id": 11103, 
+        "tipsType": 1, 
+        "tips": "这里显示你的心情，吃零食水果等可以恢复心情。心情越高，<color=#FF8000>三项能力</color>提升越快。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                10.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            0
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11104": {
+        "id": 11104, 
+        "tipsType": 1, 
+        "tips": "心情总是会<color=#FF8000>向0靠拢</color>，每回合<color=#FF8000>降低5%</color>，如果心情低于0，那么会<color=#FF8000>增长5%</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            0
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11201": {
+        "id": 11201, 
+        "tipsType": 1, 
+        "tips": "每当<color=#FF8000>智力</color>升级可以掌握一个方法论。每个方法论都会提高你的<color=#FF8000>学习效率</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailMethodView", 
+                "group_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11202": {
+        "id": 11202, 
+        "tipsType": 1, 
+        "tips": "方法论分为学习、社交、锻炼、理财四组，每组的<color=#FF8000>最终方法论</color>都会提供<color=#FF8000>特别强大</color>的效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailMethodView", 
+                "methodCells"
+            ], 
+            [
+                "GenUI.Main.Cell_DetailMethodSmallItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            301
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11203": {
+        "id": 11203, 
+        "tipsType": 1, 
+        "tips": "现在<color=#FF8000>教学楼</color>已开放，过去<color=#FF8000>自习</color>提升智力吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11301": {
+        "id": 11301, 
+        "tipsType": 1, 
+        "tips": "你已经升入高中！高中课程难度很大，<color=#FF8000>智力</color>的影响更加显著。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11302": {
+        "id": 11302, 
+        "tipsType": 1, 
+        "tips": "现在每<color=#FF8000>50智力</color>都会让你增加1点学习效率，如果<color=#FF8000>智力</color>不足，你就会逐渐掉队！", 
+        "beginEffect": [
+            [
+                70.0, 
+                1.0, 
+                115.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11401": {
+        "id": 11401, 
+        "tipsType": 1, 
+        "tips": "随着学习的深入，知识点变得越来越难，你必须要掌握足够多的<color=#FF8000>学习策略</color>来跟上进度", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                132.0
+            ], 
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "btn_study_strategy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11402": {
+        "id": 11402, 
+        "tipsType": 1, 
+        "tips": "学习策略可以增加各科目的<color=#FF8000>学科效率</color>，使知识点进度增长更快。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI", 
+                "group_se"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            1
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11403": {
+        "id": 11403, 
+        "tipsType": 1, 
+        "tips": "例如50%语文学科效率，意味着学习一次语文，会增加相当于<color=#FF8000>150%</color>学习效率的进度（小学为100%）。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "itemgroup_study"
+            ], 
+            [
+                "GenUI.Common.Cell_StudyItemUI", 
+                "group_se"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            1
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11501": {
+        "id": 11501, 
+        "tipsType": 1, 
+        "tips": "积累足够的策略点后，可以解锁各种<color=#FF8000>学习策略</color>，提高你的各学科效率", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.StudyStrategyView", 
+                "group_line"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11502": {
+        "id": 11502, 
+        "tipsType": 1, 
+        "tips": "从<color=#FF8000>第6级</color>开始，每等级<color=#FF8000>智力</color>会获得+5策略点/回合。如果你想在学业上走得更远，优先提升智力吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.StudyStrategyView", 
+                "group_progress"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11601": {
+        "id": 11601, 
+        "tipsType": 1, 
+        "tips": "中考近在眼前！从现在开始，每回合都会产生<color=#FF8000>学习压力</color>，距离中考/高考越近，压力越大", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                133.0
+            ], 
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11602": {
+        "id": 11602, 
+        "tipsType": 1, 
+        "tips": "<color=#FF8000>掌握知识点</color>可以减低5点压力，提升/降低<color=#FF8000>学习段位</color>会增加/降低20点压力，最多降为0", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem3"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11603": {
+        "id": 11603, 
+        "tipsType": 1, 
+        "tips": "回合结束时，压力会等值地降低你的<color=#FF8000>心情</color>，同时会清零，<color=#FF8000>不会</color>积累到下一回合", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem3"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            0
+        ], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 165.4, 
+        "centerParm": []
+    }, 
+    "11701": {
+        "id": 11701, 
+        "tipsType": 1, 
+        "tips": "恭喜你已成为<color=#FF8000>尖子生</color>！从现在开始将和学霸们拼杀，提升段位会变得<color=#FF8000>更难</color>", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "group_top"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11702": {
+        "id": 11702, 
+        "tipsType": 1, 
+        "tips": "但是每提升一个段位，不但会增加零花钱，还会获得<color=#FF8000>特殊效果</color>。这个效果会在掉段后失效", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "group_top"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11801": {
+        "id": 11801, 
+        "tipsType": 1, 
+        "tips": "马上就要中考了！每年的<color=#FF8000>期末考试</color>回合，你的<color=#FF8000>学习压力</color>都会<color=#FF8000>暴涨</color>", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                43.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "root_Cell_CurrencyItem3"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11802": {
+        "id": 11802, 
+        "tipsType": 1, 
+        "tips": "相对应的，<color=#FF8000>寒暑假</color>期间，你的学习压力会<color=#FF8000>大大减少</color>，据此来规划你的学习吧", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "11901": {
+        "id": 11901, 
+        "tipsType": 1, 
+        "tips": "你的段位已经达到<color=#FF8000>顶尖</color>，你可以消耗<color=#FF8000>动力</color>来主动<color=#FF8000>阅读</color>。当段位低于顶尖时，会失去此能力", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                106.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "btn_read"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "12001": {
+        "id": 12001, 
+        "tipsType": 1, 
+        "tips": "你已经达到<color=#FF8000>学霸</color>段位，你可以开启<color=#FF8000>主题阅读</color>了，当段位低于学霸时，会失去此能力", 
+        "beginEffect": [
+            [
+                101.0, 
+                96.0, 
+                106.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "btn_read_theme"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "12101": {
+        "id": 12101, 
+        "tipsType": 1, 
+        "tips": "这里显示你所有<color=#FF8000>读完</color>的书籍，每本书籍都有若干个主题，<color=#FF8000>四个</color>同主题的书籍可以被一起分析", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.BookThemeView", 
+                "group_left"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": [
+            -937.0, 
+            -74.0
+        ]
+    }, 
+    "12102": {
+        "id": 12102, 
+        "tipsType": 1, 
+        "tips": "四本书的<color=#FF8000>总页数</color>越多，分析后的感悟越强。每回合会推进<color=#FF8000>50%阅读速度</color>的分析进度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.BookThemeView", 
+                "group_left"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "12103": {
+        "id": 12103, 
+        "tipsType": 1, 
+        "tips": "这里查看各个主题的效果，以总页数<color=#FF8000>400页</color>为标准", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.BookThemeView", 
+                "dropdownex_theme"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20001": {
+        "id": 20001, 
+        "tipsType": 1, 
+        "tips": "从这里进入<color=#FF8000>社交</color>界面，与你的同学<color=#FF8000>互动</color>", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                42.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20101": {
+        "id": 20101, 
+        "tipsType": 1, 
+        "tips": "这是你可以<color=#FF8000>关注</color>的同学", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailSocialView", 
+                "roles"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [
+            "ActionSubData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20102": {
+        "id": 20102, 
+        "tipsType": 1, 
+        "tips": "点击<color=#FF8000>关注同学</color>按钮，选择你感兴趣的同学，之后就可以与他们互动，并发展更深厚的友谊", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailSocialView", 
+                "btn_focus"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20103": {
+        "id": 20103, 
+        "tipsType": 1, 
+        "tips": "现在你只能关注一个同学，当你的<color=#FF8000>情商</color>提高后，就可以关注更多同学。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20201": {
+        "id": 20201, 
+        "tipsType": 1, 
+        "tips": "这里显示同学的好感，好感提升以后你们的关系会发展为<color=#FF8000>朋友</color>、<color=#FF8000>好友</color>、<color=#FF8000>密友</color>、<color=#FF8000>挚友</color>并获得对应效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailSocialView", 
+                "itemgroup_roles"
+            ], 
+            [
+                "GenUI.Main.Cell_SocialItem2UI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [
+            "ActionSubData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20202": {
+        "id": 20202, 
+        "tipsType": 1, 
+        "tips": "在这里可以看到不同关系的效果", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailSocialView", 
+                "group_relation"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20301": {
+        "id": 20301, 
+        "tipsType": 1, 
+        "tips": "你可以在鹅城的各个地方找到已关注的同学。互动需要消耗<color=#FF8000>社交热情</color>，提高情商等级可以增加热情的回复。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            11
+        ], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20401": {
+        "id": 20401, 
+        "tipsType": 1, 
+        "tips": "点击头像即可与同学互动。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MapSceneView", 
+                "itemgroup_role"
+            ], 
+            [
+                "GenUI.Main.Cell_SceneRoleItemUI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20402": {
+        "id": 20402, 
+        "tipsType": 1, 
+        "tips": "当你们的好感达到一定程度时，他们就会请你帮忙解决麻烦。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20403": {
+        "id": 20403, 
+        "tipsType": 1, 
+        "tips": "成功解决麻烦后就能<color=#FF8000>提升关系</color>（朋友/好友/密友/挚友），同时提高成就。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20501": {
+        "id": 20501, 
+        "tipsType": 1, 
+        "tips": "点击<color=#FF8000>热情</color>按钮，可以快捷地与同学们社交", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            11
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "20601": {
+        "id": 20601, 
+        "tipsType": 1, 
+        "tips": "恭喜你结交了一位挚友！继续提升挚友的好感，你就可以向他们<color=#FF8000>请教经验</color>，提升大量能力。能力的种类取决于他们擅长哪一种。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                310.0
+            ], 
+            [
+                70.0, 
+                1.0, 
+                9018.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21201": {
+        "id": 21201, 
+        "tipsType": 1, 
+        "tips": "发展新的关系会获得<color=#FF8000>成就</color>。你可以在这里查看提升关系会增加的<color=#FF8000>成就</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.TheAction.ActionView", 
+                "group_social_achivement"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            104
+        ], 
+        "cellData": [
+            "ActionSubData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21401": {
+        "id": 21401, 
+        "tipsType": 1, 
+        "tips": "从成长里进入价值观界面", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                2.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21501": {
+        "id": 21501, 
+        "tipsType": 1, 
+        "tips": "当<color=#FF8000>情商</color>升级时，你可以采用一个已解锁的<color=#FF8000>价值观</color>，使之生效。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailWorldviewView", 
+                "itemgroup_data"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21502": {
+        "id": 21502, 
+        "tipsType": 1, 
+        "tips": "解锁价值观后，还会增加你的<color=#FF8000>热情回复</color>，从而与更多的同学社交。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21503": {
+        "id": 21503, 
+        "tipsType": 1, 
+        "tips": "现在去<color=#FF8000>教学楼</color>或者<color=#FF8000>商场</color>提升情商吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21601": {
+        "id": 21601, 
+        "tipsType": 1, 
+        "tips": "你的<color=#FF8000>社交容量</color>是有限的，将同学关系提升至好友/密友/挚友/至交，将<color=#FF8000>额外积累</color>/2/3/4点社交容量", 
+        "beginEffect": [
+            [
+                101.0, 
+                95.0, 
+                1.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.QuickSocialView", 
+                "txt_socialCapacity"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21602": {
+        "id": 21602, 
+        "tipsType": 1, 
+        "tips": "也就是说，每个好友/密友/挚友/至交实际会占用1/3/6/10点社交容量", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21603": {
+        "id": 21603, 
+        "tipsType": 1, 
+        "tips": "每缺少一点社交容量都会减少<color=#FF8000>热情</color>，你可以通过提升情商来增加社交容量", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            11
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21604": {
+        "id": 21604, 
+        "tipsType": 1, 
+        "tips": "从<color=#FF8000>第6级</color>开始，每等级<color=#FF8000>情商</color>都会增加5点社交容量，如果想要结交更多更亲密的朋友，就优先提升情商吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21701": {
+        "id": 21701, 
+        "tipsType": 1, 
+        "tips": "当同学的好感达到400后，你可以在其<color=#FF8000>社交面板</color>上<color=#FF8000>结为至交</color>，获得一个强大的增益", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            11
+        ], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "21702": {
+        "id": 21702, 
+        "tipsType": 1, 
+        "tips": "至交是你一生的朋友，会占用大量<color=#FF8000>社交容量</color>，也<color=#FF8000>无法</color>取消关注", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            11
+        ], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "30101": {
+        "id": 30101, 
+        "tipsType": 1, 
+        "tips": "现在可以练习<color=#FF8000>专长</color>了，从<color=#FF8000>成长</color>里可进入专长界面。", 
+        "beginEffect": [
+            [
+                3.0, 
+                2.0, 
+                2.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                8.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "30201": {
+        "id": 30201, 
+        "tipsType": 1, 
+        "tips": "通过训练提升你的<color=#FF8000>篮球能力</color>和<color=#FF8000>体魄</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.SportTraningView", 
+                "btn_training"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "30202": {
+        "id": 30202, 
+        "tipsType": 1, 
+        "tips": "你可以在这里熟悉投篮的手感", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.SportTraningView", 
+                "btn_pratice"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "30203": {
+        "id": 30203, 
+        "tipsType": 1, 
+        "tips": "当你准备好并且体魄足够时，就可以<color=#FF8000>挑战</color>对手", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.SportTraningView", 
+                "group_rank"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "30301": {
+        "id": 30301, 
+        "tipsType": 1, 
+        "tips": "现在可以练习<color=#FF8000>专长</color>了，从<color=#FF8000>成长</color>里可进入专长界面。", 
+        "beginEffect": [
+            [
+                3.0, 
+                2.0, 
+                3.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                8.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31101": {
+        "id": 31101, 
+        "tipsType": 1, 
+        "tips": "提升<color=#FF8000>体魄</color>的评级，可以提高每回合的<color=#FF8000>精力回复</color>", 
+        "beginEffect": [
+            [
+                3.0, 
+                2.0, 
+                1.0
+            ], 
+            [
+                3.0, 
+                2.0, 
+                4.0
+            ], 
+            [
+                40.0, 
+                1.0, 
+                3141.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31102": {
+        "id": 31102, 
+        "tipsType": 1, 
+        "tips": "同时还会提高专长经验的获取，更快地掌握专长。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31201": {
+        "id": 31201, 
+        "tipsType": 1, 
+        "tips": "开启<color=#FF8000>练习</color>按钮，每回合会自动增长<color=#FF8000>专长经验</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementGroupUI", 
+                "toggle_practice"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [
+            "View.Main.ZhuangchangGroupData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31202": {
+        "id": 31202, 
+        "tipsType": 1, 
+        "tips": "获得足够的经验就能掌握新的<color=#FF8000>专长</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementGroupUI", 
+                "itemgroup_data"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2, 
+            0, 
+            211
+        ], 
+        "cellData": [
+            "View.Main.ZhuangchangGroupData", 
+            "id", 
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31301": {
+        "id": 31301, 
+        "tipsType": 1, 
+        "tips": "这里显示当前体魄等级对专长经验的加成", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "txtex_tips"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31401": {
+        "id": 31401, 
+        "tipsType": 1, 
+        "tips": "开启<color=#FF8000>练习</color>按钮，每回合会自动增长<color=#FF8000>专长经验</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementGroupUI", 
+                "itemgroup_data"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementItemUI", 
+                "txt_progress"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3, 
+            0, 
+            311
+        ], 
+        "cellData": [
+            "View.Main.ZhuangchangGroupData", 
+            "id", 
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementGroupUI", 
+                "toggle_practice"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            3
+        ], 
+        "cellData2": [
+            "View.Main.ZhuangchangGroupData", 
+            "id"
+        ], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31402": {
+        "id": 31402, 
+        "tipsType": 1, 
+        "tips": "获得足够的经验就能掌握新的<color=#FF8000>专长</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.DetailView"
+            ], 
+            [
+                "View.Main.DetailZhuangchangView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementGroupUI", 
+                "itemgroup_data"
+            ], 
+            [
+                "GenUI.Main.Cell_AchievementItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3, 
+            0, 
+            311
+        ], 
+        "cellData": [
+            "View.Main.ZhuangchangGroupData", 
+            "id", 
+            "GraphData", 
+            "id"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31501": {
+        "id": 31501, 
+        "tipsType": 1, 
+        "tips": "从<color=#FF8000>第6级</color>开始，每级体魄会增加20精力恢复上限，如果你想获得更多的精力，就优先提升体魄吧！", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "31601": {
+        "id": 31601, 
+        "tipsType": 1, 
+        "tips": "恭喜！你的<color=#FF8000>精力回复</color>已经很高了，但请注意，精力恢复有其上限，默认为<color=#FF8000>80</color>。将<color=#FF8000>体魄</color>提升至6级或以后，每级可以提高20点上限", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "40203": {
+        "id": 40203, 
+        "tipsType": 0, 
+        "tips": "按错按键时，会陷入短暂的僵直，按键提示变为红色。这段时间内无法进行操作。", 
+        "url": "guide/img_chuoshouzhi2"
+    }, 
+    "91101": {
+        "id": 91101, 
+        "tipsType": 1, 
+        "tips": "欢迎回到《学生时代》！\n尽情地探索，好好地享受学生生涯吧！", 
+        "beginEffect": [
+            [
+                40.0, 
+                1.0, 
+                2701.0
+            ], 
+            [
+                40.0, 
+                1.0, 
+                3130.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                402.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "92301": {
+        "id": 92301, 
+        "tipsType": 1, 
+        "tips": "你已获得一个<color=#FF8000>目标</color>，完成目标将获得<color=#FF8000>成就</color>。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                110.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                41.0
+            ], 
+            [
+                101.0, 
+                4.0, 
+                3.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                15.0
+            ], 
+            [
+                61.0, 
+                99.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI", 
+                "btn_click"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "100101": {
+        "id": 100101, 
+        "tipsType": 0, 
+        "tips": "这是你的点数", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "myCardUI"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationCardUI", 
+                "txt_cnt"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100102": {
+        "id": 100102, 
+        "tipsType": 0, 
+        "tips": "这是对方的点数", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "aiCardUI"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationCardUI", 
+                "txt_cnt"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100103": {
+        "id": 100103, 
+        "tipsType": 0, 
+        "tips": "双方拼点，点数大的对对方造成伤害", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_playcard"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100201": {
+        "id": 100201, 
+        "tipsType": 0, 
+        "tips": "心理防线到0时游戏结束", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "root_hp_ai"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100301": {
+        "id": 100301, 
+        "tipsType": 0, 
+        "tips": "<color=#05559a>蓝色</color>是<color=#05559a>逻辑牌</color>，<color=#ff0000>红色</color>是<color=#ff0000>暴躁牌</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_playcard"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100302": {
+        "id": 100302, 
+        "tipsType": 0, 
+        "tips": "<color=#ff0000>暴躁牌</color>克制<color=#05559a>逻辑牌</color>", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                1001.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "img_relation"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100303": {
+        "id": 100303, 
+        "tipsType": 0, 
+        "tips": "被克制的牌的点数-3", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "myCardUI"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationCardUI", 
+                "txt_cnt"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100401": {
+        "id": 100401, 
+        "tipsType": 0, 
+        "tips": "<color=#2c2a2c>黑色</color>是<color=#2c2a2c>诡辩牌</color>，克制<color=#ff0000>暴躁牌</color>", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_ai"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_playcard"
+            ]
+        ], 
+        "showMask": 1
+    }, 
+    "100501": {
+        "id": 100501, 
+        "tipsType": 0, 
+        "tips": "这是一张功能牌，翻开后发动特殊效果", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_ai"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100601": {
+        "id": 100601, 
+        "tipsType": 0, 
+        "tips": "功能牌也受克制关系影响", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_playcard"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100701": {
+        "id": 100701, 
+        "tipsType": 0, 
+        "tips": "这是一张计策牌，打出后立刻发动效果", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "itemgroup_me"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationCardUI", 
+                "btn_click"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            5
+        ], 
+        "cellData": [
+            "MiniGame.Negotiation.CardData", 
+            "type2"
+        ], 
+        "cell": [], 
+        "penetrate": 1, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "itemgroup_me"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationCardUI"
+            ]
+        ], 
+        "showMask": 1
+    }, 
+    "100801": {
+        "id": 100801, 
+        "tipsType": 0, 
+        "tips": "还需要再打一张牌来拼点", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "itemgroup_me"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [
+            "GenUI.MiniGame.Cell_NegotiationCardUI", 
+            "btn_click"
+        ], 
+        "penetrate": 1, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "100901": {
+        "id": 100901, 
+        "tipsType": 0, 
+        "tips": "这是你的BUFF，通常持续整局游戏", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "myHPUI"
+            ], 
+            [
+                "GenUI.MiniGame.Cell_NegotiationHPItemUI", 
+                "itemgroup_buff"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "101001": {
+        "id": 101001, 
+        "tipsType": 0, 
+        "tips": "手牌中没有能克制对方的牌", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_handcard_me"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "101002": {
+        "id": 101002, 
+        "tipsType": 0, 
+        "tips": "打出点数小的牌，保留点数大的牌，后续或许能逆转翻盘", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "group_handcard_me"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "101101": {
+        "id": 101101, 
+        "tipsType": 0, 
+        "tips": "初始策略点等于你的情商，受击后也会增加策略点", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "txt_skill"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "101102": {
+        "id": 101102, 
+        "tipsType": 0, 
+        "tips": "消耗策略点可施放强大的策略", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "itemgroup_skills"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "101103": {
+        "id": 101103, 
+        "tipsType": 0, 
+        "tips": "使用过的策略，其花费会暂时增加，直到本局辩论结束", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Negotiation.NegotiationMiniGameView", 
+                "itemgroup_skills"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "penetrate": 0, 
+        "delayBegin": 0, 
+        "waitForView": null, 
+        "maxRect": [], 
+        "showMask": 1
+    }, 
+    "130101": {
+        "id": 130101, 
+        "tipsType": 1, 
+        "tips": "这里显示了游戏的<color=#FF8000>类型</color>，不同的类型会提高不同的能力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.EGameLibView", 
+                "itemgroup_data"
+            ], 
+            [
+                "GenUI.Common.Cell_EGameItem3UI", 
+                "icon_type"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "130102": {
+        "id": 130102, 
+        "tipsType": 1, 
+        "tips": "每次游玩都会增加<color=#FF8000>进度</color>，进度满时就会<color=#FF8000>通关</color>——显示其<color=#FF8000>星级</color>，并获得对应的心情", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.EGameLibView", 
+                "itemgroup_data"
+            ], 
+            [
+                "GenUI.Common.Cell_EGameItem3UI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "130201": {
+        "id": 130201, 
+        "tipsType": 1, 
+        "tips": "你可以在这里寻找喜欢的新游戏，但每个<color=#FF8000>平台</color>最多显示<color=#FF8000>5个</color>游戏", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.EGameLibView", 
+                "btn_buy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "130202": {
+        "id": 130202, 
+        "tipsType": 1, 
+        "tips": "关注其他平台的解锁时间，就能玩到更多的游戏", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.EGameLibView", 
+                "group_tog"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "140101": {
+        "id": 140101, 
+        "tipsType": 1, 
+        "tips": "这些是你能够制作的物品，每个物品只能制作1次", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.DIYCraftView", 
+                "itemgroup_list"
+            ], 
+            [
+                "GenUI.Skill.Cell_DIYItemUI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "140102": {
+        "id": 140102, 
+        "tipsType": 1, 
+        "tips": "阅历等级提高以后，你就可以制作更高级的物品。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.DIYCraftView", 
+                "itemgroup_list"
+            ], 
+            [
+                "GenUI.Skill.Cell_DIYItemUI", 
+                "btn_upgrade"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            2
+        ], 
+        "cellData": [
+            "View.Skill.DIYGroupData", 
+            "lv"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "140201": {
+        "id": 140201, 
+        "tipsType": 1, 
+        "tips": "每次<color=#FF8000>制作</color>有概率触发小游戏，并根据你的表现增加制作进度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.DIYCraftView", 
+                "btn_craft"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Skill.DIYCraftView", 
+                "icon_item"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "150101": {
+        "id": 150101, 
+        "tipsType": 1, 
+        "tips": "点击此按钮开始<color=#FF8000>写日记</color>，你需要在本回合采取过行动才可写日记", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.WritingDiaryView", 
+                "btn_start"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "150102": {
+        "id": 150102, 
+        "tipsType": 1, 
+        "tips": "坚持写日记，就能使日记本<color=#FF8000>升级</color>，不断获得新效果。必须<color=#FF8000>珍视</color>日记本才能获得其效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.WritingDiaryView", 
+                "group_diary"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "150201": {
+        "id": 150201, 
+        "tipsType": 1, 
+        "tips": "点击此处选择你要记录的<color=#FF8000>事件</color>，不同的事件各自有对应的效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.WritingDiaryView", 
+                "itemgroup_option"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "160101": {
+        "id": 160101, 
+        "tipsType": 1, 
+        "tips": "<color=#FF8000>智力</color>提升到一定程度，就可以进行哲学思辨，选择你最认可的一项回答。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.ThinkingView", 
+                "txtex_tips"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "160102": {
+        "id": 160102, 
+        "tipsType": 1, 
+        "tips": "选择回答后，会提高对应学派的倾向，倾向最高的学派会成为<color=#FF8000>主要观点</color>，并激活其特有的效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.ThinkingView", 
+                "group_maintype"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170101": {
+        "id": 170101, 
+        "tipsType": 1, 
+        "tips": "番剧分为多种<color=#FF8000>类型</color>，每种类型均有不同的效果，此外，每个番剧还有自己的<color=#FF8000>独特效果</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeView", 
+                "itemgroup_anime"
+            ], 
+            [
+                "GenUI.Skill.Cell_AnimeItemUI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170102": {
+        "id": 170102, 
+        "tipsType": 1, 
+        "tips": "看完番剧可以提高<color=#FF8000>二次元浓度</color>，积累浓度后可解锁<color=#FF8000>额外效果</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeView", 
+                "group_progress"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170201": {
+        "id": 170201, 
+        "tipsType": 1, 
+        "tips": "反复 “搜索番剧”，消耗的精力会<color=#FF8000>越来越多</color>，但每年<color=#FF8000>寒假/暑假</color>新番上架，其消耗的精力会<color=#FF8000>重置</color>为基础值。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeView", 
+                "btn_cost"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170202": {
+        "id": 170202, 
+        "tipsType": 1, 
+        "tips": "“寻求安利”极大概率会发现<color=#FF8000>神作</color>，但其信任消耗会越来越多，且寒假/暑假也<color=#FF8000>不会重置</color>消耗。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeView", 
+                "btn_cost2"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170301": {
+        "id": 170301, 
+        "tipsType": 1, 
+        "tips": "你在漫展中的行动会改变你对本次漫展的<color=#FF8000>印象</color>，印象值越高，印象越深，<color=#FF8000>奖励</color>越高", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeConView", 
+                "group_exp"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "170302": {
+        "id": 170302, 
+        "tipsType": 1, 
+        "tips": "你每次参观一个地点都会消耗一个小时和若干体力，漫展会在下午<color=#FF8000>五点闭展</color>。如果你<color=#FF8000>体力耗尽</color>，也会提前离开漫展。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.AnimeConView", 
+                "group_energy"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Skill.AnimeConView", 
+                "group_time"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180101": {
+        "id": 180101, 
+        "tipsType": 1, 
+        "tips": "你已解锁钓鱼专长，在小卖部购买<color=#FF8000>鱼竿</color>后，就可以前往双子峰<color=#FF8000>山脚</color>钓鱼了", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_map"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180201": {
+        "id": 180201, 
+        "tipsType": 1, 
+        "tips": "你钓上的鱼会放进鱼篓，你可以将鱼<color=#FF8000>放生</color>以增加心情，或者<color=#FF8000>上交</color>给妈妈以增加信任，或者<color=#FF8000>出售</color>至市场以获得零花钱。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180202": {
+        "id": 180202, 
+        "tipsType": 1, 
+        "tips": "所有的鱼只能保存<color=#FF8000>一个回合</color>，回合结束时鱼篓中的鱼都会死去，务必及时处理。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180203": {
+        "id": 180203, 
+        "tipsType": 1, 
+        "tips": "钓上一条新的鱼时会解锁对应的<color=#FF8000>图鉴</color>，当你解锁了某一类鱼时，会获得<color=#FF8000>成就</color>奖励。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.FishBagView", 
+                "btn_lib"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180301": {
+        "id": 180301, 
+        "tipsType": 1, 
+        "tips": "消耗精力可以进行钓鱼，同一回合<color=#FF8000>连续钓鱼</color>会惊扰鱼群，需要消耗更多精力来等待上钩。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Fishing.FishingMiniGameView", 
+                "btn_start"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180302": {
+        "id": 180302, 
+        "tipsType": 1, 
+        "tips": "钓上的鱼会进入<color=#FF8000>鱼篓</color>，可以在这里查看和处理鱼", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "btn_fish"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "180303": {
+        "id": 180303, 
+        "tipsType": 1, 
+        "tips": "每次钓鱼都会获得<color=#FF8000>钓鱼经验</color>，可提升钓鱼专长。专长提升后，小游戏能力将会增强，可以钓上更大的鱼，还会解锁<color=#FF8000>新鱼饵</color>等多种效果。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "MiniGame.Fishing.FishingMiniGameView", 
+                "group_bait"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "250101": {
+        "id": 250101, 
+        "tipsType": 1, 
+        "tips": "你已参加杰哥的派对，你的选择会改变派对的<color=#FF8000>气氛</color>，气氛越高，你提升的<color=#FF8000>心情</color>越多。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.BirthdayPartyView", 
+                "group_lv"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "250102": {
+        "id": 250102, 
+        "tipsType": 1, 
+        "tips": "在“你画我猜”和其他游戏中获胜会增加游戏<color=#FF8000>积分</color>，派对结束时，杰哥会根据你的积分排名赠送<color=#FF8000>神秘奖品</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.BirthdayPartyView", 
+                "group_score"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "400201": {
+        "id": 400201, 
+        "tipsType": 0, 
+        "tips": "点击左键来<color=#FF8000>激活</color>一个格子，格子会提供<color=#FF8000>进度</color>。\n\n激活格子会消耗<color=#FF8000>步数</color>，你的平时成绩越好，拥有的步数越多。", 
+        "url": "guide/img_kaoshi1"
+    }, 
+    "400202": {
+        "id": 400202, 
+        "tipsType": 0, 
+        "tips": "激活一个格子后，它周围的格子就会被<color=#FF8000>点亮</color>，你只能激活被点亮的格子。", 
+        "url": "guide/img_kaoshi2"
+    }, 
+    "400203": {
+        "id": 400203, 
+        "tipsType": 0, 
+        "tips": "鼠标悬停在格子上，会显示其进度和<color=#FF8000>效果</color>，遇到没见过的格子，记得要多多查看。", 
+        "url": "guide/img_kaoshi3"
+    }, 
+    "400204": {
+        "id": 400204, 
+        "tipsType": 0, 
+        "tips": "压轴题：被包围时提供大量得分。\n\n当你的行动路径形成封闭区域时，区域内的格子均被包围。如图所示。", 
+        "url": "guide/img_kaoshi4"
+    }, 
+    "400501": {
+        "id": 400501, 
+        "tipsType": 0, 
+        "tips": "在空白格子上填上正确的数字，使每一<color=#FF8000>行</color>、每一<color=#FF8000>列</color>、每个<color=#FF8000>矩形</color>（2*3）中都含有不重复的1-6。", 
+        "url": "guide/img_shudu1"
+    }, 
+    "400701": {
+        "id": 400701, 
+        "tipsType": 0, 
+        "tips": "点击“×”或“✓”来判断等式是否正确\n\n超时算作判断错误。", 
+        "url": "guide/img_susuan1"
+    }, 
+    "400801": {
+        "id": 400801, 
+        "tipsType": 0, 
+        "tips": "在限定时间内把所有成语补充完整。\n\n点击右边的汉字，可将它填入高亮的空格中。\n\n点击空格中的汉字，可将它撤回至右边。", 
+        "url": "guide/img_chengyu1"
+    }, 
+    "400901": {
+        "id": 400901, 
+        "tipsType": 0, 
+        "tips": "长按左键<color=#FF8000>拖拽</color>图片以改变位置。\n\n必须在限定时间内还原图画。", 
+        "url": "guide/img_pingtu1"
+    }, 
+    "401001": {
+        "id": 401001, 
+        "tipsType": 0, 
+        "tips": "挑选发射角度\n\n<color=#FF8000>左键</color>发射所有小球", 
+        "url": "guide/img_brick1"
+    }, 
+    "401002": {
+        "id": 401002, 
+        "tipsType": 0, 
+        "tips": "鼠标控制白板移动\n\n反弹掉落的小球\n\n否则小球将会消失", 
+        "url": "guide/img_brick2"
+    }, 
+    "401101": {
+        "id": 401101, 
+        "tipsType": 0, 
+        "tips": "进攻时：轻点左键<color=#FF8000>假动作</color>，长按左键蓄力<color=#FF8000>投篮</color>。\n\n蓄力条越接近<color=#FF8000>黄条</color>命中概率越大。\n\n必须在5秒倒计时内出手。", 
+        "url": "guide/img_lanqiu1"
+    }, 
+    "401102": {
+        "id": 401102, 
+        "tipsType": 0, 
+        "tips": "防守时：长按左键<color=#FF8000>起跳</color>干扰对手。", 
+        "url": "guide/img_lanqiu2"
+    }, 
+    "401401": {
+        "id": 401401, 
+        "tipsType": 0, 
+        "tips": "在准备阶段尽量<color=#FF8000>记忆</color>单词卡的位置\n", 
+        "url": "guide/img_fanpai1"
+    }, 
+    "401402": {
+        "id": 401402, 
+        "tipsType": 0, 
+        "tips": "单词卡翻转至背面后，尽快找出<color=#FF8000>成对</color>的单词卡。", 
+        "url": "guide/img_fanpai2"
+    }, 
+    "401501": {
+        "id": 401501, 
+        "tipsType": 0, 
+        "tips": "点击两个<color=#FF8000>颜色</color>和<color=#FF8000>数字</color>都相同的知识方块来消除它们。", 
+        "url": "guide/img_fuxi1"
+    }, 
+    "401502": {
+        "id": 401502, 
+        "tipsType": 0, 
+        "tips": "这两个方块的相连路线最多转折<color=#FF8000>2次</color>，如图所示。", 
+        "url": "guide/img_fuxi2"
+    }, 
+    "401503": {
+        "id": 401503, 
+        "tipsType": 0, 
+        "tips": "时间结束前尽可能多地消除方块。\n\n若剩余方块都不可消除，游戏会提前结束。", 
+        "url": "guide/img_fuxi3"
+    }, 
+    "401601": {
+        "id": 401601, 
+        "tipsType": 0, 
+        "tips": "当指针移动到打折区域时。点击“<color=#FF8000>讨价还价</color>”，即可享受折扣\n\n宽度不同的打折区域，给予的折扣<color=#FF8000>相同</color>。\n\n你只有3次讲价的机会。", 
+        "url": "guide/img_jiangjia1"
+    }, 
+    "402001": {
+        "id": 402001, 
+        "tipsType": 0, 
+        "tips": "根据提示按键，按对个数最多的赢下本局，先赢下<color=#FF8000>2局</color>的人获胜。\n\n若一次对局中，按对个数是对方<color=#FF8000>2倍</color>，就会直接获胜。", 
+        "url": "guide/img_chuoshouzhi1"
+    }, 
+    "402002": {
+        "id": 402002, 
+        "tipsType": 0, 
+        "tips": "按键顺序是固定的，注意留意按键<color=#FF8000>规律</color>。", 
+        "url": "guide/img_chuoshouzhi1"
+    }, 
+    "402101": {
+        "id": 402101, 
+        "tipsType": 0, 
+        "tips": "红条是<color=#FF8000>血量</color>，血量为0者失败；\n\n黄条为<color=#FF8000>耐力</color>，出拳需要消耗耐力；\n\n", 
+        "url": "guide/img_dajia1"
+    }, 
+    "402102": {
+        "id": 402102, 
+        "tipsType": 0, 
+        "tips": "WSAD<color=#FF8000>移动</color>;\n\n左键<color=#FF8000>出拳</color>;\n\n按住右键<color=#FF8000>防守</color>。", 
+        "url": "guide/img_dajia1"
+    }, 
+    "402201": {
+        "id": 402201, 
+        "tipsType": 0, 
+        "tips": "在限定时间内，将下面的零件正确填入上方的凹槽中。", 
+        "url": "guide/img_shougong1"
+    }, 
+    "402202": {
+        "id": 402202, 
+        "tipsType": 0, 
+        "tips": "左键<color=#FF8000>拾起/放下</color>零件，右键<color=#FF8000>旋转</color>零件。", 
+        "url": "guide/img_shougong1"
+    }, 
+    "402301": {
+        "id": 402301, 
+        "tipsType": 0, 
+        "tips": "在限时内，用<color=#FF8000>相同颜色</color>的灵感将中间的矩形（3*3）填满，就能成功整理思绪。", 
+        "url": "guide/img_riji1"
+    }, 
+    "402302": {
+        "id": 402302, 
+        "tipsType": 0, 
+        "tips": "点击<color=#FF8000>箭头</color>按钮，使该行或该列向着对应方向整体平移一格。", 
+        "url": "guide/img_riji2"
+    }, 
+    "402401": {
+        "id": 402401, 
+        "tipsType": 0, 
+        "tips": "根据谱子按键。数字1~7分别对应<color=#FF8000>A~J</color>。\n\n数字顶上带·的是高音，对应<color=#FF8000>Q~U</color>。\n\n数字底下带·的是低音，对应<color=#FF8000>Z~M</color>。\n\n按空格可打开/关闭按键提示", 
+        "url": "guide/img_tangangqin1"
+    }, 
+    "402501": {
+        "id": 402501, 
+        "tipsType": 0, 
+        "tips": "<color=#006AC3>武器伤害：</color>攻击造成的基础伤害\n<color=#006AC3>武器命中/法术命中：</color>提高攻击/法术的威力\n<color=#006AC3>武器防御/法术抵抗：</color>减少敌方攻击/法术的威力\n<color=#006AC3>攻击范围：</color>影响能攻击到的目标数量\n<color=#006AC3>先攻：</color>影响行动的先后顺序", 
+        "url": "guide/img_dnd1"
+    }, 
+    "402502": {
+        "id": 402502, 
+        "tipsType": 0, 
+        "tips": "单击下方的行动列表选择攻击或施法；\n\n鼠标悬停在目标上可预览命中概率；\n\n继续单击目标进行攻击或施法。", 
+        "url": "guide/img_dnd2"
+    }, 
+    "402503": {
+        "id": 402503, 
+        "tipsType": 0, 
+        "tips": "命中程度由命中值决定：\n5以下：落空，没有影响；\n5-10：擦伤，50%伤害；\n10-20：命中，100%伤害；\n21以上：暴击，150%伤害", 
+        "url": "guide/img_dnd3"
+    }, 
+    "402504": {
+        "id": 402504, 
+        "tipsType": 0, 
+        "tips": "命中值 = 武器/法术命中 - 武器/法术防御 + 随机1~20骰子。\n\n因此，命中越高，对应防御越低，效果越好。", 
+        "url": "guide/img_dnd4"
+    }, 
+    "402505": {
+        "id": 402505, 
+        "tipsType": 0, 
+        "tips": "人物具有保护状态时，对手的近战攻击无法攻击后排人物。\n\n生命值低于50%时，将失去保护状态。\n\n攻击范围超过1的人物可以越过保护攻击后排\n", 
+        "url": "guide/img_dnd5"
+    }, 
+    "402601": {
+        "id": 402601, 
+        "tipsType": 0, 
+        "tips": "左键<color=#FF8000>击球</color>\n右键跳起<color=#FF8000>扣杀</color>\nA键和D键<color=#FF8000>移动</color>", 
+        "url": "guide/img_badminton1"
+    }, 
+    "402602": {
+        "id": 402602, 
+        "tipsType": 0, 
+        "tips": "扣杀需要把握<color=#FF8000>时机</color>：\n\n当球<color=#FF8000>即将</color>进入扣杀点时，角色应站在扣杀点<color=#FF8000>稍后</color>的位置", 
+        "url": "guide/img_badminton2"
+    }, 
+    "402603": {
+        "id": 402603, 
+        "tipsType": 0, 
+        "tips": "技术熟练以后，没有出现扣杀提示，也可<color=#FF8000>尝试</color>扣杀。", 
+        "url": "guide/img_badminton3"
+    }, 
+    "402701": {
+        "id": 402701, 
+        "tipsType": 0, 
+        "tips": "记忆阶段：<color=#FF8000>记住</color>卡片的顺序", 
+        "url": "guide/img_studycard1"
+    }, 
+    "402702": {
+        "id": 402702, 
+        "tipsType": 0, 
+        "tips": "回忆阶段：依次<color=#FF8000>填入</color>正确的卡片", 
+        "url": "guide/img_studycard2"
+    }, 
+    "402703": {
+        "id": 402703, 
+        "tipsType": 0, 
+        "tips": "<color=#FF8000>单击</color>下方卡片，将卡片填入上方<color=#FF8000>左侧</color>空位；\n\n<color=#FF8000>单击</color>上方卡片，将卡片<color=#FF8000>取下</color>", 
+        "url": "guide/img_studycard3"
+    }, 
+    "402801": {
+        "id": 402801, 
+        "tipsType": 0, 
+        "tips": "狂点<color=#FF8000>左键</color>键以推进进度", 
+        "url": "guide/img_dianjixuli1"
+    }, 
+    "402802": {
+        "id": 402802, 
+        "tipsType": 0, 
+        "tips": "限时内进度<color=#FF8000>填满</color>为胜利，否则失败", 
+        "url": "guide/img_dianjixuli2"
+    }, 
+    "402901": {
+        "id": 402901, 
+        "tipsType": 0, 
+        "tips": "连接导线，形成<color=#FF8000>闭合回路</color>，并<color=#FF8000>点亮</color>所有小灯泡", 
+        "url": "guide/img_lizong1"
+    }, 
+    "402902": {
+        "id": 402902, 
+        "tipsType": 0, 
+        "tips": "<color=#FF8000>单击</color>电池后，<color=#FF8000>滑动</color>鼠标以连线", 
+        "url": "guide/img_lizong2"
+    }, 
+    "403001": {
+        "id": 403001, 
+        "tipsType": 0, 
+        "tips": "点击文字，填满空格，使得句子有合理含义！", 
+        "url": "guide/img_juzipailie"
+    }, 
+    "403101": {
+        "id": 403101, 
+        "tipsType": 0, 
+        "tips": "音符即将与Q/W/E图标完全重叠时，按下对应按键\n\n重叠程度越高，得分越高", 
+        "url": "guide/img_music1"
+    }, 
+    "403102": {
+        "id": 403102, 
+        "tipsType": 0, 
+        "tips": "长音符则需要<color=#FF8000>长按</color>按键\n\n当其尾端即将与Q/W/E图标完全重叠时，松开对应按键", 
+        "url": "guide/img_music2"
+    }, 
+    "403201": {
+        "id": 403201, 
+        "tipsType": 0, 
+        "tips": "鱼上钩后，会拉扯鱼鱼竿，使浮标左移。点击<color=#FF8000>左键</color>收线可使浮标右移", 
+        "url": "guide/img_fish1"
+    }, 
+    "403202": {
+        "id": 403202, 
+        "tipsType": 0, 
+        "tips": "控制浮标和鱼的相对位置，使鱼逐渐疲惫，最终便可成功钓上鱼", 
+        "url": "guide/img_fish2"
+    }, 
+    "403301": {
+        "id": 403301, 
+        "tipsType": 0, 
+        "tips": "连续点击<color=#FF8000>左键</color>加速奔跑，停止点击左键会渐渐减速\n\n速度档位越高，<color=#FF8000>耐力</color>消耗越快，耐力不足时会强制减速", 
+        "url": "guide/img_running1"
+    }, 
+    "403302": {
+        "id": 403302, 
+        "tipsType": 0, 
+        "tips": "控制节奏，保持耐力在<color=#FF8000>中等水平</color>，冲刺时再花光所有耐力吧！", 
+        "url": "guide/img_running2"
+    }, 
+    "403401": {
+        "id": 403401, 
+        "tipsType": 0, 
+        "tips": "依次将<color=#FF8000>高亮的点</color>相连，便可形成一幅简笔画。", 
+        "url": "guide/img_draw1"
+    }, 
+    "403501": {
+        "id": 403501, 
+        "tipsType": 0, 
+        "tips": "长针会缓慢向右移动，<color=#FF8000>长按</color>A键、S键、D键、鼠标左键、保持针织的颜色正确", 
+        "url": "guide/img_weaving1"
+    }, 
+    "403502": {
+        "id": 403502, 
+        "tipsType": 0, 
+        "tips": "最终与样式相比，颜色达到80%的匹配度即为成功", 
+        "url": "guide/img_weaving2"
+    }, 
+    "500101": {
+        "id": 500101, 
+        "tipsType": 0, 
+        "tips": null, 
+        "beginEffect": [
+            [
+                23.0, 
+                100.0, 
+                332001.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "500201": {
+        "id": 500201, 
+        "tipsType": 0, 
+        "tips": null, 
+        "beginEffect": [
+            [
+                23.0, 
+                100.0, 
+                332001.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "700001": {
+        "id": 700001, 
+        "tipsType": 1, 
+        "tips": "点击此面板进入主界面，可以查看你的人格，积累<color=#FF8000>阅历</color>后可强化<color=#FF8000>人格</color>，获得对应效果并解锁特定价值观。", 
+        "beginEffect": [
+            [
+                1.0, 
+                2.0, 
+                10.0, 
+                10.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                71.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                76.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                13.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "group_attr"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "700002": {
+        "id": 700002, 
+        "tipsType": 1, 
+        "tips": "此处查看你的阅历，结交<color=#FF8000>朋友</color>可获取更多阅历。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_progress"
+            ], 
+            [
+                "GenUI.Common.Cell_CurrencyItem2UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            10
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "700101": {
+        "id": 700101, 
+        "tipsType": 1, 
+        "tips": "首次强化人格时，会解锁新的<color=#FF8000>能力</color>，点击行动按钮以查看新能力。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            44
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710101": {
+        "id": 710101, 
+        "tipsType": 1, 
+        "tips": "现在你已形成<color=#FF8000>外向</color>人格，可以经营社交圈，通过消耗<color=#FF8000>影响力</color>邀请朋友或者为活动投票。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                72.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            101
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_right"
+            ], 
+            [
+                "GenUI.Main.Cell_RightBtnItemUI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            112
+        ], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710201": {
+        "id": 710201, 
+        "tipsType": 1, 
+        "tips": "现在你已形成<color=#FF8000>内向</color>人格，可以通过积累<color=#FF8000>感悟</color>解锁效果，点击按钮进入感悟界面。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                72.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            102
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_right"
+            ], 
+            [
+                "GenUI.Main.Cell_RightBtnItemUI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            105
+        ], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710301": {
+        "id": 710301, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>开放</color>人格，可以在“爱好”中写日记。", 
+        "beginEffect": [
+            [
+                2.0, 
+                997.0
+            ], 
+            [
+                61.0, 
+                2.0, 
+                2412.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                16.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            103
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "togCells"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionTogUI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            4
+        ], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710302": {
+        "id": 710302, 
+        "tipsType": 1, 
+        "tips": "要开始写日记，必须先在商店中购买<color=#FF8000>日记本</color>。日记本属于“珍视物品”。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710303": {
+        "id": 710303, 
+        "tipsType": 1, 
+        "tips": "现在所有人格都已形成，这些人格决定了你的<color=#FF8000>人格类型</color>，每种人格类型都会提供强大的增益。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "txt_title_personality"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710401": {
+        "id": 710401, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>务实</color>人格，可以在“爱好”中进行手工制作。", 
+        "beginEffect": [
+            [
+                2.0, 
+                997.0
+            ], 
+            [
+                61.0, 
+                2.0, 
+                2413.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                16.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            104
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "togCells"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionTogUI"
+            ]
+        ], 
+        "cellParm2": [
+            0, 
+            4
+        ], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710402": {
+        "id": 710402, 
+        "tipsType": 1, 
+        "tips": "要开始制作手工，必须现在商店中购买<color=#FF8000>工具箱</color>。工具箱属于“工具”。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710403": {
+        "id": 710403, 
+        "tipsType": 1, 
+        "tips": "现在所有人格都已形成，这些人格决定了你的<color=#FF8000>人格类型</color>，每种人格类型都会提供强大的增益。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "txt_title_personality"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710501": {
+        "id": 710501, 
+        "tipsType": 1, 
+        "tips": "随着年龄的增长，你已经形成<color=#FF8000>感性</color>人格。", 
+        "beginEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                74.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                7.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            105
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710502": {
+        "id": 710502, 
+        "tipsType": 1, 
+        "tips": "现在可以在<color=#FF8000>交涉</color>界面消耗<color=#FF8000>信任</color>与父母辩论。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            7
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710601": {
+        "id": 710601, 
+        "tipsType": 1, 
+        "tips": "随着年龄的增长，你已经形成<color=#FF8000>理性</color>人格。", 
+        "beginEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                74.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                7.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            106
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710602": {
+        "id": 710602, 
+        "tipsType": 1, 
+        "tips": "现在可以在<color=#FF8000>交涉</color>界面消耗<color=#FF8000>信任</color>与父母辩论。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            7
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710901": {
+        "id": 710901, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>随性</color>人格，每种人格都拥有独特的机制。随着年龄的增长，你还会形成更多的人格。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                71.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                75.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710902": {
+        "id": 710902, 
+        "tipsType": 1, 
+        "tips": "随性人格允许你改变<color=#FF8000>心态</color>。<color=#FF8000>心情</color>越高，心态效果越强，点击心情图标可进入心态界面。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "group_pressure"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "710903": {
+        "id": 710903, 
+        "tipsType": 1, 
+        "tips": "提升人格等级可以解锁新的价值观，点击<color=#FF8000>头像</color>可进入价值观界面", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                103.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                2.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                56.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_role"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "711001": {
+        "id": 711001, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>上进</color>人格，每种人格都拥有独特的机制。随着年龄的增长，你还会形成更多的人格。", 
+        "beginEffect": [
+            [
+                999.0, 
+                999.0, 
+                1.0, 
+                11006.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                71.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                75.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView"
+            ], 
+            [
+                "View.Common.RoleAttrView", 
+                "itemgroup_personality"
+            ], 
+            [
+                "GenUI.Common.Cell_PersonalityItem3UI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            110
+        ], 
+        "cellData": [
+            "View.Common.PersonalityItemData", 
+            "mainPersonalityId"
+        ], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "711002": {
+        "id": 711002, 
+        "tipsType": 1, 
+        "tips": "上进人格允许你消耗<color=#FF8000>决心</color>来激活<color=#FF8000>座右铭</color>，点击对话框可进入座右铭界面。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_motto"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "icon_pressure"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "711003": {
+        "id": 711003, 
+        "tipsType": 1, 
+        "tips": "提升人格等级可以解锁新的价值观，点击<color=#FF8000>头像</color>可进入价值观界面", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                103.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                2.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                56.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_role"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "800101": {
+        "id": 800101, 
+        "tipsType": 1, 
+        "tips": "工厂正在蒙蔽鹅城的市民，要取得环保战的胜利，必须做出表率，唤起鹅城市民的环保意识，赢得他们的支持。", 
+        "beginEffect": [
+            [
+                40.0, 
+                1.0, 
+                9907.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800102": {
+        "id": 800102, 
+        "tipsType": 1, 
+        "tips": "前往黄金沙滩<color=#FF8000>清理垃圾</color>来提高大家的支持度。你可以在小纯信息面板查看当前的<color=#FF8000>支持度</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800201": {
+        "id": 800201, 
+        "tipsType": 1, 
+        "tips": "工厂正在蒙蔽鹅城的市民，要取得环保战的胜利，必须做出表率，唤起鹅城市民的环保意识，赢得他们的支持。", 
+        "beginEffect": [
+            [
+                40.0, 
+                1.0, 
+                9907.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800202": {
+        "id": 800202, 
+        "tipsType": 1, 
+        "tips": "前往黄金沙滩<color=#FF8000>清理垃圾</color>来提高大家的支持度。你可以在小纯信息面板查看当前的<color=#FF8000>支持度</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800301": {
+        "id": 800301, 
+        "tipsType": 1, 
+        "tips": "小君一日千变，经常冒出疯狂的想法。在与她互动时，你的态度也会影响到她的躁动程度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800302": {
+        "id": 800302, 
+        "tipsType": 1, 
+        "tips": "你可以在小君的信息面板查看她现在的<color=#FF8000>躁动</color>程度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800401": {
+        "id": 800401, 
+        "tipsType": 1, 
+        "tips": "小君一日千变，经常冒出疯狂的想法。在与她互动时，你的态度也会影响到她的躁动程度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800402": {
+        "id": 800402, 
+        "tipsType": 1, 
+        "tips": "你可以在小君的信息面板查看她现在的<color=#FF8000>躁动</color>程度。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800501": {
+        "id": 800501, 
+        "tipsType": 1, 
+        "tips": "程良正在努力学习以跟上进度。你可以消耗动力<color=#FF8000>辅导程良</color>，你的成绩越好，辅导效果越显著。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800502": {
+        "id": 800502, 
+        "tipsType": 1, 
+        "tips": "在程良信息面板可以查看他当前排名。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800601": {
+        "id": 800601, 
+        "tipsType": 1, 
+        "tips": "程良正在努力学习以跟上进度。你可以消耗动力<color=#FF8000>辅导程良</color>，你的成绩越好，辅导效果越显著。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "800602": {
+        "id": 800602, 
+        "tipsType": 1, 
+        "tips": "在程良信息面板可以查看他当前排名。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_key"
+            ], 
+            [
+                "GenUI.Main.Cell_KeyItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            109
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": [], 
+        "offset": 0, 
+        "centerParm": []
+    }, 
+    "810101": {
+        "id": 810101, 
+        "tipsType": 1, 
+        "tips": "点击“+”为你喜欢的活动投票，你投的票数越多，影响力消耗就会迅速上升。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.SocialClubView", 
+                "itemgroup_content"
+            ], 
+            [
+                "GenUI.Action.Cell_SocialClubItemUI", 
+                "btn_add"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810102": {
+        "id": 810102, 
+        "tipsType": 1, 
+        "tips": "点击此按钮可以邀请更多朋友加入圈子，圈子每新增1人，活动效果就会增强20%", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.SocialClubView", 
+                "itemgroup_role"
+            ], 
+            [
+                "GenUI.Action.Cell_SocialClubRoleItemUI"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810201": {
+        "id": 810201, 
+        "tipsType": 1, 
+        "tips": "通过反思可增加感悟进度，当进度满时，你就能获得一张<color=#FF8000>感悟卡</color>。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.IntrospectionView", 
+                "group_new"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810202": {
+        "id": 810202, 
+        "tipsType": 1, 
+        "tips": "一共有4种感悟卡，卡片只能放进对应的槽位中", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.IntrospectionView", 
+                "itemgroup_groups"
+            ], 
+            [
+                "GenUI.Action.Cell_IntrospectionItemUI", 
+                "itemgroup_item"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810203": {
+        "id": 810203, 
+        "tipsType": 1, 
+        "tips": "当一组槽位填满卡片时，其效果就会激活。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.TheAction.IntrospectionView", 
+                "itemgroup_groups"
+            ], 
+            [
+                "GenUI.Action.Cell_IntrospectionItemUI", 
+                "group_effect"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810501": {
+        "id": 810501, 
+        "tipsType": 1, 
+        "tips": "这些是你可以跟父母交涉的<color=#FF8000>议题</color>。选择议题后会进行一场<color=#FF8000>辩论</color>，辩论成功议题就会生效。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.NegotiationView", 
+                "itemgroup_data"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810502": {
+        "id": 810502, 
+        "tipsType": 1, 
+        "tips": "交涉议题会消耗<color=#FF8000>信任</color>，现在选择你感兴趣的议题试试吧。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810601": {
+        "id": 810601, 
+        "tipsType": 1, 
+        "tips": "这些是你可以跟父母交涉的<color=#FF8000>议题</color>。选择议题后会进行一场<color=#FF8000>辩论</color>，辩论成功议题就会生效。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Skill.NegotiationView", 
+                "itemgroup_data"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "810602": {
+        "id": 810602, 
+        "tipsType": 1, 
+        "tips": "交涉议题会消耗<color=#FF8000>说服</color>，现在选择你感兴趣的议题试试吧。", 
+        "beginEffect": [], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.TopView", 
+                "itemgroup_currency"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            3
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": []
+    }, 
+    "910101": {
+        "id": 910101, 
+        "tipsType": 1, 
+        "tips": "恭喜迈入小学！你的学生时代正式开始了！现在可以进行<color=#FF8000>学习</color>和<color=#FF8000>社交</color>了。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                43.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                42.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "itemgroup_top_btn"
+            ], 
+            [
+                "GenUI.Main.Cell_TopBtnItemUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            43
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "930101": {
+        "id": 930101, 
+        "tipsType": 1, 
+        "tips": "现在可以培养<color=#FF8000>爱好</color>了，从这里进入爱好界面查看吧。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                41.0
+            ], 
+            [
+                61.0, 
+                99.0
+            ], 
+            [
+                3.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "togCells"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionTogUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            4
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9100101": {
+        "id": 9100101, 
+        "tipsType": 1, 
+        "tips": "充分利用<color=#FF8000>克制关系</color>、<color=#FF8000>技能</color>击败对手吧。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                1001.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                1002.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                1003.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710101": {
+        "id": 9710101, 
+        "tipsType": 1, 
+        "tips": "现在你已形成<color=#FF8000>外向</color>人格，可以经营<color=#FF8000>社交圈</color>。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                72.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                112.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710201": {
+        "id": 9710201, 
+        "tipsType": 1, 
+        "tips": "现在你已形成<color=#FF8000>内向</color>人格，可以通过积累<color=#FF8000>感悟</color>", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                72.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                105.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710301": {
+        "id": 9710301, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>开放</color>人格，可以在“爱好”中写日记。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                73.0
+            ], 
+            [
+                2.0, 
+                997.0
+            ], 
+            [
+                61.0, 
+                2.0, 
+                2412.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                16.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "togCells"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionTogUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            4
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710401": {
+        "id": 9710401, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>务实</color>人格，可以在“爱好”中进行手工制作。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                73.0
+            ], 
+            [
+                2.0, 
+                997.0
+            ], 
+            [
+                61.0, 
+                2.0, 
+                2413.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                16.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "togCells"
+            ], 
+            [
+                "GenUI.Main.Cell_ActionTogUI"
+            ]
+        ], 
+        "cellParm": [
+            0, 
+            4
+        ], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710501": {
+        "id": 9710501, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>感性</color>人格，可以消耗<color=#FF8000>信任</color>进行<color=#FF8000>交涉</color>。", 
+        "beginEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                74.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                7.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710601": {
+        "id": 9710601, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>理性</color>人格，可以消耗<color=#FF8000>说服</color>进行<color=#FF8000>交涉</color>。", 
+        "beginEffect": [
+            [
+                1.0, 
+                1.0, 
+                3.0, 
+                4.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                74.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                7.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9710901": {
+        "id": 9710901, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>随性</color>人格，可以消耗<color=#FF8000>心情</color>来改变<color=#FF8000>心态</color>。", 
+        "beginEffect": [
+            [
+                101.0, 
+                1.0, 
+                71.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                75.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                101.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }, 
+    "9711001": {
+        "id": 9711001, 
+        "tipsType": 1, 
+        "tips": "你已经形成<color=#FF8000>上进</color>人格，可以消耗<color=#FF8000>决心</color>来激活<color=#FF8000>座右铭</color>。", 
+        "beginEffect": [
+            [
+                999.0, 
+                999.0, 
+                1.0, 
+                11006.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                71.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                75.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                101.0
+            ], 
+            [
+                101.0, 
+                1.0, 
+                108.0
+            ]
+        ], 
+        "endEffect": [], 
+        "views": [
+            [
+                "View.Main.MainView", 
+                "btn_motto"
+            ]
+        ], 
+        "cellParm": [], 
+        "cellData": [], 
+        "cell": [], 
+        "views2": [
+            [
+                "View.Main.MainView", 
+                "icon_pressure"
+            ]
+        ], 
+        "cellParm2": [], 
+        "cellData2": [], 
+        "cell2": [], 
+        "maxRect": []
+    }
+}

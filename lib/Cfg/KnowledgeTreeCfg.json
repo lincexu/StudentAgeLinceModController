@@ -1,0 +1,2627 @@
+{
+    "101": {
+        "id": 101, 
+        "name": "逻辑学", 
+        "introduction": "逻辑是智慧的开端，而不是终点。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                25.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 200.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "102": {
+        "id": 102, 
+        "name": "大学物理", 
+        "introduction": "今日，大雾。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                40.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 300.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "103": {
+        "id": 103, 
+        "name": "高等数学", 
+        "introduction": "洛必达，永远的神！", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                50.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 400.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "201": {
+        "id": 201, 
+        "name": "社会学基础", 
+        "introduction": "人是一切社会关系的总和。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                25.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 200.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "202": {
+        "id": 202, 
+        "name": "人类学概论", 
+        "introduction": "尼安德特人，丹尼索瓦人……", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                40.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 300.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "203": {
+        "id": 203, 
+        "name": "中国哲学", 
+        "introduction": "道可道，非常道。名可名，非常名。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                50.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 400.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "301": {
+        "id": 301, 
+        "name": "普通心理学", 
+        "introduction": "为什么叫“普通”，哪里普通了？", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                15.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                15.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 200.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "302": {
+        "id": 302, 
+        "name": "经济学原理", 
+        "introduction": "天下没有免费的午餐。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                20.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                20.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 300.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "303": {
+        "id": 303, 
+        "name": "西方哲学", 
+        "introduction": "我唯一知道的，就是我一无所知。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                25.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                25.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 400.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "401": {
+        "id": 401, 
+        "name": "病理生理学", 
+        "introduction": "病理病生，九死一生。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                25.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 200.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "402": {
+        "id": 402, 
+        "name": "军事理论", 
+        "introduction": "兵者，国之大事。", 
+        "course": [
+            6, 
+            0
+        ], 
+        "icon": "book/img_zhishi", 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                4.0, 
+                40.0
+            ]
+        ], 
+        "state": 3, 
+        "max": 300.0, 
+        "unknownTxt": "完全看不懂……", 
+        "knownTxt": "好，大概弄懂了！"
+    }, 
+    "1101": {
+        "id": 1101, 
+        "name": "拼音", 
+        "diff": 0, 
+        "introduction": "阿波次得额佛歌", 
+        "icon": "study/img_pinyin", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 20.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "音节：由声母和韵母组成，如‘bā’（爸）"
+            ]
+        ], 
+        "unknownTxt": "y......in......ying？yin？这哪有区别？", 
+        "knownTxt": "pin yin？拼音！"
+    }, 
+    "1102": {
+        "id": 1102, 
+        "name": "关联词", 
+        "diff": 0, 
+        "introduction": "虽然我长得丑，但是我想得美啊", 
+        "icon": "study/img_guanlian", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 30.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "首先，接着，然后，最后"
+            ]
+        ], 
+        "unknownTxt": "“有时...有时...”造句？“有时候，有时候，我会相信一切有尽头~~”", 
+        "knownTxt": "“因为，我的作业本被小偷给偷走了；所以，我今天没法交作业。”"
+    }, 
+    "1103": {
+        "id": 1103, 
+        "name": "成语", 
+        "diff": 0, 
+        "introduction": "提心吊胆，胆大妄为，为所欲为，为所欲为......", 
+        "icon": "study/img_huashetianzu", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 45.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "一心一意，三心二意，五湖四海，七上八下"
+            ]
+        ], 
+        "unknownTxt": "空穴来风，意思是消息有根据，还是毫无根据来着？", 
+        "knownTxt": "您长得真是一表人才，英俊潇洒，相貌堂堂，风度翩翩啊！"
+    }, 
+    "1104": {
+        "id": 1104, 
+        "name": "留言条", 
+        "diff": 0, 
+        "introduction": "请你写一张留言条给老师，告诉他你不会写留言条", 
+        "icon": "study/img_liuyan", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 65.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "写给谁，什么事，谁写的，什么时间写的"
+            ]
+        ], 
+        "unknownTxt": "不能打电话吗......为什么还要留言呀......？", 
+        "knownTxt": "留言条？屁用没有！"
+    }, 
+    "1105": {
+        "id": 1105, 
+        "name": "阅读理解", 
+        "diff": 0, 
+        "introduction": "简述“我”家的窗帘为什么是蓝色的（5分）", 
+        "icon": "study/img_yuedu", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 90.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "中心思想", 
+                " 文章主旨", 
+                " 核心观点"
+            ]
+        ], 
+        "unknownTxt": "无语，我怎么知道作者到底为什么这么写。", 
+        "knownTxt": "生动地表现了XXX的特点，反映了作者XXX的心情。"
+    }, 
+    "1106": {
+        "id": 1106, 
+        "name": "看图作文", 
+        "diff": 0, 
+        "introduction": "《父与子》——看图作文官方指定合作伙伴", 
+        "icon": "study/img_zuowen", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 120.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "人物表情", 
+                " 场景背景", 
+                " 色彩搭配"
+            ]
+        ], 
+        "unknownTxt": "出题老师画的是什么玩意儿？", 
+        "knownTxt": "哈哈哈图里小明骑着的自行车居然没有轮子！"
+    }, 
+    "1201": {
+        "id": 1201, 
+        "name": "诗词背诵", 
+        "diff": 0, 
+        "introduction": "两个黄鹂鸣翠柳，一行白鹭上青天", 
+        "icon": "study/img_shici", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "东临碣石", 
+                "以观沧海", 
+                "水何澹澹", 
+                "山岛竦峙"
+            ], 
+            [
+                "单车欲问边", 
+                "属国过居延", 
+                "征蓬出汉塞", 
+                "归雁入胡天"
+            ], 
+            [
+                "结庐在人境", 
+                "而无车马喧", 
+                "问君何能尔", 
+                "心远地自偏"
+            ], 
+            [
+                "岱宗夫如何", 
+                "齐鲁青未了", 
+                "造化钟神秀", 
+                "阴阳割昏晓"
+            ]
+        ], 
+        "unknownTxt": "君不见黄河之水天上来，天上来，下来，上来……好绕啊！", 
+        "knownTxt": "换我来写，我肯定写得更好哈哈哈！"
+    }, 
+    "1202": {
+        "id": 1202, 
+        "name": "古文阅读", 
+        "diff": 0.1, 
+        "introduction": "唧唧复唧唧，木兰当户织", 
+        "icon": "study/img_guwen", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 220.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "唧唧复唧唧", 
+                "木兰当户织", 
+                "不闻机杼声", 
+                "唯闻女叹息"
+            ], 
+            [
+                "中通外直", 
+                "不蔓不枝", 
+                "香远益清", 
+                "亭亭净植"
+            ], 
+            [
+                "苔痕上阶绿", 
+                "草色入帘青", 
+                "谈笑有鸿儒", 
+                "往来无白丁"
+            ], 
+            [
+                "怀民亦未寝", 
+                "相与步于中庭", 
+                "庭下如积水空明", 
+                "水中藻荇交横"
+            ]
+        ], 
+        "unknownTxt": "句子怎么没有标点符号？读着都喘不过气来，还不知道哪里停顿。", 
+        "knownTxt": "我现在说话都是文邹邹的了......"
+    }, 
+    "1203": {
+        "id": 1203, 
+        "name": "记叙文", 
+        "diff": 0.2, 
+        "introduction": "小时候发烧，妈妈冒雨背着我去医院……", 
+        "icon": "study/img_jixuwen", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "时间", 
+                "地点", 
+                "人物", 
+                "起因", 
+                "经过", 
+                "结果"
+            ], 
+            [
+                "叙述", 
+                "抒情", 
+                "描写", 
+                "议论", 
+                "抒情"
+            ], 
+            [
+                "外貌", 
+                "语言", 
+                "神态", 
+                "细节", 
+                "动作", 
+                "心理"
+            ], 
+            [
+                "比喻", 
+                "拟人", 
+                "排比", 
+                "反问", 
+                "设问", 
+                "对比"
+            ]
+        ], 
+        "unknownTxt": "记叙文开头要怎么写啊？直接写‘今天真是倒霉的一天’可以吗？", 
+        "knownTxt": "记叙文真麻烦啊，要那么多波澜起伏，我觉得我的流水账也挺好的。"
+    }, 
+    "1301": {
+        "id": 1301, 
+        "name": "病句修改", 
+        "diff": 0.3, 
+        "introduction": null, 
+        "icon": "study/img_bingju", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "病句类型", 
+                "语序不当", 
+                "搭配不当", 
+                "成分残缺"
+            ], 
+            [
+                "成分赘余", 
+                "结构混乱", 
+                "表意不明", 
+                "不合逻辑"
+            ], 
+            [
+                "病句诊断方法", 
+                "语感审读法", 
+                "枝脉梳理法", 
+                "造句类比法"
+            ], 
+            [
+                "标志规律法", 
+                "病句修改", 
+                "增删改词汇", 
+                "重组语序"
+            ]
+        ], 
+        "unknownTxt": "这句话对吗？对的对的.....噢不对不对......不对吗？对的对的......", 
+        "knownTxt": "老师，你刚刚那段发言我能找出三个病句！"
+    }, 
+    "1302": {
+        "id": 1302, 
+        "name": "文学常识", 
+        "diff": 0.4, 
+        "introduction": null, 
+        "icon": "study/img_wenxue", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 170.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "古代文化常识", 
+                "古代官职", 
+                "选官制度", 
+                "天文历法"
+            ], 
+            [
+                "中外重要作家及作品", 
+                "时代", 
+                "字和号", 
+                "简介"
+            ], 
+            [
+                "中国古代名篇简介", 
+                "编著者", 
+                "时代", 
+                "简介"
+            ], 
+            [
+                "中国现代作家", 
+                "鲁迅", 
+                "老舍", 
+                "巴金"
+            ]
+        ], 
+        "unknownTxt": "《红楼梦》是写爱情的，唐诗宋词很有名，知道这些够了吧？", 
+        "knownTxt": "要不是为了考试，我才不想知道那些作家的背景咧。"
+    }, 
+    "1303": {
+        "id": 1303, 
+        "name": "名著积累", 
+        "diff": 0.5, 
+        "introduction": null, 
+        "icon": "study/img_mingzhu", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 200.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "《论语》", 
+                "孔子其人", 
+                "艺术特色", 
+                "作品影响"
+            ], 
+            [
+                "孔子思想核心", 
+                "为政以德", 
+                "克己复礼", 
+                "仁者爱人"
+            ], 
+            [
+                "《红楼梦》", 
+                "作品简介", 
+                "人物形象", 
+                "章回结构"
+            ], 
+            [
+                "创作背景", 
+                "“文化百科全书‘", 
+                "语言风格", 
+                "艺术成就"
+            ]
+        ], 
+        "unknownTxt": "猪八戒背媳妇，看我七十二变！", 
+        "knownTxt": "没想到书里的角色还能被写活？！太厉害了，我也要当作家。"
+    }, 
+    "1304": {
+        "id": 1304, 
+        "name": "古文翻译", 
+        "diff": 0.6, 
+        "introduction": null, 
+        "icon": "study/img_fanyi", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 250.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "文言实词", 
+                "一词多义", 
+                "通假字", 
+                "古今异义"
+            ], 
+            [
+                "18个文言虚词", 
+                "文言特殊句式", 
+                "文言文断句", 
+                "熟悉古代文常"
+            ], 
+            [
+                "通读全文", 
+                "了解大意", 
+                "注意文章背景", 
+                "结合题目注释"
+            ], 
+            [
+                "结合上下文翻译", 
+                "结合作者或时代背景", 
+                "增补原文省略用语", 
+                "调整倒装句语序"
+            ]
+        ], 
+        "unknownTxt": "“尔”和“汝”到底是什么区别？", 
+        "knownTxt": "古文就像谜语，翻译好了就是破案成功，学完这篇我可以直接当侦探了！"
+    }, 
+    "1305": {
+        "id": 1305, 
+        "name": "诗文默写", 
+        "diff": 0.7, 
+        "introduction": null, 
+        "icon": "study/img_moxie", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "看万山红遍，层林尽染；漫江碧透，百舸争流"
+            ], 
+            [
+                "钟鼓馔玉不足贵", 
+                "但愿长醉不愿醒", 
+                "古来圣贤皆寂寞", 
+                "唯有饮者留其名"
+            ], 
+            [
+                "寄蜉蝣于天地", 
+                "渺沧海之一粟", 
+                "哀吾生之须臾", 
+                "羡长江之无穷"
+            ], 
+            [
+                "六王毕，四海一，蜀山兀，阿房出"
+            ]
+        ], 
+        "unknownTxt": "春眠什么？什么不觉晓？哪里有什么鸟？", 
+        "knownTxt": "我就是李白转世，这次默写我肯定能全对，分数稳稳拿到手！"
+    }, 
+    "1306": {
+        "id": 1306, 
+        "name": "议论文", 
+        "diff": 0.8, 
+        "introduction": null, 
+        "icon": "study/img_yilunwen", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 400.0, 
+        "effect": [], 
+        "course": [
+            1, 
+            1
+        ], 
+        "danmu": [
+            [
+                "议论文三要素", 
+                "论点", 
+                "论据", 
+                "论证"
+            ], 
+            [
+                "论点正确鲜明", 
+                "论据确凿典型", 
+                "围绕中心论点论证", 
+                "语言严谨精炼"
+            ], 
+            [
+                "引论", 
+                "本论.结论.立论文与驳论文"
+            ], 
+            [
+                "举例论证", 
+                "对比论证", 
+                "比喻论证", 
+                "引用论证"
+            ]
+        ], 
+        "unknownTxt": "议论文？这不就是扯一些大道理吗？", 
+        "knownTxt": "我简直是逻辑高手，论证得滴水不漏！"
+    }, 
+    "2101": {
+        "id": 2101, 
+        "name": "乘法表", 
+        "diff": 0, 
+        "introduction": "一一得一，二二得四", 
+        "icon": "study/img_chengfabiao", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 20.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "1×1=1", 
+                " 2×2=4", 
+                " 3×5=15", 
+                " 6×8=48"
+            ]
+        ], 
+        "unknownTxt": "四八四十八？等等，好像哪里有问题。", 
+        "knownTxt": "四八三十二，六八四十八......"
+    }, 
+    "2102": {
+        "id": 2102, 
+        "name": "四则运算", 
+        "diff": 0, 
+        "introduction": "先乘除，后加减，有括号先算括号", 
+        "icon": "study/img_sizeyusuan", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 30.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "先乘除后加减", 
+                "括号优先"
+            ]
+        ], 
+        "unknownTxt": "有括号先算括号，那括号里面又有加减乘除怎么办......", 
+        "knownTxt": "啊！又忘记写右括号了！"
+    }, 
+    "2103": {
+        "id": 2103, 
+        "name": "分数", 
+        "diff": 0, 
+        "introduction": "怎么把3个苹果平均分给5个小朋友？", 
+        "icon": "study/img_fenshu", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 45.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "分子", 
+                "分母", 
+                "真分数", 
+                "假分数", 
+                "带分数"
+            ]
+        ], 
+        "unknownTxt": "为什么5个小朋友一定要吃三个苹果？榨汁喝不行吗", 
+        "knownTxt": "呃，怎么算到最后结果是6/7个人啊......"
+    }, 
+    "2104": {
+        "id": 2104, 
+        "name": "三角形", 
+        "diff": 0, 
+        "introduction": "三角形具有稳定性，爱情除外", 
+        "icon": "study/img_sanjiaoxing", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 65.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "锐角三角形", 
+                "直角三角形", 
+                "钝角三角形"
+            ]
+        ], 
+        "unknownTxt": "三角形有三条边三个角，这不是废话。", 
+        "knownTxt": "我的三角板怎么找不到了？"
+    }, 
+    "2105": {
+        "id": 2105, 
+        "name": "方程", 
+        "diff": 0, 
+        "introduction": "含有未知数的等式叫方程", 
+        "icon": "study/img_fangcheng", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 90.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "移项法", 
+                "合并同类项", 
+                "配方法", 
+                "因式分解法"
+            ]
+        ], 
+        "unknownTxt": "设未知数为x？不行，我就要设成y！", 
+        "knownTxt": "移项又又又又又又忘记变号了......"
+    }, 
+    "2106": {
+        "id": 2106, 
+        "name": "圆", 
+        "diff": 0, 
+        "introduction": "3.1415926535......", 
+        "icon": "study/img_yuan", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 120.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "圆的直径是圆的最大弦", 
+                "且直径等于2倍的半径"
+            ]
+        ], 
+        "unknownTxt": "圆周率太不规律了吧，好难背啊。", 
+        "knownTxt": "山巅一寺一壶酒，尔乐苦煞吾，把酒吃......"
+    }, 
+    "2201": {
+        "id": 2201, 
+        "name": "坐标系", 
+        "diff": 0, 
+        "introduction": null, 
+        "icon": "study/img_zuobiaoxi", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "坐标原点", 
+                "单位长度", 
+                "正方向", 
+                "坐标象限"
+            ], 
+            [
+                "一次函数", 
+                "斜率", 
+                "截距", 
+                "y=kx+b"
+            ], 
+            [
+                "反比例函数", 
+                "双曲线", 
+                "单调性", 
+                "y=k/x（k≠0）"
+            ], 
+            [
+                "二次函数", 
+                "抛物线", 
+                "图像的性质和变换", 
+                "y=ax²+bx+c（a≠0）"
+            ]
+        ], 
+        "unknownTxt": "坐标系？就是两个乱七八糟的线交叉吧？", 
+        "knownTxt": "X轴Y轴我信手拈来，原点就是我的好朋友"
+    }, 
+    "2202": {
+        "id": 2202, 
+        "name": "方程组", 
+        "diff": 0.1, 
+        "introduction": null, 
+        "icon": "study/img_fangcheng", 
+        "minigame": 1, 
+        "state": 1, 
+        "max": 220.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "一元一次方程", 
+                "去括号", 
+                "移项", 
+                "合并同类项"
+            ], 
+            [
+                "二元一次方程组", 
+                "代入消元法", 
+                "加减消元法", 
+                "和差倍分问题"
+            ], 
+            [
+                "一元二次方程", 
+                "配方法", 
+                "因式分解", 
+                "求根公式"
+            ], 
+            [
+                "分式方程", 
+                "最简公分母", 
+                "检验增根", 
+                "换元法"
+            ]
+        ], 
+        "unknownTxt": "我好像写了两个等式，它们互相看不懂，谁能告诉我怎么办？", 
+        "knownTxt": "两步搞定，代入消元，分分钟解决。"
+    }, 
+    "2203": {
+        "id": 2203, 
+        "name": "相似图形", 
+        "diff": 0.2, 
+        "introduction": "边角边、角边角、角角边、边边边……", 
+        "icon": "study/img_xiangsi", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "相似三角形的判定", 
+                "三边成比例", 
+                "两边夹一角", 
+                "两角相等"
+            ], 
+            [
+                "相似三角形的性质", 
+                "对应角相等", 
+                "对应边成比例", 
+                "相似比"
+            ], 
+            [
+                "周长成比例", 
+                "面积成比例内切", 
+                "圆半径成比例", 
+                "外切圆半径成比例"
+            ], 
+            [
+                "A字型相似", 
+                "8字型相似", 
+                "一线三等角", 
+                "旋转型相似"
+            ]
+        ], 
+        "unknownTxt": "这怎么还可以说是相似？这也太奇怪了！", 
+        "knownTxt": "它们是相似的，所以呢？"
+    }, 
+    "2301": {
+        "id": 2301, 
+        "name": "复数", 
+        "diff": 0.3, 
+        "introduction": null, 
+        "icon": "study/img_fushu", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "虚数单位", 
+                "a+bi", 
+                "实部与虚部", 
+                "实数、虚数与纯虚数"
+            ], 
+            [
+                "复数相等", 
+                "共轭复数", 
+                "基础运算", 
+                "幂运算"
+            ], 
+            [
+                "几何意义", 
+                "复平面", 
+                "复数的模", 
+                "点和平面向量"
+            ], 
+            [
+                "复数运算定律", 
+                "复数的性质", 
+                "共轭的性质", 
+                "模的性质"
+            ]
+        ], 
+        "unknownTxt": "复数？负数都已经够头疼了，还分虚的，实的？真的假的啊......", 
+        "knownTxt": "复数就是实数和虚数的孩子呗。"
+    }, 
+    "2302": {
+        "id": 2302, 
+        "name": "三角函数", 
+        "diff": 0.4, 
+        "introduction": null, 
+        "icon": "study/img_sanjiao", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 170.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "分类", 
+                "正弦余弦", 
+                "正切余切", 
+                "正割余割"
+            ], 
+            [
+                "定义域与值域", 
+                "周期性", 
+                "奇偶性", 
+                "单调性"
+            ], 
+            [
+                "对称性", 
+                "特殊值的记忆", 
+                "三角恒等变换", 
+                "和差角公式"
+            ], 
+            [
+                "二倍角与半角公式", 
+                "积化和差与和差化积", 
+                "升幂与降幂公式", 
+                "万能公式"
+            ]
+        ], 
+        "unknownTxt": "sin,cos,tan为什么用这几个字母表示啊？", 
+        "knownTxt": "奇变偶不变，符号看象限。"
+    }, 
+    "2303": {
+        "id": 2303, 
+        "name": "立体几何", 
+        "diff": 0.5, 
+        "introduction": null, 
+        "icon": "study/img_liti", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 200.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "空间几何体", 
+                "棱柱棱锥与棱台", 
+                "圆柱圆锥圆台与球", 
+                "旋转体与多面体"
+            ], 
+            [
+                "平面的基本性质", 
+                "直线与直线的位置关系", 
+                "直线与平面的位置关系", 
+                "平面与平面的位置关系"
+            ], 
+            [
+                "线面平行与垂直的判定", 
+                "直线在平面内的判定", 
+                "存在性和唯一性定理", 
+                "直线在平面的投影"
+            ], 
+            [
+                "空间向量及其运算", 
+                "空间直角坐标系", 
+                "空间中的角", 
+                "空间中的距离"
+            ]
+        ], 
+        "unknownTxt": "简直是降维打击，我不会是二维生物吧…...", 
+        "knownTxt": "其实就是还是点，线，面那档子事啊…..."
+    }, 
+    "2304": {
+        "id": 2304, 
+        "name": "数列", 
+        "diff": 0.6, 
+        "introduction": null, 
+        "icon": "study/img_shulie", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 250.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "数列的定义", 
+                "数列与函数的关系", 
+                "数列的分类", 
+                "表示方法"
+            ], 
+            [
+                "等差数列", 
+                "等比数列", 
+                "通项与求和公式", 
+                "等差中项与等比中项"
+            ], 
+            [
+                "作新数列法", 
+                "累差叠加法", 
+                "裂项求和", 
+                "并项求和"
+            ], 
+            [
+                "错位相减法", 
+                "公式法与分组法", 
+                "递归数列", 
+                "迭代法与代换法"
+            ]
+        ], 
+        "unknownTxt": "把数字排成队列就行了吧？", 
+        "knownTxt": "找规律啊，找规律。"
+    }, 
+    "2305": {
+        "id": 2305, 
+        "name": "复合函数", 
+        "diff": 0.7, 
+        "introduction": null, 
+        "icon": "study/img_fuhe", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "定义、求解与性质", 
+                "外函数与内函数", 
+                "定义域和值域", 
+                " 分段函数"
+            ], 
+            [
+                "单调性", 
+                "单调区间", 
+                "由单调区间求参数", 
+                "单调性的应用"
+            ], 
+            [
+                "奇偶性", 
+                "周期性", 
+                "奇偶性的应用", 
+                "用周期性求解析式"
+            ], 
+            [
+                "复合函数的导数", 
+                "用导数求极点与极值", 
+                "用导数求最值", 
+                "求导"
+            ]
+        ], 
+        "unknownTxt": "听起来就很复杂啊。是把两个函数拼在一起吗？", 
+        "knownTxt": "就是给函数“套娃”嘛，一个套一个。"
+    }, 
+    "2306": {
+        "id": 2306, 
+        "name": "导数", 
+        "diff": 0.8, 
+        "introduction": null, 
+        "icon": "study/img_daoshu", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 400.0, 
+        "effect": [], 
+        "course": [
+            2, 
+            2
+        ], 
+        "danmu": [
+            [
+                "增量", 
+                "平均变化率", 
+                "极限", 
+                "可导"
+            ], 
+            [
+                "函数的导数", 
+                "导数的四则运算", 
+                " 复合函数的导数，函数的单调性"
+            ], 
+            [
+                "函数的最值，极点与极值，函数与导函数", 
+                "极点值偏移的经典模型"
+            ], 
+            [
+                "双逻辑联结词", 
+                "指数放缩", 
+                "对数放缩", 
+                "洛必达法则"
+            ]
+        ], 
+        "unknownTxt": "就是那个“斜率”吧？但到底是怎么看的？！", 
+        "knownTxt": "导数公式好容易忘啊…....看来还是题目做少了。"
+    }, 
+    "3101": {
+        "id": 3101, 
+        "name": "字母表", 
+        "diff": 0, 
+        "introduction": "A B C D E F G~ H I J K L M N~", 
+        "icon": "study/img_zimu", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 20.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "A-Z", 
+                "26个字母", 
+                "大写字母", 
+                "小写字母"
+            ]
+        ], 
+        "unknownTxt": "“abcd......”。英文字母和语文拼音很相似，又不太一样？", 
+        "knownTxt": "A for apple，B for ball，C for cat，D for dog~~~"
+    }, 
+    "3102": {
+        "id": 3102, 
+        "name": "单词：水果", 
+        "diff": 0, 
+        "introduction": "apple，banana，cherry......", 
+        "icon": "study/img_shuiguo", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 30.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "Apple", 
+                " Banana", 
+                " Orange", 
+                " Mango", 
+                " Grapes"
+            ]
+        ], 
+        "unknownTxt": "咦，怎么这里的单词没有包含番茄？", 
+        "knownTxt": "查过了，番茄在蔬菜这章，所以tomato不是水果！"
+    }, 
+    "3103": {
+        "id": 3103, 
+        "name": "单词：动物", 
+        "diff": 0, 
+        "introduction": "cat，dog，bear......", 
+        "icon": "study/img_dongwu", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 45.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "Cat", 
+                " Dog", 
+                " Elephant", 
+                " Tiger", 
+                " Lion"
+            ]
+        ], 
+        "unknownTxt": "熊猫，我知道，bear cat！", 
+        "knownTxt": "熊猫是胖达......因为熊猫特别胖吗。"
+    }, 
+    "3104": {
+        "id": 3104, 
+        "name": "固定搭配", 
+        "diff": 0, 
+        "introduction": "“介词一变，意思全变”", 
+        "icon": "study/img_guanlian", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 65.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "make a decision", 
+                " take a break", 
+                " give advice", 
+                " do homework", 
+                " catch a cold"
+            ]
+        ], 
+        "unknownTxt": "为什么是Merry Christmas不是Happy Christmas？", 
+        "knownTxt": "没有为什么，固定搭配就是这么不讲道理。"
+    }, 
+    "3105": {
+        "id": 3105, 
+        "name": "单词：交通", 
+        "diff": 0, 
+        "introduction": "car，bike，bus，train......", 
+        "icon": "study/img_jiaotong", 
+        "minigame": 0, 
+        "state": 0, 
+        "max": 90.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "Car", 
+                " Bus", 
+                " Train", 
+                " Bicycle", 
+                " Airplane", 
+                " Motorcycle"
+            ]
+        ], 
+        "unknownTxt": "“car”，汽车；“train”，火车......", 
+        "knownTxt": "“I drive my car......”，呃......我没驾照不能开车......"
+    }, 
+    "3106": {
+        "id": 3106, 
+        "name": "单词：建筑", 
+        "diff": 0, 
+        "introduction": "location，hospital，hotel，school......", 
+        "icon": "study/img_jianzhu", 
+        "minigame": 1, 
+        "state": 0, 
+        "max": 120.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "House", 
+                " School", 
+                " Hospital", 
+                " Office", 
+                " Tower"
+            ]
+        ], 
+        "unknownTxt": "“home”，“house”，这两个单词有什么区别来着？", 
+        "knownTxt": "school！学校！"
+    }, 
+    "3201": {
+        "id": 3201, 
+        "name": "时态", 
+        "diff": 0, 
+        "introduction": "过去时、现在时、进行时、将来时", 
+        "icon": "study/img_shitai", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "一般现在时", 
+                "do/does", 
+                "一般过去时", 
+                "did"
+            ], 
+            [
+                "一般将来时", 
+                "will do/be going to do", 
+                "现在进行时", 
+                "be doing"
+            ], 
+            [
+                "过去进行时", 
+                "was/were doing", 
+                "现在完成时", 
+                "have/has done"
+            ], 
+            [
+                "过去完成时", 
+                "had done", 
+                "过去将来时", 
+                "would do"
+            ]
+        ], 
+        "unknownTxt": "这时那时，外国人怎么这么麻烦啊。", 
+        "knownTxt": "只要我背的够多，时态就难不倒我。"
+    }, 
+    "3202": {
+        "id": 3202, 
+        "name": "单词：职业", 
+        "diff": 0.1, 
+        "introduction": "teacher，doctor，worker，manager......", 
+        "icon": "study/img_zhiye", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 220.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "Dancer", 
+                "Gardener", 
+                "Dentist", 
+                "Engineer"
+            ], 
+            [
+                "Artist", 
+                "Farmer", 
+                "Translator", 
+                "Lawyer"
+            ], 
+            [
+                "Firefighter", 
+                "Chef", 
+                "Musician", 
+                "Photographer"
+            ], 
+            [
+                "Librian", 
+                "Astronaut", 
+                "Mechanic", 
+                "Biologist"
+            ]
+        ], 
+        "unknownTxt": "“I am a student”，学生也算是职业嘛？", 
+        "knownTxt": "“I am the best student”。今年的最佳进步学生是我了！"
+    }, 
+    "3203": {
+        "id": 3203, 
+        "name": "听力理解", 
+        "diff": 0.2, 
+        "introduction": "衬衫的价格是九磅十五便士", 
+        "icon": "study/img_tingli", 
+        "minigame": 1, 
+        "state": 1, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "听后选择", 
+                "先读题干", 
+                "锁定关键词", 
+                "预判对话"
+            ], 
+            [
+                "熟悉单词读音", 
+                "排除选项干扰", 
+                "注意细节", 
+                "选择最优选项"
+            ], 
+            [
+                "听后记录", 
+                "浏览表格", 
+                "读表头标题", 
+                "判断需填单词形式"
+            ], 
+            [
+                "按表格顺序听", 
+                "紧跟录音内容", 
+                "记笔记", 
+                "听数字和关键词"
+            ]
+        ], 
+        "unknownTxt": "学校广播也太差了吧，根本听不清。", 
+        "knownTxt": "今天这听力是印度人录的？一股子咖喱味。"
+    }, 
+    "3301": {
+        "id": 3301, 
+        "name": "从句", 
+        "diff": 0.3, 
+        "introduction": null, 
+        "icon": "study/img_yufa", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "名词性从句", 
+                "主语和宾语从句", 
+                "表语从句", 
+                "同位语从句"
+            ], 
+            [
+                "定语从句", 
+                "先行词", 
+                "关系词", 
+                "Which与That"
+            ], 
+            [
+                "状语从句", 
+                "When/While/As", 
+                "till/until/not until", 
+                "before与since"
+            ], 
+            [
+                "条件状语从句", 
+                "方式状语从句", 
+                "让步状语从句", 
+                "比较状语从句"
+            ]
+        ], 
+        "unknownTxt": "老师说作文里写从句加分，可是我根本不会用......", 
+        "knownTxt": "看我怎么把各种从句都塞进作文里！"
+    }, 
+    "3302": {
+        "id": 3302, 
+        "name": "听说练习", 
+        "diff": 0.4, 
+        "introduction": null, 
+        "icon": "study/img_tingshuo", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 170.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "命题方向", 
+                "归纳推断题", 
+                "排除干扰项", 
+                "审题能力"
+            ], 
+            [
+                "答题技巧", 
+                "预测内容", 
+                "带着问题听", 
+                "熟记关键词"
+            ], 
+            [
+                "提升速记能力", 
+                "随手记", 
+                "运用速记符号", 
+                "善用缩写来记"
+            ], 
+            [
+                "把控时间", 
+                "词汇量储备", 
+                "注意特殊句型 ", 
+                "稳住心态"
+            ]
+        ], 
+        "unknownTxt": "为什么感觉我说的和录音带里的不一样啊？", 
+        "knownTxt": "OK，我可以去当翻译了。"
+    }, 
+    "3303": {
+        "id": 3303, 
+        "name": "高级词汇", 
+        "diff": 0.5, 
+        "introduction": null, 
+        "icon": "study/img_cihui", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 200.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "comparative", 
+                "impoverish", 
+                "bureaucrat", 
+                "skepticism"
+            ], 
+            [
+                "reawaken", 
+                "misshapen", 
+                "practitioner", 
+                "unsung"
+            ], 
+            [
+                "minimalism", 
+                "uneventful", 
+                "attendant", 
+                "versatility"
+            ], 
+            [
+                "frustration", 
+                "contradictory", 
+                "controversial", 
+                "reluctantly"
+            ]
+        ], 
+        "unknownTxt": "abandon，abandon放弃…...", 
+        "knownTxt": "写作文的时候全用上会不会显得我很有文化？"
+    }, 
+    "3304": {
+        "id": 3304, 
+        "name": "阅读理解", 
+        "diff": 0.6, 
+        "introduction": null, 
+        "icon": "study/img_yuedulijie", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 250.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "理解表层意思", 
+                "推断隐含意义", 
+                "圈画重点语句", 
+                "阅读技巧"
+            ], 
+            [
+                "扩大词汇量", 
+                "先读问题", 
+                "速读全文", 
+                "找主题句"
+            ], 
+            [
+                "确定中心思想", 
+                "精准推理", 
+                "深层理解", 
+                "勿以偏概全"
+            ], 
+            [
+                "猜测词义", 
+                " 清除阅读障碍", 
+                "上下文线索", 
+                "提升阅读速度"
+            ]
+        ], 
+        "unknownTxt": "我怎么感觉A,B,C,D都是对的？", 
+        "knownTxt": "原来很多题找关键词就可以做出来啊。"
+    }, 
+    "3305": {
+        "id": 3305, 
+        "name": "虚拟语气", 
+        "diff": 0.7, 
+        "introduction": null, 
+        "icon": "study/img_xuniyuqi", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "引导词if", 
+                "与事实相反", 
+                "省略与倒装", 
+                "含蓄虚拟语气"
+            ], 
+            [
+                "I wish引导的宾语从句", 
+                "would rather引导的宾语从句", 
+                "表建议、命令、要求的词引导的从句", 
+                "It is +形容词+ that句型"
+            ], 
+            [
+                "状语从句中的虚拟语气", 
+                "as if/though引导的方式状语从句", 
+                "even if引导的让步状语从句", 
+                "in case引导的目的状语从句"
+            ], 
+            [
+                "定语从句中的虚拟语气", 
+                "if only引导的从句", 
+                "may表示祝愿时", 
+                "It`s (high/about) time that句型"
+            ]
+        ], 
+        "unknownTxt": "啥语气，语气是要学的吗？", 
+        "knownTxt": "好多语气都要学啊……来，下一个语气。"
+    }, 
+    "3306": {
+        "id": 3306, 
+        "name": "书面表达", 
+        "diff": 0.8, 
+        "introduction": null, 
+        "icon": "study/img_shumianbiaoda", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 400.0, 
+        "effect": [], 
+        "course": [
+            3, 
+            3
+        ], 
+        "danmu": [
+            [
+                "审题", 
+                "列提纲", 
+                "合理布局结构", 
+                "连句成篇"
+            ], 
+            [
+                "覆盖要点 ", 
+                "语法无误", 
+                "字数符合要求", 
+                "语言流利准确合理"
+            ], 
+            [
+                "覆盖要点", 
+                "高分句型", 
+                "高级语法与词汇", 
+                "有效使用连接词"
+            ], 
+            [
+                "达到预期写作目的", 
+                "词汇与句型多样", 
+                "记叙文与应用文，书信与演讲稿"
+            ]
+        ], 
+        "unknownTxt": "中文写都够呛，还要我用英文写啊。", 
+        "knownTxt": "又是你，李华…..."
+    }, 
+    "4201": {
+        "id": 4201, 
+        "name": "古代史", 
+        "diff": 0, 
+        "introduction": null, 
+        "icon": "study/img_gudaishi", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            4
+        ], 
+        "danmu": [
+            [
+                "史前时期", 
+                "夏商周时期", 
+                "青铜器与甲骨文", 
+                "百家争鸣"
+            ], 
+            [
+                "秦汉时期", 
+                "文景之治", 
+                "丝绸之路", 
+                "三国鼎立"
+            ], 
+            [
+                "两晋与南北朝", 
+                "隋唐时期", 
+                "盛唐气象", 
+                "安史之乱"
+            ], 
+            [
+                "辽宋西夏并立", 
+                "宋金并立", 
+                "元代建立", 
+                "明清统治"
+            ]
+        ], 
+        "unknownTxt": "唐宋元明清，唐之前是什么来着？", 
+        "knownTxt": "我也想当秦始皇~"
+    }, 
+    "4202": {
+        "id": 4202, 
+        "name": "全球化", 
+        "diff": 0.1, 
+        "introduction": null, 
+        "icon": "study/img_quanqiuhua", 
+        "minigame": 1, 
+        "state": 1, 
+        "max": 220.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            5
+        ], 
+        "danmu": [
+            [
+                "开放与发展", 
+                "紧密联系的世界", 
+                "经济全球化", 
+                "文化多样性"
+            ], 
+            [
+                "世界多极化格局", 
+                "国家合作与竞争", 
+                "维护和平", 
+                "消除贫困"
+            ], 
+            [
+                "共享发展机遇", 
+                "优势互补", 
+                "互利共赢", 
+                "国际自由贸易"
+            ], 
+            [
+                "世界贸易组织", 
+                "跨国公司", 
+                "世界银行", 
+                "互联网"
+            ]
+        ], 
+        "unknownTxt": "全球化？是指我能在超市买到外国零食，还是指外卖可以送到南极？", 
+        "knownTxt": "我们都住在地球村。"
+    }, 
+    "4203": {
+        "id": 4203, 
+        "name": "等高线", 
+        "diff": 0.2, 
+        "introduction": null, 
+        "icon": "study/img_denggaoxian", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            6
+        ], 
+        "danmu": [
+            [
+                "海拔高度", 
+                "相对高度", 
+                "等高距", 
+                "闭合曲线"
+            ], 
+            [
+                "山谷", 
+                "山脊", 
+                "陡崖", 
+                "鞍部"
+            ], 
+            [
+                "密集程度", 
+                "坡度陡缓", 
+                "地形类型", 
+                "地势起伏"
+            ], 
+            [
+                "山峰", 
+                "极值", 
+                "海拔范围", 
+                "山脉走势"
+            ]
+        ], 
+        "unknownTxt": "地图上那些乱七八糟的线，跟蚊香似的，有什么用？", 
+        "knownTxt": "越密集，越陡峭，重合之处，必为峭壁…..."
+    }, 
+    "4301": {
+        "id": 4301, 
+        "name": "近代史", 
+        "diff": 0.3, 
+        "introduction": null, 
+        "icon": "study/img_jindaishi", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            4
+        ], 
+        "danmu": [
+            [
+                "两次鸦片战争", 
+                "太平天国", 
+                "洋务运动", 
+                "甲午战争"
+            ], 
+            [
+                "维新变法", 
+                "义和团运动", 
+                "八国联军和《辛丑条约》的签订", 
+                "列强侵华的方式和趋势总结"
+            ], 
+            [
+                "辛亥革命", 
+                "袁世凯复辟", 
+                "军阀混战", 
+                "民族工业的发展"
+            ], 
+            [
+                "五四运动", 
+                "北伐战争", 
+                "抗日战争", 
+                "解放战争"
+            ]
+        ], 
+        "unknownTxt": "感觉老听爸爸在家里说，但到底是个怎么回事呢？", 
+        "knownTxt": "革命战士好伟大！"
+    }, 
+    "4302": {
+        "id": 4302, 
+        "name": "货币政策", 
+        "diff": 0.4, 
+        "introduction": null, 
+        "icon": "study/img_huobi", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 340.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            5
+        ], 
+        "danmu": [
+            [
+                "商品的含义与基本属性", 
+                "货币的本质和基本职能", 
+                "价格与价值的关系", 
+                "信用工具及外汇"
+            ], 
+            [
+                "影响价格的因素", 
+                "供求关系规律", 
+                "消费的类型及消费观", 
+                "树立正确的消费观"
+            ], 
+            [
+                "基本经济制度和分配方式", 
+                "企业与劳动者", 
+                "投资理财的选择", 
+                "收入与分配"
+            ], 
+            [
+                "征税和纳税", 
+                "财政的作用", 
+                "社会主义市场经济体制", 
+                "经济全球化和对外开放"
+            ]
+        ], 
+        "unknownTxt": "是不是就是政府印钱啊？", 
+        "knownTxt": "稳增长、控通胀。"
+    }, 
+    "4303": {
+        "id": 4303, 
+        "name": "板块构造", 
+        "diff": 0.5, 
+        "introduction": null, 
+        "icon": "study/img_bankuai", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 400.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            6
+        ], 
+        "danmu": [
+            [
+                "地壳、地幔与地核", 
+                "大气圈、水圈、岩石圈与生物圈", 
+                "莫霍界面", 
+                "古登堡界面"
+            ], 
+            [
+                "大陆板块与海洋板块", 
+                "板块挤压与张裂", 
+                "消亡边界与生长边界", 
+                "火山-地震带"
+            ], 
+            [
+                "板块运动对地表形态的塑造", 
+                "裂谷、海洋与海岭", 
+                "高大山脉、海沟与岛弧", 
+                "地表形态的演变规律"
+            ], 
+            [
+                "内力作用", 
+                "地壳运动", 
+                "变质作用", 
+                "岩浆活动"
+            ]
+        ], 
+        "unknownTxt": "是七大洲八大洋那玩意吗？", 
+        "knownTxt": "原来地壳是像拼图一样啊。"
+    }, 
+    "4304": {
+        "id": 4304, 
+        "name": "世界史", 
+        "diff": 0.6, 
+        "introduction": null, 
+        "icon": "study/img_shijieshi", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 500.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            4
+        ], 
+        "danmu": [
+            [
+                "汉谟拉比法典", 
+                "古埃及文明", 
+                "雅典民主政治", 
+                "古罗马"
+            ], 
+            [
+                "中世纪西欧", 
+                "拜占庭与罗马法的完成", 
+                "阿拉伯与奥斯曼", 
+                "德川幕府"
+            ], 
+            [
+                "黑奴贸易与资本原始积累", 
+                "文艺复兴与宗教改革", 
+                "欧洲的资产阶级革命", 
+                "两次工业革命"
+            ], 
+            [
+                "第一次世界大战", 
+                "第二次世界大战", 
+                "美苏冷战与两极格局的形成", 
+                "世界的多极化趋势"
+            ]
+        ], 
+        "unknownTxt": "这些人名和事件都太复杂了，我怎么记得住？", 
+        "knownTxt": "每个事件都能串起来，还挺像追剧呢。"
+    }, 
+    "4305": {
+        "id": 4305, 
+        "name": "辩证唯物", 
+        "diff": 0.7, 
+        "introduction": null, 
+        "icon": "study/img_bianzheng", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 600.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            5
+        ], 
+        "danmu": [
+            [
+                "哲学的起源及基本问题", 
+                "唯物主义和唯心主义", 
+                "科学的世界观和方法论", 
+                "马克思主义的基本哲学特征"
+            ], 
+            [
+                "物质和意识的辩证关系", 
+                "联系和发展的观点", 
+                "整体和部分的辩证关系", 
+                "系统和要素关系原理"
+            ], 
+            [
+                "发展的普遍性原理", 
+                "发展的实质", 
+                "量变和质变的辩证关系原理", 
+                "发展是前进性与曲折性相统一原理"
+            ], 
+            [
+                "矛盾的普遍性和特殊性", 
+                "主要矛盾和次要矛盾", 
+                "唯物史观", 
+                "实现人生的价值"
+            ]
+        ], 
+        "unknownTxt": "建国之后妖怪不许成精？", 
+        "knownTxt": "解决问题就是从矛盾中找平衡。"
+    }, 
+    "4306": {
+        "id": 4306, 
+        "name": "大气环流", 
+        "diff": 0.8, 
+        "introduction": null, 
+        "icon": "study/img_daqi", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 800.0, 
+        "effect": [], 
+        "course": [
+            4, 
+            6
+        ], 
+        "danmu": [
+            [
+                "大气的垂直分层", 
+                "对流层", 
+                "平流层", 
+                "高层大气"
+            ], 
+            [
+                "大气的受热过程", 
+                "削弱作用与保温作用", 
+                "热力环流与城市热岛效应", 
+                "山谷风与海陆风"
+            ], 
+            [
+                "冷锋与暖锋", 
+                "气旋与反气旋", 
+                "三圈环流", 
+                "气压带与风带"
+            ], 
+            [
+                "季风环流", 
+                "海陆热力性质差异", 
+                "气候的形成与特征", 
+                "自然带与植被类型"
+            ]
+        ], 
+        "unknownTxt": "为什么风从这里吹到那里就变得复杂了呢？", 
+        "knownTxt": "原来天气和气候是受空气影响啊。"
+    }, 
+    "5201": {
+        "id": 5201, 
+        "name": "细胞", 
+        "diff": 0, 
+        "introduction": null, 
+        "icon": "study/img_xibao", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 150.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            7
+        ], 
+        "danmu": [
+            [
+                "真核细胞", 
+                "原核细胞", 
+                "植物细胞", 
+                "动物细胞"
+            ], 
+            [
+                "细胞壁", 
+                "细胞膜", 
+                "细胞质", 
+                "细胞核"
+            ], 
+            [
+                "细胞核", 
+                "染色体", 
+                "DNA", 
+                "遗传物质"
+            ], 
+            [
+                "细胞生长", 
+                "细胞分裂", 
+                "细胞分化", 
+                "干细胞"
+            ]
+        ], 
+        "unknownTxt": "就是构成生命的小东西吧。", 
+        "knownTxt": "感觉我的细胞比我还努力啊！"
+    }, 
+    "5202": {
+        "id": 5202, 
+        "name": "光现象", 
+        "diff": 0.1, 
+        "introduction": null, 
+        "icon": "study/img_guangxue", 
+        "minigame": 0, 
+        "state": 1, 
+        "max": 220.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            8
+        ], 
+        "danmu": [
+            [
+                "直线传播", 
+                "介质", 
+                "反射", 
+                "散射"
+            ], 
+            [
+                "折射", 
+                "入射角", 
+                "折射角", 
+                "光的棱镜"
+            ], 
+            [
+                "镜面反射", 
+                "小孔成像", 
+                "实像", 
+                "虚像"
+            ], 
+            [
+                "凹凸面镜", 
+                "焦点", 
+                "焦距", 
+                "成像规律"
+            ]
+        ], 
+        "unknownTxt": "灯亮了，太阳照了，反正就是光嘛，其他的都不重要。", 
+        "knownTxt": "光照进水里那叫折射，照镜子那叫反射，应该不会再记错了吧…..."
+    }, 
+    "5203": {
+        "id": 5203, 
+        "name": "化学反应", 
+        "diff": 0.2, 
+        "introduction": "Co+2Fe==coffee", 
+        "icon": "study/img_huaxue", 
+        "minigame": 1, 
+        "state": 1, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            9
+        ], 
+        "danmu": [
+            [
+                "反应物", 
+                "生成物", 
+                "反应条件", 
+                "元素守恒"
+            ], 
+            [
+                "气体", 
+                "沉淀", 
+                "加热", 
+                "高温"
+            ], 
+            [
+                "化合反应", 
+                "分解反应", 
+                "复分解反应", 
+                "酸碱中和"
+            ], 
+            [
+                "置换反应", 
+                "燃烧反应", 
+                "氧化还原", 
+                "方程式配平"
+            ]
+        ], 
+        "unknownTxt": "不就是东西混一起然后冒泡吗？还能变啥呀，顶多是颜色变了。", 
+        "knownTxt": "化学反应多到让我怀疑人生…..."
+    }, 
+    "5301": {
+        "id": 5301, 
+        "name": "DNA", 
+        "diff": 0.3, 
+        "introduction": null, 
+        "icon": "study/img_dna", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 300.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            7
+        ], 
+        "danmu": [
+            [
+                "遗传信息", 
+                "基因", 
+                "DNA", 
+                "RNA"
+            ], 
+            [
+                "脱氧核糖核酸", 
+                "双螺旋结构", 
+                "碱基互补配对", 
+                "编码顺序"
+            ], 
+            [
+                "腺嘌呤A", 
+                "鸟嘌呤G", 
+                "胸腺嘧啶T", 
+                "胞嘧啶C"
+            ], 
+            [
+                "基因突变", 
+                "转基因", 
+                "启动子", 
+                "终止子"
+            ]
+        ], 
+        "unknownTxt": "这个我知道！破案的时候用的呗。", 
+        "knownTxt": "感觉自己就是个生物界的程序代码。"
+    }, 
+    "5302": {
+        "id": 5302, 
+        "name": "元素周期表", 
+        "diff": 0.4, 
+        "introduction": null, 
+        "icon": "study/img_yuansu", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 340.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            9
+        ], 
+        "danmu": [
+            [
+                "门捷列夫", 
+                "主族", 
+                "副族", 
+                "短与长周期"
+            ], 
+            [
+                "原子序数", 
+                "质子数", 
+                "核电荷数", 
+                "核外电子数"
+            ], 
+            [
+                "元素周期律", 
+                "金属性", 
+                "非金属性", 
+                "最高最低化合价"
+            ], 
+            [
+                "卤族元素", 
+                "过渡元素", 
+                "化学键与元素结构", 
+                "元素化合物的性质"
+            ]
+        ], 
+        "unknownTxt": "好长，这怎么背得下来？", 
+        "knownTxt": "氢氦锂铍硼，碳氮氧氟氖。"
+    }, 
+    "5303": {
+        "id": 5303, 
+        "name": "力学", 
+        "diff": 0.5, 
+        "introduction": null, 
+        "icon": "study/img_lixue", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 400.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            8
+        ], 
+        "danmu": [
+            [
+                "力的效果", 
+                "力的性质", 
+                "重力、弹力与摩擦力", 
+                "弹簧与胡克定律"
+            ], 
+            [
+                "受力分析", 
+                "矢量和标量", 
+                "匀变速直线运动", 
+                "牛顿三定律"
+            ], 
+            [
+                "曲线运动", 
+                "平抛与圆周运动", 
+                "万有引力", 
+                "开普勒行星运动定律"
+            ], 
+            [
+                "机械能守恒定律与动能定理", 
+                "功和功能关系", 
+                "动量定理与动量守恒定律", 
+                "碰撞爆炸与反冲"
+            ]
+        ], 
+        "unknownTxt": "用力还要学吗？", 
+        "knownTxt": "牛顿为什么没出第四定律？"
+    }, 
+    "5304": {
+        "id": 5304, 
+        "name": "激素", 
+        "diff": 0.6, 
+        "introduction": null, 
+        "icon": "study/img_jisu", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 500.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            7
+        ], 
+        "danmu": [
+            [
+                "调节代谢", 
+                "生长发育", 
+                "水盐平衡", 
+                "生殖功能"
+            ], 
+            [
+                "肾上腺素", 
+                "胰岛素", 
+                "甲状腺激素", 
+                "性激素"
+            ], 
+            [
+                "生长素", 
+                "顶端优势", 
+                "乙烯", 
+                "脱落酸"
+            ], 
+            [
+                "利尿激素", 
+                "抗利尿激素", 
+                "肾小管和集合管", 
+                "重吸收作用"
+            ]
+        ], 
+        "unknownTxt": "会让人变胖的东西对吧？", 
+        "knownTxt": "我怎么感觉激素跟我爸妈似的，调度我的一切…..."
+    }, 
+    "5305": {
+        "id": 5305, 
+        "name": "氧化还原", 
+        "diff": 0.7, 
+        "introduction": null, 
+        "icon": "study/img_yanghua", 
+        "minigame": 0, 
+        "state": 2, 
+        "max": 600.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            9
+        ], 
+        "danmu": [
+            [
+                "化合价变化", 
+                "电子的转移", 
+                "氧化反应", 
+                "还原反应"
+            ], 
+            [
+                "氧化产物，还原产物，氧化剂，还原剂"
+            ], 
+            [
+                "氧化性", 
+                "还原性", 
+                "单线桥与双线桥", 
+                "半反应"
+            ], 
+            [
+                "元素守恒", 
+                "电荷守恒", 
+                "配平方法", 
+                "歧化反应与归中反应"
+            ]
+        ], 
+        "unknownTxt": "是氧气被化了，还是谁被还原了？", 
+        "knownTxt": "氧化是失电子，还原是得电子。"
+    }, 
+    "5306": {
+        "id": 5306, 
+        "name": "电磁", 
+        "diff": 0.8, 
+        "introduction": null, 
+        "icon": "study/img_cili", 
+        "minigame": 1, 
+        "state": 2, 
+        "max": 800.0, 
+        "effect": [], 
+        "course": [
+            5, 
+            8
+        ], 
+        "danmu": [
+            [
+                "电荷与库仑定律", 
+                "静电场与电场强度", 
+                "电场线与电势", 
+                "电容与电容器充放电"
+            ], 
+            [
+                "电路、电流、电阻与电功", 
+                "闭合电路欧姆定律", 
+                "磁场与磁感应强度", 
+                "磁场线与磁通量"
+            ], 
+            [
+                "电流的磁效应与右手定则", 
+                "安培力、洛伦兹力与左手定则", 
+                "带电粒子在磁场中的运动", 
+                "电磁感应与楞次定律"
+            ], 
+            [
+                "法拉第电磁感应定律", 
+                "交变电流与变压器", 
+                "电磁振荡与电磁波", 
+                "传感器"
+            ]
+        ], 
+        "unknownTxt": "电磁炉那个电磁吗？", 
+        "knownTxt": "电生磁，磁生电。"
+    }
+}

@@ -215,26 +215,34 @@
                     2,
                     3,
                     "value",
-                    "SeasonId"
+                    "SeasonTypeId"
                 ],
-                "desc": "当前是{value}年{SeasonId}季"
+                "desc": "当前是{value}年{SeasonTypeId}"
             },
             "currentSeasonOrLater": {
                 "rule": [
                     2,
                     30,
                     "value",
-                    "SeasonId"
+                    "SeasonTypeId"
                 ],
-                "desc": "当前为{value}年{SeasonId}季,或以后"
+                "desc": "当前为{value}年{SeasonTypeId},或以后"
             },
             "currentSeason": {
                 "rule": [
                     2,
                     4,
-                    "SeasonId"
+                    "SeasonTypeId"
                 ],
-                "desc": "当前为{SeasonId}季"
+                "desc": "当前为{SeasonTypeId}"
+            },
+            "currentSeasonNot": {
+                "rule": [
+                    2,
+                    -4,
+                    "SeasonTypeId"
+                ],
+                "desc": "当前不是{SeasonTypeId}"
             },
             "currentTurnIsHoliday": {
                 "rule": [
@@ -575,7 +583,7 @@
                     "PersonAttrId2",
                     "value"
                 ],
-                "desc": "{PersonAttrId1}-{PersonAttrId2}≤{value}"
+                "desc": "{PersonAttrId1}-{PersonAttrId2}<{value}"
             },
             "attrSubtractionGreaterThanOrEqualV2": {
                 "rule": [
@@ -585,7 +593,7 @@
                     "PersonAttrId2",
                     "value"
                 ],
-                "desc": "{PersonAttrId1}-{PersonAttrId2}≥{value}"
+                "desc": "{PersonAttrId1}-{PersonAttrId2}>{value}"
             },
             "attrGreatMultiple": {
                 "rule": [
@@ -594,7 +602,7 @@
                     "PersonAttrId",
                     "value"
                 ],
-                "desc": "{PersonAttrId}属性的值大于等于{value}倍参考值"
+                "desc": "{PersonAttrId}的值≥{value}倍参考值"
             },
             "attrLessMultiple": {
                 "rule": [
@@ -603,25 +611,25 @@
                     "PersonAttrId",
                     "value"
                 ],
-                "desc": "{PersonAttrId}属性的值小于等于{value}倍参考值"
+                "desc": "{PersonAttrId}的值≤{value}倍参考值"
             },
             "otherAttrGreaterThanOrEqualV": {
                 "rule": [
                     4,
                     10,
-                    "value1",
-                    "value2"
+                    "OtherAttrId",
+                    "value"
                 ],
-                "desc": "其他属性{value1}≥{value2}"
+                "desc": "{OtherAttrId}>{value}"
             },
             "otherAttrLessThanOrEqualV": {
                 "rule": [
                     4,
                     -10,
-                    "value1",
-                    "value2"
+                    "OtherAttrId",
+                    "value"
                 ],
-                "desc": "其他属性{value1}≤{value2}"
+                "desc": "{OtherAttrId}<{value}"
             },
             "attrGreaterThanOrEqualNPC": {
                 "rule": [
@@ -641,7 +649,7 @@
                     "PersonAttrId",
                     "personId"
                 ],
-                "desc": "主角的{PersonAttrId}属性≤人物{personId}的{PersonAttrId}属性"
+                "desc": "主角的{PersonAttrId}属性<人物{personId}的{PersonAttrId}属性"
             },
             "attrGreaterThanOrEqual": {
                 "rule": [
@@ -650,7 +658,83 @@
                     "PersonAttrId",
                     "value"
                 ],
-                "desc": "主角的{PersonAttrId}属性等级≥{value}"
+                "desc": "主角的{PersonAttrId}等级≥{value}"
+            },
+            "attrLevelGreaterThanOrEqual": {
+                "rule": [
+                    4,
+                    300,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "开始计数{PersonAttrId}等级提升了{value}次"
+            },
+            "attrIsMax": {
+                "rule": [
+                    4,
+                    99,
+                    "PersonAttrId"
+                ],
+                "desc": "{PersonAttrId}是最高三维能力"
+            },
+            "isMasterPersonality": {
+                "rule": [
+                    4,
+                    101,
+                    1,
+                    "PersonAttrId"
+                ],
+                "desc": "{PersonAttrId}是主人格"
+            },
+            "isMasterPersonalityALL": {
+                "rule": [
+                    4,
+                    101,
+                    1,
+                    "PersonAttrId1",
+                    "PersonAttrId2"
+                ],
+                "desc": "{PersonAttrId1}与{PersonAttrId2}是主人格"
+            },
+            "isMasterPersonalityOr": {
+                "rule": [
+                    4,
+                    101,
+                    0,
+                    "PersonAttrId1",
+                    "PersonAttrId2"
+                ],
+                "desc": "{PersonAttrId1}或{PersonAttrId2}是主人格"
+            },
+            "isPersonality": {
+                "rule": [
+                    4,
+                    101,
+                    2,
+                    "PersonAttrId"
+                ],
+                "desc": "{PersonAttrId}是可用人格"
+            },
+            "attrAdd": {
+                "rule": [
+                    4,
+                    100,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "{PersonAttrId}属性提升{value}点(重新算)"
+            },
+            "attrGreaterThanOrEqualValue": {
+                "rule": [
+                    4,
+                    308,
+                    1,
+                    "value",
+                    "PersonAttrId1",
+                    "PersonAttrId2",
+                    "PersonAttrId3"
+                ],
+                "desc": "{PersonAttrId1}、{PersonAttrId2}、{PersonAttrId3}属性≥{value}"
             }
         }
     },
@@ -666,7 +750,7 @@
                     "skillId",
                     "value"
                 ],
-                "desc": "技能{skillId}等级≥{value}"
+                "desc": "专长{skillId}等级≥{value}"
             },
             "skillLevelLessThanOrEqual": {
                 "rule": [
@@ -675,7 +759,92 @@
                     "skillId",
                     "value"
                 ],
-                "desc": "技能{skillId}等级≤{value}"
+                "desc": "专长{skillId}等级＜{value}"
+            },
+            "skillIsUnlocked": {
+                "rule": [
+                    5,
+                    3,
+                    "skillId"
+                ],
+                "desc": "专长{skillId}已解锁"
+            },
+            "skillIsLocked": {
+                "rule": [
+                    5,
+                    -3,
+                    "skillId"
+                ],
+                "desc": "专长{skillId}未解锁"
+            },
+            "skillIsUnlockedAch": {
+                "rule": [
+                    5,
+                    8,
+                    1,
+                    "skillId"
+                ],
+                "desc": "（成就专用）专长{skillId}已解锁"
+            },
+            "skillIsUnlockedAchGreaterThanOrEqual": {
+                "rule": [
+                    5,
+                    8,
+                    10,
+                    "value"
+                ],
+                "desc": "（成就专用）已解锁{value}个专长"
+            },
+            "hobbyCountGreaterThanOrEqual": {
+                "rule": [
+                    5,
+                    10,
+                    "value"
+                ],
+                "desc": "已拥有{value}个爱好"
+            },
+            "exploreProjectIsUnlocked": {
+                "rule": [
+                    5,
+                    12,
+                    1,
+                    "exploreId"
+                ],
+                "desc": "探索项目{exploreId}已解锁"
+            },
+            "exploreProjectIsLock": {
+                "rule": [
+                    5,
+                    12,
+                    -1,
+                    "exploreId"
+                ],
+                "desc": "探索项目{exploreId}未解锁"
+            },
+            "clubDepartmentIsUnlocked": {
+                "rule": [
+                    5,
+                    600,
+                    "ClubDepartmentId"
+                ],
+                "desc": "已建立{ClubDepartmentId}部门"
+            },
+            "clubDepartmentAttrGreaterThanOrEqualValue": {
+                "rule": [
+                    5,
+                    601,
+                    "ClubDepartmentId",
+                    "value"
+                ],
+                "desc": "{ClubDepartmentId}社团属性≥{value}"
+            },
+            "clubDepartmentDonation": {
+                "rule": [
+                    5,
+                    602,
+                    "value"
+                ],
+                "desc": "累计为推理社捐款{value}"
             }
         }
     },
@@ -688,17 +857,119 @@
                 "rule": [
                     6,
                     1,
-                    "PersonalityTypeId"
+                    "PersonAttrId"
                 ],
-                "desc": "主角拥有性格{PersonalityTypeId}"
+                "desc": "主角拥有性格{PersonAttrId}"
             },
             "personalityNot": {
                 "rule": [
                     6,
                     0,
-                    "PersonalityTypeId"
+                    "PersonAttrId"
                 ],
-                "desc": "主角未拥有性格{PersonalityTypeId}"
+                "desc": "主角未拥有性格{PersonAttrId}"
+            },
+            "anyPersonalityGreaterThanOrEqualValue": {
+                "rule": [
+                    6,
+                    8,
+                    1,
+                    "value"
+                ],
+                "desc": "任一人格等级≥{value}"
+            },
+            "anyPersonalityUnlocked": {
+                "rule": [
+                    6,
+                    8,
+                    4,
+                    "PersonAttrId"
+                ],
+                "desc": "任一人格已解锁"
+            },
+            "raisePersonalityLevelXTimes": {
+                "rule": [
+                    6,
+                    9,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "提升人格类型{PersonAttrId}等级{value}次(重新算)"
+            },
+            "unlockAnyPersonalityLevel": {
+                "rule": [
+                    6,
+                    10,
+                    1,
+                    "value"
+                ],
+                "desc": "解锁任一{value}级价值观"
+            },
+            "raisePersonalityLevelXTimesOrMore": {
+                "rule": [
+                    6,
+                    11,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "累计强化人格{PersonAttrId}{value}次或以上"
+            },
+            "anyPersonalityOpened": {
+                "rule": [
+                    6,
+                    21,
+                    -1
+                ],
+                "desc": "任一人格已开启"
+            },
+            "PersonalityOpened": {
+                "rule": [
+                    6,
+                    21,
+                    "RenshengguanMemoryId"
+                ],
+                "desc": "已开启{RenshengguanMemoryId}人生观"
+            },
+            "PersonalityNotOpened": {
+                "rule": [
+                    6,
+                    -21,
+                    "RenshengguanMemoryId"
+                ],
+                "desc": "未开启{RenshengguanMemoryId}人生观"
+            },
+            "anyRenshengguanLevelGreaterThanOrEqualValue": {
+                "rule": [
+                    6,
+                    22,
+                    "value"
+                ],
+                "desc": "人生观等级≥{value}"
+            },
+            "anyRenshengguanLevelLessThanOrEqualValue": {
+                "rule": [
+                    6,
+                    -22,
+                    "value"
+                ],
+                "desc": "人生观等级≤{value}"
+            },
+            "RenshengguanMemoryCountGreaterThanOrEqualValue": {
+                "rule": [
+                    6,
+                    23,
+                    "value"
+                ],
+                "desc": "获得的珍贵记忆数量≥{value}"
+            },
+            "RenshengguanTypeCountGreaterThanOrEqualValue": {
+                "rule": [
+                    6,
+                    24,
+                    "RenshengguanTypeId",
+                    "value"
+                ],
+                "desc": "{RenshengguanTypeId}记忆的数量≥{value}"
             }
         }
     },
@@ -712,9 +983,9 @@
                     7,
                     0,
                     "personId",
-                    "RelationTypeId"
+                    "OtherRelationId"
                 ],
-                "desc": "与{personId}是{RelationTypeId}关系"
+                "desc": "与{personId}是{OtherRelationId}"
             },
             "NpcFavoritismGreaterThanOrEqual": {
                 "rule": [
@@ -732,7 +1003,66 @@
                     "personId",
                     "value"
                 ],
-                "desc": "与{personId}的好感≤{value}"
+                "desc": "与{personId}的好感<{value}"
+            },
+            "NpcInteractWithParentsXTimes": {
+                "rule": [
+                    7,
+                    10,
+                    1,
+                    "value"
+                ],
+                "desc": "与父母成功交涉{value}次"
+            },
+            "NpcInteractWithParentsXTimesOrMore": {
+                "rule": [
+                    7,
+                    7,
+                    1,
+                    "value"
+                ],
+                "desc": "社交{value}次(重新算)"
+            },
+            "NpcHasFriend": {
+                "rule": [
+                    7,
+                    9
+                ],
+                "desc": "有认识的人"
+            },
+            "NpcIsFavoritismHighestAsexualValue": {
+                "rule": [
+                    7,
+                    10,
+                    "value"
+                ],
+                "desc": "好感最高的同学,其好感≥{value}"
+            },
+            "NpcHasFriendCountGreaterThanOrEqualValue": {
+                "rule": [
+                    7,
+                    5,
+                    "OtherRelationId",
+                    "value"
+                ],
+                "desc": "拥有{OtherRelationId}≥{value}"
+            },
+            "NpcHas0ppositeSexCountGreaterThanOrEqualValue": {
+                "rule": [
+                    7,
+                    50,
+                    "OtherRelationId",
+                    "value"
+                ],
+                "desc": "{OtherRelationId}关系异性人数≥{value}"
+            },
+            "ImproveRelationshipTimes": {
+                "rule": [
+                    7,
+                    8,
+                    "value"
+                ],
+                "desc": "提升关系{value}次(重新算)"
             },
             "NpcIsFavoritismHighestAsexual": {
                 "rule": [
@@ -741,6 +1071,23 @@
                     "personId"
                 ],
                 "desc": "与{personId}是好感最高的异性"
+            },
+            "ThisRoundLurkerActivityXActivated": {
+                "rule": [
+                    7,
+                    40,
+                    "ActivityId"
+                ],
+                "desc": "本回合活动{ActivityId}已激活"
+            },
+            "AskForExperienceXTimes": {
+                "rule": [
+                    7,
+                    310,
+                    1,
+                    "value"
+                ],
+                "desc": "请教经验{value}次(累计)"
             }
         }
     },
@@ -761,9 +1108,36 @@
                 "rule": [
                     8,
                     -1,
-                    "personStateId"
+                    "personStateID"
                 ],
-                "desc": "主角未拥有状态{personStateId}"
+                "desc": "主角未拥有状态{personStateID}"
+            },
+            "pressureLevelLessThanOrEqual": {
+                "rule": [
+                    8,
+                    5,
+                    1,
+                    "value"
+                ],
+                "desc": "压力等级≤{value}"
+            },
+            "pressureLevelGreaterThanOrEqual": {
+                "rule": [
+                    8,
+                    5,
+                    2,
+                    "value"
+                ],
+                "desc": "压力等级≥{value}"
+            },
+            "pressureLevelEqual": {
+                "rule": [
+                    8,
+                    5,
+                    0,
+                    "value"
+                ],
+                "desc": "压力等级={value}"
             }
         }
     },
@@ -772,6 +1146,15 @@
         "toast": 1,
         "name": "学习",
         "type": {
+            "totalScoreEstimatedGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    1,
+                    0,
+                    "value"
+                ],
+                "desc": "总分预估≥{value}"
+            },
             "subjectScoreGreaterThanOrEqual": {
                 "rule": [
                     10,
@@ -781,20 +1164,47 @@
                 ],
                 "desc": "科目{knowledgeId}的预估分≥{value}"
             },
+            "highSchoolScienceKnowledgeGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    11,
+                    1,
+                    "value"
+                ],
+                "desc": "高中理科知识点>{value}"
+            },
+            "highSchoolArtKnowledgeGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    11,
+                    2,
+                    "value"
+                ],
+                "desc": "高中文科知识点>{value}"
+            },
+            "reviewTimesGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    3,
+                    "value"
+                ],
+                "desc": "复习次数≥{value}次"
+            },
+            "notWriteHomeworkTimesGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    -3,
+                    "value"
+                ],
+                "desc": "（重新算）不写作业≥{value}次"
+            },
             "cumulativeNotWriteHomeworkTimesGreaterThanOrEqual": {
                 "rule": [
                     10,
                     -33,
                     "value"
                 ],
-                "desc": "累计不写作业次数≥{value}"
-            },
-            "thisRoundNotWriteHomework": {
-                "rule": [
-                    10,
-                    -100
-                ],
-                "desc": "本回合未写作业"
+                "desc": "（做了清零）累计不写作业≥{value}次"
             },
             "writeHomeworkTimesGreaterThanOrEqual": {
                 "rule": [
@@ -804,42 +1214,185 @@
                 ],
                 "desc": "写作业次数≥{value}次"
             },
-            "obtainTopXNames10,50,X": {
+            "obtainTopNamesNew": {
                 "rule": [
+                    10,
+                    10,
+                    "value"
+                ],
+                "desc": "（重新算）获得前{value}名"
+            },
+            "obtainTopName": {
+                "RULE": [
                     10,
                     50,
                     "value"
                 ],
-                "desc": "获得前{value}名"
+                "DESC": "获得前{value}名"
+            },
+            "masterKnowledge": {
+                "RULE": [
+                    10,
+                    5,
+                    "value"
+                ],
+                "DESC": "掌握{value}个知识点"
+            },
+            "thisRoundNotWriteHomework": {
+                "rule": [
+                    10,
+                    -100
+                ],
+                "desc": "本回合未写作业"
             },
             "learningLevelLessThanOrEqual": {
                 "rule": [
                     10,
                     99,
-                    "scoreRankId"
+                    "value"
                 ],
-                "desc": "学习段位等级≤{scoreRankId}"
+                "desc": "学习段位等级≤{value}"
             },
             "learningLevelGreaterThanOrEqual": {
                 "rule": [
                     10,
                     100,
-                    "scoreRankId"
+                    "value"
                 ],
-                "desc": "学习段位等级≥{scoreRankId}"
+                "desc": "学习段位等级≥{value}"
+            },
+            "thisRoundLearningTimesGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    12,
+                    "value"
+                ],
+                "desc": "本回合主动学习{value}次"
+            },
+            "masterKnowledgeTimesGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    5,
+                    "value",
+                    "knowledgeId"
+                ],
+                "desc": "掌握{value}次{knowledgeId}课程"
+            },
+            "masterKnowledgeTimesGreaterThanOrEqualType": {
+                "rule": [
+                    10,
+                    6,
+                    "knowledgeTypeId"
+                ],
+                "desc": "已掌握{knowledgeTypeId}课程"
+            },
+            "notMasterKnowledgeTimesGreaterThanOrEqualType": {
+                "rule": [
+                    10,
+                    -6,
+                    "knowledgeTypeId"
+                ],
+                "desc": "未掌握{knowledgeTypeId}课程"
+            },
+            "masterKnowledgeCollegeGreaterThanOrEqualType": {
+                "rule": [
+                    10,
+                    7,
+                    "knowledgeTreeId"
+                ],
+                "desc": "已掌握大学{knowledgeTreeId}课程"
+            },
+            "masterKnowledgeMethodologyGreaterThanOrEqualType": {
+                "rule": [
+                    10,
+                    8,
+                    "studyMethodId"
+                ],
+                "desc": "已掌握方法论{studyMethodId}"
+            },
+            "notMasterKnowledgeMethodologyGreaterThanOrEqualType": {
+                "rule": [
+                    10,
+                    -8,
+                    "studyMethodId"
+                ],
+                "desc": "未掌握方法论{studyMethodId}"
+            },
+            "ImproveLearningLevelTimes": {
+                "rule": [
+                    10,
+                    9,
+                    "value"
+                ],
+                "desc": "（重新算）提升学习段位{value}次"
+            },
+            "obtainTopNamesNewTimesGreaterThanOrEqual": {
+                "rule": [
+                    10,
+                    200,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "获得前{value1}名次数≥{value2}"
             }
         }
     },
     "11": {
         "id": 11,
         "toast": 0,
-        "name": "恋爱相关"
+        "name": "恋爱相关",
+        "type": {
+            "lovekepeng": {
+                "rule": [
+                    11,
+                    2,
+                    2
+                ],
+                "desc": "恋爱关系磕磕碰碰"
+            },
+            "lovejiquan": {
+                "rule": [
+                    11,
+                    2,
+                    1
+                ],
+                "desc": "恋爱关系鸡犬不宁"
+            }
+        }
     },
     "12": {
         "id": 12,
         "toast": 0,
         "name": "行动",
         "type": {
+            "actionTimesGreaterThanOrEqual": {
+                "rule": [
+                    12,
+                    1,
+                    "actionId",
+                    "value"
+                ],
+                "desc": "{actionId}已行动{value}次"
+            },
+                        "actionTimesGreaterThanOrEqualnvxian": {
+                "rule": [
+                    12,
+                    1,
+                    "actionId1",
+                    "actionId2",
+                    "value"
+                ],
+                "desc": "{actionId1}已行动{value}次【男线】或{actionId2}已行动{value}次【女线】"
+            },
+            "actionTimesLessThanOrEqual": {
+                "rule": [
+                    12,
+                    -1,
+                    "actionId1",
+                    "value"
+                ],
+                "desc": "{actionId1}已行动≤{value}次【男线】或{actionId2}已行动≤{value}次【女线】"
+            },
             "action": {
                 "rule": [
                     12,
@@ -849,14 +1402,93 @@
                 ],
                 "desc": "主角已拥有行动{actionId}"
             },
-            "actionTimesGreaterThanOrEqual": {
+            "actionType": {
                 "rule": [
                     12,
+                    2,
+                    2,
+                    "actionTypeId"
+                ],
+                "desc": "主角已拥有行动类型{actionTypeId}"
+            },
+            "actionGroup": {
+                "rule": [
+                    12,
+                    2,
+                    3,
+                    "FuncId"
+                ],
+                "desc": "主角已拥有行动组别{FuncId}"
+            },
+            "masterActionTimesGreaterThanOrEqual": {
+                "rule": [
+                    12,
+                    3,
                     1,
-                    "actionId",
                     "value"
                 ],
-                "desc": "{actionId}已行动{value}次"
+                "desc": "已精通{value}个行动(累计)"
+            },
+            "masterActionTimesGreaterThanOrEqualType": {
+                "rule": [
+                    12,
+                    3,
+                    2,
+                    "actionTypeId"
+                ],
+                "desc": "已精通{actionTypeId}类型的行动"
+            },
+            "masterActionTimesGreaterThanOrEqualTag": {
+                "rule": [
+                    12,
+                    4,
+                    "value",
+                    "textId"
+                ],
+                "desc": "已精通{value}个{textId}标签行动"
+            },
+            "visitedAllStarAttractions": {
+                "rule": [
+                    12,
+                    5,
+                    -1,
+                    "value"
+                ],
+                "desc": "已游览{value}个景点"
+            },
+            "visitedStarAttractions": {
+                "rule": [
+                    12,
+                    5,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "已游览{value1}个{value2}星的景点"
+            },
+            "UnlockedActionMasteryMechanism": {
+                "rule": [
+                    12,
+                    6
+                ],
+                "desc": "已解锁行动精通机制"
+            },
+            "fishedFishTimesGreaterThanOrEqual": {
+                "rule": [
+                    12,
+                    7,
+                    1,
+                    "value"
+                ],
+                "desc": "已钓上{value}条鱼（不算垃圾）"
+            },
+            "fishedFishTimesGreaterThanOrEqualReset": {
+                "rule": [
+                    12,
+                    7,
+                    2,
+                    "value"
+                ],
+                "desc": "已钓上{value}条鱼（重新计数，不算垃圾）"
             }
         }
     },
@@ -865,6 +1497,14 @@
         "toast": 0,
         "name": "阅读",
         "type": {
+            "readTimesGreaterThanOrEqualReset": {
+                "rule": [
+                    13,
+                    1,
+                    "value"
+                ],
+                "desc": "已阅读{value}本书（重新计数）"
+            },
             "readTimesGreaterThanOrEqual": {
                 "rule": [
                     13,
@@ -911,7 +1551,7 @@
                     -1,
                     "intentId"
                 ],
-                "desc": "目标{intentId}已经失败"
+                "desc": "目标{intentId}已经失败（包括过期）"
             },
             "currentTarget": {
                 "rule": [
@@ -934,27 +1574,151 @@
     "22": {
         "id": 22,
         "toast": 0,
-        "name": "同学机制"
+        "name": "同学机制",
+        "type": {
+            "friendSupportGreaterThanOrEqual": {
+                "rule": [
+                    22,
+                    101,
+                    1,
+                    "value"
+                ],
+                "desc": "支持度≥{value}"
+            },
+            "friendSupportLessThanOrEqual": {
+                "rule": [
+                    22,
+                    101,
+                    -1,
+                    "value"
+                ],
+                "desc": "支持度≤{value}"
+            },
+            "friendShakeGreaterThanOrEqual": {
+                "rule": [
+                    22,
+                    104,
+                    1,
+                    "value"
+                ],
+                "desc": "小君躁动≥{value}"
+            },
+            "friendShakeLessThanOrEqual": {
+                "rule": [
+                    22,
+                    104,
+                    -1,
+                    "value"
+                ],
+                "desc": "小君躁动≤{value}"
+            },
+            "friendRankGreaterThanOrEqual": {
+                "rule": [
+                    22,
+                    203,
+                    1,
+                    "value"
+                ],
+                "desc": "程良排名≥{value}"
+            },
+            "friendRankLessThanOrEqual": {
+                "rule": [
+                    22,
+                    203,
+                    -1,
+                    "value"
+                ],
+                "desc": "程良排名≤{value}"
+            }
+        }
     },
     "23": {
         "id": 23,
         "toast": 0,
-        "name": "空间"
+        "name": "空间",
+        "type": {
+            "friendDynamicSent": {
+                "rule": [
+                    23,
+                    1,
+                    "KZoneContentId"
+                ],
+                "desc": "已发出动态【<span style=\"font-size: 10px;\">{KZoneContentId}</span>】"
+            },
+            "friendDynamicNotSent": {
+                "rule": [
+                    23,
+                    -1,
+                    "KZoneContentId"
+                ],
+                "desc": "未发出动态【<span style=\"font-size: 10px;\">{KZoneContentId}</span>】"
+            }
+        }
     },
     "31": {
         "id": 31,
         "toast": 0,
-        "name": "舌战"
+        "name": "舌战",
+        "type": {
+            "talkWinTimes": {
+                "rule": [
+                    31,
+                    1,
+                    2,
+                    "value"
+                ],
+                "desc": "舌战胜利{value}次（重新算）"
+            }
+        }
     },
     "34": {
         "id": 34,
         "toast": 0,
-        "name": "游戏"
+        "name": "游戏",
+        "type": {
+            "gameWinTimes": {
+                "rule": [
+                    34,
+                    4,
+                    1,
+                    "value"
+                ],
+                "desc": "游戏通关≥{value}次"
+            },
+            "gameWinInInternetCafe": {
+                "rule": [
+                    34,
+                    5,
+                    "GameId"
+                ],
+                "desc": "网吧或游戏厅通关{GameId}"
+            }
+        }
     },
     "35": {
         "id": 35,
         "toast": 0,
-        "name": "创作"
+        "name": "创作",
+        "type": {
+            "createTimes": {
+                "rule": [
+                    35,
+                    1,
+                    1,
+                    "value"
+                ],
+                "desc": "创作{value}次（重新算）"
+            },
+            "cumulativeCreateTimes": {
+                "rule": [
+                    35,
+                    1,
+                    11,
+                    "value"
+                ],
+                "desc": "累计创作{value}次（重新算）"
+            }
+        }
     },
     "36": {
         "id": 36,
@@ -964,12 +1728,74 @@
     "38": {
         "id": 38,
         "toast": 0,
-        "name": "手工"
+        "name": "手工",
+        "type": {
+            "createTimes": {
+                "rule": [
+                    38,
+                    1,
+                    1,
+                    "value"
+                ],
+                "desc": "手工制作{value}次物品（重新算）"
+            },
+            "cumulativeCreateTimes": {
+                "rule": [
+                    38,
+                    1,
+                    2,
+                    "value"
+                ],
+                "desc": "累计手工制作{value}个物品（重新算）"
+            },
+            "obtainItem": {
+                "rule": [
+                    38,
+                    2,
+                    "itemId"
+                ],
+                "desc": "已制作{itemId}"
+            }
+        }
     },
     "42": {
         "id": 42,
         "toast": 0,
-        "name": "篮球"
+        "name": "篮球",
+        "type": {
+            "singleWin": {
+                "rule": [
+                    42,
+                    2,
+                    "personId"
+                ],
+                "desc": "单挑战胜{personId}"
+            },
+            "trainTimes": {
+                "rule": [
+                    42,
+                    1,
+                    "value"
+                ],
+                "desc": "训练{value}次（重新算）"
+            },
+            "upgradeSpecialtyTimes": {
+                "rule": [
+                    42,
+                    3,
+                    "value"
+                ],
+                "desc": "升级专长{value}次（重新算）"
+            },
+            "winBadmintonTimes": {
+                "rule": [
+                    42,
+                    200,
+                    "personId"
+                ],
+                "desc": "羽毛球战胜{personId}"
+            }
+        }
     },
     "52": {
         "id": 52,
@@ -999,7 +1825,7 @@
                     1,
                     "personId"
                 ],
-                "desc": "人物{personId}是主角的恋人"
+                "desc": "{personId}是主角的恋人"
             },
             "Npc不是主角的恋人": {
                 "rule": [
@@ -1008,7 +1834,21 @@
                     -1,
                     "personId"
                 ],
-                "desc": "人物{personId}不是主角的恋人"
+                "desc": "{personId}不是主角的恋人"
+            },
+            "主角有同性别恋人": {
+                "rule": [
+                    52,
+                    22
+                ],
+                "desc": "主角有同性别恋人"
+            },
+            "主角没有同性别恋人": {
+                "rule": [
+                    52,
+                    -22
+                ],
+                "desc": "主角没有同性别恋人"
             }
         }
     },
@@ -1040,42 +1880,1106 @@
                     "bookId"
                 ],
                 "desc": "已获得书籍{bookId}"
+            },
+            "obtainBookNot": {
+                "rule": [
+                    60,
+                    -2,
+                    "bookId"
+                ],
+                "desc": "未获得书籍{bookId}"
+            },
+            "obtainEquip": {
+                "rule": [
+                    60,
+                    3,
+                    "value"
+                ],
+                "desc": "已获得{value}个装备（重新算）"
+            },
+            "obtainSnack": {
+                "rule": [
+                    60,
+                    4,
+                    "value"
+                ],
+                "desc": "已吃{value}个零食（重新算）"
+            },
+            "cumulativeCost": {
+                "rule": [
+                    60,
+                    5,
+                    "value"
+                ],
+                "desc": "累计花费{value}元（重新算）"
+            },
+            "currentValuableItemCountGreaterEqualX": {
+                "rule": [
+                    60,
+                    6,
+                    "value"
+                ],
+                "desc": "当前正在珍视的物品数量≥{value}"
+            },
+            "continuousValuableItemCountGreaterEqualX": {
+                "rule": [
+                    60,
+                    7,
+                    "itemId",
+                    "value"
+                ],
+                "desc": "已连续珍视{itemId}{value}回合"
+            },
+            "haveAtLeastXBooks": {
+                "rule": [
+                    60,
+                    20,
+                    "value"
+                ],
+                "desc": "拥有至少{value}本书籍"
+            },
+            "obtainEquipGreaterEqual": {
+                "rule": [
+                    60,
+                    30,
+                    "value"
+                ],
+                "desc": "累计获得{value}个装备"
+            },
+            "purchaseItem": {
+                "rule": [
+                    60,
+                    40,
+                    "itemId"
+                ],
+                "desc": "购买过物品{itemId}"
+            },
+            "purchaseItemTimes": {
+                "rule": [
+                    60,
+                    40,
+                    "itemId",
+                    "value"
+                ],
+                "desc": "购买过{itemId}{value}次"
             }
         }
     },
     "90": {
         "id": 90,
         "toast": 0,
-        "name": "庆典"
+        "name": "庆典",
+        "type": {
+            "stamina": {
+                "rule": [
+                    90,
+                    1,
+                    10,
+                    0,
+                    "value"
+                ],
+                "desc": "长跑耐力={value}"
+            },
+            "staminaGreaterEqual": {
+                "rule": [
+                    90,
+                    1,
+                    10,
+                    1,
+                    "value"
+                ],
+                "desc": "长跑耐力≥{value}"
+            },
+            "staminaLessEqual": {
+                "rule": [
+                    90,
+                    1,
+                    10,
+                    -1,
+                    "value"
+                ],
+                "desc": "长跑耐力≤{value}"
+            },
+            "progress": {
+                "rule": [
+                    90,
+                    1,
+                    20,
+                    0,
+                    "value"
+                ],
+                "desc": "长跑进度={value}"
+            },
+            "progressGreaterEqual": {
+                "rule": [
+                    90,
+                    1,
+                    20,
+                    1,
+                    "value"
+                ],
+                "desc": "长跑进度≥{value}"
+            },
+            "progressLessEqual": {
+                "rule": [
+                    90,
+                    1,
+                    20,
+                    -1,
+                    "value"
+                ],
+                "desc": "长跑进度≤{value}"
+            },
+            "lead": {
+                "rule": [
+                    90,
+                    1,
+                    21,
+                    0,
+                    "value"
+                ],
+                "desc": "长跑领先={value}"
+            },
+            "leadGreaterEqual": {
+                "rule": [
+                    90,
+                    1,
+                    21,
+                    1,
+                    "value"
+                ],
+                "desc": "长跑领先≥{value}"
+            },
+            "leadLessEqual": {
+                "rule": [
+                    90,
+                    1,
+                    21,
+                    -1,
+                    "value"
+                ],
+                "desc": "长跑领先≤{value}"
+            },
+            "lag": {
+                "rule": [
+                    90,
+                    1,
+                    22,
+                    0,
+                    "value"
+                ],
+                "desc": "长跑落后={value}"
+            },
+            "lagGreaterEqual": {
+                "rule": [
+                    90,
+                    1,
+                    22,
+                    1,
+                    "value"
+                ],
+                "desc": "长跑落后≥{value}"
+            },
+            "lagLessEqual": {
+                "rule": [
+                    90,
+                    1,
+                    22,
+                    -1,
+                    "value"
+                ],
+                "desc": "长跑落后≤{value}"
+            },
+            "gap": {
+                "rule": [
+                    90,
+                    1,
+                    23,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{value1}≤长跑差距≤{value2}"
+            },
+            "selectOption": {
+                "rule": [
+                    90,
+                    1,
+                    40,
+                    "optionId"
+                ],
+                "desc": "【长跑】选择过{optionId}选项"
+            },
+            "winSecondPlace": {
+                "rule": [
+                    90,
+                    2,
+                    1
+                ],
+                "desc": "在初中知识赛中获得亚军"
+            },
+            "winSecondPlaceDebate": {
+                "rule": [
+                    90,
+                    2,
+                    2
+                ],
+                "desc": "在初中辩论赛中获得亚军"
+            },
+            "winSecondPlaceRun": {
+                "rule": [
+                    90,
+                    2,
+                    3
+                ],
+                "desc": "在初中长跑赛中获得亚军"
+            },
+            "comicConIsMorning": {
+                "rule": [
+                    90,
+                    3,
+                    0,
+                    1
+                ],
+                "desc": "【漫展】当前是上午"
+            },
+            "comicConIsAfternoon": {
+                "rule": [
+                    90,
+                    3,
+                    0,
+                    2
+                ],
+                "desc": "【漫展】当前是下午"
+            },
+            "comicConEnergy": {
+                "rule": [
+                    90,
+                    3,
+                    10,
+                    0,
+                    "value"
+                ],
+                "desc": "【漫展】体力={value}"
+            },
+            "comicConEnergyGreaterEqual": {
+                "rule": [
+                    90,
+                    3,
+                    10,
+                    1,
+                    "value"
+                ],
+                "desc": "【漫展】体力≥{value}"
+            },
+            "comicConEnergyLessEqual": {
+                "rule": [
+                    90,
+                    3,
+                    10,
+                    -1,
+                    "value"
+                ],
+                "desc": "【漫展】体力≤{value}"
+            },
+            "comicConImpressionLevel": {
+                "rule": [
+                    90,
+                    3,
+                    1,
+                    "value"
+                ],
+                "desc": "【漫展】印象≥{value}级"
+            },
+            "comicConTime": {
+                "rule": [
+                    90,
+                    3,
+                    2,
+                    "value"
+                ],
+                "desc": "【漫展】当前是几点{value}"
+            },
+            "HighlightPoints": {
+                "rule": [
+                    90,
+                    4,
+                    1,
+                    "value"
+                ],
+                "desc": "【世博】突出点数是{value}"
+            },
+            "ExpoDay": {
+                "rule": [
+                    90,
+                    4,
+                    2,
+                    "value"
+                ],
+                "desc": "【世博】当前是第{value}天"
+            }
+        }
     },
     "100": {
         "id": 100,
         "toast": 0,
-        "name": "其他属性"
+        "name": "其他属性",
+        "type": {
+            "otherAttrGreaterEqual": {
+                "rule": [
+                    100,
+                    1,
+                    "OtherAttrId",
+                    "value"
+                ],
+                "desc": "其他属性{OtherAttrId}≥{value}"
+            },
+            "otherAttrLessEqual": {
+                "rule": [
+                    100,
+                    2,
+                    "OtherAttrId",
+                    "value"
+                ],
+                "desc": "其他属性{OtherAttrId}<{value}"
+            },
+            "otherAttrBetween": {
+                "rule": [
+                    100,
+                    3,
+                    "OtherAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{value1}<其他属性{OtherAttrId}<{value2}"
+            },
+            "otherAttrSwitch": {
+                "rule": [
+                    100,
+                    10,
+                    "value"
+                ],
+                "desc": "{value}开关已打开"
+            },
+            "otherAttrSwitchClose": {
+                "rule": [
+                    100,
+                    -10,
+                    "value"
+                ],
+                "desc": "{value}开关已关闭"
+            }
+        }
     },
     "101": {
         "id": 101,
         "toast": 0,
-        "name": "UI与引导"
+        "name": "UI与引导",
+        "type": {
+            "unlockFeature": {
+                "rule": [
+                    101,
+                    1,
+                    "FuncId"
+                ],
+                "desc": "{FuncId}功能已解锁"
+            },
+            "unlockFeatureClose": {
+                "rule": [
+                    101,
+                    -1,
+                    "FuncId"
+                ],
+                "desc": "{FuncId}功能未解锁"
+            },
+            "masterSpecialty": {
+                "rule": [
+                    101,
+                    11,
+                    401
+                ],
+                "desc": "正在掌握某个专长"
+            },
+            "currentSceneHasNPC": {
+                "rule": [
+                    101,
+                    20,
+                    60
+                ],
+                "desc": "当前场景有NPC"
+            },
+            "teachingOpen": {
+                "rule": [
+                    101,
+                    10,
+                    88
+                ],
+                "desc": "已开启教学"
+            },
+            "teachingClose": {
+                "rule": [
+                    101,
+                    10,
+                    -88
+                ],
+                "desc": "已关闭教学"
+            },
+            "currentWeek": {
+                "rule": [
+                    101,
+                    20,
+                    0,
+                    "value"
+                ],
+                "desc": "当前周目={value}"
+            },
+            "currentWeekGreaterEqual": {
+                "rule": [
+                    101,
+                    20,
+                    1,
+                    "value"
+                ],
+                "desc": "当前周目≥{value}"
+            },
+            "currentWeekLessEqual": {
+                "rule": [
+                    101,
+                    20,
+                    -1,
+                    "value"
+                ],
+                "desc": "当前周目<{value}"
+            },
+            "guideXTriggered": {
+                "rule": [
+                    101,
+                    21,
+                    "value"
+                ],
+                "desc": "引导{value}已触发"
+            }
+        }
     },
     "111": {
         "id": 111,
         "toast": 0,
-        "name": "事件值限制"
+        "name": "事件值限制",
+        "type": {
+            "eventValueGreaterEqual": {
+                "rule": [
+                    111,
+                    1,
+                    "evtId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "事件{evtId}的事件值{value1}≥{value2}(默认事件值=0)"
+            },
+            "eventValueLessEqual": {
+                "rule": [
+                    111,
+                    -1,
+                    "evtId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "事件{evtId}的事件值{value1}≤{value2}(默认事件值=0)"
+            },
+            "eventValueBetween": {
+                "rule": [
+                    111,
+                    2,
+                    "evtId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{value1}<事件{evtId}的事件值={value2}(默认事件值=0)"
+            }
+        }
     },
     "200": {
         "id": 200,
         "toast": 0,
-        "name": "结局/全局"
+        "name": "结局/全局",
+        "type": {
+            "primarySchoolSettlementLevelGreaterEqual": {
+                "rule": [
+                    200,
+                    1,
+                    "AchRankId"
+                ],
+                "desc": "小学结算等级达到{AchRankId}或以上"
+            },
+            "globalEventOr": {
+                "rule": [
+                    200,
+                    3,
+                    1,
+                    "evtId1",
+                    "evtId2",
+                    "value"
+                ],
+                "desc": "全局：事件{evtId1}或{evtId2}已发生{value}次"
+            },
+            "globalEvent": {
+                "rule": [
+                    200,
+                    3,
+                    1,
+                    "evtId"
+                ],
+                "desc": "全局：事件{evtId}已发生"
+            },
+            "globalEventNot": {
+                "rule": [
+                    200,
+                    3,
+                    -1,
+                    "evtId"
+                ],
+                "desc": "全局：事件{evtId}未发生"
+            },
+            "globalEventOrNot": {
+                "rule": [
+                    200,
+                    3,
+                    -1,
+                    "evtId1",
+                    "evtId2"
+                ],
+                "desc": "全局：事件{evtId1}和{evtId2}未发生"
+            },
+            "globalOption": {
+                "rule": [
+                    200,
+                    3,
+                    2,
+                    "optionId"
+                ],
+                "desc": "全局：选项{optionId}已激活"
+            },
+            "globalOptionNot": {
+                "rule": [
+                    200,
+                    3,
+                    -2,
+                    "optionId"
+                ],
+                "desc": "全局：选项{optionId}未激活"
+            },
+            "globalOptionOr": {
+                "rule": [
+                    200,
+                    3,
+                    2,
+                    "optionId1",
+                    "optionId2"
+                ],
+                "desc": "全局：选项{optionId1}或{optionId2}已激活"
+            },
+            "globalOptionOrNot": {
+                "rule": [
+                    200,
+                    3,
+                    -2,
+                    "optionId1",
+                    "optionId2"
+                ],
+                "desc": "全局：选项{optionId1}和{optionId2}未激活"
+            },
+            "globalDialog": {
+                "rule": [
+                    200,
+                    3,
+                    3,
+                    "talkId"
+                ],
+                "desc": "全局：对话{talkId}已激活"
+            },
+            "globalDialogNot": {
+                "rule": [
+                    200,
+                    3,
+                    -3,
+                    "talkId"
+                ],
+                "desc": "全局：对话{talkId}未激活"
+            },
+            "globalDialogOr": {
+                "rule": [
+                    200,
+                    3,
+                    3,
+                    "talkId1",
+                    "talkId2"
+                ],
+                "desc": "全局：对话{talkId1}或{talkId2}已激活"
+            },
+            "globalDialogOrNot": {
+                "rule": [
+                    200,
+                    3,
+                    -3,
+                    "talkId1",
+                    "talkId2"
+                ],
+                "desc": "全局：对话{talkId1}和{talkId2}未激活"
+            },
+            "endingPartTriggered": {
+                "rule": [
+                    200,
+                    5,
+                    "EndingPartId1"
+                ],
+                "desc": "已触发结局段落{EndingPartId1}"
+            },
+            "endingPartTriggeredNot": {
+                "rule": [
+                    200,
+                    -5,
+                    "EndingPartId1"
+                ],
+                "desc": "未触发结局段落{EndingPartId1}"
+            },
+            "endingPartTriggeredOr": {
+                "rule": [
+                    200,
+                    5,
+                    "EndingPartId1",
+                    "EndingPartId2"
+                ],
+                "desc": "已触发结局段落{EndingPartId1}或{EndingPartId2}"
+            },
+            "endingPartTriggeredOrNot": {
+                "rule": [
+                    200,
+                    -5,
+                    "EndingPartId1",
+                    "EndingPartId2"
+                ],
+                "desc": "未触发结局段落{EndingPartId1}或{EndingPartId2}"
+            },
+            "universityRankGreaterOrEqual": {
+                "rule": [
+                    200,
+                    6,
+                    "UnivercityRankId"
+                ],
+                "desc": "大学档次为{UnivercityRankId}分或以上"
+            },
+            "universityRankLessOrEqual": {
+                "rule": [
+                    200,
+                    -6,
+                    "UnivercityRankId"
+                ],
+                "desc": "大学档次为{UnivercityRankId}分或以下"
+            },
+            "endingOptionTriggered": {
+                "rule": [
+                    200,
+                    7,
+                    "EndingOptionId1"
+                ],
+                "desc": "已触发结局选项{EndingOptionId1}"
+            },
+            "endingOptionTriggeredOr": {
+                "rule": [
+                    200,
+                    7,
+                    "EndingOptionId1",
+                    "EndingOptionId2"
+                ],
+                "desc": "已触发结局选项{EndingOptionId1}或{EndingOptionId2}"
+            },
+            "jobUnlocked": {
+                "rule": [
+                    200,
+                    8,
+                    1,
+                    "JobId"
+                ],
+                "desc": "{JobId}职业已解锁"
+            },
+            "jobUnlockedNot": {
+                "rule": [
+                    200,
+                    8,
+                    -1,
+                    "JobId"
+                ],
+                "desc": "{JobId}职业未解锁"
+            },
+            "globalEndingPartTriggered": {
+                "rule": [
+                    200,
+                    10,
+                    "EndingPartId"
+                ],
+                "desc": "（全局）已触发结局段落{EndingPartId}"
+            },
+            "globalEndingPartTriggeredNot": {
+                "rule": [
+                    200,
+                    -10,
+                    "EndingPartId"
+                ],
+                "desc": "（全局）未触发结局段落{EndingPartId}"
+            },
+            "globalEndingPartTriggeredOr": {
+                "rule": [
+                    200,
+                    10,
+                    "EndingPartId1",
+                    "EndingPartId2"
+                ],
+                "desc": "（全局）已触发结局段落{EndingPartId1}或{EndingPartId2}"
+            },
+            "globalEndingPartTriggeredOrNot": {
+                "rule": [
+                    200,
+                    -10,
+                    "EndingPartId1",
+                    "EndingPartId2"
+                ],
+                "desc": "（全局）未触发结局段落{EndingPartId1}或{EndingPartId2}"
+            },
+            "atLeastXJobPotentialYStar": {
+                "rule": [
+                    200,
+                    15,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "至少{value1}个职业的潜力达到{value2}星"
+            },
+            "hasLoversAndFriendly": {
+                "rule": [
+                    200,
+                    16,
+                    1
+                ],
+                "desc": "有融洽的恋人"
+            },
+            "hasLoversAndFriendlyNot": {
+                "rule": [
+                    200,
+                    16,
+                    2
+                ],
+                "desc": "有恋人且不融洽"
+            }
+        }
     },
     "333": {
         "id": 333,
         "toast": 0,
-        "name": "概率判断"
+        "name": "概率判断",
+        "type": {
+            "favorabilityRandom": {
+                "rule": [
+                    333,
+                    4,
+                    "personId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{personId}好感度+随机0~{value1}>{value2}"
+            },
+            "propertyRandomGreater": {
+                "rule": [
+                    333,
+                    1,
+                    "PersonAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{PersonAttrId}+随机0~{value1}>{value2}"
+            },
+            "propertyRandomLess": {
+                "rule": [
+                    333,
+                    -1,
+                    "PersonAttrId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{PersonAttrId}+随机0~{value1}<{value2}"
+            },
+            "probabilitySuccess": {
+                "rule": [
+                    333,
+                    2,
+                    "value"
+                ],
+                "desc": "{value}%概率成功"
+            }
+        }
     },
     "999": {
         "id": 999,
         "toast": 0,
-        "name": "特殊"
+        "name": "特殊",
+        "type": {
+            "BattleTimes": {
+                "rule": [
+                    999,
+                    101,
+                    "value"
+                ],
+                "desc": "舌战局数={value}"
+            },
+            "roundBattleNum": {
+                "rule": [
+                    999,
+                    102,
+                    "value"
+                ],
+                "desc": "舌战回合数={value}"
+            },
+            "AINegotiationMiniGameCardType": {
+                "rule": [
+                    999,
+                    103,
+                    0,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "AI舌战出牌为【{value1},{value2}】"
+            },
+            "NegotiationMiniGameCardType": {
+                "rule": [
+                    999,
+                    103,
+                    "NegotiationPlayerId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{NegotiationPlayerId}舌战出牌为【{value1},{value2}】"
+            },
+            "AIhasTInHand": {
+                "rule": [
+                    999,
+                    104,
+                    0,
+                    "value1",
+                    "value2"
+                ],
+                "desc": "AI舌战手牌有【{value1},{value2}】"
+            },
+            "hasTInHand": {
+                "rule": [
+                    999,
+                    104,
+                    "NegotiationPlayerId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{NegotiationPlayerId}舌战手牌有【{value1},{value2}】"
+            },
+            "hasTInHandContain": {
+                "rule": [
+                    999,
+                    105
+                ],
+                "desc": "舌战出牌存在克制关系"
+            },
+            "hasTBuff": {
+                "rule": [
+                    999,
+                    106,
+                    "NegotiationPlayerId",
+                    "NegotiationBuffId"
+                ],
+                "desc": "舌战{NegotiationPlayerId}有{NegotiationBuffId} Buff"
+            },
+            "hasNoTInHand": {
+                "rule": [
+                    999,
+                    107,
+                    "NegotiationPlayerId",
+                    "value1",
+                    "value2"
+                ],
+                "desc": "{NegotiationPlayerId}舌战手牌无【{value1},{value2}】"
+            },
+            "hasAvailableTSkill": {
+                "rule": [
+                    999,
+                    108
+                ],
+                "desc": "舌战有可用的技能"
+            },
+            "labXActivated": {
+                "rule": [
+                    999,
+                    200,
+                    "HonorShopId"
+                ],
+                "desc": "实验室{HonorShopId}已激活"
+            },
+            "labXUnlocked": {
+                "rule": [
+                    999,
+                    -200,
+                    "HonorShopId"
+                ],
+                "desc": "实验室{HonorShopId}未解锁"
+            },
+            "labXUnlockedNumGreaterEqual": {
+                "rule": [
+                    999,
+                    201,
+                    "value"
+                ],
+                "desc": "实验室解锁数量≥{value}"
+            },
+            "npcFavorLess": {
+                "rule": [
+                    999,
+                    300
+                ],
+                "desc": "某个npc的好感小于0"
+            },
+            "triggerXEggEvent": {
+                "rule": [
+                    999,
+                    301,
+                    "value"
+                ],
+                "desc": "触发{value}个彩蛋事件"
+            },
+            "classAnswerQuestionWrongNumGreaterEqual": {
+                "rule": [
+                    999,
+                    302,
+                    "value"
+                ],
+                "desc": "上课回答问题答错次数≥{value}"
+            },
+            "attrXExtraGetRateGreaterEqual": {
+                "rule": [
+                    999,
+                    303,
+                    "PersonAttrId",
+                    "value"
+                ],
+                "desc": "属性{PersonAttrId}的额外获取率≥{value}"
+            },
+            "firstClickOfferButtonInLastRound": {
+                "rule": [
+                    999,
+                    304
+                ],
+                "desc": "在最后一个回合首次点击表白按钮"
+            },
+            "canOfferToGirlLine": {
+                "rule": [
+                    999,
+                    305
+                ],
+                "desc": "女生线可以跟女主角色表白"
+            },
+            "isGraduated": {
+                "rule": [
+                    999,
+                    306
+                ],
+                "desc": "是否毕业,点击毕业按钮后为真"
+            },
+            "giftNumGreaterEqual": {
+                "rule": [
+                    999,
+                    307,
+                    "value"
+                ],
+                "desc": "赠送礼物次数≥{value}"
+            },
+            "cumulativeRecommendXNum": {
+                "rule": [
+                    999,
+                    309,
+                    "value"
+                ],
+                "desc": "累计安利{value}次"
+            },
+            "hasAttendedHighSchool": {
+                "rule": [
+                    999,
+                    400
+                ],
+                "desc": "已参加高考"
+            },
+            "falseTaiJian": {
+                "rule": [
+                    999,
+                    999
+                ],
+                "desc": "敬请期待(永远false)"
+            },
+            "trueHeart": {
+                "rule": [
+                    999,
+                    1000
+                ],
+                "desc": "至死不渝(永远true)"
+            },
+            "Language": {
+                "rule": [
+                    999,
+                    1,
+                    "LanguageLinId"
+                ],
+                "desc": "仅语言为{LanguageLinId}"
+            },
+            "hasChuyangDlc": {
+                "rule": [
+                    999,
+                    2,
+                    1
+                ],
+                "desc": "已拥有初阳dlc"
+            },
+            "hasChuyangDlcNot": {
+                "rule": [
+                    999,
+                    2,
+                    -1
+                ],
+                "desc": "未拥有初阳dlc"
+            },
+            "hasNewYearClothes": {
+                "rule": [
+                    999,
+                    3,
+                    1
+                ],
+                "desc": "已拥有新年服装包"
+            },
+            "hasNewYearClothesNot": {
+                "rule": [
+                    999,
+                    3,
+                    -1
+                ],
+                "desc": "未拥有新年服装包"
+            },
+            "legendaryAbility": {
+                "rule": [
+                    999,
+                    31,
+                    0
+                ],
+                "desc": "拥有任意传奇能力"
+            },
+            "legendaryAbilityX": {
+                "rule": [
+                    999,
+                    31,
+                    "value"
+                ],
+                "desc": "传奇能力为{value}"
+            }
+        }
     }
 }

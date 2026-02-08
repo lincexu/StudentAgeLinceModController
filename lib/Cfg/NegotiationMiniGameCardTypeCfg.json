@@ -1,0 +1,52 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "逻辑", 
+        "attr": 1, 
+        "restraint": 2, 
+        "beRestraint": 3, 
+        "icon": "negotiation/img_card_blue", 
+        "icon2": "negotiation/img_card_blue_2", 
+        "color": 2202
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "诡辩", 
+        "attr": 2, 
+        "restraint": 3, 
+        "beRestraint": 1, 
+        "icon": "negotiation/img_card_black", 
+        "icon2": "negotiation/img_card_black_2", 
+        "color": 2203
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "暴躁", 
+        "attr": 4, 
+        "restraint": 1, 
+        "beRestraint": 2, 
+        "icon": "negotiation/img_card_red", 
+        "icon2": "negotiation/img_card_red_2", 
+        "color": 2201
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "特殊", 
+        "attr": -1, 
+        "restraint": 0, 
+        "beRestraint": 0, 
+        "icon": null, 
+        "icon2": "negotiation/img_card_purple_2", 
+        "color": 0
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "计策", 
+        "attr": -1, 
+        "restraint": 0, 
+        "beRestraint": 0, 
+        "icon": null, 
+        "icon2": null, 
+        "color": 0
+    }
+}

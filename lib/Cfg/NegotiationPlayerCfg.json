@@ -1,0 +1,1126 @@
+{
+    "0": {
+        "id": 0, 
+        "name": "白雨", 
+        "npcId": 0, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1": {
+        "id": 1, 
+        "name": "妈妈", 
+        "npcId": 1, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "表哥", 
+        "npcId": 2, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "杰哥", 
+        "npcId": 3, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "昆虫", 
+        "npcId": 4, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "21": {
+        "id": 21, 
+        "name": "胖虎", 
+        "npcId": 21, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "22": {
+        "id": 22, 
+        "name": "小胖墩", 
+        "npcId": 22, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "23": {
+        "id": 23, 
+        "name": "小灵通", 
+        "npcId": 23, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "98": {
+        "id": 98, 
+        "name": "梦魇", 
+        "npcId": 0, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "99": {
+        "id": 99, 
+        "name": "你的欲望", 
+        "npcId": 0, 
+        "skill": [
+            1, 
+            2, 
+            3
+        ], 
+        "hp": 20, 
+        "mp": 40, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "100": {
+        "id": 100, 
+        "name": "你的道德", 
+        "npcId": 0, 
+        "skill": [
+            1, 
+            2, 
+            3
+        ], 
+        "hp": 20, 
+        "mp": 40, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "101": {
+        "id": 101, 
+        "name": "小纯", 
+        "npcId": 101, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "102": {
+        "id": 102, 
+        "name": "小莹", 
+        "npcId": 102, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "103": {
+        "id": 103, 
+        "name": "小敏", 
+        "npcId": 103, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "104": {
+        "id": 104, 
+        "name": "谭梓君", 
+        "npcId": 104, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "219": {
+        "id": 219, 
+        "name": "翟添临", 
+        "npcId": 219, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 15, 
+        "mp": 30, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "301": {
+        "id": 301, 
+        "name": "男学生", 
+        "npcId": 301, 
+        "skill": [
+            1, 
+            2
+        ], 
+        "hp": 25, 
+        "mp": 40, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "302": {
+        "id": 302, 
+        "name": "值日生", 
+        "npcId": 301, 
+        "skill": [
+            1, 
+            2
+        ], 
+        "hp": 25, 
+        "mp": 40, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "305": {
+        "id": 305, 
+        "name": "保安", 
+        "npcId": 305, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "306": {
+        "id": 306, 
+        "name": "女工作人员", 
+        "npcId": 306, 
+        "skill": [
+            1
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "312": {
+        "id": 312, 
+        "name": "班主任", 
+        "npcId": 312, 
+        "skill": [
+            1
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "316": {
+        "id": 316, 
+        "name": "壮汉", 
+        "npcId": 316, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "318": {
+        "id": 318, 
+        "name": "混混", 
+        "npcId": 318, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "319": {
+        "id": 319, 
+        "name": "老板", 
+        "npcId": 319, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "320": {
+        "id": 320, 
+        "name": "水果店老板", 
+        "npcId": 320, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "321": {
+        "id": 321, 
+        "name": "工人", 
+        "npcId": 321, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 100, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "322": {
+        "id": 322, 
+        "name": "政教处主任", 
+        "npcId": 322, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "325": {
+        "id": 325, 
+        "name": "书店老板", 
+        "npcId": 325, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "327": {
+        "id": 327, 
+        "name": "网管", 
+        "npcId": 327, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "333": {
+        "id": 333, 
+        "name": "年青人", 
+        "npcId": 333, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "334": {
+        "id": 334, 
+        "name": "小男孩", 
+        "npcId": 334, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "336": {
+        "id": 336, 
+        "name": "叔叔", 
+        "npcId": 336, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "341": {
+        "id": 341, 
+        "name": "李校长", 
+        "npcId": 341, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "346": {
+        "id": 346, 
+        "name": "店员", 
+        "npcId": 346, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "356": {
+        "id": 356, 
+        "name": "李老头", 
+        "npcId": 356, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1001": {
+        "id": 1001, 
+        "name": "林怡然", 
+        "npcId": 3021, 
+        "skill": [
+            1
+        ], 
+        "hp": 18, 
+        "mp": 20, 
+        "matchLv": 1, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1002": {
+        "id": 1002, 
+        "name": "郑远彬", 
+        "npcId": 314, 
+        "skill": [
+            1
+        ], 
+        "hp": 18, 
+        "mp": 20, 
+        "matchLv": 1, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1003": {
+        "id": 1003, 
+        "name": "程慧", 
+        "npcId": 3023, 
+        "skill": [
+            1, 
+            4
+        ], 
+        "hp": 18, 
+        "mp": 20, 
+        "matchLv": 1, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1004": {
+        "id": 1004, 
+        "name": "胡珂", 
+        "npcId": 410, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 20, 
+        "mp": 50, 
+        "matchLv": 2, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1005": {
+        "id": 1005, 
+        "name": "梁超杰", 
+        "npcId": 3, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 20, 
+        "mp": 50, 
+        "matchLv": 2, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1006": {
+        "id": 1006, 
+        "name": "张文远", 
+        "npcId": 3013, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 25, 
+        "mp": 100, 
+        "matchLv": 3, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1007": {
+        "id": 1007, 
+        "name": "李慕晴", 
+        "npcId": 3035, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 100, 
+        "matchLv": 3, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1107": {
+        "id": 1107, 
+        "name": "编号7", 
+        "npcId": 3021, 
+        "skill": [
+            1, 
+            3, 
+            8
+        ], 
+        "hp": 35, 
+        "mp": 200, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1108": {
+        "id": 1108, 
+        "name": "编号8", 
+        "npcId": 314, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1109": {
+        "id": 1109, 
+        "name": "编号9", 
+        "npcId": 3021, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1110": {
+        "id": 1110, 
+        "name": "编号10", 
+        "npcId": 314, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 30, 
+        "mp": 150, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1111": {
+        "id": 1111, 
+        "name": "编号11", 
+        "npcId": 3021, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1112": {
+        "id": 1112, 
+        "name": "编号12", 
+        "npcId": 314, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1113": {
+        "id": 1113, 
+        "name": "编号13", 
+        "npcId": 3021, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 30, 
+        "mp": 150, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1114": {
+        "id": 1114, 
+        "name": "编号14", 
+        "npcId": 314, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1115": {
+        "id": 1115, 
+        "name": "编号15", 
+        "npcId": 3021, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1116": {
+        "id": 1116, 
+        "name": "编号16", 
+        "npcId": 314, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 30, 
+        "mp": 150, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1117": {
+        "id": 1117, 
+        "name": "编号17", 
+        "npcId": 3021, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1118": {
+        "id": 1118, 
+        "name": "编号18", 
+        "npcId": 314, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "1130": {
+        "id": 1130, 
+        "name": "天哥", 
+        "npcId": 625, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 25, 
+        "mp": 100, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3011": {
+        "id": 3011, 
+        "name": "韩小龙", 
+        "npcId": 3011, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3012": {
+        "id": 3012, 
+        "name": "男学生", 
+        "npcId": 3012, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 20, 
+        "mp": 60, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3031": {
+        "id": 3031, 
+        "name": "编号6", 
+        "npcId": 3031, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3048": {
+        "id": 3048, 
+        "name": "律师", 
+        "npcId": 3048, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3053": {
+        "id": 3053, 
+        "name": "编号5", 
+        "npcId": 3053, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3060": {
+        "id": 3060, 
+        "name": "编号4", 
+        "npcId": 3060, 
+        "skill": [
+            2, 
+            3, 
+            5
+        ], 
+        "hp": 30, 
+        "mp": 150, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3062": {
+        "id": 3062, 
+        "name": "编号1", 
+        "npcId": 3062, 
+        "skill": [
+            2, 
+            4
+        ], 
+        "hp": 25, 
+        "mp": 150, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3063": {
+        "id": 3063, 
+        "name": "编号2", 
+        "npcId": 3063, 
+        "skill": [
+            1, 
+            3
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3064": {
+        "id": 3064, 
+        "name": "编号3", 
+        "npcId": 3064, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 0, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3066": {
+        "id": 3066, 
+        "name": "力哥", 
+        "npcId": 3066, 
+        "skill": [], 
+        "hp": 20, 
+        "mp": 0, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3097": {
+        "id": 3097, 
+        "name": "阿强", 
+        "npcId": 3097, 
+        "skill": [
+            3, 
+            5
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0.5, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3116": {
+        "id": 3116, 
+        "name": "呱籽", 
+        "npcId": 3116, 
+        "skill": [
+            1, 
+            3, 
+            5
+        ], 
+        "hp": 30, 
+        "mp": 100, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }, 
+    "3980": {
+        "id": 3980, 
+        "name": "护工", 
+        "npcId": 398, 
+        "skill": [
+            1, 
+            3, 
+            4
+        ], 
+        "hp": 25, 
+        "mp": 80, 
+        "matchLv": 0, 
+        "attribute": [], 
+        "card": 0, 
+        "pointPlus": 0, 
+        "buff": [], 
+        "randBuff": []
+    }
+}

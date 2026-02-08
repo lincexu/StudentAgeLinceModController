@@ -66,7 +66,10 @@ class ModEventApp {
         
         // 更新底部版本信息
         await this.updateFooterVersion();
-        
+
+        // 显示Beta版本提示（如果配置启用）
+        this.showBetaNotice();
+
         // 应用翻译
         this.applyTranslations();
         
@@ -382,7 +385,7 @@ class ModEventApp {
         
         if (versionElement) {
             try {
-                // 直接从config.jsonc文件读取最新版本号
+                // 直接从config.jsonc文件读取最新版本号和beta配置
                 const response = await fetch('config.jsonc', { cache: 'no-cache' });
                 if (response.ok) {
                     const jsoncText = await response.text();
@@ -393,7 +396,9 @@ class ModEventApp {
                         .trim();
                     const config = JSON.parse(cleanedJson);
                     const version = config.version || this.config.version || '0.2.0';
-                    versionElement.textContent = `Student Age LMC v${version}`;
+                    const isBeta = config.beta === true;
+                    const betaSuffix = isBeta ? 'beta' : '';
+                    versionElement.textContent = `Student Age LMC v${version}${betaSuffix}`;
 
                     return;
                 }
@@ -403,7 +408,9 @@ class ModEventApp {
             
             //  fallback to current config
             const version = this.config.version || '0.2.0';
-            versionElement.textContent = `Student Age LMC v${version}`;
+            const isBeta = this.config.beta === true;
+            const betaSuffix = isBeta ? 'beta' : '';
+            versionElement.textContent = `Student Age LMC v${version}${betaSuffix}`;
 
         }
     }
@@ -1158,6 +1165,9 @@ class ModEventApp {
         
         // 绑定开发者工具事件
         this.bindDeveloperToolsEvents();
+        
+        // 更新日志按钮事件
+        this.setupChangelogModal();
     }
     
     /**
@@ -1173,7 +1183,146 @@ class ModEventApp {
             });
         }
     }
-    
+
+    /**
+     * 显示Beta版本提示
+     */
+    showBetaNotice() {
+        // 检查是否为beta版本
+        if (this.config.beta !== true) {
+            return;
+        }
+
+        const betaNotice = document.getElementById('beta-notice');
+        const betaNoticeClose = document.getElementById('beta-notice-close');
+
+        if (!betaNotice || !betaNoticeClose) {
+            console.warn('[App] Beta提示元素未找到');
+            return;
+        }
+
+        // 检查是否已经关闭过（使用sessionStorage，每次会话只显示一次）
+        const hasClosedBetaNotice = sessionStorage.getItem('betaNoticeClosed');
+        if (hasClosedBetaNotice === 'true') {
+            return;
+        }
+
+        // 延迟显示，避免页面加载时立即弹出
+        setTimeout(() => {
+            betaNotice.style.display = 'block';
+        }, 1000);
+
+        // 关闭按钮事件
+        betaNoticeClose.addEventListener('click', () => {
+            betaNotice.style.display = 'none';
+            sessionStorage.setItem('betaNoticeClosed', 'true');
+        });
+
+        // 点击提示框外部关闭
+        betaNotice.addEventListener('click', (e) => {
+            if (e.target === betaNotice) {
+                betaNotice.style.display = 'none';
+                sessionStorage.setItem('betaNoticeClosed', 'true');
+            }
+        });
+    }
+
+    /**
+     * 设置更新日志模态窗口
+     */
+    setupChangelogModal() {
+        const changelogToggle = document.getElementById('changelog-toggle');
+        const changelogModal = document.getElementById('changelog-modal');
+        const changelogClose = document.getElementById('changelog-close');
+        const changelogContent = document.getElementById('changelog-content');
+
+        if (!changelogToggle || !changelogModal || !changelogClose || !changelogContent) {
+            console.warn('[App] 更新日志元素未找到');
+            return;
+        }
+
+        // 打开模态窗口
+        changelogToggle.addEventListener('click', async () => {
+            changelogModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+
+            // 加载日志内容
+            await this.loadChangelogContent();
+        });
+
+        // 关闭模态窗口
+        const closeModal = () => {
+            changelogModal.style.display = 'none';
+            document.body.style.overflow = ''; // 恢复背景滚动
+        };
+
+        changelogClose.addEventListener('click', closeModal);
+
+        // 点击背景关闭
+        changelogModal.addEventListener('click', (e) => {
+            if (e.target === changelogModal) {
+                closeModal();
+            }
+        });
+
+        // ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && changelogModal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    }
+
+    /**
+     * 加载更新日志内容
+     */
+    async loadChangelogContent() {
+        const changelogContent = document.getElementById('changelog-content');
+        if (!changelogContent) return;
+
+        try {
+            // 显示加载状态
+            changelogContent.innerHTML = '<div class="loading">加载中...</div>';
+
+            // 获取Markdown渲染器实例
+            const markdownRenderer = window.markdownRenderer;
+            if (!markdownRenderer) {
+                throw new Error('Markdown渲染器未初始化');
+            }
+
+            // 读取log.md文件
+            const response = await fetch('log.md', {
+                cache: 'no-cache'
+            });
+
+            if (!response.ok) {
+                throw new Error('无法加载更新日志文件');
+            }
+
+            const markdownText = await response.text();
+
+            // 转换为HTML
+            const htmlContent = markdownRenderer.render(markdownText);
+
+            // 显示内容
+            changelogContent.innerHTML = htmlContent;
+
+            // 处理内容中的精灵图标签
+            if (window.spriteManager) {
+                window.spriteManager.processElement(changelogContent);
+            }
+
+        } catch (error) {
+            console.error('[App] 加载更新日志失败:', error);
+            changelogContent.innerHTML = `
+                <div style="text-align: center; padding: 40px; color: #dc3545;">
+                    <p>加载更新日志失败</p>
+                    <p style="font-size: 0.9rem; color: #999;">${error.message}</p>
+                </div>
+            `;
+        }
+    }
+
     /**
      * 导出报告
      */

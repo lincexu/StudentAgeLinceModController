@@ -1,0 +1,46 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "简易鱼饵", 
+        "prize": 2, 
+        "fishType": 0, 
+        "addWeight": 0, 
+        "diff": 0, 
+        "name2": null, 
+        "lv": 0, 
+        "desc": "只能钓上小型鱼"
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "小型鱼饵", 
+        "prize": 3, 
+        "fishType": 1, 
+        "addWeight": 0.2, 
+        "diff": 0.0, 
+        "name2": "小", 
+        "lv": 1, 
+        "desc": "能钓上更大的小型鱼"
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "中型鱼饵", 
+        "prize": 4, 
+        "fishType": 2, 
+        "addWeight": 0.2, 
+        "diff": 0.0, 
+        "name2": "中", 
+        "lv": 3, 
+        "desc": "能钓上更大的中型鱼"
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "大型鱼饵", 
+        "prize": 5, 
+        "fishType": 3, 
+        "addWeight": 0.2, 
+        "diff": 0.0, 
+        "name2": "大", 
+        "lv": 5, 
+        "desc": "能钓上更大的大型鱼"
+    }
+}

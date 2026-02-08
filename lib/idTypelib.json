@@ -19,7 +19,7 @@
             "file": "AudioCfg*.json",
             "desc": "音频ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "BgId": {
             "name": "背景",
@@ -33,7 +33,7 @@
             "file": "BookCfg*.json",
             "desc": "书籍ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "CGId": {
             "name": "CG",
@@ -61,14 +61,14 @@
             "file": "ItemCfg*.json",
             "desc": "物品ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "KZoneAvatarId": {
             "name": "空间头像",
             "file": "KZoneAvatarCfg*.json",
             "desc": "空间头像ID",
             "dataKey": "icon",
-            "wiki": false
+            "wiki": true
         },
         "KZoneCommentId": {
             "name": "空间评论",
@@ -106,9 +106,9 @@
             "wiki": true
         },
         "PersonId": {
-            "name": "角色",
+            "name": "人物",
             "file": "PersonCfg*.json",
-            "desc": "角色ID",
+            "desc": "人物ID",
             "dataKey": "name",
             "wiki": true
         },
@@ -133,12 +133,19 @@
             "dataKey": "name",
             "wiki": false
         },
+        "TraitsId": {
+            "name": "特征",
+            "file": "TraitsCfg*.json",
+            "desc": "特征ID",
+            "dataKey": "name",
+            "wiki": true
+        },
         "AnimationId": {
             "name": "动画",
             "file": "AnimationCfg*.json",
             "desc": "动画ID",
             "dataKey": "name",
-            "wiki": false
+            "wiki": true
         },
         "ClothTypeId": {
             "name": "衣服类型",
@@ -189,10 +196,17 @@
             "dataKey": "name",
             "wiki": true
         },
+        "GameId": {
+            "name": "游戏",
+            "file": "GameCfg*.json",
+            "desc": "游戏ID",
+            "dataKey": "name",
+            "wiki": true
+        },
         "PersonalityTypeId": {
-            "name": "价值观与人格",
+            "name": "人格类型",
             "file": "PersonalityTypeCfg*.json",
-            "desc": "价值观与人格ID",
+            "desc": "人格类型ID",
             "dataKey": "name",
             "wiki": true
         },
@@ -217,6 +231,13 @@
             "dataKey": "name",
             "wiki": true
         },
+        "OtherRelationId": {
+            "name": "其他关系",
+            "file": "OtherRelationCfg*.json",
+            "desc": "其他关系ID",
+            "dataKey": "name",
+            "wiki": true
+        },
         "ScoreRankId": {
             "name": "段位排名",
             "file": "ScoreRankCfg*.json",
@@ -225,9 +246,9 @@
             "wiki": true
         },
         "SkillId": {
-            "name": "技能",
+            "name": "专长",
             "file": "SkillCfg*.json",
-            "desc": "技能ID",
+            "desc": "专长ID",
             "dataKey": "name",
             "wiki": true
         },
@@ -284,7 +305,7 @@
             "name": "颜色",
             "file": "ColorCfg*.json",
             "desc": "颜色ID",
-            "dataKey": "name",
+            "dataKey": "color",
             "wiki": true
         },
         "PersonSocialId": {
@@ -308,6 +329,13 @@
             "dataKey": "title",
             "wiki": true
         },
+        "RenshengguanSkillId": {
+            "name": "人生观技能",
+            "file": "RenshengguanSkillCfg*.json",
+            "desc": "人生观技能ID",
+            "dataKey": "title",
+            "wiki": true
+        },
         "OtherAttrId": {
             "name": "其他属性",
             "file": "OtherAttrCfg*.json",
@@ -316,17 +344,206 @@
             "wiki": true
         },
         "SeasonId": {
-            "name": "季节",
+            "name": "季节场景",
             "file": "SeasonCfg*.json",
-            "desc": "季节ID",
+            "desc": "季节场景ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "SeasonTypeId": {
+            "name": "季节类型",
+            "file": "SeasonTypeCfg*.json",
+            "desc": "季节类型ID",
             "dataKey": "name",
             "wiki": true
         },
         "PhoneMsgId": {
-            "name": "短信（临时可查询）",
+            "name": "短信",
             "file": "PhoneMsgCfg*.json",
             "desc": "短信ID",
             "dataKey": "content",
+            "wiki": false
+        },
+        "ExploreId": {
+            "name": "探索项目",
+            "file": "ExploreCfg*.json",
+            "desc": "探索项目ID",
+            "dataKey": "title",
+            "wiki": true
+        },
+        "ClubDepartmentId": {
+            "name": "社团部门",
+            "file": "ClubDepartmentCfg*.json",
+            "desc": "社团部门ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "ActivityId": {
+            "name": "活动",
+            "file": "ActivityCfg*.json",
+            "desc": "活动ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "KnowledgeId": {
+            "name": "知识点",
+            "file": "KnowledgeCfg*.json",
+            "desc": "知识点ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "LessonId": {
+            "name": "课程",
+            "file": "LessonCfg*.json",
+            "desc": "课程ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "KnowledgeTreeId": {
+            "name": "知识树",
+            "file": "KnowledgeTreeCfg*.json",
+            "desc": "知识树ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "ValueviewId": {
+            "name": "价值观",
+            "file": "ValueviewCfg*.json",
+            "desc": "价值观ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "StudyMethodId": {
+            "name": "方法论",
+            "file": "StudyMethodCfg*.json",
+            "desc": "方法论ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "LoveVindicateId": {
+            "name": "告白指标",
+            "file": "LoveVindicateCfg*.json",
+            "desc": "告白指标ID",
+            "dataKey": "txt",
+            "wiki": true
+        },
+        "AchRankId": {
+            "name": "成就等级",
+            "file": "AchRankCfg*.json",
+            "desc": "成就等级ID",
+            "dataKey": "title",
+            "wiki": true
+        },
+        "EndingPartId": {
+            "name": "结局段落（临时）",
+            "file": "EndingPartCfg*.json",
+            "desc": "结局段落ID",
+            "dataKey": "desc",
+            "wiki": true
+        },
+        "UnivercityRankId": {
+            "name": "大学档次",
+            "file": "UnivercityRankCfg*.json",
+            "desc": "大学档次ID",
+            "dataKey": "score",
+            "wiki": true
+        },
+        "EndingOptionId": {
+            "name": "结局选项",
+            "file": "EndingOptionCfg*.json",
+            "desc": "结局选项ID",
+            "dataKey": "txt",
+            "wiki": true
+        },
+        "JobId": {
+            "name": "工作",
+            "file": "JobCfg*.json",
+            "desc": "工作ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "NegotiationPlayerId": {
+            "name": "舌战玩家",
+            "file": "NegotiationPlayerCfg*.json",
+            "desc": "舌战玩家ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "NegotiationBuffId": {
+            "name": "舌战buff",
+            "file": "NegotiationBuffCfg*.json",
+            "desc": "舌战buffID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "NegotiationMiniGameCardTypeId": {
+            "name": "舌战牌型",
+            "file": "NegotiationMiniGameCardTypeCfg*.json",
+            "desc": "舌战牌型ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "NegotiationSkillId": {
+            "name": "舌战技能",
+            "file": "NegotiationSkillCfg*.json",
+            "desc": "舌战技能ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "HonorShopId": {
+            "name": "荣誉商店",
+            "file": "HonorShopCfg*.json",
+            "desc": "荣誉商店ID",
+            "dataKey": "name",
+            "wiki": false
+        },
+        "LanguageLinId": {
+            "name": "语言",
+            "file": "LanguageLinCfg*.json",
+            "desc": "语言ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "IntrospectionSlotId": {
+            "name": "反思槽",
+            "file": "IntrospectionSlotCfg*.json",
+            "desc": "反思槽ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "FishBaitId": {
+            "name": "鱼饵",
+            "file": "FishBaitCfg*.json",
+            "desc": "鱼饵ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "NegotiationId": {
+            "name": "交涉",
+            "file": "NegotiationCfg*.json",
+            "desc": "交涉ID",
+            "dataKey": "name",
+            "wiki": true
+        },
+        "LoveBreakfastId": {
+            "name": "爱心早餐（物品ID）",
+            "file": "LoveBreakfastCfg*.json",
+            "desc": "爱心早餐ID",
+            "dataKey": "item",
+            "wiki": true
+        },
+        "GuideId": {
+            "name": "引导",
+            "file": "GuideCfg*.json",
+            "desc": "引导ID",
+            "dataKey": "tips",
+            "wiki": true
+        },
+        "HairTypeId": {
+            "name": "发型",
+            "file": "HairTypeCfg*.json",
+            "desc": "发型ID",
+            "dataKey": "name",
             "wiki": true
         }
     },
@@ -338,7 +555,7 @@
             "keyList": "ActionKey"
         },
         "ActionEvtId": {
-            "name": "行动事件",
+            "name": "行动概率触发事件",
             "file": "ActionEvtCfg*.json",
             "failName": "未知行动事件",
             "keyList": "ActionEvtKey"
@@ -438,6 +655,18 @@
             "file": "TraitsCfg*.json",
             "failName": "未知人物特质",
             "keyList": "TraitsKey"
+        },
+        "PhoneMsgId": {
+            "name": "短信（非官方工坊支持内容编辑先驱测试）",
+            "file": "PhoneMsgCfg*.json",
+            "failName": "未知短信",
+            "keyList": "PhoneMsgKey"
+        },
+        "HonorShopId": {
+            "name": "鹅城实验室（非官方工坊支持内容编辑先驱测试）",
+            "file": "HonorShopCfg*.json",
+            "failName": "未知荣誉商店",
+            "keyList": "HonorShopKey"
         }
     }
 }

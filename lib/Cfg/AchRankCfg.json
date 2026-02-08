@@ -1,0 +1,62 @@
+{
+    "1": {
+        "id": 1, 
+        "target": 15, 
+        "title": "进步学生", 
+        "effect": []
+    }, 
+    "2": {
+        "id": 2, 
+        "target": 40, 
+        "title": "三好学生", 
+        "effect": []
+    }, 
+    "3": {
+        "id": 3, 
+        "target": 80, 
+        "title": "优秀学生", 
+        "effect": []
+    }, 
+    "4": {
+        "id": 4, 
+        "target": 140, 
+        "title": "先进个人", 
+        "effect": []
+    }, 
+    "5": {
+        "id": 5, 
+        "target": 230, 
+        "title": "三好标兵", 
+        "effect": []
+    }, 
+    "6": {
+        "id": 6, 
+        "target": 350, 
+        "title": "优秀班干", 
+        "effect": []
+    }, 
+    "7": {
+        "id": 7, 
+        "target": 500, 
+        "title": "校园十佳", 
+        "effect": []
+    }, 
+    "8": {
+        "id": 8, 
+        "target": 700, 
+        "title": "德育之星", 
+        "effect": []
+    }, 
+    "9": {
+        "id": 9, 
+        "target": 950, 
+        "title": "校园之星", 
+        "effect": []
+    }, 
+    "10": {
+        "id": 10, 
+        "target": 1300, 
+        "title": "鹅城之星", 
+        "effect": []
+    }
+}

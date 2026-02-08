@@ -132,7 +132,7 @@
             "name": "首句对话id",
             "desc": "该事件首句对话的ID\n10位数字组成，左边7位为事件ID\n建议设置为1XXXXXX001",
             "status": "optional",
-            "rule": "index"
+            "rule": "TalkId"
         },
         "rate": {
             "name": "概率",
@@ -142,7 +142,7 @@
         },
         "npc": {
             "name": "指定对象",
-            "desc": "事件触发指定的对象\n可能为人也可能为物品，需要根据条件判断\n当前因底层代码仅视为人物ID进行转译\n如果发现转译结果为角色可自行前往物品id查阅",
+            "desc": "事件触发指定的对象\n",
             "status": "optional",
             "rule": "PersonId"
         },
@@ -776,9 +776,9 @@
         },
         "state": {
             "name": "状态",
-            "desc": "未知",
+            "desc": "处于状态",
             "status": "hide",
-            "rule": "text"
+            "rule": "personStateID"
         },
         "type": {
             "name": "类型",
@@ -796,7 +796,7 @@
         },
         "roles": {
             "name": "人物⚠",
-            "desc": "必填\n①某人评论动态：填『人物ID』\n②某人回复某人评论：填『人物ID，评论ID』\n当前由于底层代码<font color='#E28485'>仅提供人物转义，可能有错误</font>",
+            "desc": "必填\n①某人评论动态：填『人物ID』\n②某人回复某人评论：填『人物ID，被回复人物ID』\n-1表示空间留言",
             "status": "required",
             "rule": "PersonId"
         },
@@ -837,10 +837,10 @@
             "rule": "conditionRules"
         },
         "personality": {
-            "name": "性格",
-            "desc": "未知",
+            "name": "人格",
+            "desc": "人格，采用PersonAttrid101-110",
             "status": "hide",
-            "rule": "text"
+            "rule": "PersonAttrId"
         }
     },
     "KZoneContentKey": {
@@ -1140,7 +1140,7 @@
         },
         "ItemPref": {
             "name": "喜好物品种类⚠",
-            "desc": "必填\n规则为[物品类型id,数字]\n数字越大越喜欢\n由于底层代码暂不提供",
+            "desc": "必填\n规则为[物品类型id,数字]\n数字越大越喜欢\n暂不提供转译",
             "status": "required",
             "rule": "ItemTypeId"
         },
@@ -1152,19 +1152,19 @@
         },
         "minigame": {
             "name": "小游戏",
-            "desc": "必填\n人物互动的小游戏", 
-            "status": "required",   
+            "desc": "必填\n人物互动的小游戏",
+            "status": "required",
             "rule": "MinigameId"
         },
         "attr": {
-            "name": "初始属性",
-            "desc": "人物的初始三维属性",
+            "name": "单位属性",
+            "desc": "人物的单位属性,受效果[1,22,N,X]影响",
             "status": "hide",
             "rule": "initAttrReplace"
         },
         "grow": {
             "name": "成长",
-            "desc": "每年三维增长\n格式为[智力,情商,体魄]\n很简单且受限底层代码，暂不提供转义",
+            "desc": "每年三维增长\n格式为[智力,情商,体魄]\n很简单，暂不提供转译",
             "status": "hide",
             "rule": "text"
         },
@@ -1172,7 +1172,7 @@
             "name": "物品列表",
             "desc": "角色拥有的物品",
             "status": "hide",
-            "rule": "ItemId"
+            "rule": "ItemId//BookId"
         },
         "order": {
             "name": "指令",
@@ -1188,9 +1188,9 @@
         },
         "state": {
             "name": "状态",
-            "desc": "未知",
+            "desc": "角色处于状态",
             "status": "hide",
-            "rule": "text"
+            "rule": "personStateID"
         }
     },
     "RenshengguanMemoryKey": {
@@ -1246,9 +1246,9 @@
     "ShopKey": {
         "id": {
             "name": "ID",
-            "desc": "和物品ID或书籍ID一致\n目前由于底层代码仅显示物品id，可能有误",
+            "desc": "和物品ID或书籍ID一致",
             "status": "required",
-            "rule": "itemId"
+            "rule": "itemId//BookId"
         },
         "group": {
             "name": "组别",
@@ -1341,6 +1341,100 @@
             "desc": "人物特质效果",
             "status": "required",
             "rule": "effectRules"
+        }
+    },
+    "PhoneMsgKey": {
+        "id": {
+            "name": "ID",
+            "desc": "必填\n我将在v0.5.0版本更新编辑功能\n届时此项目将作为支持编辑官方非支持内容的测试",
+            "status": "required",
+            "rule": "index"
+        },
+        "role": {
+            "name": "角色",
+            "desc": "短信发送者",
+            "status": "required",
+            "rule": "PersonId"
+        },
+        "content": {
+            "name": "内容",
+            "desc": "短信内容",
+            "status": "required",
+            "rule": "text"
+        },
+        "next": {
+            "name": "下一个",
+            "desc": "当此短信被接收后，指定短信立刻被发送",
+            "status": "optional",
+            "rule": "PhoneMsgId"
+        },
+        "option": {
+            "name": "选项",
+            "desc": "短信选项",
+            "status": "optional",
+            "rule": "text"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "短信生效条件",
+            "status": "optional",
+            "rule": "conditionRules"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "短信生效时的效果",
+            "status": "optional",
+            "rule": "effectRules"
+        }
+    },
+    "HonorShopKey": {
+        "id": {
+            "name": "ID",
+            "desc": "必填\n我将在v0.5.0版本更新编辑功能\n届时此项目将作为支持编辑官方非支持内容的测试",
+            "status": "required",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "荣誉商店名称",
+            "status": "required",
+            "rule": "text"
+        },
+        "order": {
+            "name": "排序",
+            "desc": "荣誉商店排序",
+            "status": "required",
+            "rule": "number"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "荣誉商店描述",
+            "status": "required",
+            "rule": "text"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "荣誉商店效果",
+            "status": "optional",
+            "rule": "effectRules"
+        },
+        "cost": {
+            "name": "成本",
+            "desc": "荣誉商店需要消耗荣誉点",
+            "status": "required",
+            "rule": "number"
+        },
+        "group": {
+            "name": "分组",
+            "desc": "荣誉商店分组",
+            "status": "optional",
+            "rule": "number"
+        },
+        "type": {
+            "name": "类型",
+            "desc": "荣誉商店类型",
+            "status": "optional",
+            "rule": "number"
         }
     }
 }

@@ -82,6 +82,8 @@ class ResultRenderer {
                 const rules = await this.loadRuleFile(ruleFile);
                 if (rules) {
                     this.rulesCache[ruleFile] = rules;
+                    // 为规则文件构建id索引
+                    this.buildRuleIdIndex(ruleFile, rules);
                 }
             }
             
@@ -90,6 +92,65 @@ class ResultRenderer {
         } catch (error) {
             console.error('预加载规则文件出错:', error);
         }
+    }
+    
+    /**
+     * 为规则文件构建id索引，加速查找
+     * @param {string} ruleName 规则文件名
+     * @param {Object} rules 规则数据
+     */
+    buildRuleIdIndex(ruleName, rules) {
+        if (!rules || typeof rules !== 'object') return;
+        
+        // 创建索引对象
+        const idIndex = {};
+        
+        for (const key in rules) {
+            const rule = rules[key];
+            // 检查是否有id字段
+            if (rule && typeof rule === 'object' && 'id' in rule) {
+                const id = rule.id.toString();
+                idIndex[id] = key;
+            }
+        }
+        
+        // 保存索引
+        if (!this.rulesCache['__idIndex']) {
+            this.rulesCache['__idIndex'] = {};
+        }
+        this.rulesCache['__idIndex'][ruleName] = idIndex;
+        
+        console.log(`[ResultRenderer] 为 ${ruleName} 构建了id索引，共 ${Object.keys(idIndex).length} 条`);
+    }
+    
+    /**
+     * 通过id快速查找规则类别
+     * @param {string} ruleName 规则文件名
+     * @param {string} id 规则id
+     * @returns {string|null} 规则类别key
+     */
+    getRuleKeyById(ruleName, id) {
+        // 优先使用索引查找
+        if (this.rulesCache['__idIndex'] && 
+            this.rulesCache['__idIndex'][ruleName] &&
+            this.rulesCache['__idIndex'][ruleName][id]) {
+            return this.rulesCache['__idIndex'][ruleName][id];
+        }
+        
+        // 回退到遍历查找
+        const rules = this.rulesCache[ruleName];
+        if (!rules) return null;
+        
+        for (const key in rules) {
+            const rule = rules[key];
+            if (rule && typeof rule === 'object' && rule.id !== undefined) {
+                if (rule.id.toString() === id) {
+                    return key;
+                }
+            }
+        }
+        
+        return null;
     }
     
     /**
@@ -110,8 +171,10 @@ class ResultRenderer {
      */
     async getRuleFiles() {
         try {
-            // 发送请求获取目录内容
-            const response = await fetch('lib/rules/');
+            // 发送请求获取目录内容（禁用缓存）
+            const response = await fetch('lib/rules/', {
+                cache: 'no-cache'
+            });
             if (response.ok) {
                 const dirContent = await response.text();
                 
@@ -147,7 +210,9 @@ class ResultRenderer {
      */
     async loadRuleFile(ruleName) {
         try {
-            const response = await fetch(`lib/rules/${ruleName}.json`);
+            const response = await fetch(`lib/rules/${ruleName}.json`, {
+                cache: 'no-cache'
+            });
             if (response.ok) {
                 return await response.json();
             }
@@ -1412,76 +1477,91 @@ class ResultRenderer {
      * @returns {string} 替换后的文本
      */
     replaceIdWithName(text, rule) {
-        // 检查rule是否为*Id类型
-        if (rule && rule.endsWith('Id')) {
+        // 检查rule是否为*Id类型（支持备选规则 A//B//C）
+        if (rule && (rule.endsWith('Id') || rule.includes('Id//'))) {
             // 检查idDatabase是否可用
             if (!window.idDatabase || !window.idDatabase.initialized) {
                 return text;
             }
             
-            // 提取类型名称（去掉Id后缀）
-            const typeName = rule.replace('Id', '');
-            // 转换为snake_case格式，与idDatabase中的类型名称一致
-            const snakeCaseTypeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
-            
-            // 检查该类型是否存在于数据库中
-            if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[snakeCaseTypeName]) {
-                return text;
-            }
+            // 解析备选规则：A//B//C -> [A, B, C]
+            const idTypeAlternatives = rule.split('//').map(t => t.trim()).filter(t => t);
             
             // 处理不同格式的文本
             if (typeof text === 'string') {
-                // 情况1: 纯数字文本
-                if (/^\d+$/.test(text)) {
+                // 情况1: 纯数字文本（支持负数）
+                if (/^-?\d+$/.test(text)) {
                     const id = parseInt(text);
-                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                    return name || text;
+                    // 依次尝试每个备选类型
+                    for (const alternativeType of idTypeAlternatives) {
+                        const name = this._getNameByIdFromRule(alternativeType, id);
+                        if (name) return name;
+                    }
+                    return text;
                 }
                 
-                // 情况2: [x]
-                if (/^\[(\d+)\]$/.test(text)) {
-                    const id = parseInt(text.match(/^\[(\d+)\]$/)[1]);
-                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                    return name || text;
+                // 情况2: [x]（支持负数）
+                if (/^\[(-?\d+)\]$/.test(text)) {
+                    const id = parseInt(text.match(/^\[(-?\d+)\]$/)[1]);
+                    for (const alternativeType of idTypeAlternatives) {
+                        const name = this._getNameByIdFromRule(alternativeType, id);
+                        if (name) return name;
+                    }
+                    return text;
                 }
                 
-                // 情况3: [x,y,……]
-                if (/^\[(\d+(,\s*\d+)*)\]$/.test(text)) {
-                    const ids = text.match(/^\[(\d+(,\s*\d+)*)\]$/)[1].split(',').map(id => parseInt(id.trim()));
+                // 情况3: [x,y,……]（支持负数）
+                if (/^\[(-?\d+(,\s*-?\d+)*)\]$/.test(text)) {
+                    const ids = text.match(/^\[(-?\d+(,\s*-?\d+)*)\]$/)[1].split(',').map(id => parseInt(id.trim()));
                     const names = ids.map(id => {
-                        const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                        return name || id;
+                        for (const alternativeType of idTypeAlternatives) {
+                            const name = this._getNameByIdFromRule(alternativeType, id);
+                            if (name) return name;
+                        }
+                        return id;
                     });
                     return names.join(', ');
                 }
                 
-                // 情况4: "x"
-                if (/^"(\d+)"$/.test(text)) {
-                    const id = parseInt(text.match(/^"(\d+)"$/)[1]);
-                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                    return name || text;
+                // 情况4: "x"（支持负数）
+                if (/^"(-?\d+)"$/.test(text)) {
+                    const id = parseInt(text.match(/^"(-?\d+)"$/)[1]);
+                    for (const alternativeType of idTypeAlternatives) {
+                        const name = this._getNameByIdFromRule(alternativeType, id);
+                        if (name) return name;
+                    }
+                    return text;
                 }
                 
-                // 情况5: ["x"]
-                if (/^\["(\d+)"\]$/.test(text)) {
-                    const id = parseInt(text.match(/^\["(\d+)"\]$/)[1]);
-                    const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                    return name || text;
+                // 情况5: ["x"]（支持负数）
+                if (/^\["(-?\d+)"\]$/.test(text)) {
+                    const id = parseInt(text.match(/^\["(-?\d+)"\]$/)[1]);
+                    for (const alternativeType of idTypeAlternatives) {
+                        const name = this._getNameByIdFromRule(alternativeType, id);
+                        if (name) return name;
+                    }
+                    return text;
                 }
                 
-                // 情况6: ["x","y",……]
-                if (/^\[("\d+"(,\s*"\d+")*)\]$/.test(text)) {
-                    const ids = text.match(/^\[("\d+"(,\s*"\d+")*)\]$/)[1].split(',').map(id => parseInt(id.trim().replace(/"/g, '')));
+                // 情况6: ["x","y",……]（支持负数）
+                if (/^\[("-?\d+"(,\s*"-?\d+")*)\]$/.test(text)) {
+                    const ids = text.match(/^\[("-?\d+"(,\s*"-?\d+")*)\]$/)[1].split(',').map(id => parseInt(id.trim().replace(/"/g, '')));
                     const names = ids.map(id => {
-                        const name = window.idDatabase.getNameById(snakeCaseTypeName, id);
-                        return name || id;
+                        for (const alternativeType of idTypeAlternatives) {
+                            const name = this._getNameByIdFromRule(alternativeType, id);
+                            if (name) return name;
+                        }
+                        return id;
                     });
                     return names.join(', ');
                 }
             } else if (typeof text === 'number') {
-                // 纯数字情况
-                const name = window.idDatabase.getNameById(snakeCaseTypeName, text);
-                return name || text;
+                // 纯数字情况（支持负数）
+                for (const alternativeType of idTypeAlternatives) {
+                    const name = this._getNameByIdFromRule(alternativeType, text);
+                    if (name) return name;
+                }
+                return text;
             }
             
             return text;
@@ -1491,7 +1571,7 @@ class ResultRenderer {
             // 尝试从缓存中获取规则文件
             const rulesData = this.rulesCache[rule];
             if (rulesData) {
-                return this.processRulesSync(text, rulesData);
+                return this.processRulesSync(text, rulesData, rule);
             }
             
             // 如果缓存中没有，返回原始文本
@@ -1628,9 +1708,10 @@ class ResultRenderer {
      * 同步处理*Rules类型的文本替换
      * @param {string|Array} text 原始文本
      * @param {Object} rulesData 规则数据
+     * @param {string} ruleName 规则文件名（用于id索引查找）
      * @returns {string} 替换后的文本
      */
-    processRulesSync(text, rulesData) {
+    processRulesSync(text, rulesData, ruleName) {
         // 处理不同格式的文本
         if (typeof text === 'string') {
             // 情况1: [[a,b,c,……]] - 在普通规则数组基础上增加一层[]
@@ -1638,7 +1719,7 @@ class ResultRenderer {
                 const match = text.match(/^\[\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]\]$/);
                 if (match) {
                     const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                    const replacedText = this.processRuleValues(values, rulesData);
+                    const replacedText = this.processRuleValues(values, rulesData, ruleName);
                     return replacedText;
                 }
             }
@@ -1652,7 +1733,7 @@ class ResultRenderer {
                         const match = arrayStr.match(/\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]/);
                         if (match) {
                             const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                            const replacedText = this.processRuleValues(values, rulesData);
+                            const replacedText = this.processRuleValues(values, rulesData, ruleName);
                             return replacedText;
                         }
                         return arrayStr;
@@ -1666,7 +1747,7 @@ class ResultRenderer {
                 const match = text.match(/^\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]$/);
                 if (match) {
                     const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                    const replacedText = this.processRuleValues(values, rulesData);
+                    const replacedText = this.processRuleValues(values, rulesData, ruleName);
                     return replacedText;
                 }
             }
@@ -1679,16 +1760,25 @@ class ResultRenderer {
      * 处理规则值数组，根据规则文件生成替换文本
      * @param {Array<number>} values 值数组
      * @param {Object} rulesData 规则数据
+     * @param {string} ruleName 规则文件名（用于id索引查找）
      * @returns {string} 替换后的文本
      */
-    processRuleValues(values, rulesData) {
+    processRuleValues(values, rulesData, ruleName) {
         if (!values || values.length === 0) {
             return values.toString();
         }
         
         // 获取第一个数字作为规则ID
         const ruleId = values[0].toString();
-        const ruleConfig = rulesData[ruleId];
+        
+        // 优先使用id索引快速查找
+        let ruleKey = null;
+        if (ruleName) {
+            ruleKey = this.getRuleKeyById(ruleName, ruleId);
+        }
+        
+        // 如果索引查找失败，回退到直接查找
+        const ruleConfig = ruleKey ? rulesData[ruleKey] : rulesData[ruleId];
         
         if (!ruleConfig || !ruleConfig.type) {
             return values.toString();
@@ -1734,7 +1824,8 @@ class ResultRenderer {
                         const valueIndex = ruleArray.indexOf('value');
                         if (valueIndex !== -1 && valueIndex < values.length) {
                             const value = values[valueIndex];
-                            desc = desc.replace('{direction}', value >= 0 ? '+' : '-');
+                            // 当value为负数时，不添加符号（避免--10的情况）
+                            desc = desc.replace('{direction}', value >= 0 ? '+' : '');
                         }
                     }
                     
@@ -1743,22 +1834,55 @@ class ResultRenderer {
                         if (typeof ruleValue === 'string' && index < values.length) {
                             const value = values[index];
                             
-                            // 处理value相关字段（value, value1, value2等）- 直接替换为数值
+                            // 处理value相关字段（支持数学运算，如{100*value}, {value*100}, {value+10}等）
                             if (ruleValue.startsWith('value')) {
-                                desc = desc.replace(`{${ruleValue}}`, value);
+                                // 构建正则表达式匹配该value字段的各种运算形式
+                                // 匹配模式: {expression*value}, {value*expression}, {value}, 等
+                                const escapedRuleValue = ruleValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                                const regex = new RegExp(`\\{([^}]*${escapedRuleValue}[^}]*)\\}`, 'g');
+                                
+                                desc = desc.replace(regex, (match, expression) => {
+                                    // 如果表达式就是简单的字段名，直接返回数值
+                                    if (expression === ruleValue) {
+                                        return value;
+                                    }
+                                    
+                                    // 否则，计算数学表达式
+                                    try {
+                                        // 将表达式中的字段名替换为实际值
+                                        // 支持: 100*value, value*100, value+10, value-5, value/2 等
+                                        let mathExpr = expression.replace(
+                                            new RegExp(`\\b${escapedRuleValue}\\b`, 'g'),
+                                            value.toString()
+                                        );
+                                        
+                                        // 安全地计算表达式
+                                        const result = this.safeEval(mathExpr);
+                                        return result !== null ? result : match;
+                                    } catch (e) {
+                                        return match;
+                                    }
+                                });
                             }
                             // 处理ID类型的字段（以Id结尾，可能带数字如evtId1, optionId2, personId1等）
-                            else if (ruleValue.endsWith('Id') || /Id\d+$/.test(ruleValue)) {
-                                // 提取基础ID类型（去掉末尾的数字）
-                                // 例如：evtId1 -> EvtId, optionId2 -> OptionId, personId1 -> PersonId
-                                const baseIdType = ruleValue.replace(/\d+$/, '');
-                                // 确保首字母大写
-                                const normalizedIdType = baseIdType.charAt(0).toUpperCase() + baseIdType.slice(1);
-                                
-                                // 尝试从数据库中获取名称
-                                const name = this.getNameByIdFromRule(normalizedIdType, value);
+                            // 支持备选规则格式：itemId//bookId
+                            else if (ruleValue.endsWith('Id') || /Id\d+$/.test(ruleValue) || ruleValue.includes('Id//')) {
+                                // 直接使用ruleValue（可能包含备选规则如itemId//bookId）
+                                // getNameByIdFromRule方法内部会处理备选规则
+                                const name = this.getNameByIdFromRule(ruleValue, value);
                                 if (name) {
+                                    // 替换desc中所有可能的字段名形式
+                                    // 完整写法：{itemId//bookId}
+                                    // 主类型：{itemId}
+                                    // 备选类型：{bookId}
                                     desc = desc.replace(`{${ruleValue}}`, name);
+                                    // 如果desc中使用了单个类型的字段名，也需要替换
+                                    const alternatives = ruleValue.split('//').map(t => t.trim());
+                                    for (const alt of alternatives) {
+                                        if (desc.includes(`{${alt}}`)) {
+                                            desc = desc.replace(`{${alt}}`, name);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1768,13 +1892,64 @@ class ResultRenderer {
                 }
             }
         }
-        
+
         return values.toString();
     }
-    
+
+    /**
+     * 安全地计算数学表达式
+     * @param {string} expr 数学表达式（如 "100*0.1", "10+5" 等）
+     * @returns {number|null} 计算结果，失败返回null
+     */
+    safeEval(expr) {
+        try {
+            // 只允许数字、运算符、括号和空格
+            // 支持的运算符: + - * / % ** ( )
+            if (!/^[\d\s+\-*/%.()]+$/.test(expr)) {
+                return null;
+            }
+
+            // 使用Function构造函数安全计算
+            // 这比eval更安全，因为它在局部作用域执行
+            const result = new Function('return (' + expr + ')')();
+
+            // 检查结果是否为有效数字
+            if (typeof result === 'number' && !isNaN(result) && isFinite(result)) {
+                // 如果是整数，返回整数；否则保留适当小数位
+                return Number.isInteger(result) ? result : parseFloat(result.toFixed(4));
+            }
+
+            return null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * 根据规则中的ID类型和ID值获取名称（简化版，供replaceIdWithName使用）
+     * @param {string} idType 单个ID类型
+     * @param {number} idValue ID值
+     * @returns {string} 名称
+     */
+    _getNameByIdFromRule(idType, idValue) {
+        // 提取类型名称（去掉Id后缀）
+        const typeName = idType.replace('Id', '');
+        // 转换为snake_case格式，与idDatabase中的类型名称一致
+        const snakeCaseTypeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
+        
+        // 检查该类型是否存在于数据库中
+        if (!window.idDatabase.idTypes || !window.idDatabase.idTypes[snakeCaseTypeName]) {
+            return null;
+        }
+        
+        // 从数据库中获取名称
+        return window.idDatabase.getNameById(snakeCaseTypeName, idValue);
+    }
+
     /**
      * 根据规则中的ID类型和ID值获取名称
-     * @param {string} idType ID类型（如 EvtId, OptionId, ItemId, PersonId 等）
+     * 支持备选规则：A//B//C 表示A失败时尝试B，B失败时尝试C
+     * @param {string} idType ID类型（如 EvtId, OptionId, ItemId//BookId 等）
      * @param {number} idValue ID值
      * @returns {string} 名称
      */
@@ -1784,6 +1959,28 @@ class ResultRenderer {
             return null;
         }
         
+        // 解析备选规则：A//B//C -> [A, B, C]
+        const idTypeAlternatives = idType.split('//').map(t => t.trim()).filter(t => t);
+        
+        // 依次尝试每个备选类型
+        for (const alternativeType of idTypeAlternatives) {
+            const name = this._getNameBySingleIdType(alternativeType, idValue);
+            if (name) {
+                return name;
+            }
+        }
+        
+        // 所有备选都失败，返回null
+        return null;
+    }
+    
+    /**
+     * 根据单个ID类型获取名称（内部方法）
+     * @param {string} idType 单个ID类型
+     * @param {number} idValue ID值
+     * @returns {string} 名称
+     */
+    _getNameBySingleIdType(idType, idValue) {
         // ID类型映射表 - 将常见的ID类型映射到数据库中的类型名称
         const idTypeMapping = {
             'EvtId': 'evt',

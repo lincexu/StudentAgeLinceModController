@@ -1,0 +1,163 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "语文", 
+        "teachers": [
+            312, 
+            312, 
+            3103
+        ], 
+        "grade": [], 
+        "knowledge": 1
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "数学", 
+        "teachers": [
+            309, 
+            3221, 
+            3107
+        ], 
+        "grade": [], 
+        "knowledge": 2
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "英语", 
+        "teachers": [
+            311, 
+            311, 
+            3110
+        ], 
+        "grade": [], 
+        "knowledge": 3
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "历史", 
+        "teachers": [
+            -1, 
+            3109, 
+            354
+        ], 
+        "grade": [
+            7, 
+            12
+        ], 
+        "knowledge": 4
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "政治", 
+        "teachers": [
+            -1, 
+            336, 
+            308
+        ], 
+        "grade": [
+            7, 
+            12
+        ], 
+        "knowledge": 4
+    }, 
+    "6": {
+        "id": 6, 
+        "name": "地理", 
+        "teachers": [
+            -1, 
+            3106, 
+            3106
+        ], 
+        "grade": [
+            7, 
+            12
+        ], 
+        "knowledge": 4
+    }, 
+    "7": {
+        "id": 7, 
+        "name": "生物", 
+        "teachers": [
+            -1, 
+            3104, 
+            3104
+        ], 
+        "grade": [
+            7, 
+            12
+        ], 
+        "knowledge": 5
+    }, 
+    "8": {
+        "id": 8, 
+        "name": "物理", 
+        "teachers": [
+            -1, 
+            3105, 
+            322
+        ], 
+        "grade": [
+            8, 
+            12
+        ], 
+        "knowledge": 5
+    }, 
+    "9": {
+        "id": 9, 
+        "name": "化学", 
+        "teachers": [
+            -1, 
+            303, 
+            303
+        ], 
+        "grade": [
+            8, 
+            12
+        ], 
+        "knowledge": 5
+    }, 
+    "10": {
+        "id": 10, 
+        "name": "音乐", 
+        "teachers": [], 
+        "grade": [
+            1, 
+            9
+        ], 
+        "knowledge": 0
+    }, 
+    "11": {
+        "id": 11, 
+        "name": "体育", 
+        "teachers": [], 
+        "grade": [], 
+        "knowledge": 0
+    }, 
+    "12": {
+        "id": 12, 
+        "name": "美术", 
+        "teachers": [], 
+        "grade": [
+            1, 
+            9
+        ], 
+        "knowledge": 0
+    }, 
+    "13": {
+        "id": 13, 
+        "name": "信息科技", 
+        "teachers": [], 
+        "grade": [
+            1, 
+            9
+        ], 
+        "knowledge": 0
+    }, 
+    "14": {
+        "id": 14, 
+        "name": "班会", 
+        "teachers": [], 
+        "grade": [], 
+        "knowledge": 0
+    }
+}

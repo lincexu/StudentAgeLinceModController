@@ -1,0 +1,313 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "语文", 
+        "type": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                4.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                6.0
+            ]
+        ], 
+        "state": 0, 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "color": 2004, 
+        "game": 8, 
+        "bg": "common4/img_study_yellow", 
+        "progressBg": "common4/img_study_progress_yellow", 
+        "scores": [
+            100, 
+            120, 
+            150
+        ], 
+        "icon": "study/img_yuwen", 
+        "lesson": [
+            1
+        ], 
+        "subjectEfficiency": [
+            0.0, 
+            0.1
+        ], 
+        "lessonCnt": [
+            6, 
+            3, 
+            6
+        ]
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "数学", 
+        "type": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                4.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                6.0
+            ]
+        ], 
+        "state": 0, 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "color": 2001, 
+        "game": 7, 
+        "bg": "common4/img_study_blue", 
+        "progressBg": "common4/img_study_progress_blue", 
+        "scores": [
+            100, 
+            120, 
+            150
+        ], 
+        "icon": "study/img_shuxue", 
+        "lesson": [
+            2
+        ], 
+        "subjectEfficiency": [
+            0.0, 
+            0.1
+        ], 
+        "lessonCnt": [
+            6, 
+            3, 
+            6
+        ]
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "英语", 
+        "type": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                4.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                8.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                100.0, 
+                12.0
+            ]
+        ], 
+        "state": 0, 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "color": 2002, 
+        "game": 14, 
+        "bg": "common4/img_study_green", 
+        "progressBg": "common4/img_study_progress_green", 
+        "scores": [
+            100, 
+            120, 
+            150
+        ], 
+        "icon": "study/img_yingyu", 
+        "lesson": [
+            3
+        ], 
+        "subjectEfficiency": [
+            0.0, 
+            0.1
+        ], 
+        "lessonCnt": [
+            6, 
+            3, 
+            6
+        ]
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "文综", 
+        "type": 1, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                4.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                2.0, 
+                6.0
+            ]
+        ], 
+        "state": 1, 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                7.0
+            ], 
+            [
+                1.0, 
+                -98.0, 
+                2.0
+            ]
+        ], 
+        "color": 2003, 
+        "game": 33, 
+        "bg": "common4/img_study_red", 
+        "progressBg": "common4/img_study_progress_red", 
+        "scores": [
+            0, 
+            120, 
+            300
+        ], 
+        "icon": "study/img_wenzong", 
+        "lesson": [
+            4, 
+            5, 
+            6
+        ], 
+        "subjectEfficiency": [
+            0.0, 
+            0.1
+        ], 
+        "lessonCnt": [
+            0, 
+            3, 
+            6
+        ]
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "理综", 
+        "type": 2, 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                2.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                4.0
+            ], 
+            [
+                1.0, 
+                1.0, 
+                1.0, 
+                6.0
+            ]
+        ], 
+        "state": 1, 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                7.0
+            ], 
+            [
+                1.0, 
+                -98.0, 
+                1.0
+            ]
+        ], 
+        "color": 2005, 
+        "game": 35, 
+        "bg": "common4/img_study_purple", 
+        "progressBg": "common4/img_study_progress_purple", 
+        "scores": [
+            0, 
+            120, 
+            300
+        ], 
+        "icon": "study/img_lizong", 
+        "lesson": [
+            7, 
+            8, 
+            9
+        ], 
+        "subjectEfficiency": [
+            0.0, 
+            0.1
+        ], 
+        "lessonCnt": [
+            0, 
+            3, 
+            6
+        ]
+    }, 
+    "6": {
+        "id": 6, 
+        "name": "大学课程", 
+        "type": 0, 
+        "effect": [], 
+        "state": 3, 
+        "cond": [], 
+        "color": 0, 
+        "game": 35, 
+        "bg": "common4/img_study_purple", 
+        "progressBg": "common4/img_study_progress_purple", 
+        "scores": [], 
+        "icon": "study/img_lizong", 
+        "lesson": [], 
+        "subjectEfficiency": [], 
+        "lessonCnt": []
+    }
+}
