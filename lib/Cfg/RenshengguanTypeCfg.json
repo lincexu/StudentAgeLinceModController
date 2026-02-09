@@ -53,7 +53,11 @@
             ]
         ], 
         "effectTxt": "可解锁额外的人格机制", 
-        "img": "jinbu"
+        "img": "jinbu", 
+        "colors": [
+            "#76ff64", 
+            "#4a9f40"
+        ]
     }, 
     "2": {
         "id": 2, 
@@ -114,7 +118,11 @@
             ]
         ], 
         "effectTxt": "可关注第五个同学，同时社交容量+5，热情+30", 
-        "img": "peiban"
+        "img": "peiban", 
+        "colors": [
+            "#ff8fc9", 
+            "#987367"
+        ]
     }, 
     "3": {
         "id": 3, 
@@ -167,7 +175,11 @@
             ]
         ], 
         "effectTxt": "获得额外的价值观和方法论", 
-        "img": "zeren"
+        "img": "zeren", 
+        "colors": [
+            "#72dcfe", 
+            "#47899f"
+        ]
     }, 
     "4": {
         "id": 4, 
@@ -222,6 +234,10 @@
             ]
         ], 
         "effectTxt": "可获得第五项人格，并可强化人格1次", 
-        "img": "shatuo"
+        "img": "shatuo", 
+        "colors": [
+            "#be89ff", 
+            "#7756a0"
+        ]
     }
 }

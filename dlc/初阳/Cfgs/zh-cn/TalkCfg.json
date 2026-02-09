@@ -8944,7 +8944,7 @@
     }, 
     "314911007": {
         "id": 314911007, 
-        "content": "都这样了还惦记着要买牛蓝山呢？你看他这样子心里莫名有些担忧，你忍着酒臭将钱塞回他的口袋，接着试图喊醒他。", 
+        "content": "都这样了还惦记着要买牛南山呢？你看他这样子心里莫名有些担忧，你忍着酒臭将钱塞回他的口袋，接着试图喊醒他。", 
         "nextTalk": [
             314911008
         ], 
@@ -9037,14 +9037,7 @@
         "check": [], 
         "showTxt": null, 
         "nextTalk2": [], 
-        "effect": [
-            [
-                1.0, 
-                22.0, 
-                30.0, 
-                1.0
-            ]
-        ], 
+        "effect": [], 
         "effect2": [], 
         "roleIds": [
             -1
@@ -9102,6 +9095,12 @@
                 22.0, 
                 501.0, 
                 -1.0
+            ], 
+            [
+                1.0, 
+                22.0, 
+                30.0, 
+                1.0
             ]
         ], 
         "effect2": [], 
@@ -21793,7 +21792,7 @@
     }, 
     "320902086": {
         "id": 320902086, 
-        "content": "陈心慈走上讲台，你看着她在你身旁稍稍弯着腰，熟练地运用PPT功能把页面修饰得既直观又美观。", 
+        "content": "陈心慈走上讲台，你看着她在你身旁稍稍弯着腰，运用PPT功能把页面修饰得既直观又美观。", 
         "nextTalk": [
             320902087
         ], 
@@ -62620,7 +62619,13 @@
         "check": [], 
         "showTxt": null, 
         "nextTalk2": [], 
-        "effect": [], 
+        "effect": [
+            [
+                100.0, 
+                10.0, 
+                50.0
+            ]
+        ], 
         "effect2": [], 
         "roleIds": [
             -1
@@ -62867,7 +62872,13 @@
         "check": [], 
         "showTxt": null, 
         "nextTalk2": [], 
-        "effect": [], 
+        "effect": [
+            [
+                52.0, 
+                -2.0, 
+                103.0
+            ]
+        ], 
         "effect2": [], 
         "roleIds": [
             103
@@ -131487,7 +131498,7 @@
         "id": 322921006, 
         "content": "听说你平时喜欢做手工，那你有做过鱼竿吗？", 
         "nextTalk": [
-            322921007
+            322921906
         ], 
         "option": [], 
         "maxoptions": 0, 
@@ -131917,7 +131928,7 @@
     }, 
     "322921021": {
         "id": 322921021, 
-        "content": "做一个？来的及吗？比赛很快就要开始了。", 
+        "content": "做一个？来得及吗？比赛很快就要开始了。", 
         "nextTalk": [
             322921022
         ], 
@@ -132179,6 +132190,98 @@
         "screenEffect": [], 
         "highlights": [], 
         "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "322921906": {
+        "id": 322921906, 
+        "content": null, 
+        "nextTalk": [
+            322921907
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [
+            [
+                38.0, 
+                2.0, 
+                6631.0
+            ]
+        ], 
+        "showTxt": null, 
+        "nextTalk2": [
+            322921007
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "322921907": {
+        "id": 322921907, 
+        "content": "做过是做过啦，但是我只做过一次，而且是很简单的那种，现在也忘了怎么做了。要鱼竿的话，最好还是去商店买一根吧。", 
+        "nextTalk": [
+            322921908
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "322921908": {
+        "id": 322921908, 
+        "content": "听了你的话，陈心慈的眼神黯淡了下来。", 
+        "nextTalk": [
+            322921009
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            -1
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [
+            103
+        ], 
+        "roles": [
+            [
+                103.0, 
+                3000.0, 
+                27.0
+            ]
+        ], 
         "miniGame": [], 
         "time": 0, 
         "audio": 0, 
@@ -132813,7 +132916,7 @@
                 1.0, 
                 1.0, 
                 30.0, 
-                15.0
+                20.0
             ]
         ], 
         "effect2": [], 
@@ -139632,7 +139735,7 @@
     }, 
     "322935009": {
         "id": 322935009, 
-        "content": "运动区已经逛过了，逛逛别的地方吧。", 
+        "content": "内衣区已经逛过了，逛逛别的地方吧。", 
         "nextTalk": [
             322935003
         ], 
@@ -146692,6 +146795,1053 @@
         "audio": 0, 
         "vocals": []
     }, 
+    "324901001": {
+        "id": 324901001, 
+        "content": "{3}~", 
+        "nextTalk": [
+            324901002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 202011, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901002": {
+        "id": 324901002, 
+        "content": "阿慈，又在浇花呢。", 
+        "nextTalk": [
+            324901003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901003": {
+        "id": 324901003, 
+        "content": "嗯。", 
+        "nextTalk": [
+            324901004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [
+            [
+                2.0, 
+                8.0, 
+                -1.0
+            ]
+        ], 
+        "showTxt": null, 
+        "nextTalk2": [
+            324901007
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901004": {
+        "id": 324901004, 
+        "content": "有你照顾，咱班的这些植物想长得不好都难。", 
+        "nextTalk": [
+            324901005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901005": {
+        "id": 324901005, 
+        "content": "顺手的事啦。要一起吗？", 
+        "nextTalk": [
+            324901006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901006": {
+        "id": 324901006, 
+        "content": "好。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901007": {
+        "id": 324901007, 
+        "content": "现在也不上学啊，你还顾着这些。", 
+        "nextTalk": [
+            324901008
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901008": {
+        "id": 324901008, 
+        "content": "就是因为不上学才要顾着它们嘛。", 
+        "nextTalk": [
+            324901009
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324901009": {
+        "id": 324901009, 
+        "content": "我放心不下嘛。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902001": {
+        "id": 324902001, 
+        "content": "{3}，快看快看！", 
+        "nextTalk": [
+            324902002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 202061, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902002": {
+        "id": 324902002, 
+        "content": "嗯？什么？", 
+        "nextTalk": [
+            324902003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902003": {
+        "id": 324902003, 
+        "content": "你顺着陈心慈手指的方向看过去，发现树上有两只小肥鸟。一只舞着翅膀向另一只扑腾，可另一只却不太搭理它。", 
+        "nextTalk": [
+            324902004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            -1
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902004": {
+        "id": 324902004, 
+        "content": "你说，它俩是什么关系呢？", 
+        "nextTalk": [], 
+        "option": [
+            32490201, 
+            32490202
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902005": {
+        "id": 324902005, 
+        "content": "一看就是对小情侣吧。", 
+        "nextTalk": [
+            324902006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902006": {
+        "id": 324902006, 
+        "content": "为什么？", 
+        "nextTalk": [
+            324902007
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902007": {
+        "id": 324902007, 
+        "content": "一个发脾气了，另一个哄呗。", 
+        "nextTalk": [
+            324902008
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902008": {
+        "id": 324902008, 
+        "content": "哦。可是看上去好可爱哦。我们也试试？你假装发个脾气？", 
+        "nextTalk": [
+            324902009
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902009": {
+        "id": 324902009, 
+        "content": "怎么你不发脾气？", 
+        "nextTalk": [
+            324902010
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902010": {
+        "id": 324902010, 
+        "content": "我对你没有脾气发啊。装也装不来啊。", 
+        "nextTalk": [
+            324902011
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902011": {
+        "id": 324902011, 
+        "content": "（笑）我对你也没脾气发。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                2.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902012": {
+        "id": 324902012, 
+        "content": "应该是朋友吵架吧。", 
+        "nextTalk": [
+            324902013
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324902013": {
+        "id": 324902013, 
+        "content": "小鸟和我们人类不一样，他们是怎么认定对方是朋友的呢？", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324903001": {
+        "id": 324903001, 
+        "content": "{3}，好巧哦。今天很多书打折呢，你要是想买书的话，赶紧下手哦！", 
+        "nextTalk": [
+            324903002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 205031, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324903002": {
+        "id": 324903002, 
+        "content": "（笑）你怎么比书店老板还急着卖书？", 
+        "nextTalk": [
+            324903003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324903003": {
+        "id": 324903003, 
+        "content": "打折就是省钱呐！省了就是赚了！", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                103.0, 
+                3000.0, 
+                1.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324904001": {
+        "id": 324904001, 
+        "content": "{3}~", 
+        "nextTalk": [
+            324904002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324904002": {
+        "id": 324904002, 
+        "content": "你怎么这么开心。", 
+        "nextTalk": [
+            324904003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324904003": {
+        "id": 324904003, 
+        "content": "因为看到你了啊。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905001": {
+        "id": 324905001, 
+        "content": "{3}，这么巧，你也来看晚霞。", 
+        "nextTalk": [
+            324905002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 203202, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905002": {
+        "id": 324905002, 
+        "content": "我随便走走啦。", 
+        "nextTalk": [
+            324905003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905003": {
+        "id": 324905003, 
+        "content": "今天的晚霞，真的好美啊。", 
+        "nextTalk": [
+            324905004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905004": {
+        "id": 324905004, 
+        "content": "对于你这种喜欢画画的人来说，晚霞的美是不是因为色彩艳丽？", 
+        "nextTalk": [
+            324905005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905005": {
+        "id": 324905005, 
+        "content": "不全是。晚霞本身就像巨大的调色盘，但是呢，我本来就很喜欢身边的事物啦，大大小小的都喜欢。", 
+        "nextTalk": [
+            324905006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "324905006": {
+        "id": 324905006, 
+        "content": "活着真好的感觉~", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
     "325901001": {
         "id": 325901001, 
         "content": "唉。", 
@@ -148531,7 +149681,7 @@
     }, 
     "325905008": {
         "id": 325905008, 
-        "content": "你；有什么不好的，迟早都是要进我们家门的。", 
+        "content": "有什么不好的，迟早都是要进我们家门的。", 
         "nextTalk": [
             325905013
         ], 
@@ -148542,7 +149692,7 @@
         "effect": [], 
         "effect2": [], 
         "roleIds": [
-            -1
+            0
         ], 
         "roleName": null, 
         "bg": 0, 
@@ -148557,7 +149707,7 @@
     }, 
     "325905009": {
         "id": 325905009, 
-        "content": "你；有什么不好的，迟早都是……", 
+        "content": "有什么不好的，迟早都是……", 
         "nextTalk": [
             325905010
         ], 
@@ -148568,7 +149718,7 @@
         "effect": [], 
         "effect2": [], 
         "roleIds": [
-            -1
+            0
         ], 
         "roleName": null, 
         "bg": 0, 
@@ -165239,6 +166389,341 @@
         "vocals": [], 
         "maxoptions": 0
     }, 
+    "340254001": {
+        "id": 340254001, 
+        "content": null, 
+        "nextTalk": [
+            340254002
+        ], 
+        "option": [], 
+        "check": [
+            [
+                3.0, 
+                -3.0, 
+                340254002.0
+            ]
+        ], 
+        "showTxt": null, 
+        "nextTalk2": [
+            340254007
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            -1
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254002": {
+        "id": 340254002, 
+        "content": "存钱罐？！", 
+        "nextTalk": [
+            340254003
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                103.0, 
+                1002.0, 
+                0.0, 
+                3.0, 
+                0.0
+            ], 
+            [
+                103.0, 
+                3000.0, 
+                8.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254003": {
+        "id": 340254003, 
+        "content": "这个我不能要。不管你里面攒了多少钱，我都不能要。", 
+        "nextTalk": [
+            340254004
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                103.0, 
+                3000.0, 
+                6.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254004": {
+        "id": 340254004, 
+        "content": "这可是你攒了很久很久的小宝库啊。", 
+        "nextTalk": [
+            340254005
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254005": {
+        "id": 340254005, 
+        "content": "你的这份心意我真的很感动，可越是感动我越不能收。钱慢慢赚，慢慢攒，我迟早都会有的。", 
+        "nextTalk": [
+            340254006
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                103.0, 
+                3000.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254006": {
+        "id": 340254006, 
+        "content": "你好好收着这个小猪猪吧，每一块钱都是你的努力的证明。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254007": {
+        "id": 340254007, 
+        "content": "我说了的，这个我不能要的。", 
+        "nextTalk": [
+            340254008
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                103.0, 
+                1002.0, 
+                0.0, 
+                3.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340254008": {
+        "id": 340254008, 
+        "content": "你攒了那么久的钱，给自己买点想买的东西吧，好吗？", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            103
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340256001": {
+        "id": 340256001, 
+        "content": "为什么要送我存钱罐？", 
+        "nextTalk": [
+            340256002
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                204.0, 
+                1002.0, 
+                0.0, 
+                3.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340256002": {
+        "id": 340256002, 
+        "content": "没明白啊。我自己有零花钱的，真的！", 
+        "nextTalk": [
+            340256003
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "340256003": {
+        "id": 340256003, 
+        "content": "而且我还可以借你点哦！", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
     "351101001": {
         "id": 351101001, 
         "content": "{7}！看看谁来了！", 
@@ -178991,7 +180476,7 @@
     }, 
     "351109006": {
         "id": 351109006, 
-        "content": "堂姐拍拍旁边的座位，你豪不客气地坐了过去。", 
+        "content": "堂姐拍拍旁边的座位，你毫不客气地坐了过去。", 
         "nextTalk": [
             351109007
         ], 
@@ -179206,7 +180691,7 @@
     }, 
     "351109012": {
         "id": 351109012, 
-        "content": "小鱼姐拍拍旁边的座位，你豪不客气地坐了过去。", 
+        "content": "小鱼姐拍拍旁边的座位，你毫不客气地坐了过去。", 
         "nextTalk": [
             351109013
         ], 
@@ -235559,51 +237044,34 @@
     }, 
     "721052001": {
         "id": 721052001, 
-        "content": "周五放学轮到你值日，谢辰晖说什么都要留下来帮你一起做完。等到都打扫得差不多了，教室里就只剩下你们两个人。", 
+        "content": null, 
         "nextTalk": [
-            721052002
+            721022001
         ], 
         "option": [], 
-        "check": [], 
-        "showTxt": null, 
-        "nextTalk2": [], 
-        "effect": [], 
-        "effect2": [], 
-        "roleIds": [
-            -1
-        ], 
-        "roleName": null, 
-        "bg": 202011, 
-        "screenEffect": [], 
-        "highlights": [], 
-        "roles": [
+        "check": [
             [
-                0.0, 
-                1001.0, 
-                0.0, 
-                3.0, 
-                0.0, 
-                0.0, 
-                0.0
-            ], 
-            [
-                204.0, 
-                1001.0, 
-                0.0, 
+                52.0, 
                 2.0, 
-                0.0, 
-                0.0, 
-                0.0
-            ], 
-            [
-                0.0, 
-                3007.0, 
-                0.0
+                1.0, 
+                204.0
             ]
         ], 
+        "showTxt": null, 
+        "nextTalk2": [
+            721052901
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
         "miniGame": [], 
         "time": 0, 
-        "audio": 9, 
+        "audio": 0, 
         "vocals": [], 
         "maxoptions": 0
     }, 
@@ -237466,7 +238934,10 @@
         ], 
         "roleName": null, 
         "bg": 0, 
-        "screenEffect": [], 
+        "screenEffect": [
+            4011.0, 
+            0.0
+        ], 
         "highlights": [], 
         "roles": [], 
         "miniGame": [], 
@@ -238055,7 +239526,13 @@
         "check": [], 
         "showTxt": null, 
         "nextTalk2": [], 
-        "effect": [], 
+        "effect": [
+            [
+                100.0, 
+                10.0, 
+                50.0
+            ]
+        ], 
         "effect2": [], 
         "roleIds": [
             -1
@@ -238667,6 +240144,56 @@
         "miniGame": [], 
         "time": 0, 
         "audio": 0, 
+        "vocals": [], 
+        "maxoptions": 0
+    }, 
+    "721052901": {
+        "id": 721052901, 
+        "content": "周五放学轮到你值日，谢辰晖说什么都要留下来帮你一起做完。等到都打扫得差不多了，教室里就只剩下你们两个人。", 
+        "nextTalk": [
+            721052002
+        ], 
+        "option": [], 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            -1
+        ], 
+        "roleName": null, 
+        "bg": 202011, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                3.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 9, 
         "vocals": [], 
         "maxoptions": 0
     }, 
@@ -265224,7 +266751,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -265791,10 +267318,7 @@
         ], 
         "roleName": null, 
         "bg": 0, 
-        "screenEffect": [
-            4011.0, 
-            1.0
-        ], 
+        "screenEffect": [], 
         "highlights": [], 
         "roles": [], 
         "miniGame": [], 
@@ -266146,7 +267670,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -266211,7 +267735,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -266282,7 +267806,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -269191,7 +270715,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -269357,7 +270881,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -273385,7 +274909,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202471, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -277296,10 +278820,7 @@
         ], 
         "roleName": null, 
         "bg": 0, 
-        "screenEffect": [
-            4011.0, 
-            1.0
-        ], 
+        "screenEffect": [], 
         "highlights": [], 
         "roles": [], 
         "miniGame": [], 
@@ -278069,10 +279590,7 @@
         ], 
         "roleName": null, 
         "bg": 0, 
-        "screenEffect": [
-            4011.0, 
-            1.0
-        ], 
+        "screenEffect": [], 
         "highlights": [], 
         "roles": [], 
         "miniGame": [], 
@@ -278096,7 +279614,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -278162,7 +279680,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -278227,7 +279745,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -281503,7 +283021,7 @@
             -1
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -282739,10 +284257,7 @@
         ], 
         "roleName": null, 
         "bg": 0, 
-        "screenEffect": [
-            4011.0, 
-            1.0
-        ], 
+        "screenEffect": [], 
         "highlights": [], 
         "roles": [], 
         "miniGame": [], 
@@ -283159,7 +284674,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -284875,7 +286390,7 @@
     }, 
     "723038001": {
         "id": 723038001, 
-        "content": "课间，你将天台上发生的事告诉了谢辰晖。", 
+        "content": "你找到谢辰晖后，将天台上发生的事告诉给他。", 
         "nextTalk": [
             723038002
         ], 
@@ -284897,7 +286412,7 @@
             -1
         ], 
         "roleName": null, 
-        "bg": 202051, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -286512,7 +288027,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -286611,7 +288126,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -286745,7 +288260,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -286844,7 +288359,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -287020,6 +288535,16 @@
                 3008.0, 
                 -100.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -287340,6 +288865,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -287484,7 +289019,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202082, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -287514,6 +289049,26 @@
             [
                 0.0, 
                 3000.0, 
+                1.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
                 1.0
             ]
         ], 
@@ -287788,6 +289343,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -288031,7 +289596,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202082, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -288062,6 +289627,16 @@
                 0.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -288170,7 +289745,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202082, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -288201,6 +289776,16 @@
                 0.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -288378,6 +289963,16 @@
                 3008.0, 
                 50.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -288824,7 +290419,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202081, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -288850,6 +290445,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -288991,6 +290596,16 @@
                 0.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -289190,6 +290805,16 @@
                 204.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -289721,7 +291346,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202081, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -289747,6 +291372,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -289875,7 +291510,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202081, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -289906,6 +291541,16 @@
                 0.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -290125,6 +291770,16 @@
                 3.0, 
                 0.0, 
                 2.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
                 0.0
             ]
         ], 
@@ -290648,6 +292303,16 @@
                 0.0, 
                 2.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                0.0
             ]
         ], 
         "miniGame": [], 
@@ -290724,7 +292389,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 204021, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -290761,6 +292426,16 @@
                 3004.0, 
                 50.0, 
                 0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
                 0.0
             ]
         ], 
@@ -290890,7 +292565,7 @@
             0
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 204021, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -290921,6 +292596,16 @@
                 0.0, 
                 3000.0, 
                 14.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                0.0
             ]
         ], 
         "miniGame": [], 
@@ -291064,6 +292749,16 @@
                 1.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -291218,6 +292913,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -291958,7 +293663,7 @@
             204
         ], 
         "roleName": null, 
-        "bg": -1, 
+        "bg": 202061, 
         "screenEffect": [], 
         "highlights": [], 
         "roles": [
@@ -291984,6 +293689,16 @@
                 0.0, 
                 0.0, 
                 0.0
+            ], 
+            [
+                0.0, 
+                3006.0, 
+                1.0
+            ], 
+            [
+                204.0, 
+                3006.0, 
+                1.0
             ]
         ], 
         "miniGame": [], 
@@ -292081,6 +293796,1371 @@
         "showTxt": null, 
         "nextTalk2": [], 
         "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725001001": {
+        "id": 725001001, 
+        "content": "{3}！{3}！{3}！", 
+        "nextTalk": [
+            725001002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 202051, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725001002": {
+        "id": 725001002, 
+        "content": "你干嘛？一口气叫好几遍，你不怕别人听见了笑话我们啊。", 
+        "nextTalk": [
+            725001003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725001003": {
+        "id": 725001003, 
+        "content": "（挠头）我高兴嘛。", 
+        "nextTalk": [
+            725001004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725001004": {
+        "id": 725001004, 
+        "content": "嘿嘿，我有女朋友，我还碰见我女朋友了，我不应该高兴吗？", 
+        "nextTalk": [
+            725001005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725001005": {
+        "id": 725001005, 
+        "content": "（笑）你呀。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002001": {
+        "id": 725002001, 
+        "content": "{3}！", 
+        "nextTalk": [
+            725002002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 202061, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002002": {
+        "id": 725002002, 
+        "content": "又在锻炼呢。", 
+        "nextTalk": [
+            725002003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002003": {
+        "id": 725002003, 
+        "content": "没呢，随便散散步。但我跟你说，我有个大惊喜。", 
+        "nextTalk": [
+            725002004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002004": {
+        "id": 725002004, 
+        "content": "什么惊喜？", 
+        "nextTalk": [
+            725002005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                3000.0, 
+                8.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002005": {
+        "id": 725002005, 
+        "content": "你过来点，我告诉你嘛。", 
+        "nextTalk": [
+            725002006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002006": {
+        "id": 725002006, 
+        "content": "好。", 
+        "nextTalk": [
+            725002007
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3000.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002007": {
+        "id": 725002007, 
+        "content": "什么惊喜？", 
+        "nextTalk": [
+            725002008
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725002008": {
+        "id": 725002008, 
+        "content": "我在操场遇到{0}啦！", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                204.0, 
+                3000.0, 
+                1.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003001": {
+        "id": 725003001, 
+        "content": "{3}，你怎么来这儿了？！", 
+        "nextTalk": [
+            725003002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 205051, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003002": {
+        "id": 725003002, 
+        "content": "怎么，我不能来吗？", 
+        "nextTalk": [
+            725003003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003003": {
+        "id": 725003003, 
+        "content": "不是啦。", 
+        "nextTalk": [
+            725003004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [
+            [
+                4.0, 
+                44.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "showTxt": null, 
+        "nextTalk2": [
+            725003013
+        ], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003004": {
+        "id": 725003004, 
+        "content": "你有小秘密了？", 
+        "nextTalk": [
+            725003005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003005": {
+        "id": 725003005, 
+        "content": "（摆手）没有没有！我在你面前肯定是没有秘密的！也不对、哎呀！", 
+        "nextTalk": [
+            725003006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003006": {
+        "id": 725003006, 
+        "content": "怎么说呢。", 
+        "nextTalk": [
+            725003007
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003007": {
+        "id": 725003007, 
+        "content": "我听人说，游乐园新开了些设施。但不知道那些设施你玩起来会不会喜欢，所以我就先来试试，好玩的话，下次叫你一起。", 
+        "nextTalk": [
+            725003008
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003008": {
+        "id": 725003008, 
+        "content": "你能知道我喜不喜欢？", 
+        "nextTalk": [
+            725003009
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003009": {
+        "id": 725003009, 
+        "content": "（点头）嗯！我想我肯定是知道的。", 
+        "nextTalk": [
+            725003010
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003010": {
+        "id": 725003010, 
+        "content": "就算不太清楚也没关系，我打算写个总结来着。", 
+        "nextTalk": [
+            725003011
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003011": {
+        "id": 725003011, 
+        "content": "你？写总结？！太阳打西边出来了？", 
+        "nextTalk": [
+            725003012
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003012": {
+        "id": 725003012, 
+        "content": "（认真）为了你啊。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003013": {
+        "id": 725003013, 
+        "content": "哦。", 
+        "nextTalk": [
+            725003014
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003014": {
+        "id": 725003014, 
+        "content": "我就在这儿附近啊！", 
+        "nextTalk": [
+            725003015
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003015": {
+        "id": 725003015, 
+        "content": "知道啊。", 
+        "nextTalk": [
+            725003016
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725003016": {
+        "id": 725003016, 
+        "content": "我的意思是，你想找我的话，可以随时找我的。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004001": {
+        "id": 725004001, 
+        "content": "{3}！", 
+        "nextTalk": [
+            725004002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 205083, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                4002.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004002": {
+        "id": 725004002, 
+        "content": "谢辰晖——", 
+        "nextTalk": [
+            725004003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004003": {
+        "id": 725004003, 
+        "content": "阿、阿姨好。", 
+        "nextTalk": [
+            725004004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004004": {
+        "id": 725004004, 
+        "content": "你好啊。", 
+        "nextTalk": [
+            725004005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            4002
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004005": {
+        "id": 725004005, 
+        "content": "谢辰晖左手右手都是大包小包的，你挑了挑眉。", 
+        "nextTalk": [
+            725004006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            -1
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [
+            204, 
+            0
+        ], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004006": {
+        "id": 725004006, 
+        "content": "哈哈，我陪我妈逛街呢。", 
+        "nextTalk": [
+            725004007
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004007": {
+        "id": 725004007, 
+        "content": "行了行了，怎么今天话这么多。", 
+        "nextTalk": [
+            725004008
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            4002
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                4002.0, 
+                3005.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004008": {
+        "id": 725004008, 
+        "content": "我们先走了啊。", 
+        "nextTalk": [
+            725004009
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            4002
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                4002.0, 
+                3005.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725004009": {
+        "id": 725004009, 
+        "content": "嗯，再见。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005001": {
+        "id": 725005001, 
+        "content": "{3}！嗨！", 
+        "nextTalk": [
+            725005002
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 205081, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                0.0, 
+                1001.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            [
+                0.0, 
+                3007.0, 
+                0.0
+            ], 
+            [
+                204.0, 
+                1001.0, 
+                0.0, 
+                2.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005002": {
+        "id": 725005002, 
+        "content": "你今天这是……？", 
+        "nextTalk": [
+            725005003
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            0
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005003": {
+        "id": 725005003, 
+        "content": "买毛线啊。", 
+        "nextTalk": [
+            725005004
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005004": {
+        "id": 725005004, 
+        "content": "要不要一起挑挑？", 
+        "nextTalk": [
+            725005005
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005005": {
+        "id": 725005005, 
+        "content": "（脸红）挑挑你喜欢的颜色啊，质感啊什么的。", 
+        "nextTalk": [
+            725005006
+        ], 
+        "option": [], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "roleIds": [
+            204
+        ], 
+        "roleName": null, 
+        "bg": 0, 
+        "screenEffect": [], 
+        "highlights": [], 
+        "roles": [
+            [
+                204.0, 
+                3000.0, 
+                4.0
+            ]
+        ], 
+        "miniGame": [], 
+        "time": 0, 
+        "audio": 0, 
+        "vocals": []
+    }, 
+    "725005006": {
+        "id": 725005006, 
+        "content": "我织给你。", 
+        "nextTalk": [], 
+        "option": [
+            1
+        ], 
+        "maxoptions": 0, 
+        "check": [], 
+        "showTxt": null, 
+        "nextTalk2": [], 
+        "effect": [
+            [
+                1.0, 
+                1.0, 
+                520.0, 
+                1.0
+            ]
+        ], 
         "effect2": [], 
         "roleIds": [
             204
@@ -299417,7 +302497,7 @@
     }, 
     "751109006": {
         "id": 751109006, 
-        "content": "小鱼姐拍拍旁边的座位，你豪不客气地坐了过去。", 
+        "content": "小鱼姐拍拍旁边的座位，你毫不客气地坐了过去。", 
         "nextTalk": [
             751109007
         ], 
@@ -299632,7 +302712,7 @@
     }, 
     "751109012": {
         "id": 751109012, 
-        "content": "小鱼姐拍拍旁边的座位，你豪不客气地坐了过去。", 
+        "content": "小鱼姐拍拍旁边的座位，你毫不客气地坐了过去。", 
         "nextTalk": [
             751109013
         ], 

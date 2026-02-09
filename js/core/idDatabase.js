@@ -216,7 +216,8 @@ class IdDatabase {
                         getIdField: 'id',
                         dataKey: typeConfig.dataKey || 'name',
                         description: typeConfig.name + 'ID',
-                        keyList: typeConfig.keyList
+                        keyList: typeConfig.keyList,
+                        dataKeyList: typeConfig.dataKeyList || null
                     };
                 }
                 
@@ -496,11 +497,26 @@ class IdDatabase {
                         nameValue = nameValue[0];
                     }
                     
-                    // 只保留id和name两个字段
+                    // 构建item对象，包含id和name
                     const item = {
                         id: id,
                         name: nameValue || typeConfig.displayName || id
                     };
+                    
+                    // 如果存在dataKeyList，额外录入指定属性
+                    if (typeConfig.dataKeyList) {
+                        const extraKeys = typeConfig.dataKeyList.split(',').map(k => k.trim()).filter(k => k);
+                        for (const key of extraKeys) {
+                            if (key !== typeConfig.dataKey && data.hasOwnProperty(key)) {
+                                let keyValue = data[key];
+                                // 处理数组情况（取第一个元素）
+                                if (Array.isArray(keyValue) && keyValue.length > 0) {
+                                    keyValue = keyValue[0];
+                                }
+                                item[key] = keyValue;
+                            }
+                        }
+                    }
                     
                     batch.push(item);
                     

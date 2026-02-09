@@ -6850,7 +6850,7 @@
         "value": 2.0, 
         "sell": 4.0, 
         "precondition": [], 
-        "icon": "item/img_pingguo", 
+        "icon": "dlc_item/img_pingguo", 
         "desc": "an apple a day keeps the doctor away", 
         "talkId": 0
     }, 
@@ -7025,14 +7025,7 @@
         "name": "拜年服", 
         "type": 6, 
         "sex": 1, 
-        "effect": [
-            [
-                1.0, 
-                1.0, 
-                0.0, 
-                15.0
-            ]
-        ], 
+        "effect": [], 
         "icon": "cloth/img_cloth_boy_bainian", 
         "maxcount": 1, 
         "value": 0, 
@@ -7205,14 +7198,7 @@
         "name": "拜年服", 
         "type": 6, 
         "sex": 2, 
-        "effect": [
-            [
-                1.0, 
-                1.0, 
-                0.0, 
-                15.0
-            ]
-        ], 
+        "effect": [], 
         "icon": "cloth/img_cloth_girl_bainian", 
         "maxcount": 1, 
         "value": 0, 

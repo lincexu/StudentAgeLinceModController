@@ -1168,6 +1168,22 @@ class ModEventApp {
         
         // 更新日志按钮事件
         this.setupChangelogModal();
+        
+        // ID Wiki按钮事件
+        this.setupIdWikiButton();
+    }
+    
+    /**
+     * 设置ID Wiki按钮
+     */
+    setupIdWikiButton() {
+        const idWikiToggle = document.getElementById('id-wiki-toggle');
+        if (idWikiToggle) {
+            idWikiToggle.addEventListener('click', () => {
+                // 在新标签页打开wiki页面
+                window.open('wiki.html', '_blank');
+            });
+        }
     }
     
     /**

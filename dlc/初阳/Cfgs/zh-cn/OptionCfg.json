@@ -3725,6 +3725,40 @@
         "miniGame": [], 
         "tag": null
     }, 
+    "32490201": {
+        "id": 32490201, 
+        "content": "情侣", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            324902005
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
+    "32490202": {
+        "id": 32490202, 
+        "content": "朋友", 
+        "precondition": [], 
+        "pressure": [], 
+        "stateCond": [], 
+        "check": [], 
+        "showTxt": null, 
+        "talkId": [
+            324902012
+        ], 
+        "talkId2": [], 
+        "effect": [], 
+        "effect2": [], 
+        "miniGame": [], 
+        "tag": null
+    }, 
     "32591101": {
         "id": 32591101, 
         "content": "人都有饮食偏好", 

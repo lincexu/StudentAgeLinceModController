@@ -42,7 +42,7 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_10103", 
+        "icon": "valueview/img_jzg_dangji", 
         "upgrade": 210102, 
         "diss": 310102, 
         "upgradeTxt": "机不可失，时不再来", 
@@ -217,7 +217,7 @@
             ]
         ], 
         "desc": "每个朋友/好友为你提供零花钱+0.5/回合，密友/挚友/至交效果加倍", 
-        "icon": "valueview/img_jzg_10102", 
+        "icon": "valueview/img_jzg_lianpi", 
         "upgrade": 210302, 
         "diss": 310302, 
         "upgradeTxt": "我想买单的，可是没带钱啊", 
@@ -531,7 +531,7 @@
             ]
         ], 
         "desc": "每20点心情，增加1点学习效率，最多+10", 
-        "icon": "valueview/img_jzg_10902", 
+        "icon": "valueview/img_jzg_laoyi", 
         "upgrade": 210902, 
         "diss": 310902, 
         "upgradeTxt": "休息是为了更好地前进", 
@@ -556,7 +556,7 @@
             ]
         ], 
         "desc": "每等级<color=#0070FF>阅历</color>使<sprite=6><color=#0070FF>心情</color><color=#0D9300>+0.5</color>/回合", 
-        "icon": "valueview/img_jzg_10503", 
+        "icon": "valueview/img_jzg_ziyou", 
         "upgrade": 210903, 
         "diss": 310903, 
         "upgradeTxt": "走自己的路，让别人去说吧", 
@@ -626,7 +626,7 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_11002", 
+        "icon": "valueview/img_jzg_bubu", 
         "upgrade": 211003, 
         "diss": 311003, 
         "upgradeTxt": "稳扎稳打，再创辉煌", 
@@ -665,7 +665,7 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_10103"
+        "icon": "valueview/img_jzg_dangji"
     }, 
     "210103": {
         "id": 210103, 
@@ -817,7 +817,7 @@
             ]
         ], 
         "desc": "每个朋友/好友为你提供零花钱+1/回合，密友/挚友/至交效果加倍", 
-        "icon": "valueview/img_jzg_10102"
+        "icon": "valueview/img_jzg_lianpi"
     }, 
     "210303": {
         "id": 210303, 
@@ -1048,7 +1048,7 @@
             ]
         ], 
         "desc": "每15点心情，增加1点学习效率，最多+20", 
-        "icon": "valueview/img_jzg_10902"
+        "icon": "valueview/img_jzg_laoyi"
     }, 
     "210903": {
         "id": 210903, 
@@ -1066,7 +1066,7 @@
             ]
         ], 
         "desc": "每等级<color=#0070FF>阅历</color><sprite=6>使<color=#0070FF>心情</color><color=#0D9300>+1</color>/回合", 
-        "icon": "valueview/img_jzg_10503"
+        "icon": "valueview/img_jzg_ziyou"
     }, 
     "211001": {
         "id": 211001, 
@@ -1136,7 +1136,7 @@
             ]
         ], 
         "desc": "每等级学习段位使心情+1/回合。若你拒绝过表白，心情额外+2/回合", 
-        "icon": "valueview/img_jzg_11002"
+        "icon": "valueview/img_jzg_bubu"
     }, 
     "310101": {
         "id": 310101, 
@@ -1189,7 +1189,7 @@
             ]
         ], 
         "desc": "精力回复-5，阅读速度+25。若你是单身，阅读速度额外+10", 
-        "icon": "valueview/img_jzg_10103"
+        "icon": "valueview/img_jzg_dangji"
     }, 
     "310103": {
         "id": 310103, 
@@ -1376,7 +1376,7 @@
             ]
         ], 
         "desc": " 信任+8/回合，但<color=#0070FF>同学</color>使你<sprite=4><color=#0070FF>零花钱</color>-0.5/回合", 
-        "icon": "valueview/img_jzg_10102"
+        "icon": "valueview/img_jzg_lianpi"
     }, 
     "310303": {
         "id": 310303, 
@@ -1664,7 +1664,7 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_10902"
+        "icon": "valueview/img_jzg_laoyi"
     }, 
     "310903": {
         "id": 310903, 
@@ -1688,7 +1688,7 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_10503"
+        "icon": "valueview/img_jzg_ziyou"
     }, 
     "311001": {
         "id": 311001, 
@@ -1750,6 +1750,6 @@
             ]
         ], 
         "desc": null, 
-        "icon": "valueview/img_jzg_11002"
+        "icon": "valueview/img_jzg_bubu"
     }
 }

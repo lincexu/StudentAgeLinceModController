@@ -9,29 +9,29 @@
     "2": {
         "id": 2, 
         "colorCnt": 3, 
-        "segmentCnt": 8, 
-        "speed": 0.11, 
+        "segmentCnt": 7, 
+        "speed": 0.1, 
         "target": 0.8
     }, 
     "3": {
         "id": 3, 
         "colorCnt": 4, 
-        "segmentCnt": 8, 
-        "speed": 0.12, 
+        "segmentCnt": 7, 
+        "speed": 0.1, 
         "target": 0.8
     }, 
     "4": {
         "id": 4, 
         "colorCnt": 4, 
-        "segmentCnt": 10, 
-        "speed": 0.13, 
+        "segmentCnt": 8, 
+        "speed": 0.1, 
         "target": 0.8
     }, 
     "5": {
         "id": 5, 
         "colorCnt": 4, 
-        "segmentCnt": 12, 
-        "speed": 0.14, 
+        "segmentCnt": 9, 
+        "speed": 0.1, 
         "target": 0.8
     }
 }

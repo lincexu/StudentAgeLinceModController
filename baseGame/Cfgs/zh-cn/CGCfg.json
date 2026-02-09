@@ -1158,6 +1158,31 @@
             320207044
         ]
     }, 
+    "880020": {
+        "id": 880020, 
+        "name": "罗晓纯：可乐", 
+        "urls": [
+            "cg2/cg_luo_shejiao", 
+            "cg2/cg_luo_shejiao2"
+        ], 
+        "group": 4, 
+        "idx": 0, 
+        "startTalks": [
+            720485030
+        ]
+    }, 
+    "880021": {
+        "id": 880021, 
+        "name": "程良：生日", 
+        "urls": [
+            "cg2/cg_cheng_shengri"
+        ], 
+        "group": 4, 
+        "idx": 0, 
+        "startTalks": [
+            720763063
+        ]
+    }, 
     "990001": {
         "id": 990001, 
         "urls": [
@@ -1651,7 +1676,7 @@
         "id": 990030, 
         "urls": [
             "mengshipin", 
-            "mengshipin"
+            "mengshipin2"
         ], 
         "comic": [
             4, 
@@ -1730,7 +1755,8 @@
     "990034": {
         "id": 990034, 
         "urls": [
-            "jiegesongli"
+            "jiegesongli", 
+            "jiegesongli2"
         ], 
         "comic": [
             1, 

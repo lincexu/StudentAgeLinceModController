@@ -215,7 +215,7 @@ class WikiManager {
                 dbKey: this.toSnakeCase(key.replace('Id', '')),
                 ...config
             }))
-            .sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+            .sort((a, b) => a.key.localeCompare(b.key, 'en'));;
         
         console.log('[Wiki] Wiki类型:', this.wikiTypes.map(t => ({ name: t.name, key: t.key, dbKey: t.dbKey })));
     }

@@ -7,18 +7,18 @@
             "cg/cg_end_yisheng2"
         ], 
         "group": 1, 
-        "idx": 58, 
+        "idx": 37, 
         "startTalks": []
     }, 
     "35": {
         "id": 35, 
         "name": "你：汇报", 
         "urls": [
-            "cg/cg_end_zhengxie", 
-            "cg/cg_end_zhengxie2"
+            "cg/cg_end_zhengxie2", 
+            "cg/cg_end_zhengxie"
         ], 
         "group": 1, 
-        "idx": 59, 
+        "idx": 38, 
         "startTalks": []
     }, 
     "37": {
@@ -29,7 +29,7 @@
             "cg/cg_end_zhongtong2"
         ], 
         "group": 1, 
-        "idx": 60, 
+        "idx": 39, 
         "startTalks": []
     }, 
     "38": {
@@ -40,7 +40,7 @@
             "cg/cg_end_cisha2"
         ], 
         "group": 1, 
-        "idx": 61, 
+        "idx": 40, 
         "startTalks": []
     }, 
     "39": {
@@ -51,7 +51,7 @@
             "cg/cg_end_newyork_2"
         ], 
         "group": 1, 
-        "idx": 36, 
+        "idx": 41, 
         "startTalks": []
     }, 
     "10351": {

@@ -5,6 +5,7 @@
             "file": "ActionCfg*.json",
             "desc": "行动ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "ActionEvtId": {
@@ -12,6 +13,7 @@
             "file": "ActionEvtCfg*.json",
             "desc": "行动事件ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "AudioId": {
@@ -19,6 +21,7 @@
             "file": "AudioCfg*.json",
             "desc": "音频ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "BgId": {
@@ -26,6 +29,7 @@
             "file": "BgCfg*.json",
             "desc": "背景ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "BookId": {
@@ -33,6 +37,7 @@
             "file": "BookCfg*.json",
             "desc": "书籍ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "CGId": {
@@ -40,6 +45,7 @@
             "file": "CGCfg*.json",
             "desc": "CGID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "EvtId": {
@@ -47,13 +53,15 @@
             "file": "EvtCfg*.json",
             "desc": "事件ID",
             "dataKey": "title",
+            "dataKeyList": null,
             "wiki": false
         },
         "IntentId": {
             "name": "意图",
             "file": "IntentCfg*.json",
             "desc": "意图ID",
-            "dataKey": "name",
+            "dataKey": "name",  
+            "dataKeyList": null,
             "wiki": false
         },
         "ItemId": {
@@ -61,6 +69,7 @@
             "file": "ItemCfg*.json",
             "desc": "物品ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "KZoneAvatarId": {
@@ -68,6 +77,7 @@
             "file": "KZoneAvatarCfg*.json",
             "desc": "空间头像ID",
             "dataKey": "icon",
+            "dataKeyList": null,
             "wiki": true
         },
         "KZoneCommentId": {
@@ -75,13 +85,15 @@
             "file": "KZoneCommentCfg*.json",
             "desc": "空间评论ID",
             "dataKey": "content",
+            "dataKeyList": null,
             "wiki": false
         },
         "KZoneContentId": {
             "name": "空间动态",
             "file": "KZoneContentCfg*.json",
             "desc": "空间动态ID",
-            "dataKey": "name",
+            "dataKey": "content",
+            "dataKeyList": null,
             "wiki": false
         },
         "KZoneProfileId": {
@@ -89,6 +101,7 @@
             "file": "KZoneProfileCfg*.json",
             "desc": "空间主页ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "KZoneColorId": {
@@ -96,6 +109,7 @@
             "file": "KZoneColorCfg*.json",
             "desc": "空间配色ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "KZoneFontId": {
@@ -103,6 +117,7 @@
             "file": "KZoneFontCfg*.json",
             "desc": "签名字体ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "PersonId": {
@@ -110,6 +125,7 @@
             "file": "PersonCfg*.json",
             "desc": "人物ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "PersonGrowId": {
@@ -117,6 +133,7 @@
             "file": "PersonGrowCfg*.json",
             "desc": "角色成长ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "RenshengguanMemoryId": {
@@ -124,6 +141,7 @@
             "file": "RenshengguanMemoryCfg*.json",
             "desc": "人生观记忆ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "ShopId": {
@@ -131,6 +149,7 @@
             "file": "ShopCfg*.json",
             "desc": "商店ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "TraitsId": {
@@ -138,6 +157,7 @@
             "file": "TraitsCfg*.json",
             "desc": "特征ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "AnimationId": {
@@ -145,6 +165,7 @@
             "file": "AnimationCfg*.json",
             "desc": "动画ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ClothTypeId": {
@@ -152,6 +173,7 @@
             "file": "ClothTypeCfg*.json",
             "desc": "衣服类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "EvtTypeId": {
@@ -159,6 +181,7 @@
             "file": "EvtTypeCfg*.json",
             "desc": "事件类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "FuncId": {
@@ -166,6 +189,7 @@
             "file": "FuncCfg*.json",
             "desc": "功能ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ItemTypeId": {
@@ -173,6 +197,7 @@
             "file": "ItemTypeCfg*.json",
             "desc": "物品类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ItemTagId": {
@@ -180,6 +205,7 @@
             "file": "ItemTagCfg*.json",
             "desc": "物品标签ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "MapId": {
@@ -187,6 +213,7 @@
             "file": "MapCfg*.json",
             "desc": "地图ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "MinigameId": {
@@ -194,6 +221,7 @@
             "file": "MinigameCfg*.json",
             "desc": "迷你游戏ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "GameId": {
@@ -201,6 +229,7 @@
             "file": "GameCfg*.json",
             "desc": "游戏ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "PersonalityTypeId": {
@@ -208,6 +237,7 @@
             "file": "PersonalityTypeCfg*.json",
             "desc": "人格类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "PersonAttrId": {
@@ -215,6 +245,7 @@
             "file": "PersonAttrCfg*.json",
             "desc": "角色属性ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "personStateID": {
@@ -222,6 +253,7 @@
             "file": "PersonStateCfg*.json",
             "desc": "角色状态ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "RelationId": {
@@ -229,6 +261,7 @@
             "file": "RelationCfg*.json",
             "desc": "关系ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "OtherRelationId": {
@@ -236,6 +269,7 @@
             "file": "OtherRelationCfg*.json",
             "desc": "其他关系ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ScoreRankId": {
@@ -243,6 +277,7 @@
             "file": "ScoreRankCfg*.json",
             "desc": "段位排名ID",
             "dataKey": "name",
+            "dataKeyList": "score,lv",
             "wiki": true
         },
         "SkillId": {
@@ -250,6 +285,7 @@
             "file": "SkillCfg*.json",
             "desc": "专长ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "TalkId": {
@@ -257,6 +293,7 @@
             "file": "TalkCfg*.json",
             "desc": "对话ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "ActionTypeId": {
@@ -264,6 +301,7 @@
             "file": "ActionTypeCfg*.json",
             "desc": "行动类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "SexId": {
@@ -271,6 +309,7 @@
             "file": "SexCfg*.json",
             "desc": "性别ID",
             "dataKey": "desc",
+            "dataKeyList": null,
             "wiki": true
         },
         "OptionId": {
@@ -278,6 +317,7 @@
             "file": "OptionCfg*.json",
             "desc": "选项ID",
             "dataKey": "content",
+            "dataKeyList": null,
             "wiki": false
         },
         "TextId": {
@@ -285,6 +325,7 @@
             "file": "TextCfg*.json",
             "desc": "文本ID",
             "dataKey": "text",
+            "dataKeyList": null,
             "wiki": true
         },
         "AudioGroupId": {
@@ -292,6 +333,7 @@
             "file": "AudioGroupCfg*.json",
             "desc": "音频组别ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "BookThemeId": {
@@ -299,6 +341,7 @@
             "file": "BookThemeCfg*.json",
             "desc": "书籍主题ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ColorId": {
@@ -306,6 +349,7 @@
             "file": "ColorCfg*.json",
             "desc": "颜色ID",
             "dataKey": "color",
+            "dataKeyList": null,
             "wiki": true
         },
         "PersonSocialId": {
@@ -313,6 +357,7 @@
             "file": "PersonSocialCfg*.json",
             "desc": "人物社交类别ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "RoundLinId": {
@@ -320,6 +365,7 @@
             "file": "RoundLinCfg*.json",
             "desc": "回合ID",
             "dataKey": "desc",
+            "dataKeyList": null,
             "wiki": true
         },
         "RenshengguanTypeId": {
@@ -327,13 +373,15 @@
             "file": "RenshengguanTypeCfg*.json",
             "desc": "人生观类型ID",
             "dataKey": "title",
+            "dataKeyList": null,
             "wiki": true
         },
         "RenshengguanSkillId": {
             "name": "人生观技能",
             "file": "RenshengguanSkillCfg*.json",
             "desc": "人生观技能ID",
-            "dataKey": "title",
+            "dataKey": "name",
+            "dataKeyList":"effectDesc,desc",
             "wiki": true
         },
         "OtherAttrId": {
@@ -341,6 +389,7 @@
             "file": "OtherAttrCfg*.json",
             "desc": "其他属性ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "SeasonId": {
@@ -348,6 +397,7 @@
             "file": "SeasonCfg*.json",
             "desc": "季节场景ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "SeasonTypeId": {
@@ -355,6 +405,7 @@
             "file": "SeasonTypeCfg*.json",
             "desc": "季节类型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "PhoneMsgId": {
@@ -362,6 +413,7 @@
             "file": "PhoneMsgCfg*.json",
             "desc": "短信ID",
             "dataKey": "content",
+            "dataKeyList": null,
             "wiki": false
         },
         "ExploreId": {
@@ -369,6 +421,7 @@
             "file": "ExploreCfg*.json",
             "desc": "探索项目ID",
             "dataKey": "title",
+            "dataKeyList": null,
             "wiki": true
         },
         "ClubDepartmentId": {
@@ -376,6 +429,7 @@
             "file": "ClubDepartmentCfg*.json",
             "desc": "社团部门ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ActivityId": {
@@ -383,6 +437,7 @@
             "file": "ActivityCfg*.json",
             "desc": "活动ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "KnowledgeId": {
@@ -390,6 +445,7 @@
             "file": "KnowledgeCfg*.json",
             "desc": "知识点ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "LessonId": {
@@ -397,6 +453,7 @@
             "file": "LessonCfg*.json",
             "desc": "课程ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "KnowledgeTreeId": {
@@ -404,6 +461,7 @@
             "file": "KnowledgeTreeCfg*.json",
             "desc": "知识树ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "ValueviewId": {
@@ -411,6 +469,7 @@
             "file": "ValueviewCfg*.json",
             "desc": "价值观ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "StudyMethodId": {
@@ -418,6 +477,7 @@
             "file": "StudyMethodCfg*.json",
             "desc": "方法论ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "LoveVindicateId": {
@@ -425,6 +485,7 @@
             "file": "LoveVindicateCfg*.json",
             "desc": "告白指标ID",
             "dataKey": "txt",
+            "dataKeyList": null,
             "wiki": true
         },
         "AchRankId": {
@@ -432,6 +493,7 @@
             "file": "AchRankCfg*.json",
             "desc": "成就等级ID",
             "dataKey": "title",
+            "dataKeyList": null,
             "wiki": true
         },
         "EndingPartId": {
@@ -439,6 +501,7 @@
             "file": "EndingPartCfg*.json",
             "desc": "结局段落ID",
             "dataKey": "desc",
+            "dataKeyList": null,
             "wiki": true
         },
         "UnivercityRankId": {
@@ -446,6 +509,7 @@
             "file": "UnivercityRankCfg*.json",
             "desc": "大学档次ID",
             "dataKey": "score",
+            "dataKeyList": null,
             "wiki": true
         },
         "EndingOptionId": {
@@ -453,6 +517,7 @@
             "file": "EndingOptionCfg*.json",
             "desc": "结局选项ID",
             "dataKey": "txt",
+            "dataKeyList": null,
             "wiki": true
         },
         "JobId": {
@@ -460,6 +525,7 @@
             "file": "JobCfg*.json",
             "desc": "工作ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "NegotiationPlayerId": {
@@ -467,6 +533,7 @@
             "file": "NegotiationPlayerCfg*.json",
             "desc": "舌战玩家ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "NegotiationBuffId": {
@@ -474,6 +541,7 @@
             "file": "NegotiationBuffCfg*.json",
             "desc": "舌战buffID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "NegotiationMiniGameCardTypeId": {
@@ -481,6 +549,7 @@
             "file": "NegotiationMiniGameCardTypeCfg*.json",
             "desc": "舌战牌型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "NegotiationSkillId": {
@@ -488,6 +557,7 @@
             "file": "NegotiationSkillCfg*.json",
             "desc": "舌战技能ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "HonorShopId": {
@@ -495,6 +565,7 @@
             "file": "HonorShopCfg*.json",
             "desc": "荣誉商店ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": false
         },
         "LanguageLinId": {
@@ -502,6 +573,7 @@
             "file": "LanguageLinCfg*.json",
             "desc": "语言ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "IntrospectionSlotId": {
@@ -509,6 +581,7 @@
             "file": "IntrospectionSlotCfg*.json",
             "desc": "反思槽ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "FishBaitId": {
@@ -516,6 +589,7 @@
             "file": "FishBaitCfg*.json",
             "desc": "鱼饵ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         },
         "NegotiationId": {
@@ -523,6 +597,7 @@
             "file": "NegotiationCfg*.json",
             "desc": "交涉ID",
             "dataKey": "name",
+            "dataKeyList": "name1,lv",
             "wiki": true
         },
         "LoveBreakfastId": {
@@ -530,6 +605,7 @@
             "file": "LoveBreakfastCfg*.json",
             "desc": "爱心早餐ID",
             "dataKey": "item",
+            "dataKeyList": null,
             "wiki": true
         },
         "GuideId": {
@@ -537,6 +613,7 @@
             "file": "GuideCfg*.json",
             "desc": "引导ID",
             "dataKey": "tips",
+            "dataKeyList": null,
             "wiki": true
         },
         "HairTypeId": {
@@ -544,6 +621,7 @@
             "file": "HairTypeCfg*.json",
             "desc": "发型ID",
             "dataKey": "name",
+            "dataKeyList": null,
             "wiki": true
         }
     },

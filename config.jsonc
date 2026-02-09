@@ -19,5 +19,5 @@
   "horizontalPageSize": 10,
   "tableLayout": "horizontal",
   "includeDlcSunrise": true,
-  "beta": true
+  "beta": false
 }

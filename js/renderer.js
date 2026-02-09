@@ -1981,6 +1981,9 @@ class ResultRenderer {
      * @returns {string} 名称
      */
     _getNameBySingleIdType(idType, idValue) {
+        // 提取基础ID类型（去掉末尾的数字，如 evtId1 -> evtId, itemId2 -> itemId）
+        const baseIdType = idType.replace(/\d+$/, '');
+        
         // ID类型映射表 - 将常见的ID类型映射到数据库中的类型名称
         const idTypeMapping = {
             'EvtId': 'evt',
@@ -2000,12 +2003,12 @@ class ResultRenderer {
             'KZoneProfileId': 'k_zone_profile'
         };
         
-        // 首先尝试从映射表中获取类型名称
-        let typeName = idTypeMapping[idType];
+        // 首先尝试从映射表中获取类型名称（使用基础ID类型）
+        let typeName = idTypeMapping[baseIdType];
         
         // 如果映射表中没有，则动态提取类型名称（去掉Id后缀）
         if (!typeName) {
-            typeName = idType.replace('Id', '');
+            typeName = baseIdType.replace('Id', '');
             // 转换为snake_case格式
             typeName = typeName.replace(/([A-Z])/g, (match) => '_' + match.toLowerCase()).replace(/^_/, '');
         }

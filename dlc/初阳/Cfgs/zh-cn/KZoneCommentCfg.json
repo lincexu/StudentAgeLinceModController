@@ -247,7 +247,7 @@
         "id": 1030208, 
         "roles": [
             3, 
-            0
+            103
         ], 
         "parent": 1030206, 
         "content": "阿慈，江湖救急！", 
@@ -289,6 +289,44 @@
         ], 
         "parent": 1030206, 
         "content": "玛德有这么个组长真的丢脸丢大发了……", 
+        "comments": [
+            [
+                1030211, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030211": {
+        "id": 1030211, 
+        "roles": [
+            102, 
+            103
+        ], 
+        "parent": 1030206, 
+        "content": "阿慈帮忙做的吗？做得真的很好", 
+        "comments": [
+            [
+                1030212, 
+                2
+            ]
+        ], 
+        "options": [], 
+        "effect": [], 
+        "condition": [], 
+        "personality": []
+    }, 
+    "1030212": {
+        "id": 1030212, 
+        "roles": [
+            3, 
+            103
+        ], 
+        "parent": 1030206, 
+        "content": "遥想当初还是你教她用手机……现如今数码能力已经一个天上……", 
         "comments": [], 
         "options": [], 
         "effect": [], 

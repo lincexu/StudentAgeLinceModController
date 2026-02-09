@@ -304,7 +304,7 @@
     "314153": {
         "id": 314153, 
         "title": "谢辰晖科幻片", 
-        "npc": 205, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -328,7 +328,7 @@
     "314154": {
         "id": 314154, 
         "title": "谢辰晖神偷奶爸", 
-        "npc": 206, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [
             [
@@ -359,7 +359,7 @@
     "314155": {
         "id": 314155, 
         "title": "谢辰晖悬疑片", 
-        "npc": 207, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -383,7 +383,7 @@
     "314156": {
         "id": 314156, 
         "title": "谢辰晖青春伤痛片", 
-        "npc": 208, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -407,7 +407,7 @@
     "314157": {
         "id": 314157, 
         "title": "谢辰晖泰坦尼克号", 
-        "npc": 209, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -431,7 +431,7 @@
     "314158": {
         "id": 314158, 
         "title": "谢辰晖运动员记录片", 
-        "npc": 210, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -455,7 +455,7 @@
     "314159": {
         "id": 314159, 
         "title": "谢辰晖奇幻片神话", 
-        "npc": 211, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -479,7 +479,7 @@
     "314160": {
         "id": 314160, 
         "title": "谢辰晖文艺爱情片", 
-        "npc": 212, 
+        "npc": 204, 
         "weight": 0, 
         "condition": [], 
         "rate": 0, 
@@ -1796,7 +1796,7 @@
                 -1.0, 
                 320905.0, 
                 1.0, 
-                4.0
+                3.0
             ], 
             [
                 3.0, 
@@ -2043,7 +2043,7 @@
                 1.0, 
                 320905.0, 
                 1.0, 
-                5.0
+                4.0
             ], 
             [
                 3.0, 
@@ -4072,6 +4072,116 @@
         "miniGame": [], 
         "displayType": 0
     }, 
+    "324901": {
+        "id": 324901, 
+        "title": "1教室浇花", 
+        "npc": 103, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            324901001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 2, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "324902": {
+        "id": 324902, 
+        "title": "2操场看鸟", 
+        "npc": 103, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            324902001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 3, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "324903": {
+        "id": 324903, 
+        "title": "3书店买书", 
+        "npc": 103, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            324903001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 6, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "324904": {
+        "id": 324904, 
+        "title": "4不限", 
+        "npc": 103, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            324904001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 7, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "324905": {
+        "id": 324905, 
+        "title": "5海滩看晚霞", 
+        "npc": 103, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            324905001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 10, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
     "325901": {
         "id": 325901, 
         "title": "回南天", 
@@ -4303,7 +4413,13 @@
         "title": "奶茶店上新了", 
         "npc": 103, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                2.0, 
+                32090406.0
+            ]
+        ], 
         "rate": 1.0, 
         "probability": [], 
         "maxcount": 1, 
@@ -4511,7 +4627,7 @@
     }, 
     "325918": {
         "id": 325918, 
-        "title": "{0}长高了", 
+        "title": "长高", 
         "npc": 103, 
         "weight": 0, 
         "condition": [
@@ -4595,7 +4711,7 @@
     }, 
     "325921": {
         "id": 325921, 
-        "title": "{0}爸妈吵架了", 
+        "title": "爸妈吵架", 
         "npc": 103, 
         "weight": 0, 
         "condition": [
@@ -5622,6 +5738,50 @@
         "miniGame": [], 
         "displayType": 0
     }, 
+    "340254": {
+        "id": 340254, 
+        "title": "存钱罐送给陈心慈", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340254001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340256": {
+        "id": 340256, 
+        "title": "存钱罐送给谢辰晖", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340256001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
     "351101": {
         "id": 351101, 
         "title": "小鱼姐", 
@@ -6190,7 +6350,7 @@
         ], 
         "type": 71, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 4, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -6236,7 +6396,7 @@
         ], 
         "type": 2, 
         "desc": null, 
-        "mapId": 1, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -6405,8 +6565,8 @@
         "condition": [
             [
                 3.0, 
-                1.0, 
-                721022.0
+                3.0, 
+                721022001.0
             ], 
             [
                 2.0, 
@@ -6728,7 +6888,7 @@
         ], 
         "type": 71, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -6811,7 +6971,7 @@
         ], 
         "type": 520, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 4, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7636,7 +7796,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 2, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7658,7 +7818,7 @@
         ], 
         "type": 4, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7680,7 +7840,7 @@
         ], 
         "type": 0, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7856,7 +8016,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 7, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7878,7 +8038,7 @@
         ], 
         "type": 4, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7911,7 +8071,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7933,7 +8093,7 @@
         ], 
         "type": 4, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -7971,7 +8131,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8009,7 +8169,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8049,7 +8209,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8104,7 +8264,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8313,7 +8473,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8390,7 +8550,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8445,7 +8605,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8500,7 +8660,7 @@
         ], 
         "type": 20, 
         "desc": null, 
-        "mapId": 0, 
+        "mapId": 3, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 
@@ -8763,6 +8923,122 @@
         "type": 0, 
         "desc": null, 
         "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "725001": {
+        "id": 725001, 
+        "title": "1教室走廊", 
+        "npc": 204, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            725001001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 2, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "725002": {
+        "id": 725002, 
+        "title": "2操场", 
+        "npc": 204, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            725002001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 3, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "725003": {
+        "id": 725003, 
+        "title": "3游乐园", 
+        "npc": 204, 
+        "weight": 0, 
+        "condition": [
+            [
+                3.0, 
+                1.0, 
+                721053.0
+            ]
+        ], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            725003001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 11, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "725004": {
+        "id": 725004, 
+        "title": "4商场服装区", 
+        "npc": 204, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            725004001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 7002, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "725005": {
+        "id": 725005, 
+        "title": "5商场", 
+        "npc": 204, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            725005001
+        ], 
+        "type": 21, 
+        "desc": null, 
+        "mapId": 7, 
         "content": null, 
         "options": [], 
         "maxoptions": 0, 

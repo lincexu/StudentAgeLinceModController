@@ -232,20 +232,12 @@ class ConfigManager {
             }
             
             // 3. 合并配置
-            // 先合并默认配置和文件配置，确保文件配置中的所有项都被加载
-            let mergedConfig = this.mergeConfig(this.defaultConfig, fileConfig);
+            // 先合并默认配置和用户配置（localStorage）
+            let mergedConfig = this.mergeConfig(this.defaultConfig, config);
             
-            // 然后合并用户配置，用户配置会覆盖文件配置中的非应用信息项
-            mergedConfig = this.mergeConfig(mergedConfig, config);
-            
-            // 最后确保应用信息和开发者密码始终从文件配置中读取（如果存在）
+            // 然后文件配置（config.jsonc）覆盖所有配置，确保实时读取本地配置
             if (fileConfig) {
-                const appInfoKeys = ['projectName', 'author', 'version', 'description', 'developerPassword'];
-                appInfoKeys.forEach(key => {
-                    if (fileConfig.hasOwnProperty(key)) {
-                        mergedConfig[key] = fileConfig[key];
-                    }
-                });
+                mergedConfig = this.mergeConfig(mergedConfig, fileConfig);
             }
             
             this.config = mergedConfig;

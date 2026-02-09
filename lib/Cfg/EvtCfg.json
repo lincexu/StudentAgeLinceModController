@@ -557,18 +557,45 @@
         "type": 51, 
         "maxcount": 1
     }, 
-    "44": {
-        "id": 44, 
+    "29": {
+        "id": 29, 
         "condition": [
             [
                 2.0, 
-                11.0, 
-                2007.0, 
-                8.0
+                3.0, 
+                2008.0, 
+                5.0
             ]
         ], 
         "rate": 1.0, 
-        "effect": [], 
+        "effect": [
+            [
+                101.0, 
+                1.0, 
+                127.0
+            ]
+        ], 
+        "type": 51, 
+        "maxcount": 1
+    }, 
+    "30": {
+        "id": 30, 
+        "condition": [
+            [
+                2.0, 
+                3.0, 
+                2008.0, 
+                1.0
+            ]
+        ], 
+        "rate": 1.0, 
+        "effect": [
+            [
+                40.0, 
+                9.0, 
+                1.0
+            ]
+        ], 
         "type": 51, 
         "maxcount": 1
     }, 
@@ -9063,6 +9090,52 @@
         "displayType": 0, 
         "rate": 0
     }, 
+    "310191": {
+        "id": 310191, 
+        "title": "潜能觉醒", 
+        "weight": 0, 
+        "condition": [
+            [
+                999.0, 
+                200.0, 
+                949.0
+            ], 
+            [
+                999.0, 
+                -200.0, 
+                950.0
+            ], 
+            [
+                2.0, 
+                1.0, 
+                8.0
+            ], 
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "probability": [
+            1.0
+        ], 
+        "maxcount": 12, 
+        "talkId": [
+            310191001
+        ], 
+        "type": 1, 
+        "desc": null, 
+        "npc": 0, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0, 
+        "rate": 0
+    }, 
     "310192": {
         "id": 310192, 
         "title": "潜能觉醒", 
@@ -12537,7 +12610,7 @@
             [
                 2.0, 
                 110.0, 
-                2008.0, 
+                2009.0, 
                 1.0
             ], 
             [
@@ -12546,11 +12619,6 @@
                 101.0, 
                 7.0, 
                 12.0
-            ], 
-            [
-                52.0, 
-                1.0, 
-                -1.0
             ]
         ], 
         "probability": [
@@ -13409,40 +13477,6 @@
         "maxcount": 1, 
         "talkId": [
             313021001
-        ], 
-        "type": 60, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": []
-    }, 
-    "313022": {
-        "id": 313022, 
-        "title": "放鞭炮", 
-        "npc": 502, 
-        "weight": 0, 
-        "condition": [
-            [
-                8.0, 
-                1.0, 
-                502.0
-            ], 
-            [
-                2.0, 
-                4.0, 
-                1.0
-            ]
-        ], 
-        "probability": [
-            0.2
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            313022001
         ], 
         "type": 60, 
         "desc": null, 
@@ -15054,235 +15088,6 @@
         "maxcount": 1, 
         "talkId": [
             314088001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314091": {
-        "id": 314091, 
-        "title": "收保护费1山鸡哥", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314091001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314092": {
-        "id": 314092, 
-        "title": "收保护费1.1山鸡哥2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [
-            [
-                3.0, 
-                3.0, 
-                314091020.0
-            ], 
-            [
-                3.0, 
-                -3.0, 
-                314092013.0
-            ]
-        ], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 10, 
-        "talkId": [
-            314092001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314093": {
-        "id": 314093, 
-        "title": "收保护费2南哥", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [
-            [
-                3.0, 
-                3.0, 
-                314091019.0, 
-                314092013.0
-            ]
-        ], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314093001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314094": {
-        "id": 314094, 
-        "title": "收保护费3瘦子", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314094001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314095": {
-        "id": 314095, 
-        "title": "收保护费4篮球哥", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314095001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314096": {
-        "id": 314096, 
-        "title": "收保护费5叫兽突袭", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314096001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314097": {
-        "id": 314097, 
-        "title": "收保护费6被抓包", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [
-            [
-                12.0, 
-                1.0, 
-                9901.0, 
-                3.0
-            ]
-        ], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314097001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "314098": {
-        "id": 314098, 
-        "title": "收保护费7结局", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [
-            [
-                12.0, 
-                1.0, 
-                9901.0, 
-                5.0
-            ], 
-            [
-                3.0, 
-                1.0, 
-                314097.0
-            ]
-        ], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            314098001
         ], 
         "type": 4, 
         "desc": null, 
@@ -16983,6 +16788,11 @@
                 1.0, 
                 201.0, 
                 80.0
+            ], 
+            [
+                3.0, 
+                -1.0, 
+                720688.0
             ]
         ], 
         "rate": 0.3, 
@@ -43909,6 +43719,182 @@
         "miniGame": [], 
         "displayType": 0
     }, 
+    "340255": {
+        "id": 340255, 
+        "title": "存钱罐送给梁超杰", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340255001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340257": {
+        "id": 340257, 
+        "title": "存钱罐送给薛诗蕾", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340257001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340258": {
+        "id": 340258, 
+        "title": "存钱罐送给罗晓纯", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340258001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340259": {
+        "id": 340259, 
+        "title": "存钱罐送给肖清雅", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340259001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340260": {
+        "id": 340260, 
+        "title": "存钱罐送给谭梓君", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340260001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340261": {
+        "id": 340261, 
+        "title": "存钱罐送给程良", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340261001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340262": {
+        "id": 340262, 
+        "title": "存钱罐送给林嘉宇", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340262001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
+    "340263": {
+        "id": 340263, 
+        "title": "存钱罐送给孟怀安", 
+        "npc": 0, 
+        "weight": 0, 
+        "condition": [], 
+        "rate": 1.0, 
+        "probability": [], 
+        "maxcount": 1, 
+        "talkId": [
+            340263001
+        ], 
+        "type": 0, 
+        "desc": null, 
+        "mapId": 0, 
+        "content": null, 
+        "options": [], 
+        "maxoptions": 0, 
+        "effect": [], 
+        "miniGame": [], 
+        "displayType": 0
+    }, 
     "350101": {
         "id": 350101, 
         "title": "男外星人事件1奇遇（五年级）", 
@@ -50360,606 +50346,6 @@
         "miniGame": [], 
         "displayType": 0
     }, 
-    "714001": {
-        "id": 714001, 
-        "title": "女生行动事件-自习", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714001001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714002": {
-        "id": 714002, 
-        "title": "女生行动事件-自习2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714002001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714006": {
-        "id": 714006, 
-        "title": "女生行动事件-聊八卦", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714006001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714007": {
-        "id": 714007, 
-        "title": "女生行动事件-聊八卦2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714007001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714012": {
-        "id": 714012, 
-        "title": "女生行动事件-锻炼", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714012001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714013": {
-        "id": 714013, 
-        "title": "女生行动事件锻炼", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714013001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714014": {
-        "id": 714014, 
-        "title": "女生行动事件-锻炼2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714014001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714016": {
-        "id": 714016, 
-        "title": "女生行动事件-借阅杂志", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714016001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714017": {
-        "id": 714017, 
-        "title": "女生行动事件-借杂志2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714017001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714026": {
-        "id": 714026, 
-        "title": "女生行动事件-爬山", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714026001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714027": {
-        "id": 714027, 
-        "title": "女生行动事件-爬山2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714027001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714031": {
-        "id": 714031, 
-        "title": "女生行动事件-做家务", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714031001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714032": {
-        "id": 714032, 
-        "title": "女生行动事件-做家务2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714032001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714036": {
-        "id": 714036, 
-        "title": "写作业", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714036001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714037": {
-        "id": 714037, 
-        "title": "女生行动事件-写作业2", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714037001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714041": {
-        "id": 714041, 
-        "title": "女生行动事件-玩游戏", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714041001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714046": {
-        "id": 714046, 
-        "title": "女生行动事件-看电视", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714046001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714051": {
-        "id": 714051, 
-        "title": "女生行动事件-看电影", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714051001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714056": {
-        "id": 714056, 
-        "title": "女生行动事件-坐过山车", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714056001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714081": {
-        "id": 714081, 
-        "title": "探险1-消失的琥珀", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714081001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714082": {
-        "id": 714082, 
-        "title": "探险2——瀑布", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714082001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714083": {
-        "id": 714083, 
-        "title": "探险3——偶遇寺庙", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714083001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714084": {
-        "id": 714084, 
-        "title": "探险4——一只松鼠", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714084001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714085": {
-        "id": 714085, 
-        "title": "探险5——小鸟", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            0.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714085001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
-    "714099": {
-        "id": 714099, 
-        "title": "看电影", 
-        "npc": 0, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714099001
-        ], 
-        "type": 4, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "replace": [], 
-        "miniGame": [], 
-        "displayType": 0
-    }, 
     "714201": {
         "id": 714201, 
         "title": "林嘉宇看电影恐怖片", 
@@ -51211,6 +50597,11 @@
                 110.0, 
                 2010.0, 
                 9.0
+            ], 
+            [
+                3.0, 
+                -1.0, 
+                720688.0
             ]
         ], 
         "probability": [
@@ -51236,7 +50627,13 @@
         "title": "孟怀安《楚门的世界》", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51260,7 +50657,13 @@
         "title": "孟怀安国产恐怖烂片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51284,7 +50687,13 @@
         "title": "孟怀安灾难片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51308,7 +50717,13 @@
         "title": "孟怀安商业烂片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51332,7 +50747,13 @@
         "title": "孟怀安喜剧片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51356,7 +50777,13 @@
         "title": "孟怀安科幻片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51375,36 +50802,18 @@
         "displayType": 0, 
         "rate": 0
     }, 
-    "714218": {
-        "id": 714218, 
-        "title": "孟怀安柯南剧场版", 
-        "npc": 201, 
-        "weight": 0, 
-        "condition": [], 
-        "probability": [
-            1.0
-        ], 
-        "maxcount": 1, 
-        "talkId": [
-            714218001
-        ], 
-        "type": 521, 
-        "desc": null, 
-        "mapId": 0, 
-        "content": null, 
-        "options": [], 
-        "maxoptions": 0, 
-        "effect": [], 
-        "miniGame": [], 
-        "displayType": 0, 
-        "rate": 0
-    }, 
     "714219": {
         "id": 714219, 
         "title": "孟怀安东南亚喜剧片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51428,7 +50837,13 @@
         "title": "孟怀安青春片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -51452,7 +50867,13 @@
         "title": "孟怀安港片", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -61108,7 +60529,7 @@
             [
                 3.0, 
                 1.0, 
-                720676.0
+                720675.0
             ], 
             [
                 2.0, 
@@ -61667,7 +61088,7 @@
                 1.0, 
                 720661.0, 
                 1.0, 
-                6.0
+                5.0
             ], 
             [
                 1.0, 
@@ -61722,7 +61143,7 @@
                 -1.0, 
                 720661.0, 
                 1.0, 
-                5.0
+                4.0
             ], 
             [
                 3.0, 
@@ -68406,7 +67827,13 @@
         "title": "13游乐园跟踪", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68430,7 +67857,13 @@
         "title": "14商场打折", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68454,7 +67887,13 @@
         "title": "15海滩海螺", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68478,7 +67917,13 @@
         "title": "16书店看书", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68502,7 +67947,13 @@
         "title": "17操场偶遇", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68526,7 +67977,13 @@
         "title": "18走廊害羞", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68550,7 +68007,13 @@
         "title": "19小卖部内幕", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68574,7 +68037,13 @@
         "title": "20双子峰烤肠", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -68603,6 +68072,11 @@
                 3.0, 
                 30.0, 
                 724621001.0
+            ], 
+            [
+                3.0, 
+                -1.0, 
+                720688.0
             ]
         ], 
         "probability": [
@@ -68633,6 +68107,11 @@
                 3.0, 
                 1.0, 
                 720661.0
+            ], 
+            [
+                3.0, 
+                -1.0, 
+                720688.0
             ]
         ], 
         "probability": [
@@ -69346,7 +68825,13 @@
         "title": "香菜怎么样", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69368,7 +68853,13 @@
         "title": "对考试的看法", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69390,7 +68881,13 @@
         "title": "平常打扮吗", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69412,7 +68909,13 @@
         "title": "关于做选择", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69434,7 +68937,13 @@
         "title": "作文竞赛", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69456,7 +68965,13 @@
         "title": "作业多了", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69478,7 +68993,13 @@
         "title": "涨价的面", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69500,7 +69021,13 @@
         "title": "没雪的冬天", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69522,7 +69049,13 @@
         "title": "摇滚音乐节", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69544,7 +69077,13 @@
         "title": "星座性格", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69566,7 +69105,13 @@
         "title": "游戏类型", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69588,7 +69133,13 @@
         "title": "甜食容易胖", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69610,7 +69161,13 @@
         "title": "看书", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69632,7 +69189,13 @@
         "title": "历史能想到什么", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69654,7 +69217,13 @@
         "title": "诗歌的喜好", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69676,7 +69245,13 @@
         "title": "孟怀安姑姑", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69698,7 +69273,13 @@
         "title": "孟怀安妈妈", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69720,7 +69301,13 @@
         "title": "爱睡觉的原因", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69742,7 +69329,13 @@
         "title": "对你的评价", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69764,7 +69357,13 @@
         "title": "喜欢的颜色", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69814,7 +69413,13 @@
         "title": "孟怀安的家乡", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69841,6 +69446,11 @@
                 3.0, 
                 3.0, 
                 725623001.0
+            ], 
+            [
+                3.0, 
+                -1.0, 
+                720688.0
             ]
         ], 
         "probability": [
@@ -69864,7 +69474,13 @@
         "title": "不想追剧", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69886,7 +69502,13 @@
         "title": "会做饭吗", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69908,7 +69530,13 @@
         "title": "喜欢的明星", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69930,7 +69558,13 @@
         "title": "人都会死的", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69952,7 +69586,13 @@
         "title": "会跳舞吗", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
@@ -69974,7 +69614,13 @@
         "title": "对未来的考虑", 
         "npc": 201, 
         "weight": 0, 
-        "condition": [], 
+        "condition": [
+            [
+                3.0, 
+                -1.0, 
+                720688.0
+            ]
+        ], 
         "probability": [
             1.0
         ], 
