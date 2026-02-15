@@ -1436,5 +1436,67 @@
             "status": "optional",
             "rule": "number"
         }
+    },
+    "GlobalAchKey": {
+        "id": {
+            "name": "ID",
+            "desc": "必填\n我将在v0.5.0版本更新编辑功能\n届时此项目将作为支持编辑官方非支持内容的测试",
+            "status": "required",
+            "rule": "index"
+        },
+        "name": {
+            "name": "名称",
+            "desc": "全局成就名称",
+            "status": "required",
+            "rule": "text"
+        },
+        "cond": {
+            "name": "条件",
+            "desc": "全局成就生效条件",
+            "status": "optional",
+            "rule": "conditionRules"
+        },
+        "effect": {
+            "name": "效果",
+            "desc": "全局成就生效时的效果",
+            "status": "optional",
+            "rule": "effectRules"
+        },
+        "desc": {
+            "name": "描述",
+            "desc": "全局成就描述",
+            "status": "optional",
+            "rule": "text"
+        },
+        "impossible": {
+            "name": "不可能",
+            "desc": "满足以下条件无法触发成就",
+            "status": "optional",
+            "rule": "conditionRules"
+        },
+        "icon": {
+            "name": "图标",
+            "desc": "全局成就图标",
+            "status": "optional",
+            "rule": "path"
+        },
+        "texture": {
+            "name": "图片",
+            "desc": "全局成就图片",
+            "status": "optional",
+            "rule": "path"
+        },
+        "hide": {
+            "name": "隐藏",
+            "desc": "是否隐藏此全局成就\n0：不隐藏\n1：隐藏",
+            "status": "optional",
+            "rule": "number"
+        },
+        "checkType": {
+            "name": "检查类型",
+            "desc": "全局成就检查类型",
+            "status": "optional",
+            "rule": "number"
+        }
     }
 }

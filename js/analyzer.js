@@ -381,7 +381,7 @@ class EventAnalyzer {
         const idSet = this.modIds[type].get(folder.name);
         const modDetail = this.modDetails.get(folder.name);
         
-        // 提取ID
+        // 提取ID并添加到数据库
         for (const [key, data] of Object.entries(jsonData)) {
             // 确保是有效的对象且包含ID字段
             if (data && typeof data === 'object') {
@@ -407,6 +407,21 @@ class EventAnalyzer {
                     // 更新总数
                     this.totalCounts[type]++;
                 }
+            }
+        }
+        
+        // 将解析的数据添加到idDatabase，供文本替换系统使用
+        if (window.idDatabase && window.idDatabase.initialized) {
+            try {
+                // 转换类型名称：ActionId -> action
+                const typeName = type.replace('Id', '').toLowerCase();
+                await window.idDatabase.processData(typeName, jsonData, {
+                    source: `${folder.name}/${typeConfig.fileName}`,
+                    type: 'mod'
+                });
+                console.log(`[Analyzer] 已将 ${folder.name} 的 ${type} 数据添加到数据库`);
+            } catch (error) {
+                console.warn(`[Analyzer] 添加数据到数据库失败:`, error);
             }
         }
     }

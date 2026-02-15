@@ -68,6 +68,9 @@ class ResultRenderer {
      */
     async preloadRules() {
         try {
+            // 清除旧缓存，确保重新加载
+            this.rulesCache = {};
+            
             // 预加载effectRules
             const effectRules = await this.loadRuleFile('effectRules');
             if (effectRules) {
@@ -89,9 +92,19 @@ class ResultRenderer {
             
             // 规则加载完成，触发重新渲染
             this.onRulesLoaded();
+            
+            console.log('[ResultRenderer] 规则文件加载完成，已缓存:', Object.keys(this.rulesCache));
         } catch (error) {
             console.error('预加载规则文件出错:', error);
         }
+    }
+    
+    /**
+     * 重新加载所有规则文件（清除缓存后重新加载）
+     */
+    async reloadRules() {
+        console.log('[ResultRenderer] 重新加载规则文件...');
+        await this.preloadRules();
     }
     
     /**
@@ -1135,18 +1148,21 @@ class ResultRenderer {
                                                                              
                                                                             // 应用ID替换功能
                                                                             let displayValue = value;
+                                                                            let matchedRule = null;
                                                                             if (rule) {
                                                                                 if (typeof value === 'object' && value !== null) {
                                                                                     // 如果是对象，尝试JSON.stringify后替换
                                                                                     try {
                                                                                         const jsonString = JSON.stringify(value);
                                                                                         displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                                                     } catch (e) {
                                                                                         // 忽略错误，使用原始值
                                                                                     }
                                                                                 } else {
                                                                                     // 直接替换
                                                                                     displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                                                 }
                                                                             }
                                                                              
@@ -1190,10 +1206,13 @@ class ResultRenderer {
                                                                                 }
                                                                             }
                                                                              
+                                                                            // 确定显示的规则：如果有匹配的规则则显示匹配的规则，否则显示原始规则
+                                                                            const displayRule = this.formatMatchedRuleForAttr(matchedRule, rule);
+                                                                            
                                                                             return `
                                                                             <div class="vertical-table-row">
                                                                                 <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}"${wikiLink}>${attributeName}:</div>
-                                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                                                     <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
                                                                                 </div>
                                                                             </div>
@@ -1302,18 +1321,21 @@ class ResultRenderer {
                                                                              
                                                                             // 应用ID替换功能
                                                                             let displayValue = value;
+                                                                            let matchedRule = null;
                                                                             if (rule) {
                                                                                 if (typeof value === 'object' && value !== null) {
                                                                                     // 如果是对象，尝试JSON.stringify后替换
                                                                                     try {
                                                                                         const jsonString = JSON.stringify(value);
                                                                                         displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                                                     } catch (e) {
                                                                                         // 忽略错误，使用原始值
                                                                                     }
                                                                                 } else {
                                                                                     // 直接替换
                                                                                     displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                                                 }
                                                                             }
                                                                              
@@ -1333,8 +1355,11 @@ class ResultRenderer {
                                                                                 formattedValue = window.spriteManager.parseText(formattedValue);
                                                                             }
                                                                              
+                                                                            // 确定显示的规则
+                                                                            const displayRule = this.formatMatchedRuleForAttr(matchedRule, rule);
+                                                                             
                                                                             return `
-                                                                            <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                            <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                                                 ${formattedValue}
                                                                             </td>
                                                                             `;
@@ -1471,12 +1496,69 @@ class ResultRenderer {
     }
     
     /**
+     * 替换ID并返回结果对象
+     * @param {*} value 原始值
+     * @param {string} rule rule属性值
+     * @returns {Object} { displayValue: 替换后的值, matchedRule: 匹配的规则 }
+     */
+    replaceIdWithResult(value, rule) {
+        const result = { displayValue: value, matchedRule: null };
+        
+        if (!rule) return result;
+        
+        if (typeof value === 'object' && value !== null) {
+            try {
+                const jsonString = JSON.stringify(value);
+                result.displayValue = this.replaceIdWithName(jsonString, rule);
+                result.matchedRule = this.lastMatchedRule;
+            } catch (e) {
+                // 忽略错误，使用原始值
+            }
+        } else {
+            result.displayValue = this.replaceIdWithName(value, rule);
+            result.matchedRule = this.lastMatchedRule;
+        }
+        
+        return result;
+    }
+    
+    /**
+     * 格式化匹配的规则为HTML属性安全的字符串
+     * @param {Array|Array[]} matchedRule 匹配的规则
+     * @param {string} originalRule 原始规则（作为备选）
+     * @returns {string} 格式化后的规则字符串
+     */
+    formatMatchedRuleForAttr(matchedRule, originalRule = '') {
+        if (!matchedRule) return originalRule || '';
+        
+        // 格式化单个规则数组，去掉字符串的双引号
+        const formatSingleRule = (rule) => {
+            return '[' + rule.map(item => {
+                if (typeof item === 'string') {
+                    return item; // 字符串不加引号
+                }
+                return item;
+            }).join(',') + ']';
+        };
+        
+        // 如果是数组（多个规则），格式化为多行显示
+        if (Array.isArray(matchedRule[0])) {
+            return matchedRule.map(r => formatSingleRule(r)).join('，');
+        } else {
+            return formatSingleRule(matchedRule);
+        }
+    }
+    
+    /**
      * 根据rule属性和文本内容进行ID检索和替换
      * @param {string} text 原始文本
      * @param {string} rule rule属性值
      * @returns {string} 替换后的文本
      */
     replaceIdWithName(text, rule) {
+        // 重置最近匹配的规则
+        this.lastMatchedRule = null;
+        
         // 检查rule是否为*Id类型（支持备选规则 A//B//C）
         if (rule && (rule.endsWith('Id') || rule.includes('Id//'))) {
             // 检查idDatabase是否可用
@@ -1571,7 +1653,9 @@ class ResultRenderer {
             // 尝试从缓存中获取规则文件
             const rulesData = this.rulesCache[rule];
             if (rulesData) {
-                return this.processRulesSync(text, rulesData, rule);
+                const result = this.processRulesSync(text, rulesData, rule);
+                this.lastMatchedRule = result.matchedRule;
+                return result.text;
             }
             
             // 如果缓存中没有，返回原始文本
@@ -1709,9 +1793,11 @@ class ResultRenderer {
      * @param {string|Array} text 原始文本
      * @param {Object} rulesData 规则数据
      * @param {string} ruleName 规则文件名（用于id索引查找）
-     * @returns {string} 替换后的文本
+     * @returns {Object} { text: 替换后的文本, matchedRule: 匹配的规则数组 }
      */
     processRulesSync(text, rulesData, ruleName) {
+        const result = { text: text, matchedRule: null };
+        
         // 处理不同格式的文本
         if (typeof text === 'string') {
             // 情况1: [[a,b,c,……]] - 在普通规则数组基础上增加一层[]
@@ -1719,8 +1805,10 @@ class ResultRenderer {
                 const match = text.match(/^\[\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]\]$/);
                 if (match) {
                     const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                    const replacedText = this.processRuleValues(values, rulesData, ruleName);
-                    return replacedText;
+                    const ruleResult = this.processRuleValues(values, rulesData, ruleName);
+                    result.text = ruleResult.text;
+                    result.matchedRule = ruleResult.matchedRule;
+                    return result;
                 }
             }
             
@@ -1729,16 +1817,22 @@ class ResultRenderer {
                 // 提取所有普通规则数组
                 const arrayMatches = text.match(/\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]/g);
                 if (arrayMatches) {
+                    const matchedRules = [];
                     const replacedArrays = arrayMatches.map(arrayStr => {
                         const match = arrayStr.match(/\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]/);
                         if (match) {
                             const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                            const replacedText = this.processRuleValues(values, rulesData, ruleName);
-                            return replacedText;
+                            const ruleResult = this.processRuleValues(values, rulesData, ruleName);
+                            if (ruleResult.matchedRule) {
+                                matchedRules.push(ruleResult.matchedRule);
+                            }
+                            return ruleResult.text;
                         }
                         return arrayStr;
                     });
-                    return replacedArrays.join('，');
+                    result.text = replacedArrays.join('，');
+                    result.matchedRule = matchedRules.length > 0 ? matchedRules : null;
+                    return result;
                 }
             }
             
@@ -1747,13 +1841,15 @@ class ResultRenderer {
                 const match = text.match(/^\[((-?\d+(\.\d+)?)(,\s*-?\d+(\.\d+)?)*)\]$/);
                 if (match) {
                     const values = match[1].split(',').map(v => parseFloat(v.trim()));
-                    const replacedText = this.processRuleValues(values, rulesData, ruleName);
-                    return replacedText;
+                    const ruleResult = this.processRuleValues(values, rulesData, ruleName);
+                    result.text = ruleResult.text;
+                    result.matchedRule = ruleResult.matchedRule;
+                    return result;
                 }
             }
         }
         
-        return text;
+        return result;
     }
     
     /**
@@ -1761,11 +1857,13 @@ class ResultRenderer {
      * @param {Array<number>} values 值数组
      * @param {Object} rulesData 规则数据
      * @param {string} ruleName 规则文件名（用于id索引查找）
-     * @returns {string} 替换后的文本
+     * @returns {Object} { text: 替换后的文本, matchedRule: 匹配的规则数组 }
      */
     processRuleValues(values, rulesData, ruleName) {
+        const result = { text: values ? values.toString() : '', matchedRule: null };
+        
         if (!values || values.length === 0) {
-            return values.toString();
+            return result;
         }
         
         // 获取第一个数字作为规则ID
@@ -1781,7 +1879,7 @@ class ResultRenderer {
         const ruleConfig = ruleKey ? rulesData[ruleKey] : rulesData[ruleId];
         
         if (!ruleConfig || !ruleConfig.type) {
-            return values.toString();
+            return result;
         }
         
         // 遍历所有可能的类型配置，找到匹配的规则
@@ -1815,6 +1913,9 @@ class ResultRenderer {
                 }
                 
                 if (match) {
+                    // 记录匹配的规则
+                    result.matchedRule = ruleArray;
+                    
                     // 生成替换文本
                     let desc = typeConfig.desc;
                     
@@ -1888,12 +1989,13 @@ class ResultRenderer {
                         }
                     });
                     
-                    return desc;
+                    result.text = desc;
+                    return result;
                 }
             }
         }
 
-        return values.toString();
+        return result;
     }
 
     /**
@@ -2187,16 +2289,19 @@ class ResultRenderer {
                                                 
                                                 // 应用ID替换功能
                                                 let displayValue = value;
+                                                let matchedRule = null;
                                                 if (rule) {
                                                     if (typeof value === 'object' && value !== null) {
                                                         try {
                                                             const jsonString = JSON.stringify(value);
                                                             displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                            matchedRule = window.resultRenderer.lastMatchedRule;
                                                         } catch (e) {
                                                             // 忽略错误，使用原始值
                                                         }
                                                     } else {
                                                         displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                     }
                                                 }
                                                 
@@ -2208,10 +2313,13 @@ class ResultRenderer {
                                                     attributeName = configManager.getAttributeCN(type, key);
                                                 }
                                                 
+                                                // 确定显示的规则
+                                                const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                                
                                                 return `
                                                 <div class="vertical-table-row">
                                                     <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                         ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                                     </div>
                                                 </div>
@@ -2264,16 +2372,19 @@ class ResultRenderer {
                                         
                                         // 应用ID替换功能
                                         let displayValue = value;
+                                        let matchedRule = null;
                                         if (rule) {
                                             if (typeof value === 'object' && value !== null) {
                                                 try {
                                                     const jsonString = JSON.stringify(value);
                                                     displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                 } catch (e) {
                                                     // 忽略错误，使用原始值
                                                 }
                                             } else {
                                                 displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                matchedRule = window.resultRenderer.lastMatchedRule;
                                             }
                                         }
                                         
@@ -2293,8 +2404,11 @@ class ResultRenderer {
                                              formattedValue = window.spriteManager.parseText(formattedValue);
                                          }
                                          
+                                         // 格式化匹配的规则
+                                         const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                         
                                          return `
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                             ${formattedValue}
                                         </td>
                                         `;
@@ -2504,15 +2618,18 @@ class ResultRenderer {
                                                             }
                                                             
                                                             let displayValue = value;
+                                                            let matchedRule = null;
                                                             if (rule) {
                                                                 if (typeof value === 'object' && value !== null) {
                                                                     try {
                                                                         const jsonString = JSON.stringify(value);
                                                                         displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                                     } catch (e) {
                                                                     }
                                                                 } else {
                                                                     displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                                 }
                                                             }
                                                             
@@ -2537,10 +2654,13 @@ class ResultRenderer {
                                                                  formattedValue = window.spriteManager.parseText(formattedValue);
                                                              }
                                                              
+                                                             // 格式化匹配的规则
+                                                             const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                                             
                                                              return `
                                                             <div class="vertical-table-row">
                                                                 <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                                <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                                     <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
                                                                 </div>
                                                             </div>
@@ -2587,15 +2707,18 @@ class ResultRenderer {
                                                     }
                                                     
                                                     let displayValue = value;
+                                                    let matchedRule = null;
                                                     if (rule) {
                                                         if (typeof value === 'object' && value !== null) {
                                                             try {
                                                                 const jsonString = JSON.stringify(value);
                                                                 displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                                matchedRule = window.resultRenderer.lastMatchedRule;
                                                             } catch (e) {
                                                             }
                                                         } else {
                                                             displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                            matchedRule = window.resultRenderer.lastMatchedRule;
                                                         }
                                                     }
                                                     
@@ -2613,8 +2736,11 @@ class ResultRenderer {
                                                          formattedValue = window.spriteManager.parseText(formattedValue);
                                                      }
                                                      
+                                                     // 格式化匹配的规则
+                                                     const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                                     
                                                      return `
-                                                    <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                    <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                         ${formattedValue}
                                                     </td>
                                                     `;
@@ -2770,15 +2896,18 @@ class ResultRenderer {
                                                 }
                                                 
                                                 let displayValue = value;
+                                                let matchedRule = null;
                                                 if (rule) {
                                                     if (typeof value === 'object' && value !== null) {
                                                         try {
                                                             const jsonString = JSON.stringify(value);
                                                             displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                            matchedRule = window.resultRenderer.lastMatchedRule;
                                                         } catch (e) {
                                                         }
                                                     } else {
                                                         displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                     }
                                                 }
                                                 
@@ -2803,10 +2932,13 @@ class ResultRenderer {
                                                      formattedValue = window.spriteManager.parseText(formattedValue);
                                                  }
                                                  
+                                                 // 格式化匹配的规则
+                                                 const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                                 
                                                  return `
                                                 <div class="vertical-table-row">
                                                     <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                         <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word; font-family: inherit;">${formattedValue}</pre>
                                                     </div>
                                                 </div>
@@ -2832,15 +2964,18 @@ class ResultRenderer {
                                         }
                                         
                                         let displayValue = value;
+                                        let matchedRule = null;
                                         if (rule) {
                                             if (typeof value === 'object' && value !== null) {
                                                 try {
                                                     const jsonString = JSON.stringify(value);
                                                     displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                 } catch (e) {
                                                 }
                                             } else {
                                                 displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                matchedRule = window.resultRenderer.lastMatchedRule;
                                             }
                                         }
                                         
@@ -2858,8 +2993,11 @@ class ResultRenderer {
                                              formattedValue = window.spriteManager.parseText(formattedValue);
                                          }
                                          
+                                         // 格式化匹配的规则
+                                         const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                         
                                          return `
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                             ${formattedValue}
                                         </td>
                                         `;
@@ -2976,16 +3114,19 @@ class ResultRenderer {
                                                   
                                                 // 应用ID替换功能
                                                 let displayValue = value;
+                                                let matchedRule = null;
                                                 if (rule) {
                                                     if (typeof value === 'object' && value !== null) {
                                                         try {
                                                             const jsonString = JSON.stringify(value);
                                                             displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                            matchedRule = window.resultRenderer.lastMatchedRule;
                                                         } catch (e) {
                                                             // 忽略错误，使用原始值
                                                         }
                                                     } else {
                                                         displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                        matchedRule = window.resultRenderer.lastMatchedRule;
                                                     }
                                                 }
                                                   
@@ -2997,10 +3138,13 @@ class ResultRenderer {
                                                     attributeName = configManager.getAttributeCN(type, key);
                                                 }
                                                   
+                                                // 格式化匹配的规则
+                                                const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                                  
                                                 return `
                                                 <div class="vertical-table-row">
                                                     <div class="row-label" data-desc="${idTypeKeyDef && idTypeKeyDef[key] && idTypeKeyDef[key].desc ? idTypeKeyDef[key].desc : ''}">${attributeName}:</div>
-                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                                    <div class="row-value" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                                         ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                                     </div>
                                                 </div>
@@ -3027,21 +3171,27 @@ class ResultRenderer {
                                         
                                         // 应用ID替换功能
                                         let displayValue = value;
+                                        let matchedRule = null;
                                         if (rule) {
                                             if (typeof value === 'object' && value !== null) {
                                                 try {
                                                     const jsonString = JSON.stringify(value);
                                                     displayValue = window.resultRenderer.replaceIdWithName(jsonString, rule);
+                                                    matchedRule = window.resultRenderer.lastMatchedRule;
                                                 } catch (e) {
                                                     // 忽略错误，使用原始值
                                                 }
                                             } else {
                                                 displayValue = window.resultRenderer.replaceIdWithName(value, rule);
+                                                matchedRule = window.resultRenderer.lastMatchedRule;
                                             }
                                         }
                                         
+                                        // 格式化匹配的规则
+                                        const displayRule = window.resultRenderer.formatMatchedRuleForAttr(matchedRule, rule);
+                                        
                                         return `
-                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${rule || ''}">
+                                        <td style="padding: 12px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-original="${originalValue !== undefined && originalValue !== null ? JSON.stringify(originalValue).replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''}" data-rule="${displayRule}">
                                             ${displayValue === undefined || displayValue === null ? '-' : (typeof displayValue === 'object' ? JSON.stringify(displayValue).replace(/^"|"$/g, '') : displayValue)}
                                         </td>
                                         `;

@@ -909,10 +909,9 @@
                 "rule": [
                     6,
                     11,
-                    "PersonAttrId",
                     "value"
                 ],
-                "desc": "累计强化人格{PersonAttrId}{value}次或以上"
+                "desc": "累计强化人格{value}次或以上"
             },
             "anyPersonalityOpened": {
                 "rule": [
@@ -1108,9 +1107,9 @@
                 "rule": [
                     8,
                     -1,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "主角未拥有状态{personStateID}"
+                "desc": "主角未拥有状态{personStateId}"
             },
             "pressureLevelLessThanOrEqual": {
                 "rule": [
@@ -1228,7 +1227,7 @@
                     50,
                     "value"
                 ],
-                "DESC": "获得前{value}名"
+                "desc": "获得前{value}名"
             },
             "masterKnowledge": {
                 "RULE": [
@@ -1236,7 +1235,7 @@
                     5,
                     "value"
                 ],
-                "DESC": "掌握{value}个知识点"
+                "desc": "掌握{value}个知识点"
             },
             "thisRoundNotWriteHomework": {
                 "rule": [
@@ -1282,17 +1281,17 @@
                 "rule": [
                     10,
                     6,
-                    "knowledgeTypeId"
+                    "knowledgeTreeId"
                 ],
-                "desc": "已掌握{knowledgeTypeId}课程"
+                "desc": "已掌握{knowledgeTreeId}知识点"
             },
             "notMasterKnowledgeTimesGreaterThanOrEqualType": {
                 "rule": [
                     10,
                     -6,
-                    "knowledgeTypeId"
+                    "knowledgeTreeId"
                 ],
-                "desc": "未掌握{knowledgeTypeId}课程"
+                "desc": "未掌握{knowledgeTreeId}知识点"
             },
             "masterKnowledgeCollegeGreaterThanOrEqualType": {
                 "rule": [

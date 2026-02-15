@@ -1,0 +1,2966 @@
+{
+    "1": {
+        "id": 1, 
+        "name": "基础", 
+        "cond": [], 
+        "effect": [], 
+        "desc": null, 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2": {
+        "id": 2, 
+        "name": "学习", 
+        "cond": [], 
+        "effect": [], 
+        "desc": null, 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3": {
+        "id": 3, 
+        "name": "社交", 
+        "cond": [], 
+        "effect": [], 
+        "desc": null, 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4": {
+        "id": 4, 
+        "name": "运动", 
+        "cond": [], 
+        "effect": [], 
+        "desc": null, 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5": {
+        "id": 5, 
+        "name": "成长", 
+        "cond": [], 
+        "effect": [], 
+        "desc": null, 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1001": {
+        "id": 1001, 
+        "name": "学生时代", 
+        "cond": [
+            [
+                1.0, 
+                12.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "进入小学", 
+        "impossible": [], 
+        "icon": "item/img_shubao", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1002": {
+        "id": 1002, 
+        "name": "个性张扬", 
+        "cond": [
+            [
+                6.0, 
+                11.0, 
+                4.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "强化人格4次", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_10902", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1003": {
+        "id": 1003, 
+        "name": "吃好喝好睡好", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                100.0, 
+                40.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "获得“三好学生”称号", 
+        "impossible": [], 
+        "icon": "action/img_3092", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1004": {
+        "id": 1004, 
+        "name": "校园之星", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                100.0, 
+                650.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "获得“校园之星”称号", 
+        "impossible": [], 
+        "icon": "method/img_jiangzhuang", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1005": {
+        "id": 1005, 
+        "name": "三冠王", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                311004003.0, 
+                711004003.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在校庆中获得三项冠军", 
+        "impossible": [], 
+        "icon": "item/img_xbl", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1006": {
+        "id": 1006, 
+        "name": "黄金之路", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                311072042.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "带领鹅城一中斩获艺体节所有金牌", 
+        "impossible": [], 
+        "icon": "icon4_outline/24", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1007": {
+        "id": 1007, 
+        "name": "守财奴", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                30.0, 
+                200.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "持有200块零花钱", 
+        "impossible": [], 
+        "icon": "item/img_cqg", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1008": {
+        "id": 1008, 
+        "name": "炼金术士", 
+        "cond": [
+            [
+                999.0, 
+                201.0, 
+                20.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "解锁20个鹅城实验室项目", 
+        "impossible": [], 
+        "icon": "shiyanshi/img_title", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 1
+    }, 
+    "1009": {
+        "id": 1009, 
+        "name": "一发入魂", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                10001024.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "买奖券中奖", 
+        "impossible": [], 
+        "icon": "item/img_jq", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1010": {
+        "id": 1010, 
+        "name": "礼多人不怪", 
+        "cond": [
+            [
+                999.0, 
+                307.0, 
+                20.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "赠送礼物20次", 
+        "impossible": [], 
+        "icon": "item/img_shellbox_m", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1011": {
+        "id": 1011, 
+        "name": "不可名状", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                110435004.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "错误！<name%牌子##>烫烫烫烫烫烫烫不存在！", 
+        "impossible": [], 
+        "icon": "item/img_chd", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1012": {
+        "id": 1012, 
+        "name": "还有高手？！", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                340111004.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "将《蚀骨香炉》送给梁超杰", 
+        "impossible": [], 
+        "icon": "item/img_shiguxianglu", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1013": {
+        "id": 1013, 
+        "name": "何必如此", 
+        "cond": [
+            [
+                999.0, 
+                300.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "将一名同学的好感降到负", 
+        "impossible": [], 
+        "icon": "icon4_outline/7", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1014": {
+        "id": 1014, 
+        "name": "我没嗑！", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                0.0, 
+                300.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "心情高于300", 
+        "impossible": [], 
+        "icon": "icon4_outline/6", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1015": {
+        "id": 1015, 
+        "name": "气急败坏", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                334020004.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "向网吧钟表展示时光回溯能力", 
+        "impossible": [], 
+        "icon": "item/img_dzsb", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1016": {
+        "id": 1016, 
+        "name": "说到做到", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                332025050.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "欣赏杰哥的女装", 
+        "impossible": [], 
+        "icon": "cloth/img_yumaoqiufu", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1017": {
+        "id": 1017, 
+        "name": "你不对劲", 
+        "cond": [
+            [
+                13.0, 
+                2.0, 
+                3205.0
+            ], 
+            [
+                13.0, 
+                2.0, 
+                3042.0
+            ], 
+            [
+                34.0, 
+                5.0, 
+                409.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "读完《蚀骨香炉》、《金瓶梅》，并通关《电车之狐》", 
+        "impossible": [], 
+        "icon": "item/img_gushi", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1018": {
+        "id": 1018, 
+        "name": "一滴都没了", 
+        "cond": [
+            [
+                999.0, 
+                301.0, 
+                30.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                200.0
+            ]
+        ], 
+        "desc": "触发30个场景彩蛋", 
+        "impossible": [], 
+        "icon": "item/img_cwd", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "1019": {
+        "id": 1019, 
+        "name": "就这？", 
+        "cond": [
+            [
+                60.0, 
+                1.0, 
+                8231.0
+            ]
+        ], 
+        "effect": [], 
+        "desc": "获得生日派对冠军奖品", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1020": {
+        "id": 1020, 
+        "name": "今日不空军", 
+        "cond": [
+            [
+                12.0, 
+                7.0, 
+                1.0, 
+                40.0
+            ]
+        ], 
+        "effect": [], 
+        "desc": "累计钓上40条鱼", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1021": {
+        "id": 1021, 
+        "name": "说走就走", 
+        "cond": [
+            [
+                12.0, 
+                5.0, 
+                14.0, 
+                -1.0
+            ]
+        ], 
+        "effect": [], 
+        "desc": "游览过14个景点", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1022": {
+        "id": 1022, 
+        "name": "财大气粗", 
+        "cond": [
+            [
+                5.0, 
+                602.0, 
+                200.0
+            ]
+        ], 
+        "effect": [], 
+        "desc": "为推理社捐款200块", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "1023": {
+        "id": 1023, 
+        "name": "姓安，名利", 
+        "cond": [
+            [
+                999.0, 
+                309.0, 
+                10.0
+            ]
+        ], 
+        "effect": [], 
+        "desc": "看番安利10次", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2001": {
+        "id": 2001, 
+        "name": "聪明伶俐", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                1.0, 
+                8.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "智力评级达到S", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_6", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2002": {
+        "id": 2002, 
+        "name": "智力超群", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                1.0, 
+                11.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "智力评级达到L", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_10", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2003": {
+        "id": 2003, 
+        "name": "尖子生", 
+        "cond": [
+            [
+                10.0, 
+                100.0, 
+                6.0
+            ], 
+            [
+                1.0, 
+                20.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "小学成绩达到顶尖", 
+        "impossible": [], 
+        "icon": "common6/icon_study_8", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2004": {
+        "id": 2004, 
+        "name": "别家孩子", 
+        "cond": [
+            [
+                10.0, 
+                100.0, 
+                9.0
+            ], 
+            [
+                1.0, 
+                20.0, 
+                2.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "中学成绩达到学神", 
+        "impossible": [], 
+        "icon": "common6/icon_study_10", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2005": {
+        "id": 2005, 
+        "name": "死猪不怕烫", 
+        "cond": [
+            [
+                10.0, 
+                -33.0, 
+                10.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "不做作业10次", 
+        "impossible": [], 
+        "icon": "item/img_xrs", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2006": {
+        "id": 2006, 
+        "name": "一目十行", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                331.0, 
+                100.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "阅读速度达到100", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_11001", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2007": {
+        "id": 2007, 
+        "name": "博览群书", 
+        "cond": [
+            [
+                13.0, 
+                11.0, 
+                20.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "读完20本书", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_10303", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2008": {
+        "id": 2008, 
+        "name": "一枝独秀", 
+        "cond": [
+            [
+                10.0, 
+                50.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "考试中获得第一名", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_10301", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2009": {
+        "id": 2009, 
+        "name": "过目不忘", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                302.0, 
+                50.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "学习效率达到50", 
+        "impossible": [], 
+        "icon": "icon4_outline/18", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2010": {
+        "id": 2010, 
+        "name": "开小差", 
+        "cond": [
+            [
+                999.0, 
+                302.0, 
+                10.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "上课回答提问，累计答错10次", 
+        "impossible": [], 
+        "icon": "action/img_3093", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2011": {
+        "id": 2011, 
+        "name": "知识赛冠军", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                311013025.0, 
+                711013025.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "在校庆知识竞赛中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_tejb", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2012": {
+        "id": 2012, 
+        "name": "最强大脑", 
+        "cond": [
+            [
+                100.0, 
+                10.0, 
+                22.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在艺体节知识赛中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_guanjun", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2013": {
+        "id": 2013, 
+        "name": "天资聪颖", 
+        "cond": [
+            [
+                999.0, 
+                303.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "额外智力获取率高于100%", 
+        "impossible": [], 
+        "icon": "item/img_dianduji", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2014": {
+        "id": 2014, 
+        "name": "身残志坚", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                1.0, 
+                1000.0
+            ], 
+            [
+                4.0, 
+                2.0, 
+                4.0, 
+                50.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "智力高于1000，同时体魄低于50", 
+        "impossible": [], 
+        "icon": "icon4_outline/1", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "2015": {
+        "id": 2015, 
+        "name": "三剑客", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                102.0, 
+                13.0
+            ], 
+            [
+                7.0, 
+                0.0, 
+                201.0, 
+                13.0
+            ], 
+            [
+                10.0, 
+                100.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "和孟怀安、薛诗蕾成为挚友，同时自己也是学霸/学神", 
+        "impossible": [], 
+        "icon": "item/img_xbbj", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "2016": {
+        "id": 2016, 
+        "name": "卷王", 
+        "cond": [
+            [
+                10.0, 
+                5.0, 
+                6.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "学完一个大学课程", 
+        "impossible": [], 
+        "icon": "study/img_fanyi", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "2017": {
+        "id": 2017, 
+        "name": "万年老二", 
+        "cond": [
+            [
+                10.0, 
+                200.0, 
+                2.0, 
+                2.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "考过2次第二名", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3001": {
+        "id": 3001, 
+        "name": "能说会道", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                2.0, 
+                8.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "情商评级达到S", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_6", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3002": {
+        "id": 3002, 
+        "name": "八面玲珑", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                2.0, 
+                11.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "情商评级达到L", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_10", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3003": {
+        "id": 3003, 
+        "name": "谭梓君", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                104.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与谭梓君成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaojun", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3004": {
+        "id": 3004, 
+        "name": "肖清雅", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                105.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与肖清雅成为至交", 
+        "impossible": [
+            [
+                3.0, 
+                3.0, 
+                10592037.0, 
+                10592063.0
+            ]
+        ], 
+        "icon": null, 
+        "texture": "role_head/role_qingya", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3005": {
+        "id": 3005, 
+        "name": "薛诗蕾", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                102.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与薛诗蕾成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaolei", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3006": {
+        "id": 3006, 
+        "name": "罗晓纯", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                101.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与罗晓纯成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaochun", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3007": {
+        "id": 3007, 
+        "name": "梁超杰", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                3.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与梁超杰成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_jiege", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3008": {
+        "id": 3008, 
+        "name": "孟怀安", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                201.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与孟怀安成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_mengmeng", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3009": {
+        "id": 3009, 
+        "name": "林嘉宇", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                202.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与林嘉宇成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaolin", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3010": {
+        "id": 3010, 
+        "name": "恋人-谭梓君", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                104.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与谭梓君成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaojun2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3011": {
+        "id": 3011, 
+        "name": "恋人-肖清雅", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                105.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与肖清雅成为恋人", 
+        "impossible": [
+            [
+                3.0, 
+                3.0, 
+                10592037.0, 
+                10592063.0
+            ]
+        ], 
+        "icon": null, 
+        "texture": "role_head/role_qingya2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3012": {
+        "id": 3012, 
+        "name": "恋人-薛诗蕾", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                102.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与薛诗蕾成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaolei2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3013": {
+        "id": 3013, 
+        "name": "恋人-孟怀安", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                201.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与孟怀安成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_mengmeng2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3014": {
+        "id": 3014, 
+        "name": "恋人-林嘉宇", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                202.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与林嘉宇成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaolin2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3015": {
+        "id": 3015, 
+        "name": "辩论赛冠军", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                311023016.0, 
+                711023016.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "在校庆辩论赛中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_tejb", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3016": {
+        "id": 3016, 
+        "name": "嘴强王者", 
+        "cond": [
+            [
+                100.0, 
+                10.0, 
+                23.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在艺体节辩论赛中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_guanjun", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3017": {
+        "id": 3017, 
+        "name": "铁树开花", 
+        "cond": [
+            [
+                999.0, 
+                304.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在最后一个回合告白", 
+        "impossible": [], 
+        "icon": "item/img_aixin", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3018": {
+        "id": 3018, 
+        "name": "金比情坚", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                10592037.0, 
+                10592063.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与肖清雅分道扬镳", 
+        "impossible": [
+            [
+                7.0, 
+                0.0, 
+                105.0, 
+                3.0
+            ]
+        ], 
+        "icon": "valueview/img_jzg_10603", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3019": {
+        "id": 3019, 
+        "name": "高朋满座", 
+        "cond": [
+            [
+                7.0, 
+                5.0, 
+                5.0, 
+                4.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "拥有4个挚友", 
+        "impossible": [], 
+        "icon": "item/img_diaosu", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3020": {
+        "id": 3020, 
+        "name": "察言观色", 
+        "cond": [
+            [
+                999.0, 
+                303.0, 
+                2.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "额外情商获取率高于100%", 
+        "impossible": [], 
+        "icon": "icon4_outline/2", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3021": {
+        "id": 3021, 
+        "name": "恋人-程良", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                203.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与程良成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_chengliang2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3022": {
+        "id": 3022, 
+        "name": "恋人-罗晓纯", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                101.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与罗晓纯成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaochun2", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3023": {
+        "id": 3023, 
+        "name": "程良", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                203.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与程良成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3024": {
+        "id": 3024, 
+        "name": "陈心慈", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                103.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与陈心慈成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3025": {
+        "id": 3025, 
+        "name": "恋人-陈心慈", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                103.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与陈心慈成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3026": {
+        "id": 3026, 
+        "name": "谢辰晖", 
+        "cond": [
+            [
+                7.0, 
+                0.0, 
+                204.0, 
+                6.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与谢辰晖成为至交", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3027": {
+        "id": 3027, 
+        "name": "恋人-谢辰晖", 
+        "cond": [
+            [
+                52.0, 
+                2.0, 
+                1.0, 
+                204.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与谢辰晖成为恋人", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "3028": {
+        "id": 3028, 
+        "name": "不害臊吗", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                322935011.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "带无知小孩去内衣区", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "4001": {
+        "id": 4001, 
+        "name": "身强体健", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                4.0, 
+                8.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "体魄评级达到S", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_6", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4002": {
+        "id": 4002, 
+        "name": "鹤立鸡群", 
+        "cond": [
+            [
+                4.0, 
+                30.0, 
+                4.0, 
+                11.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "体魄评级达到L", 
+        "impossible": [], 
+        "icon": "common6/icon_attr_10", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4003": {
+        "id": 4003, 
+        "name": "友谊第一", 
+        "cond": [
+            [
+                42.0, 
+                2.0, 
+                3.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "在篮球单挑中战胜梁超杰", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_jiege", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4004": {
+        "id": 4004, 
+        "name": "青出于蓝", 
+        "cond": [
+            [
+                42.0, 
+                2.0, 
+                5.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "在篮球单挑中战胜欧阳壮", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_azhuang", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4005": {
+        "id": 4005, 
+        "name": "一雪前耻", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                711410027.0, 
+                711410055.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "在羽毛球比赛中战胜阿丽", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaoxue_girl_16", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4006": {
+        "id": 4006, 
+        "name": "最后一战", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                711419037.0, 
+                711419076.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "在羽毛球比赛中战胜童桐", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "role_head/role_xiaoxue_girl_18", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4008": {
+        "id": 4008, 
+        "name": "在山的另一边", 
+        "cond": [
+            [
+                12.0, 
+                1.0, 
+                9902.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "首次去双子峰探险", 
+        "impossible": [], 
+        "icon": "action/img_3101", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4009": {
+        "id": 4009, 
+        "name": "活力无限", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                8.0, 
+                100.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "精力回复达到100", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_10103", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4010": {
+        "id": 4010, 
+        "name": "运动会冠军", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                311033017.0, 
+                711033017.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "在校庆运动会中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_jinpai", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4011": {
+        "id": 4011, 
+        "name": "长跑冠军", 
+        "cond": [
+            [
+                100.0, 
+                10.0, 
+                21.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在艺体节长跑赛中夺冠", 
+        "impossible": [], 
+        "icon": "item/img_jinpai2", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4012": {
+        "id": 4012, 
+        "name": "为了俄城", 
+        "cond": [
+            [
+                3.0, 
+                6.0, 
+                5524.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "通关杰哥的游戏《龙与地下城主》", 
+        "impossible": [], 
+        "icon": "item/img_taoquanji", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4013": {
+        "id": 4013, 
+        "name": "无可厚非", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                720739103.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在无线电比赛中拿到第一名", 
+        "impossible": [], 
+        "icon": "item/img_luyinji", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "4014": {
+        "id": 4014, 
+        "name": "大智若愚", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                4.0, 
+                1000.0
+            ], 
+            [
+                4.0, 
+                2.0, 
+                1.0, 
+                50.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "体魄高于1000，智力低于50", 
+        "impossible": [], 
+        "icon": "icon4_outline/3", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "4015": {
+        "id": 4015, 
+        "name": "技多不压身", 
+        "cond": [
+            [
+                5.0, 
+                8.0, 
+                10.0, 
+                15.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "掌握所有专长", 
+        "impossible": [], 
+        "icon": "item/img_qiupai", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4016": {
+        "id": 4016, 
+        "name": "修仙圣体", 
+        "cond": [
+            [
+                999.0, 
+                303.0, 
+                4.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "额外体魄获取率高于100%", 
+        "impossible": [], 
+        "icon": "valueview/img_jzg_10101", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "4017": {
+        "id": 4017, 
+        "name": "纯爱战士", 
+        "cond": [
+            [
+                3.0, 
+                3.0, 
+                320910061.0
+            ], 
+            [
+                3.0, 
+                3.0, 
+                320910052.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "和陈心慈是恋人，暴打她爹", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5001": {
+        "id": 5001, 
+        "name": "当年今日", 
+        "cond": [
+            [
+                6.0, 
+                23.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                10.0
+            ]
+        ], 
+        "desc": "获得首个珍贵记忆", 
+        "impossible": [], 
+        "icon": "item/img_xingxing", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5002": {
+        "id": 5002, 
+        "name": "历经沧桑", 
+        "cond": [
+            [
+                6.0, 
+                23.0, 
+                20.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "获得20个珍贵记忆", 
+        "impossible": [], 
+        "icon": "item/img_zihexing", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5003": {
+        "id": 5003, 
+        "name": "成长之路", 
+        "cond": [
+            [
+                6.0, 
+                21.0, 
+                -1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "开启一个人生观", 
+        "impossible": [], 
+        "icon": "icon4_outline/9", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5004": {
+        "id": 5004, 
+        "name": "玫瑰泡泡", 
+        "cond": [
+            [
+                101.0, 
+                1.0, 
+                20.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "与心上人相恋", 
+        "impossible": [], 
+        "icon": "social/img_relation_520", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5005": {
+        "id": 5005, 
+        "name": "恋爱脑", 
+        "cond": [
+            [
+                4.0, 
+                1.0, 
+                520.0, 
+                200.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "亲密度高于200", 
+        "impossible": [], 
+        "icon": "icon4_outline/22", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5006": {
+        "id": 5006, 
+        "name": "道心已成", 
+        "cond": [
+            [
+                6.0, 
+                22.0, 
+                10.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "人生观等级达到10级", 
+        "impossible": [], 
+        "icon": "renshengguan/icon_cam", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5007": {
+        "id": 5007, 
+        "name": "毕业", 
+        "cond": [
+            [
+                999.0, 
+                306.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "从鹅城一中毕业", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "logo/xiaohui", 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5008": {
+        "id": 5008, 
+        "name": "单身贵族", 
+        "cond": [
+            [
+                11.0, 
+                3.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                50.0
+            ]
+        ], 
+        "desc": "在学生时代没有谈过恋爱", 
+        "impossible": [], 
+        "icon": "icon4_outline/8", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5009": {
+        "id": 5009, 
+        "name": "传奇企业家", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30104018.0, 
+                30104019.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的企业家", 
+        "impossible": [], 
+        "icon": "item/img_shell_105", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5010": {
+        "id": 5010, 
+        "name": "传奇歌手", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30204004.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的歌手", 
+        "impossible": [], 
+        "icon": "item/img_shell_106", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5011": {
+        "id": 5011, 
+        "name": "传奇咨询师", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30304008.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的心理咨询师", 
+        "impossible": [], 
+        "icon": "item/img_shell_201", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5012": {
+        "id": 5012, 
+        "name": "传奇教师", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30404014.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的教师", 
+        "impossible": [], 
+        "icon": "item/img_shell_202", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5013": {
+        "id": 5013, 
+        "name": "传奇警察", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30504013.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的刑警", 
+        "impossible": [], 
+        "icon": "item/img_shell_203", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5014": {
+        "id": 5014, 
+        "name": "传奇记者", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30604022.0, 
+                30604027.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的调查记者", 
+        "impossible": [], 
+        "icon": "item/img_shell_204", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5015": {
+        "id": 5015, 
+        "name": "传奇宇航员", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30704012.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的宇航员", 
+        "impossible": [], 
+        "icon": "item/img_shell_205", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5016": {
+        "id": 5016, 
+        "name": "传奇制作人", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30804015.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的游戏制作人", 
+        "impossible": [], 
+        "icon": "item/img_shell_104", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5017": {
+        "id": 5017, 
+        "name": "321上链接！", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                30904022.0, 
+                30904024.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的主播", 
+        "impossible": [], 
+        "icon": "item/img_shell_stone", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5018": {
+        "id": 5018, 
+        "name": "为国争光", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31004013.0, 
+                71504014.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的运动员", 
+        "impossible": [], 
+        "icon": "item/img_shell_306", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5019": {
+        "id": 5019, 
+        "name": "科研人员", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31104022.0, 
+                31104027.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的科学家", 
+        "impossible": [], 
+        "icon": "item/img_shell_305", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5020": {
+        "id": 5020, 
+        "name": "笔里都有啥", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31204018.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的作家", 
+        "impossible": [], 
+        "icon": "item/img_shell_303", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5021": {
+        "id": 5021, 
+        "name": "找不到对象", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31304012.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的程序员", 
+        "impossible": [], 
+        "icon": "item/img_shell_301", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5022": {
+        "id": 5022, 
+        "name": "你有新的订单", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31401001.0, 
+                31402001.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为一名外卖员", 
+        "impossible": [], 
+        "icon": "item/img_shell_302", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5023": {
+        "id": 5023, 
+        "name": "赫赫有名", 
+        "cond": [
+            [
+                200.0, 
+                1.0, 
+                3.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "结算时得分6500分以上", 
+        "impossible": [], 
+        "icon": "item/img_zh", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5024": {
+        "id": 5024, 
+        "name": "叱咤鹅城", 
+        "cond": [
+            [
+                200.0, 
+                1.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "结算时得分10000分以上", 
+        "impossible": [], 
+        "icon": "item/img_zfj", 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5025": {
+        "id": 5025, 
+        "name": "壶中天", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                820101002.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "见证孟怀安开发出《学生时代》", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": "logo/icon2", 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5026": {
+        "id": 5026, 
+        "name": "最高学府", 
+        "cond": [
+            [
+                200.0, 
+                6.0, 
+                16.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "考入清华或北大", 
+        "impossible": [], 
+        "icon": "item/img_milestone", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5027": {
+        "id": 5027, 
+        "name": "好过家里蹲", 
+        "cond": [
+            [
+                200.0, 
+                -6.0, 
+                1.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "考入鹅城职业技术学院", 
+        "impossible": [], 
+        "icon": "ending/img_color_12", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5028": {
+        "id": 5028, 
+        "name": "婚礼", 
+        "cond": [
+            [
+                100.0, 
+                10.0, 
+                9002.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "与心上人举办婚礼", 
+        "impossible": [], 
+        "icon": "item/img_qiaokeli", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5029": {
+        "id": 5029, 
+        "name": "医者仁心", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31704001.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为赫赫有名的医生", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5030": {
+        "id": 5030, 
+        "name": "鹅城的传奇", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                90101001.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "鹅城一中决定以你的名字命名，并为你铸造铜像", 
+        "impossible": [], 
+        "icon": "item/img_milestone2", 
+        "texture": null, 
+        "hide": 1, 
+        "checkType": 0
+    }, 
+    "5031": {
+        "id": 5031, 
+        "name": "让美国再次伟大", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31604045.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "当选美国总统", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5032": {
+        "id": 5032, 
+        "name": "人民公仆", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                31604030.0, 
+                31604043.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                100.0
+            ]
+        ], 
+        "desc": "成为一名优秀的公务员", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }, 
+    "5033": {
+        "id": 5033, 
+        "name": "笼中鸟", 
+        "cond": [
+            [
+                200.0, 
+                5.0, 
+                820206001.0
+            ]
+        ], 
+        "effect": [
+            [
+                100.0, 
+                100.0, 
+                20.0
+            ]
+        ], 
+        "desc": "与嘉宇是密友和恋人，但没走进他的内心", 
+        "impossible": [], 
+        "icon": null, 
+        "texture": null, 
+        "hide": 0, 
+        "checkType": 0
+    }
+}

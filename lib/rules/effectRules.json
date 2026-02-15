@@ -1563,44 +1563,44 @@
                 "rule": [
                     7,
                     1,
-                    "personStateID",
+                    "personStateId",
                     "value"
                 ],
-                "desc": "增加{personStateID}状态倾向{value}"
+                "desc": "增加{personStateId}状态倾向{value}"
             },
             "changePersonStateEfficiencyPercentRound": {
                 "rule": [
                     7,
                     11,
-                    "personStateID",
+                    "personStateId",
                     "value"
                 ],
-                "desc": "{personStateID}状态每回合{direction}{value}"
+                "desc": "{personStateId}状态每回合{direction}{value}"
             },
             "obtainPersonStateID": {
                 "rule": [
                     7,
                     2,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "获得{personStateID}状态"
+                "desc": "获得{personStateId}状态"
             },
             "obtainPersonStateIDRound": {
                 "rule": [
                     7,
                     2,
-                    "personStateID",
+                    "personStateId",
                     "value"
                 ],
-                "desc": "获得{personStateID}状态,持续{value}回合"
+                "desc": "获得{personStateId}状态,持续{value}回合"
             },
             "losePersonStateID": {
                 "rule": [
                     7,
                     -2,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "失去{personStateID}状态"
+                "desc": "失去{personStateId}状态"
             }
         }
     },
@@ -2574,9 +2574,9 @@
                 "rule": [
                     22,
                     22,
-                    "personStateID"
+                    "personStateId"
                 ],
-                "desc": "所有认识的NPC获得{personStateID}状态"
+                "desc": "所有认识的NPC获得{personStateId}状态"
             },
             "AddNpcToFollowList": {
                 "rule": [
@@ -2599,7 +2599,7 @@
                     1,
                     "KZoneContentId"
                 ],
-                "desc": "发出动态【{KZoneContentId}】"
+                "desc": "发出动态【<span style=\"font-size: 10px;\">{KZoneContentId}</span>】"
             },
             "deleteKZoneContent": {
                 "rule": [
@@ -2607,7 +2607,7 @@
                     -1,
                     "KZoneContentId"
                 ],
-                "desc": "删除动态【{KZoneContentId}】"
+                "desc": "删除动态【<span style=\"font-size: 10px;\">{KZoneContentId}</span>】"
             },
             "sendKZoneComment": {
                 "rule": [
@@ -2615,7 +2615,7 @@
                     2,
                     "KZoneCommentId"
                 ],
-                "desc": "发出留言【{KZoneCommentId}】"
+                "desc": "发出留言【<span style=\"font-size: 10px;\">{KZoneCommentId}</span>】"
             },
             "deleteKZoneComment": {
                 "rule": [
@@ -2623,7 +2623,7 @@
                     -2,
                     "KZoneCommentId"
                 ],
-                "desc": "删除留言【{KZoneCommentId}】"
+                "desc": "删除留言【<span style=\"font-size: 10px;\">{KZoneCommentId}</span>】"
             },
             "replyOrCommentKZoneContentNoCost": {
                 "rule": [
@@ -2654,7 +2654,7 @@
                     100,
                     "evtId"
                 ],
-                "desc": "电话铃响(【事件{evtId}】,且事件类型必须为71——玩家接电话)"
+                "desc": "电话铃响【(<span style=\"font-size: 10px;\">事件{evtId}</span>】,且事件类型必须为71——玩家接电话)"
             },
             "SendSms": {
                 "rule": [
@@ -2662,7 +2662,7 @@
                     200,
                     "PhoneMsgId"
                 ],
-                "desc": "发短信【{PhoneMsgId}】"
+                "desc": "发短信【<span style=\"font-size: 10px;\">{PhoneMsgId}</span>】"
             }
         }
     },
@@ -4153,10 +4153,9 @@
             "enablePriceTalk": {
                 "rule": [
                     61,
-                    98,
-                    1
+                    98
                 ],
-                "desc": "开启一次讲价"
+                "desc": "开启讲价"
             },
             "addDiscountByPriceTalk": {
                 "rule": [

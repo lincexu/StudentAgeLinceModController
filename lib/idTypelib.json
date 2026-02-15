@@ -57,9 +57,9 @@
             "wiki": false
         },
         "IntentId": {
-            "name": "意图",
+            "name": "目标",
             "file": "IntentCfg*.json",
-            "desc": "意图ID",
+            "desc": "目标ID",
             "dataKey": "name",  
             "dataKeyList": null,
             "wiki": false
@@ -248,7 +248,7 @@
             "dataKeyList": null,
             "wiki": true
         },
-        "personStateID": {
+        "PersonStateId": {
             "name": "角色状态",
             "file": "PersonStateCfg*.json",
             "desc": "角色状态ID",
@@ -441,9 +441,9 @@
             "wiki": true
         },
         "KnowledgeId": {
-            "name": "知识点",
+            "name": "科目",
             "file": "KnowledgeCfg*.json",
-            "desc": "知识点ID",
+            "desc": "科目ID",
             "dataKey": "name",
             "dataKeyList": null,
             "wiki": true
@@ -457,9 +457,9 @@
             "wiki": true
         },
         "KnowledgeTreeId": {
-            "name": "知识树",
+            "name": "知识点",
             "file": "KnowledgeTreeCfg*.json",
-            "desc": "知识树ID",
+            "desc": "知识点ID",
             "dataKey": "name",
             "dataKeyList": null,
             "wiki": true
@@ -623,6 +623,14 @@
             "dataKey": "name",
             "dataKeyList": null,
             "wiki": true
+        },
+        "GlobalAchId": {
+            "name": "全局成就",
+            "file": "GlobalAchCfg*.json",
+            "desc": "全局成就ID",
+            "dataKey": "name",
+            "dataKeyList": null,
+            "wiki": true
         }
     },
     "listType": {
@@ -669,14 +677,14 @@
             "keyList": "EvtKey"
         },
         "IntentId": {
-            "name": "意图",
+            "name": "目标",
             "file": "IntentCfg*.json",
-            "failName": "未知意图",
+            "failName": "未知目标",
             "keyList": "IntentKey"
         },
         "ItemId": {
             "name": "物品",
-            "file": "ItemCfg*.json*",
+            "file": "ItemCfg*.json",
             "failName": "未知物品",
             "keyList": "ItemKey"
         },
@@ -745,6 +753,12 @@
             "file": "HonorShopCfg*.json",
             "failName": "未知荣誉商店",
             "keyList": "HonorShopKey"
+        },
+        "GlobalAchId": {
+            "name": "全局成就（非官方工坊支持内容编辑先驱测试）",
+            "file": "GlobalAchCfg*.json",
+            "failName": "未知全局成就",
+            "keyList": "GlobalAchKey"
         }
     }
 }

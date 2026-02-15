@@ -44,11 +44,41 @@ class IdDatabase {
      * 更新进度
      * @param {string} status 状态文本
      * @param {number} progress 进度值（0-100）
+     * @param {boolean} smooth 是否使用平滑过渡
      */
-    updateProgress(status, progress) {
+    updateProgress(status, progress, smooth = false) {
         if (this.onProgressUpdate) {
-            this.onProgressUpdate(status, progress);
+            if (smooth && this.currentProgress !== undefined) {
+                // 平滑过渡：如果新进度小于当前进度，渐进式更新
+                const step = (progress - this.currentProgress) / 10;
+                let current = this.currentProgress;
+                const animate = () => {
+                    current += step;
+                    if ((step > 0 && current < progress) || (step < 0 && current > progress)) {
+                        this.onProgressUpdate(status, Math.round(current));
+                        requestAnimationFrame(animate);
+                    } else {
+                        this.currentProgress = progress;
+                        this.onProgressUpdate(status, progress);
+                    }
+                };
+                animate();
+            } else {
+                this.currentProgress = progress;
+                this.onProgressUpdate(status, progress);
+            }
         }
+    }
+    
+    /**
+     * 计算加权进度
+     * @param {number} baseProgress 基础进度
+     * @param {number} weight 权重（0-1）
+     * @param {number} current 当前子进度（0-1）
+     * @returns {number} 计算后的进度
+     */
+    calculateProgress(baseProgress, weight, current = 1) {
+        return Math.round(baseProgress + weight * current * 100);
     }
     
     /**
@@ -100,40 +130,49 @@ class IdDatabase {
         this.shouldPersist = !autoLoadDefaultData;
         
         try {
-            // 从idTypelib.json加载ID类型配置（总是重新加载以获取最新配置）
-            this.updateProgress('加载ID类型配置...', 10);
-            await this.loadIdTypeConfig();
+            // 定义初始化阶段和权重
+            const stages = [
+                { name: '加载ID类型配置', weight: 0.15 },
+                { name: '初始化数据库结构', weight: 0.10 },
+                { name: '清空已有数据', weight: 0.10 },
+                { name: '加载默认数据', weight: 0.30 },
+                { name: '加载baseGame数据', weight: 0.35 }
+            ];
             
-            // 初始化数据库结构
-            this.updateProgress('初始化数据库结构...', 20);
+            let currentProgress = 0;
+            
+            // 阶段1：从idTypelib.json加载ID类型配置
+            this.updateProgress('加载ID类型配置...', currentProgress, true);
+            await this.loadIdTypeConfig();
+            currentProgress = this.calculateProgress(0, stages[0].weight);
+            this.updateProgress('加载ID类型配置完成', currentProgress, true);
+            
+            // 阶段2：初始化数据库结构
+            this.updateProgress('初始化数据库结构...', currentProgress, true);
             this.initDatabaseStructure();
+            currentProgress = this.calculateProgress(currentProgress, stages[1].weight);
+            this.updateProgress('初始化数据库结构完成', currentProgress, true);
 
             if (this.autoLoadDefaultData) {
                 // 自动加载默认数据，直接从源文件读取
-                // 清空已有数据，确保每次都重新加载
-                this.updateProgress('清空已有数据...', 30);
+                // 阶段3：清空已有数据
+                this.updateProgress('清空已有数据...', currentProgress, true);
                 this.clear();
-                
-                // 清空浏览器存储中的数据
-                console.log('[IdDatabase] 开始清空浏览器存储...');
                 await this.clearStorage();
-                console.log('[IdDatabase] 浏览器存储清空完成');
-                
-                // 清空目录缓存，确保重新读取文件列表
-                console.log('[IdDatabase] 清空目录缓存...');
                 this.directoryCache.clear();
-                console.log('[IdDatabase] 目录缓存清空完成');
+                currentProgress = this.calculateProgress(currentProgress, stages[2].weight);
+                this.updateProgress('清空已有数据完成', currentProgress, true);
                 
-                // 加载默认数据
-                this.updateProgress('加载默认数据...', 40);
-                await this.loadDefaultData();
+                // 阶段4：加载默认数据（带详细进度）
+                await this.loadDefaultDataWithProgress(currentProgress, stages[3].weight);
+                currentProgress = this.calculateProgress(currentProgress, stages[3].weight);
                 
-                // 加载baseGame数据
-                this.updateProgress('加载baseGame数据...', 70);
-                await this.loadBaseGameData();
+                // 阶段5：加载baseGame数据（带详细进度）
+                await this.loadBaseGameDataWithProgress(currentProgress, stages[4].weight);
+                currentProgress = this.calculateProgress(currentProgress, stages[4].weight);
             } else {
                 // 尝试从存储中恢复数据
-                this.updateProgress('恢复数据库数据...', 30);
+                this.updateProgress('恢复数据库数据...', currentProgress, true);
                 const restored = await this.restoreFromStorage();
                 
                 // 检查恢复的数据是否完整
@@ -147,42 +186,32 @@ class IdDatabase {
                 
                 if (!restored || missingTypes.length > 0) {
                     // 恢复失败或数据不完整，重新加载数据
-                    // 清空已有数据，确保重新加载
-                    this.updateProgress('清空已有数据...', 35);
+                    this.updateProgress('恢复失败，重新加载数据...', currentProgress, true);
                     this.clear();
-                    
-                    // 清空浏览器存储中的数据
                     await this.clearStorage();
                     
-                    // 获取总类型数
-                    const totalTypes = Object.keys(this.idTypes).length;
-                    let processedTypes = 0;
+                    // 阶段4：加载默认数据（带详细进度）
+                    await this.loadDefaultDataWithProgress(currentProgress, stages[3].weight);
+                    currentProgress = this.calculateProgress(currentProgress, stages[3].weight);
                     
-                    // 加载默认数据
-                    this.updateProgress('加载默认数据...', 40);
-                    await this.loadDefaultData();
-                    processedTypes += Object.keys(this.idTypes).length;
-                    
-                    // 加载baseGame数据
-                    this.updateProgress('加载baseGame数据...', 70);
-                    await this.loadBaseGameData();
-                    processedTypes += Object.keys(this.idTypes).length;
+                    // 阶段5：加载baseGame数据（带详细进度）
+                    await this.loadBaseGameDataWithProgress(currentProgress, stages[4].weight);
+                    currentProgress = this.calculateProgress(currentProgress, stages[4].weight);
+                } else {
+                    currentProgress = this.calculateProgress(currentProgress, stages[3].weight + stages[4].weight);
                 }
             }
             
             // 完成初始化
-            this.updateProgress('数据库初始化完成...', 100);
+            this.updateProgress('数据库初始化完成...', 100, true);
             this.initialized = true;
             this.loading = false;
             
             // 初始化完成后持久化数据
-            // 检查是否需要自动加载默认数据
-        const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
-        
-        // 只有在autoLoadDefaultData为false时才持久化数据
-        if (!autoLoadDefaultData) {
-            await this.persistToStorage();
-        }
+            const autoLoadDefaultData = window.configManager ? window.configManager.get('autoLoadDefaultData') : false;
+            if (!autoLoadDefaultData) {
+                await this.persistToStorage();
+            }
             
             return true;
         } catch (error) {
@@ -300,14 +329,12 @@ class IdDatabase {
                             // 静默处理错误，仅在开发模式下记录
                         }
                     }
+                    return true; // 成功加载
                 }
-            } else {
-                // 尝试直接加载常见文件
-                this.tryLoadCommonFiles(type, typeConfig);
             }
+            return false; // 未找到匹配文件
         } catch (error) {
-            // 尝试直接加载常见文件
-            this.tryLoadCommonFiles(type, typeConfig);
+            return false; // 加载失败
         }
     }
     
@@ -423,6 +450,91 @@ class IdDatabase {
                             }
                         }
                     }
+                }
+            }
+        } catch (error) {
+            // 静默处理错误
+        }
+    }
+    
+    /**
+     * 加载默认数据（带进度回调）
+     * @param {number} startProgress 起始进度
+     * @param {number} weight 权重（0-1）
+     */
+    async loadDefaultDataWithProgress(startProgress, weight) {
+        const types = Object.keys(this.idTypes);
+        const totalTypes = types.length;
+        let completedTypes = 0;
+        let loadedFiles = 0;
+        
+        // 先统计实际能加载的文件数
+        const cfgDir = 'lib/Cfg/';
+        const fileNames = await this.getDirectoryContents(cfgDir);
+        const actualFileCount = fileNames ? fileNames.length : 0;
+        
+        // 逐个加载类型数据，以便更新进度
+        for (const type of types) {
+            const typeConfig = this.idTypes[type];
+            const loaded = await this.loadDataFromLibCfg(type, typeConfig);
+            if (loaded) loadedFiles++;
+            
+            completedTypes++;
+            const currentProgress = this.calculateProgress(startProgress, weight, completedTypes / totalTypes);
+            this.updateProgress(`加载默认数据 (${loadedFiles}/${actualFileCount})...`, currentProgress, true);
+        }
+    }
+    
+    /**
+     * 加载baseGame数据（带进度回调）
+     * @param {number} startProgress 起始进度
+     * @param {number} weight 权重（0-1）
+     */
+    async loadBaseGameDataWithProgress(startProgress, weight) {
+        const cfgDir = 'baseGame/Cfgs/zh-cn/';
+        
+        try {
+            const fileNames = await this.getDirectoryContents(cfgDir);
+            
+            if (fileNames && fileNames.length > 0) {
+                const types = Object.keys(this.idTypes);
+                const totalTypes = types.length;
+                const actualFileCount = fileNames.length;
+                let completedTypes = 0;
+                let loadedFiles = 0;
+                
+                for (const type of types) {
+                    const typeConfig = this.idTypes[type];
+                    
+                    const matchingFiles = fileNames.filter(name => {
+                        return this.matchFileName(name, typeConfig.fileName);
+                    });
+                    
+                    if (matchingFiles.length > 0) {
+                        for (const matchingFile of matchingFiles) {
+                            try {
+                                const fileResponse = await fetch(`${cfgDir}${matchingFile}`, {
+                                    cache: 'no-cache'
+                                });
+                                if (fileResponse.ok) {
+                                    const content = await fileResponse.text();
+                                    const jsonData = this.parseJson(content);
+                                    
+                                    await this.processData(type, jsonData, { 
+                                        source: `baseGame/Cfgs/zh-cn/${matchingFile}`,
+                                        type: 'baseGame'
+                                    });
+                                    loadedFiles++;
+                                }
+                            } catch (error) {
+                                // 静默处理错误
+                            }
+                        }
+                    }
+                    
+                    completedTypes++;
+                    const currentProgress = this.calculateProgress(startProgress, weight, completedTypes / totalTypes);
+                    this.updateProgress(`加载baseGame数据 (${loadedFiles}/${actualFileCount})...`, currentProgress, true);
                 }
             }
         } catch (error) {
