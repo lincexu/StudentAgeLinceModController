@@ -22,7 +22,9 @@ class SpriteManager {
      */
     async loadConfig() {
         try {
-            const response = await fetch('lib/data/sprite.json', {
+            // 使用绝对路径，确保在任何页面都能正确加载
+            const basePath = window.location.pathname.includes('/cfgtool/') ? '../' : '';
+            const response = await fetch(basePath + 'lib/data/sprite.json', {
                 cache: 'no-cache'
             });
             

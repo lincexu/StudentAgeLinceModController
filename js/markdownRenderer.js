@@ -19,11 +19,11 @@ class MarkdownRenderer {
         
         let html = markdown;
         
-        // 转义HTML特殊字符
-        html = this.escapeHtml(html);
-        
-        // 处理代码块（保留内容不被其他规则处理）
+        // 处理代码块（保留原始内容不被其他规则处理）
         html = this.extractCodeBlocks(html);
+        
+        // 转义HTML特殊字符（代码块已被提取，不会被转义）
+        html = this.escapeHtml(html);
         
         // 处理标题
         html = this.renderHeaders(html);
@@ -61,7 +61,7 @@ class MarkdownRenderer {
         // 处理段落和换行
         html = this.renderParagraphs(html);
         
-        // 恢复代码块
+        // 恢复代码块（此时才进行HTML转义）
         html = this.restoreCodeBlocks(html);
         
         return html;
@@ -79,12 +79,23 @@ class MarkdownRenderer {
 
     /**
      * 提取代码块，防止被其他规则处理
+     * 使用特殊占位符，不会被escapeHtml转义
      */
     extractCodeBlocks(text) {
         this.codeBlocks = [];
-        return text.replace(/```([\s\S]*?)```/g, (match, code) => {
-            this.codeBlocks.push(code);
-            return `\n<!--CODE_BLOCK_${this.codeBlocks.length - 1}-->\n`;
+        // 匹配 ``` 开头和结尾的代码块，支持可选的语言标识
+        const codeBlockRegex = /```([a-zA-Z0-9_+-]*)\n?([\s\S]*?)```/g;
+        
+        return text.replace(codeBlockRegex, (match, language, code) => {
+            const index = this.codeBlocks.length;
+            // 去除代码末尾的换行符
+            const cleanCode = code ? code.replace(/\n$/, '') : '';
+            this.codeBlocks.push({
+                code: cleanCode,
+                language: language || ''
+            });
+            // 使用特殊占位符
+            return `\n%%CODEBLOCK_${index}%%\n`;
         });
     }
 
@@ -92,9 +103,16 @@ class MarkdownRenderer {
      * 恢复代码块
      */
     restoreCodeBlocks(text) {
-        return text.replace(/<!--CODE_BLOCK_(\d+)-->/g, (match, index) => {
-            const code = this.codeBlocks[parseInt(index)];
-            return `<pre><code>${code}</code></pre>`;
+        return text.replace(/%%CODEBLOCK_(\d+)%%/g, (match, index) => {
+            const blockData = this.codeBlocks[parseInt(index)];
+            if (!blockData) {
+                console.warn(`[MarkdownRenderer] Code block ${index} not found`);
+                return match;
+            }
+            // 对代码内容进行HTML转义，防止XSS攻击
+            const escapedCode = this.escapeHtml(blockData.code);
+            const langClass = blockData.language ? ` class="language-${blockData.language}"` : '';
+            return `<pre><code${langClass}>${escapedCode}</code></pre>`;
         });
     }
 
@@ -394,6 +412,17 @@ class MarkdownRenderer {
             
             // 跳过已渲染的HTML标签行
             if (line.match(/^<[a-zA-Z][^>]*>/)) {
+                if (inParagraph) {
+                    result.push('<p>' + paragraphLines.join('<br>') + '</p>');
+                    inParagraph = false;
+                    paragraphLines = [];
+                }
+                result.push(line);
+                continue;
+            }
+            
+            // 跳过代码块占位符行
+            if (line.match(/^%%CODEBLOCK_\d+%%$/)) {
                 if (inParagraph) {
                     result.push('<p>' + paragraphLines.join('<br>') + '</p>');
                     inParagraph = false;

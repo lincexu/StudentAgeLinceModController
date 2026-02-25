@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CfgTool 文档中心</title>
+    <link rel="icon" href="../resources/icon.jpg" type="image/jpeg">
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="../lib/highlight/styles/qtcreator-dark.min.css">
+    <script src="../lib/highlight/highlight.min.js"></script>
+    <!-- Sprite Manager for sprite tag processing -->
+    <script src="../js/spriteManager.js"></script>
+    <!-- Markdown Renderer -->
+    <script src="../js/markdownRenderer.js"></script>
+    <link rel="stylesheet" href="cfgtool.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="header-title">CfgTool 文档中心</h1>
+                <p class="header-subtitle">配置文件说明文档管理系统</p>
+            </div>
+            <div class="header-right">
+                <p class="header-notice">
+                    <span class="notice-item">📋 转载请注明出处</span>
+                    <span class="notice-item">⚠️ 内容含AI生成，可能存在错误，仅供参考</span>
+                </p>
+                <a href="../index.html" class="back-btn">
+                    <span>←</span>
+                    <span>返回主页面</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>📑 文档列表</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list" id="navList">
+                    <!-- Navigation items will be dynamically generated -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-container">
+            <div class="content-wrapper">
+                <div class="content-header">
+                    <h2 class="content-title" id="contentTitle">
+                        <span>📄</span>
+                        <span id="titleText">加载中...</span>
+                    </h2>
+                </div>
+                <div class="content-body" id="contentBody">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="cfgtool.js"></script>
+</body>
+</html>

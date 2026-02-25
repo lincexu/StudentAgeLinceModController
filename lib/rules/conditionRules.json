@@ -1356,6 +1356,13 @@
                     1
                 ],
                 "desc": "恋爱关系鸡犬不宁"
+            },
+            "noLove": {
+                "rule": [
+                    11,
+                    3
+                ],
+                "desc": "没有谈过恋爱"
             }
         }
     },
@@ -1373,7 +1380,7 @@
                 ],
                 "desc": "{actionId}已行动{value}次"
             },
-                        "actionTimesGreaterThanOrEqualnvxian": {
+            "actionTimesGreaterThanOrEqualnvxian": {
                 "rule": [
                     12,
                     1,

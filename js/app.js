@@ -1171,6 +1171,9 @@ class ModEventApp {
         
         // ID Wiki按钮事件
         this.setupIdWikiButton();
+        
+        // 配置文件编辑指南按钮事件
+        this.setupCfgToolButton();
     }
     
     /**
@@ -1182,6 +1185,19 @@ class ModEventApp {
             idWikiToggle.addEventListener('click', () => {
                 // 在新标签页打开wiki页面
                 window.open('wiki.html', '_blank');
+            });
+        }
+    }
+    
+    /**
+     * 设置配置文件编辑指南按钮
+     */
+    setupCfgToolButton() {
+        const cfgToolToggle = document.getElementById('cfgtool-toggle');
+        if (cfgToolToggle) {
+            cfgToolToggle.addEventListener('click', () => {
+                // 在新标签页打开cfgtool页面
+                window.open('cfgtool/cfgtool.html', '_blank');
             });
         }
     }

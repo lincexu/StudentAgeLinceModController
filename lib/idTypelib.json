@@ -292,7 +292,7 @@
             "name": "对话",
             "file": "TalkCfg*.json",
             "desc": "对话ID",
-            "dataKey": "name",
+            "dataKey": "content",
             "dataKeyList": null,
             "wiki": false
         },
@@ -741,6 +741,18 @@
             "file": "TraitsCfg*.json",
             "failName": "未知人物特质",
             "keyList": "TraitsKey"
+        },
+        "TalkId": {
+            "name": "对话",
+            "file": "TalkCfg*.json",
+            "failName": "未知对话",
+            "keyList": "TalkKey"
+        },
+        "OptionId": {
+            "name": "选项",
+            "file": "OptionCfg*.json",
+            "failName": "未知选项",
+            "keyList": "OptionKey"
         },
         "PhoneMsgId": {
             "name": "短信（非官方工坊支持内容编辑先驱测试）",

@@ -28,7 +28,7 @@
                     "personAttrId",
                     "value"
                 ],
-                "desc": "{personAttrId}获取率{direction}{value}%"
+                "desc": "{personAttrId}获取率{direction}{100*value}%"
             },
             "attrAddUnit": {
                 "rule": [
